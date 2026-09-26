@@ -7,7 +7,9 @@
   <meta name="description" content="An independent, source-linked view of the 2026 British Columbia provincial election. Explore ridings, official past results, parties and original pollster releases.">
   <title>BC Vote 2026 — Independent election explorer</title>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./vendor/leaflet.css">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./map.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -40,7 +42,8 @@
   </header>
 
   <div class="status-band">
-    <div class="status-inner"><span class="status-left"><span class="live-dot" aria-hidden="true"></span><span id="snapshotStatus">Verified sources · snapshot loading</span></span><span class="countdown" id="countdown"></span></div>
+    <div class="status-inner"><span class="status-left"><span class="live-dot" aria-hidden="true"></span><span id="snapshotStatus">Verified sources · snapshot loading</span></span><div class="status-actions"><span class="countdown" id="countdown"></span><button type="button" class="find-riding-button" data-find-riding><i data-lucide="locate-fixed" aria-hidden="true"></i><span>Find my riding</span></button></div></div>
+    <div id="locationStatus" class="location-notice" role="status" aria-live="polite" hidden></div>
   </div>
 
   <main id="main" class="main-content" tabindex="-1">
@@ -61,6 +64,7 @@
     <a href="#ballot" data-nav="ballot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6zM15 3v4h3M9 12h6M9 16h6"/></svg><span>Ballot</span></a>
   </nav>
 
+  <script src="./vendor/leaflet.js"></script>
   <script type="module" src="./app.js"></script>
 </body>
 </html>

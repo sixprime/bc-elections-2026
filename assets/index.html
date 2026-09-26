@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Asset Review | BC Vote 2026</title>
+  <link rel="icon" href="../favicon.svg">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="./gallery.css">
+</head>
+<body>
+  <header class="asset-header"><a href="../#ridings">BC VOTE <strong>2026</strong></a><span>Asset Review</span></header>
+  <main class="asset-main">
+    <div class="asset-title"><div><p class="eyebrow">Source inventory</p><h1>People &amp; Parties</h1></div><p id="inventoryStatus" role="status">Loading inventory...</p></div>
+    <div class="asset-toolbar">
+      <label class="asset-search"><span>Search</span><input id="assetSearch" type="search" placeholder="Name or riding"></label>
+      <label><span>Party</span><select id="assetParty"><option value="all">All parties</option></select></label>
+      <label><span>Collection</span><select id="assetCollection"><option value="portraits">Candidate portraits</option><option value="branding">Logos &amp; campaign artwork</option><option value="press">Press photos &amp; kits</option><option value="gaps">Missing &amp; unavailable</option></select></label>
+    </div>
+    <div class="asset-summary"><span id="assetCount" role="status"></span><span>Publication approval pending</span></div>
+    <section id="assetGrid" class="asset-grid" aria-label="Downloaded assets"></section>
+  </main>
+  <script type="module" src="./gallery.js"></script>
+</body>
+</html>

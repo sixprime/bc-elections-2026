@@ -1,0 +1,14 @@
+{
+  "source": "https://openmaps.gov.bc.ca/geo/pub/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=pub%3AWHSE_ADMIN_BOUNDARIES.EBC_ELECTORAL_DISTS_BS11_SVW&outputFormat=application%2Fjson&srsName=EPSG%3A4326&count=100",
+  "catalogue": "https://catalogue.data.gov.bc.ca/dataset/1cba4b16-263f-4d42-8d84-f5fecaa03d1a",
+  "retrievedAt": "2026-09-25T22:12:52.572Z",
+  "sourceSha256": "a038dd7965bac24ee088727aee623c46d99d342eb8f9ee2c9c3fe207cf1243ed",
+  "districtCount": 93,
+  "license": "Elections BC Open Data Licence",
+  "licenseUrl": "https://www.elections.bc.ca/docs/EBC-Open-Data-Licence.pdf",
+  "attribution": "Contains information licenced under the Elections BC Open Data Licence",
+  "lookupFile": "map/district-index.json",
+  "displayFile": "map/districts-map.geojson",
+  "displaySimplificationDegrees": 0.0003,
+  "notice": "Location matching is for exploration, not an official voter assignment. Confirm your home riding with Elections BC."
+}

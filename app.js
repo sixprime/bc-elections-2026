@@ -1,11 +1,22 @@
+import { mountMaps, disposeMaps, findMyRiding, refreshMapIcons } from './map.js';
+import { candidateDirectory, candidateResults, partyDirectory } from './candidates.js';
+import { renderPollChart, pollSeries } from './poll-chart.js';
+
 const root = document.getElementById('main');
 const state = { election: null, polls: null, query: '', filter: 'all', partyFilter: 'all' };
+const pollingPreview = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname) && new URLSearchParams(location.search).get('preview') === 'staging';
+const candidateFilters = { query: '', partyId: 'all', riding: 'all' };
+let candidateManifest;
+let candidateError = '';
+let candidateRequest;
+let candidateReturnPosition;
+const pollOptions = { pollster: 'all', scenario: false, months: 6 };
 const number = new Intl.NumberFormat('en-CA');
 const escapeHtml = (value) => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const percentage = (value, decimals = 1) => `${Number(value).toFixed(decimals).replace(/\.0$/, '')}%`;
 const readableDate = (date, options = {month:'short',day:'numeric'}) => new Date(`${date}T12:00:00Z`).toLocaleDateString('en-CA',{timeZone:'UTC',...options});
 const slug = name => name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
-const party = id => state.election.parties.find(item => item.id === id) || {id,name:id === 'independent'?'Independent':'Unaffiliated',ballot:id === 'independent'?'Independent':'Unaffiliated',color:'#8294a8'};
+const party = id => state.election.parties.find(item => item.id === id) || state.polls?.historicalParties?.find(item => item.id === id) || {id,name:id === 'independent'?'Independent':'Unaffiliated',ballot:id === 'independent'?'Independent':'Unaffiliated',color:'#8294a8'};
 const dot = (color, extra = '') => `<i class="party-dot ${extra}" style="--dot:${escapeHtml(color)}" aria-hidden="true"></i>`;
 const panelHeader = (title, subtitle = '', label = '') => `<div class="card-header"><div><h2>${title}</h2>${subtitle ? `<p>${subtitle}</p>` : ''}</div>${label ? `<span class="source-tag">${label}</span>` : ''}</div>`;
 const sourceLink = (url, label='View source') => `<a class="action-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${label} ↗</a>`;
@@ -35,8 +46,8 @@ function seatTrack() {
 function baselineRows(limit = 9) {
   return state.election.baseline2024.popularVote.slice(0,limit).map(x => `<div class="baseline-row"><span class="label">${dot(x.color || party(x.id).color)}${escapeHtml(x.name || party(x.id).ballot)}</span><div class="bar-track"><div class="bar-fill" style="--bar:${x.color || party(x.id).color};width:${Math.max(x.share/50*100,.6)}%"></div></div><b>${percentage(x.share,x.share < 1?2:1)}</b></div>`).join('');
 }
-function mapCard(explorer = false) {
-  return `<section class="card card-pad ${explorer?'riding-map-card':'map-card'}">${panelHeader(explorer?'B.C. at a glance':'Explore the ridings',explorer?'A geographic illustration; boundaries are linked below.':'93 electoral districts across British Columbia','GEOGRAPHIC PREVIEW')}<div class="map-stage"><img src="./bc-map.svg" width="720" height="540" alt="Illustrated outline of British Columbia, with Coquitlam marked; no riding boundaries or outcomes shown"><div class="map-callout"><strong>${explorer?'Riding boundaries':'Find your riding'}</strong>${explorer?'Official boundary files are available from Elections BC.':'Search all 93 ridings and open source-linked details.'}</div></div><div class="map-footer"><span class="map-caption">Illustration only · no riding predictions</span>${explorer ? sourceLink(state.election.sources.boundaries,'Official GIS data') : `<a class="action-link" href="#ridings">Explore all ridings →</a>`}</div></section>`;
+function mapCard(explorer = false, selectedSlug = '') {
+  return `<section class="map-section map-card ${explorer ? 'expanded-map' : ''}"><div class="map-heading"><div><h2>British Columbia</h2><p>93 electoral districts</p></div>${!explorer ? '<a class="action-link" href="#ridings">Open explorer →</a>' : ''}</div><div class="map-tools"><div class="map-modes" role="group" aria-label="Basemap"><button type="button" data-map-style="street" aria-pressed="true" class="selected">Streets</button><button type="button" data-map-style="satellite" aria-pressed="false">Satellite</button><button type="button" data-map-style="terrain" aria-pressed="false">Terrain</button></div><div class="map-actions"><button type="button" class="map-icon-button" data-map-boundaries aria-pressed="true" aria-label="Show riding boundaries" title="Show riding boundaries"><i data-lucide="layers"></i></button><button type="button" class="map-icon-button" data-map-reset aria-label="Show all British Columbia" title="Show all British Columbia"><i data-lucide="maximize"></i></button><button type="button" class="map-icon-button" data-find-riding aria-label="Find my riding" title="Find my riding"><i data-lucide="locate-fixed"></i></button></div></div><div class="map-surface" data-riding-map data-selected-riding="${escapeHtml(selectedSlug)}" role="region" aria-label="Interactive map of British Columbia electoral districts" aria-busy="true"></div><div class="map-source"><span data-map-caption>Loading map...</span>${sourceLink(state.election.sources.boundaries,'Boundary source')}</div></section>`;
 }
 function closestCard() {
   const rows = Object.entries(state.election.featuredDistricts2024).map(([name,record]) => {
@@ -60,7 +71,7 @@ function ridingRows() {
   }).join('') : `<div class="empty-state"><strong>No riding found</strong>Try a different name or switch to all ridings.</div>`;
 }
 function ridingExplorer() {
-  return `<div class="page-head"><div><p class="eyebrow">93 electoral districts</p><h1>Riding explorer</h1><p>Search any riding. Open a source-linked 2024 result for three example districts.</p></div></div><div class="toolbar"><label class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.7" cy="10.7" r="6.3"/><path d="m15.4 15.4 5.1 5.1"/></svg><input id="ridingSearch" type="search" autocomplete="off" value="${escapeHtml(state.query)}" placeholder="Search 93 ridings" aria-label="Search 93 ridings"></label><div class="filter-row"><button type="button" class="filter-pill ${state.filter==='all'?'selected':''}" data-filter="all">All ridings</button><button type="button" class="filter-pill ${state.filter==='featured'?'selected':''}" data-filter="featured">Results loaded (3)</button></div></div><div class="riding-layout"><section class="card riding-list-card"><div class="riding-list-header" id="ridingCount">${state.election.districts.length} ridings · alphabetical</div><div class="riding-list" id="ridingList">${ridingRows()}</div></section>${mapCard(true)}<section class="card card-pad riding-detail-card">${panelHeader('Choose a riding','Select a name to see its available sources','RIDING DETAIL')}<div class="detail-emphasis"><b>93 districts</b><span>Official 2024 boundaries carry forward to the 2026 election.</span></div><div class="info-strip"><span class="info-icon">i</span><span>The illustrated map does not show district shapes or projected outcomes. The riding list and linked source are the grounded starting point.</span></div><div class="card-bottom">${sourceLink(state.election.sources.boundaries,'Boundary files')}</div></section></div><div class="riding-card-row"><section class="card"><h3>2024 baseline</h3><p>Official final counts, clearly labelled by election year.</p><a href="#province">View province →</a></section><section class="card"><h3>2026 candidates</h3><p>Nominations are still being filed; the official list changes.</p><a href="#candidates">View candidate source →</a></section><section class="card"><h3>Riding changes</h3><p>A source-linked change log can be added as verified riding data is prepared.</p><a href="#methodology">See data plan →</a></section></div>`;
+  return `<div class="page-head"><div><p class="eyebrow">93 electoral districts</p><h1>Riding explorer</h1><p>British Columbia · Official district boundaries</p></div><span class="snapshot-pill">Independent / Unofficial</span></div><div class="riding-workspace"><aside class="riding-directory"><label class="search-field"><input id="ridingSearch" type="search" autocomplete="off" value="${escapeHtml(state.query)}" placeholder="Search 93 ridings" aria-label="Search 93 ridings"></label><div class="riding-list-header" id="ridingCount">${state.election.districts.filter(name => name.toLowerCase().includes(state.query.toLowerCase().trim())).length} of 93 ridings</div><div class="riding-list" id="ridingList">${ridingRows()}</div></aside>${mapCard(true)}</div>`;
 }
 function districtDetail(name) {
   const record = state.election.featuredDistricts2024[name];
@@ -69,33 +80,70 @@ function districtDetail(name) {
   return `<div class="page-head"><div><p class="eyebrow"><a href="#ridings">← All ridings</a> / riding detail</p><h1>${escapeHtml(name)}</h1><p>British Columbia · 2026 election · 2024 results shown for context.</p></div><span class="snapshot-pill">${record?'2024 verified':'Data pending'}</span></div><div class="simple-layout"><div class="poll-left"><section class="card card-pad">${panelHeader(record?'2024 final result':'2024 result not yet loaded','Official Elections BC source, not a 2026 projection','HISTORICAL DATA')}${record?`<div class="stat-grid"><div class="stat-tile"><strong class="stat-number">${escapeHtml(party(ranked[0].party).ballot)}</strong><span>winning affiliation</span></div><div class="stat-tile"><strong class="stat-number">${number.format(margin)}</strong><span>vote margin</span></div><div class="stat-tile"><strong class="stat-number">${number.format(record.validVotes)}</strong><span>valid votes</span></div></div><div class="detail-vote">${ranked.map(v=>`<div class="detail-vote-line"><span>${dot(party(v.party).color)}${escapeHtml(v.name)} <span class="subtle">· ${escapeHtml(party(v.party).ballot)}</span></span><strong>${percentage(v.votes/record.validVotes*100,2)}</strong><div class="bar-track"><div class="bar-fill" style="--bar:${party(v.party).color};width:${v.votes/record.validVotes*100}%"></div></div></div>`).join('')}</div>`:`<div class="empty-state"><strong>Riding name verified</strong>Its detailed result has not been transcribed into this prototype. Use the official Statement of Votes until it has been checked.</div>`}${cardBottom('Final 2024 count · no 2026 riding estimate.',sourceLink(state.election.sources.districts,'Official results'))}</section><section class="card card-pad">${panelHeader('What changed in this riding?','A place for attributed local updates','COMING NEXT')}<div class="info-strip"><span class="info-icon">i</span><span>Only source-backed changes will appear here. We have not inferred a 2026 riding outcome from provincial polls.</span></div></section></div><div class="poll-right"><section class="card card-pad">${panelHeader('2026 candidate filings','Nominations close October 3 at 1 p.m. PT','OFFICIAL SOURCE')}<p class="small-note" style="font-size:12px;margin:0 0 16px">Elections BC publishes accepted nominations. A party registration or public announcement alone does not confirm a ballot candidate.</p>${sourceLink(state.election.sources.candidates,'Check current candidates')}</section><section class="card card-pad">${panelHeader('About this riding','Source-first detail view','PROTOTYPE')}<p class="small-note" style="font-size:12px;margin:0 0 14px">Boundary geometry and 2026 candidate records are planned as locally processed files. The static site can show them after review, without a server.</p>${sourceLink(state.election.sources.boundaries,'Official boundaries')}</section></div></div>`;
 }
 function pollChart() {
-  const releases = [...state.polls.releases].sort((a,b)=>a.released.localeCompare(b.released));
-  const left=48,right=613,top=21,bottom=235;
-  const times=releases.map(p=>Date.parse(`${p.fieldEnd}T12:00:00Z`));
-  const min=Math.min(...times),max=Math.max(...times);
-  const x=t=>left+(t-min)/(max-min)*(right-left);
-  const y=v=>bottom-v/60*(bottom-top);
-  const colours=['ndp','con','green','one','centre'];
-  return `<div class="chart-frame"><svg viewBox="0 0 660 278" role="img" aria-label="Individual published B.C. vote intention surveys from August 8 to September 24, 2026. No interpolated trend or seat projection.">${[0,15,30,45,60].map(v=>`<g><path d="M${left} ${y(v)}H${right}" stroke="#e5ebf1"/><text x="37" y="${y(v)+3}" text-anchor="end" font-size="10" fill="#8090a3">${v}%</text></g>`).join('')}${releases.map((p,i)=>`<g><path d="M${x(times[i])} ${top}V${bottom}" stroke="#eaf0f5" stroke-dasharray="3 4"/>${i===releases.length-2?'':`<text x="${x(times[i])}" y="254" text-anchor="middle" font-size="9" fill="#72889e">${readableDate(p.fieldEnd)}</text>`}</g>`).join('')}${colours.map(id=>releases.map((p,i)=>Number.isFinite(p.shares[id])?`<circle cx="${x(times[i])}" cy="${y(p.shares[id])}" r="5.2" fill="${party(id).color}" stroke="white" stroke-width="2"><title>${escapeHtml(p.pollster)} · ${readableDate(p.released)} · ${escapeHtml(party(id).ballot)} ${percentage(p.shares[id])}</title></circle>`:'').join('')).join('')}</svg></div><div class="chart-legend">${colours.map(id=>`<span>${dot(party(id).color)}<b>${escapeHtml(party(id).ballot)}</b></span>`).join('')}</div><p class="caption">Each dot is a published pollster result at its last field date. No line is drawn between different pollsters; this is not a statistical trend estimate.</p>`;
+  const firms = [...new Set(state.polls.releases.map(release => release.pollster))].sort();
+  return `<div class="poll-chart-controls"><div class="poll-range-controls" role="group" aria-label="Polling history range">${[[6,'6 months'],[12,'1 year'],[60,'5 years'],[120,'10 years']].map(([months,label]) => `<button type="button" data-poll-months="${months}" aria-pressed="${pollOptions.months === months}" class="${pollOptions.months === months ? 'selected' : ''}">${label}</button>`).join('')}</div><label>Pollster <select id="pollsterFilter"><option value="all">All pollsters</option>${firms.map(firm => `<option value="${escapeHtml(firm)}" ${pollOptions.pollster === firm ? 'selected' : ''}>${escapeHtml(firm)}</option>`).join('')}</select></label><label class="poll-scenario-toggle"><input id="pollScenario" type="checkbox" ${pollOptions.scenario ? 'checked' : ''}> No-change scenario</label></div><div id="pollChartBody">${renderPollChart(state.polls, state.election, pollOptions)}</div>`;
 }
 function polls() {
-  const list = [...state.polls.releases].sort((a,b)=>b.released.localeCompare(a.released));
-  return `<div class="page-head"><div><p class="eyebrow">Original pollster releases</p><h1>Professional polls</h1><p>Current average, observed ranges and individual surveys. No riding or seat prediction.</p></div><span class="snapshot-pill">Checked Sep 25</span></div><div class="poll-layout"><div class="poll-left"><section class="card card-pad">${panelHeader('Published polls over time','Individual releases · source links below','5 RELEASES')}${pollChart()}</section><section class="card card-pad">${panelHeader('Poll release archive','Fieldwork and sample are shown for every record','PRIMARY SOURCES')}<div class="release-list">${list.map(p=>`<article class="release"><div class="release-top"><strong>${escapeHtml(p.pollster)}</strong><time datetime="${p.released}">${readableDate(p.released)}</time></div><p class="details">Fieldwork ${readableDate(p.fieldStart)}–${readableDate(p.fieldEnd)} · n=${number.format(p.sampleTotal)}${p.sampleDecided?` total / n=${number.format(p.sampleDecided)} decided & leaning`:''} · ${escapeHtml(p.method)} · ${escapeHtml(p.basis)}</p><div class="figures">${Object.entries(p.shares).map(([id,value])=>`<span>${dot(party(id).color)}${escapeHtml(party(id).ballot)} <strong>${percentage(value)}</strong></span>`).join('')}</div><p class="caption">${escapeHtml(p.note)}</p>${sourceLink(p.source,'Original release')}</article>`).join('')}</div></section></div><div class="poll-right"><section class="card card-pad">${panelHeader('Current average','One newest release per pollster, last 14 days','2 POLLSTERS')}<div class="poll-context"><span>${dot('#27a55d')}Observed releases</span><span>Sep 25 snapshot</span></div>${currentRows()}${cardBottom('No weighting. Only separately reported parties are averaged.',`<a href="#methodology" class="action-link">Calculation details →</a>`)}</section><section class="card card-pad">${panelHeader('Observed poll range','Lowest to highest among included pollsters','NOT A CI')}<div class="range-list">${averages().filter(x=>x.mean!=null).map(x=>`<div class="range-row"><span>${dot(party(x.id).color)}${escapeHtml(party(x.id).ballot)}</span><div class="range-track" style="--bar:${party(x.id).color}"><i style="left:${x.min/55*100}%;width:${(x.max-x.min)/55*100}%"></i><b style="left:${x.mean/55*100}%"></b></div><strong>${percentage(x.min,0)}–${percentage(x.max,0)}</strong></div>`).join('')}</div><p class="small-note">Range reflects disagreement between releases. It does not describe sampling uncertainty.</p></section><div class="info-strip"><span class="info-icon">i</span><span>Polling firms are independent of Elections BC. Their surveys are not official election results. A pollster may publish only a grouped residual; this site does not invent values for parties inside it.</span></div></div></div>`;
+  const list = pollSeries(state.polls, pollOptions).releases.sort((first, second) => second.released.localeCompare(first.released));
+  return `<div class="page-head"><div><p class="eyebrow">Original pollster releases</p><h1>Professional polls</h1><p>Published voting intention · Historical observations and current averages</p></div><span class="snapshot-pill">${pollingPreview ? 'STAGING / Not published' : `Prod / ${readableDate(state.polls.snapshotDate)}`}</span></div>
+    ${pollingPreview ? '<div class="poll-review-banner" role="status">Staging review. These additions have not been approved for production.</div>' : ''}
+    <section class="poll-history">${panelHeader('Voting intention over time','Source-linked observations / same-pollster series',`${list.length} OF ${state.polls.releases.length} RELEASES`)}${pollChart()}</section>
+    <div class="poll-layout"><section class="card card-pad">${panelHeader('Poll release archive','Fieldwork, question base and sources','PRIMARY SOURCES')}<div class="release-list">
+    ${list.map(release => `<article class="release"><div class="release-top"><strong>${escapeHtml(release.pollster)}</strong><time datetime="${release.released}">${readableDate(release.released,{month:'short',day:'numeric',year:'numeric'})}</time></div>
+      <p class="details">Fieldwork ${readableDate(release.fieldStart)}–${readableDate(release.fieldEnd)} · n=${number.format(release.sampleTotal)} total${release.sampleDecided ? ` / n=${number.format(release.sampleDecided)} voting-intention sample` : ''} · ${escapeHtml(release.method)} · ${escapeHtml(release.basis)}</p>
+      <div class="figures">${Object.entries(release.shares).map(([id,value]) => `<span>${dot(party(id).color)}${escapeHtml(party(id).ballot)} <strong>${percentage(value)}</strong></span>`).join('')}</div>
+      <p class="caption">${escapeHtml(release.note)}</p><div class="release-sources">${sourceLink(release.source,'Original release')}${release.tables ? sourceLink(release.tables,'Data tables') : ''}</div></article>`).join('')}
+    </div></section><div class="poll-right"><section class="card card-pad">${panelHeader('Current average',`Latest release per pollster / ${state.polls.summaryWindowDays} days`,`${currentPolls().length} POLLSTERS`)}<div class="poll-context"><span>${dot('#27a55d')}Observed releases</span><span>${readableDate(state.polls.snapshotDate)} snapshot</span></div>${currentRows()}${cardBottom('Unweighted mean. Separately reported parties only.','<a href="#methodology" class="action-link">Calculation details →</a>')}</section>
+    <section class="card card-pad">${panelHeader('Observed poll range','Minimum and maximum included values','NOT A CI')}<div class="range-list">${averages().filter(result => result.mean != null).map(result => `<div class="range-row"><span>${dot(party(result.id).color)}${escapeHtml(party(result.id).ballot)}</span><div class="range-track" style="--bar:${party(result.id).color}"><i style="left:${result.min/55*100}%;width:${(result.max-result.min)/55*100}%"></i><b style="left:${result.mean/55*100}%"></b></div><strong>${percentage(result.min,0)}–${percentage(result.max,0)}</strong></div>`).join('')}</div><p class="small-note">Observed ranges show disagreement between pollsters, not sampling uncertainty.</p></section></div></div>`;
 }
 function parties() {
-  const all=state.election.parties;
-  const list=state.partyFilter==='all'?all:all.filter(p=>['ndp','con','green','one'].includes(p.id));
-  return `<div class="page-head"><div><p class="eyebrow">Elections BC register</p><h1>Political parties</h1><p>Every entry in the dated official register, listed individually.</p></div><span class="snapshot-pill">Register · Sep 25</span></div><div class="party-layout"><section class="card card-pad">${panelHeader('Registered parties',`${all.length} entries · ballot names and listed leaders`, 'OFFICIAL REGISTER')}<div class="segmented" style="margin-bottom:11px"><button type="button" class="${state.partyFilter==='all'?'selected':''}" data-party-filter="all">All registered (${all.length})</button><button type="button" class="${state.partyFilter==='major'?'selected':''}" data-party-filter="major">In Legislature (4)</button></div><p class="small-note" style="margin:0 0 8px">Registration does not mean a party will nominate a candidate in every riding.</p><div class="party-list">${list.map(p=>`<div class="party-entry"><span class="party-avatar" style="--party:${p.color}">${escapeHtml(p.ballot[0])}</span><div class="party-info"><strong>${escapeHtml(p.ballot)}</strong><small>${escapeHtml(p.name===p.ballot?`Leader listed: ${p.leader}`:`${p.name} · Leader listed: ${p.leader}`)}</small></div><span class="party-status">Registered</span></div>`).join('')}</div>${cardBottom('Leaders and names are a snapshot of the dated register.',sourceLink(state.election.sources.parties,'Elections BC PDF'))}</section><div class="poll-right"><section class="card card-pad">${panelHeader('A directory, not a ballot','These are different kinds of information','HOW TO READ')}<div class="side-fact"><b>${all.length}</b><p>Parties listed in the September 25 register PDF. Names appear separately, with no combined party row.</p></div><div class="side-fact"><b>4</b><p>Parties described by Elections BC as represented in the legislature at the time of this snapshot.</p></div><div class="side-fact"><b>Oct 3</b><p>Candidate nominations close at 1 p.m. Pacific. Party registration alone does not establish who is running.</p></div></section><div class="info-strip"><span class="info-icon">i</span><span>Elections BC's summary page currently says 13 parties, while its linked register dated September 25 contains ${all.length} entries. This directory follows the dated register and makes that difference visible.</span></div></div></div>`;
+  return partyDirectory(state.election, candidateManifest, candidateError);
 }
 function candidates() {
-  return `<div class="page-head"><div><p class="eyebrow">2026 nominations</p><h1>Candidates</h1><p>Only accepted nominations on Elections BC's current list count as official filings.</p></div></div><div class="simple-layout"><section class="card card-pad prose-card">${panelHeader('Candidate explorer','Structured local candidate data is next','SOURCE LINKED')}<div class="info-strip"><span class="info-icon">i</span><span>Elections BC updates its official list during the nomination period. This prototype links to the live source rather than caching unverified names.</span></div><h3>How this screen will work</h3><p>Search a riding, compare confirmed candidates and open each original filing source. Candidates will be displayed individually, including independents and unaffiliated candidates.</p><p>Nominations close October 3, 2026 at 1 p.m. Pacific time; the final official list follows that deadline.</p>${sourceLink(state.election.sources.candidates,'Current official candidate list')}</section><aside class="card card-pad">${panelHeader('Choose a riding','Continue with the 93-district directory','EXPLORE')}<p class="aside-big">93</p><p class="small-note">Every district name is already searchable in the prototype.</p><div style="margin-top:20px"><a href="#ridings" class="primary-button">Browse ridings →</a></div></aside></div>`;
+  return candidateDirectory(state.election, candidateManifest, candidateFilters, candidateError);
+}
+async function loadCandidates() {
+  if (candidateRequest || candidateManifest || candidateError) return;
+  candidateRequest = fetch('./data/prod/assets/manifest.json');
+  try {
+    const response = await candidateRequest;
+    if (!response.ok) throw new Error('The candidate data could not be loaded.');
+    const manifest = await response.json();
+    if (!Array.isArray(manifest.candidates) || !Array.isArray(manifest.assets) || !Array.isArray(manifest.parties)) throw new Error('The candidate catalogue is incomplete.');
+    candidateManifest = manifest;
+  } catch (error) {
+    candidateError = error.message;
+  } finally {
+    candidateRequest = null;
+    if (['#candidates', '#parties'].includes(location.hash)) render();
+  }
 }
 function ballot() {
   return `<div class="page-head"><div><p class="eyebrow">Design preview</p><h1>Community Ballot</h1><p>A future opt-in participation feature, separate from professional surveys and official votes.</p></div><span class="snapshot-pill">Preview only</span></div><div class="simple-layout"><section class="card card-pad prose-card">${panelHeader('How the community flow could feel','A transparent, three-step ballot experience','UI PROTOTYPE')}<div class="info-strip"><span class="info-icon">i</span><span>There is no vote collection, identity system or community tally in this client-only build. Any future community sample would be self-selected and unscientific.</span></div><div class="preview-card" style="margin-top:17px"><div class="preview-step"><span>1</span><strong>Choose a riding</strong></div><div class="preview-step"><span>2</span><strong>Select an officially filed candidate</strong></div><div class="preview-step"><span>3</span><strong>Review and submit, once a safe collection service exists</strong></div></div><h3>Why this is a preview</h3><p>A shared vote tally and safeguards against repeat participation need infrastructure. Static GitHub Pages cannot collect or verify ballots by itself. We can decide later whether to build that part.</p><a href="#ridings" class="secondary-button">Explore ridings →</a></section><aside class="card card-pad">${panelHeader('Three separate measures','Easy to distinguish anywhere on the site','TRANSPARENCY')}<div class="side-fact"><b>01</b><p>Official Elections BC past results and, later, 2026 results.</p></div><div class="side-fact"><b>02</b><p>Professional pollster releases, with dates and methods.</p></div><div class="side-fact"><b>03</b><p>Community participation data, only after a separate system exists.</p></div></aside></div>`;
 }
 function methodology() {
   const e=state.election.sources;
-  return `<div class="page-head"><div><p class="eyebrow">How this prototype is built</p><h1>Sources & methodology</h1><p>Readable rules for what each screen does and where each number came from.</p></div></div><div class="simple-layout"><section class="card card-pad prose-card">${panelHeader('A client-only election explorer','No application server and no browser-side scraping','SEPTEMBER 25 SNAPSHOT')}<h3>What is included</h3><p>Official 2024 provincial totals and three transcribed riding results come from Elections BC's final Statement of Votes. The 93 district names also come from that report. The party directory follows the Elections BC registered-party PDF dated September 25, 2026. Election Day comes from Elections BC.</p><p>Five survey records come from the original pollsters. The current summary takes the latest release from each distinct pollster in the 14 days ending September 25. The displayed value is the arithmetic mean of reported party shares. The displayed range is the smallest and largest release value. It is <strong>not</strong> a margin of error, confidence interval or projection. A party appears in the summary only when at least two pollsters reported its share separately.</p><p>Research Co. and 604 Polling releases are shown in the archive for context but fall outside the current 14-day mean. Earlier Angus Reid releases remain in the archive for history, without counting the same pollster twice in the current summary. Some releases group minor parties; this site never divides a grouped figure among named parties.</p><h3>What the screens do not claim</h3><ul><li>No 2026 seat or riding forecast is computed. The map is an illustration, with no constituency geometry or predicted winners.</li><li>No 2026 candidate is inferred from party registration, an earlier election or public announcements.</li><li>No community ballot is being collected by this static build.</li><li>Changes in a pollster's numbers, changes in leader, and election results are different kinds of information. Every screen labels its category.</li></ul><h3>How data will evolve</h3><p>Review original releases locally, append dated poll records with field dates, sample, method, question base and source URLs, generate compact JSON, and commit it. Keep corrections explicit. As the site develops, verified official district and candidate files can be added without introducing a server.</p><p>The site is independent and unofficial. For voting instructions and current filings, always check Elections BC directly.</p></section><aside class="card card-pad">${panelHeader('Original sources','Open the primary documents','LINKS')}<ul class="source-list"><li>${sourceLink(e.election,'Elections BC')}<small>2026 election date</small></li><li>${sourceLink(e.districts,'2024 Statement of Votes')}<small>Official provincial and district baseline</small></li><li>${sourceLink(e.parties,'Registered parties PDF')}<small>September 25 register</small></li><li>${sourceLink(e.candidates,'2026 candidate filings')}<small>Accepted nominations</small></li><li>${sourceLink(e.boundaries,'GIS spatial data')}<small>District boundaries for a future map</small></li>${state.polls.releases.map(p=>`<li>${sourceLink(p.source,p.pollster)}<small>Released ${readableDate(p.released)}</small></li>`).join('')}</ul></aside></div>`;
+  return `<div class="page-head"><div><p class="eyebrow">September 25 snapshot</p><h1>Sources & methodology</h1></div></div>
+    <div class="simple-layout"><section class="card card-pad prose-card">
+    ${panelHeader('Election evidence', 'Independent and unofficial', 'SOURCES')}
+    <h3>Election records</h3><p>Official 2024 provincial totals and three transcribed riding results come from Elections BC's final Statement of Votes. The party directory follows the registered-party PDF dated September 25, 2026. Election Day comes from Elections BC. Past results are not current projections.</p>
+    <h3>Polling summary</h3><p>${state.polls.releases.length} survey records come from the original pollsters. The current summary takes the latest release from each distinct pollster in the ${state.polls.summaryWindowDays} days ending ${readableDate(state.polls.snapshotDate)}. Values are arithmetic means of reported party shares. Ranges are the smallest and largest release values, <strong>not</strong> confidence intervals. At least two pollsters must report a party separately for it to appear in the summary.</p>
+    <p>Older releases remain in the archive without counting the same firm twice in the current mean. Grouped responses are never divided among named parties. Chart lines connect observations from the same pollster, with gaps for unreported values; question bases remain listed on each release. These lines are descriptive, not a fitted polling average.</p>
+    <p>The optional dashed election-day continuation holds the recent average unchanged. This no-change scenario is not a forecast, confidence interval or seat projection. Production uses approved data only; the explicit localhost staging preview is for review.</p>
+    <h3>Geography and location</h3><p>The 93 district boundaries come from Elections BC through DataBC. Display boundaries are simplified; location matching uses the full-resolution geometry. Contains information licenced under the ${sourceLink('https://www.elections.bc.ca/docs/EBC-Open-Data-Licence.pdf','Elections BC Open Data Licence')}.</p>
+    <p>Location access requires permission. Phones may use GPS; desktop locations can be less precise. Coordinates stay in memory and are not saved in localStorage or URLs. Map providers receive requests for the viewed area. A current location is not necessarily a home address, and this match is not an official voter assignment. Confirm your home riding with Elections BC.</p>
+    <h3>Map imagery</h3><p>Sentinel-2 cloudless 2024 imagery is provided by EOX under ${sourceLink('https://cloudless.eox.at/license-non-commercial','CC BY-NC-SA 4.0')}, for non-commercial use with attribution. Its 10 m resolution is regional satellite imagery, not live or house-level aerial photography. EOX also supplies terrain and reference labels. Streets are from OpenStreetMap contributors. These free services are best-effort and may be rate-limited.</p>
+    <h3>Candidate artwork</h3><p>The separate artwork inventory records source pages, original files and usage-review status. Party announcements are kept separate from accepted Elections BC nominations. Downloading a photograph or logo does not grant unrestricted reuse or imply endorsement. Missing artwork is not fabricated.</p>
+    <h3>Limits</h3><p>No 2026 seat forecast or community ballot tally is computed. The site is independent and unofficial. Use Elections BC for voting instructions, registration and current filings.</p>
+    </section><aside class="card card-pad">${panelHeader('Original sources','','LINKS')}<ul class="source-list">
+    <li>${sourceLink(e.election,'Elections BC')}<small>Election and voter information</small></li>
+    <li>${sourceLink(e.districts,'2024 Statement of Votes')}<small>Official historical results</small></li>
+    <li>${sourceLink(e.parties,'Registered parties PDF')}<small>September 25 register</small></li>
+    <li>${sourceLink(e.candidates,'2026 candidate filings')}<small>Accepted nominations</small></li>
+    <li>${sourceLink(e.boundaries,'GIS spatial data')}<small>93 electoral districts</small></li>
+    <li>${sourceLink('https://maps.eox.at/','EOX Maps')}<small>Satellite, terrain and reference labels</small></li>
+    <li>${sourceLink('https://www.openstreetmap.org/copyright','OpenStreetMap')}<small>Street data and attribution</small></li>
+    ${state.polls.releases.map(release=>`<li>${sourceLink(release.source,release.pollster)}<small>Released ${readableDate(release.released)}</small></li>`).join('')}</ul></aside></div>`;
 }
 
 function route() {
@@ -110,9 +158,18 @@ function route() {
 }
 function render() {
   if (!state.election || !state.polls) return;
+  disposeMaps();
   const view=route();root.innerHTML=view.html;
+  if (location.hash.startsWith('#riding/')) {
+    const geography = document.createElement('div');
+    geography.className = 'detail-geography';
+    geography.innerHTML = mapCard(false, location.hash.slice('#riding/'.length));
+    root.querySelector('.page-head').after(geography);
+  }
   document.querySelectorAll('[data-nav]').forEach(link=>{const active=link.dataset.nav===view.section;link.classList.toggle('active',active);if(active)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current')});
   document.title=`${view.section==='province'?'Overview':view.section.charAt(0).toUpperCase()+view.section.slice(1)} · BC Vote 2026`;
+  mountMaps();
+  if (['candidates', 'parties'].includes(view.section)) loadCandidates();
 }
 function updateCountdown() {
   if (!state.election)return;
@@ -120,6 +177,46 @@ function updateCountdown() {
   document.getElementById('countdown').textContent=days===0?'Election Day · Oct 24':`${days} days to vote`;
 }
 document.addEventListener('click', e=>{
+  const pollRange = e.target.closest('[data-poll-months]');
+  if (pollRange) {
+    const months = Number(pollRange.dataset.pollMonths);
+    if (![6, 12, 60, 120].includes(months)) return;
+    pollOptions.months = months;
+    render();
+    document.querySelector(`[data-poll-months="${months}"]`).focus({ preventScroll: true });
+    return;
+  }
+  const partyCandidates = e.target.closest('[data-party-candidates]');
+  if (partyCandidates) {
+    candidateFilters.query = '';
+    candidateFilters.riding = 'all';
+    candidateFilters.partyId = partyCandidates.dataset.partyCandidates;
+    candidateReturnPosition = null;
+    location.hash = '#candidates';
+    return;
+  }
+  const partyJump = e.target.closest('[data-party-jump]');
+  if (partyJump) {
+    const target = document.getElementById(`candidate-party-${partyJump.dataset.partyJump}`);
+    if (target) {
+      candidateReturnPosition = { top: window.scrollY, partyId: partyJump.dataset.partyJump };
+      target.focus({ preventScroll: true });
+      target.scrollIntoView({ block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+    }
+    return;
+  }
+  if (e.target.closest('[data-candidate-top]')) {
+    const navigation = document.getElementById('candidatePartyNavigation');
+    if (navigation) {
+      const previous = candidateReturnPosition;
+      const control = previous ? navigation.querySelector(`[data-party-jump="${previous.partyId}"]`) : navigation;
+      (control || navigation).focus({ preventScroll: true });
+      window.scrollTo({ top: previous?.top ?? Math.max(0, navigation.getBoundingClientRect().top + window.scrollY - 20), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+    }
+    return;
+  }
+  if(e.target.closest('[data-candidate-retry]')){candidateError='';render();return}
+  if(e.target.closest('[data-find-riding]')){findMyRiding();return}
   const filter=e.target.closest('[data-filter]');if(filter){state.filter=filter.dataset.filter;render();return}
   const partyFilter=e.target.closest('[data-party-filter]');if(partyFilter){state.partyFilter=partyFilter.dataset.partyFilter;render();return}
   const riding=e.target.closest('[data-riding]');if(riding){location.hash=`#riding/${riding.dataset.riding}`;return}
@@ -127,6 +224,12 @@ document.addEventListener('click', e=>{
   if(e.target.closest('#mobileMenu a')){document.getElementById('mobileMenu').hidden=true;document.getElementById('menuButton').setAttribute('aria-expanded','false')}
 });
 document.addEventListener('input',e=>{
+  if(e.target.id==='candidateSearch'){
+    candidateFilters.query=e.target.value;
+    document.getElementById('candidateResults').innerHTML=candidateResults(state.election,candidateManifest,candidateFilters);
+    candidateReturnPosition = null;
+    refreshMapIcons();
+  }
   if(e.target.id==='ridingSearch'){
     state.query=e.target.value;
     document.getElementById('ridingList').innerHTML=ridingRows();
@@ -138,9 +241,28 @@ document.addEventListener('input',e=>{
     if(location.hash!=='#ridings')location.hash='#ridings';else {document.getElementById('ridingList').innerHTML=ridingRows();document.getElementById('ridingSearch').value=state.query}
   }
 });
+document.addEventListener('change', event => {
+  if (event.target.id === 'pollsterFilter' || event.target.id === 'pollScenario') {
+    if (event.target.id === 'pollsterFilter') {
+      pollOptions.pollster = event.target.value;
+      render();
+      document.getElementById('pollsterFilter').focus({ preventScroll: true });
+      return;
+    }
+    pollOptions.scenario = event.target.checked;
+    document.getElementById('pollChartBody').innerHTML = renderPollChart(state.polls, state.election, pollOptions);
+    return;
+  }
+  if (event.target.id === 'candidateParty') candidateFilters.partyId = event.target.value;
+  else if (event.target.id === 'candidateRiding') candidateFilters.riding = event.target.value;
+  else return;
+  document.getElementById('candidateResults').innerHTML = candidateResults(state.election, candidateManifest, candidateFilters);
+  candidateReturnPosition = null;
+  refreshMapIcons();
+});
 window.addEventListener('hashchange',()=>{render();window.scrollTo({top:0,behavior:'instant'})});
 try {
-  const [electionResponse,pollsResponse]=await Promise.all([fetch('./election.json'),fetch('./polls.json')]);
+  const [electionResponse,pollsResponse]=await Promise.all([fetch('./data/prod/election.json'),fetch(pollingPreview ? './data/staging/polls.json' : './data/prod/polls.json')]);
   if(!electionResponse.ok||!pollsResponse.ok)throw Error('One of the data files could not be loaded.');
   [state.election,state.polls]=await Promise.all([electionResponse.json(),pollsResponse.json()]);
   document.getElementById('snapshotStatus').textContent=`Source snapshot · ${readableDate(state.election.snapshotDate,{month:'long',day:'numeric',year:'numeric'})} PT`;

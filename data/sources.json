@@ -1,0 +1,17 @@
+{
+  "sources": [
+    {"id":"angus-reid-feed","group":"polls","url":"https://angusreid.org/feed/","path":"sources/polls/angus-reid-feed.xml.txt"},
+    {"id":"research-co-feed","group":"polls","url":"https://researchco.ca/feed/","path":"sources/polls/research-co-feed.xml.txt"},
+    {"id":"liaison-feed","group":"polls","url":"https://press.liaisonstrategies.ca/rss/","path":"sources/polls/liaison-feed.xml.txt"},
+    {"id":"elections-bc-parties","group":"election","url":"https://elections.bc.ca/docs/fin/Registered-Political-Parties-Information.pdf","path":"sources/election/registered-parties.pdf"},
+    {"id":"elections-bc-candidates","group":"election","url":"https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.pdf","path":"sources/election/accepted-candidates.pdf"},
+    {"id":"ndp-candidates","group":"election","url":"https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1","path":"sources/election/ndp-candidates.json"},
+    {"id":"conservative-candidates","group":"election","url":"https://www.conservativebc.ca/our-team/","path":"sources/election/conservative-candidates.html.txt"},
+    {"id":"green-candidates","group":"election","url":"https://bcgreens.ca/candidates-2026/","path":"sources/election/green-candidates.html.txt"},
+    {"id":"centre-candidates","group":"election","url":"https://www.centrebc.ca/our-team/","path":"sources/election/centre-candidates.html.txt"},
+    {"id":"ndp-press-kit","group":"assets","url":"https://www.bcndp.ca/logos-photos","path":"sources/assets/ndp-press-kit.html.txt"},
+    {"id":"green-press-kit","group":"assets","url":"https://bcgreens.ca/media-kit/","path":"sources/assets/green-press-kit.html.txt"},
+    {"id":"onebc-brand","group":"assets","url":"https://1bc.ca/","path":"sources/assets/onebc-brand.html.txt"},
+    {"id":"canwest-brand","group":"assets","url":"http://canwestparty.ca/","path":"sources/assets/canwest-brand.html.txt","allowInsecureHttp":true}
+  ]
+}

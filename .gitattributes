@@ -1,0 +1,2 @@
+data/prod/** -text whitespace=cr-at-eol
+data/prod/assets/originals/** -diff
