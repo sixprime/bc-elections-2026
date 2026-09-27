@@ -1,12 +1,17 @@
-import { mountMaps, disposeMaps, findMyRiding, refreshMapIcons } from './map.js';
-import { candidateDirectory, candidateResults, partyDirectory, ridingCandidates, ridingMember } from './candidates.js';
+import { mountMaps, disposeMaps, updateRidingMap, findMyRiding, refreshMapIcons } from './map.js?v=about-navigation';
+import { candidateDirectory, candidateResults, partyDirectory, partyResults, partyComparison, ridingCandidates, ridingMember } from './candidates.js?v=unified-data';
 import { renderPollChart, pollSeries } from './poll-chart.js';
 
 const root = document.getElementById('main');
 const state = { election: null, polls: null, query: '', filter: 'all', partyFilter: 'all' };
-const stagingPreview = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname) && new URLSearchParams(location.search).get('preview') === 'staging';
-const stagedFiles = new Set();
 const candidateFilters = { query: '', partyId: 'all', riding: 'all' };
+const programFilters = { query: '', partyId: 'ndp', topic: 'all' };
+const programComparison = { topic: 'housing', partyIds: null };
+const programComparisonSelections = new Map();
+let programView = 'compare';
+let partyPrograms;
+let programRequest;
+let programError = '';
 let candidateManifest;
 let candidateError = '';
 let candidateRequest;
@@ -24,7 +29,7 @@ const sourceLink = (url, label='View source') => `<a class="action-link" href="$
 const cardBottom = (note, link) => `<div class="card-bottom"><span class="small-note">${note}</span>${link}</div>`;
 
 function snapshotResponse(path) {
-  return fetch(`./data/${stagingPreview && stagedFiles.has(path) ? 'staging' : 'prod'}/${path}`);
+  return fetch(`./data/${path}`);
 }
 
 function currentPolls() {
@@ -89,15 +94,14 @@ function districtDetail(name) {
   const record = state.election.featuredDistricts2024[name];
   const ranked = record ? [...record.votes].sort((a,b)=>b.votes-a.votes) : [];
   const margin = record ? ranked[0].votes-ranked[1].votes : null;
-  return `<div class="page-head"><div><p class="eyebrow"><a href="#ridings">← All ridings</a> / riding detail</p><h1>${escapeHtml(name)}</h1><p>British Columbia · 2026 election · 2024 results shown for context.</p></div><span class="snapshot-pill">${record?'2024 verified':'Result unavailable'}</span></div>
+  return `<div class="page-head riding-detail-head"><div class="riding-title"><p class="eyebrow"><a href="#ridings">← All ridings</a> / riding detail</p><h1>${escapeHtml(name)}</h1><p>British Columbia · 2026 election · 2024 results shown for context.</p><span class="snapshot-pill">${record?'2024 verified':'Result unavailable'}</span></div>
+    <section class="riding-header-member" aria-label="MLA at dissolution"><p class="eyebrow">MLA at dissolution</p><div id="ridingMember" data-riding="${escapeHtml(name)}">${ridingMember(candidateManifest,name,candidateError)}</div></section></div>
     <div class="simple-layout"><div class="poll-left"><section class="card card-pad">${panelHeader(record?'2024 final result':'2024 result unavailable','Official Elections BC source, not a 2026 projection','HISTORICAL DATA')}
     ${record ? `<div class="stat-grid"><div class="stat-tile"><strong class="stat-number">${escapeHtml(party(ranked[0].party).ballot)}</strong><span>winning affiliation</span></div><div class="stat-tile"><strong class="stat-number">${number.format(margin)}</strong><span>vote margin</span></div><div class="stat-tile"><strong class="stat-number">${number.format(record.validVotes)}</strong><span>valid votes</span></div></div>
     ${Number.isFinite(record.turnout) ? `<p class="small-note">2024 turnout: ${percentage(record.turnout,2)} · ${number.format(record.registeredVoters)} registered voters</p>` : ''}
     <div class="detail-vote">${ranked.map(vote=>`<div class="detail-vote-line"><span>${dot(party(vote.party).color)}${escapeHtml(vote.name)} <span class="subtle">· ${escapeHtml(party(vote.party).ballot)}</span></span><strong>${number.format(vote.votes)} · ${percentage(vote.votes/record.validVotes*100,2)}</strong><div class="bar-track"><div class="bar-fill" style="--bar:${party(vote.party).color};width:${vote.votes/record.validVotes*100}%"></div></div></div>`).join('')}</div>` : '<p class="small-note">No detailed result is included for this riding in this snapshot.</p>'}
     ${cardBottom('Final 2024 count · no 2026 riding estimate.',sourceLink(record?.source || state.election.sources.districts,'Official results'))}</section></div>
-    <div class="poll-right"><section class="card card-pad">${panelHeader('MLA at dissolution','43rd Parliament','LEGISLATURE RECORD')}
-    <div id="ridingMember" data-riding="${escapeHtml(name)}">${ridingMember(candidateManifest,name,candidateError)}</div></section>
-    <section class="card card-pad">${panelHeader('2026 candidates','Nominations close October 3 at 1 p.m. PT','SOURCE-BACKED')}
+    <div class="poll-right"><section class="card card-pad">${panelHeader('2026 candidates','Nominations close October 3 at 1 p.m. PT','SOURCE-BACKED')}
     <div id="ridingCandidates" data-riding="${escapeHtml(name)}">${ridingCandidates(state.election,candidateManifest,name,candidateError)}</div>
     ${cardBottom('Party announcements are not accepted nominations.',sourceLink(state.election.sources.candidates,'Elections BC filings'))}</section></div></div>`;
 }
@@ -107,22 +111,72 @@ function pollChart() {
 }
 function polls() {
   const list = pollSeries(state.polls, pollOptions).releases.sort((first, second) => second.released.localeCompare(first.released));
-  return `<div class="page-head"><div><p class="eyebrow">Original pollster releases</p><h1>Professional polls</h1><p>Published voting intention · Historical observations and current averages</p></div><span class="snapshot-pill">${stagedFiles.has('polls.json') ? 'STAGING / Not published' : `Prod / ${readableDate(state.polls.snapshotDate)}`}</span></div>
+  return `<div class="page-head"><div><p class="eyebrow">Original pollster releases</p><h1>Professional polls</h1><p>Published voting intention · Historical observations and current averages</p></div><span class="snapshot-pill">Snapshot / ${readableDate(state.polls.snapshotDate)}</span></div>
     <section class="poll-history">${panelHeader('Voting intention over time','Source-linked observations / same-pollster series',`${list.length} OF ${state.polls.releases.length} RELEASES`)}${pollChart()}</section>
     <div class="poll-layout"><section class="card card-pad">${panelHeader('Poll release archive','Fieldwork, question base and sources','PRIMARY SOURCES')}<div class="release-list">
     ${list.map(release => `<article class="release"><div class="release-top"><strong>${escapeHtml(release.pollster)}</strong><time datetime="${release.released}">${readableDate(release.released,{month:'short',day:'numeric',year:'numeric'})}</time></div>
       <p class="details">Fieldwork ${readableDate(release.fieldStart)}–${readableDate(release.fieldEnd)} · n=${number.format(release.sampleTotal)} total${release.sampleDecided ? ` / n=${number.format(release.sampleDecided)} voting-intention sample` : ''} · ${escapeHtml(release.method)} · ${escapeHtml(release.basis)}</p>
       <div class="figures">${Object.entries(release.shares).map(([id,value]) => `<span>${dot(party(id).color)}${escapeHtml(party(id).ballot)} <strong>${percentage(value)}</strong></span>`).join('')}</div>
       <p class="caption">${escapeHtml(release.note)}</p><div class="release-sources">${sourceLink(release.source,'Original release')}${release.tables ? sourceLink(release.tables,'Data tables') : ''}</div></article>`).join('')}
-    </div></section><div class="poll-right"><section class="card card-pad">${panelHeader('Current average',`Latest release per pollster / ${state.polls.summaryWindowDays} days`,`${currentPolls().length} POLLSTERS`)}<div class="poll-context"><span>${dot('#27a55d')}Observed releases</span><span>${readableDate(state.polls.snapshotDate)} snapshot</span></div>${currentRows()}${cardBottom('Unweighted mean. Separately reported parties only.','<a href="#methodology" class="action-link">Calculation details →</a>')}</section>
+    </div></section><div class="poll-right"><section class="card card-pad">${panelHeader('Current average',`Latest release per pollster / ${state.polls.summaryWindowDays} days`,`${currentPolls().length} POLLSTERS`)}<div class="poll-context"><span>${dot('#27a55d')}Observed releases</span><span>${readableDate(state.polls.snapshotDate)} snapshot</span></div>${currentRows()}${cardBottom('Unweighted mean. Separately reported parties only.','<a href="#about" class="action-link">Calculation details →</a>')}</section>
     <section class="card card-pad">${panelHeader('Observed poll range','Minimum and maximum included values','NOT A CI')}<div class="range-list">${averages().filter(result => result.mean != null).map(result => `<div class="range-row"><span>${dot(party(result.id).color)}${escapeHtml(party(result.id).ballot)}</span><div class="range-track" style="--bar:${party(result.id).color}"><i style="left:${result.min/55*100}%;width:${(result.max-result.min)/55*100}%"></i><b style="left:${result.mean/55*100}%"></b></div><strong>${percentage(result.min,0)}–${percentage(result.max,0)}</strong></div>`).join('')}</div><p class="small-note">Observed ranges show disagreement between pollsters, not sampling uncertainty.</p></section></div></div>`;
 }
 function parties() {
-  return partyDirectory(state.election, candidateManifest, candidateError);
+  return partyDirectory(state.election, candidateManifest, candidateError, { programs: partyPrograms, filters: programFilters, programsError: programError, view: programView, comparison: programComparison });
 }
 function candidates() {
   return candidateDirectory(state.election, candidateManifest, candidateFilters, candidateError);
 }
+
+async function loadPrograms() {
+  if (programRequest || partyPrograms !== undefined || programError) return;
+  programRequest = snapshotResponse('programs.json');
+  try {
+    const response = await programRequest;
+    if (response.status === 404) { partyPrograms = null; return; }
+    if (!response.ok) throw new Error('Programme sources could not be loaded.');
+    const programs = await response.json();
+    if (programs.schemaVersion !== 2 || !Array.isArray(programs.parties) || !Array.isArray(programs.sources) || !Array.isArray(programs.topics) || !Number.isFinite(Date.parse(programs.checkedAt))) throw new Error('Verified quotation data is unavailable.');
+    partyPrograms = programs;
+  } catch (error) {
+    programError = error.message;
+  } finally {
+    programRequest = null;
+    if (location.hash === '#parties') render();
+  }
+}
+
+function updatePartyResults(focusId = '') {
+  const container = document.getElementById('partyResults');
+  const pickerOpen = container.querySelector('.comparison-picker')?.open;
+  const previousTable = container.querySelector('.comparison-table-region');
+  const scrollLeft = previousTable?.scrollLeft || 0;
+  const scrollTop = previousTable?.scrollTop || 0;
+  const results = programView === 'compare' ? partyComparison(state.election, candidateManifest, partyPrograms, programComparison) : partyResults(state.election, candidateManifest, partyPrograms, programFilters);
+  container.innerHTML = results;
+  const picker = container.querySelector('.comparison-picker');
+  if (picker) picker.open = Boolean(pickerOpen);
+  const table = container.querySelector('.comparison-table-region');
+  if (table) { table.scrollLeft = scrollLeft; table.scrollTop = scrollTop; }
+  refreshMapIcons();
+  if (focusId) (document.getElementById(focusId) || document.querySelector('[data-comparison-topic]:checked'))?.focus({ preventScroll: true });
+}
+
+function showProgramView(view, partyId) {
+  if (!['compare', 'explore'].includes(view)) return;
+  if (partyId) {
+    if (!state.election.parties.some(party => party.id === partyId)) return;
+    programFilters.partyId = partyId;
+    programFilters.topic = 'all';
+    programFilters.query = '';
+  }
+  programView = view;
+  render();
+  const focus = document.getElementById(partyId ? 'programParty' : view === 'compare' ? 'programTabCompare' : 'programTabExplore');
+  focus?.focus({ preventScroll: true });
+  if (partyId) document.getElementById('programViewPanel').scrollIntoView({ block: 'start', behavior: 'instant' });
+}
+
 async function loadCandidates() {
   if (candidateRequest || candidateManifest || candidateError) return;
   candidateRequest = snapshotResponse('assets/manifest.json');
@@ -131,7 +185,6 @@ async function loadCandidates() {
     if (!response.ok) throw new Error('The candidate data could not be loaded.');
     const manifest = await response.json();
     if (!Array.isArray(manifest.candidates) || !Array.isArray(manifest.assets) || !Array.isArray(manifest.parties)) throw new Error('The candidate catalogue is incomplete.');
-    for (const asset of manifest.assets) asset.staged = stagingPreview && stagedFiles.has(asset.web?.path);
     candidateManifest = manifest;
   } catch (error) {
     candidateError = error.message;
@@ -144,23 +197,20 @@ async function loadCandidates() {
     if (memberPanel) memberPanel.innerHTML = ridingMember(candidateManifest,memberPanel.dataset.riding,candidateError);
   }
 }
-function ballot() {
-  return `<div class="page-head"><div><p class="eyebrow">Design preview</p><h1>Community Ballot</h1><p>A future opt-in participation feature, separate from professional surveys and official votes.</p></div><span class="snapshot-pill">Preview only</span></div><div class="simple-layout"><section class="card card-pad prose-card">${panelHeader('How the community flow could feel','A transparent, three-step ballot experience','UI PROTOTYPE')}<div class="info-strip"><span class="info-icon">i</span><span>There is no vote collection, identity system or community tally in this client-only build. Any future community sample would be self-selected and unscientific.</span></div><div class="preview-card" style="margin-top:17px"><div class="preview-step"><span>1</span><strong>Choose a riding</strong></div><div class="preview-step"><span>2</span><strong>Select an officially filed candidate</strong></div><div class="preview-step"><span>3</span><strong>Review and submit, once a safe collection service exists</strong></div></div><h3>Why this is a preview</h3><p>A shared vote tally and safeguards against repeat participation need infrastructure. Static GitHub Pages cannot collect or verify ballots by itself. We can decide later whether to build that part.</p><a href="#ridings" class="secondary-button">Explore ridings →</a></section><aside class="card card-pad">${panelHeader('Three separate measures','Easy to distinguish anywhere on the site','TRANSPARENCY')}<div class="side-fact"><b>01</b><p>Official Elections BC past results and, later, 2026 results.</p></div><div class="side-fact"><b>02</b><p>Professional pollster releases, with dates and methods.</p></div><div class="side-fact"><b>03</b><p>Community participation data, only after a separate system exists.</p></div></aside></div>`;
-}
-function methodology() {
+function about() {
   const e=state.election.sources;
-  return `<div class="page-head"><div><p class="eyebrow">September 25 snapshot</p><h1>Sources & methodology</h1></div></div>
+  return `<div class="page-head"><div><p class="eyebrow">BC Election Guide</p><h1>About</h1><p>An independent, unofficial guide to British Columbia elections. Not affiliated with Elections BC or any political party.</p></div></div>
     <div class="simple-layout"><section class="card card-pad prose-card">
-    ${panelHeader('Election evidence', 'Independent and unofficial', 'SOURCES')}
+    ${panelHeader('Sources & methodology', 'Independent and unofficial', 'SOURCES')}
     <h3>Election records</h3><p>Official 2024 provincial totals and ${Object.keys(state.election.featuredDistricts2024).length} riding results come from Elections BC's final Statement of Votes. Complete riding imports are checked against the report's independent district totals, party vote totals and seat totals. The party directory follows the registered-party PDF dated September 25, 2026. Election Day comes from Elections BC. Past results are not current projections.</p>
     <h3>Polling summary</h3><p>${state.polls.releases.length} survey records come from the original pollsters. The current summary takes the latest release from each distinct pollster in the ${state.polls.summaryWindowDays} days ending ${readableDate(state.polls.snapshotDate)}. Values are arithmetic means of reported party shares. Ranges are the smallest and largest release values, <strong>not</strong> confidence intervals. At least two pollsters must report a party separately for it to appear in the summary.</p>
     <p>Older releases remain in the archive without counting the same firm twice in the current mean. Grouped responses are never divided among named parties. Chart lines connect observations from the same pollster, with gaps for unreported values; question bases remain listed on each release. These lines are descriptive, not a fitted polling average.</p>
-    <p>The optional dashed election-day continuation holds the recent average unchanged. This no-change scenario is not a forecast, confidence interval or seat projection. Production uses approved data only; the explicit localhost staging preview is for review.</p>
+    <p>The optional dashed election-day continuation holds the recent average unchanged. This no-change scenario is not a forecast, confidence interval or seat projection.</p>
     <h3>Geography and location</h3><p>The 93 district boundaries come from Elections BC through DataBC. Display boundaries are simplified; location matching uses the full-resolution geometry. Contains information licenced under the ${sourceLink('https://www.elections.bc.ca/docs/EBC-Open-Data-Licence.pdf','Elections BC Open Data Licence')}.</p>
     <p>Location access requires permission. Phones may use GPS; desktop locations can be less precise. Coordinates stay in memory and are not saved in localStorage or URLs. Map providers receive requests for the viewed area. A current location is not necessarily a home address, and this match is not an official voter assignment. Confirm your home riding with Elections BC.</p>
     <h3>Map imagery</h3><p>Sentinel-2 cloudless 2024 imagery is provided by EOX under ${sourceLink('https://cloudless.eox.at/license-non-commercial','CC BY-NC-SA 4.0')}, for non-commercial use with attribution. Its 10 m resolution is regional satellite imagery, not live or house-level aerial photography. EOX also supplies terrain and reference labels. Streets are from OpenStreetMap contributors. These free services are best-effort and may be rate-limited.</p>
     <h3>Candidate artwork</h3><p>The separate artwork inventory records source pages, original files and usage-review status. Party announcements are kept separate from accepted Elections BC nominations. Downloading a photograph or logo does not grant unrestricted reuse or imply endorsement. Missing artwork is not fabricated.</p>
-    <h3>Limits</h3><p>No 2026 seat forecast or community ballot tally is computed. The site is independent and unofficial. Use Elections BC for voting instructions, registration and current filings.</p>
+    <h3>Limits</h3><p>No 2026 seat forecast is computed. The site is independent and unofficial. Use Elections BC for voting instructions, registration and current filings.</p>
     </section><aside class="card card-pad">${panelHeader('Original sources','','LINKS')}<ul class="source-list">
     <li>${sourceLink(e.election,'Elections BC')}<small>Election and voter information</small></li>
     <li>${sourceLink(e.districts,'2024 Statement of Votes')}<small>Official historical results</small></li>
@@ -169,33 +219,44 @@ function methodology() {
     <li>${sourceLink(e.boundaries,'GIS spatial data')}<small>93 electoral districts</small></li>
     <li>${sourceLink('https://maps.eox.at/','EOX Maps')}<small>Satellite, terrain and reference labels</small></li>
     <li>${sourceLink('https://www.openstreetmap.org/copyright','OpenStreetMap')}<small>Street data and attribution</small></li>
-    ${state.polls.releases.map(release=>`<li>${sourceLink(release.source,release.pollster)}<small>Released ${readableDate(release.released)}</small></li>`).join('')}</ul></aside></div>`;
+    ${state.polls.releases.map(release=>`<li>${sourceLink(release.source,release.pollster)}<small>Released ${readableDate(release.released)}</small></li>`).join('')}</ul></aside></div>
+    <section class="about-contact" aria-labelledby="contactHeading"><h2 id="contactHeading">Contact</h2><p>Questions, feedback or a correction?</p><a href="mailto:contact@bcelectionguide.ca">contact@bcelectionguide.ca</a></section>`;
 }
 
 function route() {
-  const path = decodeURIComponent((location.hash || '#province').slice(1));
+  const requestedPath = decodeURIComponent((location.hash || '#province').slice(1));
+  const path = requestedPath === 'methodology' ? 'about' : requestedPath;
   if (path.startsWith('riding/')) {
     const name = state.election.districts.find(d => slug(d) === path.slice(7));
-    return {section:'ridings',html:name?districtDetail(name):ridingExplorer()};
+    return {section:'ridings',ridingSlug:name?path.slice(7):null,html:name?districtDetail(name):ridingExplorer()};
   }
-  const pages = {province,ridings:ridingExplorer,polls,parties,candidates,ballot,methodology};
+  const pages = {province,ridings:ridingExplorer,polls,parties,candidates,about};
   const section=pages[path]?path:'province';
   return {section,html:pages[section]()};
 }
 function render() {
   if (!state.election || !state.polls) return;
-  disposeMaps();
-  const view=route();root.innerHTML=(stagingPreview ? '<div class="poll-review-banner" role="status">Staging review. Not published.</div>' : '')+view.html;
-  if (location.hash.startsWith('#riding/')) {
-    const geography = document.createElement('div');
-    geography.className = 'detail-geography';
-    geography.innerHTML = mapCard(false, location.hash.slice('#riding/'.length));
+  const view = route();
+  const retainedGeography = view.ridingSlug ? root.querySelector('.detail-geography') : null;
+  disposeMaps(retainedGeography);
+  retainedGeography?.remove();
+  root.innerHTML=view.html;
+  if (view.ridingSlug) {
+    const geography = retainedGeography || document.createElement('div');
+    if (!retainedGeography) {
+      geography.className = 'detail-geography';
+      geography.innerHTML = mapCard(false, view.ridingSlug);
+    }
     root.querySelector('.page-head').after(geography);
+    geography.querySelector('[data-riding-map]').dataset.selectedRiding = view.ridingSlug;
+    if (retainedGeography) updateRidingMap(geography, view.ridingSlug);
   }
   document.querySelectorAll('[data-nav]').forEach(link=>{const active=link.dataset.nav===view.section;link.classList.toggle('active',active);if(active)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current')});
-  document.title=`${view.section==='province'?'Overview':view.section.charAt(0).toUpperCase()+view.section.slice(1)} · BC Vote 2026`;
+  document.title=`${view.section==='province'?'Overview':view.section.charAt(0).toUpperCase()+view.section.slice(1)} · BC Election Guide`;
   mountMaps(state.election);
   if (['candidates', 'parties'].includes(view.section) || location.hash.startsWith('#riding/')) loadCandidates();
+  if (view.section === 'parties') loadPrograms();
+  return Boolean(retainedGeography);
 }
 function updateCountdown() {
   if (!state.election)return;
@@ -203,6 +264,27 @@ function updateCountdown() {
   document.getElementById('countdown').textContent=days===0?'Election Day · Oct 24':`${days} days to vote`;
 }
 document.addEventListener('click', e=>{
+  if (e.target.closest('[data-program-retry]')) { programError = ''; render(); return; }
+  const comparisonAction = e.target.closest('[data-comparison-action]');
+  if (comparisonAction) {
+    if (comparisonAction.dataset.comparisonAction === 'defaults') programComparison.partyIds = null;
+    else if (comparisonAction.dataset.comparisonAction === 'all') programComparison.partyIds = state.election.parties.map(party => party.id);
+    else if (comparisonAction.dataset.comparisonAction === 'clear') programComparison.partyIds = [];
+    else return;
+    updatePartyResults(comparisonAction.id);
+    return;
+  }
+  const programTab = e.target.closest('[data-program-view]');
+  if (programTab) { showProgramView(programTab.dataset.programView); return; }
+  const exploreProgram = e.target.closest('[data-program-explore]');
+  if (exploreProgram) { showProgramView('explore', exploreProgram.dataset.programExplore); return; }
+  const programJump = e.target.closest('[data-program-jump]');
+  if (programJump) {
+    const target = document.getElementById(programJump.dataset.programJump);
+    target?.focus({ preventScroll: true });
+    target?.scrollIntoView({ block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+    return;
+  }
   const pollRange = e.target.closest('[data-poll-months]');
   if (pollRange) {
     const months = Number(pollRange.dataset.pollMonths);
@@ -250,6 +332,7 @@ document.addEventListener('click', e=>{
   if(e.target.closest('#mobileMenu a')){document.getElementById('mobileMenu').hidden=true;document.getElementById('menuButton').setAttribute('aria-expanded','false')}
 });
 document.addEventListener('input',e=>{
+  if (e.target.id === 'programSearch') { programFilters.query = e.target.value; updatePartyResults(); return; }
   if(e.target.id==='candidateSearch'){
     candidateFilters.query=e.target.value;
     document.getElementById('candidateResults').innerHTML=candidateResults(state.election,candidateManifest,candidateFilters);
@@ -268,6 +351,30 @@ document.addEventListener('input',e=>{
   }
 });
 document.addEventListener('change', event => {
+  if (event.target.matches('[data-comparison-topic]')) {
+    if (!event.target.checked || !partyPrograms.topics.some(topic => topic.id === event.target.value)) return;
+    programComparisonSelections.set(programComparison.topic, programComparison.partyIds);
+    programComparison.topic = event.target.value;
+    programComparison.partyIds = programComparisonSelections.get(programComparison.topic) ?? null;
+    updatePartyResults();
+    const table = document.querySelector('.comparison-table-region');
+    if (table) table.scrollTop = 0;
+    return;
+  }
+  if (event.target.matches('[data-comparison-party]')) {
+    const selected = event.target.dataset.comparisonParty;
+    if (!state.election.parties.some(party => party.id === selected)) return;
+    if (programComparison.partyIds === null) programComparison.partyIds = [...document.querySelectorAll('[data-compare-party]')].map(party => party.dataset.compareParty);
+    if (event.target.checked && !programComparison.partyIds.includes(selected)) programComparison.partyIds.push(selected);
+    else if (!event.target.checked) programComparison.partyIds = programComparison.partyIds.filter(id => id !== selected);
+    updatePartyResults(event.target.id);
+    return;
+  }
+  if (event.target.id === 'programParty' || event.target.id === 'programTopic') {
+    programFilters[event.target.id === 'programParty' ? 'partyId' : 'topic'] = event.target.value;
+    updatePartyResults();
+    return;
+  }
   if (event.target.id === 'pollsterFilter' || event.target.id === 'pollScenario') {
     if (event.target.id === 'pollsterFilter') {
       pollOptions.pollster = event.target.value;
@@ -286,15 +393,14 @@ document.addEventListener('change', event => {
   candidateReturnPosition = null;
   refreshMapIcons();
 });
-window.addEventListener('hashchange',()=>{render();window.scrollTo({top:0,behavior:'instant'})});
+document.addEventListener('keydown', event => {
+  if (!event.target.matches('[data-program-view]') || !['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+  event.preventDefault();
+  const next = event.key === 'Home' ? 'compare' : event.key === 'End' ? 'explore' : programView === 'compare' ? 'explore' : 'compare';
+  showProgramView(next);
+});
+window.addEventListener('hashchange',()=>{if(!render())window.scrollTo({top:0,behavior:'instant'})});
 try {
-  if (stagingPreview) {
-    const reviewResponse = await fetch('./data/staging/_diff.json');
-    if (!reviewResponse.ok) throw Error('No staging review is available.');
-    const review = await reviewResponse.json();
-    if (!Array.isArray(review.changes)) throw Error('The staging review is invalid.');
-    for (const change of review.changes) if (change.status !== 'removed') stagedFiles.add(change.path);
-  }
   const [electionResponse,pollsResponse]=await Promise.all([snapshotResponse('election.json'),snapshotResponse('polls.json')]);
   if(!electionResponse.ok||!pollsResponse.ok)throw Error('One of the data files could not be loaded.');
   [state.election,state.polls]=await Promise.all([electionResponse.json(),pollsResponse.json()]);

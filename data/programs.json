@@ -1,0 +1,938 @@
+{
+  "schemaVersion": 2,
+  "checkedAt": "2026-09-27T07:59:53.559635Z",
+  "topics": [
+    {
+      "id": "affordability",
+      "label": "Affordability & taxes"
+    },
+    {
+      "id": "housing",
+      "label": "Housing"
+    },
+    {
+      "id": "health",
+      "label": "Healthcare"
+    },
+    {
+      "id": "education",
+      "label": "Education & childcare"
+    },
+    {
+      "id": "economy",
+      "label": "Economy & resources"
+    },
+    {
+      "id": "environment",
+      "label": "Climate & environment"
+    },
+    {
+      "id": "transport",
+      "label": "Transport"
+    },
+    {
+      "id": "justice",
+      "label": "Justice & public safety"
+    },
+    {
+      "id": "addiction",
+      "label": "Drugs & addiction"
+    },
+    {
+      "id": "indigenous",
+      "label": "Indigenous relations"
+    },
+    {
+      "id": "governance",
+      "label": "Government & democracy"
+    },
+    {
+      "id": "rights",
+      "label": "Rights & social supports"
+    },
+    {
+      "id": "other",
+      "label": "Other topics"
+    }
+  ],
+  "sources": [
+    {
+      "id": "program-ndp-priorities",
+      "title": "Fighting for You and Your Family \u2013 it\u2019s making a difference",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/action-for-you",
+      "electionYear": null,
+      "publishedOn": null,
+      "sourceSha256": "39c93310fe4eca393add4c7301f125d013e894ca176b0ad412d95292b219e862",
+      "textSha256": "4973ac394514594fb5c97a640e36e14246df011e2399fd6ac61bce8859f66554"
+    },
+    {
+      "id": "program-con-platform",
+      "title": "Our Platform | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/our-platform/",
+      "electionYear": 2026,
+      "publishedOn": null,
+      "sourceSha256": "adc54218604be22a949015b9bb56daa23a9f77669146e7a3f3715dd1762e07e0",
+      "textSha256": "a550a1063099986649a4f2d0a4fb34cce5d89ac48ef323b8fa4f26090c127ef3"
+    },
+    {
+      "id": "program-con-documents",
+      "title": "Official Documents | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/official-documents/",
+      "electionYear": null,
+      "publishedOn": null,
+      "sourceSha256": "ef5bb96b33c20887a240a10f3adf593136dea0a4efabcf7e485bf088a15008bc",
+      "textSha256": "c12d1f20ba11ab9694248b5157baba5808e3e3a7d059069ca503dc7fa004b129"
+    },
+    {
+      "id": "program-green-2026",
+      "title": "Emily Lowan announces election plans - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/emily-lowan-announces-election-plans/",
+      "electionYear": 2026,
+      "publishedOn": "2026-09-23",
+      "sourceSha256": "d69e4f1c850806f1f665b7a5eba740acab2d543e7cb8b33824a3f5a5fcd8b840",
+      "textSha256": "2e534223b0b93bb174ea6143cae09e263f8d9e3e3a835b7204084e4ceb218302"
+    },
+    {
+      "id": "program-green-2024",
+      "title": "2024 BC Green Party Platform - Putting People First",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/2024-platform/",
+      "electionYear": 2024,
+      "publishedOn": null,
+      "sourceSha256": "81d26268e829254c6fad6f25feaae3d667f77490d5f641ef12b06182ba49f6a3",
+      "textSha256": "bbe4569bd970f2738f7315cc1ca9581eb7b65fc16be0e8e2f737ff479adc6fa3"
+    },
+    {
+      "id": "program-green-2024-pdf",
+      "title": "2024 Platform (PDF)",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/wp-content/uploads/2024/09/BCGreens-Platform-2024.pdf",
+      "electionYear": 2024,
+      "publishedOn": null,
+      "sourceSha256": "20e4acd1d64be44f0ad86330c4ad56e132dc7014e8671934de44f1dcef83ce65",
+      "textSha256": "c8b8d52ac0c3dfd0cf8ff185592bf755b074e710ddc42db62eee27d763670934"
+    },
+    {
+      "id": "program-one-priorities",
+      "title": "OneBC - Priorities",
+      "publisher": "OneBC",
+      "url": "https://1bc.ca/priorities",
+      "electionYear": null,
+      "publishedOn": null,
+      "sourceSha256": "e490f06b8ec6429df0c9b47d022b87295c2bb56bdd1a6678f1f535c87e03c9b8",
+      "textSha256": "7a9aa9dd64987a3bbc484c5e96180cd61af8f503c239cee722097c51986bfb11"
+    },
+    {
+      "id": "program-centre-vision",
+      "title": "Our Vision for B.C. - CentreBC",
+      "publisher": "CentreBC",
+      "url": "https://www.centrebc.ca/vision/",
+      "electionYear": null,
+      "publishedOn": null,
+      "sourceSha256": "1e56f675f2e70b1964f2a9c106e7beb1c900bfebc033f179e8573c470c75ba77",
+      "textSha256": "dc21144ba73c9aad6aea0939bd50eb00190a56207ebd0c55a2e7766fa6df4bcf"
+    },
+    {
+      "id": "program-centre-policy",
+      "title": "Our Policy - CentreBC",
+      "publisher": "CentreBC",
+      "url": "https://www.centrebc.ca/our-policy/",
+      "electionYear": null,
+      "publishedOn": null,
+      "sourceSha256": "82399cd59e82a27995ac7ef04a46e1ab705187e3498d56c14ecac9673ac13b1e",
+      "textSha256": "3494e9148b8e9333c5f8fdbb1f8eb34e7200075f84e42d0b3706f10b68b5b016"
+    },
+    {
+      "id": "program-libertarian-2024",
+      "title": "Platform 2024 Archives - BC Libertarian Party",
+      "publisher": "BC Libertarian Party",
+      "url": "https://libertarian.bc.ca/category/platform/platform2024/",
+      "electionYear": 2024,
+      "publishedOn": null,
+      "sourceSha256": "15e169cbbefcea4f8b545e2a757f692a9a7d3bd3cd3b23ef1f3033b394bf7ea7",
+      "textSha256": "a2218c97fe6bd0b26428c81a8b5e4dfb236057c80474d8d1ab993bcd06bb7676"
+    },
+    {
+      "id": "program-libertarian-2024-2",
+      "title": "Platform 2024 Archives - Page 2 of 4 - BC Libertarian Party",
+      "publisher": "BC Libertarian Party",
+      "url": "https://libertarian.bc.ca/category/platform/platform2024/page/2/",
+      "electionYear": 2024,
+      "publishedOn": null,
+      "sourceSha256": "f179d135a62b9431e62023915a05c531a95582f2ae4c5e508a3af213b20a020b",
+      "textSha256": "e63853e02dc54acd244e039af5f52b27c17c7a128ce655f05bd18f6e178f92c8"
+    },
+    {
+      "id": "program-libertarian-2024-3",
+      "title": "Platform 2024 Archives - Page 3 of 4 - BC Libertarian Party",
+      "publisher": "BC Libertarian Party",
+      "url": "https://libertarian.bc.ca/category/platform/platform2024/page/3/",
+      "electionYear": 2024,
+      "publishedOn": null,
+      "sourceSha256": "2762ab632c459cdc192a6381bb269e9ea82f6ac9a1d9fde70fa719c797620dc8",
+      "textSha256": "b40eee8fd34cad87fdb9bd440589e2c24f50b4053f60b6acbbcccd67fcf1b2db"
+    },
+    {
+      "id": "program-libertarian-2024-4",
+      "title": "Platform 2024 Archives - Page 4 of 4 - BC Libertarian Party",
+      "publisher": "BC Libertarian Party",
+      "url": "https://libertarian.bc.ca/category/platform/platform2024/page/4/",
+      "electionYear": 2024,
+      "publishedOn": null,
+      "sourceSha256": "64ef48b0b4b663b065ee7ab54c020f162fa8cd66df794d01bce5f0a88feafec5",
+      "textSha256": "d9fa933771413c547eee49cba8374a23ea6392193d4397c889c91a456bb2cb7e"
+    },
+    {
+      "id": "program-heritage-platform",
+      "title": "Christian Heritage Party of BC \u2013 Official website for CHP BC",
+      "publisher": "Christian Heritage Party of BC",
+      "url": "https://www.chpbc.ca/",
+      "electionYear": null,
+      "publishedOn": null,
+      "sourceSha256": "e9c6e363be82d7398b586c5c20b9cb866a4ae378bd62597baae48ab612460c0b",
+      "textSha256": "8acbb5e491ea1bdf42b7ef8b327e0647311999d1c4b229155837f7046fd3dfc6"
+    },
+    {
+      "id": "program-communist-platform",
+      "title": "Our Platform \u2013 COMMUNIST PARTY OF BC",
+      "publisher": "Communist Party of BC",
+      "url": "https://cpcbc.ca/our-platform/",
+      "electionYear": null,
+      "publishedOn": null,
+      "sourceSha256": "7c32beccd2b2985a79abd3b3d602a9a6caef1b001ae2fd4e7e4b53f3ccadb53f",
+      "textSha256": "a5229660148aadf2621c8b4849238889711a4e60dc4b5e51c22c6d84f96bc6a0"
+    },
+    {
+      "id": "program-freedom-platform",
+      "title": "Freedom Party of British Columbia - We Got Your Back!",
+      "publisher": "Freedom Party of British Columbia",
+      "url": "https://freedompartybc.ca/",
+      "electionYear": null,
+      "publishedOn": null,
+      "sourceSha256": "5b7d2bb4958617318c43316eb9408c1e50a24b47b0bb018609242d387c42eaa3",
+      "textSha256": "b0ff135f9db9f97789a46e66eaf8fdd9f91953f2ff0aef52a862d20a1591d25a"
+    },
+    {
+      "id": "program-canwest-platform",
+      "title": "CANWEST PARTY",
+      "publisher": "CanWest Party",
+      "url": "http://canwestparty.ca/",
+      "electionYear": null,
+      "publishedOn": null,
+      "sourceSha256": "58d05d2396193e7b19037e1778074b523d663368aff633db106b4c36723d8079",
+      "textSha256": "2fe145fe8a2f0f7d895044c8a4b41d71e5c6c576cc7e24f1514e43faece430ad",
+      "allowInsecureHttp": true
+    },
+    {
+      "id": "program-libertarian-housing",
+      "title": "Affordable Housing - BC Libertarian Party",
+      "publisher": "BC Libertarian Party",
+      "url": "https://libertarian.bc.ca/2024/08/17/affordable-housing-2/",
+      "electionYear": 2024,
+      "publishedOn": "2024-08-17",
+      "sourceSha256": "dead4a0c11d591e026c48181e2ffe70b24c808e31e5d09a80ef6d318c16bd074",
+      "textSha256": "e6ea58496960d3b73aa8d79f1ec9ab1213d4a7c6f5e7e00efe9ac8c2844246f9"
+    },
+    {
+      "id": "program-libertarian-health",
+      "title": "Healthcare Focused On Patients - BC Libertarian Party",
+      "publisher": "BC Libertarian Party",
+      "url": "https://libertarian.bc.ca/2024/08/17/healthcare-focused-on-patients/",
+      "electionYear": 2024,
+      "publishedOn": "2024-08-17",
+      "sourceSha256": "398e82feb69fb1d534d8895d7db1cebdffdf36e7e07f4aa2fcab5b8cea7c0af3",
+      "textSha256": "2c4de115d7d3e9056d0c9ef2167aa2c44cb8e3e2f2d2f1bc348e024447e91a18"
+    },
+    {
+      "id": "program-libertarian-education",
+      "title": "Education - BC Libertarian Party",
+      "publisher": "BC Libertarian Party",
+      "url": "https://libertarian.bc.ca/2024/08/17/education-2/",
+      "electionYear": 2024,
+      "publishedOn": "2024-08-17",
+      "sourceSha256": "3a343f7e91d9e9c19f6456cbf8e6dd3c62a560394256cceb755d1cf7bcacc519",
+      "textSha256": "b52db8ebeb3a33e255ae88441094eec8af3d417e0ef67f9467aad22f5b6f362b"
+    },
+    {
+      "id": "program-libertarian-transport",
+      "title": "Transit and Transportation - BC Libertarian Party",
+      "publisher": "BC Libertarian Party",
+      "url": "https://libertarian.bc.ca/2024/08/17/transit-and-transportation/",
+      "electionYear": 2024,
+      "publishedOn": "2024-08-17",
+      "sourceSha256": "e8fa8182c0cdc366ce0dcf2a4b8ec34b81a202c3300c382fc3b24f7b47464f24",
+      "textSha256": "034314918208ad3480db44d94d32456add00c819c5957538baf31ea72a7b6a34"
+    },
+    {
+      "id": "program-libertarian-tax",
+      "title": "PST - Let's Convert it to a Value Added Tax (VAT) - BC Libertarian Party",
+      "publisher": "BC Libertarian Party",
+      "url": "https://libertarian.bc.ca/2024/09/16/pst-lets-convert-it-to-a-value-added-tax-vat/",
+      "electionYear": 2024,
+      "publishedOn": "2024-09-17",
+      "sourceSha256": "5b5b81acf5cd27d51dca075eb9ef05f36b9752a0a2db401ae316a2337f8bab93",
+      "textSha256": "946934bad23cef73df8de8c50b42ceba8d78888cb0676fdb0aa16e20fd0e8a52"
+    }
+  ],
+  "parties": [
+    {
+      "id": "ndp",
+      "sourceIds": [
+        "program-ndp-priorities"
+      ],
+      "quotes": [
+        {
+          "id": "costs",
+          "topic": "affordability",
+          "text": "We believe you should be able to save more and get ahead.",
+          "sourceId": "program-ndp-priorities",
+          "speaker": "BC NDP",
+          "textSha256": "85cce72c4073a70ad40036ab827b7aabff1e39b684ed120c33c20096da74655d"
+        },
+        {
+          "id": "housing",
+          "topic": "housing",
+          "text": "We\u2019ve fixed restrictive and outdated rules that were blocking townhouses, row homes and duplexes.",
+          "sourceId": "program-ndp-priorities",
+          "speaker": "BC NDP",
+          "textSha256": "ef63f782e39851c37111349e9f611d17a7a9df5a49bf2f212f69d2ca94e9898a"
+        },
+        {
+          "id": "care",
+          "topic": "health",
+          "text": "We\u2019ve invested in primary care, home health, long-term care and assisted living services throughout BC.",
+          "sourceId": "program-ndp-priorities",
+          "speaker": "BC NDP",
+          "textSha256": "f104ce4c135d2b966ae5f8463907783747018b97b199566115b208628d2cff0a"
+        },
+        {
+          "id": "childcare",
+          "topic": "education",
+          "text": "Cut childcare costs in half on average (saving families up to $900/month per child)",
+          "sourceId": "program-ndp-priorities",
+          "speaker": "BC NDP",
+          "textSha256": "e32ee66049f13d00d2ecb32f6f189347b3c04de550124a7c80a563c97e0aee44"
+        },
+        {
+          "id": "sick-leave",
+          "topic": "economy",
+          "text": "We\u2019ve made it so you can now take 5 paid sick days a year under minimum employment standards.",
+          "sourceId": "program-ndp-priorities",
+          "speaker": "BC NDP",
+          "textSha256": "0e65566348d11907259cb5d31a9ecb8233ed90d93c6158a2e31631c0baea7107"
+        },
+        {
+          "id": "safety",
+          "topic": "justice",
+          "text": "We\u2019re keeping repeat violent offenders off the street with stricter bail rules and stronger enforcement.",
+          "sourceId": "program-ndp-priorities",
+          "speaker": "BC NDP",
+          "textSha256": "bb73217e1151577409c039b3b6f2d356ce77095a56a7ae348ccc599651ed3319"
+        },
+        {
+          "id": "disaster-risk",
+          "topic": "environment",
+          "text": "We funded local governments and First Nations to reduce disaster risk, with $39 million for more than 50 local projects.",
+          "sourceId": "program-ndp-priorities",
+          "speaker": "BC NDP",
+          "textSha256": "c6d8c38e13d6bddfc0f10aa1a1821fa78dd208f0d357901bba2871fd8496c7f8"
+        }
+      ]
+    },
+    {
+      "id": "con",
+      "sourceIds": [
+        "program-con-platform",
+        "program-con-documents"
+      ],
+      "quotes": [
+        {
+          "id": "platform-page",
+          "topic": "governance",
+          "text": "coming soon",
+          "sourceId": "program-con-platform",
+          "locator": "Our Platform",
+          "speaker": "Conservative Party of British Columbia",
+          "textSha256": "62bfdf0b726cbcc51d7ad57cfd2f03c007306a8a74d477500f92863236d79c13"
+        }
+      ]
+    },
+    {
+      "id": "green",
+      "sourceIds": [
+        "program-green-2026",
+        "program-green-2024",
+        "program-green-2024-pdf"
+      ],
+      "quotes": [
+        {
+          "id": "affordability-2026",
+          "topic": "affordability",
+          "text": "A Life You Can Afford",
+          "sourceId": "program-green-2026",
+          "locator": "2026 campaign commitments",
+          "speaker": "BC Green Party",
+          "textSha256": "f7457f258547ffad9c80d8a348ecc50091f6162207ae5e4b01f142bd540b164e"
+        },
+        {
+          "id": "care-2026",
+          "topic": "health",
+          "text": "Care You Can Count On",
+          "sourceId": "program-green-2026",
+          "locator": "2026 campaign commitments",
+          "speaker": "BC Green Party",
+          "textSha256": "432c26fe7d04f31f81669914c3ff5a672c4f59b671ca2edf6cd11609dedeb9ad"
+        },
+        {
+          "id": "fair-economy-2026",
+          "topic": "economy",
+          "text": "The BC Greens are ready to do the work to build a fair economy.",
+          "speaker": "Emily Lowan",
+          "sourceId": "program-green-2026",
+          "textSha256": "cf5162051f751c3efd375cb293025d0d03e9e21d0e3c85a4d1240ec49885ae45"
+        },
+        {
+          "id": "future-2026",
+          "topic": "environment",
+          "text": "Fight for your Future",
+          "sourceId": "program-green-2026",
+          "locator": "2026 campaign commitments",
+          "speaker": "BC Green Party",
+          "textSha256": "3dfa4973aee45bbb533fdc1f631fd0bc292b6e92ef265d8e31be5a7647f16a75"
+        },
+        {
+          "id": "housing-2024",
+          "topic": "housing",
+          "text": "The private sector alone cannot deliver the affordable housing we need.",
+          "sourceId": "program-green-2024-pdf",
+          "locator": "PDF page 25",
+          "speaker": "BC Green Party",
+          "textSha256": "3c264df1f6eca3615bd6e3684967240364ffaa934a1ff7e542fd6bf789375b1b"
+        },
+        {
+          "id": "workforce-2024",
+          "topic": "health",
+          "text": "Investing in our health workforce is essential for a sustainable future.",
+          "sourceId": "program-green-2024-pdf",
+          "locator": "PDF page 9",
+          "speaker": "BC Green Party",
+          "textSha256": "680166017aeabd0f3ca0e93511100d4237abf63e04346a5b1cf1ffafe759086c"
+        },
+        {
+          "id": "ministers-2024",
+          "topic": "governance",
+          "text": "Require all Ministers to provide evidence on how their work contributes to increasing wellbeing in British Columbia as part of each budget presentation.",
+          "sourceId": "program-green-2024-pdf",
+          "locator": "PDF page 5",
+          "speaker": "BC Green Party",
+          "textSha256": "5274bd2bd4c976f71ec95f487d1da46889b4a38f63f9f8f2080a0952f443ae1c"
+        },
+        {
+          "id": "first-nations-2024",
+          "topic": "indigenous",
+          "text": "Ensure that First Nations are central to the development and implementation of the Wellbeing Framework, fostering collaboration and respect.",
+          "sourceId": "program-green-2024-pdf",
+          "locator": "PDF page 5",
+          "speaker": "BC Green Party",
+          "textSha256": "8beb66f9a7a4e674298d349c00d7adf5a31bdf891b3ddf1b4b24664b0e917e55"
+        }
+      ]
+    },
+    {
+      "id": "one",
+      "sourceIds": [
+        "program-one-priorities"
+      ],
+      "quotes": [
+        {
+          "id": "dripa",
+          "topic": "indigenous",
+          "text": "Repeal DRIPA and declare UNDRIP to have no force and effect in BC",
+          "sourceId": "program-one-priorities",
+          "speaker": "OneBC",
+          "textSha256": "6c62664e42bf4abd187657c96d652588e68b066c6a3ed76b57655bab478829ca"
+        },
+        {
+          "id": "income-tax",
+          "topic": "affordability",
+          "text": "25% tax cuts for every single tax bracket \u2014 including corporate",
+          "sourceId": "program-one-priorities",
+          "speaker": "OneBC",
+          "textSha256": "7f82099b9b6a849e3420075e2154af95cd436b792979cd050f6a89b2294d4e63"
+        },
+        {
+          "id": "pst",
+          "topic": "affordability",
+          "text": "2% off the Provincial Sales Tax (PST)",
+          "sourceId": "program-one-priorities",
+          "speaker": "OneBC",
+          "textSha256": "37adad063cc8552335f8fc881ab369c7a67f1a1c62e7ecdd4b96fc25db060216"
+        },
+        {
+          "id": "pipeline",
+          "topic": "economy",
+          "text": "Approve a pipeline to the Port of Prince Rupert or Kitimat to get Canadian energy to foreign markets",
+          "sourceId": "program-one-priorities",
+          "speaker": "OneBC",
+          "textSha256": "ab0d8ea60494e093a46ea535aa4a80f6694719482dcbaa12c71a130e10a64745"
+        },
+        {
+          "id": "forestry",
+          "topic": "economy",
+          "text": "Reduce stumpage fees for lumber companies to make the market more competitive",
+          "sourceId": "program-one-priorities",
+          "speaker": "OneBC",
+          "textSha256": "cd74bb476c47adfa9b191983fd6ec8a0a53e34009e59f170e47f0db553ef9c7c"
+        },
+        {
+          "id": "balance",
+          "topic": "affordability",
+          "text": "Balanced budgets within 4 years, with an aim towards running surplus budgets",
+          "sourceId": "program-one-priorities",
+          "speaker": "OneBC",
+          "textSha256": "d5c1f1cac92e1709b39385eaa74f840717fb3851021c4190963dd10ba4c44a32"
+        },
+        {
+          "id": "healthcare",
+          "topic": "health",
+          "text": "Private Healthcare alongside fully-funded public healthcare",
+          "sourceId": "program-one-priorities",
+          "speaker": "OneBC",
+          "textSha256": "8f03be5b7804f319eb1886a720d4fb775e86a9c04ec6a37f8886391404d8d485"
+        },
+        {
+          "id": "education",
+          "topic": "education",
+          "text": "Bring back standardized testing \u2014 Focus on reading, writing and mathematics",
+          "sourceId": "program-one-priorities",
+          "speaker": "OneBC",
+          "textSha256": "23ce78cd449ce5413964d0c0839ff4964a1d87c9e7577430961f7ddca23e96e8"
+        },
+        {
+          "id": "housing",
+          "topic": "housing",
+          "text": "Eliminate the Step Code that is raising housing costs with unnecessary green building requirements",
+          "sourceId": "program-one-priorities",
+          "speaker": "OneBC",
+          "textSha256": "2e3e214bb387f77789680fcc4b67bdb5ba6de9be1ae87c559a20a4d99a6dc137"
+        },
+        {
+          "id": "drugs",
+          "topic": "addiction",
+          "text": "Eliminate safe supply and drug consumption programs",
+          "sourceId": "program-one-priorities",
+          "speaker": "OneBC",
+          "textSha256": "5e6295419588ab9ea97b8729d8a1a9779874813fd4530a228874f83b9aba0391"
+        },
+        {
+          "id": "firearms",
+          "topic": "rights",
+          "text": "No provincial government participation in any federal firearms buy-back or confiscation program for legally acquired firearms",
+          "sourceId": "program-one-priorities",
+          "speaker": "OneBC",
+          "textSha256": "197731df68d1b56fc396216f9be1821b4dbb4c67cfa0eac51414732e3d35c5af"
+        },
+        {
+          "id": "protests",
+          "topic": "justice",
+          "text": "No mask wearing during protests",
+          "sourceId": "program-one-priorities",
+          "speaker": "OneBC",
+          "textSha256": "8e7797f2dfcb4c6a5201d9fe0d093cff221c589d0928ae3b66b4b05b737efc08"
+        }
+      ]
+    },
+    {
+      "id": "centre",
+      "sourceIds": [
+        "program-centre-vision",
+        "program-centre-policy"
+      ],
+      "quotes": [
+        {
+          "id": "budget",
+          "topic": "affordability",
+          "text": "CentreBC believes in responsible financial management\u2014balancing the budget over the long term through smarter investments and spending.",
+          "sourceId": "program-centre-vision",
+          "speaker": "CentreBC",
+          "textSha256": "2fe6bf60e0b13edc633179c4d951dce15c8045975321854fc8e18adc1ec2e400"
+        },
+        {
+          "id": "services",
+          "topic": "affordability",
+          "text": "We remain committed to protecting the health care, education, and social supports that British Columbians depend on, while ensuring every tax dollar delivers real results.",
+          "sourceId": "program-centre-vision",
+          "speaker": "CentreBC",
+          "textSha256": "736f3feec94c63ecc6e07e708360274c6e6e49fcc1f1fceff4fabbbbc4dc16f5"
+        },
+        {
+          "id": "housing",
+          "topic": "housing",
+          "text": "Our vision is clear: a province where everyone has access to housing, quality healthcare, education, and economic opportunity.",
+          "sourceId": "program-centre-vision",
+          "speaker": "CentreBC",
+          "textSha256": "22c73e4216810025ecff63dfae172cb03cc4e9ae5b3934ad238350e0c5fea1f8"
+        },
+        {
+          "id": "health",
+          "topic": "health",
+          "text": "Accessible, well-funded healthcare and mental health supports.",
+          "sourceId": "program-centre-vision",
+          "speaker": "CentreBC",
+          "textSha256": "1fa1cb4c6060d0a1e58e0c5d694ad7ae20d1093a4338530882000ca39cca80e1"
+        },
+        {
+          "id": "economy",
+          "topic": "economy",
+          "text": "We are committed to responsible economic growth, supporting small business, fostering innovation, and investing in green technology\u2014while also championing our resource industries, including mining, forestry, and energy.",
+          "sourceId": "program-centre-vision",
+          "speaker": "CentreBC",
+          "textSha256": "b28f0153b4a4d953eddb03ad4a38843b1f2e72962ee0278503a55139f597d586"
+        },
+        {
+          "id": "environment",
+          "topic": "environment",
+          "text": "We will lead with evidence-based solutions to combat climate change, protect biodiversity, and grow a sustainable economy for future generations.",
+          "sourceId": "program-centre-vision",
+          "speaker": "CentreBC",
+          "textSha256": "5a0fbfd51ef50006502a8ceec60493b25f61bdfb01e1766dfdd7f996172f25b2"
+        },
+        {
+          "id": "safety",
+          "topic": "justice",
+          "text": "Public safety backed by strong justice and treatment systems.",
+          "sourceId": "program-centre-vision",
+          "speaker": "CentreBC",
+          "textSha256": "16046d9c73a5c52e9a5b83cfe70f4d14ba49e047b445ed2c2d16124e805d171a"
+        },
+        {
+          "id": "education",
+          "topic": "education",
+          "text": "A modernized education system that equips our youth for the future.",
+          "sourceId": "program-centre-vision",
+          "speaker": "CentreBC",
+          "textSha256": "a7033a3de9741989fc0fe0aa527b74da7607420c1bf5092ceb4cf5713fd9d065"
+        },
+        {
+          "id": "transport",
+          "topic": "transport",
+          "text": "Long-term infrastructure and transportation investments.",
+          "sourceId": "program-centre-vision",
+          "speaker": "CentreBC",
+          "textSha256": "64559d61d97d08ba41d8d0b712fec799e40fa0b57fb1aae9de1e363edc02dce5"
+        },
+        {
+          "id": "process",
+          "topic": "governance",
+          "text": "Our goal is not to promise everything to everyone.",
+          "sourceId": "program-centre-policy",
+          "speaker": "CentreBC",
+          "textSha256": "63b06eac81518bbac971d8f8edfd83bff9f69606e84649f10435993945f84644"
+        }
+      ]
+    },
+    {
+      "id": "bcparty",
+      "sourceIds": [],
+      "quotes": []
+    },
+    {
+      "id": "united",
+      "sourceIds": [],
+      "quotes": []
+    },
+    {
+      "id": "libertarian",
+      "sourceIds": [
+        "program-libertarian-2024",
+        "program-libertarian-2024-2",
+        "program-libertarian-2024-3",
+        "program-libertarian-2024-4",
+        "program-libertarian-housing",
+        "program-libertarian-health",
+        "program-libertarian-education",
+        "program-libertarian-transport",
+        "program-libertarian-tax"
+      ],
+      "quotes": [
+        {
+          "id": "housing",
+          "topic": "housing",
+          "text": "Zoning laws and rent controls must be eased.",
+          "sourceId": "program-libertarian-housing",
+          "locator": "In Brief",
+          "speaker": "BC Libertarian Party",
+          "textSha256": "90326d60c2804f311ca9703b3d56531a644d7725dabb990cfdf6b186b256580a"
+        },
+        {
+          "id": "property-tax",
+          "topic": "affordability",
+          "text": "Reduce or eliminate property transfer tax.",
+          "sourceId": "program-libertarian-housing",
+          "locator": "In Brief",
+          "speaker": "BC Libertarian Party",
+          "textSha256": "c50554b3aae99582e9e1cf8c4ed63f36c73c83619486aa79f987fae7bd54e0ad"
+        },
+        {
+          "id": "health",
+          "topic": "health",
+          "text": "Maintain existing multiple payer system for total health care costs",
+          "sourceId": "program-libertarian-health",
+          "locator": "In Brief",
+          "speaker": "BC Libertarian Party",
+          "textSha256": "63e7276d36fe54d59b5b098c42a4dd2e17affd784b25064da21125c883f62139"
+        },
+        {
+          "id": "education",
+          "topic": "education",
+          "text": "Shift authority down to regional school boards where possible;",
+          "sourceId": "program-libertarian-education",
+          "locator": "In BRIEF",
+          "speaker": "BC Libertarian Party",
+          "textSha256": "ce7ca5e3f615a1db7e9806d613fe5d2e804bd6c387dc7e46640bac8333a77583"
+        },
+        {
+          "id": "insurance",
+          "topic": "transport",
+          "text": "Allow competition in all types of auto insurance and convert ICBC\u2019s insurance business into a member owned and operated co-operative.",
+          "sourceId": "program-libertarian-transport",
+          "locator": "In Brief",
+          "speaker": "BC Libertarian Party",
+          "textSha256": "764efa0df485c07aad915d0375fd2796efed08cc125d470d16db69dde6a72995"
+        },
+        {
+          "id": "vat",
+          "topic": "affordability",
+          "text": "British Columbia should convert the PST into a value-added tax (VAT) like the federal Goods and Services Tax (GST) so that businesses have incentive to do things such as upgrade equipment or expand their scope of business.",
+          "sourceId": "program-libertarian-tax",
+          "locator": "Solution",
+          "speaker": "BC Libertarian Party",
+          "textSha256": "c9ebe772da20184f253594152c7a47cd67baad26ff523c1d8edd7e4b921f6211"
+        }
+      ]
+    },
+    {
+      "id": "heritage",
+      "sourceIds": [
+        "program-heritage-platform"
+      ],
+      "quotes": [
+        {
+          "id": "principles",
+          "topic": "governance",
+          "text": "Our taxpayer-friendly, democracy-friendly and justice-friendly policies are based on biblical values that are pro-life, pro-family, pro-freedom and pro-fiscal sanity.",
+          "sourceId": "program-heritage-platform",
+          "locator": "CHP-BC Platform",
+          "speaker": "Christian Heritage Party of BC",
+          "textSha256": "43b0842334add7b8657f850809ed8d4c8bb43e6369240a3ce49c88bd2a22b661"
+        }
+      ]
+    },
+    {
+      "id": "communist",
+      "sourceIds": [
+        "program-communist-platform"
+      ],
+      "quotes": [
+        {
+          "id": "taxes",
+          "topic": "affordability",
+          "text": "Abolish income tax on earnings under $50,000.",
+          "sourceId": "program-communist-platform",
+          "speaker": "Communist Party of BC",
+          "textSha256": "e443bd354c06198971ef9903bc7241dcd9be3011308d4ffd031bbd24b8acc822"
+        },
+        {
+          "id": "climate",
+          "topic": "environment",
+          "text": "Prioritize renewable energy and conservation. Cancel taxpayer subsidies to the LNG industry.",
+          "sourceId": "program-communist-platform",
+          "speaker": "Communist Party of BC",
+          "textSha256": "7246fee918db5b197b308af7b4e32f570465d093d12461ec01e6f54e7ba92c0e"
+        },
+        {
+          "id": "transit",
+          "topic": "transport",
+          "text": "Free public transit for all. Create an accessible province-wide bus transit system.",
+          "sourceId": "program-communist-platform",
+          "speaker": "Communist Party of BC",
+          "textSha256": "a71200a0c417218eecc3686e5b77a1297348af9b0a1f84844b5b80d462db8cb9"
+        },
+        {
+          "id": "labour",
+          "topic": "economy",
+          "text": "Raise BC minimum wage to $23, fully adjusted to annual inflation rates.",
+          "sourceId": "program-communist-platform",
+          "speaker": "Communist Party of BC",
+          "textSha256": "adc13dd2c2472aff72d97da83ca840519c941bc7e524f2718d2d9091b9c99fd0"
+        },
+        {
+          "id": "ownership",
+          "topic": "economy",
+          "text": "Put resources under public ownership and democratic control. End P3 public infrastructure projects.",
+          "sourceId": "program-communist-platform",
+          "speaker": "Communist Party of BC",
+          "textSha256": "b2739128eb2b262c942d5a254c330b4dbaf2aea63b2872c6d81000b1fd997613"
+        },
+        {
+          "id": "land",
+          "topic": "indigenous",
+          "text": "No resource extraction and infrastructure projects on indigenous lands without full consultation and approval.",
+          "sourceId": "program-communist-platform",
+          "speaker": "Communist Party of BC",
+          "textSha256": "40e19e2c5a795618cecc4bf83b63236446a1ccdcd16d01e339cb217205a79eac"
+        },
+        {
+          "id": "assistance",
+          "topic": "rights",
+          "text": "Raise social assistance and disability rates by 100%.",
+          "sourceId": "program-communist-platform",
+          "speaker": "Communist Party of BC",
+          "textSha256": "51b2bb6bbee04727963b3b72b41da00fec068f80e328bcb0b7d2cc113cec9015"
+        },
+        {
+          "id": "policing",
+          "topic": "justice",
+          "text": "Reduce police spending, and remove the provincial authority to order municipalities to increase policing budgets.",
+          "sourceId": "program-communist-platform",
+          "speaker": "Communist Party of BC",
+          "textSha256": "79565565b6769f662dd4e2e25c816580cb48ef7f60985468568a9365880632ff"
+        },
+        {
+          "id": "education",
+          "topic": "education",
+          "text": "Increase public education spending by $1000 per student to reach the Canadian average.",
+          "sourceId": "program-communist-platform",
+          "speaker": "Communist Party of BC",
+          "textSha256": "4e1b1e5e80c950d93e452f67d9ed8153b9bdbe671ab4f6e7c6162b211e3842c3"
+        },
+        {
+          "id": "housing",
+          "topic": "housing",
+          "text": "Legislation to limit rents to 20% of a family\u2019s income, and establish vacancy controls which tie rents to the unit.",
+          "sourceId": "program-communist-platform",
+          "speaker": "Communist Party of BC",
+          "textSha256": "3109134ed108233b8dbf3828c50e4cca989545e484d7a420634fa487bb723a74"
+        },
+        {
+          "id": "democracy",
+          "topic": "governance",
+          "text": "Replace \u201cfirst past the post\u201d with Mixed Member proportional representation, and set MLA salaries at the average wage of a BC worker.",
+          "sourceId": "program-communist-platform",
+          "speaker": "Communist Party of BC",
+          "textSha256": "e23c96d3accfb878182c0f04bd868cb698a4fff77964afaa6ec15fe0a4a72258"
+        },
+        {
+          "id": "food",
+          "topic": "environment",
+          "text": "End removals from the Agricultural Land Reserve, encourage food production in urban areas.",
+          "sourceId": "program-communist-platform",
+          "speaker": "Communist Party of BC",
+          "textSha256": "e828856876620acea88e78a4c81202653cd7e461d2e6d24b5742d973fbb0b533"
+        }
+      ]
+    },
+    {
+      "id": "freedom",
+      "sourceIds": [
+        "program-freedom-platform"
+      ],
+      "quotes": [
+        {
+          "id": "schools",
+          "topic": "education",
+          "text": "Make our K-12 schools competitive with international academic levels, so that every child has confidence and is motivated to pursue post secondary education.",
+          "sourceId": "program-freedom-platform",
+          "speaker": "Freedom Party of British Columbia",
+          "textSha256": "ec4f5b3d8914cc4c51fb2cf4969edc425f256de38e0a73771e3d6069d89bd2a5"
+        },
+        {
+          "id": "housing",
+          "topic": "housing",
+          "text": "End foreign ownership of BC housing and agricultural land until further notice.",
+          "sourceId": "program-freedom-platform",
+          "speaker": "Freedom Party of British Columbia",
+          "textSha256": "b1ae76c8ba0243292dfcf54a63eda53bd978d204f394cd55a33dff9d511ede2a"
+        },
+        {
+          "id": "employment",
+          "topic": "health",
+          "text": "All employees terminated due to COVID policy will be re-hired with apology.",
+          "sourceId": "program-freedom-platform",
+          "speaker": "Freedom Party of British Columbia",
+          "textSha256": "62149e6b35c0969404d2d7f74aab991fc71ba25f76783cc51fbbe0e97cdf2569"
+        },
+        {
+          "id": "police",
+          "topic": "justice",
+          "text": "Explore the benefits of British Columbia Provincial Police over RCMP and Municipal Police Forces.",
+          "sourceId": "program-freedom-platform",
+          "speaker": "Freedom Party of British Columbia",
+          "textSha256": "3beeaabb34564487fba1ec498284e9006859368fe720202a46f2e1f2484da145"
+        },
+        {
+          "id": "firearms",
+          "topic": "rights",
+          "text": "Legal firearm owners will not be harassed or marginalized in the province of British Columbia.",
+          "sourceId": "program-freedom-platform",
+          "speaker": "Freedom Party of British Columbia",
+          "textSha256": "4c87db2f8180d054e9a21bbb02daf6cf21e75d7bb238f7f7ee4daf9d5d215b1d"
+        },
+        {
+          "id": "government",
+          "topic": "governance",
+          "text": "Government exists to serve people, it will not intimidate people.",
+          "sourceId": "program-freedom-platform",
+          "speaker": "Freedom Party of British Columbia",
+          "textSha256": "1de48984f8f8395118afa1e13360d3929c4e55d566d06a6dcb1a797ff56e8281"
+        },
+        {
+          "id": "resources",
+          "topic": "economy",
+          "text": "We will support and cherish our natural resource industry.",
+          "sourceId": "program-freedom-platform",
+          "speaker": "Freedom Party of British Columbia",
+          "textSha256": "fe27291c3a1a6ca5c650495ffec5bed19de25baa635de9bfc53beece4a829cf3"
+        },
+        {
+          "id": "taxes",
+          "topic": "affordability",
+          "text": "Taxes should be lowered all around to spur growth of industries, who in turn generate employment.",
+          "sourceId": "program-freedom-platform",
+          "speaker": "Freedom Party of British Columbia",
+          "textSha256": "e7e1b5403af54c826ca8a10b5e59ef18404bc9ad6c772a439e44c8b89c855b51"
+        }
+      ]
+    },
+    {
+      "id": "canwest",
+      "sourceIds": [
+        "program-canwest-platform"
+      ],
+      "quotes": [
+        {
+          "id": "aims",
+          "topic": "other",
+          "text": "Developing the economy, promote community safety, foster harmonious neighborly relations, ensure equality among all races, low tax and create a better environment.",
+          "sourceId": "program-canwest-platform",
+          "speaker": "CanWest Party",
+          "textSha256": "f7df923873ff3348697def2d8d90ad98e9a83738dcf05e31ebed0cb2d32c2719"
+        }
+      ]
+    },
+    {
+      "id": "vision",
+      "sourceIds": [],
+      "quotes": []
+    },
+    {
+      "id": "citizens",
+      "sourceIds": [],
+      "quotes": []
+    }
+  ]
+}

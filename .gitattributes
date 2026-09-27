@@ -1,2 +1,2 @@
-data/prod/** -text whitespace=cr-at-eol
-data/prod/assets/originals/** -diff
+data/** -text whitespace=cr-at-eol
+data/assets/originals/** -diff

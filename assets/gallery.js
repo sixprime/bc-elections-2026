@@ -2,7 +2,7 @@ const grid = document.getElementById('assetGrid');
 const partyFilter = document.getElementById('assetParty');
 const collectionFilter = document.getElementById('assetCollection');
 const search = document.getElementById('assetSearch');
-const root = new URL('../data/prod/', import.meta.url);
+const root = new URL('../data/', import.meta.url);
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
 const localUrl = path => new URL(path, root).href;
 const externalLink = (url, text) => url && /^https:\/\//.test(url) ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${text}</a>` : '';

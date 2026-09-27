@@ -9,15 +9,9 @@ let indexRequest;
 let deviceLocation;
 let locating = false;
 let selectedStyle = 'street';
-let patternSequence = 0;
-const partyStyles = {
-  ndp: { color: '#e69f00', pattern: 'horizontal' },
-  con: { color: '#0072b2', pattern: 'diagonal' },
-  green: { color: '#009e73', pattern: 'dots' }
-};
 
 async function readData(path) {
-  const response = await fetch(new URL(`./data/prod/${path}`, import.meta.url));
+  const response = await fetch(new URL(`./data/${path}`, import.meta.url));
   if (!response.ok) throw new Error('District data could not be loaded. Please try again.');
   return response.json();
 }
@@ -43,9 +37,24 @@ export function refreshMapIcons() {
   createIcons({ icons: { LocateFixed, Maximize, Layers, ArrowUpRight }, attrs: { 'aria-hidden': 'true', 'stroke-width': 1.8 } });
 }
 
-export function disposeMaps() {
-  for (const entry of maps) entry.map.remove();
-  maps.clear();
+export function disposeMaps(retainedElement) {
+  for (const entry of maps) {
+    if (retainedElement?.contains(entry.surface)) continue;
+    entry.map.stop();
+    entry.map.remove();
+    maps.delete(entry);
+  }
+}
+
+export function updateRidingMap(element, slug) {
+  const entry = [...maps].find(entry => element.contains(entry.surface));
+  if (!entry || entry.selectedSlug === slug) return;
+  if (!entry.index.districts.some(district => district.slug === slug)) return;
+  entry.districts?.eachLayer(layer => layer.closeTooltip());
+  entry.selectedSlug = slug;
+  entry.surface.dataset.selectedRiding = slug;
+  resetDistrictStyles(entry);
+  entry.map.invalidateSize({ pan: false, animate: false });
 }
 
 function drawPosition(entry, center = false) {
@@ -76,8 +85,7 @@ function winningResults(election) {
       name: winner.name,
       partyId: winner.party,
       label: party?.ballot || (winner.party === 'independent' ? 'Independent' : 'Unaffiliated'),
-      color: partyStyles[winner.party]?.color || party?.color || '#77858e',
-      pattern: partyStyles[winner.party]?.pattern || 'none',
+      color: party?.color || '#77858e',
       share: winner.votes / record.validVotes * 100,
       margin: winner.votes - (ranked[1]?.votes || 0)
     });
@@ -102,7 +110,6 @@ function resultLegend(element, districts, results) {
     row.setAttribute('role', 'listitem');
     row.setAttribute('aria-label', `${item.label}: ${item.count} ridings`);
     row.dataset.party = item.partyId;
-    row.dataset.pattern = item.pattern || 'none';
     const swatch = document.createElement('i');
     swatch.className = 'map-legend-swatch';
     swatch.style.setProperty('--party', item.color);
@@ -127,49 +134,8 @@ function resultTooltip(name, result) {
 }
 
 function resetDistrictStyles(entry) {
-  entry.boundaryHalo?.setStyle({ stroke: entry.showBoundaries });
+  entry.boundaryHalo?.eachLayer(layer => entry.boundaryHalo.resetStyle(layer));
   entry.districts?.eachLayer(layer => entry.districts.resetStyle(layer));
-  entry.patterns?.setStyle({ fillOpacity: entry.showResults ? 0.65 : 0 });
-}
-
-function addPartyPatterns(entry, districts, results) {
-  const namespace = 'http://www.w3.org/2000/svg';
-  const renderer = L.svg({ pane: 'district-patterns' }).addTo(entry.map);
-  const svg = entry.map.getPane('district-patterns').querySelector('svg');
-  const definitions = document.createElementNS(namespace, 'defs');
-  const prefix = `party-pattern-${++patternSequence}`;
-  for (const kind of ['horizontal', 'diagonal', 'dots']) {
-    const pattern = document.createElementNS(namespace, 'pattern');
-    pattern.setAttribute('id', `${prefix}-${kind}`);
-    pattern.setAttribute('patternUnits', 'userSpaceOnUse');
-    pattern.setAttribute('width', '10');
-    pattern.setAttribute('height', '10');
-    for (const outline of [true, false]) {
-      const shape = document.createElementNS(namespace, kind === 'dots' ? 'circle' : 'path');
-      if (kind === 'dots') {
-        shape.setAttribute('cx', '5');
-        shape.setAttribute('cy', '5');
-        shape.setAttribute('r', outline ? '2.3' : '1.2');
-        shape.setAttribute('fill', outline ? '#fff' : '#172f3c');
-      } else {
-        shape.setAttribute('d', kind === 'horizontal' ? 'M0 5H10' : 'M-2 2L2 -2M0 10L10 0M8 12L12 8');
-        shape.setAttribute('stroke', outline ? '#fff' : '#172f3c');
-        shape.setAttribute('stroke-width', outline ? '2.6' : '1.1');
-        shape.setAttribute('fill', 'none');
-      }
-      shape.setAttribute('opacity', outline ? '0.6' : '0.8');
-      pattern.append(shape);
-    }
-    definitions.append(pattern);
-  }
-  svg.prepend(definitions);
-  entry.patterns = L.geoJSON(districts, {
-    renderer,
-    pane: 'district-patterns',
-    interactive: false,
-    filter: feature => partyStyles[results.get(feature.properties.name)?.partyId],
-    style: feature => ({ stroke: false, fillColor: `url(#${prefix}-${results.get(feature.properties.name).pattern})`, fillOpacity: entry.showResults ? 0.65 : 0 })
-  }).addTo(entry.map);
 }
 
 function setBasemap(entry, style) {
@@ -239,9 +205,6 @@ export async function mountMaps(election) {
       map.createPane('district-halos');
       map.getPane('district-halos').style.zIndex = '390';
       map.getPane('district-halos').style.pointerEvents = 'none';
-      map.createPane('district-patterns');
-      map.getPane('district-patterns').style.zIndex = '395';
-      map.getPane('district-patterns').style.pointerEvents = 'none';
       map.createPane('labels');
       map.getPane('labels').style.zIndex = '450';
       map.getPane('labels').style.pointerEvents = 'none';
@@ -250,7 +213,7 @@ export async function mountMaps(election) {
       L.control.zoom({ position: 'bottomright' }).addTo(map);
       L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(map);
       const hasResults = surface.hasAttribute('data-map-results');
-      const entry = { map, shell, surface, hasResults, showResults: hasResults, showBoundaries: true, caption: shell.querySelector('[data-map-caption]') };
+      const entry = { map, shell, surface, index, selectedSlug: surface.dataset.selectedRiding, hasResults, showResults: hasResults, showBoundaries: true, caption: shell.querySelector('[data-map-caption]') };
       const legend = shell.querySelector('[data-map-results-legend]');
       const resultToggle = shell.querySelector('[data-map-results-toggle]');
       if (legend) resultLegend(legend, index.districts, results);
@@ -291,13 +254,13 @@ export async function mountMaps(election) {
         style: feature => ({
           stroke: entry.showBoundaries,
           color: '#fff',
-          weight: feature.properties.slug === selectedSlug ? 6 : 4.4,
+          weight: feature.properties.slug === entry.selectedSlug ? 6 : 4.4,
           opacity: 0.9,
           fill: false
         })
       }).addTo(map);
       const style = feature => {
-        const selected = feature.properties.slug === selectedSlug;
+        const selected = feature.properties.slug === entry.selectedSlug;
         const result = entry.showResults ? results.get(feature.properties.name) : null;
         return {
           stroke: !entry.hasResults || entry.showBoundaries,
@@ -318,7 +281,6 @@ export async function mountMaps(election) {
           layer.on('click', () => { location.hash = `#riding/${feature.properties.slug}`; });
         }
       }).addTo(map);
-      if (hasResults) addPartyPatterns(entry, districts, results);
       boundaryButton.disabled = false;
       if (resultToggle) resultToggle.disabled = false;
       surface.dataset.ready = 'true';

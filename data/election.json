@@ -1,5 +1,5 @@
 {
-  "title": "BC Vote 2026",
+  "title": "BC Election Guide",
   "snapshotDate": "2026-09-25",
   "electionDate": "2026-10-24",
   "districtCount": 93,
@@ -18,21 +18,21 @@
       "name": "BC NDP",
       "ballot": "BC NDP",
       "leader": "David Eby",
-      "color": "#ed8722"
+      "color": "#f97316"
     },
     {
       "id": "con",
       "name": "Conservative Party of British Columbia",
       "ballot": "Conservative Party",
       "leader": "Lorne Doerkson (interim)",
-      "color": "#2272cf"
+      "color": "#0057ff"
     },
     {
       "id": "green",
       "name": "BC Green Party",
       "ballot": "BC Green Party",
       "leader": "Emily Lowan",
-      "color": "#208857"
+      "color": "#00a63e"
     },
     {
       "id": "one",

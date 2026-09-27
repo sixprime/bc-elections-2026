@@ -1,155 +1,147 @@
 # Data Updates
 
-The deployed website reads only `prod/`. Staging never changes production numbers.
-An explicit localhost review is available at
-`http://127.0.0.1:4173/?preview=staging#polls`, with a visible staging banner.
-It also supports riding results, candidates and their artwork. Refresh the
-change index with `node tools/update-data.mjs diff` after editing staging.
-Only changed files come from staging; unchanged files still come from prod.
+All runtime data lives directly in this directory. Local preview and GitHub Pages
+read the same files. Edit data in place and use Git for review, history and rollback.
+The website remains entirely client-side; the update script is a local tool, not
+a service.
 
-```text
-data/
-  sources.json
-  prod/
-    election.json
-    polls.json
-    assets/        manifest, originals, web images, source records
-    map/           display boundaries, district index, geography metadata
-    districts/     precise per-riding boundaries
-    licenses/
-  staging/         created by the updater; same paths for reviewed data
-    sources/       raw downloads for review, not publication
-    _review.json   source URLs, hashes, failures, prod-snapshot baseline
-    _diff.json     file changes, reviewed removals and record IDs
-```
+## Update Flow
 
-## Commands
-
-Requires Node.js 20 or newer, with no package installation.
+Run these commands from the repository root with Node 20+ and Git installed:
 
 ```sh
 node tools/update-data.mjs fetch polls
-node tools/update-data.mjs diff
 node tools/update-data.mjs check
-node tools/update-data.mjs promote --approve
+git status --short
+git diff -- data
 ```
 
-`fetch` accepts `polls`, `election`, `assets`, `map`, `licenses` or `all`.
-The source registry is extended using the source URLs already recorded in prod
-polls, artwork and geography. Pollster feeds help identify newly published releases.
-`fetch` refuses to overwrite an existing review. `discard --approve` removes only
-staging when a review is no longer needed.
+Review downloaded originals and edit the relevant JSON between `fetch` and
+`check`. Downloads do not automatically become trusted poll figures, results,
+candidates, programme excerpts or resized artwork. The script updates source
+retrieval metadata in [provenance.json](provenance.json), but leaves those datasets
+unchanged. It never commits or pushes.
 
-To append a newly discovered primary source without replacing an open review:
-
-```sh
-node tools/update-data.mjs source poll-source-id https://publisher.example/release.pdf
-```
-
-New source evidence is stored under the current review's group. An `all` review
-uses the polling group for manually appended sources.
-
-To queue obsolete artwork for removal after reviewing the staged catalogue:
+Supported source groups are `polls`, `election`, `programs`, `assets`, `map`,
+`licenses` and `all`. A registered GraphQL source may issue a read-only query;
+mutations are rejected before a request is sent. HTTPS is required except for
+explicitly reviewed HTTP-only sources.
 
 ```sh
+node tools/update-data.mjs source <id> <https-url> [group]
+node tools/update-data.mjs cache
+node tools/update-data.mjs check --sources
 node tools/update-data.mjs prune-assets
-node tools/update-data.mjs diff
-node tools/update-data.mjs check
 ```
 
-Cleanup compares the staged asset manifest with prod originals, web images and
-per-asset source records. It records removals in the review without deleting
-production files. Referenced assets, source PDFs and the candidate/party-register
-retrieval records are retained. Promotion rejects removal of artwork that the
-reviewed catalogue still references, and guarded resume verifies the reduced
-file set as well as additions and replacements.
+An unregistered `source` defaults to the `programs` group. `prune-assets` only
+reports unreferenced artwork and sidecars. Review its output before running
+`prune-assets --apply`, then inspect the deletions in Git. Source PDFs and shared
+source records are retained.
 
-## Election Records
+## Source Cache
 
-The complete 2024 import uses the official Statement of Votes candidate tables
-on PDF pages 10-17 and the independent district tables on PDF pages 18-20.
-All 93 district sums, 322 candidate records, 2,105,341 valid votes, affiliation
-totals and the 47/44/2 seat split were cross-checked. Per-riding links point to
-the relevant PDF page. `resultsCoverage2024.complete` makes complete coverage,
-candidate count, provincial votes and seat totals required validation gates.
+Raw downloaded pages, PDFs and full-text quotation evidence stay outside the
+repository. The default Windows location is
+`%LOCALAPPDATA%/bc-elections-2026/source-cache`; other systems use
+`~/.cache/bc-elections-2026/source-cache`. `cache` prints the actual directory.
+Set `BC_VOTE_SOURCE_CACHE` to use another directory outside the repository.
 
-Candidate updates combine accepted Elections BC nominations with explicit
-party announcements. An accepted candidate is not removed merely because a
-party directory omits them. Missing or ambiguous riding assignments use null
-district/slug fields, `districtStatus: unresolved`, the original reported label
-and an explanation. They appear in the catalogue without being attached to a
-guessed riding. Federal riding names are not aliases for provincial districts.
+Downloads are content-addressed and recorded in `retrievals.json` in that cache.
+Refreshing a source retains the previous bytes used by existing quotations.
+Failures are recorded separately, cause a nonzero exit, and do not replace data
+with an empty response or error page. Empty files, oversized responses, invalid
+JSON and invalid PDF signatures are rejected.
 
-The separate `members` collection follows the Legislature's roster at
-dissolution on September 22, 2026. `memberSnapshot` records the parliament,
-source date and districts with no active member listed. Its 91 member records
-and two unlisted districts must account for all 93 ridings without duplication.
-Member records never enter the candidate list automatically. Affiliation at
-dissolution is kept separate from the 2024 ballot affiliation.
+The cache is not a second application dataset. It contains source evidence only
+and is never requested by the browser or published with the site.
 
-The registered Legislature source uses a read-only GraphQL query by POST.
-Its query body is retained in source provenance as well as the response hash.
-The updater rejects mutation operations. Portraits are matched by verified
-member identity, not inferred from the member's present party. Ninety member
-portraits are available; Jordan Kealy has an explicit missing-portrait note.
-The Legislature's restricted images were not republished. Licensed images keep
-creator and licence attribution in the riding view and artwork review.
+## Quote-Only Party Programmes
 
-## Polling Records
+The required editorial rule is verbatim quotation only. Do not paraphrase,
+interpret, assess, judge or comment on a party's programme. Do not turn missing
+review data into claims about what a party has or has not proposed. Readers must
+be able to distinguish the original words from navigation and source metadata.
 
-The requested historical update is now in prod: 32 selected primary-source
-releases spanning April 2017 to September 2026 fieldwork. The default six-month
-view contains nine releases. The archive is not exhaustive; gaps are not filled
-with invented observations. Research Co. archive responses and the original
-Angus Reid 2017 report were reviewed alongside release methodology. Source URLs
-and retrieval hashes are recorded in provenance, and record-specific caveats
-remain in the polling JSON.
+The schema-v2 dataset has 14 party records, 66 selected excerpts and
+22 source records. It contains no policy summaries, assessments or commentary.
+Each excerpt appears inside visible quotation marks, labelled as a verbatim
+excerpt, with its speaker or publishing party, source title, publication date
+or year when recorded, and a link to the full original. The excerpts are not
+presented as complete platforms. Entire copyrighted documents are linked, not
+republished.
 
-Federal polls, exit polls and hypothetical leadership ballots were excluded.
-Historical BC Liberal shares are separate from BC United, using names as asked.
-The June 2025 proposed unnamed party is not retrospectively treated as OneBC.
-The March 2026 ARI residual-total inconsistency remains documented, not corrected
-or assigned to other parties.
+### Source Verification
 
-Review the downloads and edit the staged JSON before promotion. The current script
-does not automatically turn arbitrary HTML/PDF tables into trusted polling figures,
-rebuild simplified boundaries, discover every new candidate, or resize new artwork.
-Asset refresh downloads the original sources; replacing an image also requires
-updating its manifest/hash and any web derivative. Paths in the artwork manifest
-are relative to the snapshot root, not the website root.
+Use the original wording and punctuation. Normalize only display whitespace;
+do not fix a source's spelling, silently alter numbers, join unrelated fragments,
+invent timestamps or attribute party-authored text to a named speaker.
 
-Promotion checks poll fields/dates/shares, result totals, candidate identities
-and riding assignments, district counts, reviewed removals and file hashes, and
-refuses to overwrite a prod snapshot that changed since review began. It swaps
-the prepared snapshot into place with rollback on a failed rename. It does not
-commit or push. Raw review downloads are discarded after promotion; source URLs,
-retrieval timestamps and hashes are retained in `prod/provenance.json`.
+Store parsed source evidence at `sources/programs/quotation-evidence.json`,
+relative to the external source cache. Its schema version is 1 and its `sources`
+array contains each source's `id`, cached `path`, `sourceSha256` and parsed `text`.
+The path and raw hash must match a record in the cache's `retrievals.json`.
+[programs.json](programs.json) stores raw-source and parsed-text fingerprints,
+and each quotation stores its own text fingerprint. Only the selected excerpts,
+attribution and fingerprints belong in the repository, not the full source text.
 
-If Windows blocks the final folder rename, the prepared snapshot is retained.
-After the lock clears, `promote --approve --resume` verifies every prepared file
-and the source provenance against the unchanged review before retrying the swap.
-It refuses to resume a different or edited prepared snapshot.
+`check` requires source evidence whenever the programme file differs from its
+committed Git version or is new. `check --sources` always verifies the evidence.
+An unchanged committed programme file can be checked without the cache. It verifies
+raw source bytes against the retrieval record, parsed text against its stored
+fingerprint, and each excerpt against that text without altering punctuation.
+It rejects changed quotes, missing attribution, unknown editorial fields and
+quotes that do not occur in the source. Excerpts are capped at 45 words each
+and 200 words combined per source URL. These limits do not replace reviewing
+context or source-specific reuse terms.
 
-## Recommended Automation
+Any later programme edit must match retained source evidence before commit.
+The previous paraphrased schema is rejected by the application and updater.
 
-Use a scheduled or manually triggered GitHub Action to fetch sources, retain
-staging as a review artifact, and open a PR containing only reviewed prod data.
-Merging that PR can trigger the existing Pages deployment. Keep raw staging out of
-the published repository; it may contain copyrighted pages or unwanted contact data.
-This workflow is a proposal, not an installed GitHub Action.
+### Programme View
 
-Add small source-specific extractors gradually, starting with primary pollsters
-and structured Elections BC data. A source layout change must stop that import,
-not erase the last good dataset. Compare normalized records by stable ID and show
-field changes, corrections and withdrawals explicitly. Git history provides the
-published archive; no duplicate dated copies are needed in the public data tree.
+Clickable issue tags select one topic at a time and wrap on smaller screens.
+Issue tags and party columns use alphabetical label order, including custom selections.
 
-Keep accepted nominations separate from party announcements. Downloaded logos and
-portraits retain their original rights; `reuse.publishApproved: false` is not a
-licence to publish them. Prefer press-kit originals and preserve attribution.
-OneBC's verified site is `https://1bc.ca/`. CanWest's legacy HTTP-only source is
-explicitly marked `allowInsecureHttp`; HTTPS remains required for other sources.
+Each topic defaults to parties with at least one recorded programme quotation
+on that topic. A visible note explains the default and that any party may be
+chosen. This is based on reviewed excerpts, not an assertion that an unselected
+party has no policy on the topic.
+
+The checkbox picker supports all 14 registered parties, with Use topic defaults,
+Select all and Clear selection. Custom choices, including an empty selection,
+are remembered separately for each topic. Use topic defaults restores automatic
+selection for the current topic without changing choices for other topics.
+Six columns fit at desktop widths of 1280 px and above. Narrower screens and larger selections
+scroll horizontally, keeping all selected parties and readable column widths.
+The table expands to its full height with the page, with no internal vertical
+scrollbar. When up to six columns fit on desktop, headings stay visible while
+the page scrolls. Choices persist when resizing and switching views.
+
+The rows contain quotations and original sources only. Explore a party offers
+the same excerpts with search and a topic index. Empty states say that no
+quotation is recorded for that selection; they do not infer a position. No
+separate cost, implementation or timetable assessment is generated.
+
+The local programme view is `http://127.0.0.1:4173/#parties`. It requires no
+preview parameter. Publication still requires an approved commit and push.
+
+## Data Integrity
+
+`check` validates poll dates, samples and shares; 2024 candidate and provincial
+vote totals; current candidate identities and riding assignments; the separate
+MLA roster; district counts; and artwork and boundary file hashes.
+
+Asset refresh downloads originals into the cache. Replacing a published image
+also requires updating its manifest hash and any web derivative. Manifest paths
+are relative to this data directory, not the website root. Keep accepted
+nominations separate from party announcements, and MLA membership separate from
+candidacy. Preserve image attribution and source-specific reuse terms.
+
+Historical party identities stay attached to their original records. The June
+2025 proposed unnamed party is not retrospectively treated as OneBC. The March
+2026 ARI residual-total inconsistency remains documented, not redistributed
+among other parties.
 
 Map tiles remain remote and follow the provider's caching terms; do not harvest
-them. The checked-in browser libraries in `vendor/` are application code, not
-election data, and should have separately reviewed, pinned-version updates.
+them. Browser libraries in `vendor/` remain separately reviewed application code.

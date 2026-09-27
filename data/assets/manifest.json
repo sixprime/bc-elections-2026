@@ -114,10 +114,10 @@
     {
       "id": "vision",
       "name": "B.C. Vision",
-      "website": "https://bcvision.ca/",
-      "assetIds": [
-        "vision-party-logo-543b6d6f0a"
-      ]
+      "website": null,
+      "websiteStatus": "unverified",
+      "websiteNote": "The formerly associated domain describes an unrelated manufacturing/ERP consultancy. Its website and logo are not presented as verified party branding.",
+      "assetIds": []
     },
     {
       "id": "citizens",

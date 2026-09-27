@@ -28,9 +28,6 @@ body{min-width:0}
 .map-legend-item{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
 .map-legend-item b{font-size:12px;font-variant-numeric:tabular-nums;margin-left:2px}
 .map-legend-swatch{width:24px;height:18px;flex:none;border:1px solid color-mix(in srgb,var(--party) 60%,#fff);border-radius:2px;background-color:color-mix(in srgb,var(--party) 24%,#fff)}
-.map-legend-item[data-pattern=horizontal] .map-legend-swatch{background-image:repeating-linear-gradient(0deg,transparent 0 4px,#172f3c99 4px 5px,transparent 5px 10px)}
-.map-legend-item[data-pattern=diagonal] .map-legend-swatch{background-image:repeating-linear-gradient(135deg,transparent 0 5px,#172f3c99 5px 6px,transparent 6px 10px)}
-.map-legend-item[data-pattern=dots] .map-legend-swatch{background-image:radial-gradient(circle,#172f3cbb 1.2px,transparent 1.4px);background-size:10px 10px}
 .map-legend-loading{color:#65778a;font-size:11px}
 .map-result-tooltip{display:grid;gap:3px;max-width:220px;white-space:normal;font-size:11px;font-weight:400;line-height:1.4}
 .map-result-tooltip strong{font-size:12px;font-weight:700}
