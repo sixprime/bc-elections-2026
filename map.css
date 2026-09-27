@@ -19,6 +19,23 @@ body{min-width:0}
 .map-icon-button{width:34px;height:34px;display:grid;place-items:center;padding:0;border:1px solid #d4dee5;border-radius:4px;background:#fff;color:#294961}
 .map-icon-button:hover{background:#edf3f8}
 .map-icon-button[aria-pressed=false]{color:#8b959e;background:#f1f3f5}
+.map-results-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 14px 0;border-top:1px solid #e0e7ef;font-size:11px;line-height:1.4;color:#536779}
+.map-results-bar>span{font-weight:650}
+.map-results-toggle{display:inline-flex;align-items:center;gap:6px;min-height:28px;cursor:pointer;white-space:nowrap}
+.map-results-toggle input{width:14px;height:14px;margin:0;accent-color:#315971}
+.map-results-legend{display:flex;align-items:center;gap:8px 18px;flex-wrap:wrap;min-height:42px;padding:8px 14px 12px;font-size:12px;line-height:1.4;color:#28445b}
+.map-results-legend.inactive{opacity:.5}
+.map-legend-item{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.map-legend-item b{font-size:12px;font-variant-numeric:tabular-nums;margin-left:2px}
+.map-legend-swatch{width:24px;height:18px;flex:none;border:1px solid color-mix(in srgb,var(--party) 60%,#fff);border-radius:2px;background-color:color-mix(in srgb,var(--party) 24%,#fff)}
+.map-legend-item[data-pattern=horizontal] .map-legend-swatch{background-image:repeating-linear-gradient(0deg,transparent 0 4px,#172f3c99 4px 5px,transparent 5px 10px)}
+.map-legend-item[data-pattern=diagonal] .map-legend-swatch{background-image:repeating-linear-gradient(135deg,transparent 0 5px,#172f3c99 5px 6px,transparent 6px 10px)}
+.map-legend-item[data-pattern=dots] .map-legend-swatch{background-image:radial-gradient(circle,#172f3cbb 1.2px,transparent 1.4px);background-size:10px 10px}
+.map-legend-loading{color:#65778a;font-size:11px}
+.map-result-tooltip{display:grid;gap:3px;max-width:220px;white-space:normal;font-size:11px;font-weight:400;line-height:1.4}
+.map-result-tooltip strong{font-size:12px;font-weight:700}
+.map-result-tooltip span:last-child{color:#65778a;font-size:10px}
+.map-source-links{display:flex;gap:12px;flex-wrap:wrap}
 .map-surface{height:440px;width:100%;isolation:isolate;background:#dfe8e7;z-index:0}
 .map-section.expanded-map .map-surface{height:650px;min-height:450px}
 .map-source{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 13px;color:#536779;font-size:11px;line-height:1.5;flex-wrap:wrap}
@@ -34,6 +51,9 @@ body{min-width:0}
 .riding-directory .riding-list{height:646px}
 .riding-directory .riding-list button{font-size:13px;padding:13px}
 .riding-directory .riding-list .meta{font-size:11px}
+.riding-directory .riding-list .riding-winner{display:flex;align-items:center;gap:6px;line-height:1.4;color:#435d71}
+.riding-winner .party-dot{width:7px;height:7px;margin-right:0;flex:none}
+.riding-winner span{min-width:0;overflow-wrap:anywhere}
 .riding-directory .riding-list-header{font-size:12px}
 .riding-workspace .map-heading{min-height:65px}
 .detail-geography{margin:0 0 18px}

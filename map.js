@@ -9,6 +9,12 @@ let indexRequest;
 let deviceLocation;
 let locating = false;
 let selectedStyle = 'street';
+let patternSequence = 0;
+const partyStyles = {
+  ndp: { color: '#e69f00', pattern: 'horizontal' },
+  con: { color: '#0072b2', pattern: 'diagonal' },
+  green: { color: '#009e73', pattern: 'dots' }
+};
 
 async function readData(path) {
   const response = await fetch(new URL(`./data/prod/${path}`, import.meta.url));
@@ -59,6 +65,113 @@ function textNode(value) {
   return element;
 }
 
+function winningResults(election) {
+  const results = new Map();
+  for (const [district, record] of Object.entries(election?.featuredDistricts2024 || {})) {
+    if (!record.votes?.length || !record.validVotes) continue;
+    const ranked = [...record.votes].sort((first, second) => second.votes - first.votes);
+    const winner = ranked[0];
+    const party = election.parties.find(party => party.id === winner.party);
+    results.set(district, {
+      name: winner.name,
+      partyId: winner.party,
+      label: party?.ballot || (winner.party === 'independent' ? 'Independent' : 'Unaffiliated'),
+      color: partyStyles[winner.party]?.color || party?.color || '#77858e',
+      pattern: partyStyles[winner.party]?.pattern || 'none',
+      share: winner.votes / record.validVotes * 100,
+      margin: winner.votes - (ranked[1]?.votes || 0)
+    });
+  }
+  return results;
+}
+
+function resultLegend(element, districts, results) {
+  const counts = new Map();
+  let missing = 0;
+  for (const district of districts) {
+    const result = results.get(district.name);
+    if (!result) { missing += 1; continue; }
+    if (!counts.has(result.partyId)) counts.set(result.partyId, { ...result, count: 0 });
+    counts.get(result.partyId).count += 1;
+  }
+  const items = [...counts.values()].sort((first, second) => second.count - first.count);
+  if (missing) items.push({ partyId: 'unavailable', label: 'Not loaded', color: '#77858e', count: missing });
+  element.replaceChildren(...items.map(item => {
+    const row = document.createElement('span');
+    row.className = 'map-legend-item';
+    row.setAttribute('role', 'listitem');
+    row.setAttribute('aria-label', `${item.label}: ${item.count} ridings`);
+    row.dataset.party = item.partyId;
+    row.dataset.pattern = item.pattern || 'none';
+    const swatch = document.createElement('i');
+    swatch.className = 'map-legend-swatch';
+    swatch.style.setProperty('--party', item.color);
+    swatch.setAttribute('aria-hidden', 'true');
+    const count = document.createElement('b');
+    count.textContent = item.count;
+    row.append(swatch, textNode(item.label), count);
+    return row;
+  }));
+}
+
+function resultTooltip(name, result) {
+  const content = document.createElement('div');
+  content.className = 'map-result-tooltip';
+  const heading = document.createElement('strong');
+  heading.textContent = name;
+  content.append(heading);
+  if (result) {
+    content.append(textNode(result.name), textNode(`${result.label} / ${result.share.toFixed(1)}%`), textNode(`2024 / ${new Intl.NumberFormat('en-CA').format(result.margin)}-vote margin`));
+  } else content.append(textNode('2024 result not in this snapshot'));
+  return content;
+}
+
+function resetDistrictStyles(entry) {
+  entry.boundaryHalo?.setStyle({ stroke: entry.showBoundaries });
+  entry.districts?.eachLayer(layer => entry.districts.resetStyle(layer));
+  entry.patterns?.setStyle({ fillOpacity: entry.showResults ? 0.65 : 0 });
+}
+
+function addPartyPatterns(entry, districts, results) {
+  const namespace = 'http://www.w3.org/2000/svg';
+  const renderer = L.svg({ pane: 'district-patterns' }).addTo(entry.map);
+  const svg = entry.map.getPane('district-patterns').querySelector('svg');
+  const definitions = document.createElementNS(namespace, 'defs');
+  const prefix = `party-pattern-${++patternSequence}`;
+  for (const kind of ['horizontal', 'diagonal', 'dots']) {
+    const pattern = document.createElementNS(namespace, 'pattern');
+    pattern.setAttribute('id', `${prefix}-${kind}`);
+    pattern.setAttribute('patternUnits', 'userSpaceOnUse');
+    pattern.setAttribute('width', '10');
+    pattern.setAttribute('height', '10');
+    for (const outline of [true, false]) {
+      const shape = document.createElementNS(namespace, kind === 'dots' ? 'circle' : 'path');
+      if (kind === 'dots') {
+        shape.setAttribute('cx', '5');
+        shape.setAttribute('cy', '5');
+        shape.setAttribute('r', outline ? '2.3' : '1.2');
+        shape.setAttribute('fill', outline ? '#fff' : '#172f3c');
+      } else {
+        shape.setAttribute('d', kind === 'horizontal' ? 'M0 5H10' : 'M-2 2L2 -2M0 10L10 0M8 12L12 8');
+        shape.setAttribute('stroke', outline ? '#fff' : '#172f3c');
+        shape.setAttribute('stroke-width', outline ? '2.6' : '1.1');
+        shape.setAttribute('fill', 'none');
+      }
+      shape.setAttribute('opacity', outline ? '0.6' : '0.8');
+      pattern.append(shape);
+    }
+    definitions.append(pattern);
+  }
+  svg.prepend(definitions);
+  entry.patterns = L.geoJSON(districts, {
+    renderer,
+    pane: 'district-patterns',
+    interactive: false,
+    filter: feature => partyStyles[results.get(feature.properties.name)?.partyId],
+    style: feature => ({ stroke: false, fillColor: `url(#${prefix}-${results.get(feature.properties.name).pattern})`, fillOpacity: entry.showResults ? 0.65 : 0 })
+  }).addTo(entry.map);
+}
+
 function setBasemap(entry, style) {
   entry.basemap?.remove();
   entry.mode = style;
@@ -104,7 +217,7 @@ function setBasemap(entry, style) {
     }
   });
   entry.basemap = L.layerGroup(layers).addTo(entry.map);
-  entry.districts?.eachLayer(layer => entry.districts.resetStyle(layer));
+  resetDistrictStyles(entry);
   entry.shell.querySelectorAll('[data-map-style]').forEach(button => {
     const active = button.dataset.mapStyle === style;
     button.classList.toggle('selected', active);
@@ -112,16 +225,23 @@ function setBasemap(entry, style) {
   });
 }
 
-export async function mountMaps() {
+export async function mountMaps(election) {
   refreshMapIcons();
   const surfaces = [...document.querySelectorAll('[data-riding-map]')];
   if (!surfaces.length) return;
   try {
     const index = await loadIndex();
+    const results = winningResults(election);
     for (const surface of surfaces) {
       if (!surface.isConnected || surface.dataset.basemapReady) continue;
       const shell = surface.closest('.map-section');
       const map = L.map(surface, { preferCanvas: true, minZoom: 4, maxZoom: 18, scrollWheelZoom: true, zoomControl: false, attributionControl: true });
+      map.createPane('district-halos');
+      map.getPane('district-halos').style.zIndex = '390';
+      map.getPane('district-halos').style.pointerEvents = 'none';
+      map.createPane('district-patterns');
+      map.getPane('district-patterns').style.zIndex = '395';
+      map.getPane('district-patterns').style.pointerEvents = 'none';
       map.createPane('labels');
       map.getPane('labels').style.zIndex = '450';
       map.getPane('labels').style.pointerEvents = 'none';
@@ -129,7 +249,11 @@ export async function mountMaps() {
       map.attributionControl.addAttribution('Contains information licenced under the <a href="https://www.elections.bc.ca/docs/EBC-Open-Data-Licence.pdf">Elections BC Open Data Licence</a>');
       L.control.zoom({ position: 'bottomright' }).addTo(map);
       L.control.scale({ imperial: false, position: 'bottomleft' }).addTo(map);
-      const entry = { map, shell, surface, caption: shell.querySelector('[data-map-caption]') };
+      const hasResults = surface.hasAttribute('data-map-results');
+      const entry = { map, shell, surface, hasResults, showResults: hasResults, showBoundaries: true, caption: shell.querySelector('[data-map-caption]') };
+      const legend = shell.querySelector('[data-map-results-legend]');
+      const resultToggle = shell.querySelector('[data-map-results-toggle]');
+      if (legend) resultLegend(legend, index.districts, results);
       maps.add(entry);
       setBasemap(entry, selectedStyle);
       const selectedSlug = surface.dataset.selectedRiding;
@@ -142,9 +266,17 @@ export async function mountMaps() {
       const boundaryButton = shell.querySelector('[data-map-boundaries]');
       boundaryButton.disabled = true;
       boundaryButton.addEventListener('click', event => {
-        const visible = map.hasLayer(entry.districts);
-        if (visible) entry.districts.remove(); else entry.districts.addTo(map);
-        event.currentTarget.setAttribute('aria-pressed', String(!visible));
+        entry.showBoundaries = !entry.showBoundaries;
+        if (!entry.hasResults) {
+          if (entry.showBoundaries) entry.districts.addTo(map); else entry.districts.remove();
+        }
+        resetDistrictStyles(entry);
+        event.currentTarget.setAttribute('aria-pressed', String(entry.showBoundaries));
+      });
+      resultToggle?.addEventListener('change', () => {
+        entry.showResults = resultToggle.checked;
+        legend.classList.toggle('inactive', !entry.showResults);
+        resetDistrictStyles(entry);
       });
       shell.querySelectorAll('[data-map-style]').forEach(button => button.addEventListener('click', () => {
         selectedStyle = button.dataset.mapStyle;
@@ -153,17 +285,42 @@ export async function mountMaps() {
       surface.dataset.basemapReady = 'true';
       const districts = await loadDisplay();
       if (!surface.isConnected || !maps.has(entry)) continue;
-      const style = feature => ({ color: feature.properties.slug === selectedSlug ? (entry.mode === 'satellite' ? '#f3d14d' : '#1269bd') : (entry.mode === 'satellite' ? '#fff' : '#315971'), weight: feature.properties.slug === selectedSlug ? 3 : 1.3, opacity: 0.85, fillColor: entry.mode === 'satellite' ? '#f3d14d' : '#1269bd', fillOpacity: feature.properties.slug === selectedSlug ? 0.14 : 0.015 });
+      entry.boundaryHalo = L.geoJSON(districts, {
+        pane: 'district-halos',
+        interactive: false,
+        style: feature => ({
+          stroke: entry.showBoundaries,
+          color: '#fff',
+          weight: feature.properties.slug === selectedSlug ? 6 : 4.4,
+          opacity: 0.9,
+          fill: false
+        })
+      }).addTo(map);
+      const style = feature => {
+        const selected = feature.properties.slug === selectedSlug;
+        const result = entry.showResults ? results.get(feature.properties.name) : null;
+        return {
+          stroke: !entry.hasResults || entry.showBoundaries,
+          color: selected ? '#1269bd' : '#263e4a',
+          weight: selected ? 3 : 1.6,
+          opacity: 0.95,
+          fillColor: result?.color || (entry.showResults ? '#77858e' : entry.mode === 'satellite' ? '#f3d14d' : '#1269bd'),
+          fillOpacity: result ? 0.24 : entry.showResults ? 0.06 : selected ? 0.14 : 0.015
+        };
+      };
       entry.districts = L.geoJSON(districts, {
         style,
         onEachFeature(feature, layer) {
-          layer.bindTooltip(textNode(feature.properties.name), { sticky: true, direction: 'top', className: 'riding-tooltip' });
-          layer.on('mouseover', () => layer.setStyle({ weight: 3, fillOpacity: 0.14, color: entry.mode === 'satellite' ? '#f3d14d' : '#1269bd' }));
+          const result = results.get(feature.properties.name);
+          layer.bindTooltip(hasResults ? resultTooltip(feature.properties.name, result) : textNode(feature.properties.name), { sticky: true, direction: 'top', className: 'riding-tooltip' });
+          layer.on('mouseover', () => layer.setStyle({ stroke: true, weight: 2.8, opacity: 1, fillOpacity: entry.showResults && result ? 0.34 : 0.14, color: '#172f3c' }));
           layer.on('mouseout', () => entry.districts.resetStyle(layer));
           layer.on('click', () => { location.hash = `#riding/${feature.properties.slug}`; });
         }
       }).addTo(map);
+      if (hasResults) addPartyPatterns(entry, districts, results);
       boundaryButton.disabled = false;
+      if (resultToggle) resultToggle.disabled = false;
       surface.dataset.ready = 'true';
       surface.setAttribute('aria-busy', 'false');
     }

@@ -13,46 +13,2739 @@
     "results": "https://elections.bc.ca/resources/results/provincial-election-results/"
   },
   "parties": [
-    {"id":"ndp","name":"BC NDP","ballot":"BC NDP","leader":"David Eby","color":"#ed8722"},
-    {"id":"con","name":"Conservative Party of British Columbia","ballot":"Conservative Party","leader":"Lorne Doerkson (interim)","color":"#2272cf"},
-    {"id":"green","name":"BC Green Party","ballot":"BC Green Party","leader":"Emily Lowan","color":"#208857"},
-    {"id":"one","name":"OneBC","ballot":"OneBC","leader":"Dallas Brodie (interim)","color":"#8245bb"},
-    {"id":"centre","name":"Centre BC","ballot":"CentreBC","leader":"Mike Bernier","color":"#cf4a91"},
-    {"id":"bcparty","name":"British Columbia Party","ballot":"BC Party","leader":"Peter Milobar","color":"#9a49ae"},
-    {"id":"united","name":"BC United","ballot":"BC UNITED","leader":"Kevin Falcon","color":"#6674b5"},
-    {"id":"libertarian","name":"British Columbia Libertarian Party","ballot":"Libertarian","leader":"Alex Joehl","color":"#d7a711"},
-    {"id":"heritage","name":"Christian Heritage Party of British Columbia","ballot":"Christian Heritage Party of BC","leader":"Christian McCay","color":"#866147"},
-    {"id":"communist","name":"Communist Party of BC","ballot":"Communist Party of BC","leader":"Robert Crooks","color":"#cb5145"},
-    {"id":"freedom","name":"Freedom Party of British Columbia","ballot":"Freedom Party of BC","leader":"Amrit Birring","color":"#20aaa3"},
-    {"id":"canwest","name":"CanWest Party","ballot":"CWP","leader":"Wei Ping Chen","color":"#536ab9"},
-    {"id":"vision","name":"B.C. Vision","ballot":"B.C. Vision","leader":"Jagmohan Bhandari","color":"#769439"},
-    {"id":"citizens","name":"Party of Citizens Who Have Decided To Think For Ourselves & Be Our Own Politicians","ballot":"Party of Citizens","leader":"Gordon Watson","color":"#c75580"}
+    {
+      "id": "ndp",
+      "name": "BC NDP",
+      "ballot": "BC NDP",
+      "leader": "David Eby",
+      "color": "#ed8722"
+    },
+    {
+      "id": "con",
+      "name": "Conservative Party of British Columbia",
+      "ballot": "Conservative Party",
+      "leader": "Lorne Doerkson (interim)",
+      "color": "#2272cf"
+    },
+    {
+      "id": "green",
+      "name": "BC Green Party",
+      "ballot": "BC Green Party",
+      "leader": "Emily Lowan",
+      "color": "#208857"
+    },
+    {
+      "id": "one",
+      "name": "OneBC",
+      "ballot": "OneBC",
+      "leader": "Dallas Brodie (interim)",
+      "color": "#8245bb"
+    },
+    {
+      "id": "centre",
+      "name": "Centre BC",
+      "ballot": "CentreBC",
+      "leader": "Mike Bernier",
+      "color": "#cf4a91"
+    },
+    {
+      "id": "bcparty",
+      "name": "British Columbia Party",
+      "ballot": "BC Party",
+      "leader": "Peter Milobar",
+      "color": "#9a49ae"
+    },
+    {
+      "id": "united",
+      "name": "BC United",
+      "ballot": "BC UNITED",
+      "leader": "Kevin Falcon",
+      "color": "#6674b5"
+    },
+    {
+      "id": "libertarian",
+      "name": "British Columbia Libertarian Party",
+      "ballot": "Libertarian",
+      "leader": "Alex Joehl",
+      "color": "#d7a711"
+    },
+    {
+      "id": "heritage",
+      "name": "Christian Heritage Party of British Columbia",
+      "ballot": "Christian Heritage Party of BC",
+      "leader": "Christian McCay",
+      "color": "#866147"
+    },
+    {
+      "id": "communist",
+      "name": "Communist Party of BC",
+      "ballot": "Communist Party of BC",
+      "leader": "Robert Crooks",
+      "color": "#cb5145"
+    },
+    {
+      "id": "freedom",
+      "name": "Freedom Party of British Columbia",
+      "ballot": "Freedom Party of BC",
+      "leader": "Amrit Birring",
+      "color": "#20aaa3"
+    },
+    {
+      "id": "canwest",
+      "name": "CanWest Party",
+      "ballot": "CWP",
+      "leader": "Wei Ping Chen",
+      "color": "#536ab9"
+    },
+    {
+      "id": "vision",
+      "name": "B.C. Vision",
+      "ballot": "B.C. Vision",
+      "leader": "Jagmohan Bhandari",
+      "color": "#769439"
+    },
+    {
+      "id": "citizens",
+      "name": "Party of Citizens Who Have Decided To Think For Ourselves & Be Our Own Politicians",
+      "ballot": "Party of Citizens",
+      "leader": "Gordon Watson",
+      "color": "#c75580"
+    }
   ],
   "baseline2024": {
     "label": "Official 2024 election results",
     "date": "2024-10-19",
     "validVotes": 2105341,
-    "seats": [{"id":"ndp","seats":47},{"id":"con","seats":44},{"id":"green","seats":2}],
+    "seats": [
+      {
+        "id": "ndp",
+        "seats": 47
+      },
+      {
+        "id": "con",
+        "seats": 44
+      },
+      {
+        "id": "green",
+        "seats": 2
+      }
+    ],
     "popularVote": [
-      {"id":"ndp","votes":944579,"share":44.87},
-      {"id":"con","votes":911153,"share":43.28},
-      {"id":"green","votes":173377,"share":8.24},
-      {"id":"independent","name":"Independent","votes":47117,"share":2.24,"color":"#688096"},
-      {"id":"unaffiliated","name":"Unaffiliated","votes":25464,"share":1.21,"color":"#9ba9b9"},
-      {"id":"libertarian","votes":1380,"share":0.07},
-      {"id":"freedom","votes":1267,"share":0.06},
-      {"id":"communist","votes":639,"share":0.03},
-      {"id":"heritage","votes":365,"share":0.02}
+      {
+        "id": "ndp",
+        "votes": 944579,
+        "share": 44.87
+      },
+      {
+        "id": "con",
+        "votes": 911153,
+        "share": 43.28
+      },
+      {
+        "id": "green",
+        "votes": 173377,
+        "share": 8.24
+      },
+      {
+        "id": "independent",
+        "name": "Independent",
+        "votes": 47117,
+        "share": 2.24,
+        "color": "#688096"
+      },
+      {
+        "id": "unaffiliated",
+        "name": "Unaffiliated",
+        "votes": 25464,
+        "share": 1.21,
+        "color": "#9ba9b9"
+      },
+      {
+        "id": "libertarian",
+        "votes": 1380,
+        "share": 0.07
+      },
+      {
+        "id": "freedom",
+        "votes": 1267,
+        "share": 0.06
+      },
+      {
+        "id": "communist",
+        "votes": 639,
+        "share": 0.03
+      },
+      {
+        "id": "heritage",
+        "votes": 365,
+        "share": 0.02
+      }
     ]
   },
   "districts": [
-    "Abbotsford-Mission","Abbotsford South","Abbotsford West","Boundary-Similkameen","Bulkley Valley-Stikine","Burnaby Centre","Burnaby East","Burnaby-New Westminster","Burnaby North","Burnaby South-Metrotown","Cariboo-Chilcotin","Chilliwack-Cultus Lake","Chilliwack North","Columbia River-Revelstoke","Coquitlam-Burke Mountain","Coquitlam-Maillardville","Courtenay-Comox","Cowichan Valley","Delta North","Delta South","Esquimalt-Colwood","Fraser-Nicola","Juan de Fuca-Malahat","Kamloops Centre","Kamloops-North Thompson","Kelowna Centre","Kelowna-Lake Country-Coldstream","Kelowna-Mission","Kootenay Central","Kootenay-Monashee","Kootenay-Rockies",
-    "Ladysmith-Oceanside","Langford-Highlands","Langley-Abbotsford","Langley-Walnut Grove","Langley-Willowbrook","Maple Ridge East","Maple Ridge-Pitt Meadows","Mid Island-Pacific Rim","Nanaimo-Gabriola Island","Nanaimo-Lantzville","Nechako Lakes","New Westminster-Coquitlam","North Coast-Haida Gwaii","North Island","North Vancouver-Lonsdale","North Vancouver-Seymour","Oak Bay-Gordon Head","Peace River North","Peace River South","Penticton-Summerland","Port Coquitlam","Port Moody-Burquitlam","Powell River-Sunshine Coast","Prince George-Mackenzie","Prince George-North Cariboo","Prince George-Valemount","Richmond-Bridgeport","Richmond Centre","Richmond-Queensborough","Richmond-Steveston","Saanich North and the Islands",
-    "Saanich South","Salmon Arm-Shuswap","Skeena","Surrey City Centre","Surrey-Cloverdale","Surrey-Fleetwood","Surrey-Guildford","Surrey-Newton","Surrey North","Surrey-Panorama","Surrey-Serpentine River","Surrey South","Surrey-White Rock","Vancouver-Fraserview","Vancouver-Hastings","Vancouver-Kensington","Vancouver-Langara","Vancouver-Little Mountain","Vancouver-Point Grey","Vancouver-Quilchena","Vancouver-Renfrew","Vancouver-South Granville","Vancouver-Strathcona","Vancouver-West End","Vancouver-Yaletown","Vernon-Lumby","Victoria-Beacon Hill","Victoria-Swan Lake","West Kelowna-Peachland","West Vancouver-Capilano","West Vancouver-Sea to Sky"
+    "Abbotsford-Mission",
+    "Abbotsford South",
+    "Abbotsford West",
+    "Boundary-Similkameen",
+    "Bulkley Valley-Stikine",
+    "Burnaby Centre",
+    "Burnaby East",
+    "Burnaby-New Westminster",
+    "Burnaby North",
+    "Burnaby South-Metrotown",
+    "Cariboo-Chilcotin",
+    "Chilliwack-Cultus Lake",
+    "Chilliwack North",
+    "Columbia River-Revelstoke",
+    "Coquitlam-Burke Mountain",
+    "Coquitlam-Maillardville",
+    "Courtenay-Comox",
+    "Cowichan Valley",
+    "Delta North",
+    "Delta South",
+    "Esquimalt-Colwood",
+    "Fraser-Nicola",
+    "Juan de Fuca-Malahat",
+    "Kamloops Centre",
+    "Kamloops-North Thompson",
+    "Kelowna Centre",
+    "Kelowna-Lake Country-Coldstream",
+    "Kelowna-Mission",
+    "Kootenay Central",
+    "Kootenay-Monashee",
+    "Kootenay-Rockies",
+    "Ladysmith-Oceanside",
+    "Langford-Highlands",
+    "Langley-Abbotsford",
+    "Langley-Walnut Grove",
+    "Langley-Willowbrook",
+    "Maple Ridge East",
+    "Maple Ridge-Pitt Meadows",
+    "Mid Island-Pacific Rim",
+    "Nanaimo-Gabriola Island",
+    "Nanaimo-Lantzville",
+    "Nechako Lakes",
+    "New Westminster-Coquitlam",
+    "North Coast-Haida Gwaii",
+    "North Island",
+    "North Vancouver-Lonsdale",
+    "North Vancouver-Seymour",
+    "Oak Bay-Gordon Head",
+    "Peace River North",
+    "Peace River South",
+    "Penticton-Summerland",
+    "Port Coquitlam",
+    "Port Moody-Burquitlam",
+    "Powell River-Sunshine Coast",
+    "Prince George-Mackenzie",
+    "Prince George-North Cariboo",
+    "Prince George-Valemount",
+    "Richmond-Bridgeport",
+    "Richmond Centre",
+    "Richmond-Queensborough",
+    "Richmond-Steveston",
+    "Saanich North and the Islands",
+    "Saanich South",
+    "Salmon Arm-Shuswap",
+    "Skeena",
+    "Surrey City Centre",
+    "Surrey-Cloverdale",
+    "Surrey-Fleetwood",
+    "Surrey-Guildford",
+    "Surrey-Newton",
+    "Surrey North",
+    "Surrey-Panorama",
+    "Surrey-Serpentine River",
+    "Surrey South",
+    "Surrey-White Rock",
+    "Vancouver-Fraserview",
+    "Vancouver-Hastings",
+    "Vancouver-Kensington",
+    "Vancouver-Langara",
+    "Vancouver-Little Mountain",
+    "Vancouver-Point Grey",
+    "Vancouver-Quilchena",
+    "Vancouver-Renfrew",
+    "Vancouver-South Granville",
+    "Vancouver-Strathcona",
+    "Vancouver-West End",
+    "Vancouver-Yaletown",
+    "Vernon-Lumby",
+    "Victoria-Beacon Hill",
+    "Victoria-Swan Lake",
+    "West Kelowna-Peachland",
+    "West Vancouver-Capilano",
+    "West Vancouver-Sea to Sky"
   ],
   "featuredDistricts2024": {
-    "Coquitlam-Burke Mountain": {"validVotes":21672,"votes":[{"name":"Jodie Wickens","party":"ndp","votes":11020},{"name":"Stephen Frolek","party":"con","votes":10652}]},
-    "Surrey-Guildford": {"validVotes":19066,"votes":[{"name":"Garry Begg","party":"ndp","votes":8947},{"name":"Honveer Singh Randhawa","party":"con","votes":8925},{"name":"Manjeet Singh Sahota","party":"green","votes":824},{"name":"Kabir Qurban","party":"independent","votes":370}]},
-    "Kelowna Centre": {"validVotes":25750,"votes":[{"name":"Kristina Loewen","party":"con","votes":11033},{"name":"Loyal Wooldridge","party":"ndp","votes":10993},{"name":"Michael Humer","party":"unaffiliated","votes":2613},{"name":"Bryce Tippe","party":"green","votes":1111}]}
+    "Abbotsford-Mission": {
+      "validVotes": 24417,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=10",
+      "votes": [
+        {
+          "name": "Pam Alexis",
+          "party": "ndp",
+          "votes": 10894
+        },
+        {
+          "name": "Reann Gasper",
+          "party": "con",
+          "votes": 13523
+        }
+      ],
+      "rejectedBallots": 98,
+      "registeredVoters": 42692,
+      "turnout": 57.42
+    },
+    "Abbotsford South": {
+      "validVotes": 21188,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=10",
+      "votes": [
+        {
+          "name": "Bruce Banman",
+          "party": "con",
+          "votes": 13053
+        },
+        {
+          "name": "Sarah Kooner",
+          "party": "ndp",
+          "votes": 7454
+        },
+        {
+          "name": "Amandeep Singh",
+          "party": "independent",
+          "votes": 681
+        }
+      ],
+      "rejectedBallots": 54,
+      "registeredVoters": 41068,
+      "turnout": 51.72
+    },
+    "Abbotsford West": {
+      "validVotes": 19678,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=10",
+      "votes": [
+        {
+          "name": "James Davison",
+          "party": "independent",
+          "votes": 940
+        },
+        {
+          "name": "Graeme Hutchison",
+          "party": "ndp",
+          "votes": 7255
+        },
+        {
+          "name": "Korky Neufeld",
+          "party": "con",
+          "votes": 11483
+        }
+      ],
+      "rejectedBallots": 47,
+      "registeredVoters": 37833,
+      "turnout": 52.14
+    },
+    "Boundary-Similkameen": {
+      "validVotes": 24665,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=10",
+      "votes": [
+        {
+          "name": "Kevin Eastwood",
+          "party": "green",
+          "votes": 1454
+        },
+        {
+          "name": "Roly Russell",
+          "party": "ndp",
+          "votes": 10497
+        },
+        {
+          "name": "Sean Taylor",
+          "party": "independent",
+          "votes": 779
+        },
+        {
+          "name": "Donegal Wilson",
+          "party": "con",
+          "votes": 11935
+        }
+      ],
+      "rejectedBallots": 36,
+      "registeredVoters": 39371,
+      "turnout": 62.74
+    },
+    "Bulkley Valley-Stikine": {
+      "validVotes": 9544,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=10",
+      "votes": [
+        {
+          "name": "Nathan Cullen",
+          "party": "ndp",
+          "votes": 3709
+        },
+        {
+          "name": "Sharon L. Hartwell",
+          "party": "con",
+          "votes": 4992
+        },
+        {
+          "name": "Rod Taylor",
+          "party": "heritage",
+          "votes": 239
+        },
+        {
+          "name": "Gamlakyeltxw Wilhelm Marsden",
+          "party": "green",
+          "votes": 604
+        }
+      ],
+      "rejectedBallots": 25,
+      "registeredVoters": 14895,
+      "turnout": 64.24
+    },
+    "Burnaby Centre": {
+      "validVotes": 17074,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=10",
+      "votes": [
+        {
+          "name": "Dharam Kajal",
+          "party": "con",
+          "votes": 7294
+        },
+        {
+          "name": "Anne Kang",
+          "party": "ndp",
+          "votes": 9780
+        }
+      ],
+      "rejectedBallots": 108,
+      "registeredVoters": 34290,
+      "turnout": 50.11
+    },
+    "Burnaby East": {
+      "validVotes": 20232,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=10",
+      "votes": [
+        {
+          "name": "Reah Arora",
+          "party": "ndp",
+          "votes": 10490
+        },
+        {
+          "name": "Simon Chandler",
+          "party": "con",
+          "votes": 8198
+        },
+        {
+          "name": "Tara Shushtarian",
+          "party": "green",
+          "votes": 1544
+        }
+      ],
+      "rejectedBallots": 41,
+      "registeredVoters": 36896,
+      "turnout": 54.95
+    },
+    "Burnaby-New Westminster": {
+      "validVotes": 17748,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=10",
+      "votes": [
+        {
+          "name": "Daniel Kofi Ampong",
+          "party": "independent",
+          "votes": 940
+        },
+        {
+          "name": "Raj Chouhan",
+          "party": "ndp",
+          "votes": 10647
+        },
+        {
+          "name": "Deepak Suri",
+          "party": "con",
+          "votes": 6161
+        }
+      ],
+      "rejectedBallots": 89,
+      "registeredVoters": 34794,
+      "turnout": 51.26
+    },
+    "Burnaby North": {
+      "validVotes": 20136,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=10",
+      "votes": [
+        {
+          "name": "Martin Kendell",
+          "party": "independent",
+          "votes": 754
+        },
+        {
+          "name": "Janet Routledge",
+          "party": "ndp",
+          "votes": 10724
+        },
+        {
+          "name": "Michael Wu",
+          "party": "con",
+          "votes": 8658
+        }
+      ],
+      "rejectedBallots": 47,
+      "registeredVoters": 37785,
+      "turnout": 53.42
+    },
+    "Burnaby South-Metrotown": {
+      "validVotes": 15325,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=10",
+      "votes": [
+        {
+          "name": "MichaelAngelo Abc Robinhood",
+          "party": "independent",
+          "votes": 142
+        },
+        {
+          "name": "Meiling Chia",
+          "party": "unaffiliated",
+          "votes": 290
+        },
+        {
+          "name": "Paul Choi",
+          "party": "ndp",
+          "votes": 7560
+        },
+        {
+          "name": "Han Lee",
+          "party": "con",
+          "votes": 6373
+        },
+        {
+          "name": "Carrie McLaren",
+          "party": "green",
+          "votes": 960
+        }
+      ],
+      "rejectedBallots": 32,
+      "registeredVoters": 31434,
+      "turnout": 48.85
+    },
+    "Cariboo-Chilcotin": {
+      "validVotes": 19706,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=10",
+      "votes": [
+        {
+          "name": "Lorne Doerkson",
+          "party": "con",
+          "votes": 13714
+        },
+        {
+          "name": "Michael Moses",
+          "party": "ndp",
+          "votes": 5992
+        }
+      ],
+      "rejectedBallots": 92,
+      "registeredVoters": 32975,
+      "turnout": 60.04
+    },
+    "Chilliwack-Cultus Lake": {
+      "validVotes": 25022,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=10",
+      "votes": [
+        {
+          "name": "Kelli Paddon",
+          "party": "ndp",
+          "votes": 11366
+        },
+        {
+          "name": "A'aliya Warbus",
+          "party": "con",
+          "votes": 13656
+        }
+      ],
+      "rejectedBallots": 83,
+      "registeredVoters": 41587,
+      "turnout": 60.37
+    },
+    "Chilliwack North": {
+      "validVotes": 21575,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=10",
+      "votes": [
+        {
+          "name": "Tim Cooper",
+          "party": "green",
+          "votes": 1187
+        },
+        {
+          "name": "Dan Coulter",
+          "party": "ndp",
+          "votes": 8125
+        },
+        {
+          "name": "Dan Grice",
+          "party": "independent",
+          "votes": 487
+        },
+        {
+          "name": "Heather Maahs",
+          "party": "con",
+          "votes": 11776
+        }
+      ],
+      "rejectedBallots": 26,
+      "registeredVoters": 39227,
+      "turnout": 55.07
+    },
+    "Columbia River-Revelstoke": {
+      "validVotes": 18296,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=11",
+      "votes": [
+        {
+          "name": "Calvin Beauchesne",
+          "party": "green",
+          "votes": 1430
+        },
+        {
+          "name": "Andrea Dunlop",
+          "party": "ndp",
+          "votes": 8098
+        },
+        {
+          "name": "Scott McInnis",
+          "party": "con",
+          "votes": 8768
+        }
+      ],
+      "rejectedBallots": 41,
+      "registeredVoters": 31366,
+      "turnout": 58.46
+    },
+    "Coquitlam-Burke Mountain": {
+      "validVotes": 21672,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=11",
+      "votes": [
+        {
+          "name": "Stephen Frolek",
+          "party": "con",
+          "votes": 10652
+        },
+        {
+          "name": "Jodie Wickens",
+          "party": "ndp",
+          "votes": 11020
+        }
+      ],
+      "rejectedBallots": 94,
+      "registeredVoters": 39801,
+      "turnout": 54.69
+    },
+    "Coquitlam-Maillardville": {
+      "validVotes": 23114,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=11",
+      "votes": [
+        {
+          "name": "Jennifer Blatherwick",
+          "party": "ndp",
+          "votes": 11972
+        },
+        {
+          "name": "Ken Holowanky",
+          "party": "independent",
+          "votes": 535
+        },
+        {
+          "name": "Hamed Najafi",
+          "party": "con",
+          "votes": 9146
+        },
+        {
+          "name": "Nicola Spurling",
+          "party": "green",
+          "votes": 1461
+        }
+      ],
+      "rejectedBallots": 26,
+      "registeredVoters": 40666,
+      "turnout": 56.9
+    },
+    "Courtenay-Comox": {
+      "validVotes": 34718,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=11",
+      "votes": [
+        {
+          "name": "Brennan Day",
+          "party": "con",
+          "votes": 13481
+        },
+        {
+          "name": "Arzeena Hamir",
+          "party": "green",
+          "votes": 7202
+        },
+        {
+          "name": "John Hedican",
+          "party": "independent",
+          "votes": 504
+        },
+        {
+          "name": "Devin Howell",
+          "party": "independent",
+          "votes": 143
+        },
+        {
+          "name": "Ronna-Rae Leonard",
+          "party": "ndp",
+          "votes": 13388
+        }
+      ],
+      "rejectedBallots": 37,
+      "registeredVoters": 50583,
+      "turnout": 68.71
+    },
+    "Cowichan Valley": {
+      "validVotes": 29118,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=11",
+      "votes": [
+        {
+          "name": "Jon Coleman",
+          "party": "unaffiliated",
+          "votes": 263
+        },
+        {
+          "name": "Eden Haythornthwaite",
+          "party": "independent",
+          "votes": 341
+        },
+        {
+          "name": "John Koury",
+          "party": "con",
+          "votes": 10946
+        },
+        {
+          "name": "Cammy Lockwood",
+          "party": "green",
+          "votes": 5773
+        },
+        {
+          "name": "Debra Toporowski",
+          "party": "ndp",
+          "votes": 11795
+        }
+      ],
+      "rejectedBallots": 39,
+      "registeredVoters": 45901,
+      "turnout": 63.52
+    },
+    "Delta North": {
+      "validVotes": 20838,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=11",
+      "votes": [
+        {
+          "name": "Nick Dickinson-Wilde",
+          "party": "green",
+          "votes": 1292
+        },
+        {
+          "name": "Ravi Kahlon",
+          "party": "ndp",
+          "votes": 10988
+        },
+        {
+          "name": "Manqoosh Khan",
+          "party": "freedom",
+          "votes": 177
+        },
+        {
+          "name": "Raj Veauli",
+          "party": "con",
+          "votes": 8381
+        }
+      ],
+      "rejectedBallots": 38,
+      "registeredVoters": 36062,
+      "turnout": 57.89
+    },
+    "Delta South": {
+      "validVotes": 26313,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=11",
+      "votes": [
+        {
+          "name": "Jason McCormick",
+          "party": "ndp",
+          "votes": 11822
+        },
+        {
+          "name": "Ian Paton",
+          "party": "con",
+          "votes": 14491
+        }
+      ],
+      "rejectedBallots": 101,
+      "registeredVoters": 40611,
+      "turnout": 65.04
+    },
+    "Esquimalt-Colwood": {
+      "validVotes": 29606,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=11",
+      "votes": [
+        {
+          "name": "Camille Currie",
+          "party": "green",
+          "votes": 5716
+        },
+        {
+          "name": "Darlene Rotchford",
+          "party": "ndp",
+          "votes": 15238
+        },
+        {
+          "name": "John Wilson",
+          "party": "con",
+          "votes": 8652
+        }
+      ],
+      "rejectedBallots": 37,
+      "registeredVoters": 46799,
+      "turnout": 63.34
+    },
+    "Fraser-Nicola": {
+      "validVotes": 19004,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=11",
+      "votes": [
+        {
+          "name": "Francyne Joe",
+          "party": "ndp",
+          "votes": 6917
+        },
+        {
+          "name": "Tony Luck",
+          "party": "con",
+          "votes": 10326
+        },
+        {
+          "name": "Jonah Timms",
+          "party": "green",
+          "votes": 1761
+        }
+      ],
+      "rejectedBallots": 27,
+      "registeredVoters": 33542,
+      "turnout": 56.74
+    },
+    "Juan de Fuca-Malahat": {
+      "validVotes": 23997,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=11",
+      "votes": [
+        {
+          "name": "David Evans",
+          "party": "green",
+          "votes": 5522
+        },
+        {
+          "name": "Dana Lajeunesse",
+          "party": "ndp",
+          "votes": 9308
+        },
+        {
+          "name": "Marina Sapozhnikov",
+          "party": "con",
+          "votes": 9167
+        }
+      ],
+      "rejectedBallots": 32,
+      "registeredVoters": 37078,
+      "turnout": 64.81
+    },
+    "Kamloops Centre": {
+      "validVotes": 25338,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=11",
+      "votes": [
+        {
+          "name": "Kamal Grewal",
+          "party": "ndp",
+          "votes": 10369
+        },
+        {
+          "name": "Peter Milobar",
+          "party": "con",
+          "votes": 12372
+        },
+        {
+          "name": "Randy Sunderman",
+          "party": "green",
+          "votes": 2597
+        }
+      ],
+      "rejectedBallots": 36,
+      "registeredVoters": 44059,
+      "turnout": 57.59
+    },
+    "Kamloops-North Thompson": {
+      "validVotes": 30013,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=11",
+      "votes": [
+        {
+          "name": "Tristan Cavers",
+          "party": "green",
+          "votes": 2209
+        },
+        {
+          "name": "Maddi Genn",
+          "party": "ndp",
+          "votes": 9874
+        },
+        {
+          "name": "Ward Stamer",
+          "party": "con",
+          "votes": 17930
+        }
+      ],
+      "rejectedBallots": 51,
+      "registeredVoters": 48598,
+      "turnout": 61.86
+    },
+    "Kelowna Centre": {
+      "validVotes": 25750,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=11",
+      "votes": [
+        {
+          "name": "Michael Humer",
+          "party": "unaffiliated",
+          "votes": 2613
+        },
+        {
+          "name": "Kristina Loewen",
+          "party": "con",
+          "votes": 11033
+        },
+        {
+          "name": "Bryce Tippe",
+          "party": "green",
+          "votes": 1111
+        },
+        {
+          "name": "Loyal Wooldridge",
+          "party": "ndp",
+          "votes": 10993
+        }
+      ],
+      "rejectedBallots": 33,
+      "registeredVoters": 45642,
+      "turnout": 56.49
+    },
+    "Kelowna-Lake Country-Coldstream": {
+      "validVotes": 26528,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=12",
+      "votes": [
+        {
+          "name": "Tara Armstrong",
+          "party": "con",
+          "votes": 14303
+        },
+        {
+          "name": "Kevin Kraft",
+          "party": "independent",
+          "votes": 1724
+        },
+        {
+          "name": "Andrew Rose",
+          "party": "green",
+          "votes": 1151
+        },
+        {
+          "name": "Anna Warwick Sears",
+          "party": "ndp",
+          "votes": 9350
+        }
+      ],
+      "rejectedBallots": 32,
+      "registeredVoters": 45598,
+      "turnout": 58.25
+    },
+    "Kelowna-Mission": {
+      "validVotes": 27329,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=12",
+      "votes": [
+        {
+          "name": "Harpreet Badohal",
+          "party": "ndp",
+          "votes": 8913
+        },
+        {
+          "name": "Gavin Dew",
+          "party": "con",
+          "votes": 14071
+        },
+        {
+          "name": "Ashley Ramsay",
+          "party": "unaffiliated",
+          "votes": 2996
+        },
+        {
+          "name": "Billy Young",
+          "party": "green",
+          "votes": 1349
+        }
+      ],
+      "rejectedBallots": 43,
+      "registeredVoters": 45617,
+      "turnout": 60.0
+    },
+    "Kootenay Central": {
+      "validVotes": 21996,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=12",
+      "votes": [
+        {
+          "name": "Brittny Anderson",
+          "party": "ndp",
+          "votes": 8716
+        },
+        {
+          "name": "Nicole Charlwood",
+          "party": "green",
+          "votes": 4123
+        },
+        {
+          "name": "Corinne Mori",
+          "party": "independent",
+          "votes": 2190
+        },
+        {
+          "name": "Kelly Vandenberghe",
+          "party": "con",
+          "votes": 6967
+        }
+      ],
+      "rejectedBallots": 38,
+      "registeredVoters": 34278,
+      "turnout": 64.28
+    },
+    "Kootenay-Monashee": {
+      "validVotes": 19603,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=12",
+      "votes": [
+        {
+          "name": "Glen Byle",
+          "party": "con",
+          "votes": 7616
+        },
+        {
+          "name": "Donovan Cavers",
+          "party": "green",
+          "votes": 1785
+        },
+        {
+          "name": "Steve Morissette",
+          "party": "ndp",
+          "votes": 10202
+        }
+      ],
+      "rejectedBallots": 43,
+      "registeredVoters": 32732,
+      "turnout": 60.02
+    },
+    "Kootenay-Rockies": {
+      "validVotes": 19241,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=12",
+      "votes": [
+        {
+          "name": "Sam Atwal",
+          "party": "ndp",
+          "votes": 4184
+        },
+        {
+          "name": "Pete Davis",
+          "party": "con",
+          "votes": 8217
+        },
+        {
+          "name": "Tom Shypitka",
+          "party": "independent",
+          "votes": 5844
+        },
+        {
+          "name": "Kerri Wall",
+          "party": "green",
+          "votes": 996
+        }
+      ],
+      "rejectedBallots": 21,
+      "registeredVoters": 31684,
+      "turnout": 60.79
+    },
+    "Ladysmith-Oceanside": {
+      "validVotes": 34092,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=12",
+      "votes": [
+        {
+          "name": "Brett Fee",
+          "party": "con",
+          "votes": 12097
+        },
+        {
+          "name": "Laura Ferreira",
+          "party": "green",
+          "votes": 2292
+        },
+        {
+          "name": "Stephanie Higginson",
+          "party": "ndp",
+          "votes": 14144
+        },
+        {
+          "name": "Adam Walker",
+          "party": "independent",
+          "votes": 5559
+        }
+      ],
+      "rejectedBallots": 24,
+      "registeredVoters": 49387,
+      "turnout": 69.08
+    },
+    "Langford-Highlands": {
+      "validVotes": 22063,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=12",
+      "votes": [
+        {
+          "name": "Erin Cassels",
+          "party": "green",
+          "votes": 2368
+        },
+        {
+          "name": "Mike Harris",
+          "party": "con",
+          "votes": 8251
+        },
+        {
+          "name": "Ravi Parmar",
+          "party": "ndp",
+          "votes": 11444
+        }
+      ],
+      "rejectedBallots": 27,
+      "registeredVoters": 37389,
+      "turnout": 59.08
+    },
+    "Langley-Abbotsford": {
+      "validVotes": 25770,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=12",
+      "votes": [
+        {
+          "name": "John Aldag",
+          "party": "ndp",
+          "votes": 8691
+        },
+        {
+          "name": "Harman Bhangu",
+          "party": "con",
+          "votes": 14341
+        },
+        {
+          "name": "Alex Joehl",
+          "party": "libertarian",
+          "votes": 200
+        },
+        {
+          "name": "Karen Long",
+          "party": "independent",
+          "votes": 1104
+        },
+        {
+          "name": "Melissa Snazell",
+          "party": "green",
+          "votes": 1434
+        }
+      ],
+      "rejectedBallots": 66,
+      "registeredVoters": 43448,
+      "turnout": 59.46
+    },
+    "Langley-Walnut Grove": {
+      "validVotes": 24458,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=12",
+      "votes": [
+        {
+          "name": "Megan Dykeman",
+          "party": "ndp",
+          "votes": 10949
+        },
+        {
+          "name": "Rylee Mac Lean",
+          "party": "green",
+          "votes": 1254
+        },
+        {
+          "name": "Carlos Suarez Rubio",
+          "party": "independent",
+          "votes": 134
+        },
+        {
+          "name": "Misty Van Popta",
+          "party": "con",
+          "votes": 12121
+        }
+      ],
+      "rejectedBallots": 27,
+      "registeredVoters": 42213,
+      "turnout": 58.0
+    },
+    "Langley-Willowbrook": {
+      "validVotes": 22761,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=12",
+      "votes": [
+        {
+          "name": "Petrina Arnason",
+          "party": "green",
+          "votes": 1670
+        },
+        {
+          "name": "Andrew Mercier",
+          "party": "ndp",
+          "votes": 10112
+        },
+        {
+          "name": "Jody Toor",
+          "party": "con",
+          "votes": 10979
+        }
+      ],
+      "rejectedBallots": 18,
+      "registeredVoters": 41088,
+      "turnout": 55.44
+    },
+    "Maple Ridge East": {
+      "validVotes": 25645,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=12",
+      "votes": [
+        {
+          "name": "Bob D'Eith",
+          "party": "ndp",
+          "votes": 11961
+        },
+        {
+          "name": "Lawrence Mok",
+          "party": "con",
+          "votes": 12058
+        },
+        {
+          "name": "Kylee Williams",
+          "party": "green",
+          "votes": 1626
+        }
+      ],
+      "rejectedBallots": 49,
+      "registeredVoters": 44335,
+      "turnout": 57.95
+    },
+    "Maple Ridge-Pitt Meadows": {
+      "validVotes": 26381,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=12",
+      "votes": [
+        {
+          "name": "Lisa Beare",
+          "party": "ndp",
+          "votes": 14480
+        },
+        {
+          "name": "Mike Morden",
+          "party": "con",
+          "votes": 11901
+        }
+      ],
+      "rejectedBallots": 94,
+      "registeredVoters": 44850,
+      "turnout": 59.03
+    },
+    "Mid Island-Pacific Rim": {
+      "validVotes": 28810,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=12",
+      "votes": [
+        {
+          "name": "Adam Hayduk",
+          "party": "con",
+          "votes": 11366
+        },
+        {
+          "name": "Josie Osborne",
+          "party": "ndp",
+          "votes": 14042
+        },
+        {
+          "name": "Ross Reid",
+          "party": "green",
+          "votes": 3402
+        }
+      ],
+      "rejectedBallots": 58,
+      "registeredVoters": 47816,
+      "turnout": 60.37
+    },
+    "Nanaimo-Gabriola Island": {
+      "validVotes": 27798,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=13",
+      "votes": [
+        {
+          "name": "Shirley Lambrecht",
+          "party": "green",
+          "votes": 3502
+        },
+        {
+          "name": "Sheila Malcolmson",
+          "party": "ndp",
+          "votes": 14663
+        },
+        {
+          "name": "Dale Parker",
+          "party": "con",
+          "votes": 9633
+        }
+      ],
+      "rejectedBallots": 57,
+      "registeredVoters": 46454,
+      "turnout": 59.96
+    },
+    "Nanaimo-Lantzville": {
+      "validVotes": 29580,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=13",
+      "votes": [
+        {
+          "name": "George Anderson",
+          "party": "ndp",
+          "votes": 15307
+        },
+        {
+          "name": "Gwen O'Mahony",
+          "party": "con",
+          "votes": 11687
+        },
+        {
+          "name": "Lia Versaevel",
+          "party": "green",
+          "votes": 2586
+        }
+      ],
+      "rejectedBallots": 40,
+      "registeredVoters": 44879,
+      "turnout": 66.0
+    },
+    "Nechako Lakes": {
+      "validVotes": 11640,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=13",
+      "votes": [
+        {
+          "name": "Murphy Abraham",
+          "party": "ndp",
+          "votes": 3167
+        },
+        {
+          "name": "Douglas Gook",
+          "party": "green",
+          "votes": 622
+        },
+        {
+          "name": "John Rustad",
+          "party": "con",
+          "votes": 7851
+        }
+      ],
+      "rejectedBallots": 25,
+      "registeredVoters": 18407,
+      "turnout": 63.37
+    },
+    "New Westminster-Coquitlam": {
+      "validVotes": 21575,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=13",
+      "votes": [
+        {
+          "name": "Maureen Curran",
+          "party": "green",
+          "votes": 2380
+        },
+        {
+          "name": "Ndellie Massey",
+          "party": "con",
+          "votes": 6438
+        },
+        {
+          "name": "Jennifer Whiteside",
+          "party": "ndp",
+          "votes": 12757
+        }
+      ],
+      "rejectedBallots": 56,
+      "registeredVoters": 40020,
+      "turnout": 54.05
+    },
+    "North Coast-Haida Gwaii": {
+      "validVotes": 7491,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=13",
+      "votes": [
+        {
+          "name": "Tamara Davidson",
+          "party": "ndp",
+          "votes": 4863
+        },
+        {
+          "name": "Christopher Jason Sankey",
+          "party": "con",
+          "votes": 2628
+        }
+      ],
+      "rejectedBallots": 51,
+      "registeredVoters": 15518,
+      "turnout": 48.6
+    },
+    "North Island": {
+      "validVotes": 29958,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=13",
+      "votes": [
+        {
+          "name": "Michele Babchuk",
+          "party": "ndp",
+          "votes": 13461
+        },
+        {
+          "name": "Nic Dedeluk",
+          "party": "green",
+          "votes": 2397
+        },
+        {
+          "name": "Anna Kindy",
+          "party": "con",
+          "votes": 14100
+        }
+      ],
+      "rejectedBallots": 31,
+      "registeredVoters": 48249,
+      "turnout": 62.15
+    },
+    "North Vancouver-Lonsdale": {
+      "validVotes": 25832,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=13",
+      "votes": [
+        {
+          "name": "Bowinn Ma",
+          "party": "ndp",
+          "votes": 16759
+        },
+        {
+          "name": "David Splett",
+          "party": "con",
+          "votes": 9073
+        }
+      ],
+      "rejectedBallots": 107,
+      "registeredVoters": 44034,
+      "turnout": 58.91
+    },
+    "North Vancouver-Seymour": {
+      "validVotes": 30721,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=13",
+      "votes": [
+        {
+          "name": "Mitchell Baker",
+          "party": "independent",
+          "votes": 1794
+        },
+        {
+          "name": "Sam Chandola",
+          "party": "con",
+          "votes": 10995
+        },
+        {
+          "name": "Susie Chant",
+          "party": "ndp",
+          "votes": 16210
+        },
+        {
+          "name": "Subhadarshi Tripathy",
+          "party": "green",
+          "votes": 1722
+        }
+      ],
+      "rejectedBallots": 39,
+      "registeredVoters": 46159,
+      "turnout": 66.64
+    },
+    "Oak Bay-Gordon Head": {
+      "validVotes": 29570,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=13",
+      "votes": [
+        {
+          "name": "Stephen Andrew",
+          "party": "con",
+          "votes": 8542
+        },
+        {
+          "name": "Diana Gibson",
+          "party": "ndp",
+          "votes": 14519
+        },
+        {
+          "name": "Lisa Gunderson",
+          "party": "green",
+          "votes": 6509
+        }
+      ],
+      "rejectedBallots": 55,
+      "registeredVoters": 42442,
+      "turnout": 69.8
+    },
+    "Peace River North": {
+      "validVotes": 15079,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=13",
+      "votes": [
+        {
+          "name": "Dan Davies",
+          "party": "independent",
+          "votes": 3038
+        },
+        {
+          "name": "Jordan Kealy",
+          "party": "con",
+          "votes": 11213
+        },
+        {
+          "name": "Ian McMahon",
+          "party": "ndp",
+          "votes": 828
+        }
+      ],
+      "rejectedBallots": 18,
+      "registeredVoters": 26413,
+      "turnout": 57.16
+    },
+    "Peace River South": {
+      "validVotes": 10283,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=13",
+      "votes": [
+        {
+          "name": "Mike Bernier",
+          "party": "unaffiliated",
+          "votes": 2525
+        },
+        {
+          "name": "Marshall Bigsby",
+          "party": "ndp",
+          "votes": 576
+        },
+        {
+          "name": "Larry Neufeld",
+          "party": "con",
+          "votes": 7182
+        }
+      ],
+      "rejectedBallots": 15,
+      "registeredVoters": 18206,
+      "turnout": 56.56
+    },
+    "Penticton-Summerland": {
+      "validVotes": 28076,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=13",
+      "votes": [
+        {
+          "name": "Bradley Bartsch",
+          "party": "green",
+          "votes": 1472
+        },
+        {
+          "name": "Amelia Boultbee",
+          "party": "con",
+          "votes": 11615
+        },
+        {
+          "name": "Roger Harrington",
+          "party": "independent",
+          "votes": 827
+        },
+        {
+          "name": "Tina Lee",
+          "party": "ndp",
+          "votes": 11298
+        },
+        {
+          "name": "Anna Paddon",
+          "party": "independent",
+          "votes": 144
+        },
+        {
+          "name": "Tracy St Claire",
+          "party": "unaffiliated",
+          "votes": 2720
+        }
+      ],
+      "rejectedBallots": 29,
+      "registeredVoters": 45707,
+      "turnout": 61.49
+    },
+    "Port Coquitlam": {
+      "validVotes": 25698,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=13",
+      "votes": [
+        {
+          "name": "Keenan Adams",
+          "party": "con",
+          "votes": 9967
+        },
+        {
+          "name": "Adam Bremner-Akins",
+          "party": "green",
+          "votes": 1644
+        },
+        {
+          "name": "Lewis Dahlby",
+          "party": "libertarian",
+          "votes": 244
+        },
+        {
+          "name": "Mike Farnworth",
+          "party": "ndp",
+          "votes": 13843
+        }
+      ],
+      "rejectedBallots": 38,
+      "registeredVoters": 44601,
+      "turnout": 57.7
+    },
+    "Port Moody-Burquitlam": {
+      "validVotes": 25908,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=13",
+      "votes": [
+        {
+          "name": "Samantha Agtarap",
+          "party": "green",
+          "votes": 1927
+        },
+        {
+          "name": "Rick Glumac",
+          "party": "ndp",
+          "votes": 13488
+        },
+        {
+          "name": "Kerry van Aswegen",
+          "party": "con",
+          "votes": 10493
+        }
+      ],
+      "rejectedBallots": 45,
+      "registeredVoters": 44199,
+      "turnout": 58.72
+    },
+    "Powell River-Sunshine Coast": {
+      "validVotes": 29171,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=14",
+      "votes": [
+        {
+          "name": "Chris Hergesheimer",
+          "party": "green",
+          "votes": 3932
+        },
+        {
+          "name": "Chris Moore",
+          "party": "con",
+          "votes": 10409
+        },
+        {
+          "name": "Randene Neill",
+          "party": "ndp",
+          "votes": 14474
+        },
+        {
+          "name": "Greg Reid",
+          "party": "independent",
+          "votes": 356
+        }
+      ],
+      "rejectedBallots": 27,
+      "registeredVoters": 44009,
+      "turnout": 66.35
+    },
+    "Prince George-Mackenzie": {
+      "validVotes": 18560,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=14",
+      "votes": [
+        {
+          "name": "Kiel Giddens",
+          "party": "con",
+          "votes": 11307
+        },
+        {
+          "name": "Shar McCrory",
+          "party": "ndp",
+          "votes": 5242
+        },
+        {
+          "name": "James Steidle",
+          "party": "green",
+          "votes": 1576
+        },
+        {
+          "name": "Rachael Weber",
+          "party": "unaffiliated",
+          "votes": 435
+        }
+      ],
+      "rejectedBallots": 28,
+      "registeredVoters": 31239,
+      "turnout": 59.5
+    },
+    "Prince George-North Cariboo": {
+      "validVotes": 20116,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=14",
+      "votes": [
+        {
+          "name": "Denice Bardua",
+          "party": "ndp",
+          "votes": 3426
+        },
+        {
+          "name": "Sheldon Clare",
+          "party": "con",
+          "votes": 11430
+        },
+        {
+          "name": "Coralee Oakes",
+          "party": "independent",
+          "votes": 4394
+        },
+        {
+          "name": "Randy Thompson",
+          "party": "green",
+          "votes": 866
+        }
+      ],
+      "rejectedBallots": 18,
+      "registeredVoters": 33572,
+      "turnout": 59.97
+    },
+    "Prince George-Valemount": {
+      "validVotes": 16339,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=14",
+      "votes": [
+        {
+          "name": "Rosalyn Bird",
+          "party": "con",
+          "votes": 9018
+        },
+        {
+          "name": "Gwen Johansson",
+          "party": "green",
+          "votes": 1612
+        },
+        {
+          "name": "Clay Pountney",
+          "party": "ndp",
+          "votes": 5709
+        }
+      ],
+      "rejectedBallots": 43,
+      "registeredVoters": 30564,
+      "turnout": 53.6
+    },
+    "Richmond-Bridgeport": {
+      "validVotes": 17027,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=14",
+      "votes": [
+        {
+          "name": "Glynnis Hoi Sum Chan",
+          "party": "independent",
+          "votes": 519
+        },
+        {
+          "name": "Linda Li",
+          "party": "ndp",
+          "votes": 5921
+        },
+        {
+          "name": "Tam\u00e1s Rev\u00f3czi",
+          "party": "green",
+          "votes": 547
+        },
+        {
+          "name": "Charlie Smith",
+          "party": "independent",
+          "votes": 132
+        },
+        {
+          "name": "Teresa Wat",
+          "party": "con",
+          "votes": 9908
+        }
+      ],
+      "rejectedBallots": 54,
+      "registeredVoters": 35127,
+      "turnout": 48.63
+    },
+    "Richmond Centre": {
+      "validVotes": 16208,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=14",
+      "votes": [
+        {
+          "name": "Hon Chan",
+          "party": "con",
+          "votes": 8426
+        },
+        {
+          "name": "Dickens Cheung",
+          "party": "independent",
+          "votes": 556
+        },
+        {
+          "name": "Sunny Ho",
+          "party": "independent",
+          "votes": 237
+        },
+        {
+          "name": "Henry Yao",
+          "party": "ndp",
+          "votes": 5961
+        },
+        {
+          "name": "Wendy Yuan",
+          "party": "unaffiliated",
+          "votes": 1028
+        }
+      ],
+      "rejectedBallots": 61,
+      "registeredVoters": 33153,
+      "turnout": 49.07
+    },
+    "Richmond-Queensborough": {
+      "validVotes": 19744,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=14",
+      "votes": [
+        {
+          "name": "Steve Kooner",
+          "party": "con",
+          "votes": 10052
+        },
+        {
+          "name": "Errol E. Povah",
+          "party": "independent",
+          "votes": 258
+        },
+        {
+          "name": "Aman Singh",
+          "party": "ndp",
+          "votes": 8713
+        },
+        {
+          "name": "Cindy Wu",
+          "party": "independent",
+          "votes": 721
+        }
+      ],
+      "rejectedBallots": 63,
+      "registeredVoters": 37364,
+      "turnout": 53.01
+    },
+    "Richmond-Steveston": {
+      "validVotes": 23337,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=14",
+      "votes": [
+        {
+          "name": "Kelly Greene",
+          "party": "ndp",
+          "votes": 10332
+        },
+        {
+          "name": "Jackie Lee",
+          "party": "unaffiliated",
+          "votes": 2354
+        },
+        {
+          "name": "Michelle Mollineaux",
+          "party": "con",
+          "votes": 9848
+        },
+        {
+          "name": "Elodie Vaudandaine",
+          "party": "green",
+          "votes": 803
+        }
+      ],
+      "rejectedBallots": 52,
+      "registeredVoters": 39067,
+      "turnout": 59.87
+    },
+    "Saanich North and the Islands": {
+      "validVotes": 34046,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=14",
+      "votes": [
+        {
+          "name": "Rob Botterell",
+          "party": "green",
+          "votes": 12308
+        },
+        {
+          "name": "David Busch",
+          "party": "con",
+          "votes": 10145
+        },
+        {
+          "name": "Amy Haysom",
+          "party": "independent",
+          "votes": 635
+        },
+        {
+          "name": "Sarah Riddell",
+          "party": "ndp",
+          "votes": 10958
+        }
+      ],
+      "rejectedBallots": 41,
+      "registeredVoters": 49437,
+      "turnout": 68.95
+    },
+    "Saanich South": {
+      "validVotes": 30826,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=14",
+      "votes": [
+        {
+          "name": "Adam Kubel",
+          "party": "con",
+          "votes": 10003
+        },
+        {
+          "name": "Lana Popham",
+          "party": "ndp",
+          "votes": 15338
+        },
+        {
+          "name": "Ned Taylor",
+          "party": "green",
+          "votes": 5485
+        }
+      ],
+      "rejectedBallots": 44,
+      "registeredVoters": 45655,
+      "turnout": 67.62
+    },
+    "Salmon Arm-Shuswap": {
+      "validVotes": 31788,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=14",
+      "votes": [
+        {
+          "name": "Sylvia Lindgren",
+          "party": "ndp",
+          "votes": 9677
+        },
+        {
+          "name": "Greg McCune",
+          "party": "independent",
+          "votes": 2922
+        },
+        {
+          "name": "Sherry Roy",
+          "party": "independent",
+          "votes": 373
+        },
+        {
+          "name": "Jed Wiebe",
+          "party": "green",
+          "votes": 2250
+        },
+        {
+          "name": "David L. Williams",
+          "party": "con",
+          "votes": 16566
+        }
+      ],
+      "rejectedBallots": 31,
+      "registeredVoters": 51806,
+      "turnout": 61.42
+    },
+    "Skeena": {
+      "validVotes": 12194,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=15",
+      "votes": [
+        {
+          "name": "Irwin Jeffrey",
+          "party": "heritage",
+          "votes": 126
+        },
+        {
+          "name": "Claire Ratt\u00e9e",
+          "party": "con",
+          "votes": 6243
+        },
+        {
+          "name": "Teri Young",
+          "party": "green",
+          "votes": 406
+        },
+        {
+          "name": "Sarah Zimmerman",
+          "party": "ndp",
+          "votes": 5419
+        }
+      ],
+      "rejectedBallots": 23,
+      "registeredVoters": 21885,
+      "turnout": 55.82
+    },
+    "Surrey City Centre": {
+      "validVotes": 14404,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=15",
+      "votes": [
+        {
+          "name": "Ryan Abbott",
+          "party": "communist",
+          "votes": 147
+        },
+        {
+          "name": "Colin Boyd",
+          "party": "green",
+          "votes": 877
+        },
+        {
+          "name": "Saeed Naguib",
+          "party": "independent",
+          "votes": 160
+        },
+        {
+          "name": "Amna Shah",
+          "party": "ndp",
+          "votes": 6726
+        },
+        {
+          "name": "Zeeshan Wahla",
+          "party": "con",
+          "votes": 6494
+        }
+      ],
+      "rejectedBallots": 26,
+      "registeredVoters": 32195,
+      "turnout": 44.82
+    },
+    "Surrey-Cloverdale": {
+      "validVotes": 21253,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=15",
+      "votes": [
+        {
+          "name": "Pat McCutcheon",
+          "party": "green",
+          "votes": 1150
+        },
+        {
+          "name": "Judy Meilleur",
+          "party": "freedom",
+          "votes": 153
+        },
+        {
+          "name": "Mike Starchuk",
+          "party": "ndp",
+          "votes": 9682
+        },
+        {
+          "name": "Elenore Sturko",
+          "party": "con",
+          "votes": 10268
+        }
+      ],
+      "rejectedBallots": 16,
+      "registeredVoters": 38069,
+      "turnout": 55.87
+    },
+    "Surrey-Fleetwood": {
+      "validVotes": 20414,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=15",
+      "votes": [
+        {
+          "name": "Tim Binnema",
+          "party": "green",
+          "votes": 1321
+        },
+        {
+          "name": "Jagrup Brar",
+          "party": "ndp",
+          "votes": 9923
+        },
+        {
+          "name": "Avtar Gill",
+          "party": "con",
+          "votes": 9170
+        }
+      ],
+      "rejectedBallots": 26,
+      "registeredVoters": 37753,
+      "turnout": 54.14
+    },
+    "Surrey-Guildford": {
+      "validVotes": 19066,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=15",
+      "votes": [
+        {
+          "name": "Garry Begg",
+          "party": "ndp",
+          "votes": 8947
+        },
+        {
+          "name": "Kabir Qurban",
+          "party": "independent",
+          "votes": 370
+        },
+        {
+          "name": "Honveer Singh Randhawa",
+          "party": "con",
+          "votes": 8925
+        },
+        {
+          "name": "Manjeet Singh Sahota",
+          "party": "green",
+          "votes": 824
+        }
+      ],
+      "rejectedBallots": 24,
+      "registeredVoters": 37612,
+      "turnout": 50.76
+    },
+    "Surrey-Newton": {
+      "validVotes": 15486,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=15",
+      "votes": [
+        {
+          "name": "Tegjot Bal",
+          "party": "con",
+          "votes": 6658
+        },
+        {
+          "name": "Amrit Birring",
+          "party": "freedom",
+          "votes": 371
+        },
+        {
+          "name": "Japreet Lehal",
+          "party": "unaffiliated",
+          "votes": 344
+        },
+        {
+          "name": "Joginder Singh Randhawa",
+          "party": "independent",
+          "votes": 189
+        },
+        {
+          "name": "Jessie Sunner",
+          "party": "ndp",
+          "votes": 7924
+        }
+      ],
+      "rejectedBallots": 36,
+      "registeredVoters": 30549,
+      "turnout": 50.81
+    },
+    "Surrey North": {
+      "validVotes": 15698,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=15",
+      "votes": [
+        {
+          "name": "Mandeep Dhaliwal",
+          "party": "con",
+          "votes": 7954
+        },
+        {
+          "name": "Kiran Hundal",
+          "party": "freedom",
+          "votes": 162
+        },
+        {
+          "name": "Hobby Nijjar",
+          "party": "independent",
+          "votes": 125
+        },
+        {
+          "name": "Sim Sandhu",
+          "party": "green",
+          "votes": 662
+        },
+        {
+          "name": "Rachna Singh",
+          "party": "ndp",
+          "votes": 6795
+        }
+      ],
+      "rejectedBallots": 33,
+      "registeredVoters": 31511,
+      "turnout": 49.92
+    },
+    "Surrey-Panorama": {
+      "validVotes": 17611,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=15",
+      "votes": [
+        {
+          "name": "Paramjit Rai",
+          "party": "freedom",
+          "votes": 404
+        },
+        {
+          "name": "Jinny Sims",
+          "party": "ndp",
+          "votes": 8472
+        },
+        {
+          "name": "Bryan Tepper",
+          "party": "con",
+          "votes": 8735
+        }
+      ],
+      "rejectedBallots": 41,
+      "registeredVoters": 32742,
+      "turnout": 53.91
+    },
+    "Surrey-Serpentine River": {
+      "validVotes": 19683,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=15",
+      "votes": [
+        {
+          "name": "Baltej Singh Dhillon",
+          "party": "ndp",
+          "votes": 9347
+        },
+        {
+          "name": "Linda Hepner",
+          "party": "con",
+          "votes": 9782
+        },
+        {
+          "name": "Jim McMurtry",
+          "party": "independent",
+          "votes": 554
+        }
+      ],
+      "rejectedBallots": 39,
+      "registeredVoters": 36196,
+      "turnout": 54.49
+    },
+    "Surrey South": {
+      "validVotes": 22192,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=15",
+      "votes": [
+        {
+          "name": "Brent Chapman",
+          "party": "con",
+          "votes": 13056
+        },
+        {
+          "name": "Haroon Ghaffar",
+          "party": "ndp",
+          "votes": 9136
+        }
+      ],
+      "rejectedBallots": 119,
+      "registeredVoters": 39633,
+      "turnout": 56.29
+    },
+    "Surrey-White Rock": {
+      "validVotes": 28036,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=15",
+      "votes": [
+        {
+          "name": "Trevor Halford",
+          "party": "con",
+          "votes": 14667
+        },
+        {
+          "name": "Damyn Tassie",
+          "party": "libertarian",
+          "votes": 671
+        },
+        {
+          "name": "Darryl Walker",
+          "party": "ndp",
+          "votes": 12698
+        }
+      ],
+      "rejectedBallots": 106,
+      "registeredVoters": 45467,
+      "turnout": 61.9
+    },
+    "Vancouver-Fraserview": {
+      "validVotes": 20804,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=15",
+      "votes": [
+        {
+          "name": "George Chow",
+          "party": "ndp",
+          "votes": 11896
+        },
+        {
+          "name": "Francoise Raunet",
+          "party": "green",
+          "votes": 1290
+        },
+        {
+          "name": "Jag S Sanghera",
+          "party": "con",
+          "votes": 7618
+        }
+      ],
+      "rejectedBallots": 61,
+      "registeredVoters": 39801,
+      "turnout": 52.42
+    },
+    "Vancouver-Hastings": {
+      "validVotes": 22194,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=16",
+      "votes": [
+        {
+          "name": "Jacob Burdge",
+          "party": "con",
+          "votes": 5391
+        },
+        {
+          "name": "Bridget Burns",
+          "party": "green",
+          "votes": 2409
+        },
+        {
+          "name": "Zsolt Kiss",
+          "party": "independent",
+          "votes": 157
+        },
+        {
+          "name": "Niki Sharma",
+          "party": "ndp",
+          "votes": 14237
+        }
+      ],
+      "rejectedBallots": 52,
+      "registeredVoters": 41189,
+      "turnout": 54.01
+    },
+    "Vancouver-Kensington": {
+      "validVotes": 19232,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=16",
+      "votes": [
+        {
+          "name": "Mable Elmore",
+          "party": "ndp",
+          "votes": 11713
+        },
+        {
+          "name": "Amy Fox",
+          "party": "green",
+          "votes": 1458
+        },
+        {
+          "name": "Syed Mohsin",
+          "party": "con",
+          "votes": 6061
+        }
+      ],
+      "rejectedBallots": 53,
+      "registeredVoters": 37396,
+      "turnout": 51.57
+    },
+    "Vancouver-Langara": {
+      "validVotes": 17562,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=16",
+      "votes": [
+        {
+          "name": "Bryan Breguet",
+          "party": "con",
+          "votes": 8087
+        },
+        {
+          "name": "Sunita Dhir",
+          "party": "ndp",
+          "votes": 8506
+        },
+        {
+          "name": "Scottford Price",
+          "party": "green",
+          "votes": 969
+        }
+      ],
+      "rejectedBallots": 39,
+      "registeredVoters": 33961,
+      "turnout": 51.83
+    },
+    "Vancouver-Little Mountain": {
+      "validVotes": 25173,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=16",
+      "votes": [
+        {
+          "name": "Christine Boyle",
+          "party": "ndp",
+          "votes": 15636
+        },
+        {
+          "name": "John Coupar",
+          "party": "con",
+          "votes": 7704
+        },
+        {
+          "name": "Wendy Hayko",
+          "party": "green",
+          "votes": 1833
+        }
+      ],
+      "rejectedBallots": 61,
+      "registeredVoters": 41259,
+      "turnout": 61.16
+    },
+    "Vancouver-Point Grey": {
+      "validVotes": 22085,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=16",
+      "votes": [
+        {
+          "name": "David Eby",
+          "party": "ndp",
+          "votes": 12538
+        },
+        {
+          "name": "Paul Ratchford",
+          "party": "con",
+          "votes": 7622
+        },
+        {
+          "name": "Devyani Singh",
+          "party": "green",
+          "votes": 1925
+        }
+      ],
+      "rejectedBallots": 40,
+      "registeredVoters": 34880,
+      "turnout": 63.43
+    },
+    "Vancouver-Quilchena": {
+      "validVotes": 22227,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=16",
+      "votes": [
+        {
+          "name": "Michael Barkusky",
+          "party": "green",
+          "votes": 1729
+        },
+        {
+          "name": "Dallas Brodie",
+          "party": "con",
+          "votes": 11464
+        },
+        {
+          "name": "Callista Ryan",
+          "party": "ndp",
+          "votes": 8649
+        },
+        {
+          "name": "Caroline Ying-Mei Wang",
+          "party": "independent",
+          "votes": 385
+        }
+      ],
+      "rejectedBallots": 32,
+      "registeredVoters": 38080,
+      "turnout": 58.45
+    },
+    "Vancouver-Renfrew": {
+      "validVotes": 17374,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=16",
+      "votes": [
+        {
+          "name": "Adrian Dix",
+          "party": "ndp",
+          "votes": 10983
+        },
+        {
+          "name": "Tom Ikonomou",
+          "party": "con",
+          "votes": 5327
+        },
+        {
+          "name": "Lawrence Taylor",
+          "party": "green",
+          "votes": 1064
+        }
+      ],
+      "rejectedBallots": 47,
+      "registeredVoters": 36116,
+      "turnout": 48.24
+    },
+    "Vancouver-South Granville": {
+      "validVotes": 26758,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=16",
+      "votes": [
+        {
+          "name": "Brenda Bailey",
+          "party": "ndp",
+          "votes": 17208
+        },
+        {
+          "name": "Adam Hawk",
+          "party": "green",
+          "votes": 2872
+        },
+        {
+          "name": "Aron Lageri",
+          "party": "con",
+          "votes": 6678
+        }
+      ],
+      "rejectedBallots": 55,
+      "registeredVoters": 42014,
+      "turnout": 63.82
+    },
+    "Vancouver-Strathcona": {
+      "validVotes": 20057,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=16",
+      "votes": [
+        {
+          "name": "Kimball Cariou",
+          "party": "communist",
+          "votes": 336
+        },
+        {
+          "name": "Scott Muller",
+          "party": "con",
+          "votes": 3430
+        },
+        {
+          "name": "Joan Phillip",
+          "party": "ndp",
+          "votes": 13673
+        },
+        {
+          "name": "Simon de Weerdt",
+          "party": "green",
+          "votes": 2618
+        }
+      ],
+      "rejectedBallots": 64,
+      "registeredVoters": 39177,
+      "turnout": 51.36
+    },
+    "Vancouver-West End": {
+      "validVotes": 20857,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=16",
+      "votes": [
+        {
+          "name": "Spencer Chandra Herbert",
+          "party": "ndp",
+          "votes": 13143
+        },
+        {
+          "name": "Jon Ellacott",
+          "party": "con",
+          "votes": 5677
+        },
+        {
+          "name": "Eoin O'Dwyer",
+          "party": "green",
+          "votes": 1893
+        },
+        {
+          "name": "Carl Turnbull",
+          "party": "independent",
+          "votes": 144
+        }
+      ],
+      "rejectedBallots": 37,
+      "registeredVoters": 39011,
+      "turnout": 53.56
+    },
+    "Vancouver-Yaletown": {
+      "validVotes": 18123,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=16",
+      "votes": [
+        {
+          "name": "Melissa De Genova",
+          "party": "con",
+          "votes": 7857
+        },
+        {
+          "name": "Dana-Lyn Mackenzie",
+          "party": "green",
+          "votes": 1248
+        },
+        {
+          "name": "Terry Yung",
+          "party": "ndp",
+          "votes": 9018
+        }
+      ],
+      "rejectedBallots": 32,
+      "registeredVoters": 36210,
+      "turnout": 50.14
+    },
+    "Vernon-Lumby": {
+      "validVotes": 27729,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=16",
+      "votes": [
+        {
+          "name": "Kevin Acton",
+          "party": "unaffiliated",
+          "votes": 4266
+        },
+        {
+          "name": "Dennis Giesbrecht",
+          "party": "con",
+          "votes": 11361
+        },
+        {
+          "name": "Robert Johnson",
+          "party": "libertarian",
+          "votes": 265
+        },
+        {
+          "name": "Harwinder Sandhu",
+          "party": "ndp",
+          "votes": 11837
+        }
+      ],
+      "rejectedBallots": 56,
+      "registeredVoters": 45810,
+      "turnout": 60.65
+    },
+    "Victoria-Beacon Hill": {
+      "validVotes": 28792,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=16",
+      "votes": [
+        {
+          "name": "Sonia Furstenau",
+          "party": "green",
+          "votes": 9644
+        },
+        {
+          "name": "Grace Lore",
+          "party": "ndp",
+          "votes": 13634
+        },
+        {
+          "name": "Tim Thielmann",
+          "party": "con",
+          "votes": 5514
+        }
+      ],
+      "rejectedBallots": 54,
+      "registeredVoters": 43860,
+      "turnout": 65.77
+    },
+    "Victoria-Swan Lake": {
+      "validVotes": 25474,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=17",
+      "votes": [
+        {
+          "name": "Robert Crooks",
+          "party": "communist",
+          "votes": 156
+        },
+        {
+          "name": "Nina Krieger",
+          "party": "ndp",
+          "votes": 14273
+        },
+        {
+          "name": "Tim Taylor",
+          "party": "con",
+          "votes": 5146
+        },
+        {
+          "name": "Christina Winter",
+          "party": "green",
+          "votes": 5899
+        }
+      ],
+      "rejectedBallots": 51,
+      "registeredVoters": 40752,
+      "turnout": 62.63
+    },
+    "West Kelowna-Peachland": {
+      "validVotes": 26499,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=17",
+      "votes": [
+        {
+          "name": "Stephen Johnston",
+          "party": "unaffiliated",
+          "votes": 5630
+        },
+        {
+          "name": "Macklin McCall",
+          "party": "con",
+          "votes": 13475
+        },
+        {
+          "name": "Krystal Smith",
+          "party": "ndp",
+          "votes": 7394
+        }
+      ],
+      "rejectedBallots": 34,
+      "registeredVoters": 45467,
+      "turnout": 58.36
+    },
+    "West Vancouver-Capilano": {
+      "validVotes": 25816,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=17",
+      "votes": [
+        {
+          "name": "Lynne Block",
+          "party": "con",
+          "votes": 12049
+        },
+        {
+          "name": "Sara Eftekhar",
+          "party": "ndp",
+          "votes": 7006
+        },
+        {
+          "name": "Archie Kaario",
+          "party": "green",
+          "votes": 1435
+        },
+        {
+          "name": "Karin Kirkpatrick",
+          "party": "independent",
+          "votes": 5326
+        }
+      ],
+      "rejectedBallots": 42,
+      "registeredVoters": 44114,
+      "turnout": 58.62
+    },
+    "West Vancouver-Sea to Sky": {
+      "validVotes": 27413,
+      "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf#page=17",
+      "votes": [
+        {
+          "name": "Jen Ford",
+          "party": "ndp",
+          "votes": 7213
+        },
+        {
+          "name": "Yuri Fulmer",
+          "party": "con",
+          "votes": 9762
+        },
+        {
+          "name": "Jeremy Valeriote",
+          "party": "green",
+          "votes": 10438
+        }
+      ],
+      "rejectedBallots": 40,
+      "registeredVoters": 44308,
+      "turnout": 61.96
+    }
+  },
+  "resultsCoverage2024": {
+    "complete": true,
+    "districts": 93,
+    "candidates": 322,
+    "source": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf",
+    "checkedAt": "2026-09-26T06:30:21.633Z",
+    "candidateSummaryPdfPages": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "districtSummaryPdfPages": [
+      18,
+      19,
+      20
+    ]
   }
 }

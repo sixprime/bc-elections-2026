@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "collectedAt": "2026-09-25T22:14:10.918Z",
+  "collectedAt": "2026-09-26T06:46:50.992962Z",
   "officialCandidateSource": "https://elections.bc.ca/2026-provincial-election/candidate-list/",
   "scope": "Officially accepted nominations plus candidate announcements on verified party directories; not a complete final ballot.",
   "parties": [
@@ -39,7 +39,9 @@
       "website": "https://1bc.ca/",
       "websiteSource": "https://1bc.ca/",
       "websiteChecked": "2026-09-25",
-      "assetIds": ["one-official-logo"]
+      "assetIds": [
+        "one-official-logo"
+      ]
     },
     {
       "id": "centre",
@@ -105,7 +107,9 @@
       "website": "http://canwestparty.ca/",
       "websiteSource": "http://canwestparty.ca/",
       "websiteChecked": "2026-09-25",
-      "assetIds": ["canwest-official-logo"]
+      "assetIds": [
+        "canwest-official-logo"
+      ]
     },
     {
       "id": "vision",
@@ -124,13 +128,144 @@
   ],
   "candidates": [
     {
+      "id": "ndp-bowinn-ma",
+      "partyId": "ndp",
+      "name": "Bowinn Ma",
+      "district": "North Vancouver-Lonsdale",
+      "districtSlug": "north-vancouver-lonsdale",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/bowinnma_nvl_websiteheadshot-1000x1000px_0.jpg",
+      "profileUrl": "https://www.bcndp.ca/team",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "assetIds": [
+        "ndp-ndp-bowinn-ma-e52d5ffbed"
+      ]
+    },
+    {
+      "id": "ndp-richard-zussman",
+      "partyId": "ndp",
+      "name": "Richard Zussman",
+      "district": "Saanich South",
+      "districtSlug": "saanich-south",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/richardzussman_clr_website_images_headshot-1000x1000px.png",
+      "profileUrl": "https://richardzussman.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "assetIds": [
+        "ndp-ndp-richard-zussman-d0265d5386"
+      ]
+    },
+    {
+      "id": "con-megan-knight",
+      "partyId": "con",
+      "name": "Megan Knight",
+      "district": "Surrey South",
+      "districtSlug": "surrey-south",
+      "imageUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/KNIGHT-1024x1024.jpg",
+      "profileUrl": "https://conservativebc.ca/candidate/megan-knight/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "assetIds": [
+        "con-con-megan-knight-b2a31ad785"
+      ]
+    },
+    {
+      "id": "centre-dan-wood",
+      "partyId": "centre",
+      "name": "Dan Wood",
+      "district": "West Vancouver-Sea to Sky",
+      "districtSlug": "west-vancouver-sea-to-sky",
+      "imageUrl": "https://www.centrebc.ca/wp-content/uploads/2026/06/Daniel-Wood-300x300.jpg",
+      "profileUrl": "https://www.centrebc.ca/candidates/dan-wood/",
+      "sourcePage": "https://www.centrebc.ca/our-team/",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
+      "status": "party-announced",
+      "statusSource": "https://www.centrebc.ca/our-team/",
+      "assetIds": [
+        "centre-centre-dan-wood-0cdaf420d7"
+      ]
+    },
+    {
+      "id": "one-dallas-brodie",
+      "partyId": "one",
+      "name": "Dallas Brodie",
+      "district": "Vancouver-Quilchena",
+      "districtSlug": "vancouver-quilchena",
+      "imageUrl": "https://framerusercontent.com/images/0cNkBZJDesyb5CsTXADHW1vtoyo.jpg?width=1024&height=858",
+      "profileUrl": "https://1bc.ca/candidates/dbrodie",
+      "sourcePage": "https://1bc.ca/candidates",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
+      "status": "party-announced",
+      "statusSource": "https://1bc.ca/candidates",
+      "assetIds": [
+        "one-one-dallas-brodie-38118004fc"
+      ]
+    },
+    {
+      "id": "one-brent-chapman",
+      "partyId": "one",
+      "name": "Brent Chapman",
+      "district": null,
+      "districtSlug": null,
+      "districtStatus": "unresolved",
+      "reportedDistrict": "South Surrey \u2013 White Rock",
+      "districtNote": "The party lists South Surrey - White Rock, which is not an official 2026 provincial district. No assignment to Surrey South or Surrey-White Rock has been inferred.",
+      "imageUrl": "https://framerusercontent.com/images/Af0FYNqVLYF9qFFNOVwRQLDX9A.png?width=1254&height=1254",
+      "profileUrl": "https://1bc.ca/candidates",
+      "sourcePage": "https://1bc.ca/candidates",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
+      "status": "party-announced",
+      "statusSource": "https://1bc.ca/candidates",
+      "assetIds": [
+        "one-one-brent-chapman-e9bd9f16e7"
+      ]
+    },
+    {
+      "id": "one-warren-hamm",
+      "partyId": "one",
+      "name": "Warren Hamm",
+      "district": "Penticton-Summerland",
+      "districtSlug": "penticton-summerland",
+      "imageUrl": "https://framerusercontent.com/images/5YTTh6EP5K7gaCStOZLTQfnzg.jpeg?width=1320&height=1970",
+      "profileUrl": "https://1bc.ca/candidates/whamm",
+      "sourcePage": "https://1bc.ca/candidates",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
+      "status": "party-announced",
+      "statusSource": "https://1bc.ca/candidates",
+      "assetIds": [
+        "one-one-warren-hamm-065796ab80"
+      ]
+    },
+    {
+      "id": "one-jim-mcmurtry",
+      "partyId": "one",
+      "name": "Jim McMurtry",
+      "district": "Delta South",
+      "districtSlug": "delta-south",
+      "imageUrl": "https://framerusercontent.com/images/fZIXM4GFDmDhysy56hoKbBVyNSI.jpg?width=6194&height=3127",
+      "profileUrl": "https://1bc.ca/candidates/jmcmurtry",
+      "sourcePage": "https://1bc.ca/candidates",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
+      "status": "party-announced",
+      "statusSource": "https://1bc.ca/candidates",
+      "assetIds": [
+        "one-one-jim-mcmurtry-cee83f7913"
+      ]
+    },
+    {
       "partyId": "con",
       "name": "Bruce Banman",
       "district": "Abbotsford South",
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/42ee74691aac0d373de356cdb97f69c41907d821-1.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/bruce-banman/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-bruce-banman",
       "districtSlug": "abbotsford-south",
       "status": "party-announced",
@@ -146,7 +281,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Korky-Neufeld.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/korky-neufeld/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-korky-neufeld",
       "districtSlug": "abbotsford-west",
       "status": "party-announced",
@@ -162,7 +297,7 @@
       "imageUrl": "https://www.centrebc.ca/wp-content/uploads/2026/09/Lakhwinder-Jhaj-headshot.jpg",
       "profileUrl": "https://www.centrebc.ca/candidates/lakhwinder-jhaj/",
       "sourcePage": "https://www.centrebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:53:56.377Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "centre-lakhwinder-jhaj",
       "districtSlug": "abbotsford-mission",
       "status": "party-announced",
@@ -178,7 +313,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Donegal-Wilson.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/donegal-wilson/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-donegal-wilson",
       "districtSlug": "boundary-similkameen",
       "status": "party-announced",
@@ -194,7 +329,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Sharon-Hartwell.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/sharon-hartwell/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-sharon-hartwell",
       "districtSlug": "bulkley-valley-stikine",
       "status": "party-announced",
@@ -210,7 +345,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Lorne-Doerkson.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/lorne-doerkson/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-lorne-doerkson",
       "districtSlug": "cariboo-chilcotin",
       "status": "party-announced",
@@ -226,7 +361,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Heather-Maahs.png",
       "profileUrl": "https://conservativebc.ca/candidate/heather-maahs/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-heather-maahs",
       "districtSlug": "chilliwack-north",
       "status": "party-announced",
@@ -237,12 +372,12 @@
     },
     {
       "partyId": "con",
-      "name": "Á’a:líya (A’aliya) Warbus",
+      "name": "\u00c1\u2019a:l\u00edya (A\u2019aliya) Warbus",
       "district": "Chilliwack-Cultus Lake",
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/WARBUS.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/aaliya-warbus/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-a-a-liya-a-aliya-warbus",
       "districtSlug": "chilliwack-cultus-lake",
       "status": "party-announced",
@@ -259,7 +394,7 @@
       "profileUrl": "https://kellipaddon.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-25T22:14:11.205Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
       "id": "ndp-kelli-paddon",
       "districtSlug": "chilliwack-cultus-lake",
@@ -276,7 +411,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Scott-McInnis.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/scott-mcinnis/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-scott-mcinnis",
       "districtSlug": "columbia-river-revelstoke",
       "status": "party-announced",
@@ -292,7 +427,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Brennan-Day.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/brennan-day/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-brennan-day",
       "districtSlug": "courtenay-comox",
       "status": "party-announced",
@@ -308,7 +443,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Ian-Paton.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/ian-paton/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-ian-paton",
       "districtSlug": "delta-south",
       "status": "party-announced",
@@ -324,7 +459,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Tony-Luck.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/tony-luck/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-tony-luck",
       "districtSlug": "fraser-nicola",
       "status": "party-announced",
@@ -340,7 +475,7 @@
       "imageUrl": "https://bcgreens.ca/wp-content/uploads/2026/09/David-Evans-BCGreens-Candidate2026.jpg",
       "profileUrl": "https://bcgreens.ca/candidates-2026/david-evans/",
       "sourcePage": "https://bcgreens.ca/candidates-2026/",
-      "checkedAt": "2026-09-25T21:50:06.175Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "green-david-evans",
       "districtSlug": "juan-de-fuca-malahat",
       "status": "party-announced",
@@ -356,7 +491,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Peter-Milobar.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/peter-milobar/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-peter-milobar",
       "districtSlug": "kamloops-centre",
       "status": "party-announced",
@@ -372,7 +507,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Ward-Stamer.png",
       "profileUrl": "https://conservativebc.ca/candidate/ward-stamer/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-ward-stamer",
       "districtSlug": "kamloops-north-thompson",
       "status": "party-announced",
@@ -388,7 +523,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Kristina-Loewen.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/kristina-loewen/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-kristina-loewen",
       "districtSlug": "kelowna-centre",
       "status": "party-announced",
@@ -404,7 +539,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/SINGH-1.png",
       "profileUrl": "https://conservativebc.ca/candidate/pavneet-singh/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-pavneet-singh",
       "districtSlug": "kelowna-lake-country-coldstream",
       "status": "party-announced",
@@ -420,7 +555,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Gavin-Dew.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/gavin-dew/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-gavin-dew",
       "districtSlug": "kelowna-mission",
       "status": "party-announced",
@@ -436,7 +571,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Pete-Davis-1.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/pete-davis/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-pete-davis",
       "districtSlug": "kootenay-rockies",
       "status": "party-announced",
@@ -453,7 +588,7 @@
       "profileUrl": "https://raviparmar.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-25T22:14:11.205Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
       "id": "ndp-ravi-parmar",
       "districtSlug": "langford-highlands",
@@ -470,7 +605,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/06/34362d0545d39018dd9c08752ab31b2facb7f4bd.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/harman-bhangu/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-harman-bhangu",
       "districtSlug": "langley-abbotsford",
       "status": "party-announced",
@@ -486,7 +621,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Misty-Van-Popta.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/misty-van-popta/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-misty-van-popta",
       "districtSlug": "langley-walnut-grove",
       "status": "party-announced",
@@ -502,7 +637,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Jody-Toor.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/jody-toor/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-jody-toor",
       "districtSlug": "langley-willowbrook",
       "status": "party-announced",
@@ -518,7 +653,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Lawrence-Mok.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/lawrence-mok/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-lawrence-mok",
       "districtSlug": "maple-ridge-east",
       "status": "party-announced",
@@ -534,7 +669,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Josh-Dahling.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/joshua-dahling/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-joshua-dahling",
       "districtSlug": "mid-island-pacific-rim",
       "status": "party-announced",
@@ -550,7 +685,7 @@
       "imageUrl": "https://bcgreens.ca/wp-content/uploads/2024/08/NMC-Maureen-Curran-400x400-1.jpeg",
       "profileUrl": "https://bcgreens.ca/candidates-2026/maureen-curran/",
       "sourcePage": "https://bcgreens.ca/candidates-2026/",
-      "checkedAt": "2026-09-25T21:50:06.175Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "green-maureen-curran",
       "districtSlug": "new-westminster-coquitlam",
       "status": "party-announced",
@@ -566,7 +701,7 @@
       "imageUrl": "https://bcgreens.ca/wp-content/uploads/2026/09/IMG_20260910_175824-2.jpg",
       "profileUrl": "https://bcgreens.ca/candidates-2026/francis-racy/",
       "sourcePage": "https://bcgreens.ca/candidates-2026/",
-      "checkedAt": "2026-09-25T21:50:06.175Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "green-francis-racy",
       "districtSlug": "north-coast-haida-gwaii",
       "status": "party-announced",
@@ -582,7 +717,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Anna-Kindy.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/anna-kindy/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-anna-kindy",
       "districtSlug": "north-island",
       "status": "party-announced",
@@ -598,7 +733,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Lynne-Block.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/lynne-block/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-lynne-block",
       "districtSlug": "north-vancouver-seymour",
       "status": "party-announced",
@@ -614,7 +749,7 @@
       "imageUrl": "https://www.centrebc.ca/wp-content/uploads/2026/09/Andrew-weaver-headshot.jpg",
       "profileUrl": "https://www.centrebc.ca/candidates/andrew-weaver/",
       "sourcePage": "https://www.centrebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:53:56.377Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "centre-andrew-weaver",
       "districtSlug": "oak-bay-gordon-head",
       "status": "party-announced",
@@ -630,7 +765,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Larry-Neufeld.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/larry-neufeld/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-larry-neufeld",
       "districtSlug": "peace-river-south",
       "status": "party-announced",
@@ -647,7 +782,7 @@
       "profileUrl": "https://mikefarnworth.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-25T22:14:11.205Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
       "id": "ndp-mike-farnworth",
       "districtSlug": "port-coquitlam",
@@ -665,7 +800,7 @@
       "profileUrl": "https://randeneneill.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-25T22:14:11.205Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
       "id": "ndp-randene-neill",
       "districtSlug": "powell-river-sunshine-coast",
@@ -682,7 +817,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Kiel-Giddens.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/kiel-giddens/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-kiel-giddens",
       "districtSlug": "prince-george-mackenzie",
       "status": "party-announced",
@@ -698,7 +833,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Sheldon-Clare.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/sheldon-clare/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-sheldon-clare",
       "districtSlug": "prince-george-north-cariboo",
       "status": "party-announced",
@@ -714,7 +849,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/06/eb2c05bcc590a2a1d168f88383751bc1fdc9b0eb.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/rosalyn-bird/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-rosalyn-bird",
       "districtSlug": "prince-george-valemount",
       "status": "party-announced",
@@ -730,7 +865,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Sacha-Peter.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/sacha-peter/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-sacha-peter",
       "districtSlug": "richmond-centre",
       "status": "party-announced",
@@ -746,7 +881,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Teresa-Wat.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/teresa-wat/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-teresa-wat",
       "districtSlug": "richmond-bridgeport",
       "status": "party-announced",
@@ -762,7 +897,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Steve-Kooner.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/steve-kooner/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-steve-kooner",
       "districtSlug": "richmond-queensborough",
       "status": "party-announced",
@@ -778,7 +913,7 @@
       "imageUrl": "https://bcgreens.ca/wp-content/uploads/2026/02/Emily-Portrait-grainy-film.jpg",
       "profileUrl": "https://bcgreens.ca/candidates-2026/emily-lowan-2/",
       "sourcePage": "https://bcgreens.ca/candidates-2026/",
-      "checkedAt": "2026-09-25T21:50:06.175Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "green-emily-lowan",
       "districtSlug": "saanich-north-and-the-islands",
       "status": "party-announced",
@@ -794,7 +929,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/David-Williams.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/david-williams/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-david-williams",
       "districtSlug": "salmon-arm-shuswap",
       "status": "party-announced",
@@ -805,12 +940,12 @@
     },
     {
       "partyId": "con",
-      "name": "Claire Rattée",
+      "name": "Claire Ratt\u00e9e",
       "district": "Skeena",
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Claire-Rattee-2.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/claire-rattee/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-claire-rattee",
       "districtSlug": "skeena",
       "status": "party-announced",
@@ -826,7 +961,7 @@
       "imageUrl": "https://bcgreens.ca/wp-content/uploads/2026/09/Nick-Gottlieb-BCGreens-Candidate2026.jpg",
       "profileUrl": "https://bcgreens.ca/candidates-2026/nick-gottlieb/",
       "sourcePage": "https://bcgreens.ca/candidates-2026/",
-      "checkedAt": "2026-09-25T21:50:06.175Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "green-nick-gottlieb",
       "districtSlug": "skeena",
       "status": "party-announced",
@@ -843,7 +978,7 @@
       "profileUrl": "https://sarahzimmerman.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-25T22:14:11.205Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
       "id": "ndp-sarah-zimmerman",
       "districtSlug": "skeena",
@@ -860,7 +995,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Mandeep-Dhaliwal.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/mandeep-dhaliwal/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-mandeep-dhaliwal",
       "districtSlug": "surrey-north",
       "status": "party-announced",
@@ -877,7 +1012,7 @@
       "profileUrl": "https://jagrupbrar.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-25T22:14:11.205Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
       "id": "ndp-jagrup-brar",
       "districtSlug": "surrey-fleetwood",
@@ -894,7 +1029,7 @@
       "imageUrl": "https://www.centrebc.ca/wp-content/uploads/2026/09/Brar-Headshot-1-1024x1024.jpeg",
       "profileUrl": "https://www.centrebc.ca/candidates/paul-brar/",
       "sourcePage": "https://www.centrebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:53:56.377Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "centre-paul-brar",
       "districtSlug": "surrey-fleetwood",
       "status": "party-announced",
@@ -911,7 +1046,7 @@
       "profileUrl": "https://jessiesunner.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-25T22:14:11.205Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
       "id": "ndp-jessie-sunner",
       "districtSlug": "surrey-newton",
@@ -928,7 +1063,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Bryan-Tepper.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/bryan-tepper/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-bryan-tepper",
       "districtSlug": "surrey-panorama",
       "status": "party-announced",
@@ -945,7 +1080,7 @@
       "profileUrl": "https://jinnysims.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-25T22:14:11.205Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
       "id": "ndp-jinny-sims",
       "districtSlug": "surrey-panorama",
@@ -962,7 +1097,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Trevor-Halford.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/trevor-halford/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-trevor-halford",
       "districtSlug": "surrey-white-rock",
       "status": "party-announced",
@@ -978,7 +1113,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Jamie-Stein.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/jaime-stein/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-jaime-stein",
       "districtSlug": "vancouver-langara",
       "status": "party-announced",
@@ -995,7 +1130,7 @@
       "profileUrl": "https://www.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-25T22:14:11.205Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
       "id": "ndp-david-eby",
       "districtSlug": "vancouver-point-grey",
@@ -1013,7 +1148,7 @@
       "profileUrl": "https://adriandix.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-25T22:14:11.205Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
       "id": "ndp-adrian-dix",
       "districtSlug": "vancouver-renfrew",
@@ -1034,7 +1169,7 @@
       "districtSlug": "vancouver-west-end",
       "status": "accepted",
       "statusSource": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.pdf",
-      "checkedAt": "2026-09-25T21:49:00.732Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "assetIds": [
         "ndp-ndp-spencer-chandra-herbert-4c78b57732"
       ],
@@ -1047,7 +1182,7 @@
       "imageUrl": "https://bcgreens.ca/wp-content/uploads/2026/09/Rajinder-Sahota-BCGreens-Candidate2026.jpg",
       "profileUrl": "https://bcgreens.ca/candidates-2026/rajinder-sahota/",
       "sourcePage": "https://bcgreens.ca/candidates-2026/",
-      "checkedAt": "2026-09-25T21:50:06.175Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "green-rajinder-sahota",
       "districtSlug": "victoria-beacon-hill",
       "status": "party-announced",
@@ -1064,7 +1199,7 @@
       "profileUrl": "https://ninakreiger.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-25T22:14:11.205Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
       "id": "ndp-nina-krieger",
       "districtSlug": "victoria-swan-lake",
@@ -1081,7 +1216,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Macklin-McCall.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/macklin-mccall/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-macklin-mccall",
       "districtSlug": "west-kelowna-peachland",
       "status": "party-announced",
@@ -1097,7 +1232,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/CAROLINE.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/caroline-elliott/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-caroline-elliott",
       "districtSlug": "west-vancouver-capilano",
       "status": "party-announced",
@@ -1113,7 +1248,7 @@
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/08/AYLA.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/ayla-dumais/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-25T21:50:06.056Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "con-ayla-dumais",
       "districtSlug": "west-vancouver-sea-to-sky",
       "status": "party-announced",
@@ -1129,7 +1264,7 @@
       "imageUrl": "https://bcgreens.ca/wp-content/uploads/2026/09/DSC08495-2-2.jpg",
       "profileUrl": "https://bcgreens.ca/candidates-2026/jeremy-valeriote-2/",
       "sourcePage": "https://bcgreens.ca/candidates-2026/",
-      "checkedAt": "2026-09-25T21:50:06.175Z",
+      "checkedAt": "2026-09-26T06:46:50.992962Z",
       "id": "green-jeremy-valeriote",
       "districtSlug": "west-vancouver-sea-to-sky",
       "status": "party-announced",
@@ -1150,9 +1285,26 @@
       "sourceType": "official-party-page",
       "downloadedAt": "2026-09-25",
       "credit": "OneBC. Original logo from the official party website; rights remain with its owner.",
-      "reuse": {"status": "permission-review", "publishApproved": false},
-      "original": {"path": "assets/originals/one/onebc-official-logo.png", "bytes": 6365, "sha256": "05d3712ceb306c8e12f673ff74d86a0db11d896e8fef57a847b51129916ae4df", "contentType": "image/png", "width": 1058, "height": 506},
-      "web": {"path": "assets/originals/one/onebc-official-logo.png", "bytes": 6365, "sha256": "05d3712ceb306c8e12f673ff74d86a0db11d896e8fef57a847b51129916ae4df", "width": 1058, "height": 506, "fit": "contain"}
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "original": {
+        "path": "assets/originals/one/onebc-official-logo.png",
+        "bytes": 6365,
+        "sha256": "05d3712ceb306c8e12f673ff74d86a0db11d896e8fef57a847b51129916ae4df",
+        "contentType": "image/png",
+        "width": 1058,
+        "height": 506
+      },
+      "web": {
+        "path": "assets/originals/one/onebc-official-logo.png",
+        "bytes": 6365,
+        "sha256": "05d3712ceb306c8e12f673ff74d86a0db11d896e8fef57a847b51129916ae4df",
+        "width": 1058,
+        "height": 506,
+        "fit": "contain"
+      }
     },
     {
       "id": "canwest-official-logo",
@@ -1165,9 +1317,26 @@
       "allowInsecureHttp": true,
       "downloadedAt": "2026-09-25",
       "credit": "CanWest Party. Original logo from its HTTP-only official website; transport and reuse need review.",
-      "reuse": {"status": "permission-review", "publishApproved": false},
-      "original": {"path": "assets/originals/canwest/canwest-official-logo.jpg", "bytes": 84958, "sha256": "2b310cb279ff9c616fbee041d88fa429483f8b613a3e7c64f9f1b1bd6361516b", "contentType": "image/jpeg", "width": 1000, "height": 115},
-      "web": {"path": "assets/originals/canwest/canwest-official-logo.jpg", "bytes": 84958, "sha256": "2b310cb279ff9c616fbee041d88fa429483f8b613a3e7c64f9f1b1bd6361516b", "width": 1000, "height": 115, "fit": "contain"}
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "original": {
+        "path": "assets/originals/canwest/canwest-official-logo.jpg",
+        "bytes": 84958,
+        "sha256": "2b310cb279ff9c616fbee041d88fa429483f8b613a3e7c64f9f1b1bd6361516b",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 115
+      },
+      "web": {
+        "path": "assets/originals/canwest/canwest-official-logo.jpg",
+        "bytes": 84958,
+        "sha256": "2b310cb279ff9c616fbee041d88fa429483f8b613a3e7c64f9f1b1bd6361516b",
+        "width": 1000,
+        "height": 115,
+        "fit": "contain"
+      }
     },
     {
       "kind": "party-logo",
@@ -2410,7 +2579,7 @@
       "candidateId": "con-a-a-liya-a-aliya-warbus",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
       "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/WARBUS.jpg",
-      "label": "Á’a:líya (A’aliya) Warbus",
+      "label": "\u00c1\u2019a:l\u00edya (A\u2019aliya) Warbus",
       "sourceType": "official-party-page",
       "id": "con-con-a-a-liya-a-aliya-warbus-8cbd807165",
       "downloadedAt": "2026-09-25T21:54:27.005Z",
@@ -3530,7 +3699,7 @@
       "candidateId": "con-claire-rattee",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
       "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Claire-Rattee-2.jpg",
-      "label": "Claire Rattée",
+      "label": "Claire Ratt\u00e9e",
       "sourceType": "official-party-page",
       "id": "con-con-claire-rattee-cac5397f70",
       "downloadedAt": "2026-09-25T21:54:27.005Z",
@@ -4163,6 +4332,1640 @@
         "sha256": "99dc4a3c4b8b50f1a4df2d960113861eaa9f9179e6c2c1dff2c970b656ef8125",
         "fit": "cover"
       }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "ndp",
+      "candidateId": "ndp-bowinn-ma",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/bowinnma_nvl_websiteheadshot-1000x1000px_0.jpg",
+      "label": "Bowinn Ma",
+      "sourceType": "official-party-page",
+      "id": "ndp-ndp-bowinn-ma-e52d5ffbed",
+      "downloadedAt": "2026-09-26T06:46:49.945380Z",
+      "original": {
+        "path": "assets/originals/ndp/ndp-ndp-bowinn-ma-e52d5ffbed.jpg",
+        "bytes": 253474,
+        "sha256": "fd37a45ccbfbb622153f040407b1decba0f10d05d21f54a07ab866637c099e31",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/ndp-ndp-bowinn-ma-e52d5ffbed.webp",
+        "bytes": 23774,
+        "sha256": "a303a7928955248f54ec522ccafe8c56b022deeb54bd59afd9747c315f93adb5",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "ndp",
+      "candidateId": "ndp-richard-zussman",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/richardzussman_clr_website_images_headshot-1000x1000px.png",
+      "label": "Richard Zussman",
+      "sourceType": "official-party-page",
+      "id": "ndp-ndp-richard-zussman-d0265d5386",
+      "downloadedAt": "2026-09-26T06:46:50.124499Z",
+      "original": {
+        "path": "assets/originals/ndp/ndp-ndp-richard-zussman-d0265d5386.png",
+        "bytes": 794567,
+        "sha256": "6b896c1051d8c79509912a1ff240d3ec9b2ff894ef4e669d608ac77ba2fe9aac",
+        "contentType": "image/png",
+        "width": 1000,
+        "height": 1000
+      },
+      "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/ndp-ndp-richard-zussman-d0265d5386.webp",
+        "bytes": 37102,
+        "sha256": "65e80b8e64dffc818e40f0d6cbf009e356ccbf339b85258d3243d2e03aa623e6",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-megan-knight",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/KNIGHT-1024x1024.jpg",
+      "label": "Megan Knight",
+      "sourceType": "official-party-page",
+      "id": "con-con-megan-knight-b2a31ad785",
+      "downloadedAt": "2026-09-26T06:46:50.276275Z",
+      "original": {
+        "path": "assets/originals/conservative/con-con-megan-knight-b2a31ad785.jpg",
+        "bytes": 128166,
+        "sha256": "6d2506d2525dacbeba550cfda019f85ad6bb273905eadf39f8bf7e72356e0568",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-con-megan-knight-b2a31ad785.webp",
+        "bytes": 31996,
+        "sha256": "1cf6c6b5024e55a86770e0d299593f3c4ba6a5b5106ffa3f47c9beaea15109ed",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "centre",
+      "candidateId": "centre-dan-wood",
+      "sourcePage": "https://www.centrebc.ca/our-team/",
+      "sourceUrl": "https://www.centrebc.ca/wp-content/uploads/2026/06/Daniel-Wood-300x300.jpg",
+      "label": "Dan Wood",
+      "sourceType": "official-party-page",
+      "id": "centre-centre-dan-wood-0cdaf420d7",
+      "downloadedAt": "2026-09-26T06:46:50.342860Z",
+      "original": {
+        "path": "assets/originals/centre/centre-centre-dan-wood-0cdaf420d7.webp",
+        "bytes": 6626,
+        "sha256": "126cffd098235a3f205ea9c9e4f30e596fd2cb33c8cb39e7f375f6fd6e820cde",
+        "contentType": "image/webp",
+        "width": 300,
+        "height": 300
+      },
+      "credit": "Source: https://www.centrebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/centre-centre-dan-wood-0cdaf420d7.webp",
+        "bytes": 6496,
+        "sha256": "c06ca42ae33bf195d392f22f6518e773ac1387c61c843ed790fd9c35d8b95a86",
+        "width": 300,
+        "height": 300,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "one",
+      "candidateId": "one-dallas-brodie",
+      "sourcePage": "https://1bc.ca/candidates",
+      "sourceUrl": "https://framerusercontent.com/images/0cNkBZJDesyb5CsTXADHW1vtoyo.jpg?width=1024&height=858",
+      "label": "Dallas Brodie",
+      "sourceType": "official-party-page",
+      "id": "one-one-dallas-brodie-38118004fc",
+      "downloadedAt": "2026-09-26T06:46:50.454155Z",
+      "original": {
+        "path": "assets/originals/one/one-one-dallas-brodie-38118004fc.jpg",
+        "bytes": 67664,
+        "sha256": "857615148c826ace31d78574713097d42a32ccc9273e62dac3452e3e94ae87fc",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 858
+      },
+      "credit": "Source: https://1bc.ca/candidates; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/one-one-dallas-brodie-38118004fc.webp",
+        "bytes": 11068,
+        "sha256": "6f6d20bd44140c7c46cb4675d3c51ae7af82fe6403225b50ef3a7b0528bdf0ff",
+        "width": 640,
+        "height": 536,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "one",
+      "candidateId": "one-brent-chapman",
+      "sourcePage": "https://1bc.ca/candidates",
+      "sourceUrl": "https://framerusercontent.com/images/Af0FYNqVLYF9qFFNOVwRQLDX9A.png?width=1254&height=1254",
+      "label": "Brent Chapman",
+      "sourceType": "official-party-page",
+      "id": "one-one-brent-chapman-e9bd9f16e7",
+      "downloadedAt": "2026-09-26T06:46:50.581158Z",
+      "original": {
+        "path": "assets/originals/one/one-one-brent-chapman-e9bd9f16e7.png",
+        "bytes": 414371,
+        "sha256": "eda10560bbd5f99bf12003737c92f008795814d8c5ac31ece3bfa48f5061cd7d",
+        "contentType": "image/png",
+        "width": 1254,
+        "height": 1254
+      },
+      "credit": "Source: https://1bc.ca/candidates; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/one-one-brent-chapman-e9bd9f16e7.webp",
+        "bytes": 17782,
+        "sha256": "e252f7f4904d36b8ed3041421e4410ed23078499f716fd2c93be1f8abc9e0c55",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "one",
+      "candidateId": "one-warren-hamm",
+      "sourcePage": "https://1bc.ca/candidates",
+      "sourceUrl": "https://framerusercontent.com/images/5YTTh6EP5K7gaCStOZLTQfnzg.jpeg?width=1320&height=1970",
+      "label": "Warren Hamm",
+      "sourceType": "official-party-page",
+      "id": "one-one-warren-hamm-065796ab80",
+      "downloadedAt": "2026-09-26T06:46:50.721272Z",
+      "original": {
+        "path": "assets/originals/one/one-one-warren-hamm-065796ab80.jpg",
+        "bytes": 402735,
+        "sha256": "19f661f7045f527237069c3778d7b1930a2c4abaf8c95cf844a2ff033ff8b4e0",
+        "contentType": "image/jpeg",
+        "width": 1320,
+        "height": 1970
+      },
+      "credit": "Source: https://1bc.ca/candidates; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/one-one-warren-hamm-065796ab80.webp",
+        "bytes": 13696,
+        "sha256": "7162fa6356f55f1f88bb78d7e017793b7fe59dd177627d7f92ff3fe7841ce87d",
+        "width": 429,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "one",
+      "candidateId": "one-jim-mcmurtry",
+      "sourcePage": "https://1bc.ca/candidates",
+      "sourceUrl": "https://framerusercontent.com/images/fZIXM4GFDmDhysy56hoKbBVyNSI.jpg?width=6194&height=3127",
+      "label": "Jim McMurtry",
+      "sourceType": "official-party-page",
+      "id": "one-one-jim-mcmurtry-cee83f7913",
+      "downloadedAt": "2026-09-26T06:46:50.991897Z",
+      "original": {
+        "path": "assets/originals/one/one-one-jim-mcmurtry-cee83f7913.png",
+        "bytes": 6691262,
+        "sha256": "2f4267ed34bd637a7a9179facc25f5bd462ac93851c1655a87738e02951b5c8d",
+        "contentType": "image/png",
+        "width": 6194,
+        "height": 3127
+      },
+      "credit": "Source: https://1bc.ca/candidates; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/one-one-jim-mcmurtry-cee83f7913.webp",
+        "bytes": 15966,
+        "sha256": "4b34df18753fc3b7a7f64fe381b7978989de6006fec2d8461a4792ba46279224",
+        "width": 640,
+        "height": 323,
+        "fit": "cover"
+      }
+    },
+    {
+      "id": "mla-662-portrait-c439e95c61",
+      "kind": "portrait",
+      "memberId": "mla-662",
+      "partyId": "ndp",
+      "label": "Brittny Anderson",
+      "sourcePage": "https://brittnyanderson.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/brittnyanderson_koc_websiteheadshot-1000x1000px.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:50.396818Z",
+      "original": {
+        "path": "assets/originals/members/mla-662-portrait-c439e95c61.jpg",
+        "bytes": 208196,
+        "sha256": "4953049f9ed452e72864645a76ec61d56b3a553af34848999362e0ea4ef05920",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-662-portrait-c439e95c61.webp",
+        "bytes": 20402,
+        "sha256": "efc23cb012dd38e09bddb7f72b21e625ca51ec7d3a2425e82523239307cac3cb",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://brittnyanderson.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-667-portrait-9c593d014e",
+      "kind": "portrait",
+      "memberId": "mla-667",
+      "partyId": "ndp",
+      "label": "Anne Kang",
+      "sourcePage": "https://annekang.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/annekang_bnc_web_headshot-1000x1000px_final.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:50.595345Z",
+      "original": {
+        "path": "assets/originals/members/mla-667-portrait-9c593d014e.jpg",
+        "bytes": 339389,
+        "sha256": "bcda199dd5e0f7e252e87c9b2141ee7cd2e1a0e7735deeb5c10b59b14b8b0cb8",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-667-portrait-9c593d014e.webp",
+        "bytes": 19912,
+        "sha256": "fc6606b3cf2803e05ed95d1dfa2b267a4e0896adc08eb7449d32eeebe8a8e641",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://annekang.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-668-portrait-b30bedff7d",
+      "kind": "portrait",
+      "memberId": "mla-668",
+      "partyId": "ndp",
+      "label": "Rohini Arora",
+      "sourcePage": "https://rohiniarora.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/reaharora_bne_website_images_headshot-1000x1000px.png",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:50.853136Z",
+      "original": {
+        "path": "assets/originals/members/mla-668-portrait-b30bedff7d.png",
+        "bytes": 730059,
+        "sha256": "dd988e5ea962605e0c5f5880182417c570da6ae0d0db18ce1bfab4cf6a071dfe",
+        "contentType": "image/png",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-668-portrait-b30bedff7d.webp",
+        "bytes": 22442,
+        "sha256": "2ed3fa334a71f99e0baf75ef967e8aea60757a258a424e9324f2529412ad0d24",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://rohiniarora.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-669-portrait-6668eaa4b4",
+      "kind": "portrait",
+      "memberId": "mla-669",
+      "partyId": "ndp",
+      "label": "Raj Chouhan",
+      "sourcePage": "https://rajchouhan.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/rajchouhan_bnn_websiteheadshot-1000x1000px.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:50.995371Z",
+      "original": {
+        "path": "assets/originals/members/mla-669-portrait-6668eaa4b4.jpg",
+        "bytes": 169463,
+        "sha256": "53db578cb096321f5d548b9cc994fafc2fe32c3b5096e66408d76dcfad5ff286",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-669-portrait-6668eaa4b4.webp",
+        "bytes": 17022,
+        "sha256": "d342a2eb94fa682a8870355f43ffa4bb63e0cb130a53950f3471ea9e15bb60a2",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://rajchouhan.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-670-portrait-5d49fa32c5",
+      "kind": "portrait",
+      "memberId": "mla-670",
+      "partyId": "ndp",
+      "label": "Janet Routledge",
+      "sourcePage": "https://janetroutledge.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/janetroutledge_bno_website_headshot-1000x1000px.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:51.134439Z",
+      "original": {
+        "path": "assets/originals/members/mla-670-portrait-5d49fa32c5.jpg",
+        "bytes": 185924,
+        "sha256": "7918b6d4605df209f9b441e6e61810451041d27d03babad57411a0c6b5ad36d9",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-670-portrait-5d49fa32c5.webp",
+        "bytes": 14584,
+        "sha256": "572ffd1932b0caf4f9c7f34a7ec630ecd8778bb575ad84a35d35773535e87590",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://janetroutledge.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-671-portrait-9af799da5e",
+      "kind": "portrait",
+      "memberId": "mla-671",
+      "partyId": "ndp",
+      "label": "Paul Choi",
+      "sourcePage": "https://paulchoi.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/paulchoi_bnsheadshot-1000x1000px.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:51.297538Z",
+      "original": {
+        "path": "assets/originals/members/mla-671-portrait-9af799da5e.jpg",
+        "bytes": 277741,
+        "sha256": "49f57771b92990749680db333284a90d6a602368f3d1ac36bafa6df3ebb3f3ef",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-671-portrait-9af799da5e.webp",
+        "bytes": 28152,
+        "sha256": "97e3313401968873d0521631c6d61067e09c043532fca5f8e524bf8c39dae2c9",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://paulchoi.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-677-portrait-2c0aad854f",
+      "kind": "portrait",
+      "memberId": "mla-677",
+      "partyId": "ndp",
+      "label": "Jennifer Blatherwick",
+      "sourcePage": "https://jenniferblatherwick.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/jenniferblatherwick_cqm_websiteheadshot-1000x1000px.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:51.451492Z",
+      "original": {
+        "path": "assets/originals/members/mla-677-portrait-2c0aad854f.jpg",
+        "bytes": 244778,
+        "sha256": "96179230fa7b1a74e059076f6cc588b44563d2dd00ab4092c5e57d3fa82540d9",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-677-portrait-2c0aad854f.webp",
+        "bytes": 27934,
+        "sha256": "bfe79e344a7013f8d7d249b46dc613ddbb66a33d9e6b6b09dbb0aa8c21aac7f2",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://jenniferblatherwick.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-679-portrait-7514832852",
+      "kind": "portrait",
+      "memberId": "mla-679",
+      "partyId": "ndp",
+      "label": "Qwulti'stunaat - Debra Toporowski",
+      "sourcePage": "https://debratoporowski.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/debratoporowski_cwvheadshot-1000x1000px.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:51.579933Z",
+      "original": {
+        "path": "assets/originals/members/mla-679-portrait-7514832852.jpg",
+        "bytes": 235622,
+        "sha256": "a8febd17a62914538013d9fc5f50a74ab1dc3e0479c2d6a0034e8e932b38bbbc",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-679-portrait-7514832852.webp",
+        "bytes": 24270,
+        "sha256": "d6416b06c3389f965f64d0cec0d0e707a7cb9d8c1b1fabf547cc169c458eaaed",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://debratoporowski.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-680-portrait-4d397cf2dc",
+      "kind": "portrait",
+      "memberId": "mla-680",
+      "partyId": "ndp",
+      "label": "Ravi Kahlon",
+      "sourcePage": "https://bcndpcaucus.ca/mla/ravi-kahlon/",
+      "sourceUrl": "https://bcndpcaucus.ca/wp-content/uploads/sites/5/2017/06/ravi_kahlon__MLA.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:53.369677Z",
+      "original": {
+        "path": "assets/originals/members/mla-680-portrait-4d397cf2dc.jpg",
+        "bytes": 37346,
+        "sha256": "8b0d0828d3eab4439eecb4e4f19d7361a29d8d26f47d038a6bbbb6e545829812",
+        "contentType": "image/jpeg",
+        "width": 400,
+        "height": 400
+      },
+      "web": {
+        "path": "assets/web/mla-680-portrait-4d397cf2dc.webp",
+        "bytes": 9264,
+        "sha256": "2b6d30c24c5409e2f46b93fd2e4b3edfaff367859ebd63b7c74a72ccb2b2870d",
+        "width": 400,
+        "height": 400,
+        "fit": "cover"
+      },
+      "credit": "Source: https://bcndpcaucus.ca/mla/ravi-kahlon/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-682-portrait-8e978d8e0a",
+      "kind": "portrait",
+      "memberId": "mla-682",
+      "partyId": "ndp",
+      "label": "Darlene Rotchford",
+      "sourcePage": "https://darlenerotchford.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/darlene_rotchford_esc_website_images-headshot-1000x1000px-80.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:53.503475Z",
+      "original": {
+        "path": "assets/originals/members/mla-682-portrait-8e978d8e0a.jpg",
+        "bytes": 260706,
+        "sha256": "2b6f3c65ed5d008318dba8d440f41ce9859703bf2d96329675947a34249e534c",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-682-portrait-8e978d8e0a.webp",
+        "bytes": 26134,
+        "sha256": "6def399b34cd5ff11a040d8d04c1165b6cce6029bbb36f14fd8cc46323294c12",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://darlenerotchford.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-684-portrait-2e429d10bb",
+      "kind": "portrait",
+      "memberId": "mla-684",
+      "partyId": "ndp",
+      "label": "Dana Lajeunesse",
+      "sourcePage": "https://danalajeunesse.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/dana_lajeunesse_jfm_headshot-1000x1000px-80.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:53.710251Z",
+      "original": {
+        "path": "assets/originals/members/mla-684-portrait-2e429d10bb.jpg",
+        "bytes": 299259,
+        "sha256": "ff21eb84bd3c92570c5184c4723cdb6049d184620a691daa918732b12867fa9d",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-684-portrait-2e429d10bb.webp",
+        "bytes": 19198,
+        "sha256": "5ff634849ba05921d9ea7730b6ae2eed9389e8257b9c1a933f30a8f66b356109",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://danalajeunesse.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-689-portrait-3a8116fab4",
+      "kind": "portrait",
+      "memberId": "mla-689",
+      "partyId": "ndp",
+      "label": "Steve Morissette",
+      "sourcePage": "https://stevemorissette.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/steve-morissette-kom_website-images-headshot-1000x1000px.png",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:56.126451Z",
+      "original": {
+        "path": "assets/originals/members/mla-689-portrait-3a8116fab4.png",
+        "bytes": 789532,
+        "sha256": "c2fe9640662665cb982f23c5484020d51f7e3a77a451d9d51ba6b708f942da84",
+        "contentType": "image/png",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-689-portrait-3a8116fab4.webp",
+        "bytes": 28316,
+        "sha256": "29a330e302a24597a06049d4c4b225f83b5f68510c4498ccccb243a09a6f9a8a",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://stevemorissette.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-691-portrait-4d21515134",
+      "kind": "portrait",
+      "memberId": "mla-691",
+      "partyId": "ndp",
+      "label": "Stephanie Higginson",
+      "sourcePage": "https://stephaniehigginson.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/stephaniehigginson_lao_crc_website_headshot-1000x1000px.png",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:56.503684Z",
+      "original": {
+        "path": "assets/originals/members/mla-691-portrait-4d21515134.png",
+        "bytes": 981963,
+        "sha256": "098a17867f81122f5e7661e7cd01fd6a3d0d20d9259d3e6d22d2c517b1d3f206",
+        "contentType": "image/png",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-691-portrait-4d21515134.webp",
+        "bytes": 26000,
+        "sha256": "88127bce408507c03487ef3bdab7db9e4e53664816d2d6137298fdbdf8ede4e3",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://stephaniehigginson.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-697-portrait-2d8b9155f8",
+      "kind": "portrait",
+      "memberId": "mla-697",
+      "partyId": "ndp",
+      "label": "Lisa Beare",
+      "sourcePage": "https://lisabeare.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/lisabeare_map_headshot-1000x1000px.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:56.673157Z",
+      "original": {
+        "path": "assets/originals/members/mla-697-portrait-2d8b9155f8.jpg",
+        "bytes": 230858,
+        "sha256": "1c389a259d198208fc3bf283d7f81bb163fd7a9e0373e48a9cf4ee602c67d7eb",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-697-portrait-2d8b9155f8.webp",
+        "bytes": 19760,
+        "sha256": "a08d6176cd9576b12dc44450eddcd31dd34be771b65b3969484deb2ce2edf6a4",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://lisabeare.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-698-portrait-c3b21582c3",
+      "kind": "portrait",
+      "memberId": "mla-698",
+      "partyId": "ndp",
+      "label": "Josie Osborne",
+      "sourcePage": "https://bcndpcaucus.ca/mla/josie-osborne/",
+      "sourceUrl": "https://bcndpcaucus.ca/wp-content/uploads/sites/5/2014/02/2-Josie_Osborne_large_1-copy-2.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:57.442913Z",
+      "original": {
+        "path": "assets/originals/members/mla-698-portrait-c3b21582c3.jpg",
+        "bytes": 40654,
+        "sha256": "b40105e38575d03d65bd41b1cb822c400781079fe76666e7e9240305e40034af",
+        "contentType": "image/jpeg",
+        "width": 400,
+        "height": 400
+      },
+      "web": {
+        "path": "assets/web/mla-698-portrait-c3b21582c3.webp",
+        "bytes": 11768,
+        "sha256": "42b17542d7d809854d2f18d0bb6fb2941b8dff2c9225b650def2e21b5553cd51",
+        "width": 400,
+        "height": 400,
+        "fit": "cover"
+      },
+      "credit": "Source: https://bcndpcaucus.ca/mla/josie-osborne/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-699-portrait-47754897ee",
+      "kind": "portrait",
+      "memberId": "mla-699",
+      "partyId": "ndp",
+      "label": "Sheila Malcolmson",
+      "sourcePage": "https://sheilamalcolmson.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/sheila_malcolmson_-_nai_headshot-1000x1000px-80.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:57.620043Z",
+      "original": {
+        "path": "assets/originals/members/mla-699-portrait-47754897ee.jpg",
+        "bytes": 267932,
+        "sha256": "d179cab1c90724e3d729ec05a064db57f50e813414d328fe9ea40c884a21d38d",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-699-portrait-47754897ee.webp",
+        "bytes": 26756,
+        "sha256": "f38305c475986f001fdc04f2330e79a13b0bc3b3dce3a3058f5bd2c25a82eee8",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://sheilamalcolmson.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-700-portrait-cb1b5df59e",
+      "kind": "portrait",
+      "memberId": "mla-700",
+      "partyId": "ndp",
+      "label": "George Anderson",
+      "sourcePage": "https://georgeanderson.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/george-anderson-nalwebsite-images-headshot-1000x1000px-80.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:57.776446Z",
+      "original": {
+        "path": "assets/originals/members/mla-700-portrait-cb1b5df59e.jpg",
+        "bytes": 215876,
+        "sha256": "86a4650127ac082791d285cb637867993a8ea388a18bd3afb8f4d22405fc6f38",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-700-portrait-cb1b5df59e.webp",
+        "bytes": 15430,
+        "sha256": "705b529b9d4a4af500163a5bbef07b83d45d7b99dda63b178785bc3dc19c5292",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://georgeanderson.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-702-portrait-70ac072107",
+      "kind": "portrait",
+      "memberId": "mla-702",
+      "partyId": "ndp",
+      "label": "Jennifer Whiteside",
+      "sourcePage": "https://jenniferwhiteside.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/jenniferwhiteside_nwc_website_headshot-1000x1000px.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:57.938056Z",
+      "original": {
+        "path": "assets/originals/members/mla-702-portrait-70ac072107.jpg",
+        "bytes": 247865,
+        "sha256": "56208b203bfff84d27428bc22f2e20f04b19e47a1afbc003faabb43ffb063010",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-702-portrait-70ac072107.webp",
+        "bytes": 25766,
+        "sha256": "739b88e6c7329ad27f133dd3b5e9582a2f3bf404d5ef54653cba58e641dd4e17",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://jenniferwhiteside.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-703-portrait-48ed2e7c7d",
+      "kind": "portrait",
+      "memberId": "mla-703",
+      "partyId": "ndp",
+      "label": "Laanas - Tamara Davidson",
+      "sourcePage": "https://tamaradavidson.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/tamara_davidson_-_noh-headshot-1000x1000px-80.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:58.226299Z",
+      "original": {
+        "path": "assets/originals/members/mla-703-portrait-48ed2e7c7d.jpg",
+        "bytes": 321252,
+        "sha256": "69a1b12d1c00ddb2951a1c8612afe89fb46e2088a85e40f25445209b75d4eed7",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-703-portrait-48ed2e7c7d.webp",
+        "bytes": 37266,
+        "sha256": "be18e8b596fde2105ea3e7114bad6beda6ed007a6bfbf5783fbd1b8c4d6fbd1f",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://tamaradavidson.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-706-portrait-8415dcdaa5",
+      "kind": "portrait",
+      "memberId": "mla-706",
+      "partyId": "ndp",
+      "label": "Susie Chant",
+      "sourcePage": "https://susiechant.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/susiechant_nvs_websiteheadshot-1000x1000px.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:58.404131Z",
+      "original": {
+        "path": "assets/originals/members/mla-706-portrait-8415dcdaa5.jpg",
+        "bytes": 247275,
+        "sha256": "6ac4263953a94f070ce74fdf26b8284dcd0a64d174bebaad377413038dd047f7",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-706-portrait-8415dcdaa5.webp",
+        "bytes": 22998,
+        "sha256": "e6c38eb89e457ec2588644bd9e6d3aaa540e3c8094ebd10934bf7a8e0e0d7212",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://susiechant.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-707-portrait-a43a154653",
+      "kind": "portrait",
+      "memberId": "mla-707",
+      "partyId": "ndp",
+      "label": "Diana Gibson",
+      "sourcePage": "https://dianagibson.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/dianagibson_obd_headshot-1000x1000px.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:58.613074Z",
+      "original": {
+        "path": "assets/originals/members/mla-707-portrait-a43a154653.jpg",
+        "bytes": 241954,
+        "sha256": "4559e191324cb56b5b0e680ad5e9459a07615ef858a06e18c953749c97c5c26c",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-707-portrait-a43a154653.webp",
+        "bytes": 22154,
+        "sha256": "4cb41acd45d1928afed7ba4f0c9bee9a411071d6087113884e5e649efebe432c",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://dianagibson.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-714-portrait-85d8b8495f",
+      "kind": "portrait",
+      "memberId": "mla-714",
+      "partyId": "ndp",
+      "label": "Rick Glumac",
+      "sourcePage": "https://rickglumac.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/rickglumac_pom_website_headshot-1000x1000px_1.png",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:58.893987Z",
+      "original": {
+        "path": "assets/originals/members/mla-714-portrait-85d8b8495f.png",
+        "bytes": 729111,
+        "sha256": "fd64373855808ed6ace53c944ec110aed5a58692a726106e6edb40c83a45b99f",
+        "contentType": "image/png",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-714-portrait-85d8b8495f.webp",
+        "bytes": 15340,
+        "sha256": "fa3d90f3da8386e706b3bf5605cb3e22bac2d1147f64079365925566764bd94e",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://rickglumac.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-721-portrait-958a014b58",
+      "kind": "portrait",
+      "memberId": "mla-721",
+      "partyId": "ndp",
+      "label": "Kelly Greene",
+      "sourcePage": "https://bcndpcaucus.ca/mla/kelly-greene/",
+      "sourceUrl": "https://bcndpcaucus.ca/wp-content/uploads/sites/5/2020/11/Kelly_Greene.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:03:59.648284Z",
+      "original": {
+        "path": "assets/originals/members/mla-721-portrait-958a014b58.jpg",
+        "bytes": 42205,
+        "sha256": "a196503d64a05e0e50dfbc80fa104d5bc28b4c54c1111aa3279085ee2a085312",
+        "contentType": "image/jpeg",
+        "width": 400,
+        "height": 400
+      },
+      "web": {
+        "path": "assets/web/mla-721-portrait-958a014b58.webp",
+        "bytes": 11964,
+        "sha256": "050dfc09f69d8ae2b7140707c85445273b0a75614b06594bdf73c0381160cca3",
+        "width": 400,
+        "height": 400,
+        "fit": "cover"
+      },
+      "credit": "Source: https://bcndpcaucus.ca/mla/kelly-greene/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-724-portrait-2136dbf333",
+      "kind": "portrait",
+      "memberId": "mla-724",
+      "partyId": "ndp",
+      "label": "Lana Popham",
+      "sourcePage": "https://bcndpcaucus.ca/mla/lana-popham/",
+      "sourceUrl": "https://bcndpcaucus.ca/wp-content/uploads/sites/5/2014/02/2-Lana_Popham_large_1-copy-2.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:04:00.363597Z",
+      "original": {
+        "path": "assets/originals/members/mla-724-portrait-2136dbf333.jpg",
+        "bytes": 53749,
+        "sha256": "dfb7bd23d43c3da6a8a8c64b7070f50a676b599201a2254aa37bcf07cdd89e67",
+        "contentType": "image/jpeg",
+        "width": 400,
+        "height": 400
+      },
+      "web": {
+        "path": "assets/web/mla-724-portrait-2136dbf333.webp",
+        "bytes": 17088,
+        "sha256": "bdd9dd240c0f5831eb2bf71d9f6510645a319d41cc2752a67fb140fad6cddc6b",
+        "width": 400,
+        "height": 400,
+        "fit": "cover"
+      },
+      "credit": "Source: https://bcndpcaucus.ca/mla/lana-popham/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-727-portrait-0d2c3ff18d",
+      "kind": "portrait",
+      "memberId": "mla-727",
+      "partyId": "ndp",
+      "label": "Amna Shah",
+      "sourcePage": "https://amnashah.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/amna_shah_src_headshot-1000x1000px-80.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:04:00.669175Z",
+      "original": {
+        "path": "assets/originals/members/mla-727-portrait-0d2c3ff18d.jpg",
+        "bytes": 230665,
+        "sha256": "03ccffc54ce0d6e110558a9a8e7cc4aaf99c1e2455a0fbd33ba616fff1e753ac",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-727-portrait-0d2c3ff18d.webp",
+        "bytes": 22658,
+        "sha256": "506d3dcdd2aad064b0d3e7b50b400ed48785feb1019b6b8941b1831fecb3db3f",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://amnashah.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-735-portrait-2e1f25937b",
+      "kind": "portrait",
+      "memberId": "mla-735",
+      "partyId": "ndp",
+      "label": "George Chow",
+      "sourcePage": "https://georgechow.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/george_chow_vfv_headshot-1000x1000px-80.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:04:00.897615Z",
+      "original": {
+        "path": "assets/originals/members/mla-735-portrait-2e1f25937b.jpg",
+        "bytes": 411616,
+        "sha256": "145f7e6fd821abb6f5551a07f05d9bd63b36e85973ff09c862066201db7e0f47",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-735-portrait-2e1f25937b.webp",
+        "bytes": 31006,
+        "sha256": "b1e89c8fa50e1202f82417b01d5265e9ae7702905d18734932ace734f34c6693",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://georgechow.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-736-portrait-8b8420c5ca",
+      "kind": "portrait",
+      "memberId": "mla-736",
+      "partyId": "ndp",
+      "label": "Niki Sharma",
+      "sourcePage": "https://nikisharma.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/niki_sharma-vha_candidate_website_images-headshot-1000x1000px.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:04:01.077397Z",
+      "original": {
+        "path": "assets/originals/members/mla-736-portrait-8b8420c5ca.jpg",
+        "bytes": 190963,
+        "sha256": "3d41cf34ba769843c23af2ddc547050ca7df35d913558b1b8a5f9702d5b04712",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-736-portrait-8b8420c5ca.webp",
+        "bytes": 16368,
+        "sha256": "529edd04628d5bad4d5aad7d44d3e4803dfacffb40d8fc79dfca0291a78a98a1",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://nikisharma.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-737-portrait-245b6788e5",
+      "kind": "portrait",
+      "memberId": "mla-737",
+      "partyId": "ndp",
+      "label": "Mable Elmore",
+      "sourcePage": "https://mableelmore.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/mableelmore_vke_headshot-1000x1000px.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:04:01.244260Z",
+      "original": {
+        "path": "assets/originals/members/mla-737-portrait-245b6788e5.jpg",
+        "bytes": 229131,
+        "sha256": "ace9e509bb65f32925dfb737b88a3038e867b3e8879805427120ab51f553c47f",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-737-portrait-245b6788e5.webp",
+        "bytes": 23892,
+        "sha256": "7481140e077075b5fc27e2771163805a14715f6de1030e75c5db2fbf72300307",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://mableelmore.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-739-portrait-56c01f4269",
+      "kind": "portrait",
+      "memberId": "mla-739",
+      "partyId": "ndp",
+      "label": "Sunita Dhir",
+      "sourcePage": "https://sunitadhir.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/sunitadhir_vla_websiteheadshot-1000x1000px.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:04:01.404130Z",
+      "original": {
+        "path": "assets/originals/members/mla-739-portrait-56c01f4269.jpg",
+        "bytes": 101901,
+        "sha256": "30d65375f0dc644256bad97b4af08921fd254aaae27efde09b0976febcd9e82e",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-739-portrait-56c01f4269.webp",
+        "bytes": 22324,
+        "sha256": "f1a61a647c8915735d62f9dd78923f23d1e0ffbfca089b35308321060f589e17",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://sunitadhir.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-740-portrait-282632ba8e",
+      "kind": "portrait",
+      "memberId": "mla-740",
+      "partyId": "ndp",
+      "label": "Christine Boyle",
+      "sourcePage": "https://christineboyle.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/christineboyle_vlm_candidatewebsite_headshot-1000x1000px_0.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:04:01.706390Z",
+      "original": {
+        "path": "assets/originals/members/mla-740-portrait-282632ba8e.jpg",
+        "bytes": 782788,
+        "sha256": "ff0b7a653090827d1aa910172f8f444c5f6953020e1468a090557c156db4a00d",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-740-portrait-282632ba8e.webp",
+        "bytes": 40930,
+        "sha256": "ed4c9d7d0e043976881a43684da5a436abbb2408a9bc37a47adbba1cfed3c364",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://christineboyle.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-742-portrait-640b758081",
+      "kind": "portrait",
+      "memberId": "mla-742",
+      "partyId": "ndp",
+      "label": "Terry Yung",
+      "sourcePage": "https://bcndpcaucus.ca/mla/terry-yung/",
+      "sourceUrl": "https://bcndpcaucus.ca/wp-content/uploads/sites/5/2024/11/Terry_Yung.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:04:02.461506Z",
+      "original": {
+        "path": "assets/originals/members/mla-742-portrait-640b758081.jpg",
+        "bytes": 42806,
+        "sha256": "f21c8377cc0a4bc9b1ce576b488e6ad6d9f3d991b159189e3e3884cae79a2c33",
+        "contentType": "image/jpeg",
+        "width": 400,
+        "height": 400
+      },
+      "web": {
+        "path": "assets/web/mla-742-portrait-640b758081.webp",
+        "bytes": 12492,
+        "sha256": "edc7daca0e609f6ac6151fa21f2e8d5be5a38552b13c54f46922a914cb46c17c",
+        "width": 400,
+        "height": 400,
+        "fit": "cover"
+      },
+      "credit": "Source: https://bcndpcaucus.ca/mla/terry-yung/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-747-portrait-9a43801745",
+      "kind": "portrait",
+      "memberId": "mla-747",
+      "partyId": "ndp",
+      "label": "Brenda Bailey",
+      "sourcePage": "https://bcndpcaucus.ca/mla/brenda-bailey/",
+      "sourceUrl": "https://bcndpcaucus.ca/wp-content/uploads/sites/5/2020/11/1-Brenda_Bailey_large_2-copy-2.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:04:03.145669Z",
+      "original": {
+        "path": "assets/originals/members/mla-747-portrait-9a43801745.jpg",
+        "bytes": 51179,
+        "sha256": "c79ca388e5e9bbc1c3035fc2b11c02ab8e51338e6b0d6ba232e0e47c40afe16a",
+        "contentType": "image/jpeg",
+        "width": 400,
+        "height": 400
+      },
+      "web": {
+        "path": "assets/web/mla-747-portrait-9a43801745.webp",
+        "bytes": 15758,
+        "sha256": "270f1d3ad97f2af819eaedebddb87d57442e3ccc371856545daeb854a4c31526",
+        "width": 400,
+        "height": 400,
+        "fit": "cover"
+      },
+      "credit": "Source: https://bcndpcaucus.ca/mla/brenda-bailey/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-749-portrait-a7d440fca6",
+      "kind": "portrait",
+      "memberId": "mla-749",
+      "partyId": "ndp",
+      "label": "Grace Lore",
+      "sourcePage": "https://gracelore.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/gracelore_vnt_website_headshot-1000x1000px.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:04:03.316972Z",
+      "original": {
+        "path": "assets/originals/members/mla-749-portrait-a7d440fca6.jpg",
+        "bytes": 234642,
+        "sha256": "a685c4b0a325aa3a5415bd302f7a1e5eaa7871769ee23e10c3241770ec9a3109",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-749-portrait-a7d440fca6.webp",
+        "bytes": 20792,
+        "sha256": "c2dade85a0f1e24d5a98764a1b84381e49535840907a47ab131805c87e3abb67",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://gracelore.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-751-portrait-de742a4464",
+      "kind": "portrait",
+      "memberId": "mla-751",
+      "partyId": "ndp",
+      "label": "Harwinder Sandhu",
+      "sourcePage": "https://harwindersandhu.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/harwinder-sandhu-vrl-website-images-headshot-1000x1000px.png",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:04:03.618977Z",
+      "original": {
+        "path": "assets/originals/members/mla-751-portrait-de742a4464.png",
+        "bytes": 826501,
+        "sha256": "26d6e799204e28c696b4c66d9c0a4729f78be71c817bb45737e165ebb4df7b5c",
+        "contentType": "image/png",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-751-portrait-de742a4464.webp",
+        "bytes": 24140,
+        "sha256": "10b9e5cf1cc672877487515b291408fa998453535a22f6a1c4fbdb29506d32dc",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://harwindersandhu.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-752-portrait-8c7a7c7147",
+      "kind": "portrait",
+      "memberId": "mla-752",
+      "partyId": "ndp",
+      "label": "Garry Begg",
+      "sourcePage": "https://garrybegg.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/garrybegg_srg_website_headshot-1000x1000px.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:04:03.826317Z",
+      "original": {
+        "path": "assets/originals/members/mla-752-portrait-8c7a7c7147.jpg",
+        "bytes": 327406,
+        "sha256": "65a0a5ad67c85437b737a70893939b3774e619a9b8f0b388d417c7b8aa5d239f",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-752-portrait-8c7a7c7147.webp",
+        "bytes": 43366,
+        "sha256": "eed5eec71a37221497ddb668de87664fb737132027f65170bc69d6ed5c881915",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://garrybegg.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-755-portrait-1e2cace671",
+      "kind": "portrait",
+      "memberId": "mla-755",
+      "partyId": "ndp",
+      "label": "Jodie Wickens",
+      "sourcePage": "https://jodiewickens.bcndp.ca",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/jodiewickens_cqb_websiteheadshot-1000x1000px.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:04:04.018567Z",
+      "original": {
+        "path": "assets/originals/members/mla-755-portrait-1e2cace671.jpg",
+        "bytes": 223530,
+        "sha256": "1a86b1e0803c048c94c4fa09fff0177b8dd841d93d228b782265fbdbdaa2e8cb",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "web": {
+        "path": "assets/web/mla-755-portrait-1e2cace671.webp",
+        "bytes": 20938,
+        "sha256": "e3aec2d90836cf6867f439fa7f19ebc7ea9cf955415743942e7cb5f5f3d8ec8e",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://jodiewickens.bcndp.ca; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-701-portrait-ef6de09278",
+      "kind": "portrait",
+      "memberId": "mla-701",
+      "partyId": "con",
+      "label": "John Rustad",
+      "sourcePage": "https://conservativebc.ca/wp-json/wp/v2/media/12",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2025/06/john_rustad.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:08:31.443166Z",
+      "original": {
+        "path": "assets/originals/members/mla-701-portrait-ef6de09278.jpg",
+        "bytes": 52345,
+        "sha256": "e10076fd93be3d79852735237db70c2f3872684e0a81e2ba8ff607843c035fb9",
+        "contentType": "image/jpeg",
+        "width": 500,
+        "height": 500
+      },
+      "web": {
+        "path": "assets/web/mla-701-portrait-ef6de09278.webp",
+        "bytes": 20768,
+        "sha256": "4657d2a5b796a6cd1dd2509aae3da7bb48016491b5e6021578754c2e3b42716d",
+        "width": 500,
+        "height": 500,
+        "fit": "cover"
+      },
+      "credit": "Source: https://conservativebc.ca/wp-json/wp/v2/media/12; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-710-portrait-29bc5d90d4",
+      "kind": "portrait",
+      "memberId": "mla-710",
+      "partyId": "ndp",
+      "label": "Amelia Boultbee",
+      "sourcePage": "https://conservativebc.ca/wp-json/wp/v2/media/503",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Amelia-Boultbee.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:08:32.186011Z",
+      "original": {
+        "path": "assets/originals/members/mla-710-portrait-29bc5d90d4.jpg",
+        "bytes": 41240,
+        "sha256": "c0ed337e4886f49daacec7c3dc2f76daa521189dd9f9ca2aaee8984f8e559b2e",
+        "contentType": "image/jpeg",
+        "width": 810,
+        "height": 810
+      },
+      "web": {
+        "path": "assets/web/mla-710-portrait-29bc5d90d4.webp",
+        "bytes": 24940,
+        "sha256": "5416f2a44ca917f5b6624b3b806c0b40c201ce2befe2fe24fdc28041b727b017",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://conservativebc.ca/wp-json/wp/v2/media/503; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-719-portrait-fb425f0a8d",
+      "kind": "portrait",
+      "memberId": "mla-719",
+      "partyId": "independent",
+      "label": "Hon Chan",
+      "sourcePage": "https://conservativebc.ca/wp-json/wp/v2/media/525",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Hon-Chan.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:08:32.856089Z",
+      "original": {
+        "path": "assets/originals/members/mla-719-portrait-fb425f0a8d.jpg",
+        "bytes": 35585,
+        "sha256": "531fc2f20d60288e1c61932bffe77e63c62a74e04ea4f73b5744eb03c1e9d024",
+        "contentType": "image/jpeg",
+        "width": 810,
+        "height": 810
+      },
+      "web": {
+        "path": "assets/web/mla-719-portrait-fb425f0a8d.webp",
+        "bytes": 19792,
+        "sha256": "4b3176b92def74f0b675c7e734051060602823fa170e030168dd47c408522d0d",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://conservativebc.ca/wp-json/wp/v2/media/525; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-734-portrait-6b9d70290c",
+      "kind": "portrait",
+      "memberId": "mla-734",
+      "partyId": "con",
+      "label": "Linda Hepner",
+      "sourcePage": "https://conservativebc.ca/wp-json/wp/v2/media/543",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Linda-Hepner.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:08:33.539251Z",
+      "original": {
+        "path": "assets/originals/members/mla-734-portrait-6b9d70290c.jpg",
+        "bytes": 35324,
+        "sha256": "1150915cb079d0a085e0e634c3f7353979150e9231684188923bbcb91f9926ca",
+        "contentType": "image/jpeg",
+        "width": 810,
+        "height": 810
+      },
+      "web": {
+        "path": "assets/web/mla-734-portrait-6b9d70290c.webp",
+        "bytes": 19918,
+        "sha256": "e6baa2a9602083732f1195cfb772c989b834ce57b426c6b39d9bee093fa0b1c1",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://conservativebc.ca/wp-json/wp/v2/media/543; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-723-portrait-2019ff007b",
+      "kind": "portrait",
+      "memberId": "mla-723",
+      "partyId": "green",
+      "label": "Rob Botterell",
+      "sourcePage": "https://bcgreens.ca/wp-json/wp/v2/media/1607",
+      "sourceUrl": "https://bcgreens.ca/wp-content/uploads/2024/09/SAN-Rob-Botterell-400x400-1.jpeg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:08:35.416815Z",
+      "original": {
+        "path": "assets/originals/members/mla-723-portrait-2019ff007b.jpg",
+        "bytes": 40103,
+        "sha256": "cd77747e8167390e282b5d1dbd770db980e4929ee8ca004eaf9af7af0df25717",
+        "contentType": "image/jpeg",
+        "width": 400,
+        "height": 400
+      },
+      "web": {
+        "path": "assets/web/mla-723-portrait-2019ff007b.webp",
+        "bytes": 12228,
+        "sha256": "05432892ab2a6c8f406c0e9460fcea1c3e62b2f3ccf3503b34e5f88598266cad",
+        "width": 400,
+        "height": 400,
+        "fit": "cover"
+      },
+      "credit": "Source: https://bcgreens.ca/wp-json/wp/v2/media/1607; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-730-portrait-6a3dccfd13",
+      "kind": "portrait",
+      "memberId": "mla-730",
+      "partyId": "independent",
+      "label": "Elenore Sturko",
+      "sourcePage": "https://www.centrebc.ca/our-team/",
+      "sourceUrl": "https://www.centrebc.ca/wp-content/uploads/2026/09/Elenore-Sturko-700x700-1.jpg",
+      "sourceType": "official-member-profile",
+      "downloadedAt": "2026-09-27T01:08:35.714107Z",
+      "original": {
+        "path": "assets/originals/members/mla-730-portrait-6a3dccfd13.webp",
+        "bytes": 38870,
+        "sha256": "2ebacead70cfc5e1f8ca0049279da627d29985067ad3da10945a7b5cf0b429ef",
+        "contentType": "image/webp",
+        "width": 700,
+        "height": 700
+      },
+      "web": {
+        "path": "assets/web/mla-730-portrait-6a3dccfd13.webp",
+        "bytes": 31184,
+        "sha256": "3265fe9b834a64344f5814908515aee117ce44f135b31507a5661c2d9337d69d",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Source: https://www.centrebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      }
+    },
+    {
+      "id": "mla-687-portrait-a841bfc8e2",
+      "kind": "portrait",
+      "memberId": "mla-687",
+      "partyId": "independent",
+      "label": "Tara Armstrong",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Tara_Armstrong_Official_Portrait.jpg",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Tara_Armstrong_Official_Portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceType": "wikimedia-commons",
+      "downloadedAt": "2026-09-27T01:08:36.541018Z",
+      "original": {
+        "path": "assets/originals/members/mla-687-portrait-a841bfc8e2.jpg",
+        "bytes": 2048201,
+        "sha256": "dee6d39279f2554b345a1f5e9867f80ed677244475b51e65db6b010e4005ccc6",
+        "contentType": "image/jpeg",
+        "width": 2418,
+        "height": 3027
+      },
+      "web": {
+        "path": "assets/web/mla-687-portrait-a841bfc8e2.webp",
+        "bytes": 28606,
+        "sha256": "05bef68ac1bc93d947569b29755bb7756833a207fad1836f1c808439ca26eca6",
+        "width": 511,
+        "height": 640,
+        "fit": "cover"
+      },
+      "credit": "Othman Mekhloufi; resized and converted to WebP.",
+      "reuse": {
+        "status": "licensed",
+        "publishApproved": true,
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
     }
   ],
   "pressKits": [
@@ -4236,5 +6039,1201 @@
       "sourceType": "official-press-kit",
       "reason": "HTTP 403: https://assets.nationbuilder.com/greenpartybc/pages/1360/attachments/original/1715194533/BCGreens_black.png?1715194533"
     }
-  ]
+  ],
+  "members": [
+    {
+      "id": "mla-663",
+      "name": "Bruce Banman",
+      "district": "Abbotsford South",
+      "districtSlug": "abbotsford-south",
+      "affiliation": "Independent",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Banman-Bruce",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-bruce-banman-a21090b909"
+      ]
+    },
+    {
+      "id": "mla-664",
+      "name": "Korky Neufeld",
+      "district": "Abbotsford West",
+      "districtSlug": "abbotsford-west",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Neufeld-Korky",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-korky-neufeld-580c6f805f"
+      ]
+    },
+    {
+      "id": "mla-665",
+      "name": "Donegal Wilson",
+      "district": "Boundary-Similkameen",
+      "districtSlug": "boundary-similkameen",
+      "affiliation": "Independent",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Wilson-Donegal",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-donegal-wilson-06c89600b0"
+      ]
+    },
+    {
+      "id": "mla-666",
+      "name": "Sharon L. Hartwell",
+      "district": "Bulkley Valley-Stikine",
+      "districtSlug": "bulkley-valley-stikine",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Hartwell-Sharon",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-sharon-hartwell-52d71f446b"
+      ]
+    },
+    {
+      "id": "mla-667",
+      "name": "Anne Kang",
+      "district": "Burnaby Centre",
+      "districtSlug": "burnaby-centre",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Kang-Anne",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-667-portrait-9c593d014e"
+      ]
+    },
+    {
+      "id": "mla-668",
+      "name": "Rohini Arora",
+      "district": "Burnaby East",
+      "districtSlug": "burnaby-east",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Arora-Rohini",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-668-portrait-b30bedff7d"
+      ]
+    },
+    {
+      "id": "mla-670",
+      "name": "Janet Routledge",
+      "district": "Burnaby North",
+      "districtSlug": "burnaby-north",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Routledge-Janet",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-670-portrait-5d49fa32c5"
+      ]
+    },
+    {
+      "id": "mla-671",
+      "name": "Paul Choi",
+      "district": "Burnaby South-Metrotown",
+      "districtSlug": "burnaby-south-metrotown",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Choi-Paul",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-671-portrait-9af799da5e"
+      ]
+    },
+    {
+      "id": "mla-669",
+      "name": "Raj Chouhan",
+      "district": "Burnaby-New Westminster",
+      "districtSlug": "burnaby-new-westminster",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Chouhan-Raj",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-669-portrait-6668eaa4b4"
+      ]
+    },
+    {
+      "id": "mla-672",
+      "name": "Lorne Doerkson",
+      "district": "Cariboo-Chilcotin",
+      "districtSlug": "cariboo-chilcotin",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Doerkson-Lorne",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-lorne-doerkson-87149b2cd8"
+      ]
+    },
+    {
+      "id": "mla-673",
+      "name": "Heather Maahs",
+      "district": "Chilliwack North",
+      "districtSlug": "chilliwack-north",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Maahs-Heather",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-heather-maahs-986805e60b"
+      ]
+    },
+    {
+      "id": "mla-674",
+      "name": "\u00c1'a:l\u00edya Warbus",
+      "district": "Chilliwack-Cultus Lake",
+      "districtSlug": "chilliwack-cultus-lake",
+      "affiliation": "Independent",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Warbus-%C3%81'a%3Al%C3%ADya",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-a-a-liya-a-aliya-warbus-8cbd807165"
+      ]
+    },
+    {
+      "id": "mla-675",
+      "name": "Scott McInnis",
+      "district": "Columbia River-Revelstoke",
+      "districtSlug": "columbia-river-revelstoke",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/McInnis-Scott",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-scott-mcinnis-750e95cdcc"
+      ]
+    },
+    {
+      "id": "mla-755",
+      "name": "Jodie Wickens",
+      "district": "Coquitlam-Burke Mountain",
+      "districtSlug": "coquitlam-burke-mountain",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Wickens-Jodie",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-755-portrait-1e2cace671"
+      ]
+    },
+    {
+      "id": "mla-677",
+      "name": "Jennifer Blatherwick",
+      "district": "Coquitlam-Maillardville",
+      "districtSlug": "coquitlam-maillardville",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Blatherwick-Jennifer",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-677-portrait-2c0aad854f"
+      ]
+    },
+    {
+      "id": "mla-678",
+      "name": "Brennan Day",
+      "district": "Courtenay-Comox",
+      "districtSlug": "courtenay-comox",
+      "affiliation": "Independent",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Day-Brennan",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-brennan-day-8355e246c3"
+      ]
+    },
+    {
+      "id": "mla-679",
+      "name": "Qwulti'stunaat - Debra Toporowski",
+      "district": "Cowichan Valley",
+      "districtSlug": "cowichan-valley",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Toporowski-Qwulti'stunaat%20-%20Debra",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-679-portrait-7514832852"
+      ]
+    },
+    {
+      "id": "mla-680",
+      "name": "Ravi Kahlon",
+      "district": "Delta North",
+      "districtSlug": "delta-north",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Kahlon-Ravi",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-680-portrait-4d397cf2dc"
+      ]
+    },
+    {
+      "id": "mla-754",
+      "name": "Ian Paton",
+      "district": "Delta South",
+      "districtSlug": "delta-south",
+      "affiliation": "Independent",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Paton-Ian",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-ian-paton-16c47a17d1"
+      ]
+    },
+    {
+      "id": "mla-682",
+      "name": "Darlene Rotchford",
+      "district": "Esquimalt-Colwood",
+      "districtSlug": "esquimalt-colwood",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Rotchford-Darlene",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-682-portrait-8e978d8e0a"
+      ]
+    },
+    {
+      "id": "mla-683",
+      "name": "Tony Luck",
+      "district": "Fraser-Nicola",
+      "districtSlug": "fraser-nicola",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Luck-Tony",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-tony-luck-10188574fc"
+      ]
+    },
+    {
+      "id": "mla-684",
+      "name": "Dana Lajeunesse",
+      "district": "Juan de Fuca-Malahat",
+      "districtSlug": "juan-de-fuca-malahat",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Lajeunesse-Dana",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-684-portrait-2e429d10bb"
+      ]
+    },
+    {
+      "id": "mla-685",
+      "name": "Peter Milobar",
+      "district": "Kamloops Centre",
+      "districtSlug": "kamloops-centre",
+      "affiliation": "Independent",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Milobar-Peter",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-peter-milobar-d99d0c080d"
+      ]
+    },
+    {
+      "id": "mla-686",
+      "name": "Ward Stamer",
+      "district": "Kamloops-North Thompson",
+      "districtSlug": "kamloops-north-thompson",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Stamer-Ward",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-ward-stamer-97b2b15d0c"
+      ]
+    },
+    {
+      "id": "mla-753",
+      "name": "Kristina Loewen",
+      "district": "Kelowna Centre",
+      "districtSlug": "kelowna-centre",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Loewen-Kristina",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-kristina-loewen-184a07e7db"
+      ]
+    },
+    {
+      "id": "mla-687",
+      "name": "Tara Armstrong",
+      "district": "Kelowna-Lake Country-Coldstream",
+      "districtSlug": "kelowna-lake-country-coldstream",
+      "affiliation": "Independent",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Armstrong-Tara",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-687-portrait-a841bfc8e2"
+      ]
+    },
+    {
+      "id": "mla-688",
+      "name": "Gavin Dew",
+      "district": "Kelowna-Mission",
+      "districtSlug": "kelowna-mission",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Dew-Gavin",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-gavin-dew-148005aa75"
+      ]
+    },
+    {
+      "id": "mla-662",
+      "name": "Brittny Anderson",
+      "district": "Kootenay Central",
+      "districtSlug": "kootenay-central",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Anderson-Brittny",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-662-portrait-c439e95c61"
+      ]
+    },
+    {
+      "id": "mla-689",
+      "name": "Steve Morissette",
+      "district": "Kootenay-Monashee",
+      "districtSlug": "kootenay-monashee",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Morissette-Steve",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-689-portrait-3a8116fab4"
+      ]
+    },
+    {
+      "id": "mla-690",
+      "name": "Pete Davis",
+      "district": "Kootenay-Rockies",
+      "districtSlug": "kootenay-rockies",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Davis-Pete",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-pete-davis-f4443fdb2d"
+      ]
+    },
+    {
+      "id": "mla-691",
+      "name": "Stephanie Higginson",
+      "district": "Ladysmith-Oceanside",
+      "districtSlug": "ladysmith-oceanside",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Higginson-Stephanie",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-691-portrait-4d21515134"
+      ]
+    },
+    {
+      "id": "mla-692",
+      "name": "Ravi Parmar",
+      "district": "Langford-Highlands",
+      "districtSlug": "langford-highlands",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Parmar-Ravi",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "ndp-ndp-ravi-parmar-3f5addca71"
+      ]
+    },
+    {
+      "id": "mla-693",
+      "name": "Harman Bhangu",
+      "district": "Langley-Abbotsford",
+      "districtSlug": "langley-abbotsford",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Bhangu-Harman",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-harman-bhangu-9edbcc7eb3"
+      ]
+    },
+    {
+      "id": "mla-694",
+      "name": "Misty Van Popta",
+      "district": "Langley-Walnut Grove",
+      "districtSlug": "langley-walnut-grove",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Van%20Popta-Misty",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-misty-van-popta-eef11a603e"
+      ]
+    },
+    {
+      "id": "mla-695",
+      "name": "Jody Toor",
+      "district": "Langley-Willowbrook",
+      "districtSlug": "langley-willowbrook",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Toor-Jody",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-jody-toor-c6bf38137c"
+      ]
+    },
+    {
+      "id": "mla-696",
+      "name": "Lawrence Mok",
+      "district": "Maple Ridge East",
+      "districtSlug": "maple-ridge-east",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Mok-Lawrence",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-lawrence-mok-ff35c70633"
+      ]
+    },
+    {
+      "id": "mla-697",
+      "name": "Lisa Beare",
+      "district": "Maple Ridge-Pitt Meadows",
+      "districtSlug": "maple-ridge-pitt-meadows",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Beare-Lisa",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-697-portrait-2d8b9155f8"
+      ]
+    },
+    {
+      "id": "mla-698",
+      "name": "Josie Osborne",
+      "district": "Mid Island-Pacific Rim",
+      "districtSlug": "mid-island-pacific-rim",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Osborne-Josie",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-698-portrait-c3b21582c3"
+      ]
+    },
+    {
+      "id": "mla-699",
+      "name": "Sheila Malcolmson",
+      "district": "Nanaimo-Gabriola Island",
+      "districtSlug": "nanaimo-gabriola-island",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Malcolmson-Sheila",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-699-portrait-47754897ee"
+      ]
+    },
+    {
+      "id": "mla-700",
+      "name": "George Anderson",
+      "district": "Nanaimo-Lantzville",
+      "districtSlug": "nanaimo-lantzville",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Anderson-George",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-700-portrait-cb1b5df59e"
+      ]
+    },
+    {
+      "id": "mla-701",
+      "name": "John Rustad",
+      "district": "Nechako Lakes",
+      "districtSlug": "nechako-lakes",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Rustad-John",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-701-portrait-ef6de09278"
+      ]
+    },
+    {
+      "id": "mla-702",
+      "name": "Jennifer Whiteside",
+      "district": "New Westminster-Coquitlam",
+      "districtSlug": "new-westminster-coquitlam",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Whiteside-Jennifer",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-702-portrait-70ac072107"
+      ]
+    },
+    {
+      "id": "mla-703",
+      "name": "Laanas - Tamara Davidson",
+      "district": "North Coast-Haida Gwaii",
+      "districtSlug": "north-coast-haida-gwaii",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Davidson-Laanas%20-%20Tamara",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-703-portrait-48ed2e7c7d"
+      ]
+    },
+    {
+      "id": "mla-704",
+      "name": "Anna Kindy",
+      "district": "North Island",
+      "districtSlug": "north-island",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Kindy-Anna",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-anna-kindy-1e08f39cb6"
+      ]
+    },
+    {
+      "id": "mla-705",
+      "name": "Bowinn Ma",
+      "district": "North Vancouver-Lonsdale",
+      "districtSlug": "north-vancouver-lonsdale",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Ma-Bowinn",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "ndp-ndp-bowinn-ma-e52d5ffbed"
+      ]
+    },
+    {
+      "id": "mla-706",
+      "name": "Susie Chant",
+      "district": "North Vancouver-Seymour",
+      "districtSlug": "north-vancouver-seymour",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Chant-Susie",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-706-portrait-8415dcdaa5"
+      ]
+    },
+    {
+      "id": "mla-707",
+      "name": "Diana Gibson",
+      "district": "Oak Bay-Gordon Head",
+      "districtSlug": "oak-bay-gordon-head",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Gibson-Diana",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-707-portrait-a43a154653"
+      ]
+    },
+    {
+      "id": "mla-708",
+      "name": "Jordan Kealy",
+      "district": "Peace River North",
+      "districtSlug": "peace-river-north",
+      "affiliation": "Independent",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Kealy-Jordan",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [],
+      "portraitNote": "No verified alternative portrait was found after the former party profile became unavailable. The Legislature photo is not republished because its stated terms require permission."
+    },
+    {
+      "id": "mla-709",
+      "name": "Larry Neufeld",
+      "district": "Peace River South",
+      "districtSlug": "peace-river-south",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Neufeld-Larry",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-larry-neufeld-2a16e14171"
+      ]
+    },
+    {
+      "id": "mla-710",
+      "name": "Amelia Boultbee",
+      "district": "Penticton-Summerland",
+      "districtSlug": "penticton-summerland",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Boultbee-Amelia",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-710-portrait-29bc5d90d4"
+      ]
+    },
+    {
+      "id": "mla-711",
+      "name": "Mike Farnworth",
+      "district": "Port Coquitlam",
+      "districtSlug": "port-coquitlam",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Farnworth-Mike",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "ndp-ndp-mike-farnworth-efacaf2c04"
+      ]
+    },
+    {
+      "id": "mla-714",
+      "name": "Rick Glumac",
+      "district": "Port Moody-Burquitlam",
+      "districtSlug": "port-moody-burquitlam",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Glumac-Rick",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-714-portrait-85d8b8495f"
+      ]
+    },
+    {
+      "id": "mla-715",
+      "name": "Randene Neill",
+      "district": "Powell River-Sunshine Coast",
+      "districtSlug": "powell-river-sunshine-coast",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Neill-Randene",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "ndp-ndp-randene-neill-40f2aad39a"
+      ]
+    },
+    {
+      "id": "mla-716",
+      "name": "Kiel Giddens",
+      "district": "Prince George-Mackenzie",
+      "districtSlug": "prince-george-mackenzie",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Giddens-Kiel",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-kiel-giddens-257986af02"
+      ]
+    },
+    {
+      "id": "mla-717",
+      "name": "Sheldon Clare",
+      "district": "Prince George-North Cariboo",
+      "districtSlug": "prince-george-north-cariboo",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Clare-Sheldon",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-sheldon-clare-55bf8ff9a3"
+      ]
+    },
+    {
+      "id": "mla-718",
+      "name": "Rosalyn Bird",
+      "district": "Prince George-Valemount",
+      "districtSlug": "prince-george-valemount",
+      "affiliation": "Independent",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Bird-Rosalyn",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-rosalyn-bird-489ed72117"
+      ]
+    },
+    {
+      "id": "mla-719",
+      "name": "Hon Chan",
+      "district": "Richmond Centre",
+      "districtSlug": "richmond-centre",
+      "affiliation": "Independent",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Chan-Hon",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-719-portrait-fb425f0a8d"
+      ]
+    },
+    {
+      "id": "mla-720",
+      "name": "Teresa Wat",
+      "district": "Richmond-Bridgeport",
+      "districtSlug": "richmond-bridgeport",
+      "affiliation": "Independent",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Wat-Teresa",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-teresa-wat-0d2fb50d55"
+      ]
+    },
+    {
+      "id": "mla-722",
+      "name": "Steve Kooner",
+      "district": "Richmond-Queensborough",
+      "districtSlug": "richmond-queensborough",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Kooner-Steve",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-steve-kooner-df918571bb"
+      ]
+    },
+    {
+      "id": "mla-721",
+      "name": "Kelly Greene",
+      "district": "Richmond-Steveston",
+      "districtSlug": "richmond-steveston",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Greene-Kelly",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-721-portrait-958a014b58"
+      ]
+    },
+    {
+      "id": "mla-723",
+      "name": "Rob Botterell",
+      "district": "Saanich North and the Islands",
+      "districtSlug": "saanich-north-and-the-islands",
+      "affiliation": "BC Green Party",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Botterell-Rob",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-723-portrait-2019ff007b"
+      ]
+    },
+    {
+      "id": "mla-724",
+      "name": "Lana Popham",
+      "district": "Saanich South",
+      "districtSlug": "saanich-south",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Popham-Lana",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-724-portrait-2136dbf333"
+      ]
+    },
+    {
+      "id": "mla-725",
+      "name": "David L. Williams",
+      "district": "Salmon Arm-Shuswap",
+      "districtSlug": "salmon-arm-shuswap",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Williams-David",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-david-williams-ae5d822782"
+      ]
+    },
+    {
+      "id": "mla-726",
+      "name": "Claire Ratt\u00e9e",
+      "district": "Skeena",
+      "districtSlug": "skeena",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Ratt%C3%A9e-Claire",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-claire-rattee-cac5397f70"
+      ]
+    },
+    {
+      "id": "mla-727",
+      "name": "Amna Shah",
+      "district": "Surrey City Centre",
+      "districtSlug": "surrey-city-centre",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Shah-Amna",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-727-portrait-0d2c3ff18d"
+      ]
+    },
+    {
+      "id": "mla-728",
+      "name": "Mandeep Dhaliwal",
+      "district": "Surrey North",
+      "districtSlug": "surrey-north",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Dhaliwal-Mandeep",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-mandeep-dhaliwal-831df01d69"
+      ]
+    },
+    {
+      "id": "mla-729",
+      "name": "Brent Chapman",
+      "district": "Surrey South",
+      "districtSlug": "surrey-south",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Chapman-Brent",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "one-one-brent-chapman-e9bd9f16e7"
+      ]
+    },
+    {
+      "id": "mla-730",
+      "name": "Elenore Sturko",
+      "district": "Surrey-Cloverdale",
+      "districtSlug": "surrey-cloverdale",
+      "affiliation": "Independent",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Sturko-Elenore",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-730-portrait-6a3dccfd13"
+      ]
+    },
+    {
+      "id": "mla-731",
+      "name": "Jagrup Brar",
+      "district": "Surrey-Fleetwood",
+      "districtSlug": "surrey-fleetwood",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Brar-Jagrup",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "ndp-ndp-jagrup-brar-095be04e3d"
+      ]
+    },
+    {
+      "id": "mla-752",
+      "name": "Garry Begg",
+      "district": "Surrey-Guildford",
+      "districtSlug": "surrey-guildford",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Begg-Garry",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-752-portrait-8c7a7c7147"
+      ]
+    },
+    {
+      "id": "mla-732",
+      "name": "Jessie Sunner",
+      "district": "Surrey-Newton",
+      "districtSlug": "surrey-newton",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Sunner-Jessie",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "ndp-ndp-jessie-sunner-a6c2df987a"
+      ]
+    },
+    {
+      "id": "mla-733",
+      "name": "Bryan Tepper",
+      "district": "Surrey-Panorama",
+      "districtSlug": "surrey-panorama",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Tepper-Bryan",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-bryan-tepper-0239fa78b0"
+      ]
+    },
+    {
+      "id": "mla-734",
+      "name": "Linda Hepner",
+      "district": "Surrey-Serpentine River",
+      "districtSlug": "surrey-serpentine-river",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Hepner-Linda",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-734-portrait-6b9d70290c"
+      ]
+    },
+    {
+      "id": "mla-658",
+      "name": "Trevor Halford",
+      "district": "Surrey-White Rock",
+      "districtSlug": "surrey-white-rock",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Halford-Trevor",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-trevor-halford-e1b5d0600f"
+      ]
+    },
+    {
+      "id": "mla-735",
+      "name": "George Chow",
+      "district": "Vancouver-Fraserview",
+      "districtSlug": "vancouver-fraserview",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Chow-George",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-735-portrait-2e1f25937b"
+      ]
+    },
+    {
+      "id": "mla-736",
+      "name": "Niki Sharma",
+      "district": "Vancouver-Hastings",
+      "districtSlug": "vancouver-hastings",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Sharma-Niki",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-736-portrait-8b8420c5ca"
+      ]
+    },
+    {
+      "id": "mla-737",
+      "name": "Mable Elmore",
+      "district": "Vancouver-Kensington",
+      "districtSlug": "vancouver-kensington",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Elmore-Mable",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-737-portrait-245b6788e5"
+      ]
+    },
+    {
+      "id": "mla-739",
+      "name": "Sunita Dhir",
+      "district": "Vancouver-Langara",
+      "districtSlug": "vancouver-langara",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Dhir-Sunita",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-739-portrait-56c01f4269"
+      ]
+    },
+    {
+      "id": "mla-740",
+      "name": "Christine Boyle",
+      "district": "Vancouver-Little Mountain",
+      "districtSlug": "vancouver-little-mountain",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Boyle-Christine",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-740-portrait-282632ba8e"
+      ]
+    },
+    {
+      "id": "mla-738",
+      "name": "David Eby",
+      "district": "Vancouver-Point Grey",
+      "districtSlug": "vancouver-point-grey",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Eby-David",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "ndp-ndp-david-eby-11f3afb9fe"
+      ]
+    },
+    {
+      "id": "mla-741",
+      "name": "Dallas Brodie",
+      "district": "Vancouver-Quilchena",
+      "districtSlug": "vancouver-quilchena",
+      "affiliation": "Independent",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Brodie-Dallas",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "one-one-dallas-brodie-38118004fc"
+      ]
+    },
+    {
+      "id": "mla-746",
+      "name": "Adrian Dix",
+      "district": "Vancouver-Renfrew",
+      "districtSlug": "vancouver-renfrew",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Dix-Adrian",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "ndp-ndp-adrian-dix-785498fc44"
+      ]
+    },
+    {
+      "id": "mla-747",
+      "name": "Brenda Bailey",
+      "district": "Vancouver-South Granville",
+      "districtSlug": "vancouver-south-granville",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Bailey-Brenda",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-747-portrait-9a43801745"
+      ]
+    },
+    {
+      "id": "mla-748",
+      "name": "Spencer Chandra Herbert",
+      "district": "Vancouver-West End",
+      "districtSlug": "vancouver-west-end",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Chandra%20Herbert-Spencer",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "ndp-ndp-spencer-chandra-herbert-4c78b57732"
+      ]
+    },
+    {
+      "id": "mla-742",
+      "name": "Terry Yung",
+      "district": "Vancouver-Yaletown",
+      "districtSlug": "vancouver-yaletown",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Yung-Terry",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-742-portrait-640b758081"
+      ]
+    },
+    {
+      "id": "mla-751",
+      "name": "Harwinder Sandhu",
+      "district": "Vernon-Lumby",
+      "districtSlug": "vernon-lumby",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Sandhu-Harwinder",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-751-portrait-de742a4464"
+      ]
+    },
+    {
+      "id": "mla-749",
+      "name": "Grace Lore",
+      "district": "Victoria-Beacon Hill",
+      "districtSlug": "victoria-beacon-hill",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Lore-Grace",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "mla-749-portrait-a7d440fca6"
+      ]
+    },
+    {
+      "id": "mla-743",
+      "name": "Nina Krieger",
+      "district": "Victoria-Swan Lake",
+      "districtSlug": "victoria-swan-lake",
+      "affiliation": "BC NDP",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Krieger-Nina",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "ndp-ndp-nina-krieger-869aa3faea"
+      ]
+    },
+    {
+      "id": "mla-744",
+      "name": "Macklin McCall",
+      "district": "West Kelowna-Peachland",
+      "districtSlug": "west-kelowna-peachland",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/McCall-Macklin",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-macklin-mccall-4be213334d"
+      ]
+    },
+    {
+      "id": "mla-745",
+      "name": "Lynne Block",
+      "district": "West Vancouver-Capilano",
+      "districtSlug": "west-vancouver-capilano",
+      "affiliation": "Conservative Party of British Columbia",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Block-Lynne",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "con-con-lynne-block-f64e18b881"
+      ]
+    },
+    {
+      "id": "mla-660",
+      "name": "Jeremy Valeriote",
+      "district": "West Vancouver-Sea to Sky",
+      "districtSlug": "west-vancouver-sea-to-sky",
+      "affiliation": "BC Green Party",
+      "profileUrl": "https://www.leg.bc.ca/members/43rd-Parliament/Valeriote-Jeremy",
+      "sourcePage": "https://www.leg.bc.ca/members",
+      "checkedAt": "2026-09-27T00:57:16.955Z",
+      "assetIds": [
+        "green-green-jeremy-valeriote-b232db549f"
+      ]
+    }
+  ],
+  "memberSnapshot": {
+    "parliament": 43,
+    "asOf": "2026-09-22",
+    "checkedAt": "2026-09-27T00:57:16.955Z",
+    "source": "https://www.leg.bc.ca/members",
+    "dataSource": "https://api.lims.leg.bc.ca/graphql",
+    "scope": "Active members listed by the Legislature at dissolution; membership does not imply a 2026 candidacy.",
+    "notListedDistricts": [
+      "Abbotsford-Mission",
+      "Vancouver-Strathcona"
+    ]
+  }
 }

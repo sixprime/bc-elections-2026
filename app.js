@@ -1,10 +1,11 @@
 import { mountMaps, disposeMaps, findMyRiding, refreshMapIcons } from './map.js';
-import { candidateDirectory, candidateResults, partyDirectory } from './candidates.js';
+import { candidateDirectory, candidateResults, partyDirectory, ridingCandidates, ridingMember } from './candidates.js';
 import { renderPollChart, pollSeries } from './poll-chart.js';
 
 const root = document.getElementById('main');
 const state = { election: null, polls: null, query: '', filter: 'all', partyFilter: 'all' };
-const pollingPreview = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname) && new URLSearchParams(location.search).get('preview') === 'staging';
+const stagingPreview = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname) && new URLSearchParams(location.search).get('preview') === 'staging';
+const stagedFiles = new Set();
 const candidateFilters = { query: '', partyId: 'all', riding: 'all' };
 let candidateManifest;
 let candidateError = '';
@@ -21,6 +22,10 @@ const dot = (color, extra = '') => `<i class="party-dot ${extra}" style="--dot:$
 const panelHeader = (title, subtitle = '', label = '') => `<div class="card-header"><div><h2>${title}</h2>${subtitle ? `<p>${subtitle}</p>` : ''}</div>${label ? `<span class="source-tag">${label}</span>` : ''}</div>`;
 const sourceLink = (url, label='View source') => `<a class="action-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${label} ↗</a>`;
 const cardBottom = (note, link) => `<div class="card-bottom"><span class="small-note">${note}</span>${link}</div>`;
+
+function snapshotResponse(path) {
+  return fetch(`./data/${stagingPreview && stagedFiles.has(path) ? 'staging' : 'prod'}/${path}`);
+}
 
 function currentPolls() {
   const {snapshotDate, summaryWindowDays, releases} = state.polls;
@@ -47,14 +52,20 @@ function baselineRows(limit = 9) {
   return state.election.baseline2024.popularVote.slice(0,limit).map(x => `<div class="baseline-row"><span class="label">${dot(x.color || party(x.id).color)}${escapeHtml(x.name || party(x.id).ballot)}</span><div class="bar-track"><div class="bar-fill" style="--bar:${x.color || party(x.id).color};width:${Math.max(x.share/50*100,.6)}%"></div></div><b>${percentage(x.share,x.share < 1?2:1)}</b></div>`).join('');
 }
 function mapCard(explorer = false, selectedSlug = '') {
-  return `<section class="map-section map-card ${explorer ? 'expanded-map' : ''}"><div class="map-heading"><div><h2>British Columbia</h2><p>93 electoral districts</p></div>${!explorer ? '<a class="action-link" href="#ridings">Open explorer →</a>' : ''}</div><div class="map-tools"><div class="map-modes" role="group" aria-label="Basemap"><button type="button" data-map-style="street" aria-pressed="true" class="selected">Streets</button><button type="button" data-map-style="satellite" aria-pressed="false">Satellite</button><button type="button" data-map-style="terrain" aria-pressed="false">Terrain</button></div><div class="map-actions"><button type="button" class="map-icon-button" data-map-boundaries aria-pressed="true" aria-label="Show riding boundaries" title="Show riding boundaries"><i data-lucide="layers"></i></button><button type="button" class="map-icon-button" data-map-reset aria-label="Show all British Columbia" title="Show all British Columbia"><i data-lucide="maximize"></i></button><button type="button" class="map-icon-button" data-find-riding aria-label="Find my riding" title="Find my riding"><i data-lucide="locate-fixed"></i></button></div></div><div class="map-surface" data-riding-map data-selected-riding="${escapeHtml(selectedSlug)}" role="region" aria-label="Interactive map of British Columbia electoral districts" aria-busy="true"></div><div class="map-source"><span data-map-caption>Loading map...</span>${sourceLink(state.election.sources.boundaries,'Boundary source')}</div></section>`;
+  return `<section class="map-section map-card ${explorer ? 'expanded-map' : ''}">
+    <div class="map-heading"><div><h2>British Columbia</h2><p>2024 winning party · Historical election results</p></div>${!explorer ? '<a class="action-link" href="#ridings">Open explorer →</a>' : ''}</div>
+    <div class="map-tools"><div class="map-modes" role="group" aria-label="Basemap"><button type="button" data-map-style="street" aria-pressed="true" class="selected">Streets</button><button type="button" data-map-style="satellite" aria-pressed="false">Satellite</button><button type="button" data-map-style="terrain" aria-pressed="false">Terrain</button></div>
+    <div class="map-actions"><button type="button" class="map-icon-button" data-map-boundaries aria-pressed="true" aria-label="Show riding boundaries" title="Show riding boundaries"><i data-lucide="layers"></i></button><button type="button" class="map-icon-button" data-map-reset aria-label="Show all British Columbia" title="Show all British Columbia"><i data-lucide="maximize"></i></button><button type="button" class="map-icon-button" data-find-riding aria-label="Find my riding" title="Find my riding"><i data-lucide="locate-fixed"></i></button></div></div>
+    <div class="map-results-bar"><span>93 ridings</span><label class="map-results-toggle"><input type="checkbox" data-map-results-toggle checked disabled>Party overlay</label></div><div class="map-results-legend" data-map-results-legend role="list" aria-label="2024 winning parties"><span class="map-legend-loading">Loading results...</span></div>
+    <div class="map-surface" data-riding-map data-map-results data-selected-riding="${escapeHtml(selectedSlug)}" role="region" aria-label="British Columbia 2024 winning party map" aria-busy="true"></div>
+    <div class="map-source"><span data-map-caption>Loading map...</span><div class="map-source-links">${sourceLink(state.election.sources.districts,'2024 results')}${sourceLink(state.election.sources.boundaries,'Boundary source')}</div></div></section>`;
 }
 function closestCard() {
   const rows = Object.entries(state.election.featuredDistricts2024).map(([name,record]) => {
     const ranking = [...record.votes].sort((a,b)=>b.votes-a.votes);
     return {name,winner:ranking[0],margin:ranking[0].votes-ranking[1].votes,share:ranking[0].votes/record.validVotes*100};
-  }).sort((a,b)=>a.margin-b.margin);
-  return `<section class="card card-pad closest-card">${panelHeader('Closest ridings','A small preview from the official 2024 result','2024 RESULTS')}<div class="table-wrap"><table class="data-table"><thead><tr><th>Riding</th><th>Winning party</th><th>Vote margin</th><th>Vote share</th></tr></thead><tbody>${rows.map(x=>`<tr><td><a href="#riding/${slug(x.name)}">${escapeHtml(x.name)}</a></td><td class="strong">${dot(party(x.winner.party).color)}${escapeHtml(party(x.winner.party).ballot)}</td><td class="margin">${number.format(x.margin)}</td><td>${percentage(x.share)}</td></tr>`).join('')}</tbody></table></div>${cardBottom('These are past election results, not 2026 predictions.',`<a href="#ridings" class="action-link">View all 93 ridings →</a>`)}</section>`;
+  }).sort((a,b)=>a.margin-b.margin).slice(0,5);
+  return `<section class="card card-pad closest-card">${panelHeader('Closest ridings','Smallest margins in the loaded 2024 results','2024 RESULTS')}<div class="table-wrap"><table class="data-table"><thead><tr><th>Riding</th><th>Winning party</th><th>Vote margin</th><th>Vote share</th></tr></thead><tbody>${rows.map(x=>`<tr><td><a href="#riding/${slug(x.name)}">${escapeHtml(x.name)}</a></td><td class="strong">${dot(party(x.winner.party).color)}${escapeHtml(party(x.winner.party).ballot)}</td><td class="margin">${number.format(x.margin)}</td><td>${percentage(x.share)}</td></tr>`).join('')}</tbody></table></div>${cardBottom('These are past election results, not 2026 predictions.',`<a href="#ridings" class="action-link">View all 93 ridings →</a>`)}</section>`;
 }
 function recentCard() {
   const releases = state.polls.releases.slice(0,2);
@@ -67,7 +78,8 @@ function ridingRows() {
   const matches = state.election.districts.filter(name => name.toLowerCase().includes(state.query.toLowerCase().trim()) && (state.filter === 'all' || state.election.featuredDistricts2024[name]));
   return matches.length ? matches.map(name => {
     const record = state.election.featuredDistricts2024[name];
-    return `<button type="button" data-riding="${escapeHtml(slug(name))}"><span><span class="riding-name">${escapeHtml(name)}</span><span class="meta">${record ? '2024 result loaded' : '2024 result pending transcription'}</span></span><span class="chevron" aria-hidden="true">›</span></button>`;
+    const winner = record ? [...record.votes].sort((first, second) => second.votes - first.votes)[0] : null;
+    return `<button type="button" data-riding="${escapeHtml(slug(name))}"><span><span class="riding-name">${escapeHtml(name)}</span><span class="meta riding-winner">${winner ? `${dot(party(winner.party).color)}<span>2024 · ${escapeHtml(party(winner.party).ballot)}</span>` : '<span>2024 result not loaded</span>'}</span></span><span class="chevron" aria-hidden="true">›</span></button>`;
   }).join('') : `<div class="empty-state"><strong>No riding found</strong>Try a different name or switch to all ridings.</div>`;
 }
 function ridingExplorer() {
@@ -77,7 +89,17 @@ function districtDetail(name) {
   const record = state.election.featuredDistricts2024[name];
   const ranked = record ? [...record.votes].sort((a,b)=>b.votes-a.votes) : [];
   const margin = record ? ranked[0].votes-ranked[1].votes : null;
-  return `<div class="page-head"><div><p class="eyebrow"><a href="#ridings">← All ridings</a> / riding detail</p><h1>${escapeHtml(name)}</h1><p>British Columbia · 2026 election · 2024 results shown for context.</p></div><span class="snapshot-pill">${record?'2024 verified':'Data pending'}</span></div><div class="simple-layout"><div class="poll-left"><section class="card card-pad">${panelHeader(record?'2024 final result':'2024 result not yet loaded','Official Elections BC source, not a 2026 projection','HISTORICAL DATA')}${record?`<div class="stat-grid"><div class="stat-tile"><strong class="stat-number">${escapeHtml(party(ranked[0].party).ballot)}</strong><span>winning affiliation</span></div><div class="stat-tile"><strong class="stat-number">${number.format(margin)}</strong><span>vote margin</span></div><div class="stat-tile"><strong class="stat-number">${number.format(record.validVotes)}</strong><span>valid votes</span></div></div><div class="detail-vote">${ranked.map(v=>`<div class="detail-vote-line"><span>${dot(party(v.party).color)}${escapeHtml(v.name)} <span class="subtle">· ${escapeHtml(party(v.party).ballot)}</span></span><strong>${percentage(v.votes/record.validVotes*100,2)}</strong><div class="bar-track"><div class="bar-fill" style="--bar:${party(v.party).color};width:${v.votes/record.validVotes*100}%"></div></div></div>`).join('')}</div>`:`<div class="empty-state"><strong>Riding name verified</strong>Its detailed result has not been transcribed into this prototype. Use the official Statement of Votes until it has been checked.</div>`}${cardBottom('Final 2024 count · no 2026 riding estimate.',sourceLink(state.election.sources.districts,'Official results'))}</section><section class="card card-pad">${panelHeader('What changed in this riding?','A place for attributed local updates','COMING NEXT')}<div class="info-strip"><span class="info-icon">i</span><span>Only source-backed changes will appear here. We have not inferred a 2026 riding outcome from provincial polls.</span></div></section></div><div class="poll-right"><section class="card card-pad">${panelHeader('2026 candidate filings','Nominations close October 3 at 1 p.m. PT','OFFICIAL SOURCE')}<p class="small-note" style="font-size:12px;margin:0 0 16px">Elections BC publishes accepted nominations. A party registration or public announcement alone does not confirm a ballot candidate.</p>${sourceLink(state.election.sources.candidates,'Check current candidates')}</section><section class="card card-pad">${panelHeader('About this riding','Source-first detail view','PROTOTYPE')}<p class="small-note" style="font-size:12px;margin:0 0 14px">Boundary geometry and 2026 candidate records are planned as locally processed files. The static site can show them after review, without a server.</p>${sourceLink(state.election.sources.boundaries,'Official boundaries')}</section></div></div>`;
+  return `<div class="page-head"><div><p class="eyebrow"><a href="#ridings">← All ridings</a> / riding detail</p><h1>${escapeHtml(name)}</h1><p>British Columbia · 2026 election · 2024 results shown for context.</p></div><span class="snapshot-pill">${record?'2024 verified':'Result unavailable'}</span></div>
+    <div class="simple-layout"><div class="poll-left"><section class="card card-pad">${panelHeader(record?'2024 final result':'2024 result unavailable','Official Elections BC source, not a 2026 projection','HISTORICAL DATA')}
+    ${record ? `<div class="stat-grid"><div class="stat-tile"><strong class="stat-number">${escapeHtml(party(ranked[0].party).ballot)}</strong><span>winning affiliation</span></div><div class="stat-tile"><strong class="stat-number">${number.format(margin)}</strong><span>vote margin</span></div><div class="stat-tile"><strong class="stat-number">${number.format(record.validVotes)}</strong><span>valid votes</span></div></div>
+    ${Number.isFinite(record.turnout) ? `<p class="small-note">2024 turnout: ${percentage(record.turnout,2)} · ${number.format(record.registeredVoters)} registered voters</p>` : ''}
+    <div class="detail-vote">${ranked.map(vote=>`<div class="detail-vote-line"><span>${dot(party(vote.party).color)}${escapeHtml(vote.name)} <span class="subtle">· ${escapeHtml(party(vote.party).ballot)}</span></span><strong>${number.format(vote.votes)} · ${percentage(vote.votes/record.validVotes*100,2)}</strong><div class="bar-track"><div class="bar-fill" style="--bar:${party(vote.party).color};width:${vote.votes/record.validVotes*100}%"></div></div></div>`).join('')}</div>` : '<p class="small-note">No detailed result is included for this riding in this snapshot.</p>'}
+    ${cardBottom('Final 2024 count · no 2026 riding estimate.',sourceLink(record?.source || state.election.sources.districts,'Official results'))}</section></div>
+    <div class="poll-right"><section class="card card-pad">${panelHeader('MLA at dissolution','43rd Parliament','LEGISLATURE RECORD')}
+    <div id="ridingMember" data-riding="${escapeHtml(name)}">${ridingMember(candidateManifest,name,candidateError)}</div></section>
+    <section class="card card-pad">${panelHeader('2026 candidates','Nominations close October 3 at 1 p.m. PT','SOURCE-BACKED')}
+    <div id="ridingCandidates" data-riding="${escapeHtml(name)}">${ridingCandidates(state.election,candidateManifest,name,candidateError)}</div>
+    ${cardBottom('Party announcements are not accepted nominations.',sourceLink(state.election.sources.candidates,'Elections BC filings'))}</section></div></div>`;
 }
 function pollChart() {
   const firms = [...new Set(state.polls.releases.map(release => release.pollster))].sort();
@@ -85,8 +107,7 @@ function pollChart() {
 }
 function polls() {
   const list = pollSeries(state.polls, pollOptions).releases.sort((first, second) => second.released.localeCompare(first.released));
-  return `<div class="page-head"><div><p class="eyebrow">Original pollster releases</p><h1>Professional polls</h1><p>Published voting intention · Historical observations and current averages</p></div><span class="snapshot-pill">${pollingPreview ? 'STAGING / Not published' : `Prod / ${readableDate(state.polls.snapshotDate)}`}</span></div>
-    ${pollingPreview ? '<div class="poll-review-banner" role="status">Staging review. These additions have not been approved for production.</div>' : ''}
+  return `<div class="page-head"><div><p class="eyebrow">Original pollster releases</p><h1>Professional polls</h1><p>Published voting intention · Historical observations and current averages</p></div><span class="snapshot-pill">${stagedFiles.has('polls.json') ? 'STAGING / Not published' : `Prod / ${readableDate(state.polls.snapshotDate)}`}</span></div>
     <section class="poll-history">${panelHeader('Voting intention over time','Source-linked observations / same-pollster series',`${list.length} OF ${state.polls.releases.length} RELEASES`)}${pollChart()}</section>
     <div class="poll-layout"><section class="card card-pad">${panelHeader('Poll release archive','Fieldwork, question base and sources','PRIMARY SOURCES')}<div class="release-list">
     ${list.map(release => `<article class="release"><div class="release-top"><strong>${escapeHtml(release.pollster)}</strong><time datetime="${release.released}">${readableDate(release.released,{month:'short',day:'numeric',year:'numeric'})}</time></div>
@@ -104,18 +125,23 @@ function candidates() {
 }
 async function loadCandidates() {
   if (candidateRequest || candidateManifest || candidateError) return;
-  candidateRequest = fetch('./data/prod/assets/manifest.json');
+  candidateRequest = snapshotResponse('assets/manifest.json');
   try {
     const response = await candidateRequest;
     if (!response.ok) throw new Error('The candidate data could not be loaded.');
     const manifest = await response.json();
     if (!Array.isArray(manifest.candidates) || !Array.isArray(manifest.assets) || !Array.isArray(manifest.parties)) throw new Error('The candidate catalogue is incomplete.');
+    for (const asset of manifest.assets) asset.staged = stagingPreview && stagedFiles.has(asset.web?.path);
     candidateManifest = manifest;
   } catch (error) {
     candidateError = error.message;
   } finally {
     candidateRequest = null;
     if (['#candidates', '#parties'].includes(location.hash)) render();
+    const panel = document.getElementById('ridingCandidates');
+    if (panel) panel.innerHTML = ridingCandidates(state.election,candidateManifest,panel.dataset.riding,candidateError);
+    const memberPanel = document.getElementById('ridingMember');
+    if (memberPanel) memberPanel.innerHTML = ridingMember(candidateManifest,memberPanel.dataset.riding,candidateError);
   }
 }
 function ballot() {
@@ -126,7 +152,7 @@ function methodology() {
   return `<div class="page-head"><div><p class="eyebrow">September 25 snapshot</p><h1>Sources & methodology</h1></div></div>
     <div class="simple-layout"><section class="card card-pad prose-card">
     ${panelHeader('Election evidence', 'Independent and unofficial', 'SOURCES')}
-    <h3>Election records</h3><p>Official 2024 provincial totals and three transcribed riding results come from Elections BC's final Statement of Votes. The party directory follows the registered-party PDF dated September 25, 2026. Election Day comes from Elections BC. Past results are not current projections.</p>
+    <h3>Election records</h3><p>Official 2024 provincial totals and ${Object.keys(state.election.featuredDistricts2024).length} riding results come from Elections BC's final Statement of Votes. Complete riding imports are checked against the report's independent district totals, party vote totals and seat totals. The party directory follows the registered-party PDF dated September 25, 2026. Election Day comes from Elections BC. Past results are not current projections.</p>
     <h3>Polling summary</h3><p>${state.polls.releases.length} survey records come from the original pollsters. The current summary takes the latest release from each distinct pollster in the ${state.polls.summaryWindowDays} days ending ${readableDate(state.polls.snapshotDate)}. Values are arithmetic means of reported party shares. Ranges are the smallest and largest release values, <strong>not</strong> confidence intervals. At least two pollsters must report a party separately for it to appear in the summary.</p>
     <p>Older releases remain in the archive without counting the same firm twice in the current mean. Grouped responses are never divided among named parties. Chart lines connect observations from the same pollster, with gaps for unreported values; question bases remain listed on each release. These lines are descriptive, not a fitted polling average.</p>
     <p>The optional dashed election-day continuation holds the recent average unchanged. This no-change scenario is not a forecast, confidence interval or seat projection. Production uses approved data only; the explicit localhost staging preview is for review.</p>
@@ -159,7 +185,7 @@ function route() {
 function render() {
   if (!state.election || !state.polls) return;
   disposeMaps();
-  const view=route();root.innerHTML=view.html;
+  const view=route();root.innerHTML=(stagingPreview ? '<div class="poll-review-banner" role="status">Staging review. Not published.</div>' : '')+view.html;
   if (location.hash.startsWith('#riding/')) {
     const geography = document.createElement('div');
     geography.className = 'detail-geography';
@@ -168,8 +194,8 @@ function render() {
   }
   document.querySelectorAll('[data-nav]').forEach(link=>{const active=link.dataset.nav===view.section;link.classList.toggle('active',active);if(active)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current')});
   document.title=`${view.section==='province'?'Overview':view.section.charAt(0).toUpperCase()+view.section.slice(1)} · BC Vote 2026`;
-  mountMaps();
-  if (['candidates', 'parties'].includes(view.section)) loadCandidates();
+  mountMaps(state.election);
+  if (['candidates', 'parties'].includes(view.section) || location.hash.startsWith('#riding/')) loadCandidates();
 }
 function updateCountdown() {
   if (!state.election)return;
@@ -262,7 +288,14 @@ document.addEventListener('change', event => {
 });
 window.addEventListener('hashchange',()=>{render();window.scrollTo({top:0,behavior:'instant'})});
 try {
-  const [electionResponse,pollsResponse]=await Promise.all([fetch('./data/prod/election.json'),fetch(pollingPreview ? './data/staging/polls.json' : './data/prod/polls.json')]);
+  if (stagingPreview) {
+    const reviewResponse = await fetch('./data/staging/_diff.json');
+    if (!reviewResponse.ok) throw Error('No staging review is available.');
+    const review = await reviewResponse.json();
+    if (!Array.isArray(review.changes)) throw Error('The staging review is invalid.');
+    for (const change of review.changes) if (change.status !== 'removed') stagedFiles.add(change.path);
+  }
+  const [electionResponse,pollsResponse]=await Promise.all([snapshotResponse('election.json'),snapshotResponse('polls.json')]);
   if(!electionResponse.ok||!pollsResponse.ok)throw Error('One of the data files could not be loaded.');
   [state.election,state.polls]=await Promise.all([electionResponse.json(),pollsResponse.json()]);
   document.getElementById('snapshotStatus').textContent=`Source snapshot · ${readableDate(state.election.snapshotDate,{month:'long',day:'numeric',year:'numeric'})} PT`;

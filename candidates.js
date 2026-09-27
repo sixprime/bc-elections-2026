@@ -2,7 +2,7 @@ const collator = new Intl.Collator('en-CA', { sensitivity: 'base', numeric: true
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
 const normalize = value => String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('en-CA');
 const sourceLink = (url, label) => /^https?:\/\//.test(url || '') ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${label}</a>` : '';
-const imageUrl = asset => asset?.web?.path?.startsWith('assets/') && !asset.web.path.includes('..') ? new URL(`./data/prod/${asset.web.path}`, import.meta.url).href : '';
+const imageUrl = asset => asset?.web?.path?.startsWith('assets/') && !asset.web.path.includes('..') ? new URL(`./data/${asset.staged ? 'staging' : 'prod'}/${asset.web.path}`, import.meta.url).href : '';
 
 function partyLogo(group, manifest, byId) {
   const assets = (manifest.parties.find(item => item.id === group.id)?.assetIds || []).map(id => byId.get(id)).filter(asset => imageUrl(asset));
@@ -22,8 +22,8 @@ export function candidateResults(election, manifest, filters) {
   const visible = manifest.candidates.filter(candidate => {
     const group = groups.find(item => item.id === candidate.partyId);
     return (filters.partyId === 'all' || candidate.partyId === filters.partyId) &&
-      (filters.riding === 'all' || candidate.district === filters.riding) &&
-      normalize(`${candidate.name} ${candidate.district} ${group.ballot}`).includes(query);
+      (filters.riding === 'all' || (filters.riding === 'unresolved' ? candidate.district === null : candidate.district === filters.riding)) &&
+      normalize(`${candidate.name} ${candidate.district || candidate.reportedDistrict || ''} ${group.ballot}`).includes(query);
   });
   const navigation = `<nav id="candidatePartyNavigation" class="candidate-party-nav" aria-label="Jump to party" tabindex="-1">${groups.map(group => {
     const count = visible.filter(candidate => candidate.partyId === group.id).length;
@@ -40,7 +40,7 @@ export function candidateResults(election, manifest, filters) {
         const accepted = candidate.status === 'accepted';
         return `<article class="candidate-card" data-candidate-id="${escapeHtml(candidate.id)}">
           <div class="candidate-portrait">${portrait ? `<img src="${escapeHtml(imageUrl(portrait))}" alt="${escapeHtml(candidate.name)}" width="320" height="400" loading="lazy" decoding="async">` : '<span>Portrait unavailable</span>'}</div>
-          <div class="candidate-card-body"><h3>${escapeHtml(candidate.name)}</h3><a class="candidate-riding" href="#riding/${escapeHtml(candidate.districtSlug)}">${escapeHtml(candidate.district)}</a>
+          <div class="candidate-card-body"><h3>${escapeHtml(candidate.name)}</h3>${candidate.districtSlug ? `<a class="candidate-riding" href="#riding/${escapeHtml(candidate.districtSlug)}">${escapeHtml(candidate.district)}</a>` : `<span class="candidate-riding candidate-unresolved">Riding unconfirmed</span><p class="small-note">Source lists: ${escapeHtml(candidate.reportedDistrict)}.</p>`}
           <span class="candidate-status ${accepted ? 'accepted' : ''}">${accepted ? 'Accepted nomination' : 'Party-announced'}</span>
           <div class="candidate-card-links">${sourceLink(candidate.profileUrl || candidate.sourcePage, 'Profile & photo source')}${sourceLink(candidate.statusSource, 'Nomination source')}</div></div>
         </article>`;
@@ -58,8 +58,42 @@ export function candidateDirectory(election, manifest, filters, error = '') {
   return `${heading}<p class="candidate-snapshot-note">${election.parties.length} registered parties · Accepted nominations and party announcements are labelled separately. This is not the final ballot.</p>
     <div class="candidate-toolbar"><label><span>Candidate or riding</span><input id="candidateSearch" type="search" value="${escapeHtml(filters.query)}" placeholder="Search by name or riding" autocomplete="off"></label>
     <label><span>Party</span><select id="candidateParty"><option value="all">All parties (${parties.length})</option>${parties.map(group => `<option value="${escapeHtml(group.id)}" ${filters.partyId === group.id ? 'selected' : ''}>${escapeHtml(group.ballot)} (${manifest.candidates.filter(candidate => candidate.partyId === group.id).length})</option>`).join('')}</select></label>
-    <label><span>Riding</span><select id="candidateRiding"><option value="all">All ridings</option>${[...election.districts].sort(collator.compare).map(name => `<option value="${escapeHtml(name)}" ${filters.riding === name ? 'selected' : ''}>${escapeHtml(name)}</option>`).join('')}</select></label></div>
+    <label><span>Riding</span><select id="candidateRiding"><option value="all">All ridings</option>${manifest.candidates.some(candidate => candidate.district === null) ? `<option value="unresolved" ${filters.riding === 'unresolved' ? 'selected' : ''}>Riding unconfirmed</option>` : ''}${[...election.districts].sort(collator.compare).map(name => `<option value="${escapeHtml(name)}" ${filters.riding === name ? 'selected' : ''}>${escapeHtml(name)}</option>`).join('')}</select></label></div>
     <div id="candidateResults">${candidateResults(election, manifest, filters)}</div>`;
+}
+
+export function ridingMember(manifest, district, error = '') {
+  if (error) return `<p role="alert">${escapeHtml(error)}</p><button type="button" class="secondary-button" data-candidate-retry>Retry</button>`;
+  if (!manifest) return '<p class="small-note" role="status">Loading MLA profile...</p>';
+  const member = manifest.members?.find(record => record.district === district);
+  if (!member) return `<p class="small-note">${manifest.memberSnapshot?.notListedDistricts.includes(district) ? 'The Legislature lists no active member for this riding at dissolution.' : 'No verified MLA profile is included for this riding in this snapshot.'}</p>`;
+  const portrait = member.assetIds.map(id => manifest.assets.find(asset => asset.id === id)).find(asset => asset?.kind === 'portrait' && imageUrl(asset));
+  const asOf = new Intl.DateTimeFormat('en-CA', { dateStyle: 'medium', timeZone: 'UTC' }).format(new Date(`${manifest.memberSnapshot.asOf}T12:00:00Z`));
+  return `<article class="riding-member" data-member-id="${escapeHtml(member.id)}">
+    ${portrait ? `<img class="riding-member-photo" src="${escapeHtml(imageUrl(portrait))}" alt="${escapeHtml(member.name)}" width="112" height="140" loading="lazy">` : '<span class="riding-member-photo">Portrait unavailable</span>'}
+    <div class="riding-member-info"><h3>${escapeHtml(member.name)}</h3><span>${escapeHtml(member.affiliation)}</span><p class="small-note">At dissolution · ${escapeHtml(asOf)}</p>
+    <div class="candidate-card-links">${sourceLink(member.profileUrl, 'MLA profile')}${portrait ? sourceLink(portrait.sourcePage, 'Photo source') : ''}</div>
+    ${portrait?.reuse?.licenseUrl ? `<p class="small-note">${escapeHtml(portrait.credit)} ${sourceLink(portrait.reuse.licenseUrl, escapeHtml(portrait.reuse.license))}</p>` : ''}</div>
+  </article>`;
+}
+
+export function ridingCandidates(election, manifest, district, error = '') {
+  if (error) return `<p role="alert">${escapeHtml(error)}</p><button type="button" class="secondary-button" data-candidate-retry>Retry</button>`;
+  if (!manifest) return '<p class="small-note" role="status">Loading candidates...</p>';
+  const candidates = manifest.candidates.filter(candidate => candidate.district === district).sort((first, second) => collator.compare(first.name, second.name));
+  if (!candidates.length) return '<p class="small-note">No candidates recorded for this riding in this snapshot. This is not confirmation that nobody is running.</p>';
+  const byId = new Map(manifest.assets.map(asset => [asset.id, asset]));
+  return `<div class="riding-candidate-list">${candidates.map(candidate => {
+    const group = election.parties.find(party => party.id === candidate.partyId);
+    const portrait = candidate.assetIds.map(id => byId.get(id)).find(asset => asset?.kind === 'portrait' && imageUrl(asset));
+    const accepted = candidate.status === 'accepted';
+    return `<article class="riding-candidate" data-candidate-id="${escapeHtml(candidate.id)}">
+      ${portrait ? `<img class="riding-candidate-photo" src="${escapeHtml(imageUrl(portrait))}" alt="${escapeHtml(candidate.name)}" width="68" height="85" loading="lazy">` : '<span class="riding-candidate-photo">Portrait unavailable</span>'}
+      <div class="riding-candidate-info"><h3>${escapeHtml(candidate.name)}</h3><span class="riding-candidate-party">${escapeHtml(group?.ballot || candidate.partyId)}</span>
+      <span class="candidate-status ${accepted ? 'accepted' : ''}">${accepted ? 'Accepted nomination' : 'Party-announced'}</span>
+      <div class="candidate-card-links">${sourceLink(candidate.profileUrl || candidate.sourcePage, 'Profile')}${sourceLink(candidate.statusSource, 'Nomination source')}</div></div>
+    </article>`;
+  }).join('')}</div>`;
 }
 
 export function partyDirectory(election, manifest, error = '') {

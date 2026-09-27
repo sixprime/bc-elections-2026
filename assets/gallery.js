@@ -11,6 +11,7 @@ let manifest;
 function render() {
   const byId = new Map(manifest.assets.map(asset => [asset.id, asset]));
   const parties = new Map(manifest.parties.map(party => [party.id, party.name]));
+  parties.set('independent', 'Independent');
   const collection = collectionFilter.value;
   const query = search.value.trim().toLocaleLowerCase('en-CA');
   let entries;
@@ -22,6 +23,16 @@ function render() {
       statusSource: candidate.statusSource,
       asset: candidate.assetIds.map(id => byId.get(id)).find(asset => asset?.web)
     }));
+  } else if (collection === 'members') {
+    entries = (manifest.members || []).map(member => ({
+      name: member.name,
+      partyId: manifest.parties.find(party => party.name === member.affiliation)?.id || 'independent',
+      detail: `${member.district} / ${manifest.memberSnapshot.asOf}`,
+      status: 'MLA at dissolution',
+      source: member.profileUrl,
+      statusSource: manifest.memberSnapshot.source,
+      asset: member.assetIds.map(id => byId.get(id)).find(asset => asset?.web)
+    }));
   } else if (collection === 'gaps') {
     entries = manifest.gaps.map(gap => ({ name: gap.candidate || gap.label || parties.get(gap.partyId) || 'Source unavailable', partyId: gap.partyId, detail: gap.reason, source: gap.sourcePage, status: 'Needs follow-up' }));
   } else {
@@ -32,12 +43,12 @@ function render() {
     }
   }
   const visible = entries.filter(entry => (partyFilter.value === 'all' || entry.partyId === partyFilter.value) && `${entry.name} ${entry.detail} ${parties.get(entry.partyId)}`.toLocaleLowerCase('en-CA').includes(query));
-  document.getElementById('assetCount').textContent = `${visible.length} ${collection === 'portraits' ? 'candidates' : 'items'}`;
+  document.getElementById('assetCount').textContent = `${visible.length} ${collection === 'portraits' ? 'candidates' : collection === 'members' ? 'MLA profiles' : 'items'}`;
   grid.innerHTML = visible.length ? visible.map(entry => {
     const image = entry.asset?.web;
     const imageMarkup = image ? `<img src="${escapeHtml(localUrl(image.path))}" alt="${escapeHtml(entry.name)}" width="${image.width}" height="${image.height}" loading="lazy" decoding="async">` : '<span class="asset-placeholder">No preview</span>';
     const original = entry.asset?.original;
-    return `<article class="asset-item">${collection !== 'gaps' ? `<div class="asset-image ${collection === 'branding' ? 'branding' : ''}">${imageMarkup}</div>` : ''}<div class="asset-copy"><p class="asset-party">${escapeHtml(parties.get(entry.partyId))}</p><h2>${escapeHtml(entry.name)}</h2><p>${escapeHtml(entry.detail)}</p><span class="asset-status">${escapeHtml(entry.status)}</span><div class="asset-links">${externalLink(entry.source, 'Source')}${entry.statusSource && entry.statusSource !== entry.source ? externalLink(entry.statusSource, 'Status source') : ''}${original ? `<a href="${escapeHtml(localUrl(original.path))}" download>Original</a>` : ''}</div></div></article>`;
+    return `<article class="asset-item">${collection !== 'gaps' ? `<div class="asset-image ${collection === 'branding' ? 'branding' : ''}">${imageMarkup}</div>` : ''}<div class="asset-copy"><p class="asset-party">${escapeHtml(parties.get(entry.partyId))}</p><h2>${escapeHtml(entry.name)}</h2><p>${escapeHtml(entry.detail)}</p><span class="asset-status">${escapeHtml(entry.status)}</span>${entry.asset?.reuse?.licenseUrl ? `<p>${escapeHtml(entry.asset.credit)} ${externalLink(entry.asset.reuse.licenseUrl, escapeHtml(entry.asset.reuse.license))}</p>` : ''}<div class="asset-links">${externalLink(entry.source, 'Source')}${entry.statusSource && entry.statusSource !== entry.source ? externalLink(entry.statusSource, 'Status source') : ''}${original ? `<a href="${escapeHtml(localUrl(original.path))}" download>Original</a>` : ''}</div></div></article>`;
   }).join('') : '<div class="asset-empty">No matching assets</div>';
 }
 
@@ -49,6 +60,12 @@ try {
     const option = document.createElement('option');
     option.value = party.id;
     option.textContent = party.name;
+    partyFilter.append(option);
+  }
+  if (manifest.members?.some(member => member.affiliation === 'Independent')) {
+    const option = document.createElement('option');
+    option.value = 'independent';
+    option.textContent = 'Independent';
     partyFilter.append(option);
   }
   const date = new Intl.DateTimeFormat('en-CA', { dateStyle: 'medium' }).format(new Date(manifest.collectedAt));

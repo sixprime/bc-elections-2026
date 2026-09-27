@@ -37,6 +37,15 @@ async function saveJson(base, path, value) {
   await save(base, path, `${JSON.stringify(value, null, 2)}\n`);
 }
 
+function fetchSource(source) {
+  if (source.requestBody && (typeof source.requestBody.query !== 'string' || !/^\s*query\b/.test(source.requestBody.query))) throw new Error('Only registered read-only GraphQL queries are supported.');
+  return fetch(source.url, {
+    signal: AbortSignal.timeout(60000),
+    headers: { 'User-Agent': 'BCVote2026-DataUpdate/1.0 (+https://sixprime.github.io/bc-elections-2026/)', ...(source.requestBody ? { 'Content-Type': 'application/json' } : {}) },
+    ...(source.requestBody ? { method: 'POST', body: JSON.stringify(source.requestBody) } : {})
+  });
+}
+
 async function files(base, prefix = '') {
   let entries;
   try { entries = await readdir(new URL(prefix, base), { withFileTypes: true }); } catch (error) {
@@ -90,16 +99,16 @@ async function stage(group) {
   for (const source of selected) {
     try {
       if (!source.url.startsWith('https://') && !(source.allowInsecureHttp && source.url.startsWith('http://'))) throw new Error('Source must use HTTPS unless an HTTP-only source was explicitly reviewed.');
-      const response = await fetch(source.url, {
-        signal: AbortSignal.timeout(60000),
-        headers: { 'User-Agent': 'BCVote2026-DataUpdate/1.0 (+https://sixprime.github.io/bc-elections-2026/)' }
-      });
+      const response = await fetchSource(source);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const bytes = Buffer.from(await response.arrayBuffer());
       if (!bytes.length || bytes.length > 64 * 1024 * 1024) throw new Error('Source is empty or exceeds 64 MB.');
       const contentType = response.headers.get('content-type') || '';
       if (source.path.endsWith('.pdf') && !bytes.subarray(0, 5).equals(Buffer.from('%PDF-'))) throw new Error('Expected a PDF, not a replacement page.');
-      if (/\.(geojson|json)$/.test(source.path)) JSON.parse(bytes.toString('utf8'));
+      if (/\.(geojson|json)$/.test(source.path)) {
+        const value = JSON.parse(bytes.toString('utf8'));
+        if (source.requestBody && value.errors?.length) throw new Error('The source query returned errors.');
+      }
       if (source.originalPath && contentType.includes('text/html')) throw new Error('Expected artwork, not an HTML error page.');
       const previous = await optionalRead(file(current, source.path));
       const original = source.originalPath ? await optionalRead(file(current, source.originalPath)) : null;
@@ -132,24 +141,30 @@ async function addSource(id, url) {
   if (!/^[a-z0-9-]+$/.test(id || '') || !url?.startsWith('https://')) throw new Error('Use source <lowercase-id> <https-url> for an open staging review.');
   const review = await json(staging, '_review.json');
   if (review.fetched.some(source => source.id === id)) throw new Error(`Source already recorded: ${id}`);
-  const response = await fetch(url, { signal: AbortSignal.timeout(60000), headers: { 'User-Agent': 'BCVote2026-DataUpdate/1.0 (+https://sixprime.github.io/bc-elections-2026/)' } });
+  const registry = await json(new URL('data/', root), 'sources.json');
+  const registered = registry.sources.find(source => source.id === id && source.url === url);
+  const response = await fetchSource(registered || { url });
   if (!response.ok) throw new Error(`Source download failed: HTTP ${response.status}`);
   const bytes = Buffer.from(await response.arrayBuffer());
   if (!bytes.length || bytes.length > 64 * 1024 * 1024) throw new Error('Source is empty or exceeds 64 MB.');
   const contentType = response.headers.get('content-type') || '';
   const pdf = new URL(url).pathname.endsWith('.pdf');
   if (pdf && !bytes.subarray(0, 5).equals(Buffer.from('%PDF-'))) throw new Error('Expected a PDF, not a replacement page.');
-  const path = `sources/polls/${id}.${pdf ? 'pdf' : 'html.txt'}`;
+  const group = registered?.group || (groups.includes(review.group) ? review.group : 'polls');
+  const path = registered?.path || `sources/${group}/${id}.${pdf ? 'pdf' : 'html.txt'}`;
+  if (registered?.requestBody && JSON.parse(bytes.toString('utf8')).errors?.length) throw new Error('The source query returned errors.');
   if (await optionalRead(file(staging, path))) throw new Error(`Staged file already exists: ${path}`);
   await save(staging, path, bytes);
-  review.fetched.push({ id, group: 'polls', url, path, finalUrl: response.url, contentType, fetchedAt: new Date().toISOString(), bytes: bytes.length, sha256: hash(bytes), previousSha256: null, changed: true });
+  review.fetched.push({ id, group, url, path, ...(registered?.requestBody ? { method: 'POST', requestBody: registered.requestBody } : {}), finalUrl: response.url, contentType, fetchedAt: new Date().toISOString(), bytes: bytes.length, sha256: hash(bytes), previousSha256: null, changed: true });
   await saveJson(staging, '_review.json', review);
   console.log(`Added source to staging: ${path}. Prod was not changed.`);
 }
 
 async function differences() {
   const changes = [];
+  const removed = new Set(await reviewRemovals());
   for (const path of (await files(staging)).filter(path => !['_review.json', '_diff.json'].includes(path))) {
+    if (removed.has(path)) throw new Error(`A removed file also has a staged replacement: ${path}`);
     const next = await readFile(file(staging, path));
     const previous = await optionalRead(file(current, path));
     if (previous && hash(next) === hash(previous)) continue;
@@ -157,13 +172,48 @@ async function differences() {
     if (['polls.json', 'election.json', 'assets/manifest.json'].includes(path)) {
       const before = previous ? JSON.parse(previous.toString('utf8')) : {};
       const after = JSON.parse(next.toString('utf8'));
-      for (const key of ['releases', 'parties', 'candidates', 'assets']) {
+      for (const key of ['releases', 'parties', 'candidates', 'members', 'assets']) {
         if (Array.isArray(after[key])) change[key] = recordChanges(before[key], after[key], 'id');
+      }
+      if (after.featuredDistricts2024) {
+        const records = snapshot => Object.entries(snapshot.featuredDistricts2024 || {}).map(([name, result]) => ({ id: name, ...result }));
+        change.results2024 = recordChanges(records(before), records(after), 'id');
       }
     }
     changes.push(change);
   }
+  for (const path of removed) {
+    if (!/^assets\/(originals|web|sources)\//.test(path)) throw new Error(`Not an asset cleanup path: ${path}`);
+    const previous = await readFile(file(current, path));
+    changes.push({ path, status: 'removed', beforeBytes: previous.length, afterBytes: 0 });
+  }
   return changes;
+}
+
+async function reviewRemovals() {
+  const bytes = await optionalRead(file(staging, '_review.json'));
+  const removed = bytes ? JSON.parse(bytes.toString('utf8')).removals || [] : [];
+  if (!Array.isArray(removed) || removed.some(path => typeof path !== 'string')) throw new Error('Invalid staged removals.');
+  return removed;
+}
+
+async function pruneAssets() {
+  const review = await json(staging, '_review.json');
+  const manifest = await snapshotJson('assets/manifest.json');
+  const referenced = new Set(manifest.assets.flatMap(asset => [asset.original?.path, asset.web?.path, `assets/sources/${asset.id}.json`]).filter(Boolean));
+  const sourceRecords = new Set(['assets/sources/accepted-candidates.json', 'assets/sources/registered-parties.json']);
+  const unused = (await files(current)).filter(path => {
+    if (referenced.has(path) || sourceRecords.has(path)) return false;
+    return /^assets\/(originals|web)\//.test(path) || /^assets\/sources\/[^/]+\.json$/.test(path);
+  });
+  for (const path of unused) {
+    if (hash(await readFile(file(current, path))) !== review.baseline[path]) throw new Error(`Asset changed since the review began: ${path}`);
+    if (await optionalRead(file(staging, path))) throw new Error(`Review the unreferenced staged asset first: ${path}`);
+  }
+  review.removals = [...new Set([...(review.removals || []), ...unused])].sort();
+  await saveJson(staging, '_review.json', review);
+  await validate();
+  await compare();
 }
 
 async function compare() {
@@ -182,8 +232,36 @@ async function snapshotJson(path) {
 async function validate() {
   const election = await snapshotJson('election.json');
   const polls = await snapshotJson('polls.json');
+  const removed = new Set(await reviewRemovals());
   if (!Array.isArray(election.districts) || election.districts.length !== election.districtCount || new Set(election.districts).size !== election.districtCount) throw new Error('District count or identities are invalid.');
   if (!Array.isArray(election.parties) || !election.parties.length) throw new Error('The party register is empty.');
+  const partyIds = new Set([...election.parties.map(party => party.id), 'independent', 'unaffiliated']);
+  const results = Object.entries(election.featuredDistricts2024 || {});
+  const partyVotes = new Map();
+  const seats = new Map();
+  let totalVotes = 0;
+  let resultCandidates = 0;
+  for (const [district, result] of results) {
+    if (!election.districts.includes(district) || !Array.isArray(result.votes) || result.votes.length < 2 || !Number.isInteger(result.validVotes) || result.validVotes <= 0) throw new Error(`Invalid 2024 result: ${district}`);
+    const names = new Set();
+    let districtVotes = 0;
+    for (const candidate of result.votes) {
+      if (!candidate.name || names.has(candidate.name) || !partyIds.has(candidate.party) || !Number.isInteger(candidate.votes) || candidate.votes < 0) throw new Error(`Invalid 2024 candidate: ${district}`);
+      names.add(candidate.name);
+      districtVotes += candidate.votes;
+      partyVotes.set(candidate.party, (partyVotes.get(candidate.party) || 0) + candidate.votes);
+    }
+    if (districtVotes !== result.validVotes) throw new Error(`2024 candidate totals disagree: ${district}`);
+    const winner = [...result.votes].sort((first, second) => second.votes - first.votes)[0].party;
+    seats.set(winner, (seats.get(winner) || 0) + 1);
+    totalVotes += districtVotes;
+    resultCandidates += result.votes.length;
+  }
+  if (election.resultsCoverage2024?.complete) {
+    if (results.length !== election.districtCount || resultCandidates !== election.resultsCoverage2024.candidates || totalVotes !== election.baseline2024.validVotes) throw new Error('Complete 2024 coverage does not match provincial totals.');
+    for (const party of election.baseline2024.popularVote) if (partyVotes.get(party.id) !== party.votes) throw new Error(`2024 party totals disagree: ${party.id}`);
+    for (const party of election.baseline2024.seats) if (seats.get(party.id) !== party.seats) throw new Error(`2024 seat totals disagree: ${party.id}`);
+  }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(polls.snapshotDate) || !Number.isFinite(polls.summaryWindowDays) || polls.summaryWindowDays <= 0) throw new Error('Invalid poll snapshot date or summary window.');
   const ids = new Set();
   for (const poll of polls.releases) {
@@ -196,8 +274,51 @@ async function validate() {
     if (!shares.length || shares.some(share => !Number.isFinite(share) || share < 0 || share > 100) || shares.reduce((total, share) => total + share, 0) > 101) throw new Error(`Invalid party shares: ${poll.id}`);
   }
   const manifest = await snapshotJson('assets/manifest.json');
+  const assetsById = new Map(manifest.assets.map(asset => [asset.id, asset]));
+  if (assetsById.size !== manifest.assets.length) throw new Error('Duplicate artwork IDs.');
+  const candidateIds = new Set();
+  for (const candidate of manifest.candidates) {
+    if (!candidate.id || candidateIds.has(candidate.id) || !candidate.name || !partyIds.has(candidate.partyId) || !['accepted', 'party-announced'].includes(candidate.status) || !candidate.statusSource?.startsWith('https://')) throw new Error(`Invalid candidate record: ${candidate.id}`);
+    candidateIds.add(candidate.id);
+    if (candidate.district === null) {
+      if (candidate.districtSlug !== null || candidate.districtStatus !== 'unresolved' || !candidate.reportedDistrict || !candidate.districtNote || candidate.status === 'accepted') throw new Error(`Unexplained riding assignment: ${candidate.id}`);
+    } else {
+      if (!election.districts.includes(candidate.district)) throw new Error(`Unknown candidate riding: ${candidate.id}`);
+      const slug = candidate.district.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      if (candidate.districtSlug !== slug) throw new Error(`Candidate riding slug disagrees: ${candidate.id}`);
+    }
+    if (!Array.isArray(candidate.assetIds) || candidate.assetIds.some(id => !assetsById.has(id))) throw new Error(`Missing candidate artwork: ${candidate.id}`);
+    for (const id of candidate.assetIds) {
+      const asset = assetsById.get(id);
+      if (asset.kind === 'portrait' && asset.candidateId !== candidate.id) throw new Error(`Portrait belongs to another candidate: ${candidate.id}`);
+    }
+  }
+  if (manifest.members !== undefined) {
+    const snapshot = manifest.memberSnapshot;
+    if (!Array.isArray(manifest.members) || !snapshot || !Number.isInteger(snapshot.parliament) || !/^\d{4}-\d{2}-\d{2}$/.test(snapshot.asOf) || !Number.isFinite(Date.parse(snapshot.asOf)) || !snapshot.source?.startsWith('https://') || !Array.isArray(snapshot.notListedDistricts)) throw new Error('Invalid member snapshot.');
+    const memberIds = new Set();
+    const memberDistricts = new Set();
+    for (const member of manifest.members) {
+      if (!member.id || memberIds.has(member.id) || !member.name || !member.affiliation || !member.profileUrl?.startsWith('https://') || !member.sourcePage?.startsWith('https://') || !election.districts.includes(member.district) || memberDistricts.has(member.district)) throw new Error(`Invalid member record: ${member.id}`);
+      memberIds.add(member.id);
+      memberDistricts.add(member.district);
+      const slug = member.district.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      if (member.districtSlug !== slug || !Array.isArray(member.assetIds) || (!member.assetIds.length && !member.portraitNote)) throw new Error(`Incomplete member profile: ${member.id}`);
+      for (const id of member.assetIds) {
+        const asset = assetsById.get(id);
+        if (!asset || asset.kind !== 'portrait' || (asset.memberId && asset.memberId !== member.id)) throw new Error(`Member portrait belongs to another record: ${member.id}`);
+      }
+    }
+    for (const district of snapshot.notListedDistricts) {
+      if (!election.districts.includes(district) || memberDistricts.has(district)) throw new Error(`Invalid unlisted member district: ${district}`);
+      memberDistricts.add(district);
+    }
+    if (memberDistricts.size !== election.districtCount) throw new Error('Member snapshot does not account for every riding.');
+  }
   for (const asset of manifest.assets) {
+    if (removed.has(`assets/sources/${asset.id}.json`)) throw new Error(`Referenced artwork source is marked for removal: ${asset.id}`);
     for (const record of [asset.original, asset.web].filter(Boolean)) {
+      if (removed.has(record.path)) throw new Error(`Referenced artwork is marked for removal: ${record.path}`);
       const bytes = await optionalRead(file(staging, record.path)) || await optionalRead(file(current, record.path));
       if (!bytes || hash(bytes) !== record.sha256) throw new Error(`Asset file and manifest disagree: ${record.path}`);
     }
@@ -226,7 +347,7 @@ async function promote() {
   const provenanceBytes = await optionalRead(file(current, 'provenance.json'));
   const provenance = provenanceBytes ? JSON.parse(provenanceBytes.toString('utf8')) : { sources: {} };
   for (const source of review.fetched) {
-    provenance.sources[source.id] = { url: source.url, finalUrl: source.finalUrl, retrievedAt: source.fetchedAt, sha256: source.sha256, contentType: source.contentType };
+    provenance.sources[source.id] = { url: source.url, finalUrl: source.finalUrl, retrievedAt: source.fetchedAt, sha256: source.sha256, contentType: source.contentType, ...(source.requestBody ? { method: 'POST', requestBody: source.requestBody } : {}) };
   }
   provenance.reviewedAt = new Date().toISOString();
   const next = new URL('data/.next/', root);
@@ -236,7 +357,10 @@ async function promote() {
   if (prepared.length) {
     if (!process.argv.includes('--resume')) throw new Error('A prepared snapshot exists. Use promote --approve --resume to verify and resume it.');
     const expected = new Map(Object.entries(review.baseline));
-    for (const change of changes) expected.set(change.path, hash(await readFile(file(staging, change.path))));
+    for (const change of changes) {
+      if (change.status === 'removed') expected.delete(change.path);
+      else expected.set(change.path, hash(await readFile(file(staging, change.path))));
+    }
     expected.set('provenance.json', null);
     if (prepared.length !== expected.size) throw new Error('Prepared snapshot file set differs from this review.');
     for (const path of prepared) {
@@ -248,7 +372,10 @@ async function promote() {
     console.log('Verified the retained prepared snapshot; resuming promotion.');
   } else {
     await cp(current, next, { recursive: true });
-    for (const change of changes) await save(next, change.path, await readFile(file(staging, change.path)));
+    for (const change of changes) {
+      if (change.status === 'removed') await rm(file(next, change.path));
+      else await save(next, change.path, await readFile(file(staging, change.path)));
+    }
     await saveJson(next, 'provenance.json', provenance);
   }
   await rename(current, previous);
@@ -262,6 +389,7 @@ try {
   const command = process.argv[2] || 'help';
   if (command === 'fetch') await stage(process.argv[3] || 'polls');
   else if (command === 'source') await addSource(process.argv[3], process.argv[4]);
+  else if (command === 'prune-assets') await pruneAssets();
   else if (command === 'diff') await compare();
   else if (command === 'promote') await promote();
   else if (command === 'discard') {
@@ -272,7 +400,7 @@ try {
     await validate();
     console.log('Prod/staged data references and required fields are consistent.');
   } else if (command === 'help') {
-    console.log('node tools/update-data.mjs fetch <polls|election|assets|map|licenses|all>\nnode tools/update-data.mjs source <id> <https-url>\nnode tools/update-data.mjs diff\nnode tools/update-data.mjs check\nnode tools/update-data.mjs promote --approve\nnode tools/update-data.mjs discard --approve\n\nDownloads go to data/staging/. Review source material and edit the staged JSON before promotion to data/prod/. No npm packages are required.');
+    console.log('node tools/update-data.mjs fetch <polls|election|assets|map|licenses|all>\nnode tools/update-data.mjs source <id> <https-url>\nnode tools/update-data.mjs prune-assets\nnode tools/update-data.mjs diff\nnode tools/update-data.mjs check\nnode tools/update-data.mjs promote --approve\nnode tools/update-data.mjs discard --approve\n\nDownloads and asset removals go to data/staging/. Review the diff before promotion to data/prod/. No npm packages are required.');
   } else throw new Error(`Unknown command: ${command}`);
 } catch (error) {
   console.error(error.message);

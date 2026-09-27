@@ -15,7 +15,7 @@ Then open `http://localhost:4173/`. Edit the files and refresh. All paths are re
 ## First vertical slice
 
 - Desktop province overview and riding explorer, responsive mobile layouts and bottom navigation, closely following the earlier visual mockups.
-- Searchable list of all 93 electoral districts; three source-checked 2024 riding result examples, including Coquitlam-Burke Mountain.
+- Searchable list of all 93 electoral districts, with source-checked 2024 vote tables and 2026 candidate records on riding pages. Complete result snapshots are checked against district, party and seat totals.
 - Candidate directory grouped by all registered parties, with alphabetical names, portraits, riding links and filters. A logo strip jumps to each party; Top restores the previous position. Accepted nominations and party announcements remain distinct.
 - Dated directory of every entry in Elections BC's September 25 party register PDF. The PDF contains 14 entries, though Elections BC's summary page currently says 13. The app follows the dated register and explains the difference.
 - A selected archive of 32 original polling releases from 2017-2026, with source links, field dates, sample and method. The current average still uses the newest release per firm in the 14-day snapshot window.
@@ -28,6 +28,19 @@ the small district index while the larger riding overlay loads separately.
 EOX satellite and terrain are also available. All 93 districts are clickable;
 map controls toggle boundaries and reset to all of B.C. Mouse-wheel and trackpad
 scrolling over the map zooms it; ordinary page scrolling remains unchanged outside it.
+
+All map views colour ridings by their **2024 winning party**, with 24% opacity
+and a modest 34% hover highlight so the basemap remains visible. Horizontal
+lines, diagonal lines and dots distinguish the three winning parties without
+relying on colour; the legend uses the same patterns. A dark 1.6 px
+boundary has a light 4.4 px outer edge for contrast over streets, satellite and
+terrain; the selected riding uses a heavier outline. A legend shows loaded
+result counts, tooltips include the winner, vote share and margin, and the
+riding directory lists each loaded winning party.
+Party fills/patterns and boundary strokes have separate controls. These are historical
+election affiliations, not current MLA affiliations or a 2026 forecast. Missing
+results remain neutral and are counted as not loaded. New data is reviewed in
+the explicit localhost staging preview before promotion.
 
 **Find my riding** requests browser geolocation only after a click, with
 `enableHighAccuracy: true`, a 15-second timeout and no cached position. Phones may
@@ -80,6 +93,19 @@ CanWest artwork. BC Party and Party of Citizens still have no verified logo in
 the inventory. Unavailable or unverified websites are labelled rather than guessed.
 CanWest's official website is HTTP-only and is labelled accordingly.
 
+Riding pages show a separate **MLA at dissolution** profile from the
+Legislature's September 22, 2026 roster: 91 members across the 93 districts.
+The two districts not listed as having an active member are identified explicitly.
+Membership is not treated as a 2026 candidacy, and historical election results
+retain their original affiliations.
+
+The member catalogue has 90 sourced portraits; Jordan Kealy's portrait remains
+unavailable rather than being guessed or copied from the Legislature under
+terms requiring permission. Existing portraits are reused, with additional
+images from official archived/member sources. Tara Armstrong's Commons portrait
+is attributed to Othman Mekhloufi under CC BY-SA 4.0; the resized derivative
+retains that licence. The artwork review includes a separate MLA collection.
+
 ## Data Updates
 
 ```sh
@@ -104,10 +130,36 @@ continuation holds the latest average unchanged: a no-change scenario, not a
 forecast, confidence interval or seat projection.
 
 For local review only, open `http://127.0.0.1:4173/?preview=staging#polls`.
-That explicitly labelled preview reads staged polling data; other datasets still
-come from prod. The preview parameter is ignored outside localhost/loopback.
-It requires an open staging review. New research stays in staging until the user
-approves production promotion; the requested historical archive has been promoted locally.
+The same preview works with `#ridings`, `#candidates` and individual riding routes.
+Run `node tools/update-data.mjs diff` after editing staged data: the preview uses
+that change index for reviewed election data, polling, candidates and artwork,
+and uses prod for unchanged files. The preview parameter is ignored outside
+localhost/loopback. New research stays in staging until production promotion is
+approved.
+
+`node tools/update-data.mjs prune-assets` adds unreferenced artwork and obsolete
+artwork sidecars to the review as removals. It does not delete prod files; the
+reviewed cleanup is applied by `promote --approve`. Source PDFs and their
+retrieval records are retained.
+
+## Visitor Analytics
+
+No visitor analytics is installed. GitHub repository **Insights / Traffic**
+measures visits to the repository, not this GitHub Pages website. GitHub does not
+provide the site owner with a visitor dashboard or historical access logs.
+
+A custom domain is not required. [Cloudflare Web Analytics](https://developers.cloudflare.com/web-analytics/get-started/)
+can be installed manually on the existing Pages hostname with a free account and
+a JavaScript snippet, without moving hosting or DNS. [Plausible](https://plausible.io/docs/hash-based-routing)
+is a paid, privacy-focused alternative with explicit support for this site's
+hash routes. Hash-aware tracking is needed to distinguish views such as `#polls`
+and `#riding/...`, rather than reporting only the HTML document.
+
+Collection starts after installation; previous visits cannot be reconstructed.
+Locations are approximate network-derived statistics, not GPS positions or
+identified people. Do not send riding-location coordinates, search input or any
+future ballot choices to analytics. Provider selection and installation require
+separate approval.
 
 ## GitHub Pages Deployment
 

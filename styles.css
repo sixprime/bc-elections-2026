@@ -71,6 +71,22 @@
 .candidate-riding{font-size:13px;line-height:1.4;overflow-wrap:anywhere}
 .candidate-status{font-size:11px;color:#72531d}
 .candidate-status.accepted{color:#1c714c}
+.candidate-unresolved{color:#8a5b17}
+.riding-candidate-list{display:grid}
+.riding-candidate{display:grid;grid-template-columns:68px minmax(0,1fr);gap:12px;padding:16px 0;border-bottom:1px solid #dbe4eb}
+.riding-candidate:last-child{border-bottom:0}
+.riding-candidate-photo{display:grid;place-items:center;width:68px;height:85px;object-fit:cover;object-position:center top;background:#e4eaeb;font-size:10px;color:#576e7d}
+.riding-candidate-info{display:grid;gap:5px;min-width:0}
+.riding-candidate h3{font-size:15px;line-height:1.35;margin:0;overflow-wrap:anywhere}
+.riding-candidate-party{font-size:12px;line-height:1.35}
+.riding-candidate .candidate-card-links{margin-top:4px}
+.riding-member{display:grid;grid-template-columns:112px minmax(0,1fr);gap:15px;padding-bottom:4px}
+.riding-member-photo{display:grid;place-items:center;width:112px;height:140px;object-fit:cover;object-position:center top;background:#e4eaeb;font-size:11px;color:#576e7d}
+.riding-member-info{display:grid;gap:7px;align-content:start;min-width:0;font-size:13px}
+.riding-member h3{font-size:18px;line-height:1.3;margin:0;overflow-wrap:anywhere}
+.riding-member-info .small-note{margin:0;overflow-wrap:anywhere}
+@media(max-width:380px){.riding-member{grid-template-columns:88px minmax(0,1fr);gap:12px}.riding-member-photo{width:88px;height:110px}.riding-member h3{font-size:16px}}
+@media(max-width:720px){.province-grid{align-items:stretch}.province-grid .seats-row{grid-template-columns:repeat(3,minmax(0,1fr))}.province-grid .seat{min-width:0}.province-grid .seat-name{white-space:normal;min-height:2.8em;line-height:1.4;overflow-wrap:anywhere}}
 .candidate-card-links{display:flex;flex-wrap:wrap;gap:7px 12px;padding-top:10px;margin-top:auto;border-top:1px solid #e5ebef}
 .candidate-card-links a{font-size:11px;font-weight:650}
 .candidate-empty-party{color:#617688;font-size:13px;margin:0}
