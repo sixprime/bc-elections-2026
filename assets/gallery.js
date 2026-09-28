@@ -1,24 +1,51 @@
+import { candidateRoster, candidateStatusLabel, candidateRosterNote, atNominationDeadline } from '../candidate-policy.js';
+import { translate, translateCount, translateElements, syncLanguageControls, currentLanguage, setLanguage, formatDate, formatNumber } from '../i18n.js';
+import { routeHref } from '../routes.js';
+
 const grid = document.getElementById('assetGrid');
 const partyFilter = document.getElementById('assetParty');
 const collectionFilter = document.getElementById('assetCollection');
 const search = document.getElementById('assetSearch');
 const root = new URL('../data/', import.meta.url);
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
+const text = (message, values) => escapeHtml(translate(message, values));
 const localUrl = path => new URL(path, root).href;
-const externalLink = (url, text) => url && /^https:\/\//.test(url) ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${text}</a>` : '';
+const externalLink = (url, label) => url && /^https:\/\//.test(url) ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${text(label)}</a>` : '';
 let manifest;
+let inventoryError = '';
+
+function updateLanguage(announce = false) {
+  translateElements();
+  syncLanguageControls();
+  document.getElementById('assetHome').href = routeHref('ridings', currentLanguage());
+  if (manifest) render();
+  else if (inventoryError) document.getElementById('inventoryStatus').textContent = translate(inventoryError);
+  if (announce) document.getElementById('languageStatus').textContent = translate('Interface language changed to English.');
+}
+
+window.addEventListener('languagechange', () => updateLanguage(true));
+document.getElementById('siteLanguage').addEventListener('change', event => setLanguage(event.target.value));
+updateLanguage();
 
 function render() {
+  document.getElementById('inventoryStatus').textContent = translate('{files} files / {parties} parties / {date}', { files: formatNumber(manifest.assets.length), parties: formatNumber(manifest.parties.length), date: formatDate(manifest.collectedAt, { dateStyle: 'medium', timeZone: 'America/Vancouver' }) });
   const byId = new Map(manifest.assets.map(asset => [asset.id, asset]));
   const parties = new Map(manifest.parties.map(party => [party.id, party.name]));
-  parties.set('independent', 'Independent');
+  parties.set('independent', translate('Independent'));
+  parties.set('unaffiliated', translate('Unaffiliated'));
   const collection = collectionFilter.value;
   const query = search.value.trim().toLocaleLowerCase('en-CA');
+  const roster = candidateRoster(manifest);
   let entries;
   if (collection === 'portraits') {
-    entries = manifest.candidates.map(candidate => ({
+    if (roster.phase === 'awaiting-official-list') {
+      document.getElementById('assetCount').textContent = translate('Ballot list awaiting verification');
+      grid.innerHTML = `<div class="asset-empty" role="status">${candidateRosterNote(roster.phase)}</div>`;
+      return;
+    }
+    entries = roster.candidates.map(candidate => ({
       name: candidate.name, partyId: candidate.partyId, detail: candidate.district,
-      status: candidate.status === 'accepted' ? 'Accepted nomination' : 'Party-announced',
+      status: candidateStatusLabel(candidate, roster.phase),
       source: candidate.profileUrl || candidate.sourcePage,
       statusSource: candidate.statusSource,
       asset: candidate.assetIds.map(id => byId.get(id)).find(asset => asset?.web)
@@ -34,22 +61,23 @@ function render() {
       asset: member.assetIds.map(id => byId.get(id)).find(asset => asset?.web)
     }));
   } else if (collection === 'gaps') {
-    entries = manifest.gaps.map(gap => ({ name: gap.candidate || gap.label || parties.get(gap.partyId) || 'Source unavailable', partyId: gap.partyId, detail: gap.reason, source: gap.sourcePage, status: 'Needs follow-up' }));
+    entries = manifest.gaps.map(gap => ({ name: gap.candidate || gap.label || parties.get(gap.partyId) || translate('Source unavailable'), partyId: gap.partyId, detail: gap.reason, source: gap.sourcePage, status: 'Needs follow-up' }));
   } else {
     const kinds = collection === 'press' ? ['press-photo', 'press-kit'] : ['party-logo', 'campaign-wordmark'];
-    entries = manifest.assets.filter(asset => kinds.includes(asset.kind)).map(asset => ({ name: asset.label || parties.get(asset.partyId), partyId: asset.partyId, detail: asset.kind.replaceAll('-', ' '), status: asset.reuse.status.replaceAll('-', ' '), source: asset.sourcePage, asset }));
+    entries = manifest.assets.filter(asset => kinds.includes(asset.kind)).map(asset => ({ name: asset.label || parties.get(asset.partyId), partyId: asset.partyId, detail: translate(asset.kind.replaceAll('-', ' ')), status: asset.reuse.status.replaceAll('-', ' '), source: asset.sourcePage, asset }));
     if (collection === 'press') {
-      entries.push(...manifest.pressKits.map(kit => ({ name: kit.label, partyId: kit.partyId, detail: 'Publisher download', status: 'External press kit', source: kit.sourceUrl })));
+      entries.push(...manifest.pressKits.map(kit => ({ name: kit.label, partyId: kit.partyId, detail: translate('Publisher download'), status: 'External press kit', source: kit.sourceUrl })));
     }
   }
   const visible = entries.filter(entry => (partyFilter.value === 'all' || entry.partyId === partyFilter.value) && `${entry.name} ${entry.detail} ${parties.get(entry.partyId)}`.toLocaleLowerCase('en-CA').includes(query));
-  document.getElementById('assetCount').textContent = `${visible.length} ${collection === 'portraits' ? 'candidates' : collection === 'members' ? 'MLA profiles' : 'items'}`;
+  const countLabels = collection === 'portraits' ? ['{count} candidate', '{count} candidates'] : collection === 'members' ? ['{count} MLA profile', '{count} MLA profiles'] : ['{count} item', '{count} items'];
+  document.getElementById('assetCount').textContent = translateCount(visible.length, ...countLabels);
   grid.innerHTML = visible.length ? visible.map(entry => {
     const image = entry.asset?.web;
-    const imageMarkup = image ? `<img src="${escapeHtml(localUrl(image.path))}" alt="${escapeHtml(entry.name)}" width="${image.width}" height="${image.height}" loading="lazy" decoding="async">` : '<span class="asset-placeholder">No preview</span>';
+    const imageMarkup = image ? `<img src="${escapeHtml(localUrl(image.path))}" alt="${escapeHtml(entry.name)}" width="${image.width}" height="${image.height}" loading="lazy" decoding="async">` : `<span class="asset-placeholder">${text('No preview')}</span>`;
     const original = entry.asset?.original;
-    return `<article class="asset-item">${collection !== 'gaps' ? `<div class="asset-image ${collection === 'branding' ? 'branding' : ''}">${imageMarkup}</div>` : ''}<div class="asset-copy"><p class="asset-party">${escapeHtml(parties.get(entry.partyId))}</p><h2>${escapeHtml(entry.name)}</h2><p>${escapeHtml(entry.detail)}</p><span class="asset-status">${escapeHtml(entry.status)}</span>${entry.asset?.reuse?.licenseUrl ? `<p>${escapeHtml(entry.asset.credit)} ${externalLink(entry.asset.reuse.licenseUrl, escapeHtml(entry.asset.reuse.license))}</p>` : ''}<div class="asset-links">${externalLink(entry.source, 'Source')}${entry.statusSource && entry.statusSource !== entry.source ? externalLink(entry.statusSource, 'Status source') : ''}${original ? `<a href="${escapeHtml(localUrl(original.path))}" download>Original</a>` : ''}</div></div></article>`;
-  }).join('') : '<div class="asset-empty">No matching assets</div>';
+    return `<article class="asset-item">${collection !== 'gaps' ? `<div class="asset-image ${collection === 'branding' ? 'branding' : ''}">${imageMarkup}</div>` : ''}<div class="asset-copy"><p class="asset-party">${escapeHtml(parties.get(entry.partyId))}</p><h2>${escapeHtml(entry.name)}</h2><p${['portraits', 'members', 'gaps'].includes(collection) ? ' lang="en-CA"' : ''}>${escapeHtml(entry.detail)}</p><span class="asset-status">${text(entry.status)}</span>${entry.asset?.reuse?.licenseUrl ? `<p lang="en">${escapeHtml(entry.asset.credit)} ${externalLink(entry.asset.reuse.licenseUrl, entry.asset.reuse.license)}</p>` : ''}<div class="asset-links">${externalLink(entry.source, 'Source')}${entry.statusSource && entry.statusSource !== entry.source ? externalLink(entry.statusSource, 'Status source') : ''}${original ? `<a href="${escapeHtml(localUrl(original.path))}" download>${text('Original')}</a>` : ''}</div></div></article>`;
+  }).join('') : `<div class="asset-empty">${text('No matching assets')}</div>`;
 }
 
 try {
@@ -62,18 +90,28 @@ try {
     option.textContent = party.name;
     partyFilter.append(option);
   }
-  if (manifest.members?.some(member => member.affiliation === 'Independent')) {
+  if (manifest.members?.some(member => member.affiliation === 'Independent') || manifest.candidates.some(candidate => candidate.partyId === 'independent')) {
     const option = document.createElement('option');
     option.value = 'independent';
     option.textContent = 'Independent';
+    option.dataset.i18n = 'Independent';
     partyFilter.append(option);
   }
-  const date = new Intl.DateTimeFormat('en-CA', { dateStyle: 'medium' }).format(new Date(manifest.collectedAt));
-  document.getElementById('inventoryStatus').textContent = `${manifest.assets.length} files / ${manifest.parties.length} parties / ${date}`;
-  render();
+  if (manifest.candidates.some(candidate => candidate.partyId === 'unaffiliated')) {
+    const option = document.createElement('option');
+    option.value = 'unaffiliated';
+    option.textContent = 'Unaffiliated';
+    option.dataset.i18n = 'Unaffiliated';
+    partyFilter.append(option);
+  }
+  delete document.getElementById('inventoryStatus').dataset.i18n;
+  updateLanguage();
+  atNominationDeadline(manifest, render);
   search.addEventListener('input', render);
   partyFilter.addEventListener('change', render);
   collectionFilter.addEventListener('change', render);
 } catch (error) {
-  document.getElementById('inventoryStatus').textContent = error.message;
+  inventoryError = error.message;
+  delete document.getElementById('inventoryStatus').dataset.i18n;
+  updateLanguage();
 }

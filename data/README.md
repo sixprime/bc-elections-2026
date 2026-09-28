@@ -12,6 +12,8 @@ Run these commands from the repository root with Node 20+ and Git installed:
 ```sh
 node tools/update-data.mjs fetch polls
 node tools/update-data.mjs check
+node tools/build-pages.mjs
+node tools/build-pages.mjs --check
 git status --short
 git diff -- data
 ```
@@ -21,6 +23,13 @@ Review downloaded originals and edit the relevant JSON between `fetch` and
 candidates, programme excerpts or resized artwork. The script updates source
 retrieval metadata in [provenance.json](provenance.json), but leaves those datasets
 unchanged. It never commits or pushes.
+
+After reviewing data edits, regenerate the static HTML, previews and sitemap
+before publishing. The generator needs local Python/Pillow; use `--python` when
+the interpreter is not on PATH. Its `--check` mode rejects stale generated pages.
+See the [static publishing workflow](../README.md#static-pages-and-sharing).
+Regenerate at the nomination deadline and when the verified final ballot changes;
+pre-generated pages are dated snapshots, not live filings.
 
 Supported source groups are `polls`, `election`, `programs`, `assets`, `map`,
 `licenses` and `all`. A registered GraphQL source may issue a read-only query;
@@ -55,6 +64,75 @@ JSON and invalid PDF signatures are rejected.
 
 The cache is not a second application dataset. It contains source evidence only
 and is never requested by the browser or published with the site.
+
+## Candidate Sources
+
+Before October 3, 2026 at 1 p.m. Pacific, use either an official party directory
+or a dated official party press release to record a **party-announced** candidate.
+The source must explicitly establish candidacy for this election and the riding;
+do not infer it from an MLA profile, a previous election or a by-election announcement.
+Portrait availability is not a condition for including a verified candidate.
+Party sources cannot establish an **accepted** nomination: that status requires
+the current Elections BC candidate list.
+
+The current catalogue has 125 candidates: NDP 42, Conservative 59, CentreBC 8,
+Green 7, OneBC 7, one independent and one unaffiliated. Eight nominations are
+accepted by Elections BC in the retrieved provisional list. One riding assignment
+remains unresolved. Missing photos are explicitly marked rather than fabricated.
+
+```sh
+node tools/update-data.mjs fetch election
+node tools/update-data.mjs refresh-candidates
+node tools/update-data.mjs check --sources
+git diff -- data
+```
+
+Before running `refresh-candidates`, review the downloaded Elections BC PDF and
+update [assets/sources/accepted-candidates.json](assets/sources/accepted-candidates.json).
+Each candidate row permits only `name`, `district` and `partyId`; a blank official
+party field means `unaffiliated`, not `independent`. Record its exact source URL,
+SHA-256 and retrieval timestamp. The official PDF URL is case-sensitive and
+currently ends in `.PDF`. `final` stays false until Elections BC publishes the
+complete final list after the nomination deadline. The page's current list is
+provisional, and absence from it before the deadline is not proof of withdrawal.
+
+The refresh command merges the cached `cand2026` NDP feed and the sanitized
+official records by identity and riding. It imports only approved fields,
+preserves other reviewed party records and reuses portraits only for a matching
+person. Elections BC overrides party status and affiliation. When importing a
+verified final list, the party feed is not needed, and other records become
+`not-on-ballot`. They remain historical records in the data but are excluded from
+candidate views. The command validates everything before saving the catalogue.
+
+Other parties' records can be edited directly in
+[assets/manifest.json](assets/manifest.json) after checking their primary sources.
+Use `statusSourceType: party-directory` or `party-release`. A press-release record
+also requires `announcedOn`, `sourceElectionDate: 2026-10-24`, its `statusSource`
+URL and `statusSourceSha256`. The source must belong to that party's verified
+domain and match the cached original. Existing candidate-release URLs are included
+by `fetch election`; a new release can first be retrieved with
+`source <id> <https-url> election`. Older releases are not silently relabelled as
+2026 candidacies. Record a release only after reading its explicit nomination
+statement; a search snippet or an opponent's characterization is not sufficient.
+
+After the deadline, the shared candidate policy uses only `accepted` records in
+`candidateSnapshot.officialCandidateIds`, backed by the matching Elections BC
+source and a verified final-list timestamp. A stale or incomplete snapshot shows
+**awaiting verification**, not a partial final ballot. Refresh and publish the
+final list after it is available; the client does not scrape Elections BC at runtime.
+
+### Financial-Agent Privacy
+
+Do not publish candidates' financial-agent names, addresses or telephone numbers.
+The candidate PDF carries use restrictions; the guide needs candidate identities,
+not agent contacts. Keep the original PDF in the external cache, not in `data/`.
+Only the sanitized candidate-only record and source URL/hash are published.
+
+PDF text visitors can merge adjacent columns into one string. Exclude agent
+columns at the individual text-operation or word-coordinate level before retaining
+text, and verify the layout rather than trusting a paragraph's starting position.
+Do not copy party-feed email, social/contact or biography fields into the catalogue.
+Validation uses field allowlists and rejects raw candidate-list PDFs in public data.
 
 ## Quote-Only Party Programmes
 
@@ -123,7 +201,7 @@ the same excerpts with search and a topic index. Empty states say that no
 quotation is recorded for that selection; they do not infer a position. No
 separate cost, implementation or timetable assessment is generated.
 
-The local programme view is `http://127.0.0.1:4173/#parties`. It requires no
+The local programme view is `http://127.0.0.1:4173/parties/`. It requires no
 preview parameter. Publication still requires an approved commit and push.
 
 ## Data Integrity

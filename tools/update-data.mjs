@@ -11,6 +11,8 @@ const cachePath = resolve(process.env.BC_VOTE_SOURCE_CACHE || resolve(process.en
 const sourceCache = pathToFileURL(`${cachePath}${sep}`);
 const groups = ['polls', 'election', 'programs', 'assets', 'map', 'licenses'];
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
+const normalizedName = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, ' ').trim().toLocaleLowerCase('en-CA');
+const candidateId = (partyId, name) => `${partyId}-${normalizedName(name).replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`;
 
 function file(base, path) {
   if (!path || path.includes('\\') || path.split('/').includes('..') || path.startsWith('/') || path.includes(':')) throw new Error(`Unsafe data path: ${path}`);
@@ -71,6 +73,11 @@ async function sources() {
   const assets = await json(current, 'assets/manifest.json');
   const geography = await json(current, 'map/geography.json');
   const result = [...registry.sources];
+  for (const candidate of assets.candidates) {
+    if (candidate.statusSourceType !== 'party-release' || result.some(source => source.url === candidate.statusSource)) continue;
+    const id = `candidate-release-${hash(Buffer.from(candidate.statusSource)).slice(0, 12)}`;
+    result.push({ id, group: 'election', url: candidate.statusSource, path: `sources/election/${id}.html.txt` });
+  }
   const programBytes = await optionalRead(file(current, 'programs.json'));
   if (programBytes) {
     for (const source of JSON.parse(programBytes.toString('utf8')).sources) {
@@ -155,6 +162,59 @@ async function addSource(id, url, group = 'programs') {
   await downloadSources([registered || { id, url, group, path: `sources/${group}/${id}.${suffix}` }]);
 }
 
+async function refreshCandidates() {
+  const election = await json(current, 'election.json');
+  const manifest = await json(current, 'assets/manifest.json');
+  const official = await json(current, 'assets/sources/accepted-candidates.json');
+  const previousCount = manifest.candidates.length;
+  for (const candidate of manifest.candidates) candidate.statusSourceType ||= candidate.status === 'accepted' ? 'elections-bc' : 'party-directory';
+  const portraitIds = (name, district) => manifest.members?.find(member => normalizedName(member.name) === normalizedName(name) && member.district === district)?.assetIds || [];
+  if (!official.final) {
+    const retrievals = await json(sourceCache, 'retrievals.json');
+    const registry = await json(current, 'sources.json');
+    const feed = registry.sources.find(source => source.id === 'ndp-candidates');
+    const source = retrievals.sources.filter(source => source.id === feed?.id && source.url === feed.url).sort((first, second) => second.fetchedAt.localeCompare(first.fetchedAt))[0];
+    if (!source) throw new Error('Fetch the registered NDP candidate feed before refreshing candidates.');
+    const bytes = await readFile(file(sourceCache, source.path));
+    if (hash(bytes) !== source.sha256) throw new Error('Cached candidate feed differs from its retrieval hash.');
+    const profiles = Object.values(JSON.parse(bytes.toString('utf8')).profiles || {});
+    if (!profiles.length) throw new Error('The current-year candidate feed is empty; existing data was not changed.');
+    for (const profile of profiles) {
+      if (!profile.fullname || !profile.riding_name) throw new Error('A candidate feed record is missing its name or riding.');
+      const district = election.districts.find(name => normalizedName(name) === normalizedName(profile.riding_name));
+      if (!district) throw new Error(`Unrecognized candidate riding: ${profile.riding_name}`);
+      let candidate = manifest.candidates.find(candidate => candidate.partyId === 'ndp' && normalizedName(candidate.name) === normalizedName(profile.fullname));
+      if (!candidate) {
+        candidate = { id: candidateId('ndp', profile.fullname), partyId: 'ndp', name: profile.fullname, assetIds: portraitIds(profile.fullname, district) };
+        manifest.candidates.push(candidate);
+      }
+      Object.assign(candidate, { district, districtSlug: district.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''), profileUrl: profile.website_link || 'https://www.bcndp.ca/team', sourcePage: 'https://www.bcndp.ca/team', imageUrl: profile.image, dataSource: source.url, dataSourceSha256: source.sha256, checkedAt: source.fetchedAt });
+      if (candidate.status !== 'accepted' && candidate.statusSourceType !== 'party-release') Object.assign(candidate, { status: 'party-announced', statusSource: 'https://www.bcndp.ca/team', statusSourceType: 'party-directory' });
+    }
+  }
+  const officialCandidateIds = [];
+  for (const record of official.candidates) {
+    let candidate = manifest.candidates.find(candidate => normalizedName(candidate.name) === normalizedName(record.name) && candidate.district === record.district);
+    if (!candidate) {
+      candidate = { id: candidateId(record.partyId, record.name), name: record.name, district: record.district, districtSlug: record.district.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''), sourcePage: election.sources.candidates, assetIds: portraitIds(record.name, record.district) };
+      manifest.candidates.push(candidate);
+    }
+    Object.assign(candidate, { partyId: record.partyId, status: 'accepted', statusSource: official.url, statusSourceType: 'elections-bc', statusSourceSha256: official.sha256, checkedAt: official.fetchedAt });
+    officialCandidateIds.push(candidate.id);
+  }
+  if (official.final) {
+    for (const candidate of manifest.candidates) {
+      if (!officialCandidateIds.includes(candidate.id)) Object.assign(candidate, { status: 'not-on-ballot', statusSource: official.url, statusSourceType: 'elections-bc', statusSourceSha256: official.sha256, checkedAt: official.fetchedAt });
+    }
+  }
+  manifest.collectedAt = new Date().toISOString();
+  manifest.scope = 'Elections BC nominations and dated official party announcements, including press releases. Only the verified final Elections BC list determines ballot membership after nominations close.';
+  manifest.candidateSnapshot = { electionDate: official.electionDate, nominationDeadline: official.nominationDeadline, officialSource: official.url, officialSourceSha256: official.sha256, officialListCheckedAt: official.fetchedAt, officialListFinal: official.final, officialCandidateIds };
+  await validate(manifest);
+  await saveJson(current, 'assets/manifest.json', manifest);
+  console.log(`Candidate catalogue: ${manifest.candidates.length} records (${manifest.candidates.length - previousCount} added), ${officialCandidateIds.length} Elections BC nominations. Official list is ${official.final ? 'final' : 'provisional'}. Financial-agent and contact fields were not imported.`);
+}
+
 async function pruneAssets() {
   await validate();
   const manifest = await json(current, 'assets/manifest.json');
@@ -229,9 +289,11 @@ function validatePrograms(programs, election, evidence) {
   if (seen.size !== parties.size) throw new Error('Programme coverage must include every registered party, including source gaps.');
 }
 
-async function validate() {
+async function validate(candidateManifest) {
   const election = await json(current, 'election.json');
   const polls = await json(current, 'polls.json');
+  const candidateDocuments = (await files(current)).filter(path => /candidate[^/]*\.pdf$/i.test(path));
+  if (candidateDocuments.length) throw new Error('Raw candidate-list PDFs must remain in the external source cache, not public data.');
   if (!Array.isArray(election.districts) || election.districts.length !== election.districtCount || new Set(election.districts).size !== election.districtCount) throw new Error('District count or identities are invalid.');
   if (!Array.isArray(election.parties) || !election.parties.length) throw new Error('The party register is empty.');
   const programs = await optionalRead(file(current, 'programs.json'));
@@ -289,13 +351,74 @@ async function validate() {
     const shares = Object.values(poll.shares || {});
     if (!shares.length || shares.some(share => !Number.isFinite(share) || share < 0 || share > 100) || shares.reduce((total, share) => total + share, 0) > 101) throw new Error(`Invalid party shares: ${poll.id}`);
   }
-  const manifest = await json(current, 'assets/manifest.json');
+  const manifest = candidateManifest || await json(current, 'assets/manifest.json');
+  const committedManifestBytes = committedData('assets/manifest.json');
+  const committedCandidates = new Map((committedManifestBytes ? JSON.parse(committedManifestBytes.toString('utf8')).candidates : []).map(candidate => [candidate.id, candidate]));
+  let candidateRetrievals;
+  const verifiedCandidateSources = new Set();
   const assetsById = new Map(manifest.assets.map(asset => [asset.id, asset]));
   if (assetsById.size !== manifest.assets.length) throw new Error('Duplicate artwork IDs.');
+  const official = await json(current, 'assets/sources/accepted-candidates.json');
+  const allowedFields = (record, fields) => record && typeof record === 'object' && Object.keys(record).every(field => fields.includes(field));
+  const officialHost = url => { try { const parsed = new URL(url); return parsed.protocol === 'https:' && !parsed.username && !parsed.password && ['elections.bc.ca', 'www.elections.bc.ca'].includes(parsed.hostname); } catch { return false; } };
+  const officialFields = ['schemaVersion', 'electionDate', 'nominationDeadline', 'final', 'url', 'finalUrl', 'fetchedAt', 'sha256', 'candidates'];
+  const deadline = Date.parse(official.nominationDeadline);
+  const checkedAt = Date.parse(official.fetchedAt);
+  if (!allowedFields(official, officialFields) || official.schemaVersion !== 1 || official.electionDate !== election.electionDate || !Number.isFinite(deadline) || !Number.isFinite(checkedAt) || checkedAt > Date.now() || typeof official.final !== 'boolean' || !officialHost(official.url) || !officialHost(official.finalUrl) || !/^[a-f0-9]{64}$/.test(official.sha256) || !Array.isArray(official.candidates) || !official.candidates.length || (official.final && checkedAt < deadline)) throw new Error('Invalid candidate-only Elections BC snapshot.');
+  const officialRecords = new Map();
+  for (const record of official.candidates) {
+    if (!allowedFields(record, ['name', 'district', 'partyId']) || !record.name || !election.districts.includes(record.district) || !partyIds.has(record.partyId)) throw new Error('Official candidate records may contain only name, district and partyId.');
+    const key = `${normalizedName(record.name)}|${record.district}`;
+    if (officialRecords.has(key)) throw new Error('Duplicate official candidate identity.');
+    officialRecords.set(key, record);
+  }
+  const snapshot = manifest.candidateSnapshot;
+  const snapshotFields = ['electionDate', 'nominationDeadline', 'officialSource', 'officialSourceSha256', 'officialListCheckedAt', 'officialListFinal', 'officialCandidateIds'];
+  if (!allowedFields(snapshot, snapshotFields) || snapshot.electionDate !== election.electionDate || snapshot.nominationDeadline !== official.nominationDeadline || snapshot.officialSource !== official.url || snapshot.officialSourceSha256 !== official.sha256 || snapshot.officialListCheckedAt !== official.fetchedAt || snapshot.officialListFinal !== official.final || !Array.isArray(snapshot.officialCandidateIds) || new Set(snapshot.officialCandidateIds).size !== official.candidates.length || snapshot.officialCandidateIds.length !== official.candidates.length) throw new Error('Candidate catalogue and official snapshot disagree. Run refresh-candidates after reviewing the official list.');
+  const committedOfficial = committedData('assets/sources/accepted-candidates.json');
+  const officialChanged = !committedOfficial || committedOfficial.toString('utf8') !== await readFile(file(current, 'assets/sources/accepted-candidates.json'), 'utf8');
+  if (officialChanged || process.argv.includes('--sources')) {
+    const retrievals = await json(sourceCache, 'retrievals.json');
+    const source = retrievals.sources.find(source => source.id === 'elections-bc-candidates' && source.url === official.url && source.sha256 === official.sha256 && source.fetchedAt === official.fetchedAt);
+    if (!source || hash(await readFile(file(sourceCache, source.path))) !== official.sha256) throw new Error('The sanitized official candidate list has no matching cached Elections BC source.');
+  }
+  const candidateFields = new Set(['id', 'partyId', 'name', 'district', 'districtSlug', 'imageUrl', 'profileUrl', 'sourcePage', 'checkedAt', 'status', 'statusSource', 'assetIds', 'districtStatus', 'reportedDistrict', 'districtNote', 'dataSource', 'dataSourceSha256', 'statusSourceSha256', 'statusSourceType', 'announcedOn', 'sourceElectionDate']);
   const candidateIds = new Set();
+  const candidateIdentities = new Set();
   for (const candidate of manifest.candidates) {
-    if (!candidate.id || candidateIds.has(candidate.id) || !candidate.name || !partyIds.has(candidate.partyId) || !['accepted', 'party-announced'].includes(candidate.status) || !candidate.statusSource?.startsWith('https://')) throw new Error(`Invalid candidate record: ${candidate.id}`);
+    if (Object.keys(candidate).some(field => !candidateFields.has(field))) throw new Error(`Candidate record contains an unapproved field: ${candidate.id}. Financial-agent and contact details must not be published.`);
+    if (!candidate.id || candidateIds.has(candidate.id) || !candidate.name || !partyIds.has(candidate.partyId) || !['accepted', 'party-announced', 'not-on-ballot'].includes(candidate.status) || !candidate.statusSource?.startsWith('https://') || !['elections-bc', 'party-directory', 'party-release'].includes(candidate.statusSourceType) || !Number.isFinite(Date.parse(candidate.checkedAt))) throw new Error(`Invalid candidate record: ${candidate.id}`);
     candidateIds.add(candidate.id);
+    const identity = `${normalizedName(candidate.name)}|${candidate.district}`;
+    if (candidateIdentities.has(identity)) throw new Error(`Duplicate candidate identity: ${candidate.name}`);
+    candidateIdentities.add(identity);
+    if (candidate.status === 'accepted') {
+      const record = officialRecords.get(identity);
+      if (!record || record.partyId !== candidate.partyId || !snapshot.officialCandidateIds.includes(candidate.id) || candidate.statusSource !== official.url || candidate.statusSourceSha256 !== official.sha256 || candidate.statusSourceType !== 'elections-bc' || candidate.checkedAt !== official.fetchedAt) throw new Error(`Accepted nomination is not backed by the current Elections BC snapshot: ${candidate.id}`);
+    } else if (snapshot.officialCandidateIds.includes(candidate.id)) throw new Error(`Official candidate has an inconsistent status: ${candidate.id}`);
+    if (candidate.status === 'not-on-ballot' && (!official.final || officialRecords.has(identity) || candidate.statusSource !== official.url || candidate.statusSourceSha256 !== official.sha256 || candidate.statusSourceType !== 'elections-bc')) throw new Error(`Absence from a provisional list is not a final ballot decision: ${candidate.id}`);
+    if (candidate.status === 'party-announced') {
+      const party = manifest.parties.find(party => party.id === candidate.partyId);
+      const host = party?.website ? new URL(party.website).hostname.replace(/^www\./, '') : null;
+      const url = new URL(candidate.statusSource);
+      if (!host || url.username || url.password || !(url.hostname === host || url.hostname.endsWith(`.${host}`)) || !['party-directory', 'party-release'].includes(candidate.statusSourceType)) throw new Error(`Party announcement must come from that party's official website: ${candidate.id}`);
+      if (candidate.statusSourceType === 'party-release') {
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(candidate.announcedOn || '') || !Number.isFinite(Date.parse(candidate.announcedOn)) || candidate.sourceElectionDate !== election.electionDate || candidate.announcedOn <= election.baseline2024.date || candidate.announcedOn > candidate.checkedAt.slice(0, 10) || !/^[a-f0-9]{64}$/.test(candidate.statusSourceSha256 || '')) throw new Error(`Party release requires its current-election date and source hash: ${candidate.id}`);
+      }
+      const sourceUrl = candidate.statusSourceType === 'party-release' ? candidate.statusSource : candidate.dataSource || candidate.statusSource;
+      const sourceHash = candidate.statusSourceType === 'party-release' ? candidate.statusSourceSha256 : candidate.dataSourceSha256 || candidate.statusSourceSha256;
+      const changed = JSON.stringify(candidate) !== JSON.stringify(committedCandidates.get(candidate.id));
+      if (!committedCandidates.has(candidate.id) && !sourceHash) throw new Error(`New party candidate requires a verified source hash: ${candidate.id}`);
+      if (sourceHash && (changed || process.argv.includes('--sources'))) {
+        const key = `${sourceUrl}|${sourceHash}`;
+        if (!verifiedCandidateSources.has(key)) {
+          candidateRetrievals ||= await json(sourceCache, 'retrievals.json');
+          const record = candidateRetrievals.sources.find(record => record.url === sourceUrl && record.sha256 === sourceHash);
+          if (!record || hash(await readFile(file(sourceCache, record.path))) !== sourceHash) throw new Error(`Candidate source evidence is missing or changed: ${candidate.id}`);
+          verifiedCandidateSources.add(key);
+        }
+      }
+    }
     if (candidate.district === null) {
       if (candidate.districtSlug !== null || candidate.districtStatus !== 'unresolved' || !candidate.reportedDistrict || !candidate.districtNote || candidate.status === 'accepted') throw new Error(`Unexplained riding assignment: ${candidate.id}`);
     } else {
@@ -306,9 +429,12 @@ async function validate() {
     if (!Array.isArray(candidate.assetIds) || candidate.assetIds.some(id => !assetsById.has(id))) throw new Error(`Missing candidate artwork: ${candidate.id}`);
     for (const id of candidate.assetIds) {
       const asset = assetsById.get(id);
-      if (asset.kind === 'portrait' && asset.candidateId !== candidate.id) throw new Error(`Portrait belongs to another candidate: ${candidate.id}`);
+      const member = asset.memberId ? manifest.members?.find(member => member.id === asset.memberId) : null;
+      const sharedPortrait = member && normalizedName(member.name) === normalizedName(candidate.name) && member.assetIds.includes(id);
+      if (asset.kind === 'portrait' && asset.candidateId !== candidate.id && !sharedPortrait) throw new Error(`Portrait belongs to another candidate: ${candidate.id}`);
     }
   }
+  if (snapshot.officialCandidateIds.some(id => !candidateIds.has(id))) throw new Error('The catalogue omits an official Elections BC candidate.');
   if (manifest.members !== undefined) {
     const snapshot = manifest.memberSnapshot;
     if (!Array.isArray(manifest.members) || !snapshot || !Number.isInteger(snapshot.parliament) || !/^\d{4}-\d{2}-\d{2}$/.test(snapshot.asOf) || !Number.isFinite(Date.parse(snapshot.asOf)) || !snapshot.source?.startsWith('https://') || !Array.isArray(snapshot.notListedDistricts)) throw new Error('Invalid member snapshot.');
@@ -350,13 +476,14 @@ try {
   const command = process.argv[2] || 'help';
   if (command === 'fetch') await fetchGroup(process.argv[3] || 'polls');
   else if (command === 'source') await addSource(process.argv[3], process.argv[4], process.argv[5]);
+  else if (command === 'refresh-candidates') await refreshCandidates();
   else if (command === 'prune-assets') await pruneAssets();
   else if (command === 'cache') console.log(cachePath);
   else if (command === 'check') {
     await validate();
     console.log('Data references, source-backed quotations, required fields and file hashes are consistent.');
   } else if (command === 'help') {
-    console.log('node tools/update-data.mjs fetch <polls|election|programs|assets|map|licenses|all>\nnode tools/update-data.mjs source <id> <https-url> [group]\nnode tools/update-data.mjs check [--sources]\nnode tools/update-data.mjs prune-assets [--apply]\nnode tools/update-data.mjs cache\n\nEdit data/ directly and review with git diff. Downloads stay in a local source cache outside the repository; BC_VOTE_SOURCE_CACHE can override its location. Changed programme data requires cached quotation evidence. Fetch updates retrieval metadata but never rewrites datasets automatically. No npm packages, commit or deployment steps are run.');
+    console.log('node tools/update-data.mjs fetch <polls|election|programs|assets|map|licenses|all>\nnode tools/update-data.mjs source <id> <https-url> [group]\nnode tools/update-data.mjs refresh-candidates\nnode tools/update-data.mjs check [--sources]\nnode tools/update-data.mjs prune-assets [--apply]\nnode tools/update-data.mjs cache\n\nEdit data/ directly and review with git diff. Downloads stay in a local source cache outside the repository; BC_VOTE_SOURCE_CACHE can override its location. Changed programme data requires cached quotation evidence. Fetch updates retrieval metadata but never rewrites datasets automatically. refresh-candidates merges the cached 2026 NDP feed and the reviewed candidate-only Elections BC snapshot; other official party sources are reviewed directly. No npm packages, commit or deployment steps are run.');
   } else throw new Error(`Unknown command: ${command}`);
 } catch (error) {
   console.error(error.message);

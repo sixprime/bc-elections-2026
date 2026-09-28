@@ -1,5 +1,6 @@
 body{min-width:0}
 .status-actions{display:flex;align-items:center;gap:15px;flex:none}
+@media(max-width:720px){.status-inner .status-actions{flex:1 1 auto;min-width:0;flex-wrap:wrap}}
 .find-riding-button{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:36px;padding:7px 12px;margin:5px 0;background:#fff;border:1px solid #bacada;border-radius:5px;color:#163d60;font-size:12px;font-weight:700;white-space:nowrap}
 .find-riding-button svg,.map-icon-button svg{width:17px;height:17px;flex:none}
 .find-riding-button:hover{background:#edf6ff;border-color:#668faf}
@@ -7,6 +8,28 @@ body{min-width:0}
 .location-notice{max-width:1440px;margin:0 auto;padding:10px 18px;border-top:1px solid #dbe4ef;display:flex;gap:10px 18px;align-items:center;flex-wrap:wrap;font-size:13px;line-height:1.5;color:#28475f}
 .location-notice[hidden]{display:none}
 .location-notice a{font-weight:650;white-space:nowrap}
+.riding-finder{width:min(580px,calc(100% - 28px));max-height:calc(100dvh - 32px);padding:22px;border:1px solid #bacada;border-radius:6px;background:#fff;color:#193956;overflow:auto;box-shadow:0 12px 45px #102b5040}
+.riding-finder::backdrop{background:#102b5077}
+.riding-finder-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px}
+.riding-finder-heading h2{font-size:22px;line-height:1.3;letter-spacing:0;margin:0}
+.riding-finder-heading button{flex:none}
+#addressSearchForm>label{display:block;margin-bottom:8px;font-size:13px;font-weight:650}
+.address-search-field{display:grid;grid-template-columns:minmax(0,1fr) 42px;gap:8px}
+.address-search-field input{width:100%;min-width:0;height:44px;padding:10px;border:1px solid #9bb4c8;border-radius:4px;color:#163d60;background:#fff;font:inherit;font-size:16px}
+.address-search-field button{width:42px;height:44px}
+.address-suggestions{list-style:none;margin:8px 0 0;padding:0;border:1px solid #bacada;border-radius:4px;max-height:240px;overflow:auto}
+.address-suggestions[hidden],.address-riding-result[hidden]{display:none}
+.address-suggestions li{padding:12px;min-height:44px;cursor:pointer;font-size:14px;line-height:1.45;overflow-wrap:anywhere;border-bottom:1px solid #e1e8ee}
+.address-suggestions li:last-child{border-bottom:0}
+.address-suggestions li:hover,.address-suggestions li[aria-selected=true]{background:#e8f2fc;color:#164d78}
+.address-search-status{margin:10px 0;min-height:20px;font-size:12px;line-height:1.5;color:#526a7d}
+.address-riding-result{border-top:1px solid #dbe4ef;padding:14px 0;display:flex;gap:10px;flex-wrap:wrap}
+.address-riding-result p{flex-basis:100%;margin:0;font-size:13px;line-height:1.5;color:#35566f}
+.address-riding-result a{max-width:100%;overflow-wrap:anywhere}
+.address-privacy{font-size:11px;line-height:1.6;color:#65778a;margin:16px 0}
+.riding-finder-alternatives{display:flex;align-items:center;gap:18px;flex-wrap:wrap;border-top:1px solid #dbe4ef;padding-top:12px;font-size:13px}
+.address-source{display:flex;gap:10px 18px;flex-wrap:wrap;margin-top:14px;font-size:11px;line-height:1.5}
+@media(max-width:720px){.riding-finder{padding:18px}.riding-finder-heading h2{font-size:20px}.riding-finder-heading{margin-bottom:18px}}
 .map-section{min-width:0;background:#fff;border:1px solid #dbe4ef;border-radius:6px;overflow:hidden}
 .map-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 17px;border-bottom:1px solid #e0e7ef}
 .map-heading h2{font-size:16px;line-height:1.3;margin:0;color:#193956;letter-spacing:0}
@@ -18,13 +41,13 @@ body{min-width:0}
 .map-actions{display:flex;gap:5px}
 .map-icon-button{width:34px;height:34px;display:grid;place-items:center;padding:0;border:1px solid #d4dee5;border-radius:4px;background:#fff;color:#294961}
 .map-icon-button:hover{background:#edf3f8}
-.map-icon-button[aria-pressed=false]{color:#8b959e;background:#f1f3f5}
+.map-icon-button[aria-pressed=false]{color:#536779;background:#f1f3f5}
 .map-results-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 14px 0;border-top:1px solid #e0e7ef;font-size:11px;line-height:1.4;color:#536779}
 .map-results-bar>span{font-weight:650}
 .map-results-toggle{display:inline-flex;align-items:center;gap:6px;min-height:28px;cursor:pointer;white-space:nowrap}
 .map-results-toggle input{width:14px;height:14px;margin:0;accent-color:#315971}
 .map-results-legend{display:flex;align-items:center;gap:8px 18px;flex-wrap:wrap;min-height:42px;padding:8px 14px 12px;font-size:12px;line-height:1.4;color:#28445b}
-.map-results-legend.inactive{opacity:.5}
+.map-results-legend.inactive .map-legend-swatch{opacity:.45}
 .map-legend-item{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
 .map-legend-item b{font-size:12px;font-variant-numeric:tabular-nums;margin-left:2px}
 .map-legend-swatch{width:24px;height:18px;flex:none;border:1px solid color-mix(in srgb,var(--party) 60%,#fff);border-radius:2px;background-color:color-mix(in srgb,var(--party) 24%,#fff)}
@@ -34,6 +57,7 @@ body{min-width:0}
 .map-result-tooltip span:last-child{color:#65778a;font-size:10px}
 .map-source-links{display:flex;gap:12px;flex-wrap:wrap}
 .map-surface{height:440px;width:100%;isolation:isolate;background:#dfe8e7;z-index:0}
+.map-surface img.leaflet-tile{mix-blend-mode:normal}
 .map-section.expanded-map .map-surface{height:650px;min-height:450px}
 .map-source{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 13px;color:#536779;font-size:11px;line-height:1.5;flex-wrap:wrap}
 .map-source a{font-size:11px}
@@ -46,7 +70,8 @@ body{min-width:0}
 .riding-directory{border-top:3px solid #234e6a;background:#fff;min-width:0}
 .riding-directory .search-field{display:block;margin:13px;min-width:0;max-width:none}
 .riding-directory .riding-list{height:646px}
-.riding-directory .riding-list button{font-size:13px;padding:13px}
+.riding-directory .riding-list a{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;border-bottom:1px solid #edf1f5;background:#fff;text-align:left;padding:13px;color:#2c4865;font-size:13px}
+.riding-directory .riding-list a:hover{background:#eaf4ff;text-decoration:none}
 .riding-directory .riding-list .meta{font-size:11px}
 .riding-directory .riding-list .riding-winner{display:flex;align-items:center;gap:6px;line-height:1.4;color:#435d71}
 .riding-winner .party-dot{width:7px;height:7px;margin-right:0;flex:none}

@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#102b50">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../vendor/leaflet.css">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../map.css">
+  <noscript>
+  <style>
+.candidate-toolbar,.candidate-party-nav,.candidate-top-control,.language-control,.menu-button,.header-search,.find-riding-button{display:none!important}</style></noscript>  <title>BC Candidates 2026 | BC Election Guide</title>
+  <meta name="description" content="Browse source-linked candidate records for the 2026 British Columbia election. Accepted nominations and party announcements are identified separately.">
+  <meta name="robots" content="index,follow">
+  <meta name="site-url" content="https://sixprime.github.io/bc-elections-2026/">
+  <link rel="canonical" href="https://sixprime.github.io/bc-elections-2026/candidates/">
+  <link rel="sitemap" type="application/xml" href="https://sixprime.github.io/bc-elections-2026/sitemap.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BC Election Guide">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:title" content="BC Candidates 2026 | BC Election Guide">
+  <meta property="og:description" content="Browse source-linked candidate records for the 2026 British Columbia election. Accepted nominations and party announcements are identified separately.">
+  <meta property="og:url" content="https://sixprime.github.io/bc-elections-2026/candidates/">
+  <meta property="og:image" content="https://sixprime.github.io/bc-elections-2026/assets/previews/candidates.png">
+  <meta property="og:image:secure_url" content="https://sixprime.github.io/bc-elections-2026/assets/previews/candidates.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="BC Candidates 2026. Official British Columbia riding boundaries.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BC Candidates 2026 | BC Election Guide">
+  <meta name="twitter:description" content="Browse source-linked candidate records for the 2026 British Columbia election. Accepted nominations and party announcements are identified separately.">
+  <meta name="twitter:image" content="https://sixprime.github.io/bc-elections-2026/assets/previews/candidates.png">
+  <meta name="twitter:image:alt" content="BC Candidates 2026. Official British Columbia riding boundaries.">
+  <script type="application/ld+json" data-page-schema>{"@context": "https://schema.org", "@type": "WebPage", "name": "BC Candidates 2026 | BC Election Guide", "description": "Browse source-linked candidate records for the 2026 British Columbia election. Accepted nominations and party announcements are identified separately.", "url": "https://sixprime.github.io/bc-elections-2026/candidates/", "image": "https://sixprime.github.io/bc-elections-2026/assets/previews/candidates.png", "inLanguage": "en-CA"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="Skip to content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../" data-route="province" aria-label="BC Election Guide home" data-i18n-aria-label="BC Election Guide home">
+        <span class="brand-name">BC Election Guide</span>
+        <span class="brand-description" data-i18n="Your province. Your voice. Your choice.">Your province. Your voice. Your choice.</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation" data-i18n-aria-label="Main navigation">
+        <a href="../" data-route="province" data-nav="province" data-i18n="Province">Province</a>
+        <a href="../ridings/" data-route="ridings" data-nav="ridings" data-i18n="Ridings">Ridings</a>
+        <a href="../parties/" data-route="parties" data-nav="parties" data-i18n="Parties">Parties</a>
+        <a href="../candidates/" data-route="candidates" data-nav="candidates" data-i18n="Candidates" aria-current="page" class="active">Candidates</a>
+        <a href="../polls/" data-route="polls" data-nav="polls" data-i18n="Polls">Polls</a>
+        <a href="../about/" data-route="about" data-nav="about" data-i18n="About">About</a>
+      </nav>
+      <div class="header-search">
+        <svg viewbox="0 0 24 24" aria-hidden="true"><circle cx="10.7" cy="10.7" r="6.3"/><path d="m15.4 15.4 5.1 5.1"/></svg>
+        <input id="globalSearch" type="search" placeholder="Find a riding" aria-label="Find a riding" data-i18n-placeholder="Find a riding" data-i18n-aria-label="Find a riding" autocomplete="off">
+      </div>
+      <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" data-i18n-aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav id="mobileMenu" class="mobile-menu" aria-label="More navigation" data-i18n-aria-label="More navigation" hidden>
+      <a href="../about/" data-route="about" data-nav="about" data-i18n="About">About</a>
+    </nav>
+  </header>
+
+  <div class="status-band">
+    <div class="status-inner"><span class="status-left"><span class="live-dot" aria-hidden="true"></span><span id="snapshotStatus">Source snapshot: September 25, 2026</span></span><div class="status-actions"><span class="countdown" id="countdown">Election day: October 24, 2026</span><fieldset class="language-control" id="siteLanguage"><legend class="sr-only" data-i18n="Website language">Website language</legend><label lang="en-CA" title="English"><input class="sr-only" type="radio" name="language" value="en" data-language checked><span class="language-option"><img src="../assets/flags/gb.png" width="24" height="18" alt=""><span aria-hidden="true">EN</span><span class="sr-only">English</span></span></label><label lang="fr-CA" title="Français"><input class="sr-only" type="radio" name="language" value="fr" data-language><span class="language-option"><img src="../assets/flags/fr.png" width="24" height="18" alt=""><span aria-hidden="true">FR</span><span class="sr-only">Français</span></span></label></fieldset><button type="button" class="find-riding-button" data-find-riding><i data-lucide="locate-fixed" aria-hidden="true"></i><span data-i18n="Find my riding">Find my riding</span></button></div></div>
+    <div id="locationStatus" class="location-notice" role="status" aria-live="polite" hidden></div>
+    <div id="languageStatus" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+  </div>
+
+  <dialog id="ridingFinder" class="riding-finder" aria-labelledby="ridingFinderTitle">
+    <div class="riding-finder-heading"><h2 id="ridingFinderTitle" data-i18n="Find my riding">Find my riding</h2><button type="button" class="map-icon-button" data-close-riding-finder aria-label="Close riding finder" title="Close" data-i18n-aria-label="Close riding finder" data-i18n-title="Close"><i data-lucide="x" aria-hidden="true"></i></button></div>
+    <form id="addressSearchForm" role="search" novalidate>
+      <label for="addressSearch" data-i18n="B.C. street address and city">B.C. street address and city</label>
+      <div class="address-search-field"><input id="addressSearch" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="addressSuggestions" aria-describedby="addressPrivacy" autocomplete="off" spellcheck="false" maxlength="200" placeholder="Street address and city" data-i18n-placeholder="Street address and city"><button type="submit" class="map-icon-button" aria-label="Search address" title="Search address" data-i18n-aria-label="Search address" data-i18n-title="Search address"><i data-lucide="search" aria-hidden="true"></i></button></div>
+      <ul id="addressSuggestions" class="address-suggestions" role="listbox" aria-label="Matching addresses" data-i18n-aria-label="Matching addresses" hidden></ul>
+      <p id="addressSearchStatus" class="address-search-status" role="status" aria-live="polite"></p>
+    </form>
+    <div id="addressRidingResult" class="address-riding-result" aria-live="polite" hidden></div>
+    <p id="addressPrivacy" class="address-privacy" data-i18n="Street addresses only, not postal codes. Queries are sent to the BC Address Geocoder; this site does not save them.">Street addresses only, not postal codes. Queries are sent to the BC Address Geocoder; this site does not save them.</p>
+    <div class="riding-finder-alternatives"><button type="button" class="find-riding-button" data-use-device-location><i data-lucide="locate-fixed" aria-hidden="true"></i><span data-i18n="Use my location">Use my location</span></button><a href="../ridings/" data-route="ridings" data-choose-riding data-i18n="Browse ridings">Browse ridings</a></div>
+    <div class="address-source"><a href="https://www2.gov.bc.ca/gov/content/data/geographic-data-services/location-services/geocoder" target="_blank" rel="noopener noreferrer" lang="en">BC Address Geocoder</a><a href="https://www2.gov.bc.ca/gov/content?id=9E890E16955E4FF4BF3B0E07B4722932" target="_blank" rel="noopener noreferrer" data-i18n="Service privacy">Service privacy</a><a href="https://elections.bc.ca/" target="_blank" rel="noopener noreferrer" data-i18n="Confirm with Elections BC">Confirm with Elections BC</a></div>
+    <p class="address-privacy"><span data-i18n="Contains information licensed under the">Contains information licensed under the</span> <a href="https://www2.gov.bc.ca/gov/content/data/policy-standards/data-policies/open-data/open-government-licence-bc" target="_blank" rel="noopener noreferrer" data-i18n="Open Government Licence - British Columbia">Open Government Licence - British Columbia</a>.</p>
+  </dialog>
+
+  <main id="main" class="main-content" tabindex="-1">
+    <div class="static-content"><div class="page-head"><div><p class="eyebrow">2026 provincial election</p><h1>Parties &amp; candidates</h1></div><span class="snapshot-pill">Catalogue · Sep 27, 2026</span></div><p class="candidate-snapshot-note">14 registered parties · Until October 3 at 1 p.m. Pacific, accepted nominations and official party announcements, including press releases, are listed separately. This is not the final ballot.</p>
+    <div class="candidate-toolbar"><label><span>Candidate or riding</span><input id="candidateSearch" type="search" value="" placeholder="Search by name or riding" autocomplete="off"></label>
+    <label><span>Party or affiliation</span><select id="candidateParty"><option value="all">All affiliations</option><option value="vision" >B.C. Vision (0)</option><option value="green" >BC Green Party (7)</option><option value="ndp" >BC NDP (42)</option><option value="bcparty" >BC Party (0)</option><option value="united" >BC UNITED (0)</option><option value="centre" >CentreBC (8)</option><option value="heritage" >Christian Heritage Party of BC (0)</option><option value="communist" >Communist Party of BC (0)</option><option value="con" >Conservative Party (59)</option><option value="canwest" >CWP (0)</option><option value="freedom" >Freedom Party of BC (0)</option><option value="independent" >Independent (1)</option><option value="libertarian" >Libertarian (0)</option><option value="one" >OneBC (7)</option><option value="citizens" >Party of Citizens (0)</option><option value="unaffiliated" >Unaffiliated (1)</option></select></label>
+    <label><span>Riding</span><select id="candidateRiding"><option value="all">All ridings</option><option value="unresolved" >Riding unconfirmed</option><option value="Abbotsford South" >Abbotsford South</option><option value="Abbotsford West" >Abbotsford West</option><option value="Abbotsford-Mission" >Abbotsford-Mission</option><option value="Boundary-Similkameen" >Boundary-Similkameen</option><option value="Bulkley Valley-Stikine" >Bulkley Valley-Stikine</option><option value="Burnaby Centre" >Burnaby Centre</option><option value="Burnaby East" >Burnaby East</option><option value="Burnaby North" >Burnaby North</option><option value="Burnaby South-Metrotown" >Burnaby South-Metrotown</option><option value="Burnaby-New Westminster" >Burnaby-New Westminster</option><option value="Cariboo-Chilcotin" >Cariboo-Chilcotin</option><option value="Chilliwack North" >Chilliwack North</option><option value="Chilliwack-Cultus Lake" >Chilliwack-Cultus Lake</option><option value="Columbia River-Revelstoke" >Columbia River-Revelstoke</option><option value="Coquitlam-Burke Mountain" >Coquitlam-Burke Mountain</option><option value="Coquitlam-Maillardville" >Coquitlam-Maillardville</option><option value="Courtenay-Comox" >Courtenay-Comox</option><option value="Cowichan Valley" >Cowichan Valley</option><option value="Delta North" >Delta North</option><option value="Delta South" >Delta South</option><option value="Esquimalt-Colwood" >Esquimalt-Colwood</option><option value="Fraser-Nicola" >Fraser-Nicola</option><option value="Juan de Fuca-Malahat" >Juan de Fuca-Malahat</option><option value="Kamloops Centre" >Kamloops Centre</option><option value="Kamloops-North Thompson" >Kamloops-North Thompson</option><option value="Kelowna Centre" >Kelowna Centre</option><option value="Kelowna-Lake Country-Coldstream" >Kelowna-Lake Country-Coldstream</option><option value="Kelowna-Mission" >Kelowna-Mission</option><option value="Kootenay Central" >Kootenay Central</option><option value="Kootenay-Monashee" >Kootenay-Monashee</option><option value="Kootenay-Rockies" >Kootenay-Rockies</option><option value="Ladysmith-Oceanside" >Ladysmith-Oceanside</option><option value="Langford-Highlands" >Langford-Highlands</option><option value="Langley-Abbotsford" >Langley-Abbotsford</option><option value="Langley-Walnut Grove" >Langley-Walnut Grove</option><option value="Langley-Willowbrook" >Langley-Willowbrook</option><option value="Maple Ridge East" >Maple Ridge East</option><option value="Maple Ridge-Pitt Meadows" >Maple Ridge-Pitt Meadows</option><option value="Mid Island-Pacific Rim" >Mid Island-Pacific Rim</option><option value="Nanaimo-Gabriola Island" >Nanaimo-Gabriola Island</option><option value="Nanaimo-Lantzville" >Nanaimo-Lantzville</option><option value="Nechako Lakes" >Nechako Lakes</option><option value="New Westminster-Coquitlam" >New Westminster-Coquitlam</option><option value="North Coast-Haida Gwaii" >North Coast-Haida Gwaii</option><option value="North Island" >North Island</option><option value="North Vancouver-Lonsdale" >North Vancouver-Lonsdale</option><option value="North Vancouver-Seymour" >North Vancouver-Seymour</option><option value="Oak Bay-Gordon Head" >Oak Bay-Gordon Head</option><option value="Peace River North" >Peace River North</option><option value="Peace River South" >Peace River South</option><option value="Penticton-Summerland" >Penticton-Summerland</option><option value="Port Coquitlam" >Port Coquitlam</option><option value="Port Moody-Burquitlam" >Port Moody-Burquitlam</option><option value="Powell River-Sunshine Coast" >Powell River-Sunshine Coast</option><option value="Prince George-Mackenzie" >Prince George-Mackenzie</option><option value="Prince George-North Cariboo" >Prince George-North Cariboo</option><option value="Prince George-Valemount" >Prince George-Valemount</option><option value="Richmond Centre" >Richmond Centre</option><option value="Richmond-Bridgeport" >Richmond-Bridgeport</option><option value="Richmond-Queensborough" >Richmond-Queensborough</option><option value="Richmond-Steveston" >Richmond-Steveston</option><option value="Saanich North and the Islands" >Saanich North and the Islands</option><option value="Saanich South" >Saanich South</option><option value="Salmon Arm-Shuswap" >Salmon Arm-Shuswap</option><option value="Skeena" >Skeena</option><option value="Surrey City Centre" >Surrey City Centre</option><option value="Surrey North" >Surrey North</option><option value="Surrey South" >Surrey South</option><option value="Surrey-Cloverdale" >Surrey-Cloverdale</option><option value="Surrey-Fleetwood" >Surrey-Fleetwood</option><option value="Surrey-Guildford" >Surrey-Guildford</option><option value="Surrey-Newton" >Surrey-Newton</option><option value="Surrey-Panorama" >Surrey-Panorama</option><option value="Surrey-Serpentine River" >Surrey-Serpentine River</option><option value="Surrey-White Rock" >Surrey-White Rock</option><option value="Vancouver-Fraserview" >Vancouver-Fraserview</option><option value="Vancouver-Hastings" >Vancouver-Hastings</option><option value="Vancouver-Kensington" >Vancouver-Kensington</option><option value="Vancouver-Langara" >Vancouver-Langara</option><option value="Vancouver-Little Mountain" >Vancouver-Little Mountain</option><option value="Vancouver-Point Grey" >Vancouver-Point Grey</option><option value="Vancouver-Quilchena" >Vancouver-Quilchena</option><option value="Vancouver-Renfrew" >Vancouver-Renfrew</option><option value="Vancouver-South Granville" >Vancouver-South Granville</option><option value="Vancouver-Strathcona" >Vancouver-Strathcona</option><option value="Vancouver-West End" >Vancouver-West End</option><option value="Vancouver-Yaletown" >Vancouver-Yaletown</option><option value="Vernon-Lumby" >Vernon-Lumby</option><option value="Victoria-Beacon Hill" >Victoria-Beacon Hill</option><option value="Victoria-Swan Lake" >Victoria-Swan Lake</option><option value="West Kelowna-Peachland" >West Kelowna-Peachland</option><option value="West Vancouver-Capilano" >West Vancouver-Capilano</option><option value="West Vancouver-Sea to Sky" >West Vancouver-Sea to Sky</option></select></label></div>
+    <div id="candidateResults"><nav id="candidatePartyNavigation" class="candidate-party-nav" aria-label="Jump to party" tabindex="-1"><button type="button" class="candidate-nav-button" data-party-jump="vision" aria-label="B.C. Vision: 0 candidates" title="Jump to B.C. Vision" ><span class="candidate-party-mark" style="--party:#769439" aria-hidden="true"></span><span class="candidate-nav-name">B.C. Vision</span><span class="candidate-nav-count">0 candidates</span></button><button type="button" class="candidate-nav-button" data-party-jump="green" aria-label="BC Green Party: 7 candidates" title="Jump to BC Green Party" ><span class="candidate-party-logo "><img src="../data/assets/web/green-party-logo-2b96509cf2.webp" alt="" width="120" height="42" loading="lazy"></span><span class="candidate-nav-name">BC Green Party</span><span class="candidate-nav-count">7 candidates</span></button><button type="button" class="candidate-nav-button" data-party-jump="ndp" aria-label="BC NDP: 42 candidates" title="Jump to BC NDP" ><span class="candidate-party-logo "><img src="../data/assets/web/ndp-party-logo-7f2a2f7eb4.webp" alt="" width="120" height="42" loading="lazy"></span><span class="candidate-nav-name">BC NDP</span><span class="candidate-nav-count">42 candidates</span></button><button type="button" class="candidate-nav-button" data-party-jump="bcparty" aria-label="BC Party: 0 candidates" title="Jump to BC Party" ><span class="candidate-party-mark" style="--party:#9a49ae" aria-hidden="true"></span><span class="candidate-nav-name">BC Party</span><span class="candidate-nav-count">0 candidates</span></button><button type="button" class="candidate-nav-button" data-party-jump="united" aria-label="BC UNITED: 0 candidates" title="Jump to BC UNITED" ><span class="candidate-party-logo "><img src="../data/assets/web/united-party-logo-37a5ae6f23.webp" alt="" width="120" height="42" loading="lazy"></span><span class="candidate-nav-name">BC UNITED</span><span class="candidate-nav-count">0 candidates</span></button><button type="button" class="candidate-nav-button" data-party-jump="centre" aria-label="CentreBC: 8 candidates" title="Jump to CentreBC" ><span class="candidate-party-logo "><img src="../data/assets/web/centre-party-logo-0a4ab131e2.webp" alt="" width="120" height="42" loading="lazy"></span><span class="candidate-nav-name">CentreBC</span><span class="candidate-nav-count">8 candidates</span></button><button type="button" class="candidate-nav-button" data-party-jump="heritage" aria-label="Christian Heritage Party of BC: 0 candidates" title="Jump to Christian Heritage Party of BC" ><span class="candidate-party-logo "><img src="../data/assets/web/heritage-party-logo-68211b2526.webp" alt="" width="120" height="42" loading="lazy"></span><span class="candidate-nav-name">Christian Heritage Party of BC</span><span class="candidate-nav-count">0 candidates</span></button><button type="button" class="candidate-nav-button" data-party-jump="communist" aria-label="Communist Party of BC: 0 candidates" title="Jump to Communist Party of BC" ><span class="candidate-party-logo "><img src="../data/assets/web/communist-party-logo-e162ef4079.webp" alt="" width="120" height="42" loading="lazy"></span><span class="candidate-nav-name">Communist Party of BC</span><span class="candidate-nav-count">0 candidates</span></button><button type="button" class="candidate-nav-button" data-party-jump="con" aria-label="Conservative Party: 59 candidates" title="Jump to Conservative Party" ><span class="candidate-party-logo on-dark"><img src="../data/assets/web/con-party-logo-56de17d732.webp" alt="" width="120" height="42" loading="lazy"></span><span class="candidate-nav-name">Conservative Party</span><span class="candidate-nav-count">59 candidates</span></button><button type="button" class="candidate-nav-button" data-party-jump="canwest" aria-label="CWP: 0 candidates" title="Jump to CWP" ><span class="candidate-party-logo "><img src="../data/assets/originals/canwest/canwest-official-logo.jpg" alt="" width="120" height="42" loading="lazy"></span><span class="candidate-nav-name">CWP</span><span class="candidate-nav-count">0 candidates</span></button><button type="button" class="candidate-nav-button" data-party-jump="freedom" aria-label="Freedom Party of BC: 0 candidates" title="Jump to Freedom Party of BC" ><span class="candidate-party-logo "><img src="../data/assets/web/freedom-party-logo-0337379873.webp" alt="" width="120" height="42" loading="lazy"></span><span class="candidate-nav-name">Freedom Party of BC</span><span class="candidate-nav-count">0 candidates</span></button><button type="button" class="candidate-nav-button" data-party-jump="independent" aria-label="Independent: 1 candidate" title="Jump to Independent" ><span class="candidate-party-mark" style="--party:#687d88" aria-hidden="true"></span><span class="candidate-nav-name">Independent</span><span class="candidate-nav-count">1 candidate</span></button><button type="button" class="candidate-nav-button" data-party-jump="libertarian" aria-label="Libertarian: 0 candidates" title="Jump to Libertarian" ><span class="candidate-party-logo "><img src="../data/assets/web/libertarian-party-logo-97a6ae9540.webp" alt="" width="120" height="42" loading="lazy"></span><span class="candidate-nav-name">Libertarian</span><span class="candidate-nav-count">0 candidates</span></button><button type="button" class="candidate-nav-button" data-party-jump="one" aria-label="OneBC: 7 candidates" title="Jump to OneBC" ><span class="candidate-party-logo "><img src="../data/assets/originals/one/onebc-official-logo.png" alt="" width="120" height="42" loading="lazy"></span><span class="candidate-nav-name">OneBC</span><span class="candidate-nav-count">7 candidates</span></button><button type="button" class="candidate-nav-button" data-party-jump="citizens" aria-label="Party of Citizens: 0 candidates" title="Jump to Party of Citizens" ><span class="candidate-party-mark" style="--party:#c75580" aria-hidden="true"></span><span class="candidate-nav-name">Party of Citizens</span><span class="candidate-nav-count">0 candidates</span></button><button type="button" class="candidate-nav-button" data-party-jump="unaffiliated" aria-label="Unaffiliated: 1 candidate" title="Jump to Unaffiliated" ><span class="candidate-party-mark" style="--party:#687d88" aria-hidden="true"></span><span class="candidate-nav-name">Unaffiliated</span><span class="candidate-nav-count">1 candidate</span></button></nav><div class="candidate-results-count" role="status">125 of 125 candidates · Name A–Z</div><section class="candidate-party-section" aria-labelledby="candidate-party-vision" data-candidate-party="vision">
+      <header class="candidate-party-heading"><span class="candidate-party-mark" style="--party:#769439" aria-hidden="true"></span><h2 id="candidate-party-vision" tabindex="-1">B.C. Vision</h2><div class="candidate-group-actions"><span>0 candidates</span><button type="button" class="candidate-top-control" data-candidate-top title="Back to the party list"><i data-lucide="arrow-up-right" aria-hidden="true"></i>Top</button></div></header>
+      <p class="candidate-empty-party">No candidates recorded in this snapshot.</p>
+    </section><section class="candidate-party-section" aria-labelledby="candidate-party-green" data-candidate-party="green">
+      <header class="candidate-party-heading"><span class="candidate-party-logo "><img src="../data/assets/web/green-party-logo-2b96509cf2.webp" alt="" width="120" height="42" loading="lazy"></span><h2 id="candidate-party-green" tabindex="-1">BC Green Party</h2><div class="candidate-group-actions"><span>7 candidates</span><button type="button" class="candidate-top-control" data-candidate-top title="Back to the party list"><i data-lucide="arrow-up-right" aria-hidden="true"></i>Top</button></div></header>
+      <div class="candidate-grid"><article class="candidate-card" data-candidate-id="green-david-evans">
+          <div class="candidate-portrait"><img src="../data/assets/web/green-green-david-evans-65a5c4d26e.webp" alt="David Evans" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>David Evans</h3><a class="candidate-riding" href="../ridings/juan-de-fuca-malahat/" lang="en-CA">Juan de Fuca-Malahat</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://bcgreens.ca/candidates-2026/david-evans/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://bcgreens.ca/candidates-2026/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://bcgreens.ca/candidates-2026/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="green-emily-lowan">
+          <div class="candidate-portrait"><img src="../data/assets/web/green-green-emily-lowan-e3f44d3844.webp" alt="Emily Lowan" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Emily Lowan</h3><a class="candidate-riding" href="../ridings/saanich-north-and-the-islands/" lang="en-CA">Saanich North and the Islands</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://bcgreens.ca/candidates-2026/emily-lowan-2/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://bcgreens.ca/candidates-2026/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://bcgreens.ca/candidates-2026/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="green-francis-racy">
+          <div class="candidate-portrait"><img src="../data/assets/web/green-green-francis-racy-2aedadcdf9.webp" alt="Francis Racy" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Francis Racy</h3><a class="candidate-riding" href="../ridings/north-coast-haida-gwaii/" lang="en-CA">North Coast-Haida Gwaii</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://bcgreens.ca/candidates-2026/francis-racy/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://bcgreens.ca/candidates-2026/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://bcgreens.ca/candidates-2026/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="green-jeremy-valeriote">
+          <div class="candidate-portrait"><img src="../data/assets/web/green-green-jeremy-valeriote-b232db549f.webp" alt="Jeremy Valeriote" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Jeremy Valeriote</h3><a class="candidate-riding" href="../ridings/west-vancouver-sea-to-sky/" lang="en-CA">West Vancouver-Sea to Sky</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://bcgreens.ca/candidates-2026/jeremy-valeriote-2/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://bcgreens.ca/candidates-2026/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://bcgreens.ca/candidates-2026/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="green-maureen-curran">
+          <div class="candidate-portrait"><img src="../data/assets/web/green-green-maureen-curran-eb32aedc6a.webp" alt="Maureen Curran" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Maureen Curran</h3><a class="candidate-riding" href="../ridings/new-westminster-coquitlam/" lang="en-CA">New Westminster-Coquitlam</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://bcgreens.ca/candidates-2026/maureen-curran/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://bcgreens.ca/candidates-2026/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://bcgreens.ca/candidates-2026/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="green-nick-gottlieb">
+          <div class="candidate-portrait"><img src="../data/assets/web/green-green-nick-gottlieb-4b99e79d55.webp" alt="Nick Gottlieb" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Nick Gottlieb</h3><a class="candidate-riding" href="../ridings/skeena/" lang="en-CA">Skeena</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://bcgreens.ca/candidates-2026/nick-gottlieb/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://bcgreens.ca/candidates-2026/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://bcgreens.ca/candidates-2026/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="green-rajinder-sahota">
+          <div class="candidate-portrait"><img src="../data/assets/web/green-green-rajinder-sahota-5b1fe20d79.webp" alt="Rajinder Sahota" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Rajinder Sahota</h3><a class="candidate-riding" href="../ridings/victoria-beacon-hill/" lang="en-CA">Victoria-Beacon Hill</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://bcgreens.ca/candidates-2026/rajinder-sahota/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://bcgreens.ca/candidates-2026/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://bcgreens.ca/candidates-2026/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article></div>
+    </section><section class="candidate-party-section" aria-labelledby="candidate-party-ndp" data-candidate-party="ndp">
+      <header class="candidate-party-heading"><span class="candidate-party-logo "><img src="../data/assets/web/ndp-party-logo-7f2a2f7eb4.webp" alt="" width="120" height="42" loading="lazy"></span><h2 id="candidate-party-ndp" tabindex="-1">BC NDP</h2><div class="candidate-group-actions"><span>42 candidates</span><button type="button" class="candidate-top-control" data-candidate-top title="Back to the party list"><i data-lucide="arrow-up-right" aria-hidden="true"></i>Top</button></div></header>
+      <div class="candidate-grid"><article class="candidate-card" data-candidate-id="ndp-adrian-dix">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-ndp-adrian-dix-785498fc44.webp" alt="Adrian Dix" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Adrian Dix</h3><a class="candidate-riding" href="../ridings/vancouver-renfrew/" lang="en-CA">Vancouver-Renfrew</a>
+          <span class="candidate-status accepted">Accepted nomination</span>
+          <div class="candidate-card-links"><a href="https://adriandix.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF" target="_blank" rel="noopener noreferrer">Elections BC nomination</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-amna-shah">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-727-portrait-0d2c3ff18d.webp" alt="Amna Shah" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Amna Shah</h3><a class="candidate-riding" href="../ridings/surrey-city-centre/" lang="en-CA">Surrey City Centre</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://amnashah.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://amnashah.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-andrea-dunlop">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-andrea-dunlop-portrait-b2a1a69ae1.webp" alt="Andrea Dunlop" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Andrea Dunlop</h3><a class="candidate-riding" href="../ridings/columbia-river-revelstoke/" lang="en-CA">Columbia River-Revelstoke</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://andreadunlop.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-anne-kang">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-667-portrait-9c593d014e.webp" alt="Anne Kang" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Anne Kang</h3><a class="candidate-riding" href="../ridings/burnaby-centre/" lang="en-CA">Burnaby Centre</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://annekang.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://annekang.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-bowinn-ma">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-ndp-bowinn-ma-e52d5ffbed.webp" alt="Bowinn Ma" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Bowinn Ma</h3><a class="candidate-riding" href="../ridings/north-vancouver-lonsdale/" lang="en-CA">North Vancouver-Lonsdale</a>
+          <span class="candidate-status accepted">Accepted nomination</span>
+          <div class="candidate-card-links"><a href="https://bowinnma.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF" target="_blank" rel="noopener noreferrer">Elections BC nomination</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-brittny-anderson">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-662-portrait-c439e95c61.webp" alt="Brittny Anderson" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Brittny Anderson</h3><a class="candidate-riding" href="../ridings/kootenay-central/" lang="en-CA">Kootenay Central</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://brittnyanderson.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://brittnyanderson.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-dana-lajeunesse">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-684-portrait-2e429d10bb.webp" alt="Dana Lajeunesse" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Dana Lajeunesse</h3><a class="candidate-riding" href="../ridings/juan-de-fuca-malahat/" lang="en-CA">Juan de Fuca-Malahat</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://danalajeunesse.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://danalajeunesse.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-darlene-rotchford">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-682-portrait-8e978d8e0a.webp" alt="Darlene Rotchford" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Darlene Rotchford</h3><a class="candidate-riding" href="../ridings/esquimalt-colwood/" lang="en-CA">Esquimalt-Colwood</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://darlenerotchford.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://darlenerotchford.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-david-eby">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-ndp-david-eby-11f3afb9fe.webp" alt="David Eby" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>David Eby</h3><a class="candidate-riding" href="../ridings/vancouver-point-grey/" lang="en-CA">Vancouver-Point Grey</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://www.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-debra-toporowski">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-debra-toporowski-portrait-a8febd17a6.webp" alt="Debra Toporowski" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Debra Toporowski</h3><a class="candidate-riding" href="../ridings/cowichan-valley/" lang="en-CA">Cowichan Valley</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://debratoporowski.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-diana-gibson">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-707-portrait-a43a154653.webp" alt="Diana Gibson" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Diana Gibson</h3><a class="candidate-riding" href="../ridings/oak-bay-gordon-head/" lang="en-CA">Oak Bay-Gordon Head</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://dianagibson.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://dianagibson.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-garry-begg">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-752-portrait-8c7a7c7147.webp" alt="Garry Begg" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Garry Begg</h3><a class="candidate-riding" href="../ridings/surrey-guildford/" lang="en-CA">Surrey-Guildford</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://garrybegg.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://garrybegg.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-george-anderson">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-700-portrait-cb1b5df59e.webp" alt="George Anderson" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>George Anderson</h3><a class="candidate-riding" href="../ridings/nanaimo-lantzville/" lang="en-CA">Nanaimo-Lantzville</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://georgeanderson.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://georgeanderson.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-grace-lore">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-749-portrait-a7d440fca6.webp" alt="Grace Lore" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Grace Lore</h3><a class="candidate-riding" href="../ridings/victoria-beacon-hill/" lang="en-CA">Victoria-Beacon Hill</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://gracelore.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://gracelore.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-harwinder-sandhu">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-751-portrait-de742a4464.webp" alt="Harwinder Sandhu" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Harwinder Sandhu</h3><a class="candidate-riding" href="../ridings/vernon-lumby/" lang="en-CA">Vernon-Lumby</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://harwindersandhu.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://harwindersandhu.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-jagrup-brar">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-ndp-jagrup-brar-095be04e3d.webp" alt="Jagrup Brar" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Jagrup Brar</h3><a class="candidate-riding" href="../ridings/surrey-fleetwood/" lang="en-CA">Surrey-Fleetwood</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://jagrupbrar.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-janet-routledge">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-670-portrait-5d49fa32c5.webp" alt="Janet Routledge" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Janet Routledge</h3><a class="candidate-riding" href="../ridings/burnaby-north/" lang="en-CA">Burnaby North</a>
+          <span class="candidate-status accepted">Accepted nomination</span>
+          <div class="candidate-card-links"><a href="https://elections.bc.ca/2026-provincial-election/candidate-list/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://janetroutledge.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF" target="_blank" rel="noopener noreferrer">Elections BC nomination</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-jason-mccormick">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-jason-mccormick-portrait-645a026e17.webp" alt="Jason McCormick" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Jason McCormick</h3><a class="candidate-riding" href="../ridings/delta-south/" lang="en-CA">Delta South</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://jasonmccormick.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-jennifer-whiteside">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-702-portrait-70ac072107.webp" alt="Jennifer Whiteside" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Jennifer Whiteside</h3><a class="candidate-riding" href="../ridings/new-westminster-coquitlam/" lang="en-CA">New Westminster-Coquitlam</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://jenniferwhiteside.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://jenniferwhiteside.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-jessie-sunner">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-ndp-jessie-sunner-a6c2df987a.webp" alt="Jessie Sunner" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Jessie Sunner</h3><a class="candidate-riding" href="../ridings/surrey-newton/" lang="en-CA">Surrey-Newton</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://jessiesunner.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-jinny-sims">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-ndp-jinny-sims-6ab93d3cea.webp" alt="Jinny Sims" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Jinny Sims</h3><a class="candidate-riding" href="../ridings/surrey-panorama/" lang="en-CA">Surrey-Panorama</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://jinnysims.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-josie-osborne">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-698-portrait-c3b21582c3.webp" alt="Josie Osborne" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Josie Osborne</h3><a class="candidate-riding" href="../ridings/mid-island-pacific-rim/" lang="en-CA">Mid Island-Pacific Rim</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://josieosborne.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://bcndpcaucus.ca/mla/josie-osborne/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-kelli-paddon">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-ndp-kelli-paddon-314b04bba2.webp" alt="Kelli Paddon" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Kelli Paddon</h3><a class="candidate-riding" href="../ridings/chilliwack-cultus-lake/" lang="en-CA">Chilliwack-Cultus Lake</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://kellipaddon.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-lisa-beare">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-697-portrait-2d8b9155f8.webp" alt="Lisa Beare" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Lisa Beare</h3><a class="candidate-riding" href="../ridings/maple-ridge-pitt-meadows/" lang="en-CA">Maple Ridge-Pitt Meadows</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://lisabeare.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://lisabeare.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-mable-elmore">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-737-portrait-245b6788e5.webp" alt="Mable Elmore" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Mable Elmore</h3><a class="candidate-riding" href="../ridings/vancouver-kensington/" lang="en-CA">Vancouver-Kensington</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://mableelmore.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://mableelmore.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-mike-farnworth">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-ndp-mike-farnworth-efacaf2c04.webp" alt="Mike Farnworth" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Mike Farnworth</h3><a class="candidate-riding" href="../ridings/port-coquitlam/" lang="en-CA">Port Coquitlam</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://mikefarnworth.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-niki-sharma">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-736-portrait-8b8420c5ca.webp" alt="Niki Sharma" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Niki Sharma</h3><a class="candidate-riding" href="../ridings/vancouver-hastings/" lang="en-CA">Vancouver-Hastings</a>
+          <span class="candidate-status accepted">Accepted nomination</span>
+          <div class="candidate-card-links"><a href="https://elections.bc.ca/2026-provincial-election/candidate-list/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://nikisharma.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF" target="_blank" rel="noopener noreferrer">Elections BC nomination</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-nina-krieger">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-ndp-nina-krieger-869aa3faea.webp" alt="Nina Krieger" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Nina Krieger</h3><a class="candidate-riding" href="../ridings/victoria-swan-lake/" lang="en-CA">Victoria-Swan Lake</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://ninakreiger.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-paul-choi">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-671-portrait-9af799da5e.webp" alt="Paul Choi" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Paul Choi</h3><a class="candidate-riding" href="../ridings/burnaby-south-metrotown/" lang="en-CA">Burnaby South-Metrotown</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://paulchoi.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://paulchoi.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-raj-chouhan">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-669-portrait-6668eaa4b4.webp" alt="Raj Chouhan" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Raj Chouhan</h3><a class="candidate-riding" href="../ridings/burnaby-new-westminster/" lang="en-CA">Burnaby-New Westminster</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://rajchouhan.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://rajchouhan.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-randene-neill">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-ndp-randene-neill-40f2aad39a.webp" alt="Randene Neill" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Randene Neill</h3><a class="candidate-riding" href="../ridings/powell-river-sunshine-coast/" lang="en-CA">Powell River-Sunshine Coast</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://randeneneill.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-ravi-parmar">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-ndp-ravi-parmar-3f5addca71.webp" alt="Ravi Parmar" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Ravi Parmar</h3><a class="candidate-riding" href="../ridings/langford-highlands/" lang="en-CA">Langford-Highlands</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://raviparmar.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-richard-zussman">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-ndp-richard-zussman-d0265d5386.webp" alt="Richard Zussman" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Richard Zussman</h3><a class="candidate-riding" href="../ridings/saanich-south/" lang="en-CA">Saanich South</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://richardzussman.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-rohini-arora">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-668-portrait-b30bedff7d.webp" alt="Rohini Arora" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Rohini Arora</h3><a class="candidate-riding" href="../ridings/burnaby-east/" lang="en-CA">Burnaby East</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://rohiniarora.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://rohiniarora.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-roly-russell">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-roly-russell-portrait-a5fa825aa3.webp" alt="Roly Russell" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Roly Russell</h3><a class="candidate-riding" href="../ridings/boundary-similkameen/" lang="en-CA">Boundary-Similkameen</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://rolyrussell.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-sarah-zimmerman">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-ndp-sarah-zimmerman-49072e7ab6.webp" alt="Sarah Zimmerman" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Sarah Zimmerman</h3><a class="candidate-riding" href="../ridings/skeena/" lang="en-CA">Skeena</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://sarahzimmerman.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-sheila-malcolmson">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-699-portrait-47754897ee.webp" alt="Sheila Malcolmson" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Sheila Malcolmson</h3><a class="candidate-riding" href="../ridings/nanaimo-gabriola-island/" lang="en-CA">Nanaimo-Gabriola Island</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://sheilamalcolmson.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://sheilamalcolmson.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-spencer-chandra-herbert">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-ndp-spencer-chandra-herbert-4c78b57732.webp" alt="Spencer Chandra Herbert" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Spencer Chandra Herbert</h3><a class="candidate-riding" href="../ridings/vancouver-west-end/" lang="en-CA">Vancouver-West End</a>
+          <span class="candidate-status accepted">Accepted nomination</span>
+          <div class="candidate-card-links"><a href="https://spencerchandraherbert.bcndp.ca/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://spencerchandraherbert.bcndp.ca/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF" target="_blank" rel="noopener noreferrer">Elections BC nomination</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-stephanie-higginson">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-691-portrait-4d21515134.webp" alt="Stephanie Higginson" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Stephanie Higginson</h3><a class="candidate-riding" href="../ridings/ladysmith-oceanside/" lang="en-CA">Ladysmith-Oceanside</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://stephaniehigginson.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://stephaniehigginson.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-steve-morissette">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-689-portrait-3a8116fab4.webp" alt="Steve Morissette" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Steve Morissette</h3><a class="candidate-riding" href="../ridings/kootenay-monashee/" lang="en-CA">Kootenay-Monashee</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://stevemorissette.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://stevemorissette.bcndp.ca" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-terry-yung">
+          <div class="candidate-portrait"><img src="../data/assets/web/mla-742-portrait-640b758081.webp" alt="Terry Yung" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Terry Yung</h3><a class="candidate-riding" href="../ridings/vancouver-yaletown/" lang="en-CA">Vancouver-Yaletown</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://terryyung.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://bcndpcaucus.ca/mla/terry-yung/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="ndp-will-cole-hamilton">
+          <div class="candidate-portrait"><img src="../data/assets/web/ndp-will-cole-hamilton-portrait-c042df6aa1.webp" alt="Will Cole-Hamilton" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Will Cole-Hamilton</h3><a class="candidate-riding" href="../ridings/courtenay-comox/" lang="en-CA">Courtenay-Comox</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://willcolehamilton.bcndp.ca" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.bcndp.ca/team" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article></div>
+    </section><section class="candidate-party-section" aria-labelledby="candidate-party-bcparty" data-candidate-party="bcparty">
+      <header class="candidate-party-heading"><span class="candidate-party-mark" style="--party:#9a49ae" aria-hidden="true"></span><h2 id="candidate-party-bcparty" tabindex="-1">BC Party</h2><div class="candidate-group-actions"><span>0 candidates</span><button type="button" class="candidate-top-control" data-candidate-top title="Back to the party list"><i data-lucide="arrow-up-right" aria-hidden="true"></i>Top</button></div></header>
+      <p class="candidate-empty-party">No candidates recorded in this snapshot.</p>
+    </section><section class="candidate-party-section" aria-labelledby="candidate-party-united" data-candidate-party="united">
+      <header class="candidate-party-heading"><span class="candidate-party-logo "><img src="../data/assets/web/united-party-logo-37a5ae6f23.webp" alt="" width="120" height="42" loading="lazy"></span><h2 id="candidate-party-united" tabindex="-1">BC UNITED</h2><div class="candidate-group-actions"><span>0 candidates</span><button type="button" class="candidate-top-control" data-candidate-top title="Back to the party list"><i data-lucide="arrow-up-right" aria-hidden="true"></i>Top</button></div></header>
+      <p class="candidate-empty-party">No candidates recorded in this snapshot.</p>
+    </section><section class="candidate-party-section" aria-labelledby="candidate-party-centre" data-candidate-party="centre">
+      <header class="candidate-party-heading"><span class="candidate-party-logo "><img src="../data/assets/web/centre-party-logo-0a4ab131e2.webp" alt="" width="120" height="42" loading="lazy"></span><h2 id="candidate-party-centre" tabindex="-1">CentreBC</h2><div class="candidate-group-actions"><span>8 candidates</span><button type="button" class="candidate-top-control" data-candidate-top title="Back to the party list"><i data-lucide="arrow-up-right" aria-hidden="true"></i>Top</button></div></header>
+      <div class="candidate-grid"><article class="candidate-card" data-candidate-id="centre-andrew-weaver">
+          <div class="candidate-portrait"><img src="../data/assets/web/centre-centre-andrew-weaver-015004d433.webp" alt="Andrew Weaver" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Andrew Weaver</h3><a class="candidate-riding" href="../ridings/oak-bay-gordon-head/" lang="en-CA">Oak Bay-Gordon Head</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://www.centrebc.ca/candidates/andrew-weaver/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.centrebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.centrebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="centre-dan-wood">
+          <div class="candidate-portrait"><img src="../data/assets/web/centre-centre-dan-wood-0cdaf420d7.webp" alt="Dan Wood" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Dan Wood</h3><a class="candidate-riding" href="../ridings/west-vancouver-sea-to-sky/" lang="en-CA">West Vancouver-Sea to Sky</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://www.centrebc.ca/candidates/dan-wood/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.centrebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.centrebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="centre-kim-lockhart">
+          <div class="candidate-portrait"><img src="../data/assets/web/centre-kim-lockhart-portrait-11bb919ea3.webp" alt="Kim Lockhart" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Kim Lockhart</h3><a class="candidate-riding" href="../ridings/ladysmith-oceanside/" lang="en-CA">Ladysmith-Oceanside</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://www.centrebc.ca/candidates/kim-lockhart/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.centrebc.ca/candidates/kim-lockhart/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.centrebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="centre-kuldeep-rangi">
+          <div class="candidate-portrait"><img src="../data/assets/web/centre-kuldeep-rangi-portrait-464b911556.webp" alt="Kuldeep Rangi" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Kuldeep Rangi</h3><a class="candidate-riding" href="../ridings/delta-north/" lang="en-CA">Delta North</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://www.centrebc.ca/candidates/kuldeep-rangi/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.centrebc.ca/candidates/kuldeep-rangi/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.centrebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="centre-lakhwinder-jhaj">
+          <div class="candidate-portrait"><img src="../data/assets/web/centre-centre-lakhwinder-jhaj-9ca968fab2.webp" alt="Lakhwinder Jhaj" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Lakhwinder Jhaj</h3><a class="candidate-riding" href="../ridings/abbotsford-mission/" lang="en-CA">Abbotsford-Mission</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://www.centrebc.ca/candidates/lakhwinder-jhaj/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.centrebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.centrebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="centre-michael-davis">
+          <div class="candidate-portrait"><img src="../data/assets/web/centre-michael-davis-portrait-31c6ffabc8.webp" alt="Michael Davis" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Michael Davis</h3><a class="candidate-riding" href="../ridings/vancouver-point-grey/" lang="en-CA">Vancouver-Point Grey</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://www.centrebc.ca/candidates/michael-davis/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.centrebc.ca/candidates/michael-davis/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.centrebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="centre-paul-brar">
+          <div class="candidate-portrait"><img src="../data/assets/web/centre-centre-paul-brar-b540e510a9.webp" alt="Paul Brar" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Paul Brar</h3><a class="candidate-riding" href="../ridings/surrey-fleetwood/" lang="en-CA">Surrey-Fleetwood</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://www.centrebc.ca/candidates/paul-brar/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.centrebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.centrebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="centre-raman-sharma">
+          <div class="candidate-portrait"><img src="../data/assets/web/centre-raman-sharma-portrait-de3339e6fc.webp" alt="Raman Sharma" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Raman Sharma</h3><a class="candidate-riding" href="../ridings/surrey-city-centre/" lang="en-CA">Surrey City Centre</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://www.centrebc.ca/candidates/raman-sharma/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.centrebc.ca/candidates/raman-sharma/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.centrebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article></div>
+    </section><section class="candidate-party-section" aria-labelledby="candidate-party-heritage" data-candidate-party="heritage">
+      <header class="candidate-party-heading"><span class="candidate-party-logo "><img src="../data/assets/web/heritage-party-logo-68211b2526.webp" alt="" width="120" height="42" loading="lazy"></span><h2 id="candidate-party-heritage" tabindex="-1">Christian Heritage Party of BC</h2><div class="candidate-group-actions"><span>0 candidates</span><button type="button" class="candidate-top-control" data-candidate-top title="Back to the party list"><i data-lucide="arrow-up-right" aria-hidden="true"></i>Top</button></div></header>
+      <p class="candidate-empty-party">No candidates recorded in this snapshot.</p>
+    </section><section class="candidate-party-section" aria-labelledby="candidate-party-communist" data-candidate-party="communist">
+      <header class="candidate-party-heading"><span class="candidate-party-logo "><img src="../data/assets/web/communist-party-logo-e162ef4079.webp" alt="" width="120" height="42" loading="lazy"></span><h2 id="candidate-party-communist" tabindex="-1">Communist Party of BC</h2><div class="candidate-group-actions"><span>0 candidates</span><button type="button" class="candidate-top-control" data-candidate-top title="Back to the party list"><i data-lucide="arrow-up-right" aria-hidden="true"></i>Top</button></div></header>
+      <p class="candidate-empty-party">No candidates recorded in this snapshot.</p>
+    </section><section class="candidate-party-section" aria-labelledby="candidate-party-con" data-candidate-party="con">
+      <header class="candidate-party-heading"><span class="candidate-party-logo on-dark"><img src="../data/assets/web/con-party-logo-56de17d732.webp" alt="" width="120" height="42" loading="lazy"></span><h2 id="candidate-party-con" tabindex="-1">Conservative Party</h2><div class="candidate-group-actions"><span>59 candidates</span><button type="button" class="candidate-top-control" data-candidate-top title="Back to the party list"><i data-lucide="arrow-up-right" aria-hidden="true"></i>Top</button></div></header>
+      <div class="candidate-grid"><article class="candidate-card" data-candidate-id="con-a-a-liya-a-aliya-warbus">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-a-a-liya-a-aliya-warbus-8cbd807165.webp" alt="Á’a:líya (A’aliya) Warbus" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Á’a:líya (A’aliya) Warbus</h3><a class="candidate-riding" href="../ridings/chilliwack-cultus-lake/" lang="en-CA">Chilliwack-Cultus Lake</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/aaliya-warbus/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-alex-mcmillan">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-alex-mcmillan-portrait-bd404ed960.webp" alt="Alex McMillan" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Alex McMillan</h3><a class="candidate-riding" href="../ridings/vancouver-point-grey/" lang="en-CA">Vancouver-Point Grey</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/alex-mcmillan/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-alex-muir">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-alex-muir-portrait-9938cddaaa.webp" alt="Alex Muir" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Alex Muir</h3><a class="candidate-riding" href="../ridings/vancouver-little-mountain/" lang="en-CA">Vancouver-Little Mountain</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/alex-muir/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-anna-kindy">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-anna-kindy-1e08f39cb6.webp" alt="Anna Kindy" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Anna Kindy</h3><a class="candidate-riding" href="../ridings/north-island/" lang="en-CA">North Island</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/anna-kindy/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-ayla-dumais">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-ayla-dumais-e74730d69e.webp" alt="Ayla Dumais" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Ayla Dumais</h3><a class="candidate-riding" href="../ridings/west-vancouver-sea-to-sky/" lang="en-CA">West Vancouver-Sea to Sky</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/ayla-dumais/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-brennan-day">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-brennan-day-8355e246c3.webp" alt="Brennan Day" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Brennan Day</h3><a class="candidate-riding" href="../ridings/courtenay-comox/" lang="en-CA">Courtenay-Comox</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/brennan-day/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-bruce-banman">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-bruce-banman-a21090b909.webp" alt="Bruce Banman" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Bruce Banman</h3><a class="candidate-riding" href="../ridings/abbotsford-south/" lang="en-CA">Abbotsford South</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/bruce-banman/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-bryan-tepper">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-bryan-tepper-0239fa78b0.webp" alt="Bryan Tepper" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Bryan Tepper</h3><a class="candidate-riding" href="../ridings/surrey-panorama/" lang="en-CA">Surrey-Panorama</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/bryan-tepper/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-caroline-elliott">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-caroline-elliott-d93cfdcdfd.webp" alt="Caroline Elliott" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Caroline Elliott</h3><a class="candidate-riding" href="../ridings/west-vancouver-capilano/" lang="en-CA">West Vancouver-Capilano</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/caroline-elliott/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-cathie-ounsted">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-cathie-ounsted-portrait-9f49ee6675.webp" alt="Cathie Ounsted" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Cathie Ounsted</h3><a class="candidate-riding" href="../ridings/saanich-south/" lang="en-CA">Saanich South</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/cathie-ounsted/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-claire-rattee">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-claire-rattee-cac5397f70.webp" alt="Claire Rattée" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Claire Rattée</h3><a class="candidate-riding" href="../ridings/skeena/" lang="en-CA">Skeena</a>
+          <span class="candidate-status accepted">Accepted nomination</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/claire-rattee/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF" target="_blank" rel="noopener noreferrer">Elections BC nomination</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-curtis-whitford">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-curtis-whitford-portrait-5a5a066c86.webp" alt="Curtis Whitford" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Curtis Whitford</h3><a class="candidate-riding" href="../ridings/peace-river-north/" lang="en-CA">Peace River North</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/curtis-whitford/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-darryl-kropp">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-darryl-kropp-portrait-40b0e45328.webp" alt="Darryl Kropp" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Darryl Kropp</h3><a class="candidate-riding" href="../ridings/abbotsford-mission/" lang="en-CA">Abbotsford-Mission</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/darryl-kropp/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-dave-johnston">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-dave-johnston-portrait-d1033da6b0.webp" alt="Dave Johnston" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Dave Johnston</h3><a class="candidate-riding" href="../ridings/esquimalt-colwood/" lang="en-CA">Esquimalt-Colwood</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/dave-johnston/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-david-williams">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-david-williams-ae5d822782.webp" alt="David Williams" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>David Williams</h3><a class="candidate-riding" href="../ridings/salmon-arm-shuswap/" lang="en-CA">Salmon Arm-Shuswap</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/david-williams/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-deep-sandhu">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-deep-sandhu-portrait-31e9026846.webp" alt="Deep Sandhu" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Deep Sandhu</h3><a class="candidate-riding" href="../ridings/vancouver-fraserview/" lang="en-CA">Vancouver-Fraserview</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/deep-sandhu/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-donegal-wilson">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-donegal-wilson-06c89600b0.webp" alt="Donegal Wilson" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Donegal Wilson</h3><a class="candidate-riding" href="../ridings/boundary-similkameen/" lang="en-CA">Boundary-Similkameen</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/donegal-wilson/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-gavin-dew">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-gavin-dew-148005aa75.webp" alt="Gavin Dew" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Gavin Dew</h3><a class="candidate-riding" href="../ridings/kelowna-mission/" lang="en-CA">Kelowna-Mission</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/gavin-dew/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-gordon-zhang">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-gordon-zhang-portrait-38732f05a5.webp" alt="Gordon Zhang" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Gordon Zhang</h3><a class="candidate-riding" href="../ridings/richmond-steveston/" lang="en-CA">Richmond-Steveston</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/gordon-zhang/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-harman-bhangu">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-harman-bhangu-9edbcc7eb3.webp" alt="Harman Bhangu" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Harman Bhangu</h3><a class="candidate-riding" href="../ridings/langley-abbotsford/" lang="en-CA">Langley-Abbotsford</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/harman-bhangu/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-heather-maahs">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-heather-maahs-986805e60b.webp" alt="Heather Maahs" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Heather Maahs</h3><a class="candidate-riding" href="../ridings/chilliwack-north/" lang="en-CA">Chilliwack North</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/heather-maahs/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-ian-paton">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-ian-paton-16c47a17d1.webp" alt="Ian Paton" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Ian Paton</h3><a class="candidate-riding" href="../ridings/delta-south/" lang="en-CA">Delta South</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/ian-paton/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-jaime-stein">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-jaime-stein-921dd23433.webp" alt="Jaime Stein" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Jaime Stein</h3><a class="candidate-riding" href="../ridings/vancouver-langara/" lang="en-CA">Vancouver-Langara</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/jaime-stein/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-jody-toor">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-jody-toor-c6bf38137c.webp" alt="Jody Toor" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Jody Toor</h3><a class="candidate-riding" href="../ridings/langley-willowbrook/" lang="en-CA">Langley-Willowbrook</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/jody-toor/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-john-mcewen">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-john-mcewen-portrait-78e44b8e54.webp" alt="John McEwen" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>John McEwen</h3><a class="candidate-riding" href="../ridings/port-moody-burquitlam/" lang="en-CA">Port Moody-Burquitlam</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/john-mcewen/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-joshua-dahling">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-joshua-dahling-c5bd4e0d04.webp" alt="Joshua Dahling" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Joshua Dahling</h3><a class="candidate-riding" href="../ridings/mid-island-pacific-rim/" lang="en-CA">Mid Island-Pacific Rim</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/joshua-dahling/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-keenan-adams">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-keenan-adams-portrait-a2803c7f26.webp" alt="Keenan Adams" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Keenan Adams</h3><a class="candidate-riding" href="../ridings/port-coquitlam/" lang="en-CA">Port Coquitlam</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/keenan-adams/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-kevin-acton">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-kevin-acton-portrait-35db0de3ea.webp" alt="Kevin Acton" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Kevin Acton</h3><a class="candidate-riding" href="../ridings/vernon-lumby/" lang="en-CA">Vernon-Lumby</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/kevin-acton/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-kiel-giddens">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-kiel-giddens-257986af02.webp" alt="Kiel Giddens" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Kiel Giddens</h3><a class="candidate-riding" href="../ridings/prince-george-mackenzie/" lang="en-CA">Prince George-Mackenzie</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/kiel-giddens/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-korky-neufeld">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-korky-neufeld-580c6f805f.webp" alt="Korky Neufeld" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Korky Neufeld</h3><a class="candidate-riding" href="../ridings/abbotsford-west/" lang="en-CA">Abbotsford West</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/korky-neufeld/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-kris-mcnichol">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-kris-mcnichol-portrait-2147a1a5b2.webp" alt="Kris McNichol" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Kris McNichol</h3><a class="candidate-riding" href="../ridings/ladysmith-oceanside/" lang="en-CA">Ladysmith-Oceanside</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/kris-mcnichol/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-kristina-loewen">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-kristina-loewen-184a07e7db.webp" alt="Kristina Loewen" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Kristina Loewen</h3><a class="candidate-riding" href="../ridings/kelowna-centre/" lang="en-CA">Kelowna Centre</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/kristina-loewen/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-larry-neufeld">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-larry-neufeld-2a16e14171.webp" alt="Larry Neufeld" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Larry Neufeld</h3><a class="candidate-riding" href="../ridings/peace-river-south/" lang="en-CA">Peace River South</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/larry-neufeld/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-lawrence-mok">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-lawrence-mok-ff35c70633.webp" alt="Lawrence Mok" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Lawrence Mok</h3><a class="candidate-riding" href="../ridings/maple-ridge-east/" lang="en-CA">Maple Ridge East</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/lawrence-mok/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-lisa-phillips">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-lisa-phillips-portrait-e8de38dd23.webp" alt="Lisa Phillips" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Lisa Phillips</h3><a class="candidate-riding" href="../ridings/vancouver-south-granville/" lang="en-CA">Vancouver-South Granville</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/lisa-phillips/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-lorne-doerkson">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-lorne-doerkson-87149b2cd8.webp" alt="Lorne Doerkson" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Lorne Doerkson</h3><a class="candidate-riding" href="../ridings/cariboo-chilcotin/" lang="en-CA">Cariboo-Chilcotin</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/lorne-doerkson/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-lynne-block">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-lynne-block-f64e18b881.webp" alt="Lynne Block" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Lynne Block</h3><a class="candidate-riding" href="../ridings/north-vancouver-seymour/" lang="en-CA">North Vancouver-Seymour</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/lynne-block/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-macklin-mccall">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-macklin-mccall-4be213334d.webp" alt="Macklin McCall" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Macklin McCall</h3><a class="candidate-riding" href="../ridings/west-kelowna-peachland/" lang="en-CA">West Kelowna-Peachland</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/macklin-mccall/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-mandeep-dhaliwal">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-mandeep-dhaliwal-831df01d69.webp" alt="Mandeep Dhaliwal" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Mandeep Dhaliwal</h3><a class="candidate-riding" href="../ridings/surrey-north/" lang="en-CA">Surrey North</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/mandeep-dhaliwal/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-margareta-dovgal">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-margareta-dovgal-portrait-787915b228.webp" alt="Margareta Dovgal" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Margareta Dovgal</h3><a class="candidate-riding" href="../ridings/vancouver-yaletown/" lang="en-CA">Vancouver-Yaletown</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/margareta-dovgal/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-megan-knight">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-megan-knight-b2a31ad785.webp" alt="Megan Knight" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Megan Knight</h3><a class="candidate-riding" href="../ridings/surrey-south/" lang="en-CA">Surrey South</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/megan-knight/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-misty-van-popta">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-misty-van-popta-eef11a603e.webp" alt="Misty Van Popta" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Misty Van Popta</h3><a class="candidate-riding" href="../ridings/langley-walnut-grove/" lang="en-CA">Langley-Walnut Grove</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/misty-van-popta/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-pavneet-singh">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-pavneet-singh-2702ad0e8b.webp" alt="Pavneet Singh" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Pavneet Singh</h3><a class="candidate-riding" href="../ridings/kelowna-lake-country-coldstream/" lang="en-CA">Kelowna-Lake Country-Coldstream</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/pavneet-singh/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-pete-davis">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-pete-davis-f4443fdb2d.webp" alt="Pete Davis" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Pete Davis</h3><a class="candidate-riding" href="../ridings/kootenay-rockies/" lang="en-CA">Kootenay-Rockies</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/pete-davis/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-peter-milobar">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-peter-milobar-d99d0c080d.webp" alt="Peter Milobar" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Peter Milobar</h3><a class="candidate-riding" href="../ridings/kamloops-centre/" lang="en-CA">Kamloops Centre</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/peter-milobar/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-rosalyn-bird">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-rosalyn-bird-489ed72117.webp" alt="Rosalyn Bird" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Rosalyn Bird</h3><a class="candidate-riding" href="../ridings/prince-george-valemount/" lang="en-CA">Prince George-Valemount</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/rosalyn-bird/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-ryan-windsor">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-ryan-windsor-portrait-7e06cf0890.webp" alt="Ryan Windsor" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Ryan Windsor</h3><a class="candidate-riding" href="../ridings/saanich-north-and-the-islands/" lang="en-CA">Saanich North and the Islands</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/ryan-windsor/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-sacha-peter">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-sacha-peter-f95d62367b.webp" alt="Sacha Peter" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Sacha Peter</h3><a class="candidate-riding" href="../ridings/richmond-centre/" lang="en-CA">Richmond Centre</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/sacha-peter/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-scott-mcinnis">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-scott-mcinnis-750e95cdcc.webp" alt="Scott McInnis" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Scott McInnis</h3><a class="candidate-riding" href="../ridings/columbia-river-revelstoke/" lang="en-CA">Columbia River-Revelstoke</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/scott-mcinnis/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-sharon-hartwell">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-sharon-hartwell-52d71f446b.webp" alt="Sharon Hartwell" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Sharon Hartwell</h3><a class="candidate-riding" href="../ridings/bulkley-valley-stikine/" lang="en-CA">Bulkley Valley-Stikine</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/sharon-hartwell/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-sheldon-clare">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-sheldon-clare-55bf8ff9a3.webp" alt="Sheldon Clare" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Sheldon Clare</h3><a class="candidate-riding" href="../ridings/prince-george-north-cariboo/" lang="en-CA">Prince George-North Cariboo</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/sheldon-clare/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-simon-chandler">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-simon-chandler-portrait-c4e136da01.webp" alt="Simon Chandler" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Simon Chandler</h3><a class="candidate-riding" href="../ridings/burnaby-north/" lang="en-CA">Burnaby North</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/simon-chandler/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-stan-sipos">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-stan-sipos-portrait-5dbd086cc4.webp" alt="Stan Sipos" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Stan Sipos</h3><a class="candidate-riding" href="../ridings/oak-bay-gordon-head/" lang="en-CA">Oak Bay-Gordon Head</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/stan-sipos/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-steve-kooner">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-steve-kooner-df918571bb.webp" alt="Steve Kooner" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Steve Kooner</h3><a class="candidate-riding" href="../ridings/richmond-queensborough/" lang="en-CA">Richmond-Queensborough</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/steve-kooner/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-teresa-wat">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-teresa-wat-0d2fb50d55.webp" alt="Teresa Wat" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Teresa Wat</h3><a class="candidate-riding" href="../ridings/richmond-bridgeport/" lang="en-CA">Richmond-Bridgeport</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/teresa-wat/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-tony-luck">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-tony-luck-10188574fc.webp" alt="Tony Luck" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Tony Luck</h3><a class="candidate-riding" href="../ridings/fraser-nicola/" lang="en-CA">Fraser-Nicola</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/tony-luck/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-trevor-halford">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-trevor-halford-e1b5d0600f.webp" alt="Trevor Halford" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Trevor Halford</h3><a class="candidate-riding" href="../ridings/surrey-white-rock/" lang="en-CA">Surrey-White Rock</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/trevor-halford/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-ward-stamer">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-con-ward-stamer-97b2b15d0c.webp" alt="Ward Stamer" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Ward Stamer</h3><a class="candidate-riding" href="../ridings/kamloops-north-thompson/" lang="en-CA">Kamloops-North Thompson</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/ward-stamer/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="con-zeeshan-wahla">
+          <div class="candidate-portrait"><img src="../data/assets/web/con-zeeshan-wahla-portrait-df2561991f.webp" alt="Zeeshan Wahla" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Zeeshan Wahla</h3><a class="candidate-riding" href="../ridings/surrey-city-centre/" lang="en-CA">Surrey City Centre</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://conservativebc.ca/candidate/zeeshan-wahla/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://www.conservativebc.ca/our-team/" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article></div>
+    </section><section class="candidate-party-section" aria-labelledby="candidate-party-canwest" data-candidate-party="canwest">
+      <header class="candidate-party-heading"><span class="candidate-party-logo "><img src="../data/assets/originals/canwest/canwest-official-logo.jpg" alt="" width="120" height="42" loading="lazy"></span><h2 id="candidate-party-canwest" tabindex="-1">CWP</h2><div class="candidate-group-actions"><span>0 candidates</span><button type="button" class="candidate-top-control" data-candidate-top title="Back to the party list"><i data-lucide="arrow-up-right" aria-hidden="true"></i>Top</button></div></header>
+      <p class="candidate-empty-party">No candidates recorded in this snapshot.</p>
+    </section><section class="candidate-party-section" aria-labelledby="candidate-party-freedom" data-candidate-party="freedom">
+      <header class="candidate-party-heading"><span class="candidate-party-logo "><img src="../data/assets/web/freedom-party-logo-0337379873.webp" alt="" width="120" height="42" loading="lazy"></span><h2 id="candidate-party-freedom" tabindex="-1">Freedom Party of BC</h2><div class="candidate-group-actions"><span>0 candidates</span><button type="button" class="candidate-top-control" data-candidate-top title="Back to the party list"><i data-lucide="arrow-up-right" aria-hidden="true"></i>Top</button></div></header>
+      <p class="candidate-empty-party">No candidates recorded in this snapshot.</p>
+    </section><section class="candidate-party-section" aria-labelledby="candidate-party-independent" data-candidate-party="independent">
+      <header class="candidate-party-heading"><span class="candidate-party-mark" style="--party:#687d88" aria-hidden="true"></span><h2 id="candidate-party-independent" tabindex="-1">Independent</h2><div class="candidate-group-actions"><span>1 candidate</span><button type="button" class="candidate-top-control" data-candidate-top title="Back to the party list"><i data-lucide="arrow-up-right" aria-hidden="true"></i>Top</button></div></header>
+      <div class="candidate-grid"><article class="candidate-card" data-candidate-id="independent-jordan-kealy">
+          <div class="candidate-portrait"><span>Portrait unavailable</span></div>
+          <div class="candidate-card-body"><h3>Jordan Kealy</h3><a class="candidate-riding" href="../ridings/peace-river-north/" lang="en-CA">Peace River North</a>
+          <span class="candidate-status accepted">Accepted nomination</span>
+          <div class="candidate-card-links"><a href="https://elections.bc.ca/2026-provincial-election/candidate-list/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF" target="_blank" rel="noopener noreferrer">Elections BC nomination</a></div></div>
+        </article></div>
+    </section><section class="candidate-party-section" aria-labelledby="candidate-party-libertarian" data-candidate-party="libertarian">
+      <header class="candidate-party-heading"><span class="candidate-party-logo "><img src="../data/assets/web/libertarian-party-logo-97a6ae9540.webp" alt="" width="120" height="42" loading="lazy"></span><h2 id="candidate-party-libertarian" tabindex="-1">Libertarian</h2><div class="candidate-group-actions"><span>0 candidates</span><button type="button" class="candidate-top-control" data-candidate-top title="Back to the party list"><i data-lucide="arrow-up-right" aria-hidden="true"></i>Top</button></div></header>
+      <p class="candidate-empty-party">No candidates recorded in this snapshot.</p>
+    </section><section class="candidate-party-section" aria-labelledby="candidate-party-one" data-candidate-party="one">
+      <header class="candidate-party-heading"><span class="candidate-party-logo "><img src="../data/assets/originals/one/onebc-official-logo.png" alt="" width="120" height="42" loading="lazy"></span><h2 id="candidate-party-one" tabindex="-1">OneBC</h2><div class="candidate-group-actions"><span>7 candidates</span><button type="button" class="candidate-top-control" data-candidate-top title="Back to the party list"><i data-lucide="arrow-up-right" aria-hidden="true"></i>Top</button></div></header>
+      <div class="candidate-grid"><article class="candidate-card" data-candidate-id="one-aj-wolfe">
+          <div class="candidate-portrait"><img src="../data/assets/web/one-aj-wolfe-portrait-3901b0c97d.webp" alt="AJ Wolfe" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>AJ Wolfe</h3><a class="candidate-riding" href="../ridings/kootenay-rockies/" lang="en-CA">Kootenay-Rockies</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://1bc.ca/candidates/awolfe" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://1bc.ca/candidates" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://1bc.ca/candidates" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="one-brent-chapman">
+          <div class="candidate-portrait"><img src="../data/assets/web/one-one-brent-chapman-e9bd9f16e7.webp" alt="Brent Chapman" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Brent Chapman</h3><span class="candidate-riding candidate-unresolved">Riding unconfirmed</span><p class="small-note">Source lists: South Surrey.</p>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://1bc.ca/candidates" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://1bc.ca/candidates" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://1bc.ca/candidates" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="one-dallas-brodie">
+          <div class="candidate-portrait"><img src="../data/assets/web/one-one-dallas-brodie-38118004fc.webp" alt="Dallas Brodie" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Dallas Brodie</h3><a class="candidate-riding" href="../ridings/vancouver-quilchena/" lang="en-CA">Vancouver-Quilchena</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://1bc.ca/candidates/dbrodie" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://1bc.ca/candidates" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://1bc.ca/candidates" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="one-hunter-corrigal">
+          <div class="candidate-portrait"><img src="../data/assets/web/one-hunter-corrigal-portrait-3e975bf3dc.webp" alt="Hunter Corrigal" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Hunter Corrigal</h3><a class="candidate-riding" href="../ridings/kootenay-central/" lang="en-CA">Kootenay Central</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://1bc.ca/candidates/hcorrigal" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://1bc.ca/candidates" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://1bc.ca/candidates" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="one-jim-mcmurtry">
+          <div class="candidate-portrait"><img src="../data/assets/web/one-one-jim-mcmurtry-cee83f7913.webp" alt="Jim McMurtry" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Jim McMurtry</h3><a class="candidate-riding" href="../ridings/delta-south/" lang="en-CA">Delta South</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://1bc.ca/candidates/jmcmurtry" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://1bc.ca/candidates" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://1bc.ca/candidates" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="one-robin-roy">
+          <div class="candidate-portrait"><img src="../data/assets/web/one-robin-roy-portrait-e5852c8a04.webp" alt="Robin Roy" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Robin Roy</h3><a class="candidate-riding" href="../ridings/abbotsford-south/" lang="en-CA">Abbotsford South</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://1bc.ca/candidates/rroy" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://1bc.ca/candidates" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://1bc.ca/candidates" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article><article class="candidate-card" data-candidate-id="one-warren-hamm">
+          <div class="candidate-portrait"><img src="../data/assets/web/one-one-warren-hamm-065796ab80.webp" alt="Warren Hamm" width="320" height="400" loading="lazy" decoding="async"></div>
+          <div class="candidate-card-body"><h3>Warren Hamm</h3><a class="candidate-riding" href="../ridings/penticton-summerland/" lang="en-CA">Penticton-Summerland</a>
+          <span class="candidate-status ">Party-announced</span>
+          <div class="candidate-card-links"><a href="https://1bc.ca/candidates/whamm" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://1bc.ca/candidates" target="_blank" rel="noopener noreferrer">Photo source</a><a href="https://1bc.ca/candidates" target="_blank" rel="noopener noreferrer">Party announcement</a></div></div>
+        </article></div>
+    </section><section class="candidate-party-section" aria-labelledby="candidate-party-citizens" data-candidate-party="citizens">
+      <header class="candidate-party-heading"><span class="candidate-party-mark" style="--party:#c75580" aria-hidden="true"></span><h2 id="candidate-party-citizens" tabindex="-1">Party of Citizens</h2><div class="candidate-group-actions"><span>0 candidates</span><button type="button" class="candidate-top-control" data-candidate-top title="Back to the party list"><i data-lucide="arrow-up-right" aria-hidden="true"></i>Top</button></div></header>
+      <p class="candidate-empty-party">No candidates recorded in this snapshot.</p>
+    </section><section class="candidate-party-section" aria-labelledby="candidate-party-unaffiliated" data-candidate-party="unaffiliated">
+      <header class="candidate-party-heading"><span class="candidate-party-mark" style="--party:#687d88" aria-hidden="true"></span><h2 id="candidate-party-unaffiliated" tabindex="-1">Unaffiliated</h2><div class="candidate-group-actions"><span>1 candidate</span><button type="button" class="candidate-top-control" data-candidate-top title="Back to the party list"><i data-lucide="arrow-up-right" aria-hidden="true"></i>Top</button></div></header>
+      <div class="candidate-grid"><article class="candidate-card" data-candidate-id="unaffiliated-monica-mohan">
+          <div class="candidate-portrait"><span>Portrait unavailable</span></div>
+          <div class="candidate-card-body"><h3>Monica Mohan</h3><a class="candidate-riding" href="../ridings/delta-north/" lang="en-CA">Delta North</a>
+          <span class="candidate-status accepted">Accepted nomination</span>
+          <div class="candidate-card-links"><a href="https://elections.bc.ca/2026-provincial-election/candidate-list/" target="_blank" rel="noopener noreferrer">Candidate source</a><a href="https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF" target="_blank" rel="noopener noreferrer">Elections BC nomination</a></div></div>
+        </article></div>
+    </section><button type="button" class="candidate-top-control candidate-top-floating" data-candidate-top title="Back to the party list"><i data-lucide="arrow-up-right" aria-hidden="true"></i>Top</button></div><p class="candidate-snapshot-note">Candidate records as of September 27, 2026. Until October 3 at 1 p.m. Pacific, accepted nominations and official party announcements, including press releases, are listed separately. This is not the final ballot.</p><p class="small-note">Boundary data contains information licenced under the <a href="https://www.elections.bc.ca/docs/EBC-Open-Data-Licence.pdf" target="_blank" rel="noopener noreferrer">Elections BC Open Data Licence</a>.</p></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><strong>BC Election Guide</strong><p data-i18n="Independent civic information. Unofficial and unaffiliated with Elections BC or any party.">Independent civic information. Unofficial and unaffiliated with Elections BC or any party.</p></div>
+      <div class="footer-links"><a href="../about/" data-route="about" data-i18n="About">About</a><a href="mailto:contact@bcelectionguide.ca">contact@bcelectionguide.ca</a><a href="https://elections.bc.ca/" target="_blank" rel="noopener noreferrer" data-i18n="Official Elections BC site ↗">Official Elections BC site ↗</a></div>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav" aria-label="Mobile navigation" data-i18n-aria-label="Mobile navigation">
+    <a href="../" data-route="province" data-nav="province"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M4 20V11m5 9V5m5 15v-7m5 7V8"/></svg><span data-i18n="Province">Province</span></a>
+    <a href="../ridings/" data-route="ridings" data-nav="ridings"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.8 7-12a7 7 0 1 0-14 0c0 5.2 7 12 7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg><span data-i18n="Ridings">Ridings</span></a>
+    <a href="../parties/" data-route="parties" data-nav="parties"><i data-lucide="layers" aria-hidden="true"></i><span data-i18n="Parties">Parties</span></a>
+    <a href="../candidates/" data-route="candidates" data-nav="candidates" aria-current="page" class="active"><i data-lucide="search" aria-hidden="true"></i><span data-i18n="Candidates">Candidates</span></a>
+    <a href="../polls/" data-route="polls" data-nav="polls"><svg viewbox="0 0 24 24" aria-hidden="true"><path d="m3 17 6-6 4 3 8-9"/><path d="M17 5h4v4"/></svg><span data-i18n="Polls">Polls</span></a>
+  </nav>
+
+  <script src="../vendor/leaflet.js"></script>
+  <script type="module" src="../app.js"></script>
+</body>
+</html>

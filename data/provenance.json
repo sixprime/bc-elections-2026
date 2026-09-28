@@ -183,10 +183,10 @@
       "contentType": "application/pdf"
     },
     "elections-bc-candidates": {
-      "url": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.pdf",
-      "finalUrl": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.pdf",
-      "retrievedAt": "2026-09-26T06:30:21.803Z",
-      "sha256": "9dad4a7963bd8a8b05e6fa81e287469dac568db5fe91a626f43726216f10093d",
+      "url": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF",
+      "finalUrl": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF",
+      "retrievedAt": "2026-09-28T03:48:10.358Z",
+      "sha256": "4305ab94723d028315dc0e81175552149de6fb7b7c60668b53951369e6bdbf72",
       "contentType": "application/pdf"
     },
     "elections-bc-results-2024": {
@@ -199,36 +199,36 @@
     "ndp-candidates": {
       "url": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
       "finalUrl": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "retrievedAt": "2026-09-26T06:30:22.137Z",
-      "sha256": "ef06ee2f93a13d42506a2c5d83be4d88e1fc39b5f6856d85d88f8105961f7484",
+      "retrievedAt": "2026-09-28T03:55:55.840Z",
+      "sha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
       "contentType": "text/html; charset=UTF-8"
     },
     "conservative-candidates": {
       "url": "https://www.conservativebc.ca/our-team/",
       "finalUrl": "https://conservativebc.ca/our-team/",
-      "retrievedAt": "2026-09-26T06:30:22.579Z",
-      "sha256": "d8160a1efef168c7a29951464c1c7e90dc2463ff9b65798b8e4f76ed14dce598",
+      "retrievedAt": "2026-09-28T04:05:14.355Z",
+      "sha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
       "contentType": "text/html; charset=UTF-8"
     },
     "green-candidates": {
       "url": "https://bcgreens.ca/candidates-2026/",
       "finalUrl": "https://bcgreens.ca/candidates-2026/",
-      "retrievedAt": "2026-09-26T06:30:22.654Z",
-      "sha256": "113671fa7ff17049c677cf8d72264cf38ea18f031b108c9fab0983bbf307f192",
+      "retrievedAt": "2026-09-28T04:05:14.908Z",
+      "sha256": "7f3ee55815c89f39c1e67900ce6e75beffbba67ee14eba6d9c77b9126a026bd7",
       "contentType": "text/html; charset=UTF-8"
     },
     "centre-candidates": {
       "url": "https://www.centrebc.ca/our-team/",
       "finalUrl": "https://www.centrebc.ca/our-team/",
-      "retrievedAt": "2026-09-26T06:30:22.824Z",
-      "sha256": "23f8bc8b70bb1d9c2440d86ed076b957b0c3a65be1be4426facc0622cd5618cd",
+      "retrievedAt": "2026-09-28T04:05:16.592Z",
+      "sha256": "20fb64235fc457dff48991582ee51610b9b34f9a9139a60cd105b6d2b3bb0fce",
       "contentType": "text/html; charset=UTF-8"
     },
     "onebc-candidates": {
       "url": "https://1bc.ca/candidates",
       "finalUrl": "https://1bc.ca/candidates",
-      "retrievedAt": "2026-09-26T06:32:22.858Z",
-      "sha256": "37ae39299ed0456b91af38b502229c286c15e8a06dc065fd04dee39307457afc",
+      "retrievedAt": "2026-09-28T04:05:16.939Z",
+      "sha256": "0886aba171038825de2c5da5f93bf819bebbee5806be33e357144c1f8ef12620",
       "contentType": "text/html"
     },
     "ndp-ndp-bowinn-ma-e52d5ffbed": {
@@ -899,6 +899,223 @@
       "retrievedAt": "2026-09-27T07:56:52.611Z",
       "sha256": "5b5b81acf5cd27d51dca075eb9ef05f36b9752a0a2db401ae316a2337f8bab93",
       "contentType": "text/html; charset=UTF-8"
+    },
+    "ndp-candidate-releases": {
+      "url": "https://www.bcndp.ca/releases",
+      "finalUrl": "https://www.bcndp.ca/releases",
+      "retrievedAt": "2026-09-28T04:05:17.907Z",
+      "sha256": "30f2d59e1a576d4eb5eb81f017664d9a63628cbd88e4bd5af01e241d98a4eee6",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "con-kevin-acton-portrait-35db0de3ea": {
+      "url": "https://conservativebc.ca/wp-content/uploads/2026/09/Kevin-Acton-1024x1024.jpg",
+      "finalUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Kevin-Acton-1024x1024.jpg",
+      "retrievedAt": "2026-09-28T04:41:56.865Z",
+      "sha256": "35db0de3ead94e2cd24382bb080e03469f6eef4c299711ccc9b664671db616b8",
+      "contentType": "image/jpeg"
+    },
+    "con-keenan-adams-portrait-a2803c7f26": {
+      "url": "https://conservativebc.ca/wp-content/uploads/2026/09/Keenan-Adams-1024x1024.jpg",
+      "finalUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Keenan-Adams-1024x1024.jpg",
+      "retrievedAt": "2026-09-28T04:41:57.053Z",
+      "sha256": "a2803c7f264867af6e631021b3223cff932cbb8a408cb0dec1bd4edaf3c8446f",
+      "contentType": "image/jpeg"
+    },
+    "con-simon-chandler-portrait-c4e136da01": {
+      "url": "https://conservativebc.ca/wp-content/uploads/2026/09/Simon-Chandler-1-1024x1024.jpg",
+      "finalUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Simon-Chandler-1-1024x1024.jpg",
+      "retrievedAt": "2026-09-28T04:41:57.254Z",
+      "sha256": "c4e136da01f0eb4ae0f4dcd38f2b3cc5d7a596b231ddb10d9d15bd75fdd911dc",
+      "contentType": "image/jpeg"
+    },
+    "con-margareta-dovgal-portrait-787915b228": {
+      "url": "https://conservativebc.ca/wp-content/uploads/2026/09/Margareta-Dovgal-1024x1024.jpg",
+      "finalUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Margareta-Dovgal-1024x1024.jpg",
+      "retrievedAt": "2026-09-28T04:41:57.466Z",
+      "sha256": "787915b228590cb08b37297a6c90514cf611385eca3aa3277adb9a9159ac4d07",
+      "contentType": "image/jpeg"
+    },
+    "con-dave-johnston-portrait-d1033da6b0": {
+      "url": "https://conservativebc.ca/wp-content/uploads/2026/09/Dave-Johnston-1024x1024.jpg",
+      "finalUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Dave-Johnston-1024x1024.jpg",
+      "retrievedAt": "2026-09-28T04:41:57.668Z",
+      "sha256": "d1033da6b0aa072cf08fcd575ea14d49150fdaf0da099051dd3af635fa0e9fd0",
+      "contentType": "image/jpeg"
+    },
+    "con-darryl-kropp-portrait-40b0e45328": {
+      "url": "https://conservativebc.ca/wp-content/uploads/2026/09/Darryl-Kropp-1024x1024.jpg",
+      "finalUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Darryl-Kropp-1024x1024.jpg",
+      "retrievedAt": "2026-09-28T04:41:57.857Z",
+      "sha256": "40b0e4532854ca4cbb1214103433659ddfa9b5c1a58643665d90a85f8784fad5",
+      "contentType": "image/jpeg"
+    },
+    "con-john-mcewen-portrait-78e44b8e54": {
+      "url": "https://conservativebc.ca/wp-content/uploads/2026/09/John-McEwen-1024x1024.jpg",
+      "finalUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/John-McEwen-1024x1024.jpg",
+      "retrievedAt": "2026-09-28T04:41:58.042Z",
+      "sha256": "78e44b8e544333aefd614c5bc9d67dd03d5b81e1159f0dfdc5867f73cab0e07c",
+      "contentType": "image/jpeg"
+    },
+    "con-alex-mcmillan-portrait-bd404ed960": {
+      "url": "https://conservativebc.ca/wp-content/uploads/2025/08/Alex-McMillan-1024x1024.jpg",
+      "finalUrl": "https://conservativebc.ca/wp-content/uploads/2025/08/Alex-McMillan-1024x1024.jpg",
+      "retrievedAt": "2026-09-28T04:41:58.213Z",
+      "sha256": "bd404ed960faa9834a67209e7c485845b8145ebeba00a5d514d33d41dea5af1c",
+      "contentType": "image/jpeg"
+    },
+    "con-kris-mcnichol-portrait-2147a1a5b2": {
+      "url": "https://conservativebc.ca/wp-content/uploads/2026/09/Kris-McNichol-1024x1024.jpg",
+      "finalUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Kris-McNichol-1024x1024.jpg",
+      "retrievedAt": "2026-09-28T04:41:58.417Z",
+      "sha256": "2147a1a5b2a1404e1104017e0b0bdb542f54570aeb56acc73b0e030a950821c1",
+      "contentType": "image/jpeg"
+    },
+    "con-alex-muir-portrait-9938cddaaa": {
+      "url": "https://conservativebc.ca/wp-content/uploads/2026/09/Alex-Muir-1024x1024.jpg",
+      "finalUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Alex-Muir-1024x1024.jpg",
+      "retrievedAt": "2026-09-28T04:41:58.595Z",
+      "sha256": "9938cddaaa362859ee6c2af93a195b12cb04d55b20c29e8562aa30aac367da70",
+      "contentType": "image/jpeg"
+    },
+    "con-cathie-ounsted-portrait-9f49ee6675": {
+      "url": "https://conservativebc.ca/wp-content/uploads/2026/09/Cathie-Ounstead-1024x1024.jpg",
+      "finalUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Cathie-Ounstead-1024x1024.jpg",
+      "retrievedAt": "2026-09-28T04:41:58.797Z",
+      "sha256": "9f49ee66758a275837bbaf2838159b6fe119849552b6a445268e1b0286001bd3",
+      "contentType": "image/jpeg"
+    },
+    "con-lisa-phillips-portrait-e8de38dd23": {
+      "url": "https://conservativebc.ca/wp-content/uploads/2026/09/Lisa-Phillips-1024x1024.jpg",
+      "finalUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Lisa-Phillips-1024x1024.jpg",
+      "retrievedAt": "2026-09-28T04:41:58.992Z",
+      "sha256": "e8de38dd2314f55ff128e10f3b095b03ba3c890cddcebde4f80e09f115cb3e89",
+      "contentType": "image/jpeg"
+    },
+    "con-deep-sandhu-portrait-31e9026846": {
+      "url": "https://conservativebc.ca/wp-content/uploads/2026/09/Deep-Sandhu-1024x1024.jpg",
+      "finalUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Deep-Sandhu-1024x1024.jpg",
+      "retrievedAt": "2026-09-28T04:41:59.174Z",
+      "sha256": "31e9026846ecdce7602c09d36c91f16b77058c23bd951f4735c2ad38ccc5ec3c",
+      "contentType": "image/jpeg"
+    },
+    "con-stan-sipos-portrait-5dbd086cc4": {
+      "url": "https://conservativebc.ca/wp-content/uploads/2026/09/Stan-Sipos-1024x1024.jpg",
+      "finalUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Stan-Sipos-1024x1024.jpg",
+      "retrievedAt": "2026-09-28T04:41:59.373Z",
+      "sha256": "5dbd086cc421a74c878b067e09b3bb69ca4bf99ac1be44bebd190a89bf3b3774",
+      "contentType": "image/jpeg"
+    },
+    "con-zeeshan-wahla-portrait-df2561991f": {
+      "url": "https://conservativebc.ca/wp-content/uploads/2026/09/Zeeshan-Wahla-1024x1024.jpg",
+      "finalUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Zeeshan-Wahla-1024x1024.jpg",
+      "retrievedAt": "2026-09-28T04:41:59.561Z",
+      "sha256": "df2561991f6f42e077e6b12d2063198db0b8afbceeb1f46a9969b943f977ce4d",
+      "contentType": "image/jpeg"
+    },
+    "con-curtis-whitford-portrait-5a5a066c86": {
+      "url": "https://conservativebc.ca/wp-content/uploads/2026/09/Curtis-Whitford-1024x1024.jpg",
+      "finalUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Curtis-Whitford-1024x1024.jpg",
+      "retrievedAt": "2026-09-28T04:41:59.729Z",
+      "sha256": "5a5a066c866eaed0f0d769f1f5efad63023f211fd2e373b2ef9b939f0b82d063",
+      "contentType": "image/jpeg"
+    },
+    "con-ryan-windsor-portrait-7e06cf0890": {
+      "url": "https://conservativebc.ca/wp-content/uploads/2026/09/Ryan-Windsor-1024x1024.jpg",
+      "finalUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Ryan-Windsor-1024x1024.jpg",
+      "retrievedAt": "2026-09-28T04:41:59.935Z",
+      "sha256": "7e06cf08905b9dc16f8f203654621f141d7790ff76ac296b211d82be265e7d1a",
+      "contentType": "image/jpeg"
+    },
+    "con-gordon-zhang-portrait-38732f05a5": {
+      "url": "https://conservativebc.ca/wp-content/uploads/2026/09/Gordon-Zhang-1024x1024.jpg",
+      "finalUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Gordon-Zhang-1024x1024.jpg",
+      "retrievedAt": "2026-09-28T04:42:00.110Z",
+      "sha256": "38732f05a5f4dc243519f081a6c47bc4ac6279e93daae4587e21d093dc0aa1df",
+      "contentType": "image/jpeg"
+    },
+    "centre-michael-davis-portrait-31c6ffabc8": {
+      "url": "https://www.centrebc.ca/wp-content/uploads/2026/09/Michael-Davis-28-683x1024.jpg",
+      "finalUrl": "https://www.centrebc.ca/wp-content/uploads/2026/09/Michael-Davis-28-683x1024.jpg",
+      "retrievedAt": "2026-09-28T04:42:00.296Z",
+      "sha256": "31c6ffabc8a2005d11eea26b75b0e62a469af3ab739f5a15a7a7b7c0be334f9d",
+      "contentType": "image/webp"
+    },
+    "centre-kim-lockhart-portrait-11bb919ea3": {
+      "url": "https://www.centrebc.ca/wp-content/uploads/2026/09/Kim-Lockhart-1024x683.jpg",
+      "finalUrl": "https://www.centrebc.ca/wp-content/uploads/2026/09/Kim-Lockhart-1024x683.jpg",
+      "retrievedAt": "2026-09-28T04:42:00.436Z",
+      "sha256": "11bb919ea3a45227c62cc0f4aa59637e7a85213757a3695dbe92a7e0a10608a0",
+      "contentType": "image/webp"
+    },
+    "centre-raman-sharma-portrait-de3339e6fc": {
+      "url": "https://www.centrebc.ca/wp-content/uploads/2026/09/Raman-Sharma-photo-819x1024.jpg",
+      "finalUrl": "https://www.centrebc.ca/wp-content/uploads/2026/09/Raman-Sharma-photo-819x1024.jpg",
+      "retrievedAt": "2026-09-28T04:42:00.581Z",
+      "sha256": "de3339e6fc42af39b07557995ff7f2195f70178858a6406af91a9b1c4bed71a5",
+      "contentType": "image/webp"
+    },
+    "centre-kuldeep-rangi-portrait-464b911556": {
+      "url": "https://www.centrebc.ca/wp-content/uploads/2026/09/Kuldeep-Profile-pic-683x1024.jpg",
+      "finalUrl": "https://www.centrebc.ca/wp-content/uploads/2026/09/Kuldeep-Profile-pic-683x1024.jpg",
+      "retrievedAt": "2026-09-28T04:42:00.699Z",
+      "sha256": "464b911556442aee1acf80c598b8fd7970957e8f368de2664993da5df2ee6129",
+      "contentType": "image/webp"
+    },
+    "one-aj-wolfe-portrait-3901b0c97d": {
+      "url": "https://framerusercontent.com/images/xE9QE4twoGnn11t4FzgtPIcxdt0.jpeg?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/xE9QE4twoGnn11t4FzgtPIcxdt0.jpeg?width=1080&height=1080",
+      "retrievedAt": "2026-09-28T04:42:00.939Z",
+      "sha256": "3901b0c97d872c3dde173e5e6c9df36e44616322d98eb1639d5f388ef42cc375",
+      "contentType": "image/jpeg"
+    },
+    "one-hunter-corrigal-portrait-3e975bf3dc": {
+      "url": "https://framerusercontent.com/images/KWFzefJfmElczCoqV30kC6NyIA.jpeg?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/KWFzefJfmElczCoqV30kC6NyIA.jpeg?width=1080&height=1080",
+      "retrievedAt": "2026-09-28T04:42:01.125Z",
+      "sha256": "3e975bf3dc7e0a9bb00d80e71d13b31a8597dc191becf42a6b06b963c7d9144f",
+      "contentType": "image/jpeg"
+    },
+    "one-robin-roy-portrait-e5852c8a04": {
+      "url": "https://framerusercontent.com/images/FoxwLps3hGwGxKXefKYGwMT52zM.jpeg?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/FoxwLps3hGwGxKXefKYGwMT52zM.jpeg?width=1080&height=1080",
+      "retrievedAt": "2026-09-28T04:42:01.340Z",
+      "sha256": "e5852c8a046508782c85b65b930587a29c1232f142d4d184a6475ba127468540",
+      "contentType": "image/jpeg"
+    },
+    "ndp-will-cole-hamilton-portrait-c042df6aa1": {
+      "url": "https://www.bcndp.ca/sites/default/files/headshots/willcolehamilton_website_images_headshot-1000x1000px.png",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/headshots/willcolehamilton_website_images_headshot-1000x1000px.png",
+      "retrievedAt": "2026-09-28T04:42:02.741Z",
+      "sha256": "c042df6aa11576937e58d967bf9a969ed16ea2350d8a447aa305e7abcc7c4222",
+      "contentType": "image/png"
+    },
+    "ndp-andrea-dunlop-portrait-b2a1a69ae1": {
+      "url": "https://www.bcndp.ca/sites/default/files/headshots/andreadunlop_clr_headshot-1000x1000px.jpg",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/headshots/andreadunlop_clr_headshot-1000x1000px.jpg",
+      "retrievedAt": "2026-09-28T04:42:02.950Z",
+      "sha256": "b2a1a69ae1e1c6fd522da577ef28670ce1a6c507e0f573579999d58f5c1907e6",
+      "contentType": "image/jpeg"
+    },
+    "ndp-jason-mccormick-portrait-645a026e17": {
+      "url": "https://www.bcndp.ca/sites/default/files/headshots/jasonmccormick_dls_headshot-1000x1000px.jpg",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/headshots/jasonmccormick_dls_headshot-1000x1000px.jpg",
+      "retrievedAt": "2026-09-28T04:42:03.131Z",
+      "sha256": "645a026e17fd3b17095f30e47fcbefe26ee81313ff2f72ede8f67eb30049450e",
+      "contentType": "image/jpeg"
+    },
+    "ndp-roly-russell-portrait-a5fa825aa3": {
+      "url": "https://www.bcndp.ca/sites/default/files/headshots/bds_rolyrussell_headshot_1000x1000_small.jpg",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/headshots/bds_rolyrussell_headshot_1000x1000_small.jpg",
+      "retrievedAt": "2026-09-28T04:42:03.300Z",
+      "sha256": "a5fa825aa33181ba90d8a709bd07ed53e086e0c61c0deb34efb05b14ed8fe8c0",
+      "contentType": "image/jpeg"
+    },
+    "ndp-debra-toporowski-portrait-a8febd17a6": {
+      "url": "https://www.bcndp.ca/sites/default/files/headshots/debratoporowski_cwvheadshot-1000x1000px.jpg",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/headshots/debratoporowski_cwvheadshot-1000x1000px.jpg",
+      "retrievedAt": "2026-09-28T04:42:03.472Z",
+      "sha256": "a8febd17a62914538013d9fc5f50a74ab1dc3e0479c2d6a0034e8e932b38bbbc",
+      "contentType": "image/jpeg"
     }
   },
   "reviewedAt": "2026-09-27T11:07:38.5195350Z"

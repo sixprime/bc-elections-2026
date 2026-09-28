@@ -2,7 +2,7 @@
 
 Your province. Your voice. Your choice.
 
-An independent, unofficial explorer for the **October 24, 2026 British Columbia provincial election**. It runs entirely in the browser on GitHub Pages. There is no application server, package installation or build step. Leaflet, Turf and Lucide are checked-in browser libraries. Node.js is needed only for the optional data-update script.
+An independent, unofficial explorer for the **October 24, 2026 British Columbia provincial election**. GitHub Pages serves checked-in HTML with crawlable content, enhanced by the shared browser app. There is no application server or runtime build. Leaflet, Turf and Lucide are checked-in browser libraries. Local publication tools use Node.js and Python/Pillow; no npm installation is required.
 
 ## Preview and local development
 
@@ -12,11 +12,68 @@ Open the published GitHub Pages URL in the repository's About section. For local
 python3 -m http.server 4173
 ```
 
-Then open `http://localhost:4173/`. Edit the files and refresh. All paths are relative so the same files work at `/bc-elections-2026/` on GitHub Pages.
+Then open `http://localhost:4173/`. Section and riding pages load directly, for example `http://localhost:4173/ridings/burnaby-north/`. The shared app and data work both at the root and at `/bc-elections-2026/` on GitHub Pages.
+
+## Static Pages And Sharing
+
+The site has 99 indexable HTML pages: the province overview at `/`, five section
+pages (`/ridings/`, `/candidates/`, `/parties/`, `/polls/`, `/about/`) and 93 riding
+pages such as `/ridings/burnaby-north/`. Each response includes a unique title,
+description, canonical URL, Open Graph and Twitter metadata, WebPage JSON-LD and
+a 1200x630 PNG preview. Candidate records, original quotations, historical results
+and source links are in the HTML, not just added after JavaScript runs.
+
+[routes.js](routes.js) uses normal links and History API navigation, with native
+new-tab/modifier clicks and Back/Forward support. A small compatibility handler
+replaces old hash routes, including `/#riding/burnaby-north` and `/#methodology`,
+with their path equivalents. This is a client-side redirect, not an HTTP 301:
+fragments never reach GitHub Pages or a social-preview crawler. Old hash shares
+cannot gain riding-specific previews; share the new path URLs instead.
+
+[index.html](index.html) supplies the shared shell. Edit that shell or its shared
+styles/scripts, not the generated section/riding HTML. Before publication, run:
+
+```sh
+node tools/update-data.mjs check
+node tools/build-pages.mjs
+node tools/build-pages.mjs --check
+git diff --check
+```
+
+[tools/build-pages.mjs](tools/build-pages.mjs) reuses the candidate renderers and
+reviewed datasets. [tools/render-pages.py](tools/render-pages.py) uses Python 3.10+
+and Pillow to parse the shell and draw preview images from the official Elections
+BC boundary geometry. No tile service, synthetic candidate portrait or external
+rendering service is involved. Use `--python D:\Python\python.exe` or set
+`BC_PREVIEW_PYTHON` if Python is not on PATH. The existing Windows font is Segoe UI
+Bold; `BC_PREVIEW_FONT` can select a local TrueType font. Keep the same font and
+Pillow version for byte-for-byte `--check` reproducibility. Generated outputs are
+committed for ordinary GitHub Pages branch publishing; GitHub needs no generator.
+
+Regenerate after changing data, the shell, renderers or metadata. The check fails
+when generated files are missing or stale. Candidate pages are dated snapshots,
+not live filings; regenerate at the nomination deadline and after verifying the
+final Elections BC list. The interactive view still applies the deadline policy
+at runtime. Generated previews describe the page, without speculative candidate
+counts or political predictions.
+
+[sitemap.xml](sitemap.xml) lists the 99 canonical pages; [robots.txt](robots.txt)
+points to it. [404.html](404.html) is a genuine GitHub Pages not-found document
+with `noindex`, not an SPA redirect that turns missing paths into overview pages.
+Canonical and preview URLs currently target the published GitHub project URL.
+After the custom domain is actually configured, regenerate with
+`--site-url https://bcelectionguide.ca/` and use the same argument for `--check`.
+This command does not change DNS, the Pages domain, or publish anything.
+
+The pre-generated documents and social previews are English. `?lang=fr` selects
+the French interactive interface; it is not a separate indexed French edition.
+Actual search indexing and social-preview cache refreshes happen after publishing
+and are controlled by the search/social services.
 
 ## First vertical slice
 
 - Desktop province overview and riding explorer, responsive mobile layouts and bottom navigation, closely following the earlier visual mockups.
+- Navigation follows Province, Ridings, Parties, Candidates, Polls, About. The mobile bottom bar uses the first five destinations; About remains in the menu and footer. The countdown explicitly refers to election day, not the start of advance voting.
 - Searchable list of all 93 electoral districts, with source-checked 2024 vote tables and 2026 candidate records on riding pages. Complete result snapshots are checked against district, party and seat totals.
 - Candidate directory grouped by all registered parties, with alphabetical names, portraits, riding links and filters. A logo strip jumps to each party; Top restores the previous position. Accepted nominations and party announcements remain distinct.
 - Dated directory of every entry in Elections BC's September 25 party register PDF. The PDF contains 14 entries, though Elections BC's summary page currently says 13. The app follows the dated register and explains the difference.
@@ -53,7 +110,38 @@ election affiliations, not current MLA affiliations or a 2026 forecast. Missing
 results remain neutral and are counted as not loaded. Review data edits locally
 and in Git before publishing.
 
-**Find my riding** requests browser geolocation only after a click, with
+**Find my riding** opens an address/location picker. Street-address suggestions
+come from the [BC Address Geocoder](https://bcgov.github.io/ols-geocoder/developer-guide/),
+with keyboard selection and a 350 ms typing debounce. A request on Enter uses
+the entered address rather than prefix completion. Postal-code-only queries are
+rejected before any request. Street, city and province centroids are not accepted
+as address matches; the service's interpolation is disabled.
+
+The selected address point is checked against the same full-resolution district
+GeoJSON used for geolocation. No riding is assigned merely from a postal code or
+the geocoder's electoral-area label. Users confirm the suggested address and
+choose the resulting riding; approximate or boundary-adjacent results carry a
+confirmation warning. The 50/200/1500 m screening buffers for high/medium/other
+source precision are conservative boundary checks, not measured confidence radii.
+
+Browser CORS was tested without an API key from the actual
+`https://sixprime.github.io` origin: HTTP 200, a readable CORS response, and a
+matching `Access-Control-Allow-Origin`. This is observed access, not a service
+guarantee: current developer guidance guarantees cross-origin access with an API
+key and describes requesting access for production applications. Recheck the
+intended custom domain before launch and contact the BC Location Services team
+if registration is required. Do not bypass CORS or put a secret key in client code.
+Rate-limit, timeout and unavailable-service states leave location and riding
+selection available. No key, proxy or backend was added.
+
+The official sample widget uses jQuery UI. This site uses the documented API
+directly instead of adding that older dependency stack. Address queries go only
+to the geocoder, with no credentials and no response caching requested. This site
+does not persist address text or coordinates, does not put them in page URLs,
+and clears finder state on close. The dialog links to the service privacy notice
+and displays the required Open Government Licence - British Columbia attribution.
+
+**Use my location** requests browser geolocation only after a click, with
 `enableHighAccuracy: true`, a 15-second timeout and no cached position. Phones may
 use GPS; the browser and operating system choose the actual location source.
 Desktop devices often return less precise Wi-Fi or network-based locations.
@@ -104,6 +192,15 @@ of Citizens have no verified logo in the directory. Unavailable or unverified
 websites are labelled rather than guessed.
 CanWest's official website is HTTP-only and is labelled accordingly.
 
+The 125-candidate catalogue currently has 123 verified portraits. Thirty missing
+portraits were recovered from official party candidate cards, feeds and profiles,
+with original bytes, WebP derivatives, source credits and SHA-256 hashes retained.
+Monica Mohan and Jordan Kealy still have no verified, reusable public portrait in
+the catalogue. Kealy's identifiable campaign social page requires login; restricted
+Legislature images and unrelated search-result photos were not substituted.
+Public availability alone is not unrestricted reuse permission; existing
+source-owner credits and permission-review flags remain attached to the images.
+
 Riding pages show a separate **MLA at dissolution** profile from the
 Legislature's September 22, 2026 roster: 91 members across the 93 districts.
 The two districts not listed as having an active member are identified explicitly.
@@ -116,6 +213,27 @@ terms requiring permission. Existing portraits are reused, with additional
 images from official archived/member sources. Tara Armstrong's Commons portrait
 is attributed to Othman Mekhloufi under CC BY-SA 4.0; the resized derivative
 retains that licence. The artwork review includes a separate MLA collection.
+
+## Candidate Sources And Deadline
+
+The current catalogue contains 125 source-backed candidates, including eight
+accepted Elections BC nominations. This is a pre-deadline snapshot, not a final
+ballot. Official party directories and dated official press releases are both
+valid evidence for a **party-announced** candidacy. A party announcement never
+becomes an accepted nomination without Elections BC confirmation.
+
+Nominations close **October 3, 2026 at 1 p.m. Pacific**. From that time onward,
+candidate views and counts use only a verified final Elections BC list. People
+absent from that final list are excluded regardless of party-site announcements.
+If the final list has not been refreshed, the site displays a verification-pending
+message instead of presenting provisional or party-only records as the ballot.
+Already-open candidate pages update at the deadline. The site does not fetch the
+final list automatically; the reviewed local data must still be updated and published.
+
+Financial-agent names, addresses and phone numbers are not imported. The raw
+candidate PDF is kept outside the repository; the published official-source
+record contains only candidate name, riding and party, plus source metadata.
+Validation rejects extra candidate/contact fields and public candidate-list PDFs.
 
 ## Data Updates
 
@@ -133,7 +251,10 @@ promotion step is required.
 
 The standalone script downloads original sources into a local cache outside the
 repository and updates retrieval metadata in [data/provenance.json](data/provenance.json).
-It never automatically rewrites election, poll, programme or artwork datasets.
+Fetching never automatically rewrites election, poll, programme or artwork datasets.
+The explicit `refresh-candidates` command merges the cached current-year NDP feed
+and reviewed candidate-only Elections BC records, validating before saving. Other
+official party directories and releases are reviewed directly under the same rules.
 Raw source downloads and full-text quotation evidence are not published. The
 script requires Node 20+ and Git, no packages or server, and never commits or
 pushes. See [data/README.md](data/README.md) for commands and verification details.
@@ -181,9 +302,10 @@ than being relabelled as BC United or the federal Liberals. The optional electio
 continuation holds the latest average unchanged: a no-change scenario, not a
 forecast, confidence interval or seat projection.
 
-Open `http://127.0.0.1:4173/#polls` or `http://127.0.0.1:4173/#parties` to review
+Open `http://127.0.0.1:4173/polls/` or `http://127.0.0.1:4173/parties/` to review
 local changes. No special preview parameter is needed. Refresh the page after
-editing data. Publication still requires an approved commit and push.
+editing data and regenerate the static pages before publication. Publication
+still requires an approved commit and push.
 
 `node tools/update-data.mjs prune-assets` reports unreferenced artwork and obsolete
 artwork sidecars without changing files. After reviewing the report, use
@@ -198,16 +320,75 @@ provide the site owner with a visitor dashboard or historical access logs.
 
 A custom domain is not required. [Cloudflare Web Analytics](https://developers.cloudflare.com/web-analytics/get-started/)
 can be installed manually on the existing Pages hostname with a free account and
-a JavaScript snippet, without moving hosting or DNS. [Plausible](https://plausible.io/docs/hash-based-routing)
-is a paid, privacy-focused alternative with explicit support for this site's
-hash routes. Hash-aware tracking is needed to distinguish views such as `#polls`
-and `#riding/...`, rather than reporting only the HTML document.
+a JavaScript snippet, without moving hosting or DNS. [Plausible](https://plausible.io/)
+is a paid, privacy-focused alternative. Any selected integration must observe
+History API navigation as well as full document loads, and report the real page
+paths without recording personal searches or location data.
 
 Collection starts after installation; previous visits cannot be reconstructed.
 Locations are approximate network-derived statistics, not GPS positions or
 identified people. Do not send riding-location coordinates, search input or any
 future ballot choices to analytics. Provider selection and installation require
 separate approval.
+
+## English / French Demo
+
+The language selector offers compact UK/France flags with EN/FR labels and full
+English/Français accessible names. The selected option has an outlined background;
+native radios support Tab and arrow keys with visible focus. Local PNGs avoid
+platform-dependent flag emoji. The standard flag images were retrieved from
+[FlagCDN UK](https://flagcdn.com/w40/gb.png) and
+[FlagCDN France](https://flagcdn.com/w40/fr.png); flags are decorative language
+cues, not a statement of users' nationality.
+
+The selector is available on the main site and artwork inventory. Use `?lang=en`
+or `?lang=fr`, for example `/parties/?lang=fr`. The URL preserves the choice on reload; no cookie,
+localStorage entry, translation service or application server is required.
+
+[i18n.js](i18n.js) contains the French catalogue, using English messages as keys
+and as fallback. Dynamic renderers call `translate()` with named placeholders.
+Static text and accessible attributes use explicit `data-i18n` markers; source
+content is never automatically rewritten. Dates, numbers, percentages, plural
+forms and label sorting use Canadian English or French `Intl` rules. Nomination
+deadlines still use their original Pacific-time instants.
+
+The demo covers navigation, page content, filters, candidate statuses, programme
+topics, map controls, address/GPS feedback, chart descriptions, About and the
+artwork inventory. Switching language updates the document language and a polite
+screen-reader announcement. Current routes, filters, party selections and map
+positions remain in place. The selector has a text label and native keyboard
+support; the flag is decorative, never the only identifier. Dialogs retain focus
+handling and Escape dismissal.
+
+Candidate and party names, official riding names, election figures, artwork and
+source URLs remain as recorded. Programme quotations are unchanged, retain
+visible quotation marks, and are marked as English for screen readers. French
+views identify them as original English text. Source titles, source descriptions
+and rights-review notes remain in their original language. A party's own French
+programme material would require source verification and explicit schema/editorial
+review under the quote-only policy, not an automatic translation of quotations.
+
+French copy is a demonstration draft, not an independently reviewed translation.
+Before publication, a fluent reviewer should check terminology, neutrality and
+all states, followed by assistive-technology checks on real devices. Automated
+DOM, keyboard and responsive checks do not establish full WCAG conformance.
+
+## Before Paid Promotion
+
+Before buying search/social ads, boosting a post or paying someone to create or
+promote campaign-period content, check the current
+[Elections BC provincial third-party advertising rules](https://elections.bc.ca/provincial-elections/advertising-rules/provincial-advertising-sponsors/)
+and obtain Elections BC's guidance on the actual advertisement and linked site.
+Do not assume that calling the guide independent or non-commercial creates an
+exemption. The campaign-period definition can include issue-related advertising,
+and paid promotion can be treated differently from an unpaid publication.
+
+If the proposed activity is regulated, confirm registration before advertising,
+sponsor identification, independence requirements, contribution and expense
+limits, reporting obligations and final-voting-day restrictions before spending.
+Use the current official guidance rather than copying thresholds into site code.
+This is a release checklist, not a legal conclusion that the guide is or is not
+regulated advertising. No paid promotion or advertising account is configured.
 
 ## Custom Domain And Email Setup
 

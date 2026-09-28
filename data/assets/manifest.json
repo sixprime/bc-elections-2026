@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "collectedAt": "2026-09-26T06:46:50.992962Z",
+  "collectedAt": "2026-09-28T04:22:01.620Z",
   "officialCandidateSource": "https://elections.bc.ca/2026-provincial-election/candidate-list/",
-  "scope": "Officially accepted nominations plus candidate announcements on verified party directories; not a complete final ballot.",
+  "scope": "Elections BC nominations and dated official party announcements, including press releases. Only the verified final Elections BC list determines ballot membership after nominations close.",
   "parties": [
     {
       "id": "ndp",
@@ -128,20 +128,449 @@
   ],
   "candidates": [
     {
+      "id": "con-kevin-acton",
+      "partyId": "con",
+      "name": "Kevin Acton",
+      "district": "Vernon-Lumby",
+      "districtSlug": "vernon-lumby",
+      "profileUrl": "https://conservativebc.ca/candidate/kevin-acton/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:14.355Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
+      "assetIds": [
+        "con-kevin-acton-portrait-35db0de3ea"
+      ]
+    },
+    {
+      "id": "con-keenan-adams",
+      "partyId": "con",
+      "name": "Keenan Adams",
+      "district": "Port Coquitlam",
+      "districtSlug": "port-coquitlam",
+      "profileUrl": "https://conservativebc.ca/candidate/keenan-adams/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:14.355Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
+      "assetIds": [
+        "con-keenan-adams-portrait-a2803c7f26"
+      ]
+    },
+    {
+      "id": "con-simon-chandler",
+      "partyId": "con",
+      "name": "Simon Chandler",
+      "district": "Burnaby North",
+      "districtSlug": "burnaby-north",
+      "profileUrl": "https://conservativebc.ca/candidate/simon-chandler/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:14.355Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
+      "assetIds": [
+        "con-simon-chandler-portrait-c4e136da01"
+      ]
+    },
+    {
+      "id": "con-margareta-dovgal",
+      "partyId": "con",
+      "name": "Margareta Dovgal",
+      "district": "Vancouver-Yaletown",
+      "districtSlug": "vancouver-yaletown",
+      "profileUrl": "https://conservativebc.ca/candidate/margareta-dovgal/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:14.355Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
+      "assetIds": [
+        "con-margareta-dovgal-portrait-787915b228"
+      ]
+    },
+    {
+      "id": "con-dave-johnston",
+      "partyId": "con",
+      "name": "Dave Johnston",
+      "district": "Esquimalt-Colwood",
+      "districtSlug": "esquimalt-colwood",
+      "profileUrl": "https://conservativebc.ca/candidate/dave-johnston/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:14.355Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
+      "assetIds": [
+        "con-dave-johnston-portrait-d1033da6b0"
+      ]
+    },
+    {
+      "id": "con-darryl-kropp",
+      "partyId": "con",
+      "name": "Darryl Kropp",
+      "district": "Abbotsford-Mission",
+      "districtSlug": "abbotsford-mission",
+      "profileUrl": "https://conservativebc.ca/candidate/darryl-kropp/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:14.355Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
+      "assetIds": [
+        "con-darryl-kropp-portrait-40b0e45328"
+      ]
+    },
+    {
+      "id": "con-john-mcewen",
+      "partyId": "con",
+      "name": "John McEwen",
+      "district": "Port Moody-Burquitlam",
+      "districtSlug": "port-moody-burquitlam",
+      "profileUrl": "https://conservativebc.ca/candidate/john-mcewen/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:14.355Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
+      "assetIds": [
+        "con-john-mcewen-portrait-78e44b8e54"
+      ]
+    },
+    {
+      "id": "con-alex-mcmillan",
+      "partyId": "con",
+      "name": "Alex McMillan",
+      "district": "Vancouver-Point Grey",
+      "districtSlug": "vancouver-point-grey",
+      "profileUrl": "https://conservativebc.ca/candidate/alex-mcmillan/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:14.355Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
+      "assetIds": [
+        "con-alex-mcmillan-portrait-bd404ed960"
+      ]
+    },
+    {
+      "id": "con-kris-mcnichol",
+      "partyId": "con",
+      "name": "Kris McNichol",
+      "district": "Ladysmith-Oceanside",
+      "districtSlug": "ladysmith-oceanside",
+      "profileUrl": "https://conservativebc.ca/candidate/kris-mcnichol/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:14.355Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
+      "assetIds": [
+        "con-kris-mcnichol-portrait-2147a1a5b2"
+      ]
+    },
+    {
+      "id": "con-alex-muir",
+      "partyId": "con",
+      "name": "Alex Muir",
+      "district": "Vancouver-Little Mountain",
+      "districtSlug": "vancouver-little-mountain",
+      "profileUrl": "https://conservativebc.ca/candidate/alex-muir/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:14.355Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
+      "assetIds": [
+        "con-alex-muir-portrait-9938cddaaa"
+      ]
+    },
+    {
+      "id": "con-cathie-ounsted",
+      "partyId": "con",
+      "name": "Cathie Ounsted",
+      "district": "Saanich South",
+      "districtSlug": "saanich-south",
+      "profileUrl": "https://conservativebc.ca/candidate/cathie-ounsted/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:14.355Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
+      "assetIds": [
+        "con-cathie-ounsted-portrait-9f49ee6675"
+      ]
+    },
+    {
+      "id": "con-lisa-phillips",
+      "partyId": "con",
+      "name": "Lisa Phillips",
+      "district": "Vancouver-South Granville",
+      "districtSlug": "vancouver-south-granville",
+      "profileUrl": "https://conservativebc.ca/candidate/lisa-phillips/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:14.355Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
+      "assetIds": [
+        "con-lisa-phillips-portrait-e8de38dd23"
+      ]
+    },
+    {
+      "id": "con-deep-sandhu",
+      "partyId": "con",
+      "name": "Deep Sandhu",
+      "district": "Vancouver-Fraserview",
+      "districtSlug": "vancouver-fraserview",
+      "profileUrl": "https://conservativebc.ca/candidate/deep-sandhu/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:14.355Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
+      "assetIds": [
+        "con-deep-sandhu-portrait-31e9026846"
+      ]
+    },
+    {
+      "id": "con-stan-sipos",
+      "partyId": "con",
+      "name": "Stan Sipos",
+      "district": "Oak Bay-Gordon Head",
+      "districtSlug": "oak-bay-gordon-head",
+      "profileUrl": "https://conservativebc.ca/candidate/stan-sipos/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:14.355Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
+      "assetIds": [
+        "con-stan-sipos-portrait-5dbd086cc4"
+      ]
+    },
+    {
+      "id": "con-zeeshan-wahla",
+      "partyId": "con",
+      "name": "Zeeshan Wahla",
+      "district": "Surrey City Centre",
+      "districtSlug": "surrey-city-centre",
+      "profileUrl": "https://conservativebc.ca/candidate/zeeshan-wahla/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:14.355Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
+      "assetIds": [
+        "con-zeeshan-wahla-portrait-df2561991f"
+      ]
+    },
+    {
+      "id": "con-curtis-whitford",
+      "partyId": "con",
+      "name": "Curtis Whitford",
+      "district": "Peace River North",
+      "districtSlug": "peace-river-north",
+      "profileUrl": "https://conservativebc.ca/candidate/curtis-whitford/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:14.355Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
+      "assetIds": [
+        "con-curtis-whitford-portrait-5a5a066c86"
+      ]
+    },
+    {
+      "id": "con-ryan-windsor",
+      "partyId": "con",
+      "name": "Ryan Windsor",
+      "district": "Saanich North and the Islands",
+      "districtSlug": "saanich-north-and-the-islands",
+      "profileUrl": "https://conservativebc.ca/candidate/ryan-windsor/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:14.355Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
+      "assetIds": [
+        "con-ryan-windsor-portrait-7e06cf0890"
+      ]
+    },
+    {
+      "id": "con-gordon-zhang",
+      "partyId": "con",
+      "name": "Gordon Zhang",
+      "district": "Richmond-Steveston",
+      "districtSlug": "richmond-steveston",
+      "profileUrl": "https://conservativebc.ca/candidate/gordon-zhang/",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:14.355Z",
+      "status": "party-announced",
+      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "e80457ab86a9b0c22fb79e4986486de04340e8fa80eb4115d0c84597383a364e",
+      "assetIds": [
+        "con-gordon-zhang-portrait-38732f05a5"
+      ]
+    },
+    {
+      "id": "centre-michael-davis",
+      "partyId": "centre",
+      "name": "Michael Davis",
+      "district": "Vancouver-Point Grey",
+      "districtSlug": "vancouver-point-grey",
+      "profileUrl": "https://www.centrebc.ca/candidates/michael-davis/",
+      "sourcePage": "https://www.centrebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:16.592Z",
+      "status": "party-announced",
+      "statusSource": "https://www.centrebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "20fb64235fc457dff48991582ee51610b9b34f9a9139a60cd105b6d2b3bb0fce",
+      "assetIds": [
+        "centre-michael-davis-portrait-31c6ffabc8"
+      ]
+    },
+    {
+      "id": "centre-kim-lockhart",
+      "partyId": "centre",
+      "name": "Kim Lockhart",
+      "district": "Ladysmith-Oceanside",
+      "districtSlug": "ladysmith-oceanside",
+      "profileUrl": "https://www.centrebc.ca/candidates/kim-lockhart/",
+      "sourcePage": "https://www.centrebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:16.592Z",
+      "status": "party-announced",
+      "statusSource": "https://www.centrebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "20fb64235fc457dff48991582ee51610b9b34f9a9139a60cd105b6d2b3bb0fce",
+      "assetIds": [
+        "centre-kim-lockhart-portrait-11bb919ea3"
+      ]
+    },
+    {
+      "id": "centre-raman-sharma",
+      "partyId": "centre",
+      "name": "Raman Sharma",
+      "district": "Surrey City Centre",
+      "districtSlug": "surrey-city-centre",
+      "profileUrl": "https://www.centrebc.ca/candidates/raman-sharma/",
+      "sourcePage": "https://www.centrebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:16.592Z",
+      "status": "party-announced",
+      "statusSource": "https://www.centrebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "20fb64235fc457dff48991582ee51610b9b34f9a9139a60cd105b6d2b3bb0fce",
+      "assetIds": [
+        "centre-raman-sharma-portrait-de3339e6fc"
+      ]
+    },
+    {
+      "id": "centre-kuldeep-rangi",
+      "partyId": "centre",
+      "name": "Kuldeep Rangi",
+      "district": "Delta North",
+      "districtSlug": "delta-north",
+      "profileUrl": "https://www.centrebc.ca/candidates/kuldeep-rangi/",
+      "sourcePage": "https://www.centrebc.ca/our-team/",
+      "checkedAt": "2026-09-28T04:05:16.592Z",
+      "status": "party-announced",
+      "statusSource": "https://www.centrebc.ca/our-team/",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "20fb64235fc457dff48991582ee51610b9b34f9a9139a60cd105b6d2b3bb0fce",
+      "assetIds": [
+        "centre-kuldeep-rangi-portrait-464b911556"
+      ]
+    },
+    {
+      "id": "one-aj-wolfe",
+      "partyId": "one",
+      "name": "AJ Wolfe",
+      "district": "Kootenay-Rockies",
+      "districtSlug": "kootenay-rockies",
+      "profileUrl": "https://1bc.ca/candidates/awolfe",
+      "sourcePage": "https://1bc.ca/candidates",
+      "checkedAt": "2026-09-28T04:05:16.939Z",
+      "status": "party-announced",
+      "statusSource": "https://1bc.ca/candidates",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "0886aba171038825de2c5da5f93bf819bebbee5806be33e357144c1f8ef12620",
+      "assetIds": [
+        "one-aj-wolfe-portrait-3901b0c97d"
+      ]
+    },
+    {
+      "id": "one-hunter-corrigal",
+      "partyId": "one",
+      "name": "Hunter Corrigal",
+      "district": "Kootenay Central",
+      "districtSlug": "kootenay-central",
+      "profileUrl": "https://1bc.ca/candidates/hcorrigal",
+      "sourcePage": "https://1bc.ca/candidates",
+      "checkedAt": "2026-09-28T04:05:16.939Z",
+      "status": "party-announced",
+      "statusSource": "https://1bc.ca/candidates",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "0886aba171038825de2c5da5f93bf819bebbee5806be33e357144c1f8ef12620",
+      "assetIds": [
+        "one-hunter-corrigal-portrait-3e975bf3dc"
+      ]
+    },
+    {
+      "id": "one-robin-roy",
+      "partyId": "one",
+      "name": "Robin Roy",
+      "district": "Abbotsford South",
+      "districtSlug": "abbotsford-south",
+      "profileUrl": "https://1bc.ca/candidates/rroy",
+      "sourcePage": "https://1bc.ca/candidates",
+      "checkedAt": "2026-09-28T04:05:16.939Z",
+      "status": "party-announced",
+      "statusSource": "https://1bc.ca/candidates",
+      "statusSourceType": "party-directory",
+      "statusSourceSha256": "0886aba171038825de2c5da5f93bf819bebbee5806be33e357144c1f8ef12620",
+      "assetIds": [
+        "one-robin-roy-portrait-e5852c8a04"
+      ]
+    },
+    {
       "id": "ndp-bowinn-ma",
       "partyId": "ndp",
       "name": "Bowinn Ma",
       "district": "North Vancouver-Lonsdale",
       "districtSlug": "north-vancouver-lonsdale",
       "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/bowinnma_nvl_websiteheadshot-1000x1000px_0.jpg",
-      "profileUrl": "https://www.bcndp.ca/team",
+      "profileUrl": "https://bowinnma.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
-      "checkedAt": "2026-09-26T06:46:50.992962Z",
-      "status": "party-announced",
-      "statusSource": "https://www.bcndp.ca/team",
+      "checkedAt": "2026-09-28T03:48:10.358Z",
+      "status": "accepted",
+      "statusSource": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF",
       "assetIds": [
         "ndp-ndp-bowinn-ma-e52d5ffbed"
-      ]
+      ],
+      "statusSourceType": "elections-bc",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "statusSourceSha256": "4305ab94723d028315dc0e81175552149de6fb7b7c60668b53951369e6bdbf72"
     },
     {
       "id": "ndp-richard-zussman",
@@ -152,12 +581,15 @@
       "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/richardzussman_clr_website_images_headshot-1000x1000px.png",
       "profileUrl": "https://richardzussman.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
-      "checkedAt": "2026-09-26T06:46:50.992962Z",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
       "status": "party-announced",
       "statusSource": "https://www.bcndp.ca/team",
       "assetIds": [
         "ndp-ndp-richard-zussman-d0265d5386"
-      ]
+      ],
+      "statusSourceType": "party-directory",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc"
     },
     {
       "id": "con-megan-knight",
@@ -173,7 +605,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-megan-knight-b2a31ad785"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "id": "centre-dan-wood",
@@ -189,7 +622,8 @@
       "statusSource": "https://www.centrebc.ca/our-team/",
       "assetIds": [
         "centre-centre-dan-wood-0cdaf420d7"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "id": "one-dallas-brodie",
@@ -205,7 +639,8 @@
       "statusSource": "https://1bc.ca/candidates",
       "assetIds": [
         "one-one-dallas-brodie-38118004fc"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "id": "one-brent-chapman",
@@ -214,17 +649,19 @@
       "district": null,
       "districtSlug": null,
       "districtStatus": "unresolved",
-      "reportedDistrict": "South Surrey \u2013 White Rock",
-      "districtNote": "The party lists South Surrey - White Rock, which is not an official 2026 provincial district. No assignment to Surrey South or Surrey-White Rock has been inferred.",
+      "reportedDistrict": "South Surrey",
+      "districtNote": "The party lists South Surrey, which is not an exact official provincial district name. No assignment to Surrey South or Surrey-White Rock has been inferred.",
       "imageUrl": "https://framerusercontent.com/images/Af0FYNqVLYF9qFFNOVwRQLDX9A.png?width=1254&height=1254",
       "profileUrl": "https://1bc.ca/candidates",
       "sourcePage": "https://1bc.ca/candidates",
-      "checkedAt": "2026-09-26T06:46:50.992962Z",
+      "checkedAt": "2026-09-28T04:05:16.939Z",
       "status": "party-announced",
       "statusSource": "https://1bc.ca/candidates",
+      "statusSourceSha256": "0886aba171038825de2c5da5f93bf819bebbee5806be33e357144c1f8ef12620",
       "assetIds": [
         "one-one-brent-chapman-e9bd9f16e7"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "id": "one-warren-hamm",
@@ -240,7 +677,8 @@
       "statusSource": "https://1bc.ca/candidates",
       "assetIds": [
         "one-one-warren-hamm-065796ab80"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "id": "one-jim-mcmurtry",
@@ -256,7 +694,8 @@
       "statusSource": "https://1bc.ca/candidates",
       "assetIds": [
         "one-one-jim-mcmurtry-cee83f7913"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -272,7 +711,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-bruce-banman-a21090b909"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -288,7 +728,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-korky-neufeld-580c6f805f"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "centre",
@@ -304,7 +745,8 @@
       "statusSource": "https://www.centrebc.ca/our-team/",
       "assetIds": [
         "centre-centre-lakhwinder-jhaj-9ca968fab2"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -320,7 +762,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-donegal-wilson-06c89600b0"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -336,7 +779,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-sharon-hartwell-52d71f446b"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -352,7 +796,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-lorne-doerkson-87149b2cd8"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -368,11 +813,12 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-heather-maahs-986805e60b"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
-      "name": "\u00c1\u2019a:l\u00edya (A\u2019aliya) Warbus",
+      "name": "Á’a:líya (A’aliya) Warbus",
       "district": "Chilliwack-Cultus Lake",
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/WARBUS.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/aaliya-warbus/",
@@ -384,7 +830,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-a-a-liya-a-aliya-warbus-8cbd807165"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "ndp",
@@ -394,15 +841,16 @@
       "profileUrl": "https://kellipaddon.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-26T06:46:50.992962Z",
-      "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
       "id": "ndp-kelli-paddon",
       "districtSlug": "chilliwack-cultus-lake",
       "status": "party-announced",
       "statusSource": "https://www.bcndp.ca/team",
       "assetIds": [
         "ndp-ndp-kelli-paddon-314b04bba2"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -418,7 +866,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-scott-mcinnis-750e95cdcc"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -434,7 +883,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-brennan-day-8355e246c3"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -450,7 +900,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-ian-paton-16c47a17d1"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -466,7 +917,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-tony-luck-10188574fc"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "green",
@@ -482,7 +934,8 @@
       "statusSource": "https://bcgreens.ca/candidates-2026/",
       "assetIds": [
         "green-green-david-evans-65a5c4d26e"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -498,7 +951,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-peter-milobar-d99d0c080d"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -514,7 +968,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-ward-stamer-97b2b15d0c"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -530,7 +985,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-kristina-loewen-184a07e7db"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -546,7 +1002,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-pavneet-singh-2702ad0e8b"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -562,7 +1019,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-gavin-dew-148005aa75"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -578,7 +1036,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-pete-davis-f4443fdb2d"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "ndp",
@@ -588,15 +1047,16 @@
       "profileUrl": "https://raviparmar.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-26T06:46:50.992962Z",
-      "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
       "id": "ndp-ravi-parmar",
       "districtSlug": "langford-highlands",
       "status": "party-announced",
       "statusSource": "https://www.bcndp.ca/team",
       "assetIds": [
         "ndp-ndp-ravi-parmar-3f5addca71"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -612,7 +1072,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-harman-bhangu-9edbcc7eb3"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -628,7 +1089,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-misty-van-popta-eef11a603e"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -644,7 +1106,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-jody-toor-c6bf38137c"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -660,7 +1123,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-lawrence-mok-ff35c70633"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -676,7 +1140,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-joshua-dahling-c5bd4e0d04"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "green",
@@ -692,7 +1157,8 @@
       "statusSource": "https://bcgreens.ca/candidates-2026/",
       "assetIds": [
         "green-green-maureen-curran-eb32aedc6a"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "green",
@@ -708,7 +1174,8 @@
       "statusSource": "https://bcgreens.ca/candidates-2026/",
       "assetIds": [
         "green-green-francis-racy-2aedadcdf9"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -724,7 +1191,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-anna-kindy-1e08f39cb6"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -740,7 +1208,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-lynne-block-f64e18b881"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "centre",
@@ -756,7 +1225,8 @@
       "statusSource": "https://www.centrebc.ca/our-team/",
       "assetIds": [
         "centre-centre-andrew-weaver-015004d433"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -772,25 +1242,27 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-larry-neufeld-2a16e14171"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "ndp",
       "name": "Mike Farnworth",
       "district": "Port Coquitlam",
-      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/new_mike_farnworth_webimage_1000x1000.png",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/mike_farnworth_web_image.png",
       "profileUrl": "https://mikefarnworth.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-26T06:46:50.992962Z",
-      "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
       "id": "ndp-mike-farnworth",
       "districtSlug": "port-coquitlam",
       "status": "party-announced",
       "statusSource": "https://www.bcndp.ca/team",
       "assetIds": [
         "ndp-ndp-mike-farnworth-efacaf2c04"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "ndp",
@@ -800,15 +1272,16 @@
       "profileUrl": "https://randeneneill.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-26T06:46:50.992962Z",
-      "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
       "id": "ndp-randene-neill",
       "districtSlug": "powell-river-sunshine-coast",
       "status": "party-announced",
       "statusSource": "https://www.bcndp.ca/team",
       "assetIds": [
         "ndp-ndp-randene-neill-40f2aad39a"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -824,7 +1297,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-kiel-giddens-257986af02"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -840,7 +1314,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-sheldon-clare-55bf8ff9a3"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -856,7 +1331,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-rosalyn-bird-489ed72117"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -872,7 +1348,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-sacha-peter-f95d62367b"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -888,7 +1365,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-teresa-wat-0d2fb50d55"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -904,7 +1382,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-steve-kooner-df918571bb"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "green",
@@ -920,7 +1399,8 @@
       "statusSource": "https://bcgreens.ca/candidates-2026/",
       "assetIds": [
         "green-green-emily-lowan-e3f44d3844"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -936,23 +1416,26 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-david-williams-ae5d822782"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
-      "name": "Claire Ratt\u00e9e",
+      "name": "Claire Rattée",
       "district": "Skeena",
       "imageUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Claire-Rattee-2.jpg",
       "profileUrl": "https://conservativebc.ca/candidate/claire-rattee/",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
-      "checkedAt": "2026-09-26T06:46:50.992962Z",
+      "checkedAt": "2026-09-28T03:48:10.358Z",
       "id": "con-claire-rattee",
       "districtSlug": "skeena",
-      "status": "party-announced",
-      "statusSource": "https://www.conservativebc.ca/our-team/",
+      "status": "accepted",
+      "statusSource": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF",
       "assetIds": [
         "con-con-claire-rattee-cac5397f70"
-      ]
+      ],
+      "statusSourceType": "elections-bc",
+      "statusSourceSha256": "4305ab94723d028315dc0e81175552149de6fb7b7c60668b53951369e6bdbf72"
     },
     {
       "partyId": "green",
@@ -968,7 +1451,8 @@
       "statusSource": "https://bcgreens.ca/candidates-2026/",
       "assetIds": [
         "green-green-nick-gottlieb-4b99e79d55"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "ndp",
@@ -978,15 +1462,16 @@
       "profileUrl": "https://sarahzimmerman.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-26T06:46:50.992962Z",
-      "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
       "id": "ndp-sarah-zimmerman",
       "districtSlug": "skeena",
       "status": "party-announced",
       "statusSource": "https://www.bcndp.ca/team",
       "assetIds": [
         "ndp-ndp-sarah-zimmerman-49072e7ab6"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -1002,7 +1487,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-mandeep-dhaliwal-831df01d69"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "ndp",
@@ -1012,15 +1498,16 @@
       "profileUrl": "https://jagrupbrar.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-26T06:46:50.992962Z",
-      "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
       "id": "ndp-jagrup-brar",
       "districtSlug": "surrey-fleetwood",
       "status": "party-announced",
       "statusSource": "https://www.bcndp.ca/team",
       "assetIds": [
         "ndp-ndp-jagrup-brar-095be04e3d"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "centre",
@@ -1036,7 +1523,8 @@
       "statusSource": "https://www.centrebc.ca/our-team/",
       "assetIds": [
         "centre-centre-paul-brar-b540e510a9"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "ndp",
@@ -1046,15 +1534,16 @@
       "profileUrl": "https://jessiesunner.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-26T06:46:50.992962Z",
-      "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
       "id": "ndp-jessie-sunner",
       "districtSlug": "surrey-newton",
       "status": "party-announced",
       "statusSource": "https://www.bcndp.ca/team",
       "assetIds": [
         "ndp-ndp-jessie-sunner-a6c2df987a"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -1070,7 +1559,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-bryan-tepper-0239fa78b0"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "ndp",
@@ -1080,15 +1570,16 @@
       "profileUrl": "https://jinnysims.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-26T06:46:50.992962Z",
-      "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
       "id": "ndp-jinny-sims",
       "districtSlug": "surrey-panorama",
       "status": "party-announced",
       "statusSource": "https://www.bcndp.ca/team",
       "assetIds": [
         "ndp-ndp-jinny-sims-6ab93d3cea"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -1104,7 +1595,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-trevor-halford-e1b5d0600f"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -1120,7 +1612,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-jaime-stein-921dd23433"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "ndp",
@@ -1130,15 +1623,16 @@
       "profileUrl": "https://www.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-26T06:46:50.992962Z",
-      "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
       "id": "ndp-david-eby",
       "districtSlug": "vancouver-point-grey",
       "status": "party-announced",
       "statusSource": "https://www.bcndp.ca/team",
       "assetIds": [
         "ndp-ndp-david-eby-11f3afb9fe"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "ndp",
@@ -1148,15 +1642,17 @@
       "profileUrl": "https://adriandix.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-26T06:46:50.992962Z",
-      "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
+      "checkedAt": "2026-09-28T03:48:10.358Z",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
       "id": "ndp-adrian-dix",
       "districtSlug": "vancouver-renfrew",
-      "status": "party-announced",
-      "statusSource": "https://www.bcndp.ca/team",
+      "status": "accepted",
+      "statusSource": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF",
       "assetIds": [
         "ndp-ndp-adrian-dix-785498fc44"
-      ]
+      ],
+      "statusSourceType": "elections-bc",
+      "statusSourceSha256": "4305ab94723d028315dc0e81175552149de6fb7b7c60668b53951369e6bdbf72"
     },
     {
       "partyId": "ndp",
@@ -1168,12 +1664,13 @@
       "id": "ndp-spencer-chandra-herbert",
       "districtSlug": "vancouver-west-end",
       "status": "accepted",
-      "statusSource": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.pdf",
-      "checkedAt": "2026-09-26T06:46:50.992962Z",
+      "statusSource": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF",
+      "checkedAt": "2026-09-28T03:48:10.358Z",
       "assetIds": [
         "ndp-ndp-spencer-chandra-herbert-4c78b57732"
       ],
-      "statusSourceSha256": "9dad4a7963bd8a8b05e6fa81e287469dac568db5fe91a626f43726216f10093d"
+      "statusSourceSha256": "4305ab94723d028315dc0e81175552149de6fb7b7c60668b53951369e6bdbf72",
+      "statusSourceType": "elections-bc"
     },
     {
       "partyId": "green",
@@ -1189,7 +1686,8 @@
       "statusSource": "https://bcgreens.ca/candidates-2026/",
       "assetIds": [
         "green-green-rajinder-sahota-5b1fe20d79"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "ndp",
@@ -1199,15 +1697,16 @@
       "profileUrl": "https://ninakreiger.bcndp.ca",
       "sourcePage": "https://www.bcndp.ca/team",
       "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "checkedAt": "2026-09-26T06:46:50.992962Z",
-      "dataSourceSha256": "6aa627568f30ec21f67e797b1ff06d320036343f71f84114d39f2973b86e3197",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
       "id": "ndp-nina-krieger",
       "districtSlug": "victoria-swan-lake",
       "status": "party-announced",
       "statusSource": "https://www.bcndp.ca/team",
       "assetIds": [
         "ndp-ndp-nina-krieger-869aa3faea"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -1223,7 +1722,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-macklin-mccall-4be213334d"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -1239,7 +1739,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-caroline-elliott-d93cfdcdfd"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "con",
@@ -1255,7 +1756,8 @@
       "statusSource": "https://www.conservativebc.ca/our-team/",
       "assetIds": [
         "con-con-ayla-dumais-e74730d69e"
-      ]
+      ],
+      "statusSourceType": "party-directory"
     },
     {
       "partyId": "green",
@@ -1271,7 +1773,562 @@
       "statusSource": "https://bcgreens.ca/candidates-2026/",
       "assetIds": [
         "green-green-jeremy-valeriote-b232db549f"
-      ]
+      ],
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-brittny-anderson",
+      "partyId": "ndp",
+      "name": "Brittny Anderson",
+      "assetIds": [
+        "mla-662-portrait-c439e95c61"
+      ],
+      "district": "Kootenay Central",
+      "districtSlug": "kootenay-central",
+      "profileUrl": "https://brittnyanderson.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/brittnyanderson_koc_websiteheadshot-1000x1000px.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-george-anderson",
+      "partyId": "ndp",
+      "name": "George Anderson",
+      "assetIds": [
+        "mla-700-portrait-cb1b5df59e"
+      ],
+      "district": "Nanaimo-Lantzville",
+      "districtSlug": "nanaimo-lantzville",
+      "profileUrl": "https://georgeanderson.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/george-anderson-nalwebsite-images-headshot-1000x1000px-80.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-rohini-arora",
+      "partyId": "ndp",
+      "name": "Rohini Arora",
+      "assetIds": [
+        "mla-668-portrait-b30bedff7d"
+      ],
+      "district": "Burnaby East",
+      "districtSlug": "burnaby-east",
+      "profileUrl": "https://rohiniarora.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/reaharora_bne_website_images_headshot-1000x1000px.png",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-lisa-beare",
+      "partyId": "ndp",
+      "name": "Lisa Beare",
+      "assetIds": [
+        "mla-697-portrait-2d8b9155f8"
+      ],
+      "district": "Maple Ridge-Pitt Meadows",
+      "districtSlug": "maple-ridge-pitt-meadows",
+      "profileUrl": "https://lisabeare.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/lisabeare_map_headshot-1000x1000px.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-garry-begg",
+      "partyId": "ndp",
+      "name": "Garry Begg",
+      "assetIds": [
+        "mla-752-portrait-8c7a7c7147"
+      ],
+      "district": "Surrey-Guildford",
+      "districtSlug": "surrey-guildford",
+      "profileUrl": "https://garrybegg.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/garrybegg_srg_website_headshot-1000x1000px.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-paul-choi",
+      "partyId": "ndp",
+      "name": "Paul Choi",
+      "assetIds": [
+        "mla-671-portrait-9af799da5e"
+      ],
+      "district": "Burnaby South-Metrotown",
+      "districtSlug": "burnaby-south-metrotown",
+      "profileUrl": "https://paulchoi.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/paulchoi_bnsheadshot-1000x1000px.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-raj-chouhan",
+      "partyId": "ndp",
+      "name": "Raj Chouhan",
+      "assetIds": [
+        "mla-669-portrait-6668eaa4b4"
+      ],
+      "district": "Burnaby-New Westminster",
+      "districtSlug": "burnaby-new-westminster",
+      "profileUrl": "https://rajchouhan.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/rajchouhan_bnn_websiteheadshot-1000x1000px.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-will-cole-hamilton",
+      "partyId": "ndp",
+      "name": "Will Cole-Hamilton",
+      "assetIds": [
+        "ndp-will-cole-hamilton-portrait-c042df6aa1"
+      ],
+      "district": "Courtenay-Comox",
+      "districtSlug": "courtenay-comox",
+      "profileUrl": "https://willcolehamilton.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/willcolehamilton_website_images_headshot-1000x1000px.png",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-andrea-dunlop",
+      "partyId": "ndp",
+      "name": "Andrea Dunlop",
+      "assetIds": [
+        "ndp-andrea-dunlop-portrait-b2a1a69ae1"
+      ],
+      "district": "Columbia River-Revelstoke",
+      "districtSlug": "columbia-river-revelstoke",
+      "profileUrl": "https://andreadunlop.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/andreadunlop_clr_headshot-1000x1000px.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-mable-elmore",
+      "partyId": "ndp",
+      "name": "Mable Elmore",
+      "assetIds": [
+        "mla-737-portrait-245b6788e5"
+      ],
+      "district": "Vancouver-Kensington",
+      "districtSlug": "vancouver-kensington",
+      "profileUrl": "https://mableelmore.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/mableelmore_vke_headshot-1000x1000px.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-diana-gibson",
+      "partyId": "ndp",
+      "name": "Diana Gibson",
+      "assetIds": [
+        "mla-707-portrait-a43a154653"
+      ],
+      "district": "Oak Bay-Gordon Head",
+      "districtSlug": "oak-bay-gordon-head",
+      "profileUrl": "https://dianagibson.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/dianagibson_obd_headshot-1000x1000px.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-stephanie-higginson",
+      "partyId": "ndp",
+      "name": "Stephanie Higginson",
+      "assetIds": [
+        "mla-691-portrait-4d21515134"
+      ],
+      "district": "Ladysmith-Oceanside",
+      "districtSlug": "ladysmith-oceanside",
+      "profileUrl": "https://stephaniehigginson.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/stephaniehigginson_lao_crc_website_headshot-1000x1000px.png",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-anne-kang",
+      "partyId": "ndp",
+      "name": "Anne Kang",
+      "assetIds": [
+        "mla-667-portrait-9c593d014e"
+      ],
+      "district": "Burnaby Centre",
+      "districtSlug": "burnaby-centre",
+      "profileUrl": "https://annekang.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/annekang_bnc_web_headshot-1000x1000px_final.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-dana-lajeunesse",
+      "partyId": "ndp",
+      "name": "Dana Lajeunesse",
+      "assetIds": [
+        "mla-684-portrait-2e429d10bb"
+      ],
+      "district": "Juan de Fuca-Malahat",
+      "districtSlug": "juan-de-fuca-malahat",
+      "profileUrl": "https://danalajeunesse.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/dana_lajeunesse_jfm_headshot-1000x1000px-80.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-grace-lore",
+      "partyId": "ndp",
+      "name": "Grace Lore",
+      "assetIds": [
+        "mla-749-portrait-a7d440fca6"
+      ],
+      "district": "Victoria-Beacon Hill",
+      "districtSlug": "victoria-beacon-hill",
+      "profileUrl": "https://gracelore.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/gracelore_vnt_website_headshot-1000x1000px.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-sheila-malcolmson",
+      "partyId": "ndp",
+      "name": "Sheila Malcolmson",
+      "assetIds": [
+        "mla-699-portrait-47754897ee"
+      ],
+      "district": "Nanaimo-Gabriola Island",
+      "districtSlug": "nanaimo-gabriola-island",
+      "profileUrl": "https://sheilamalcolmson.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/sheila_malcolmson_-_nai_headshot-1000x1000px-80.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-jason-mccormick",
+      "partyId": "ndp",
+      "name": "Jason McCormick",
+      "assetIds": [
+        "ndp-jason-mccormick-portrait-645a026e17"
+      ],
+      "district": "Delta South",
+      "districtSlug": "delta-south",
+      "profileUrl": "https://jasonmccormick.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/jasonmccormick_dls_headshot-1000x1000px.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-steve-morissette",
+      "partyId": "ndp",
+      "name": "Steve Morissette",
+      "assetIds": [
+        "mla-689-portrait-3a8116fab4"
+      ],
+      "district": "Kootenay-Monashee",
+      "districtSlug": "kootenay-monashee",
+      "profileUrl": "https://stevemorissette.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/steve-morissette-kom_website-images-headshot-1000x1000px.png",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-josie-osborne",
+      "partyId": "ndp",
+      "name": "Josie Osborne",
+      "assetIds": [
+        "mla-698-portrait-c3b21582c3"
+      ],
+      "district": "Mid Island-Pacific Rim",
+      "districtSlug": "mid-island-pacific-rim",
+      "profileUrl": "https://josieosborne.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/josieosbourne_websiteimages_headshot-1000x1000px.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-darlene-rotchford",
+      "partyId": "ndp",
+      "name": "Darlene Rotchford",
+      "assetIds": [
+        "mla-682-portrait-8e978d8e0a"
+      ],
+      "district": "Esquimalt-Colwood",
+      "districtSlug": "esquimalt-colwood",
+      "profileUrl": "https://darlenerotchford.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/darlene_rotchford_esc_website_images-headshot-1000x1000px-80.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-roly-russell",
+      "partyId": "ndp",
+      "name": "Roly Russell",
+      "assetIds": [
+        "ndp-roly-russell-portrait-a5fa825aa3"
+      ],
+      "district": "Boundary-Similkameen",
+      "districtSlug": "boundary-similkameen",
+      "profileUrl": "https://rolyrussell.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/bds_rolyrussell_headshot_1000x1000_small.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-harwinder-sandhu",
+      "partyId": "ndp",
+      "name": "Harwinder Sandhu",
+      "assetIds": [
+        "mla-751-portrait-de742a4464"
+      ],
+      "district": "Vernon-Lumby",
+      "districtSlug": "vernon-lumby",
+      "profileUrl": "https://harwindersandhu.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/harwinder-sandhu-vrl-website-images-headshot-1000x1000px.png",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-amna-shah",
+      "partyId": "ndp",
+      "name": "Amna Shah",
+      "assetIds": [
+        "mla-727-portrait-0d2c3ff18d"
+      ],
+      "district": "Surrey City Centre",
+      "districtSlug": "surrey-city-centre",
+      "profileUrl": "https://amnashah.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/amna_shah_src_headshot-1000x1000px-80.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-debra-toporowski",
+      "partyId": "ndp",
+      "name": "Debra Toporowski",
+      "assetIds": [
+        "ndp-debra-toporowski-portrait-a8febd17a6"
+      ],
+      "district": "Cowichan Valley",
+      "districtSlug": "cowichan-valley",
+      "profileUrl": "https://debratoporowski.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/debratoporowski_cwvheadshot-1000x1000px.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-jennifer-whiteside",
+      "partyId": "ndp",
+      "name": "Jennifer Whiteside",
+      "assetIds": [
+        "mla-702-portrait-70ac072107"
+      ],
+      "district": "New Westminster-Coquitlam",
+      "districtSlug": "new-westminster-coquitlam",
+      "profileUrl": "https://jenniferwhiteside.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/jenniferwhiteside_nwc_website_headshot-1000x1000px.jpg",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-terry-yung",
+      "partyId": "ndp",
+      "name": "Terry Yung",
+      "assetIds": [
+        "mla-742-portrait-640b758081"
+      ],
+      "district": "Vancouver-Yaletown",
+      "districtSlug": "vancouver-yaletown",
+      "profileUrl": "https://terryyung.bcndp.ca",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "imageUrl": "https://www.bcndp.ca/sites/default/files/headshots/terry-yung-vny-website-images-headshot-1000x1000px.png",
+      "dataSource": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
+      "dataSourceSha256": "def131799fc67bbfd8090158cbc35d76ce60a5ec00129aca26d1afd998f10bcc",
+      "checkedAt": "2026-09-28T03:55:55.840Z",
+      "status": "party-announced",
+      "statusSource": "https://www.bcndp.ca/team",
+      "statusSourceType": "party-directory"
+    },
+    {
+      "id": "ndp-janet-routledge",
+      "name": "Janet Routledge",
+      "district": "Burnaby North",
+      "districtSlug": "burnaby-north",
+      "sourcePage": "https://elections.bc.ca/2026-provincial-election/candidate-list/",
+      "assetIds": [
+        "mla-670-portrait-5d49fa32c5"
+      ],
+      "partyId": "ndp",
+      "status": "accepted",
+      "statusSource": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF",
+      "statusSourceType": "elections-bc",
+      "statusSourceSha256": "4305ab94723d028315dc0e81175552149de6fb7b7c60668b53951369e6bdbf72",
+      "checkedAt": "2026-09-28T03:48:10.358Z"
+    },
+    {
+      "id": "unaffiliated-monica-mohan",
+      "name": "Monica Mohan",
+      "district": "Delta North",
+      "districtSlug": "delta-north",
+      "sourcePage": "https://elections.bc.ca/2026-provincial-election/candidate-list/",
+      "assetIds": [],
+      "partyId": "unaffiliated",
+      "status": "accepted",
+      "statusSource": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF",
+      "statusSourceType": "elections-bc",
+      "statusSourceSha256": "4305ab94723d028315dc0e81175552149de6fb7b7c60668b53951369e6bdbf72",
+      "checkedAt": "2026-09-28T03:48:10.358Z"
+    },
+    {
+      "id": "independent-jordan-kealy",
+      "name": "Jordan Kealy",
+      "district": "Peace River North",
+      "districtSlug": "peace-river-north",
+      "sourcePage": "https://elections.bc.ca/2026-provincial-election/candidate-list/",
+      "assetIds": [],
+      "partyId": "independent",
+      "status": "accepted",
+      "statusSource": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF",
+      "statusSourceType": "elections-bc",
+      "statusSourceSha256": "4305ab94723d028315dc0e81175552149de6fb7b7c60668b53951369e6bdbf72",
+      "checkedAt": "2026-09-28T03:48:10.358Z"
+    },
+    {
+      "id": "ndp-niki-sharma",
+      "name": "Niki Sharma",
+      "district": "Vancouver-Hastings",
+      "districtSlug": "vancouver-hastings",
+      "sourcePage": "https://elections.bc.ca/2026-provincial-election/candidate-list/",
+      "assetIds": [
+        "mla-736-portrait-8b8420c5ca"
+      ],
+      "partyId": "ndp",
+      "status": "accepted",
+      "statusSource": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF",
+      "statusSourceType": "elections-bc",
+      "statusSourceSha256": "4305ab94723d028315dc0e81175552149de6fb7b7c60668b53951369e6bdbf72",
+      "checkedAt": "2026-09-28T03:48:10.358Z"
     }
   ],
   "assets": [
@@ -2579,7 +3636,7 @@
       "candidateId": "con-a-a-liya-a-aliya-warbus",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
       "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/WARBUS.jpg",
-      "label": "\u00c1\u2019a:l\u00edya (A\u2019aliya) Warbus",
+      "label": "Á’a:líya (A’aliya) Warbus",
       "sourceType": "official-party-page",
       "id": "con-con-a-a-liya-a-aliya-warbus-8cbd807165",
       "downloadedAt": "2026-09-25T21:54:27.005Z",
@@ -3699,7 +4756,7 @@
       "candidateId": "con-claire-rattee",
       "sourcePage": "https://www.conservativebc.ca/our-team/",
       "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/Claire-Rattee-2.jpg",
-      "label": "Claire Ratt\u00e9e",
+      "label": "Claire Rattée",
       "sourceType": "official-party-page",
       "id": "con-con-claire-rattee-cac5397f70",
       "downloadedAt": "2026-09-25T21:54:27.005Z",
@@ -5966,6 +7023,966 @@
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-kevin-acton",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Kevin-Acton-1024x1024.jpg",
+      "label": "Kevin Acton",
+      "sourceType": "official-party-page",
+      "id": "con-kevin-acton-portrait-35db0de3ea",
+      "downloadedAt": "2026-09-28T04:41:56.865Z",
+      "original": {
+        "path": "assets/originals/conservative/con-kevin-acton-portrait-35db0de3ea.jpg",
+        "bytes": 95629,
+        "sha256": "35db0de3ead94e2cd24382bb080e03469f6eef4c299711ccc9b664671db616b8",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-kevin-acton-portrait-35db0de3ea.webp",
+        "bytes": 34032,
+        "sha256": "823b38292e6299f9651bd27304b0ff7f943d9e4bf0f7cd3dcd662514c1703c24",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-keenan-adams",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Keenan-Adams-1024x1024.jpg",
+      "label": "Keenan Adams",
+      "sourceType": "official-party-page",
+      "id": "con-keenan-adams-portrait-a2803c7f26",
+      "downloadedAt": "2026-09-28T04:41:57.053Z",
+      "original": {
+        "path": "assets/originals/conservative/con-keenan-adams-portrait-a2803c7f26.jpg",
+        "bytes": 89888,
+        "sha256": "a2803c7f264867af6e631021b3223cff932cbb8a408cb0dec1bd4edaf3c8446f",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-keenan-adams-portrait-a2803c7f26.webp",
+        "bytes": 29356,
+        "sha256": "bbf1bf84d509ced5f0c30660da991e5d1728957a9b04430720803ee7d0cef3b0",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-simon-chandler",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Simon-Chandler-1-1024x1024.jpg",
+      "label": "Simon Chandler",
+      "sourceType": "official-party-page",
+      "id": "con-simon-chandler-portrait-c4e136da01",
+      "downloadedAt": "2026-09-28T04:41:57.254Z",
+      "original": {
+        "path": "assets/originals/conservative/con-simon-chandler-portrait-c4e136da01.jpg",
+        "bytes": 91421,
+        "sha256": "c4e136da01f0eb4ae0f4dcd38f2b3cc5d7a596b231ddb10d9d15bd75fdd911dc",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-simon-chandler-portrait-c4e136da01.webp",
+        "bytes": 30212,
+        "sha256": "192ffd0be9af5cf1aa6bd3b2cb1b050c9e03e068f3ae944e6a1abb4d59b1ea19",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-margareta-dovgal",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Margareta-Dovgal-1024x1024.jpg",
+      "label": "Margareta Dovgal",
+      "sourceType": "official-party-page",
+      "id": "con-margareta-dovgal-portrait-787915b228",
+      "downloadedAt": "2026-09-28T04:41:57.466Z",
+      "original": {
+        "path": "assets/originals/conservative/con-margareta-dovgal-portrait-787915b228.jpg",
+        "bytes": 111163,
+        "sha256": "787915b228590cb08b37297a6c90514cf611385eca3aa3277adb9a9159ac4d07",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-margareta-dovgal-portrait-787915b228.webp",
+        "bytes": 37008,
+        "sha256": "4b1075e0b9bd0d64ccf153786dab7fbf93fc9a997c37d28e76f3929fa4e78b09",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-dave-johnston",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Dave-Johnston-1024x1024.jpg",
+      "label": "Dave Johnston",
+      "sourceType": "official-party-page",
+      "id": "con-dave-johnston-portrait-d1033da6b0",
+      "downloadedAt": "2026-09-28T04:41:57.668Z",
+      "original": {
+        "path": "assets/originals/conservative/con-dave-johnston-portrait-d1033da6b0.jpg",
+        "bytes": 75867,
+        "sha256": "d1033da6b0aa072cf08fcd575ea14d49150fdaf0da099051dd3af635fa0e9fd0",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-dave-johnston-portrait-d1033da6b0.webp",
+        "bytes": 23818,
+        "sha256": "01fa03d7c6c85d320794369313646108548ca49af1032845bbd7a922e04809a2",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-darryl-kropp",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Darryl-Kropp-1024x1024.jpg",
+      "label": "Darryl Kropp",
+      "sourceType": "official-party-page",
+      "id": "con-darryl-kropp-portrait-40b0e45328",
+      "downloadedAt": "2026-09-28T04:41:57.857Z",
+      "original": {
+        "path": "assets/originals/conservative/con-darryl-kropp-portrait-40b0e45328.jpg",
+        "bytes": 89840,
+        "sha256": "40b0e4532854ca4cbb1214103433659ddfa9b5c1a58643665d90a85f8784fad5",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-darryl-kropp-portrait-40b0e45328.webp",
+        "bytes": 29676,
+        "sha256": "8d4d7712cbc97d5233c92fad70f40f496e5af6b71a77f1db1e888599e9e7bd45",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-john-mcewen",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/John-McEwen-1024x1024.jpg",
+      "label": "John McEwen",
+      "sourceType": "official-party-page",
+      "id": "con-john-mcewen-portrait-78e44b8e54",
+      "downloadedAt": "2026-09-28T04:41:58.042Z",
+      "original": {
+        "path": "assets/originals/conservative/con-john-mcewen-portrait-78e44b8e54.jpg",
+        "bytes": 73737,
+        "sha256": "78e44b8e544333aefd614c5bc9d67dd03d5b81e1159f0dfdc5867f73cab0e07c",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-john-mcewen-portrait-78e44b8e54.webp",
+        "bytes": 23640,
+        "sha256": "f4f3708576a378550a96b8477463e052b96d74305254642f310aae6d8ee13525",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-alex-mcmillan",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2025/08/Alex-McMillan-1024x1024.jpg",
+      "label": "Alex McMillan",
+      "sourceType": "official-party-page",
+      "id": "con-alex-mcmillan-portrait-bd404ed960",
+      "downloadedAt": "2026-09-28T04:41:58.213Z",
+      "original": {
+        "path": "assets/originals/conservative/con-alex-mcmillan-portrait-bd404ed960.jpg",
+        "bytes": 99226,
+        "sha256": "bd404ed960faa9834a67209e7c485845b8145ebeba00a5d514d33d41dea5af1c",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-alex-mcmillan-portrait-bd404ed960.webp",
+        "bytes": 31632,
+        "sha256": "130c7e004214f2180a85ee151c0db97b8044b2edaa422599ebd1219166d4e2ad",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-kris-mcnichol",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Kris-McNichol-1024x1024.jpg",
+      "label": "Kris McNichol",
+      "sourceType": "official-party-page",
+      "id": "con-kris-mcnichol-portrait-2147a1a5b2",
+      "downloadedAt": "2026-09-28T04:41:58.417Z",
+      "original": {
+        "path": "assets/originals/conservative/con-kris-mcnichol-portrait-2147a1a5b2.jpg",
+        "bytes": 104436,
+        "sha256": "2147a1a5b2a1404e1104017e0b0bdb542f54570aeb56acc73b0e030a950821c1",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-kris-mcnichol-portrait-2147a1a5b2.webp",
+        "bytes": 36038,
+        "sha256": "7acacdfe70e32e3a8d9914a4a8255e1f4afbb646d4a5b3e8e8f0243004a789dd",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-alex-muir",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Alex-Muir-1024x1024.jpg",
+      "label": "Alex Muir",
+      "sourceType": "official-party-page",
+      "id": "con-alex-muir-portrait-9938cddaaa",
+      "downloadedAt": "2026-09-28T04:41:58.595Z",
+      "original": {
+        "path": "assets/originals/conservative/con-alex-muir-portrait-9938cddaaa.jpg",
+        "bytes": 102617,
+        "sha256": "9938cddaaa362859ee6c2af93a195b12cb04d55b20c29e8562aa30aac367da70",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-alex-muir-portrait-9938cddaaa.webp",
+        "bytes": 34966,
+        "sha256": "5ad54ac143bb41c88f2d1e4bbb4b6c5417e23117be67291cc64e416709fc7329",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-cathie-ounsted",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Cathie-Ounstead-1024x1024.jpg",
+      "label": "Cathie Ounsted",
+      "sourceType": "official-party-page",
+      "id": "con-cathie-ounsted-portrait-9f49ee6675",
+      "downloadedAt": "2026-09-28T04:41:58.797Z",
+      "original": {
+        "path": "assets/originals/conservative/con-cathie-ounsted-portrait-9f49ee6675.jpg",
+        "bytes": 98815,
+        "sha256": "9f49ee66758a275837bbaf2838159b6fe119849552b6a445268e1b0286001bd3",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-cathie-ounsted-portrait-9f49ee6675.webp",
+        "bytes": 34122,
+        "sha256": "29c6d3e9f0b6a428edfca60c7098cbd9f090c7d61c9242cf3022a34c009dba1c",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-lisa-phillips",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Lisa-Phillips-1024x1024.jpg",
+      "label": "Lisa Phillips",
+      "sourceType": "official-party-page",
+      "id": "con-lisa-phillips-portrait-e8de38dd23",
+      "downloadedAt": "2026-09-28T04:41:58.992Z",
+      "original": {
+        "path": "assets/originals/conservative/con-lisa-phillips-portrait-e8de38dd23.jpg",
+        "bytes": 108076,
+        "sha256": "e8de38dd2314f55ff128e10f3b095b03ba3c890cddcebde4f80e09f115cb3e89",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-lisa-phillips-portrait-e8de38dd23.webp",
+        "bytes": 35080,
+        "sha256": "ef7813d7a9f8408a629c905a07b53a92c4dfcc3ca7ceefb1d14a81e20dad6dee",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-deep-sandhu",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Deep-Sandhu-1024x1024.jpg",
+      "label": "Deep Sandhu",
+      "sourceType": "official-party-page",
+      "id": "con-deep-sandhu-portrait-31e9026846",
+      "downloadedAt": "2026-09-28T04:41:59.174Z",
+      "original": {
+        "path": "assets/originals/conservative/con-deep-sandhu-portrait-31e9026846.jpg",
+        "bytes": 101627,
+        "sha256": "31e9026846ecdce7602c09d36c91f16b77058c23bd951f4735c2ad38ccc5ec3c",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-deep-sandhu-portrait-31e9026846.webp",
+        "bytes": 32914,
+        "sha256": "005e637487748ce89aa634974cf560213d626b55a10fb691316eaee2ad4d1d47",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-stan-sipos",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Stan-Sipos-1024x1024.jpg",
+      "label": "Stan Sipos",
+      "sourceType": "official-party-page",
+      "id": "con-stan-sipos-portrait-5dbd086cc4",
+      "downloadedAt": "2026-09-28T04:41:59.373Z",
+      "original": {
+        "path": "assets/originals/conservative/con-stan-sipos-portrait-5dbd086cc4.jpg",
+        "bytes": 110969,
+        "sha256": "5dbd086cc421a74c878b067e09b3bb69ca4bf99ac1be44bebd190a89bf3b3774",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-stan-sipos-portrait-5dbd086cc4.webp",
+        "bytes": 41006,
+        "sha256": "01dcf06654778f9f43205aab5633ff7468e316f932881a370d5cc2cf01cef7a7",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-zeeshan-wahla",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Zeeshan-Wahla-1024x1024.jpg",
+      "label": "Zeeshan Wahla",
+      "sourceType": "official-party-page",
+      "id": "con-zeeshan-wahla-portrait-df2561991f",
+      "downloadedAt": "2026-09-28T04:41:59.561Z",
+      "original": {
+        "path": "assets/originals/conservative/con-zeeshan-wahla-portrait-df2561991f.jpg",
+        "bytes": 107425,
+        "sha256": "df2561991f6f42e077e6b12d2063198db0b8afbceeb1f46a9969b943f977ce4d",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-zeeshan-wahla-portrait-df2561991f.webp",
+        "bytes": 37950,
+        "sha256": "df3372937f8253759143a9125edff4ff4196531e1e38f416a648d3085de4ef62",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-curtis-whitford",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Curtis-Whitford-1024x1024.jpg",
+      "label": "Curtis Whitford",
+      "sourceType": "official-party-page",
+      "id": "con-curtis-whitford-portrait-5a5a066c86",
+      "downloadedAt": "2026-09-28T04:41:59.729Z",
+      "original": {
+        "path": "assets/originals/conservative/con-curtis-whitford-portrait-5a5a066c86.jpg",
+        "bytes": 84366,
+        "sha256": "5a5a066c866eaed0f0d769f1f5efad63023f211fd2e373b2ef9b939f0b82d063",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-curtis-whitford-portrait-5a5a066c86.webp",
+        "bytes": 26482,
+        "sha256": "0776eafe4b823a7fa3f7d4137caaa74e16bb51fa397f9c15ab45a68bcd5eacad",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-ryan-windsor",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Ryan-Windsor-1024x1024.jpg",
+      "label": "Ryan Windsor",
+      "sourceType": "official-party-page",
+      "id": "con-ryan-windsor-portrait-7e06cf0890",
+      "downloadedAt": "2026-09-28T04:41:59.935Z",
+      "original": {
+        "path": "assets/originals/conservative/con-ryan-windsor-portrait-7e06cf0890.jpg",
+        "bytes": 120022,
+        "sha256": "7e06cf08905b9dc16f8f203654621f141d7790ff76ac296b211d82be265e7d1a",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-ryan-windsor-portrait-7e06cf0890.webp",
+        "bytes": 40730,
+        "sha256": "b78ee81fa41cbfb18489216467e2de860f4ee5da669a20a884338eb0fb39d34f",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "con",
+      "candidateId": "con-gordon-zhang",
+      "sourcePage": "https://www.conservativebc.ca/our-team/",
+      "sourceUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/Gordon-Zhang-1024x1024.jpg",
+      "label": "Gordon Zhang",
+      "sourceType": "official-party-page",
+      "id": "con-gordon-zhang-portrait-38732f05a5",
+      "downloadedAt": "2026-09-28T04:42:00.110Z",
+      "original": {
+        "path": "assets/originals/conservative/con-gordon-zhang-portrait-38732f05a5.jpg",
+        "bytes": 87019,
+        "sha256": "38732f05a5f4dc243519f081a6c47bc4ac6279e93daae4587e21d093dc0aa1df",
+        "contentType": "image/jpeg",
+        "width": 1024,
+        "height": 1024
+      },
+      "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/con-gordon-zhang-portrait-38732f05a5.webp",
+        "bytes": 26862,
+        "sha256": "fee13e82f06b5a1148f21f59a8b2a82e01e49d0f7eecd8a6770b329af20f3c64",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "centre",
+      "candidateId": "centre-michael-davis",
+      "sourcePage": "https://www.centrebc.ca/candidates/michael-davis/",
+      "sourceUrl": "https://www.centrebc.ca/wp-content/uploads/2026/09/Michael-Davis-28-683x1024.jpg",
+      "label": "Michael Davis",
+      "sourceType": "official-party-page",
+      "id": "centre-michael-davis-portrait-31c6ffabc8",
+      "downloadedAt": "2026-09-28T04:42:00.296Z",
+      "original": {
+        "path": "assets/originals/centre/centre-michael-davis-portrait-31c6ffabc8.webp",
+        "bytes": 44034,
+        "sha256": "31c6ffabc8a2005d11eea26b75b0e62a469af3ab739f5a15a7a7b7c0be334f9d",
+        "contentType": "image/webp",
+        "width": 683,
+        "height": 1024
+      },
+      "credit": "Source: https://www.centrebc.ca/candidates/michael-davis/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/centre-michael-davis-portrait-31c6ffabc8.webp",
+        "bytes": 26368,
+        "sha256": "a9eab5ea0a2c7d2d9240684d2affcc3787f266a5a15ab5a9fde230ef83c5b471",
+        "width": 427,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "centre",
+      "candidateId": "centre-kim-lockhart",
+      "sourcePage": "https://www.centrebc.ca/candidates/kim-lockhart/",
+      "sourceUrl": "https://www.centrebc.ca/wp-content/uploads/2026/09/Kim-Lockhart-1024x683.jpg",
+      "label": "Kim Lockhart",
+      "sourceType": "official-party-page",
+      "id": "centre-kim-lockhart-portrait-11bb919ea3",
+      "downloadedAt": "2026-09-28T04:42:00.436Z",
+      "original": {
+        "path": "assets/originals/centre/centre-kim-lockhart-portrait-11bb919ea3.webp",
+        "bytes": 30646,
+        "sha256": "11bb919ea3a45227c62cc0f4aa59637e7a85213757a3695dbe92a7e0a10608a0",
+        "contentType": "image/webp",
+        "width": 1024,
+        "height": 683
+      },
+      "credit": "Source: https://www.centrebc.ca/candidates/kim-lockhart/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/centre-kim-lockhart-portrait-11bb919ea3.webp",
+        "bytes": 22040,
+        "sha256": "315b8459f977b7e50bd7d16fe72ad2db096665375e5f41f7bf3e5b17b458698b",
+        "width": 640,
+        "height": 427,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "centre",
+      "candidateId": "centre-raman-sharma",
+      "sourcePage": "https://www.centrebc.ca/candidates/raman-sharma/",
+      "sourceUrl": "https://www.centrebc.ca/wp-content/uploads/2026/09/Raman-Sharma-photo-819x1024.jpg",
+      "label": "Raman Sharma",
+      "sourceType": "official-party-page",
+      "id": "centre-raman-sharma-portrait-de3339e6fc",
+      "downloadedAt": "2026-09-28T04:42:00.581Z",
+      "original": {
+        "path": "assets/originals/centre/centre-raman-sharma-portrait-de3339e6fc.webp",
+        "bytes": 29144,
+        "sha256": "de3339e6fc42af39b07557995ff7f2195f70178858a6406af91a9b1c4bed71a5",
+        "contentType": "image/webp",
+        "width": 819,
+        "height": 1024
+      },
+      "credit": "Source: https://www.centrebc.ca/candidates/raman-sharma/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/centre-raman-sharma-portrait-de3339e6fc.webp",
+        "bytes": 17302,
+        "sha256": "db97bd2fc420addefda208a27aae09c42741a9ec06d48ccb82c151b946101205",
+        "width": 512,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "centre",
+      "candidateId": "centre-kuldeep-rangi",
+      "sourcePage": "https://www.centrebc.ca/candidates/kuldeep-rangi/",
+      "sourceUrl": "https://www.centrebc.ca/wp-content/uploads/2026/09/Kuldeep-Profile-pic-683x1024.jpg",
+      "label": "Kuldeep Rangi",
+      "sourceType": "official-party-page",
+      "id": "centre-kuldeep-rangi-portrait-464b911556",
+      "downloadedAt": "2026-09-28T04:42:00.699Z",
+      "original": {
+        "path": "assets/originals/centre/centre-kuldeep-rangi-portrait-464b911556.webp",
+        "bytes": 20368,
+        "sha256": "464b911556442aee1acf80c598b8fd7970957e8f368de2664993da5df2ee6129",
+        "contentType": "image/webp",
+        "width": 683,
+        "height": 1024
+      },
+      "credit": "Source: https://www.centrebc.ca/candidates/kuldeep-rangi/; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/centre-kuldeep-rangi-portrait-464b911556.webp",
+        "bytes": 14160,
+        "sha256": "1ef45de7fa1efe22021649f09d7b95d0e58af1a12c8545db9434d27efc2f4d82",
+        "width": 427,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "one",
+      "candidateId": "one-aj-wolfe",
+      "sourcePage": "https://1bc.ca/candidates",
+      "sourceUrl": "https://framerusercontent.com/images/xE9QE4twoGnn11t4FzgtPIcxdt0.jpeg?width=1080&height=1080",
+      "label": "AJ Wolfe",
+      "sourceType": "official-party-page",
+      "id": "one-aj-wolfe-portrait-3901b0c97d",
+      "downloadedAt": "2026-09-28T04:42:00.939Z",
+      "original": {
+        "path": "assets/originals/one/one-aj-wolfe-portrait-3901b0c97d.jpg",
+        "bytes": 189583,
+        "sha256": "3901b0c97d872c3dde173e5e6c9df36e44616322d98eb1639d5f388ef42cc375",
+        "contentType": "image/jpeg",
+        "width": 1080,
+        "height": 1080
+      },
+      "credit": "Source: https://1bc.ca/candidates; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/one-aj-wolfe-portrait-3901b0c97d.webp",
+        "bytes": 41916,
+        "sha256": "6fb23fbe186dc36445e8ad91647019d6b0bf52a7607c6b8ca41bf49eded974dc",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "one",
+      "candidateId": "one-hunter-corrigal",
+      "sourcePage": "https://1bc.ca/candidates",
+      "sourceUrl": "https://framerusercontent.com/images/KWFzefJfmElczCoqV30kC6NyIA.jpeg?width=1080&height=1080",
+      "label": "Hunter Corrigal",
+      "sourceType": "official-party-page",
+      "id": "one-hunter-corrigal-portrait-3e975bf3dc",
+      "downloadedAt": "2026-09-28T04:42:01.125Z",
+      "original": {
+        "path": "assets/originals/one/one-hunter-corrigal-portrait-3e975bf3dc.jpg",
+        "bytes": 153611,
+        "sha256": "3e975bf3dc7e0a9bb00d80e71d13b31a8597dc191becf42a6b06b963c7d9144f",
+        "contentType": "image/jpeg",
+        "width": 1080,
+        "height": 1080
+      },
+      "credit": "Source: https://1bc.ca/candidates; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/one-hunter-corrigal-portrait-3e975bf3dc.webp",
+        "bytes": 34578,
+        "sha256": "7bfc7ea2cd59cab759b6ddcb8b799132dadf5f10b9a45f847469162f08557866",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "one",
+      "candidateId": "one-robin-roy",
+      "sourcePage": "https://1bc.ca/candidates",
+      "sourceUrl": "https://framerusercontent.com/images/FoxwLps3hGwGxKXefKYGwMT52zM.jpeg?width=1080&height=1080",
+      "label": "Robin Roy",
+      "sourceType": "official-party-page",
+      "id": "one-robin-roy-portrait-e5852c8a04",
+      "downloadedAt": "2026-09-28T04:42:01.340Z",
+      "original": {
+        "path": "assets/originals/one/one-robin-roy-portrait-e5852c8a04.jpg",
+        "bytes": 199981,
+        "sha256": "e5852c8a046508782c85b65b930587a29c1232f142d4d184a6475ba127468540",
+        "contentType": "image/jpeg",
+        "width": 1080,
+        "height": 1080
+      },
+      "credit": "Source: https://1bc.ca/candidates; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/one-robin-roy-portrait-e5852c8a04.webp",
+        "bytes": 43966,
+        "sha256": "50bc112190527a2cb0c0f03e93d65715cc0c28fbf25597ef9357179a812293c7",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "ndp",
+      "candidateId": "ndp-will-cole-hamilton",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/willcolehamilton_website_images_headshot-1000x1000px.png",
+      "label": "Will Cole-Hamilton",
+      "sourceType": "official-party-page",
+      "id": "ndp-will-cole-hamilton-portrait-c042df6aa1",
+      "downloadedAt": "2026-09-28T04:42:02.741Z",
+      "original": {
+        "path": "assets/originals/ndp/ndp-will-cole-hamilton-portrait-c042df6aa1.png",
+        "bytes": 779840,
+        "sha256": "c042df6aa11576937e58d967bf9a969ed16ea2350d8a447aa305e7abcc7c4222",
+        "contentType": "image/png",
+        "width": 1000,
+        "height": 1000
+      },
+      "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/ndp-will-cole-hamilton-portrait-c042df6aa1.webp",
+        "bytes": 34992,
+        "sha256": "5dbde944857dbe93860d7a768311b99d4d1c9f12d941be96d122a7d0557e508e",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "ndp",
+      "candidateId": "ndp-andrea-dunlop",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/andreadunlop_clr_headshot-1000x1000px.jpg",
+      "label": "Andrea Dunlop",
+      "sourceType": "official-party-page",
+      "id": "ndp-andrea-dunlop-portrait-b2a1a69ae1",
+      "downloadedAt": "2026-09-28T04:42:02.950Z",
+      "original": {
+        "path": "assets/originals/ndp/ndp-andrea-dunlop-portrait-b2a1a69ae1.jpg",
+        "bytes": 329673,
+        "sha256": "b2a1a69ae1e1c6fd522da577ef28670ce1a6c507e0f573579999d58f5c1907e6",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/ndp-andrea-dunlop-portrait-b2a1a69ae1.webp",
+        "bytes": 58016,
+        "sha256": "0e4561b90000353bec6b78d85e0d06409af3cfc886c7d4ec94dd41fe20b26faa",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "ndp",
+      "candidateId": "ndp-jason-mccormick",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/jasonmccormick_dls_headshot-1000x1000px.jpg",
+      "label": "Jason McCormick",
+      "sourceType": "official-party-page",
+      "id": "ndp-jason-mccormick-portrait-645a026e17",
+      "downloadedAt": "2026-09-28T04:42:03.131Z",
+      "original": {
+        "path": "assets/originals/ndp/ndp-jason-mccormick-portrait-645a026e17.jpg",
+        "bytes": 286370,
+        "sha256": "645a026e17fd3b17095f30e47fcbefe26ee81313ff2f72ede8f67eb30049450e",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/ndp-jason-mccormick-portrait-645a026e17.webp",
+        "bytes": 46900,
+        "sha256": "5bac813cc3c943229bfb7fed1ad0c991906edf3e69958904e0c43d1a13682774",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "ndp",
+      "candidateId": "ndp-roly-russell",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/bds_rolyrussell_headshot_1000x1000_small.jpg",
+      "label": "Roly Russell",
+      "sourceType": "official-party-page",
+      "id": "ndp-roly-russell-portrait-a5fa825aa3",
+      "downloadedAt": "2026-09-28T04:42:03.300Z",
+      "original": {
+        "path": "assets/originals/ndp/ndp-roly-russell-portrait-a5fa825aa3.jpg",
+        "bytes": 109482,
+        "sha256": "a5fa825aa33181ba90d8a709bd07ed53e086e0c61c0deb34efb05b14ed8fe8c0",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/ndp-roly-russell-portrait-a5fa825aa3.webp",
+        "bytes": 33680,
+        "sha256": "a1b9ebd81a63bde3d65e77d42f96f1d43bb8a5e690d01d44e80fee9dcda32b86",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
+    },
+    {
+      "kind": "portrait",
+      "partyId": "ndp",
+      "candidateId": "ndp-debra-toporowski",
+      "sourcePage": "https://www.bcndp.ca/team",
+      "sourceUrl": "https://www.bcndp.ca/sites/default/files/headshots/debratoporowski_cwvheadshot-1000x1000px.jpg",
+      "label": "Debra Toporowski",
+      "sourceType": "official-party-page",
+      "id": "ndp-debra-toporowski-portrait-a8febd17a6",
+      "downloadedAt": "2026-09-28T04:42:03.472Z",
+      "original": {
+        "path": "assets/originals/ndp/ndp-debra-toporowski-portrait-a8febd17a6.jpg",
+        "bytes": 235622,
+        "sha256": "a8febd17a62914538013d9fc5f50a74ab1dc3e0479c2d6a0034e8e932b38bbbc",
+        "contentType": "image/jpeg",
+        "width": 1000,
+        "height": 1000
+      },
+      "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
+      "reuse": {
+        "status": "permission-review",
+        "publishApproved": false
+      },
+      "web": {
+        "path": "assets/web/ndp-debra-toporowski-portrait-a8febd17a6.webp",
+        "bytes": 33896,
+        "sha256": "daf5622ab8b66924aa34ea8a3d4dbe06c951365dbc42bdbc6a9fad7df847c10d",
+        "width": 640,
+        "height": 640,
+        "fit": "cover"
+      }
     }
   ],
   "pressKits": [
@@ -6186,7 +8203,7 @@
     },
     {
       "id": "mla-674",
-      "name": "\u00c1'a:l\u00edya Warbus",
+      "name": "Á'a:líya Warbus",
       "district": "Chilliwack-Cultus Lake",
       "districtSlug": "chilliwack-cultus-lake",
       "affiliation": "Independent",
@@ -6861,7 +8878,7 @@
     },
     {
       "id": "mla-726",
-      "name": "Claire Ratt\u00e9e",
+      "name": "Claire Rattée",
       "district": "Skeena",
       "districtSlug": "skeena",
       "affiliation": "Conservative Party of British Columbia",
@@ -7234,6 +9251,24 @@
     "notListedDistricts": [
       "Abbotsford-Mission",
       "Vancouver-Strathcona"
+    ]
+  },
+  "candidateSnapshot": {
+    "electionDate": "2026-10-24",
+    "nominationDeadline": "2026-10-03T13:00:00-07:00",
+    "officialSource": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF",
+    "officialSourceSha256": "4305ab94723d028315dc0e81175552149de6fb7b7c60668b53951369e6bdbf72",
+    "officialListCheckedAt": "2026-09-28T03:48:10.358Z",
+    "officialListFinal": false,
+    "officialCandidateIds": [
+      "ndp-janet-routledge",
+      "unaffiliated-monica-mohan",
+      "ndp-bowinn-ma",
+      "independent-jordan-kealy",
+      "con-claire-rattee",
+      "ndp-niki-sharma",
+      "ndp-adrian-dix",
+      "ndp-spencer-chandra-herbert"
     ]
   }
 }

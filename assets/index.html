@@ -4,22 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>Asset Review | BC Election Guide</title>
+  <title data-i18n="Asset Review | BC Election Guide">Asset Review | BC Election Guide</title>
   <link rel="icon" href="../favicon.svg">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="./gallery.css">
 </head>
 <body>
-  <header class="asset-header"><a href="../#ridings">BC Election Guide</a><span>Asset Review</span></header>
-  <main class="asset-main">
-    <div class="asset-title"><div><p class="eyebrow">Source inventory</p><h1>People &amp; Parties</h1></div><p id="inventoryStatus" role="status">Loading inventory...</p></div>
+  <a class="skip-link" href="#assetMain" data-i18n="Skip to content">Skip to content</a>
+  <header class="asset-header"><a href="../ridings/" id="assetHome">BC Election Guide</a><span data-i18n="Asset Review">Asset Review</span><fieldset class="language-control" id="siteLanguage"><legend class="sr-only" data-i18n="Website language">Website language</legend><label lang="en-CA" title="English"><input class="sr-only" type="radio" name="language" value="en" data-language checked><span class="language-option"><img src="./flags/gb.png" width="24" height="18" alt=""><span aria-hidden="true">EN</span><span class="sr-only">English</span></span></label><label lang="fr-CA" title="Français"><input class="sr-only" type="radio" name="language" value="fr" data-language><span class="language-option"><img src="./flags/fr.png" width="24" height="18" alt=""><span aria-hidden="true">FR</span><span class="sr-only">Français</span></span></label></fieldset></header>
+  <div id="languageStatus" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+  <main class="asset-main" id="assetMain" tabindex="-1">
+    <div class="asset-title"><div><p class="eyebrow" data-i18n="Source inventory">Source inventory</p><h1 data-i18n="People &amp; Parties">People &amp; Parties</h1></div><p id="inventoryStatus" role="status" data-i18n="Loading inventory...">Loading inventory...</p></div>
     <div class="asset-toolbar">
-      <label class="asset-search"><span>Search</span><input id="assetSearch" type="search" placeholder="Name or riding"></label>
-      <label><span>Party</span><select id="assetParty"><option value="all">All parties</option></select></label>
-      <label><span>Collection</span><select id="assetCollection"><option value="portraits">Candidate portraits</option><option value="members">MLA portraits</option><option value="branding">Logos &amp; campaign artwork</option><option value="press">Press photos &amp; kits</option><option value="gaps">Missing &amp; unavailable</option></select></label>
+      <label class="asset-search"><span data-i18n="Search">Search</span><input id="assetSearch" type="search" placeholder="Name or riding" data-i18n-placeholder="Name or riding"></label>
+      <label><span data-i18n="Party">Party</span><select id="assetParty"><option value="all" data-i18n="All parties">All parties</option></select></label>
+      <label><span data-i18n="Collection">Collection</span><select id="assetCollection"><option value="portraits" data-i18n="Candidate portraits">Candidate portraits</option><option value="members" data-i18n="MLA portraits">MLA portraits</option><option value="branding" data-i18n="Logos &amp; campaign artwork">Logos &amp; campaign artwork</option><option value="press" data-i18n="Press photos &amp; kits">Press photos &amp; kits</option><option value="gaps" data-i18n="Missing &amp; unavailable">Missing &amp; unavailable</option></select></label>
     </div>
-    <div class="asset-summary"><span id="assetCount" role="status"></span><span>Publication approval pending</span></div>
-    <section id="assetGrid" class="asset-grid" aria-label="Downloaded assets"></section>
+    <div class="asset-summary"><span id="assetCount" role="status"></span><span data-i18n="Publication approval pending">Publication approval pending</span></div>
+    <section id="assetGrid" class="asset-grid" aria-label="Downloaded assets" data-i18n-aria-label="Downloaded assets"></section>
   </main>
   <script type="module" src="./gallery.js"></script>
 </body>

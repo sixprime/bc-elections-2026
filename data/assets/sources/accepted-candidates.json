@@ -1,6 +1,20 @@
 {
-  "url": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.pdf",
-  "finalUrl": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.pdf",
-  "fetchedAt": "2026-09-25T21:49:00.732Z",
-  "sha256": "9dad4a7963bd8a8b05e6fa81e287469dac568db5fe91a626f43726216f10093d"
+  "schemaVersion": 1,
+  "electionDate": "2026-10-24",
+  "nominationDeadline": "2026-10-03T13:00:00-07:00",
+  "final": false,
+  "url": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF",
+  "finalUrl": "https://www.elections.bc.ca/docs/fin/GE-2026-10-24-Candidate-Website-Report.PDF",
+  "fetchedAt": "2026-09-28T03:48:10.358Z",
+  "sha256": "4305ab94723d028315dc0e81175552149de6fb7b7c60668b53951369e6bdbf72",
+  "candidates": [
+    { "name": "Janet Routledge", "district": "Burnaby North", "partyId": "ndp" },
+    { "name": "Monica Mohan", "district": "Delta North", "partyId": "unaffiliated" },
+    { "name": "Bowinn Ma", "district": "North Vancouver-Lonsdale", "partyId": "ndp" },
+    { "name": "Jordan Kealy", "district": "Peace River North", "partyId": "independent" },
+    { "name": "Claire Rattée", "district": "Skeena", "partyId": "con" },
+    { "name": "Niki Sharma", "district": "Vancouver-Hastings", "partyId": "ndp" },
+    { "name": "Adrian Dix", "district": "Vancouver-Renfrew", "partyId": "ndp" },
+    { "name": "Spencer Chandra Herbert", "district": "Vancouver-West End", "partyId": "ndp" }
+  ]
 }
