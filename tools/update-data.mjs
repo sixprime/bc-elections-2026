@@ -250,7 +250,8 @@ function validatePrograms(programs, election, evidence) {
   }
   const sources = new Map();
   for (const source of programs.sources) {
-    if (!fields(source, ['id', 'title', 'publisher', 'url', 'electionYear', 'publishedOn', 'sourceSha256', 'textSha256', 'allowInsecureHttp']) || !identifier(source.id) || sources.has(source.id) || !source.title || !source.publisher || !digest(source.sourceSha256) || !digest(source.textSha256)) throw new Error(`Invalid quotation source: ${source.id}`);
+    if (!fields(source, ['id', 'title', 'publisher', 'url', 'kind', 'electionYear', 'publishedOn', 'sourceSha256', 'textSha256', 'allowInsecureHttp']) || !identifier(source.id) || sources.has(source.id) || !source.title || !source.publisher || !digest(source.sourceSha256) || !digest(source.textSha256)) throw new Error(`Invalid quotation source: ${source.id}`);
+    if (source.kind !== undefined && !['platform', 'policy-declaration', 'policy-page', 'campaign-announcement', 'record-and-priorities', 'vision-statement', 'party-website', 'source-index', 'programme-update'].includes(source.kind)) throw new Error(`Invalid programme source kind: ${source.id}`);
     const url = new URL(source.url);
     if (url.username || url.password || (url.protocol !== 'https:' && !(url.protocol === 'http:' && source.allowInsecureHttp === true))) throw new Error(`Unsafe programme source URL: ${source.id}`);
     if (source.electionYear !== null && (!Number.isInteger(source.electionYear) || source.electionYear < 1900 || source.electionYear > 2100)) throw new Error(`Invalid programme year: ${source.id}`);

@@ -283,14 +283,29 @@ Party programmes use a separate reviewed dataset. The local Parties view opens
 with an issue-focused comparison that defaults to parties with a recorded
 programme quotation on the selected topic. This rule is stated above the party
 picker; it describes the reviewed excerpts, not the full scope of each platform.
-Clickable issue tags and comparison columns use alphabetical label order,
-including manual party selections.
+Issue tags are alphabetical. Comparison columns retain alphabetical order
+within the pinned and unpinned groups, including manual party selections.
 The picker supports any selection of the 14 registered parties, including all 14.
-Use topic defaults restores the automatic selection. Six columns fit at desktop
-widths of 1280 px and above; narrower screens and larger selections scroll
-horizontally without hiding selected parties. The table expands to its full
-height with the page, with no internal vertical scrollbar. When up to six columns
-fit on desktop, headings stay visible while the page scrolls.
+Use topic defaults restores the automatic selection. The programme page uses the
+same width cap as the other pages. Desktop columns retain a 200px minimum;
+the table uses every complete column that fits, without a four-column limit.
+Scroll mode provides a visible top scrollbar and previous/next group controls.
+Pages mode replaces the visible group without horizontal overflow. Either mode
+can pin any number of selected parties using checkboxes, Pin all or Unpin all.
+Pinned columns stay on the left while the other parties move. If the pins exceed
+the available width, separate pinned-group controls page through them without
+clearing any pins. At least one column remains for unpinned parties when any
+remain, without widening the page or shrinking the text.
+The controls show the current range and announce changes to screen readers.
+With the table focused, Left/Right move one column in Scroll mode or one group
+in Pages mode; Home/End move to the beginning/end. When all selected parties are
+pinned, these keys navigate the pinned group instead. Navigation does not wrap,
+and smooth scrolling respects reduced-motion preferences.
+Phones retain vertically stacked party sections. Desktop columns do not wrap
+into multiple rows. The table expands to its full height with the page, with
+no internal vertical scrollbar. The navigation stays available while scrolling
+down the table; at wide desktop widths, headings also stay visible when the
+table fits.
 Both views display only selected verbatim excerpts in visible quotation marks,
 with attribution, source dates and links to the original full text.
 There are no paraphrased policies, editorial assessments or inferred cost and
@@ -299,12 +314,26 @@ implementation rows.
 The separate Explore a party view has topic and text filters, a compact topic
 index and the same source-attributed quotations. Custom comparison selections
 are remembered separately for each topic and retained when switching views or
-resizing. Dates identify older sources without
+resizing. Presentation, pinned selections and navigation positions also survive
+view and language changes. Changing the topic resets the unpinned position;
+pins for parties no longer selected are removed.
+Dates identify older sources without
 rewriting their wording. No quotation is an inferred position or an endorsement.
 Full platforms are linked rather than republished. Programme edits must match
 the cached source evidence before being committed. An unchanged Git checkout
 can be validated without the source cache; `check --sources` explicitly repeats
 full source-text verification when that cache is available.
+
+The Full documents and source coverage panel lists all 14 parties, their original
+documents and the number of topics with recorded excerpts. Source kinds distinguish
+election platforms, policy declarations, policy pages, campaign announcements,
+record/priorities pages, vision statements and document indexes. Counts describe
+this guide, not whether a party has a policy. The current selection contains
+120 exact excerpts from 45 source records, not 14 complete reproduced programmes.
+The Green 2024 platform, CHP policy statement revised in 2023 and Libertarian
+2026 index linking earlier articles are explicitly dated. A current full NDP
+platform and programme documents for BC Party, BC United, B.C. Vision and Party
+of Citizens remain unverified in this guide.
 
 ```sh
 node tools/update-data.mjs fetch programs

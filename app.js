@@ -5,13 +5,15 @@ import { renderPollChart, pollSeries } from './poll-chart.js';
 import { translate, setLanguage, translateElements, syncLanguageControls, formatNumber, formatPercent, formatDate } from './i18n.js';
 import { currentRoute, routeHref, navigate, installRouter, refreshRouteLinks } from './routes.js';
 import { districtSlug, pageInfo, publishedSite, updatePageMetadata } from './page-info.js';
+import { mountComparison } from './comparison.js';
 
 const root = document.getElementById('main');
 const state = { election: null, polls: null, query: '', filter: 'all', partyFilter: 'all' };
 const candidateFilters = { query: '', partyId: 'all', riding: 'all' };
 const programFilters = { query: '', partyId: 'ndp', topic: 'all' };
-const programComparison = { topic: 'housing', partyIds: null };
+const programComparison = { topic: 'housing', partyIds: null, mode: 'scroll', pinnedIds: [], index: 0, pinnedIndex: 0 };
 const programComparisonSelections = new Map();
+let disposeComparison = () => {};
 let programView = 'compare';
 let partyPrograms;
 let programRequest;
@@ -155,16 +157,13 @@ async function loadPrograms() {
 function updatePartyResults(focusId = '') {
   const container = document.getElementById('partyResults');
   const pickerOpen = container.querySelector('.comparison-picker')?.open;
-  const previousTable = container.querySelector('.comparison-table-region');
-  const scrollLeft = previousTable?.scrollLeft || 0;
-  const scrollTop = previousTable?.scrollTop || 0;
+  disposeComparison();
   const results = programView === 'compare' ? partyComparison(state.election, candidateManifest, partyPrograms, programComparison) : partyResults(state.election, candidateManifest, partyPrograms, programFilters);
   container.innerHTML = results;
   const picker = container.querySelector('.comparison-picker');
   if (picker) picker.open = Boolean(pickerOpen);
-  const table = container.querySelector('.comparison-table-region');
-  if (table) { table.scrollLeft = scrollLeft; table.scrollTop = scrollTop; }
   refreshMapIcons();
+  disposeComparison = mountComparison(container, programComparison);
   if (focusId) (document.getElementById(focusId) || document.querySelector('[data-comparison-topic]:checked'))?.focus({ preventScroll: true });
 }
 
@@ -253,13 +252,17 @@ function route() {
 }
 function render(preserveMap = false) {
   if (!state.election || !state.polls) return;
+  disposeComparison();
   const view = route();
+  const sourceLibraryOpen = root.querySelector('.program-source-library')?.open;
   const retainedGeography = view.ridingSlug ? root.querySelector('.detail-geography') : null;
   const retainedMap = !retainedGeography && preserveMap ? root.querySelector('.map-section') : null;
   disposeMaps(retainedGeography || retainedMap);
   retainedGeography?.remove();
   retainedMap?.remove();
   root.innerHTML=view.html;
+  const sourceLibrary = root.querySelector('.program-source-library');
+  if (sourceLibrary && sourceLibraryOpen) sourceLibrary.open = true;
   if (retainedMap) root.querySelector('.map-section')?.replaceWith(retainedMap);
   if (view.ridingSlug) {
     const geography = retainedGeography || document.createElement('div');
@@ -275,6 +278,7 @@ function render(preserveMap = false) {
   refreshRouteLinks();
   updatePageMetadata(pageInfo(currentRoute(), state.election, document.querySelector('meta[name="site-url"]')?.content || publishedSite));
   mountMaps(state.election);
+  disposeComparison = mountComparison(root, programComparison);
   if (['candidates', 'parties'].includes(view.section) || view.ridingSlug) loadCandidates();
   if (view.section === 'parties') loadPrograms();
   return Boolean(retainedGeography);
@@ -303,7 +307,6 @@ document.addEventListener('keydown', event => {
 function updateLanguage() {
   const top = window.scrollY;
   const pickerOpen = root.querySelector('.comparison-picker')?.open;
-  const comparisonScroll = root.querySelector('.comparison-table-region')?.scrollLeft || 0;
   translateElements();
   refreshRouteLinks();
   syncLanguageControls();
@@ -313,8 +316,6 @@ function updateLanguage() {
     render(true);
     refreshMapLanguage();
     if (pickerOpen && root.querySelector('.comparison-picker')) root.querySelector('.comparison-picker').open = true;
-    const table = root.querySelector('.comparison-table-region');
-    if (table) table.scrollLeft = comparisonScroll;
     window.scrollTo({ top, behavior: 'instant' });
   }
   document.getElementById('languageStatus').textContent = translate('Interface language changed to English.');
@@ -334,8 +335,10 @@ document.addEventListener('click', e=>{
   if (comparisonAction) {
     if (comparisonAction.dataset.comparisonAction === 'defaults') programComparison.partyIds = null;
     else if (comparisonAction.dataset.comparisonAction === 'all') programComparison.partyIds = state.election.parties.map(party => party.id);
-    else if (comparisonAction.dataset.comparisonAction === 'clear') programComparison.partyIds = [];
+    else if (comparisonAction.dataset.comparisonAction === 'clear') { programComparison.partyIds = []; programComparison.pinnedIds = []; programComparison.pinnedIndex = 0; }
     else return;
+    disposeComparison();
+    programComparison.index = 0;
     updatePartyResults(comparisonAction.id);
     return;
   }
@@ -420,6 +423,8 @@ document.addEventListener('change', event => {
   if (event.target.matches('[data-comparison-topic]')) {
     if (!event.target.checked || !partyPrograms.topics.some(topic => topic.id === event.target.value)) return;
     programComparisonSelections.set(programComparison.topic, programComparison.partyIds);
+    disposeComparison();
+    programComparison.index = 0;
     programComparison.topic = event.target.value;
     programComparison.partyIds = programComparisonSelections.get(programComparison.topic) ?? null;
     updatePartyResults();
@@ -430,7 +435,7 @@ document.addEventListener('change', event => {
   if (event.target.matches('[data-comparison-party]')) {
     const selected = event.target.dataset.comparisonParty;
     if (!state.election.parties.some(party => party.id === selected)) return;
-    if (programComparison.partyIds === null) programComparison.partyIds = [...document.querySelectorAll('[data-compare-party]')].map(party => party.dataset.compareParty);
+    if (programComparison.partyIds === null) programComparison.partyIds = [...document.querySelectorAll('[data-comparison-party]:checked')].map(party => party.dataset.comparisonParty);
     if (event.target.checked && !programComparison.partyIds.includes(selected)) programComparison.partyIds.push(selected);
     else if (!event.target.checked) programComparison.partyIds = programComparison.partyIds.filter(id => id !== selected);
     updatePartyResults(event.target.id);

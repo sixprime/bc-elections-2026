@@ -749,155 +749,155 @@
     "program-ndp-priorities": {
       "url": "https://www.bcndp.ca/action-for-you",
       "finalUrl": "https://www.bcndp.ca/action-for-you",
-      "retrievedAt": "2026-09-27T06:51:12.541Z",
-      "sha256": "39c93310fe4eca393add4c7301f125d013e894ca176b0ad412d95292b219e862",
+      "retrievedAt": "2026-09-28T18:00:34.070Z",
+      "sha256": "1bc8746e23c173b7c1c14dd461031755db2a51c211cbc148af7cb4f9682b28b4",
       "contentType": "text/html; charset=utf-8"
     },
     "program-con-platform": {
       "url": "https://conservativebc.ca/our-platform/",
       "finalUrl": "https://conservativebc.ca/our-platform/",
-      "retrievedAt": "2026-09-27T06:51:12.649Z",
-      "sha256": "adc54218604be22a949015b9bb56daa23a9f77669146e7a3f3715dd1762e07e0",
+      "retrievedAt": "2026-09-28T18:00:34.128Z",
+      "sha256": "423a6814518c71c27301066b51651f529f45a138d731c8b9b684c06d0829dfa7",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-con-documents": {
       "url": "https://conservativebc.ca/official-documents/",
       "finalUrl": "https://conservativebc.ca/official-documents/",
-      "retrievedAt": "2026-09-27T06:51:12.684Z",
-      "sha256": "ef5bb96b33c20887a240a10f3adf593136dea0a4efabcf7e485bf088a15008bc",
+      "retrievedAt": "2026-09-28T18:00:34.830Z",
+      "sha256": "f608255e864c438e3d35b16e4d8f65895db7772bb13d6347f3acac7f1387d3db",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-2026": {
       "url": "https://bcgreens.ca/emily-lowan-announces-election-plans/",
       "finalUrl": "https://bcgreens.ca/emily-lowan-announces-election-plans/",
-      "retrievedAt": "2026-09-27T06:51:12.804Z",
-      "sha256": "d69e4f1c850806f1f665b7a5eba740acab2d543e7cb8b33824a3f5a5fcd8b840",
+      "retrievedAt": "2026-09-28T18:00:34.963Z",
+      "sha256": "542f1358f631c5388c7345252f07051b2c88ade2a2b28f570e22947300fd4a34",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-2024": {
       "url": "https://bcgreens.ca/2024-platform/",
       "finalUrl": "https://bcgreens.ca/2024-platform/",
-      "retrievedAt": "2026-09-27T06:51:12.864Z",
-      "sha256": "81d26268e829254c6fad6f25feaae3d667f77490d5f641ef12b06182ba49f6a3",
+      "retrievedAt": "2026-09-28T18:00:35.054Z",
+      "sha256": "644b8bf791259e4d2c401657787c19e41be11694370ddfd44cb5b7c5367ca42e",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-2024-pdf": {
       "url": "https://bcgreens.ca/wp-content/uploads/2024/09/BCGreens-Platform-2024.pdf",
       "finalUrl": "https://bcgreens.ca/wp-content/uploads/2024/09/BCGreens-Platform-2024.pdf",
-      "retrievedAt": "2026-09-27T06:51:12.958Z",
+      "retrievedAt": "2026-09-28T18:00:35.126Z",
       "sha256": "20e4acd1d64be44f0ad86330c4ad56e132dc7014e8671934de44f1dcef83ce65",
       "contentType": "application/pdf"
     },
     "program-one-priorities": {
       "url": "https://1bc.ca/priorities",
       "finalUrl": "https://1bc.ca/priorities",
-      "retrievedAt": "2026-09-27T06:51:13.081Z",
-      "sha256": "e490f06b8ec6429df0c9b47d022b87295c2bb56bdd1a6678f1f535c87e03c9b8",
+      "retrievedAt": "2026-09-28T18:00:35.224Z",
+      "sha256": "6fcb055f9948fa28fce811d7cd5e08c638a61192ca2174bc9fe7cc4e395d9ec0",
       "contentType": "text/html"
     },
     "program-centre-vision": {
       "url": "https://www.centrebc.ca/vision/",
       "finalUrl": "https://www.centrebc.ca/vision/",
-      "retrievedAt": "2026-09-27T06:51:13.476Z",
-      "sha256": "1e56f675f2e70b1964f2a9c106e7beb1c900bfebc033f179e8573c470c75ba77",
+      "retrievedAt": "2026-09-28T18:00:35.390Z",
+      "sha256": "b7ce3dd5cbd0722002c8bc0c9bce0fc0fc6d036e413bfd51fa51bad727035bd2",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-centre-policy": {
       "url": "https://www.centrebc.ca/our-policy/",
       "finalUrl": "https://www.centrebc.ca/our-policy/",
-      "retrievedAt": "2026-09-27T06:51:13.559Z",
-      "sha256": "82399cd59e82a27995ac7ef04a46e1ab705187e3498d56c14ecac9673ac13b1e",
+      "retrievedAt": "2026-09-28T18:00:35.482Z",
+      "sha256": "1dec4e804799b76fc7e82ab749030dbc74d2a978fe4f7109c38c5347b4764923",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-2024": {
       "url": "https://libertarian.bc.ca/category/platform/platform2024/",
       "finalUrl": "https://libertarian.bc.ca/category/platform/platform2024/",
-      "retrievedAt": "2026-09-27T06:51:13.948Z",
-      "sha256": "15e169cbbefcea4f8b545e2a757f692a9a7d3bd3cd3b23ef1f3033b394bf7ea7",
+      "retrievedAt": "2026-09-28T18:00:35.765Z",
+      "sha256": "6176adeb584599e43c298dff7b122f57bbeaef296c9f7f5f87cc666fde687e5f",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-2024-2": {
       "url": "https://libertarian.bc.ca/category/platform/platform2024/page/2/",
       "finalUrl": "https://libertarian.bc.ca/category/platform/platform2024/page/2/",
-      "retrievedAt": "2026-09-27T06:51:14.715Z",
-      "sha256": "f179d135a62b9431e62023915a05c531a95582f2ae4c5e508a3af213b20a020b",
+      "retrievedAt": "2026-09-28T18:00:36.513Z",
+      "sha256": "6c754055a50fe030e0d61556e3d1da10ef233c8b79357b7152be2eccc57e8e6a",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-2024-3": {
       "url": "https://libertarian.bc.ca/category/platform/platform2024/page/3/",
       "finalUrl": "https://libertarian.bc.ca/category/platform/platform2024/page/3/",
-      "retrievedAt": "2026-09-27T06:51:15.416Z",
-      "sha256": "2762ab632c459cdc192a6381bb269e9ea82f6ac9a1d9fde70fa719c797620dc8",
+      "retrievedAt": "2026-09-28T18:00:37.293Z",
+      "sha256": "bbd9bc4c5d7be7cd7c1f1772f138fe1d1ee90218bfa3a8c6b59df8c830344470",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-2024-4": {
       "url": "https://libertarian.bc.ca/category/platform/platform2024/page/4/",
       "finalUrl": "https://libertarian.bc.ca/category/platform/platform2024/page/4/",
-      "retrievedAt": "2026-09-27T06:51:16.125Z",
-      "sha256": "64ef48b0b4b663b065ee7ab54c020f162fa8cd66df794d01bce5f0a88feafec5",
+      "retrievedAt": "2026-09-28T18:00:37.986Z",
+      "sha256": "f0e45bdd9aaa4d86a417334b1f0446a63b11ab0ab37e83b8c245ca0002bb452d",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-heritage-platform": {
       "url": "https://www.chpbc.ca/",
       "finalUrl": "https://www.chpbc.ca/",
-      "retrievedAt": "2026-09-27T06:51:16.446Z",
-      "sha256": "e9c6e363be82d7398b586c5c20b9cb866a4ae378bd62597baae48ab612460c0b",
+      "retrievedAt": "2026-09-28T18:00:38.239Z",
+      "sha256": "6d963ac194fcd7760b9cc6e2eee9831a4cc1863abbc639515b2f435b32142746",
       "contentType": "text/html"
     },
     "program-communist-platform": {
       "url": "https://cpcbc.ca/our-platform/",
       "finalUrl": "https://cpcbc.ca/our-platform/",
-      "retrievedAt": "2026-09-27T06:51:17.416Z",
+      "retrievedAt": "2026-09-28T18:00:39.933Z",
       "sha256": "7c32beccd2b2985a79abd3b3d602a9a6caef1b001ae2fd4e7e4b53f3ccadb53f",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-freedom-platform": {
       "url": "https://freedompartybc.ca/",
       "finalUrl": "https://freedompartybc.ca/",
-      "retrievedAt": "2026-09-27T06:51:19.396Z",
-      "sha256": "5b7d2bb4958617318c43316eb9408c1e50a24b47b0bb018609242d387c42eaa3",
+      "retrievedAt": "2026-09-28T18:00:40.519Z",
+      "sha256": "afdf369436bacb81fb24875797dacb4e1eb6b8e3ebfae11613a8628fcdd857b4",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-canwest-platform": {
       "url": "http://canwestparty.ca/",
       "finalUrl": "http://canwestparty.ca/",
-      "retrievedAt": "2026-09-27T06:51:19.512Z",
+      "retrievedAt": "2026-09-28T18:00:40.547Z",
       "sha256": "58d05d2396193e7b19037e1778074b523d663368aff633db106b4c36723d8079",
       "contentType": "text/html"
     },
     "program-libertarian-housing": {
       "url": "https://libertarian.bc.ca/2024/08/17/affordable-housing-2/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/affordable-housing-2/",
-      "retrievedAt": "2026-09-27T07:56:49.026Z",
-      "sha256": "dead4a0c11d591e026c48181e2ffe70b24c808e31e5d09a80ef6d318c16bd074",
+      "retrievedAt": "2026-09-28T18:00:40.913Z",
+      "sha256": "ac2d74d915111df9fc9ec789204612fb6a2b1846ed0b8205adb20cc5362b0c41",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-health": {
       "url": "https://libertarian.bc.ca/2024/08/17/healthcare-focused-on-patients/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/healthcare-focused-on-patients/",
-      "retrievedAt": "2026-09-27T07:56:49.940Z",
-      "sha256": "398e82feb69fb1d534d8895d7db1cebdffdf36e7e07f4aa2fcab5b8cea7c0af3",
+      "retrievedAt": "2026-09-28T18:00:41.689Z",
+      "sha256": "911cb95ce6cb650cd08c91983a26f16049b0d638d94827f46e123e53345baac2",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-education": {
       "url": "https://libertarian.bc.ca/2024/08/17/education-2/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/education-2/",
-      "retrievedAt": "2026-09-27T07:56:50.814Z",
-      "sha256": "3a343f7e91d9e9c19f6456cbf8e6dd3c62a560394256cceb755d1cf7bcacc519",
+      "retrievedAt": "2026-09-28T18:00:42.465Z",
+      "sha256": "4e42dc1c05f22e79ef6b38369f1967b26ba4c3032f56135430f5fff66050e190",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-transport": {
       "url": "https://libertarian.bc.ca/2024/08/17/transit-and-transportation/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/transit-and-transportation/",
-      "retrievedAt": "2026-09-27T07:56:51.747Z",
-      "sha256": "e8fa8182c0cdc366ce0dcf2a4b8ec34b81a202c3300c382fc3b24f7b47464f24",
+      "retrievedAt": "2026-09-28T18:00:43.234Z",
+      "sha256": "479ffe07fdeaa0d705508dc7770c676fe8e7d8b91f28b2bcb2e05733ffb7172f",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-tax": {
       "url": "https://libertarian.bc.ca/2024/09/16/pst-lets-convert-it-to-a-value-added-tax-vat/",
       "finalUrl": "https://libertarian.bc.ca/2024/09/16/pst-lets-convert-it-to-a-value-added-tax-vat/",
-      "retrievedAt": "2026-09-27T07:56:52.611Z",
-      "sha256": "5b5b81acf5cd27d51dca075eb9ef05f36b9752a0a2db401ae316a2337f8bab93",
+      "retrievedAt": "2026-09-28T18:00:43.383Z",
+      "sha256": "386f5229f34d1d36cf434165e2c4a4371283cdf500f7b0b62dc3aa70e3ab3b0f",
       "contentType": "text/html; charset=UTF-8"
     },
     "ndp-candidate-releases": {
@@ -1120,8 +1120,169 @@
     "program-con-policy-2025": {
       "url": "https://conservativebc.ca/wp-content/uploads/2025/07/CPBC_March_2025_Policy_Declaration.pdf",
       "finalUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/CPBC_March_2025_Policy_Declaration.pdf",
-      "retrievedAt": "2026-09-28T09:53:35.781Z",
+      "retrievedAt": "2026-09-28T18:00:40.764Z",
       "sha256": "56845d3a503f9f6109135e04e65db41a95920eb0b5b9b20026876ab38e2cbadb",
+      "contentType": "application/pdf"
+    },
+    "program-heritage-policies": {
+      "url": "https://www.chpbc.ca/policies/",
+      "finalUrl": "https://www.chpbc.ca/policies/",
+      "retrievedAt": "2026-09-28T18:07:41.685Z",
+      "sha256": "3b3b16cbf591d683d705594084988518b5d69bc486f094d2573d263082fadfd4",
+      "contentType": "text/html"
+    },
+    "program-heritage-policy-pdf": {
+      "url": "https://www.chpbc.ca/wp-content/uploads/2024/01/REVISE-Policies_CHP-BC_2023-10-21.pdf",
+      "finalUrl": "https://www.chpbc.ca/wp-content/uploads/2024/01/REVISE-Policies_CHP-BC_2023-10-21.pdf",
+      "retrievedAt": "2026-09-28T18:07:42.274Z",
+      "sha256": "7cffc96114409220bc6fe939460b79c1df93ed692c784a7098674ba030a08147",
+      "contentType": "application/pdf"
+    },
+    "program-libertarian-2026": {
+      "url": "https://libertarian.bc.ca/2026-platform/",
+      "finalUrl": "https://libertarian.bc.ca/2026-platform/",
+      "retrievedAt": "2026-09-28T18:07:42.760Z",
+      "sha256": "fd8eb2bb74ebf01d53c545dc9003125c658bd206c92556f35d55ea08df8cefac",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-green-communities": {
+      "url": "https://bcgreens.ca/2024-platform/resilient-communities/",
+      "finalUrl": "https://bcgreens.ca/2024-platform/resilient-communities/",
+      "retrievedAt": "2026-09-28T18:07:43.027Z",
+      "sha256": "e20c20dc7296291f99d326b030f4a535774c1f1e3e66eb25f7828194482329fb",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-green-people": {
+      "url": "https://bcgreens.ca/2024-platform/thriving-people/",
+      "finalUrl": "https://bcgreens.ca/2024-platform/thriving-people/",
+      "retrievedAt": "2026-09-28T18:07:43.312Z",
+      "sha256": "d9ddc92eb6ea28b84d4c4fc39afe0fec7418a61ab6b44558a867d96880fe264d",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-green-nature": {
+      "url": "https://bcgreens.ca/2024-platform/flourishing-natural-world/",
+      "finalUrl": "https://bcgreens.ca/2024-platform/flourishing-natural-world/",
+      "retrievedAt": "2026-09-28T18:07:43.618Z",
+      "sha256": "7a7bfff285d86193fb1ba0067e03d0c9b308b65ff48fcdd0d34c93df98f9a368",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-green-governance": {
+      "url": "https://bcgreens.ca/2024-platform/society-governance/",
+      "finalUrl": "https://bcgreens.ca/2024-platform/society-governance/",
+      "retrievedAt": "2026-09-28T18:07:43.916Z",
+      "sha256": "401b7a02b1a550f260438b2ecf2c4d6f752a71e809d19203310338ada0c7f17d",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-libertarian-wildfire": {
+      "url": "https://libertarian.bc.ca/2024/09/04/end-the-wildfire-crisis-and-fix-forestry-management/",
+      "finalUrl": "https://libertarian.bc.ca/2024/09/04/end-the-wildfire-crisis-and-fix-forestry-management/",
+      "retrievedAt": "2026-09-28T18:07:44.431Z",
+      "sha256": "1e03553833b9b13b99ac00d1309132062891506cb2dd26890fb1c5e921b346c7",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-libertarian-forfeiture": {
+      "url": "https://libertarian.bc.ca/2024/09/03/stop-abuse-of-civil-asset-forfeiture/",
+      "finalUrl": "https://libertarian.bc.ca/2024/09/03/stop-abuse-of-civil-asset-forfeiture/",
+      "retrievedAt": "2026-09-28T18:07:45.396Z",
+      "sha256": "fc6938c8c401ff19c34c628020719747c3a8bf92219c0cc6c58e81c7558c9f11",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-libertarian-land": {
+      "url": "https://libertarian.bc.ca/2024/08/17/crown-land-action-is-needed/",
+      "finalUrl": "https://libertarian.bc.ca/2024/08/17/crown-land-action-is-needed/",
+      "retrievedAt": "2026-09-28T18:07:45.738Z",
+      "sha256": "9d98d93b8d7db9645bc66638b1fa581a6eb3317634a1213064b319240e7b55d9",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-libertarian-vehicle-tax": {
+      "url": "https://libertarian.bc.ca/2024/08/17/pst-on-private-vehicle-sales-2/",
+      "finalUrl": "https://libertarian.bc.ca/2024/08/17/pst-on-private-vehicle-sales-2/",
+      "retrievedAt": "2026-09-28T18:07:46.069Z",
+      "sha256": "aeed8ed5ad1a39e52406c1f2566b1459a29e836fe74ad13b54792e199a9f574d",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-libertarian-drugs": {
+      "url": "https://libertarian.bc.ca/2024/08/17/addressing-the-illicit-drug-overdose-crisis/",
+      "finalUrl": "https://libertarian.bc.ca/2024/08/17/addressing-the-illicit-drug-overdose-crisis/",
+      "retrievedAt": "2026-09-28T18:07:46.400Z",
+      "sha256": "6e632be7518600968405fec35b6295203fcd2ab8027f49c92afbf40f1575063f",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-libertarian-employer-tax": {
+      "url": "https://libertarian.bc.ca/2024/08/17/employer-health-tax-eht-elimination-2/",
+      "finalUrl": "https://libertarian.bc.ca/2024/08/17/employer-health-tax-eht-elimination-2/",
+      "retrievedAt": "2026-09-28T18:07:47.417Z",
+      "sha256": "87234109f0bfc77741a187f35842f88d7dcbdd0c604b907dd9b34083d5fd7158",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-libertarian-milk": {
+      "url": "https://libertarian.bc.ca/2024/08/17/legalize-unpasteurized-milk-2/",
+      "finalUrl": "https://libertarian.bc.ca/2024/08/17/legalize-unpasteurized-milk-2/",
+      "retrievedAt": "2026-09-28T18:07:47.752Z",
+      "sha256": "99162facb69bd9732306d06eac98f07ada07852ccbd2ae8f131e7d4557323a61",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-libertarian-assistance": {
+      "url": "https://libertarian.bc.ca/2024/08/17/reforming-social-assistance-2/",
+      "finalUrl": "https://libertarian.bc.ca/2024/08/17/reforming-social-assistance-2/",
+      "retrievedAt": "2026-09-28T18:07:48.680Z",
+      "sha256": "3b3745c1d8253ebe2a52805f92b03988dcb5d19134c2f00aadb1ba8d3bbf1f77",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-libertarian-energy": {
+      "url": "https://libertarian.bc.ca/2024/08/17/liberate-energy-2/",
+      "finalUrl": "https://libertarian.bc.ca/2024/08/17/liberate-energy-2/",
+      "retrievedAt": "2026-09-28T18:07:49.899Z",
+      "sha256": "855453b5cc3f1d00c6edc842ecfef5751c5787daf0cf8fa3216597e81bcebd8b",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-libertarian-accountability": {
+      "url": "https://libertarian.bc.ca/2024/08/17/government-accountability-2/",
+      "finalUrl": "https://libertarian.bc.ca/2024/08/17/government-accountability-2/",
+      "retrievedAt": "2026-09-28T18:07:50.787Z",
+      "sha256": "2d2f67239b8e0a3b032aa7cdca51d0d88d883b3834a163f4a54894760d6c374b",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-libertarian-income-tax": {
+      "url": "https://libertarian.bc.ca/2024/08/17/tax-policy-2/",
+      "finalUrl": "https://libertarian.bc.ca/2024/08/17/tax-policy-2/",
+      "retrievedAt": "2026-09-28T18:07:51.132Z",
+      "sha256": "fc46ca5c71ce519a6229136fa6ee4e16b4e13e6e7f16ac3fec8c4a77ed83e9bd",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-libertarian-liquor": {
+      "url": "https://libertarian.bc.ca/2024/08/17/liberate-liquor-2/",
+      "finalUrl": "https://libertarian.bc.ca/2024/08/17/liberate-liquor-2/",
+      "retrievedAt": "2026-09-28T18:07:51.612Z",
+      "sha256": "83ca29824a419658e7097dd5e78ba5323770ab4f3b5f3a9e962d67adf10132c2",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-libertarian-icbc": {
+      "url": "https://libertarian.bc.ca/2024/08/17/ending-icbc/",
+      "finalUrl": "https://libertarian.bc.ca/2024/08/17/ending-icbc/",
+      "retrievedAt": "2026-09-28T18:07:51.950Z",
+      "sha256": "341c5955bd0822529c9b845c4e522fbc19d306b66a1393ae3c30e10bb5116709",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-libertarian-speech": {
+      "url": "https://libertarian.bc.ca/2024/08/17/free-speech-in-the-age-of-cancel-culture/",
+      "finalUrl": "https://libertarian.bc.ca/2024/08/17/free-speech-in-the-age-of-cancel-culture/",
+      "retrievedAt": "2026-09-28T18:07:52.278Z",
+      "sha256": "2dee2144e22e3285e6d15e2a4e2723cf23d65080ecf63850b6f39fcdc274652f",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-libertarian-pandemic": {
+      "url": "https://libertarian.bc.ca/2024/08/17/covid-19-a-return-to-normal-2/",
+      "finalUrl": "https://libertarian.bc.ca/2024/08/17/covid-19-a-return-to-normal-2/",
+      "retrievedAt": "2026-09-28T18:07:52.609Z",
+      "sha256": "0d6b3204cd44a3877bcd60818f1be5004de27349a9443f3bee128e6ebe6832bd",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "programme-party-register-audit": {
+      "url": "https://elections.bc.ca/docs/fin/Registered-Political-Parties-Information.pdf",
+      "finalUrl": "https://elections.bc.ca/docs/fin/Registered-Political-Parties-Information.pdf",
+      "retrievedAt": "2026-09-28T18:09:28.512Z",
+      "sha256": "fb2aa7923a32907c23e573b7f25e229b28ace09b785891d92d08a4c4ee4a0a5b",
       "contentType": "application/pdf"
     }
   },

@@ -141,21 +141,37 @@ interpret, assess, judge or comment on a party's programme. Do not turn missing
 review data into claims about what a party has or has not proposed. Readers must
 be able to distinguish the original words from navigation and source metadata.
 
-The schema-v2 dataset has 14 party records, 78 selected excerpts and
-23 source records. It contains no policy summaries, assessments or commentary.
+The schema-v2 dataset has 14 party records, 120 selected excerpts and
+45 source records. It contains no policy summaries, assessments or commentary.
 Each excerpt appears inside visible quotation marks, labelled as a verbatim
 excerpt, with its speaker or publishing party, source title, publication date
 or year when recorded, and a link to the full original. The excerpts are not
 presented as complete platforms. Entire copyrighted documents are linked, not
 republished.
 
-The Conservative record includes 12 exact excerpts (162 words combined) from its
-official Policy Declaration, adopted March 1, 2025, alongside the existing
-platform-page quotation. Coverage now spans 12 topics; no excerpt is assigned to
-Other topics merely to fill a gap. The 2025 document is not labelled as a newly
+The Conservative record includes 12 exact excerpts (184 words combined) from its
+official Policy Declaration, adopted March 1, 2025. The platform-page placeholder
+is retained as a source link but is not counted as policy. Coverage spans 12 topics.
+The former Other topics category is removed; its sole CanWest statement belongs
+to Economy & resources, with its wording and source unchanged.
+The 2025 document is not labelled as a newly
 released 2026 platform. Its adoption date is in the source title; the unknown
 publication date remains unset. The full PDF and parsed evidence stay in the
 external cache, with page/section locators and hashes attached to the excerpts.
+
+The September 28 source audit added the full CHP policy statement, Green platform
+chapters, the Libertarian 2026 platform index and its detailed article set.
+Weak slogans and placeholders were removed or replaced with exact substantive
+passages. All 45 source records have refreshed raw/text fingerprints and a
+validated `kind`: platform, policy-declaration, policy-page, campaign-announcement,
+record-and-priorities, vision-statement, party-website, source-index or
+programme-update. Original dates stay attached to older documents; a link from
+a 2026 index does not change an article's original publication date.
+
+Four party records still have no verified programme document: BC Party, BC United,
+B.C. Vision and Party of Citizens. NDP coverage currently comes from its official
+record/priorities page, not a verified complete current platform. These are gaps in
+this guide's evidence, not claims about what the parties have or have not proposed.
 
 ### Source Verification
 
@@ -187,7 +203,8 @@ The previous paraphrased schema is rejected by the application and updater.
 ### Programme View
 
 Clickable issue tags select one topic at a time and wrap on smaller screens.
-Issue tags and party columns use alphabetical label order, including custom selections.
+Issue tags are alphabetical. Party columns retain alphabetical label order
+within the pinned and unpinned groups, including custom selections.
 
 Each topic defaults to parties with at least one recorded programme quotation
 on that topic. A visible note explains the default and that any party may be
@@ -198,18 +215,38 @@ The checkbox picker supports all 14 registered parties, with Use topic defaults,
 Select all and Clear selection. Custom choices, including an empty selection,
 are remembered separately for each topic. Use topic defaults restores automatic
 selection for the current topic without changing choices for other topics.
-Six columns fit at desktop widths of 1280 px and above. At phone widths up to
-720 px, each selected party has a vertical section with the same quotations and
-collapsible source links, without sideways scrolling. Intermediate widths and
-larger desktop selections retain horizontal scrolling with readable columns.
+The programme view uses the same page-width cap as other views, with a 200px
+minimum for desktop columns and no four-column limit. Scroll mode keeps native
+horizontal scrolling, adds a visible top scrollbar and moves between groups with
+previous/next controls. Pages mode renders only the current group of complete
+columns. Either mode can pin any number of selected parties on the left using
+checkboxes, Pin all or Unpin all. When more pins are selected than fit, separate
+pinned-group controls make every pin reachable while reserving at least one
+column for any unpinned parties. No pins are silently dropped on resize and
+the page does not widen or shrink its text to fit them.
+The current range is visible and announced to screen readers. A focused table
+accepts Left/Right for columns (Scroll) or groups (Pages), and Home/End for the
+beginning/end. When all selected parties are pinned, these keys navigate the
+pinned group instead. Movement never wraps and respects reduced-motion preferences.
+At phone widths up to 720 px, each selected party has a vertical section with
+the same quotations and collapsible source links, without sideways scrolling.
+Desktop columns never wrap into multiple rows.
 The table expands to its full height with the page, with no internal vertical
-scrollbar. When up to six columns fit on desktop, headings stay visible while
-the page scrolls. Choices persist when resizing and switching views.
+scrollbar. Navigation stays available while the page scrolls; at wide desktop
+widths, headings also stay visible when the table fits. Selections, presentation,
+pinning and both navigation positions persist across resizing, view and language
+changes. Changing the topic resets the unpinned position while restoring that
+topic's selection. A pin is removed when its party leaves the comparison.
 
 The rows contain quotations and original sources only. Explore a party offers
 the same excerpts with search and a topic index. Empty states say that no
 quotation is recorded for that selection; they do not infer a position. No
 separate cost, implementation or timetable assessment is generated.
+
+The source-coverage panel lists every registered party, full-document links,
+source kinds, dates and recorded topic counts. It is also present in the static
+HTML and stays open across language/view changes. Quotation/source counts must
+never be described as proof that a complete platform has been imported.
 
 The local programme view is `http://127.0.0.1:4173/parties/`. It requires no
 preview parameter. Publication still requires an approved commit and push.

@@ -176,6 +176,17 @@
 .program-sources li>p,.program-empty{font-size:var(--font-label);line-height:1.6;color:var(--text-muted);margin:5px 0 0;max-width:90ch}
 .program-controls :focus-visible,.party-program-details>summary:focus-visible{outline:2px solid #176ba6;outline-offset:3px}
 .program-view-tabs{display:flex;gap:24px;border-bottom:1px solid #bccdd8;margin-bottom:22px}
+.program-source-library{margin:0 0 24px;border-block:1px solid var(--line);font-size:14px;line-height:1.6}
+.program-source-library>summary{min-height:44px;padding:10px 0;cursor:pointer;color:var(--ink);font-weight:700}
+.program-source-library>p{margin:0 0 16px;color:var(--text-muted)}
+.program-source-party{display:grid;grid-template-columns:minmax(180px,1fr) minmax(0,4fr);gap:24px;padding:16px 0;border-top:1px solid var(--line);min-width:0}
+.program-source-party h3{font-size:15px;line-height:1.4;letter-spacing:0;margin:0 0 6px;overflow-wrap:anywhere}
+.program-source-party p{margin:0;color:var(--text-muted);font-size:var(--font-label)}
+.program-source-party ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.program-source-party .program-citation{align-items:baseline;overflow-wrap:anywhere}
+.program-source-party .program-citation a{min-height:24px}
+.program-source-kind{color:var(--ink);font-weight:650}
+@media(max-width:720px){.program-source-party{grid-template-columns:minmax(0,1fr);gap:8px}}
 .program-view-tabs button{border:0;border-bottom:3px solid transparent;background:none;padding:12px 2px;font-size:14px;font-weight:700;line-height:1.4;color:var(--text-muted);letter-spacing:0}
 .program-view-tabs button[aria-selected=true]{color:#174e74;border-bottom-color:#176ba6}
 .comparison-issues{border:0;padding:0;margin:0 0 20px;min-width:0}
@@ -201,7 +212,47 @@
 .comparison-picker-actions button{border:0;background:none;padding:6px 0;color:#176ba6;font-size:var(--font-label);font-weight:650;text-decoration:underline;text-underline-offset:3px}
 .comparison-heading h2{font-size:21px;font-weight:700;line-height:1.4;color:#193b53;margin:0;letter-spacing:0}
 .comparison-heading p{margin:3px 0 16px;font-size:var(--font-label);color:var(--text-muted)}
-.comparison-table-region{--comparison-column-width:200px;min-width:0;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-color:#8ca5b6 #edf3f6}
+.comparison-desktop{--comparison-column-width:200px;--comparison-pinned-width:0px;min-width:0}
+.comparison-navigation{position:sticky;top:0;z-index:5;background:var(--bg);border-block:1px solid #b7cbd7;padding:8px 0}
+.comparison-navigation-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.comparison-mode{display:inline-flex;align-items:center;gap:2px;min-width:0;padding:3px;margin:0;border:1px solid #b7cbd7;border-radius:5px;background:#eaf0f5}
+.comparison-mode label{position:relative;cursor:pointer}
+.comparison-mode label>span{display:flex;align-items:center;justify-content:center;min-width:68px;min-height:44px;padding:8px 12px;border:1px solid transparent;border-radius:3px;color:var(--ink);font-size:14px;font-weight:650}
+.comparison-mode input:checked+span{background:#fff;border-color:#176ba6}
+.comparison-mode input:focus-visible+span{outline:3px solid #176ba6;outline-offset:2px}
+.comparison-pin-choice{position:relative;width:230px;max-width:100%;color:var(--ink);font-size:13px}
+.comparison-pin-choice>summary{min-height:44px;padding:12px;border:1px solid #9bb4c8;border-radius:4px;background:#fff;cursor:pointer;font-weight:650}
+.comparison-pin-panel{position:absolute;top:calc(100% + 6px);left:0;width:300px;max-width:calc(100vw - 60px);max-height:min(440px,60vh);overflow:auto;z-index:6;border:1px solid #9bb4c8;border-radius:4px;background:#fff;box-shadow:0 5px 14px #173d5726}
+.comparison-pin-options{border:0;padding:8px 12px;margin:0;min-width:0}
+.comparison-pin-options label{display:flex;align-items:center;gap:10px;min-height:44px;line-height:1.5;cursor:pointer}
+.comparison-pin-options input{flex:none;width:16px;height:16px;margin:0;accent-color:#176ba6}
+.comparison-pin-options span{min-width:0;overflow-wrap:anywhere}
+.comparison-pin-actions{display:flex;flex-wrap:wrap;gap:8px 20px;padding:4px 12px;border-top:1px solid var(--line)}
+.comparison-pin-actions button{min-height:44px;padding:6px 0;border:0;background:none;color:#176ba6;font-size:13px;font-weight:650;text-decoration:underline;text-underline-offset:3px}
+.comparison-pin-navigation{display:flex;align-items:center;gap:10px;margin-top:8px;min-width:0}
+.comparison-navigation [hidden]{display:none}
+.comparison-range-controls{display:flex;align-items:center;gap:10px;flex:1 1 320px;justify-content:flex-end;min-width:0}
+.comparison-range{font-size:13px;line-height:1.5;text-align:center;overflow-wrap:anywhere;min-width:0;flex:1}
+.comparison-nav-button{display:grid;place-items:center;flex:none;width:44px;height:44px;border:1px solid #8daabd;border-radius:4px;background:#fff;color:#174e74}
+.comparison-nav-button svg{width:22px;height:22px}
+.comparison-previous svg{transform:rotate(225deg)}
+.comparison-next svg{transform:rotate(45deg)}
+.comparison-nav-button[aria-disabled=true]{opacity:.45;cursor:default}
+.comparison-nav-button:not([aria-disabled=true]):hover{background:#e5f0f7;border-color:#176ba6}
+.comparison-scrollbar{overflow-x:scroll;overflow-y:hidden;height:20px;max-width:100%;margin-top:6px;scrollbar-color:#627f93 #e4ecf2}
+.comparison-scrollbar[hidden]{display:none}
+.comparison-scrollbar>div{height:1px}
+.comparison-table-region{min-width:0;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-color:#627f93 #edf3f6;scroll-snap-type:x proximity;scroll-padding-inline-start:var(--comparison-pinned-width)}
+.comparison-table,.comparison-table-region{transition-property:none}
+.comparison-desktop[data-presentation=pages] .comparison-table-region{scroll-snap-type:none}
+.comparison-table thead th{scroll-snap-align:start}
+.comparison-table th.comparison-pinned,.comparison-table td.comparison-pinned{position:sticky;left:var(--comparison-pin-offset,0px);z-index:3;background:#edf5fa;border-right:2px solid #668ba4;box-shadow:4px 0 7px #173d5714}
+.comparison-table thead th.comparison-pinned{z-index:4}
+.comparison-pin-marker{display:block;color:#174e74;font-size:13px;font-weight:650;margin-bottom:5px}
+.comparison-pin-marker[hidden]{display:none}
+.comparison-table [hidden]{display:none}
+.comparison-desktop[data-more-after=true] .comparison-next{border-color:#176ba6}
+.comparison-desktop[data-more-before=true] .comparison-previous{border-color:#176ba6}
 .comparison-mobile{display:none}
 .comparison-mobile-party{min-width:0;padding:20px 0;border-top:1px solid var(--line)}
 .comparison-mobile-party>header{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
@@ -213,10 +264,10 @@
 .comparison-mobile-sources{font-size:14px;line-height:1.5}
 .comparison-mobile-sources>summary{cursor:pointer;padding:10px 0;min-height:44px;color:var(--ink);font-weight:650}
 .comparison-mobile-sources .comparison-sources{padding:8px 0 16px;overflow-wrap:anywhere}
-@media(max-width:720px){.comparison-table-region{display:none}.comparison-mobile{display:block}}
+@media(max-width:720px){.comparison-desktop{display:none}.comparison-table-region{display:none}.comparison-mobile{display:block}}
 .comparison-table{width:100%;min-width:calc(var(--comparison-columns)*var(--comparison-column-width));table-layout:fixed;border-collapse:separate;border-spacing:0;text-align:left;color:#29485e}
 .comparison-table thead th{position:sticky;top:0;z-index:2;background:#f4f8fa;border-top:2px solid #9eb9ca;border-bottom:1px solid #b7cbd7;padding:16px 12px;text-align:left;vertical-align:top}
-@media(min-width:1280px){.comparison-table-region-fit{overflow:visible}}
+@media(min-width:1280px){.comparison-table-region-fit{overflow:visible}.comparison-table-region-fit .comparison-table thead th{top:var(--comparison-toolbar-height,0px)}}
 .comparison-table th+th,.comparison-table td+td{border-left:1px solid #d5e1e9}
 .comparison-table thead .candidate-party-logo{width:126px;min-width:0;max-width:100%;height:48px;justify-content:flex-start;padding:3px;margin:0 0 10px;background:transparent}
 .comparison-table thead .candidate-party-logo.on-dark{background:#203b4a}
