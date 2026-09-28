@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "checkedAt": "2026-09-27T07:59:53.559635Z",
+  "checkedAt": "2026-09-28T09:53:35.781Z",
   "topics": [
     {
       "id": "affordability",
@@ -56,6 +56,16 @@
     }
   ],
   "sources": [
+    {
+      "id": "program-con-policy-2025",
+      "title": "Policy Declaration (adopted March 1, 2025)",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/wp-content/uploads/2025/07/CPBC_March_2025_Policy_Declaration.pdf",
+      "electionYear": null,
+      "publishedOn": null,
+      "sourceSha256": "56845d3a503f9f6109135e04e65db41a95920eb0b5b9b20026876ab38e2cbadb",
+      "textSha256": "795be93576a93b92287e136c2cc1ed42da45e71139a68f4320d7d15f064161b8"
+    },
     {
       "id": "program-ndp-priorities",
       "title": "Fighting for You and Your Family \u2013 it\u2019s making a difference",
@@ -347,7 +357,8 @@
       "id": "con",
       "sourceIds": [
         "program-con-platform",
-        "program-con-documents"
+        "program-con-documents",
+        "program-con-policy-2025"
       ],
       "quotes": [
         {
@@ -358,6 +369,114 @@
           "locator": "Our Platform",
           "speaker": "Conservative Party of British Columbia",
           "textSha256": "62bfdf0b726cbcc51d7ad57cfd2f03c007306a8a74d477500f92863236d79c13"
+        },
+        {
+          "id": "policy-2025-affordability",
+          "topic": "affordability",
+          "text": "Scrap the Carbon Tax.",
+          "sourceId": "program-con-policy-2025",
+          "locator": "PDF p. 5, section 4.06(a)",
+          "speaker": "Conservative Party of British Columbia",
+          "textSha256": "7b42397653df01dac5a2d489ee3d1d2f82619d6e3276e927ee5bac338c29c795"
+        },
+        {
+          "id": "policy-2025-housing",
+          "topic": "housing",
+          "text": "Rezoning and development permits will be approved within 6 months, and building permits within 3 months.",
+          "sourceId": "program-con-policy-2025",
+          "locator": "PDF p. 21, section 19.02",
+          "speaker": "Conservative Party of British Columbia",
+          "textSha256": "3a01f5919344bdfdb122369dab73ab123bf0d37b1814890a70881000f0a82d7c"
+        },
+        {
+          "id": "policy-2025-health",
+          "topic": "health",
+          "text": "Help British Columbians Get a Family Doctor",
+          "sourceId": "program-con-policy-2025",
+          "locator": "PDF p. 6, section 5.05(b)",
+          "speaker": "Conservative Party of British Columbia",
+          "textSha256": "7cdc62cd1016d0bba13b85e887377f483152a646f3b7f57006438bb942f8f426"
+        },
+        {
+          "id": "policy-2025-education",
+          "topic": "education",
+          "text": "Restore academic standards by ending descriptive grading and returning to including letter and percentage grades in BC schools.",
+          "sourceId": "program-con-policy-2025",
+          "locator": "PDF p. 9, section 7.04",
+          "speaker": "Conservative Party of British Columbia",
+          "textSha256": "95b9239de1d612b964bb77ffc32cba083d86d357acb24d5ca4675a4ac8882890"
+        },
+        {
+          "id": "policy-2025-economy",
+          "topic": "economy",
+          "text": "Ensure an internationally competitive fiscal regime that attracts and retains investment.",
+          "sourceId": "program-con-policy-2025",
+          "locator": "PDF p. 14, section 11.17",
+          "speaker": "Conservative Party of British Columbia",
+          "textSha256": "2cf1246d10f50f061ac13032e4aa03b6e91565c2d4acc9781def17448578bae0"
+        },
+        {
+          "id": "policy-2025-environment",
+          "topic": "environment",
+          "text": "Encourage research and development of alternative energy methods by BC scientists and companies.",
+          "sourceId": "program-con-policy-2025",
+          "locator": "PDF p. 15, section 11.35",
+          "speaker": "Conservative Party of British Columbia",
+          "textSha256": "d41c253969fdff1d3fd7084fb97ae51e45e1e73064ec91549e885bf8caa596a1"
+        },
+        {
+          "id": "policy-2025-transport",
+          "topic": "transport",
+          "text": "Extend SkyTrain to Newton in Surrey.",
+          "sourceId": "program-con-policy-2025",
+          "locator": "PDF p. 17, section 13.05(a)",
+          "speaker": "Conservative Party of British Columbia",
+          "textSha256": "d1b245545b3990bd0a963eb9306b873d91f8411f1bfcb9a4370a0998f1411d16"
+        },
+        {
+          "id": "policy-2025-justice",
+          "topic": "justice",
+          "text": "The Conservative Party of BC will repeal the Legal Professions Act (2024).",
+          "sourceId": "program-con-policy-2025",
+          "locator": "PDF p. 10, section 8.03",
+          "speaker": "Conservative Party of British Columbia",
+          "textSha256": "e33e39d0a9aea82f62859be84151b2894e58b702f0306ece91339bbb309aac05"
+        },
+        {
+          "id": "policy-2025-addiction",
+          "topic": "addiction",
+          "text": "End drug decriminalization and reject the dangerous Eby-Trudeau legalization experiment.",
+          "sourceId": "program-con-policy-2025",
+          "locator": "PDF p. 10, section 9.01",
+          "speaker": "Conservative Party of British Columbia",
+          "textSha256": "5da88835c71dd5bf40047b35b17aaddd01225b61b906c4cc0d0179d765877654"
+        },
+        {
+          "id": "policy-2025-indigenous",
+          "topic": "indigenous",
+          "text": "The Conservative Party of British Columbia believes that economic reconciliation is a cornerstone of any lasting solution to challenges faced by Indigenous communities.",
+          "sourceId": "program-con-policy-2025",
+          "locator": "PDF p. 20, section 16.01",
+          "speaker": "Conservative Party of British Columbia",
+          "textSha256": "3b73e8d4aff3b79dfe1905137cba0c30c069b4813cd271823eddb700f8c08b6f"
+        },
+        {
+          "id": "policy-2025-governance",
+          "topic": "governance",
+          "text": "The Conservative Party of BC will abolish all Freedom of Information request fees, with the exception of fines for individuals or organizations who attempt to abuse the system.",
+          "sourceId": "program-con-policy-2025",
+          "locator": "PDF p. 4, section 2.02",
+          "speaker": "Conservative Party of British Columbia",
+          "textSha256": "a2211f65e7e7994abec2045412794a2d52f64728041d2b6a90289b6cdd3a56d2"
+        },
+        {
+          "id": "policy-2025-rights",
+          "topic": "rights",
+          "text": "Seniors should have access to in-home care if they choose to remain at home.",
+          "sourceId": "program-con-policy-2025",
+          "locator": "PDF p. 19, section 15.05",
+          "speaker": "Conservative Party of British Columbia",
+          "textSha256": "7c416d56bfd02eab86e9f3f7246536236d4c9b1b212019aff1d646436b610d6f"
         }
       ]
     },

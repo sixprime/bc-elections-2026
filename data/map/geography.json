@@ -10,5 +10,6 @@
   "lookupFile": "map/district-index.json",
   "displayFile": "map/districts-map.geojson",
   "displaySimplificationDegrees": 0.0003,
-  "notice": "Location matching is for exploration, not an official voter assignment. Confirm your home riding with Elections BC."
+  "notice": "Location matching is for exploration, not an official voter assignment. Confirm your home riding with Elections BC.",
+  "displayCoordinateDecimals": 5
 }

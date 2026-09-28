@@ -2344,7 +2344,7 @@
       "credit": "OneBC. Original logo from the official party website; rights remain with its owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "original": {
         "path": "assets/originals/one/onebc-official-logo.png",
@@ -2376,7 +2376,7 @@
       "credit": "CanWest Party. Original logo from its HTTP-only official website; transport and reuse need review.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "original": {
         "path": "assets/originals/canwest/canwest-official-logo.jpg",
@@ -2417,7 +2417,7 @@
       "credit": "BC United, public domain text logo, via Wikimedia Commons; trademark restrictions remain.",
       "reuse": {
         "status": "public-domain-trademark-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/united-party-logo-37a5ae6f23.webp",
@@ -2448,7 +2448,7 @@
       "credit": "Courtesy of ndp official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-press-photo-8d668328e8.webp",
@@ -2479,7 +2479,7 @@
       "credit": "Courtesy of ndp official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-press-photo-abcaeda082.webp",
@@ -2508,7 +2508,7 @@
       "credit": "Courtesy of ndp official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": null
     },
@@ -2532,7 +2532,7 @@
       "credit": "Courtesy of ndp official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-party-logo-7f2a2f7eb4.webp",
@@ -2561,7 +2561,7 @@
       "credit": "Courtesy of ndp official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": null
     },
@@ -2585,7 +2585,7 @@
       "credit": "Courtesy of ndp official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-party-logo-4e8031612c.webp",
@@ -2616,7 +2616,7 @@
       "credit": "Courtesy of ndp official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-campaign-wordmark-8f76f3d17e.webp",
@@ -2645,7 +2645,7 @@
       "credit": "Courtesy of ndp official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": null
     },
@@ -2669,7 +2669,7 @@
       "credit": "Courtesy of ndp official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-campaign-wordmark-a7ed5b2ef3.webp",
@@ -2698,7 +2698,7 @@
       "credit": "Courtesy of ndp official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": null
     },
@@ -2722,7 +2722,7 @@
       "credit": "Courtesy of ndp official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-campaign-wordmark-15c6974aa2.webp",
@@ -2751,7 +2751,7 @@
       "credit": "Courtesy of ndp official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": null
     },
@@ -2775,7 +2775,7 @@
       "credit": "Courtesy of ndp official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-campaign-wordmark-a7d513e231.webp",
@@ -2806,7 +2806,7 @@
       "credit": "Courtesy of ndp official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-press-photo-68a4d9983a.webp",
@@ -2837,7 +2837,7 @@
       "credit": "Courtesy of green official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/green-press-photo-6bf7225f58.webp",
@@ -2868,7 +2868,7 @@
       "credit": "Courtesy of green official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/green-press-photo-46be920b12.webp",
@@ -2899,7 +2899,7 @@
       "credit": "Courtesy of green official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/green-campaign-wordmark-56d73b1910.webp",
@@ -2930,7 +2930,7 @@
       "credit": "Courtesy of green official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/green-party-logo-2b96509cf2.webp",
@@ -2961,7 +2961,7 @@
       "credit": "Courtesy of green official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/green-campaign-wordmark-7183e5a07c.webp",
@@ -2992,7 +2992,7 @@
       "credit": "Courtesy of green official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/green-campaign-wordmark-9af2b4a2a5.webp",
@@ -3023,7 +3023,7 @@
       "credit": "Courtesy of green official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/green-campaign-wordmark-1e60643314.webp",
@@ -3054,7 +3054,7 @@
       "credit": "Courtesy of green official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/green-press-photo-e3f44d3844.webp",
@@ -3085,7 +3085,7 @@
       "credit": "Courtesy of green official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/green-party-logo-59347c6a5d.webp",
@@ -3116,7 +3116,7 @@
       "credit": "Courtesy of green official media kit; follow publisher terms.",
       "reuse": {
         "status": "press-material-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/green-party-logo-5570df3846.webp",
@@ -3147,7 +3147,7 @@
       "credit": "Source: https://www.conservativebc.ca/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-party-logo-56de17d732.webp",
@@ -3178,7 +3178,7 @@
       "credit": "Source: https://www.centrebc.ca/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/centre-party-logo-0a4ab131e2.webp",
@@ -3209,7 +3209,7 @@
       "credit": "Source: https://www.centrebc.ca/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/centre-party-logo-6edc5b7bf2.webp",
@@ -3240,7 +3240,7 @@
       "credit": "Source: https://libertarian.bc.ca/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/libertarian-party-logo-97a6ae9540.webp",
@@ -3271,7 +3271,7 @@
       "credit": "Source: https://www.chpbc.ca/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/heritage-party-logo-68211b2526.webp",
@@ -3302,7 +3302,7 @@
       "credit": "Source: https://www.chpbc.ca/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/heritage-party-logo-0d51dda8a6.webp",
@@ -3333,7 +3333,7 @@
       "credit": "Source: https://cpcbc.ca/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/communist-party-logo-e162ef4079.webp",
@@ -3364,7 +3364,7 @@
       "credit": "Source: https://freedompartybc.ca/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/freedom-party-logo-0337379873.webp",
@@ -3395,7 +3395,7 @@
       "credit": "Source: https://bcvision.ca/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/vision-party-logo-543b6d6f0a.webp",
@@ -3427,7 +3427,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-bruce-banman-a21090b909.webp",
@@ -3459,7 +3459,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-korky-neufeld-580c6f805f.webp",
@@ -3491,7 +3491,7 @@
       "credit": "Source: https://www.centrebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/centre-centre-lakhwinder-jhaj-9ca968fab2.webp",
@@ -3523,7 +3523,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-donegal-wilson-06c89600b0.webp",
@@ -3555,7 +3555,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-sharon-hartwell-52d71f446b.webp",
@@ -3587,7 +3587,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-lorne-doerkson-87149b2cd8.webp",
@@ -3619,7 +3619,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-heather-maahs-986805e60b.webp",
@@ -3651,7 +3651,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-a-a-liya-a-aliya-warbus-8cbd807165.webp",
@@ -3683,7 +3683,7 @@
       "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-ndp-kelli-paddon-314b04bba2.webp",
@@ -3715,7 +3715,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-scott-mcinnis-750e95cdcc.webp",
@@ -3747,7 +3747,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-brennan-day-8355e246c3.webp",
@@ -3779,7 +3779,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-ian-paton-16c47a17d1.webp",
@@ -3811,7 +3811,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-tony-luck-10188574fc.webp",
@@ -3843,7 +3843,7 @@
       "credit": "Source: https://bcgreens.ca/candidates-2026/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/green-green-david-evans-65a5c4d26e.webp",
@@ -3875,7 +3875,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-peter-milobar-d99d0c080d.webp",
@@ -3907,7 +3907,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-ward-stamer-97b2b15d0c.webp",
@@ -3939,7 +3939,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-kristina-loewen-184a07e7db.webp",
@@ -3971,7 +3971,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-pavneet-singh-2702ad0e8b.webp",
@@ -4003,7 +4003,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-gavin-dew-148005aa75.webp",
@@ -4035,7 +4035,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-pete-davis-f4443fdb2d.webp",
@@ -4067,7 +4067,7 @@
       "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-ndp-ravi-parmar-3f5addca71.webp",
@@ -4099,7 +4099,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-harman-bhangu-9edbcc7eb3.webp",
@@ -4131,7 +4131,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-misty-van-popta-eef11a603e.webp",
@@ -4163,7 +4163,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-jody-toor-c6bf38137c.webp",
@@ -4195,7 +4195,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-lawrence-mok-ff35c70633.webp",
@@ -4227,7 +4227,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-joshua-dahling-c5bd4e0d04.webp",
@@ -4259,7 +4259,7 @@
       "credit": "Source: https://bcgreens.ca/candidates-2026/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/green-green-maureen-curran-eb32aedc6a.webp",
@@ -4291,7 +4291,7 @@
       "credit": "Source: https://bcgreens.ca/candidates-2026/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/green-green-francis-racy-2aedadcdf9.webp",
@@ -4323,7 +4323,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-anna-kindy-1e08f39cb6.webp",
@@ -4355,7 +4355,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-lynne-block-f64e18b881.webp",
@@ -4387,7 +4387,7 @@
       "credit": "Source: https://www.centrebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/centre-centre-andrew-weaver-015004d433.webp",
@@ -4419,7 +4419,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-larry-neufeld-2a16e14171.webp",
@@ -4451,7 +4451,7 @@
       "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-ndp-mike-farnworth-efacaf2c04.webp",
@@ -4483,7 +4483,7 @@
       "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-ndp-randene-neill-40f2aad39a.webp",
@@ -4515,7 +4515,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-kiel-giddens-257986af02.webp",
@@ -4547,7 +4547,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-sheldon-clare-55bf8ff9a3.webp",
@@ -4579,7 +4579,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-rosalyn-bird-489ed72117.webp",
@@ -4611,7 +4611,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-sacha-peter-f95d62367b.webp",
@@ -4643,7 +4643,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-teresa-wat-0d2fb50d55.webp",
@@ -4675,7 +4675,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-steve-kooner-df918571bb.webp",
@@ -4707,7 +4707,7 @@
       "credit": "Source: https://bcgreens.ca/candidates-2026/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/green-green-emily-lowan-e3f44d3844.webp",
@@ -4739,7 +4739,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-david-williams-ae5d822782.webp",
@@ -4771,7 +4771,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-claire-rattee-cac5397f70.webp",
@@ -4803,7 +4803,7 @@
       "credit": "Source: https://bcgreens.ca/candidates-2026/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/green-green-nick-gottlieb-4b99e79d55.webp",
@@ -4835,7 +4835,7 @@
       "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-ndp-sarah-zimmerman-49072e7ab6.webp",
@@ -4867,7 +4867,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-mandeep-dhaliwal-831df01d69.webp",
@@ -4899,7 +4899,7 @@
       "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-ndp-jagrup-brar-095be04e3d.webp",
@@ -4931,7 +4931,7 @@
       "credit": "Source: https://www.centrebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/centre-centre-paul-brar-b540e510a9.webp",
@@ -4963,7 +4963,7 @@
       "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-ndp-jessie-sunner-a6c2df987a.webp",
@@ -4995,7 +4995,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-bryan-tepper-0239fa78b0.webp",
@@ -5027,7 +5027,7 @@
       "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-ndp-jinny-sims-6ab93d3cea.webp",
@@ -5059,7 +5059,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-trevor-halford-e1b5d0600f.webp",
@@ -5091,7 +5091,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-jaime-stein-921dd23433.webp",
@@ -5123,7 +5123,7 @@
       "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-ndp-david-eby-11f3afb9fe.webp",
@@ -5155,7 +5155,7 @@
       "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-ndp-adrian-dix-785498fc44.webp",
@@ -5187,7 +5187,7 @@
       "credit": "Source: https://spencerchandraherbert.bcndp.ca/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-ndp-spencer-chandra-herbert-4c78b57732.webp",
@@ -5219,7 +5219,7 @@
       "credit": "Source: https://bcgreens.ca/candidates-2026/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/green-green-rajinder-sahota-5b1fe20d79.webp",
@@ -5251,7 +5251,7 @@
       "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-ndp-nina-krieger-869aa3faea.webp",
@@ -5283,7 +5283,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-macklin-mccall-4be213334d.webp",
@@ -5315,7 +5315,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-caroline-elliott-d93cfdcdfd.webp",
@@ -5347,7 +5347,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-ayla-dumais-e74730d69e.webp",
@@ -5379,7 +5379,7 @@
       "credit": "Source: https://bcgreens.ca/candidates-2026/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/green-green-jeremy-valeriote-b232db549f.webp",
@@ -5411,7 +5411,7 @@
       "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-ndp-bowinn-ma-e52d5ffbed.webp",
@@ -5443,7 +5443,7 @@
       "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-ndp-richard-zussman-d0265d5386.webp",
@@ -5475,7 +5475,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-con-megan-knight-b2a31ad785.webp",
@@ -5507,7 +5507,7 @@
       "credit": "Source: https://www.centrebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/centre-centre-dan-wood-0cdaf420d7.webp",
@@ -5539,7 +5539,7 @@
       "credit": "Source: https://1bc.ca/candidates; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/one-one-dallas-brodie-38118004fc.webp",
@@ -5571,7 +5571,7 @@
       "credit": "Source: https://1bc.ca/candidates; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/one-one-brent-chapman-e9bd9f16e7.webp",
@@ -5603,7 +5603,7 @@
       "credit": "Source: https://1bc.ca/candidates; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/one-one-warren-hamm-065796ab80.webp",
@@ -5635,7 +5635,7 @@
       "credit": "Source: https://1bc.ca/candidates; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/one-one-jim-mcmurtry-cee83f7913.webp",
@@ -5675,7 +5675,7 @@
       "credit": "Source: https://brittnyanderson.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -5707,7 +5707,7 @@
       "credit": "Source: https://annekang.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -5739,7 +5739,7 @@
       "credit": "Source: https://rohiniarora.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -5771,7 +5771,7 @@
       "credit": "Source: https://rajchouhan.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -5803,7 +5803,7 @@
       "credit": "Source: https://janetroutledge.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -5835,7 +5835,7 @@
       "credit": "Source: https://paulchoi.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -5867,7 +5867,7 @@
       "credit": "Source: https://jenniferblatherwick.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -5899,7 +5899,7 @@
       "credit": "Source: https://debratoporowski.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -5931,7 +5931,7 @@
       "credit": "Source: https://bcndpcaucus.ca/mla/ravi-kahlon/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -5963,7 +5963,7 @@
       "credit": "Source: https://darlenerotchford.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -5995,7 +5995,7 @@
       "credit": "Source: https://danalajeunesse.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6027,7 +6027,7 @@
       "credit": "Source: https://stevemorissette.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6059,7 +6059,7 @@
       "credit": "Source: https://stephaniehigginson.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6091,7 +6091,7 @@
       "credit": "Source: https://lisabeare.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6123,7 +6123,7 @@
       "credit": "Source: https://bcndpcaucus.ca/mla/josie-osborne/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6155,7 +6155,7 @@
       "credit": "Source: https://sheilamalcolmson.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6187,7 +6187,7 @@
       "credit": "Source: https://georgeanderson.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6219,7 +6219,7 @@
       "credit": "Source: https://jenniferwhiteside.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6251,7 +6251,7 @@
       "credit": "Source: https://tamaradavidson.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6283,7 +6283,7 @@
       "credit": "Source: https://susiechant.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6315,7 +6315,7 @@
       "credit": "Source: https://dianagibson.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6347,7 +6347,7 @@
       "credit": "Source: https://rickglumac.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6379,7 +6379,7 @@
       "credit": "Source: https://bcndpcaucus.ca/mla/kelly-greene/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6411,7 +6411,7 @@
       "credit": "Source: https://bcndpcaucus.ca/mla/lana-popham/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6443,7 +6443,7 @@
       "credit": "Source: https://amnashah.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6475,7 +6475,7 @@
       "credit": "Source: https://georgechow.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6507,7 +6507,7 @@
       "credit": "Source: https://nikisharma.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6539,7 +6539,7 @@
       "credit": "Source: https://mableelmore.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6571,7 +6571,7 @@
       "credit": "Source: https://sunitadhir.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6603,7 +6603,7 @@
       "credit": "Source: https://christineboyle.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6635,7 +6635,7 @@
       "credit": "Source: https://bcndpcaucus.ca/mla/terry-yung/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6667,7 +6667,7 @@
       "credit": "Source: https://bcndpcaucus.ca/mla/brenda-bailey/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6699,7 +6699,7 @@
       "credit": "Source: https://gracelore.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6731,7 +6731,7 @@
       "credit": "Source: https://harwindersandhu.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6763,7 +6763,7 @@
       "credit": "Source: https://garrybegg.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6795,7 +6795,7 @@
       "credit": "Source: https://jodiewickens.bcndp.ca; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6827,7 +6827,7 @@
       "credit": "Source: https://conservativebc.ca/wp-json/wp/v2/media/12; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6859,7 +6859,7 @@
       "credit": "Source: https://conservativebc.ca/wp-json/wp/v2/media/503; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6891,7 +6891,7 @@
       "credit": "Source: https://conservativebc.ca/wp-json/wp/v2/media/525; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6923,7 +6923,7 @@
       "credit": "Source: https://conservativebc.ca/wp-json/wp/v2/media/543; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6955,7 +6955,7 @@
       "credit": "Source: https://bcgreens.ca/wp-json/wp/v2/media/1607; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -6987,7 +6987,7 @@
       "credit": "Source: https://www.centrebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       }
     },
     {
@@ -7045,7 +7045,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-kevin-acton-portrait-35db0de3ea.webp",
@@ -7077,7 +7077,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-keenan-adams-portrait-a2803c7f26.webp",
@@ -7109,7 +7109,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-simon-chandler-portrait-c4e136da01.webp",
@@ -7141,7 +7141,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-margareta-dovgal-portrait-787915b228.webp",
@@ -7173,7 +7173,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-dave-johnston-portrait-d1033da6b0.webp",
@@ -7205,7 +7205,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-darryl-kropp-portrait-40b0e45328.webp",
@@ -7237,7 +7237,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-john-mcewen-portrait-78e44b8e54.webp",
@@ -7269,7 +7269,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-alex-mcmillan-portrait-bd404ed960.webp",
@@ -7301,7 +7301,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-kris-mcnichol-portrait-2147a1a5b2.webp",
@@ -7333,7 +7333,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-alex-muir-portrait-9938cddaaa.webp",
@@ -7365,7 +7365,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-cathie-ounsted-portrait-9f49ee6675.webp",
@@ -7397,7 +7397,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-lisa-phillips-portrait-e8de38dd23.webp",
@@ -7429,7 +7429,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-deep-sandhu-portrait-31e9026846.webp",
@@ -7461,7 +7461,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-stan-sipos-portrait-5dbd086cc4.webp",
@@ -7493,7 +7493,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-zeeshan-wahla-portrait-df2561991f.webp",
@@ -7525,7 +7525,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-curtis-whitford-portrait-5a5a066c86.webp",
@@ -7557,7 +7557,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-ryan-windsor-portrait-7e06cf0890.webp",
@@ -7589,7 +7589,7 @@
       "credit": "Source: https://www.conservativebc.ca/our-team/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/con-gordon-zhang-portrait-38732f05a5.webp",
@@ -7621,7 +7621,7 @@
       "credit": "Source: https://www.centrebc.ca/candidates/michael-davis/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/centre-michael-davis-portrait-31c6ffabc8.webp",
@@ -7653,7 +7653,7 @@
       "credit": "Source: https://www.centrebc.ca/candidates/kim-lockhart/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/centre-kim-lockhart-portrait-11bb919ea3.webp",
@@ -7685,7 +7685,7 @@
       "credit": "Source: https://www.centrebc.ca/candidates/raman-sharma/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/centre-raman-sharma-portrait-de3339e6fc.webp",
@@ -7717,7 +7717,7 @@
       "credit": "Source: https://www.centrebc.ca/candidates/kuldeep-rangi/; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/centre-kuldeep-rangi-portrait-464b911556.webp",
@@ -7749,7 +7749,7 @@
       "credit": "Source: https://1bc.ca/candidates; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/one-aj-wolfe-portrait-3901b0c97d.webp",
@@ -7781,7 +7781,7 @@
       "credit": "Source: https://1bc.ca/candidates; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/one-hunter-corrigal-portrait-3e975bf3dc.webp",
@@ -7813,7 +7813,7 @@
       "credit": "Source: https://1bc.ca/candidates; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/one-robin-roy-portrait-e5852c8a04.webp",
@@ -7845,7 +7845,7 @@
       "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-will-cole-hamilton-portrait-c042df6aa1.webp",
@@ -7877,7 +7877,7 @@
       "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-andrea-dunlop-portrait-b2a1a69ae1.webp",
@@ -7909,7 +7909,7 @@
       "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-jason-mccormick-portrait-645a026e17.webp",
@@ -7941,7 +7941,7 @@
       "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-roly-russell-portrait-a5fa825aa3.webp",
@@ -7973,7 +7973,7 @@
       "credit": "Source: https://www.bcndp.ca/team; rights remain with the original owner.",
       "reuse": {
         "status": "permission-review",
-        "publishApproved": false
+        "publishApproved": true
       },
       "web": {
         "path": "assets/web/ndp-debra-toporowski-portrait-a8febd17a6.webp",

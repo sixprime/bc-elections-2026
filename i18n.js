@@ -1,4 +1,8 @@
 const french = {
+  'Map': 'Carte',
+  'Riding map': 'Carte des circonscriptions',
+  'Map of {riding}': 'Carte de {riding}',
+  'Data notes': 'Notes sur les données',
   'British Columbia Election 2026': 'Élection de 2026 en Colombie-Britannique',
   'Explore British Columbia election candidates, ridings, original party quotations, professional polls and official 2024 results. Independent and unofficial.': 'Candidats, circonscriptions, citations originales des partis, sondages professionnels et résultats officiels de 2024 en Colombie-Britannique. Indépendant et non officiel.',
   'BC Ridings and Candidates 2026': 'Circonscriptions et candidats de la C.-B. en 2026',
@@ -418,6 +422,8 @@ const french = {
   'Press photos & kits': 'Photos et trousses de presse',
   'Missing & unavailable': 'Manquant ou non disponible',
   'Publication approval pending': 'Autorisation de publication en attente',
+  'All images enabled': 'Toutes les images activées',
+  '{count} assets awaiting publication approval': '{count} images en attente d’autorisation de publication',
   'Downloaded assets': 'Images téléchargées',
   'Source unavailable': 'Source non disponible',
   'Needs follow-up': 'Suivi nécessaire',
@@ -444,6 +450,13 @@ const french = {
   '{files} files / {parties} parties / {date}': '{files} fichiers / {parties} partis / {date}'
 };
 
+const contextualFrench = new Map([
+  ['mla-670', new Map([
+    ['MLA at dissolution', 'Députée à la dissolution'],
+    ['MLA profile', 'Profil de la députée']
+  ])]
+]);
+
 const supported = new Set(['en', 'fr']);
 const languageFromUrl = () => new URLSearchParams(globalThis.location?.search || '').get('lang');
 let language = supported.has(languageFromUrl()) ? languageFromUrl() : 'en';
@@ -452,8 +465,8 @@ export const locale = () => language === 'fr' ? 'fr-CA' : 'en-CA';
 export const currentLanguage = () => language;
 export const translatedMessages = french;
 
-export function translate(message, values = {}) {
-  const template = language === 'fr' && Object.hasOwn(french, message) ? french[message] : message;
+export function translate(message, values = {}, context = null) {
+  const template = language === 'fr' ? contextualFrench.get(context)?.get(message) ?? (Object.hasOwn(french, message) ? french[message] : message) : message;
   return template.replace(/\{([a-zA-Z][a-zA-Z0-9]*)\}/g, (token, name) => Object.hasOwn(values, name) ? String(values[name]) : token);
 }
 

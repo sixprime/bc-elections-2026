@@ -141,13 +141,21 @@ interpret, assess, judge or comment on a party's programme. Do not turn missing
 review data into claims about what a party has or has not proposed. Readers must
 be able to distinguish the original words from navigation and source metadata.
 
-The schema-v2 dataset has 14 party records, 66 selected excerpts and
-22 source records. It contains no policy summaries, assessments or commentary.
+The schema-v2 dataset has 14 party records, 78 selected excerpts and
+23 source records. It contains no policy summaries, assessments or commentary.
 Each excerpt appears inside visible quotation marks, labelled as a verbatim
 excerpt, with its speaker or publishing party, source title, publication date
 or year when recorded, and a link to the full original. The excerpts are not
 presented as complete platforms. Entire copyrighted documents are linked, not
 republished.
+
+The Conservative record includes 12 exact excerpts (162 words combined) from its
+official Policy Declaration, adopted March 1, 2025, alongside the existing
+platform-page quotation. Coverage now spans 12 topics; no excerpt is assigned to
+Other topics merely to fill a gap. The 2025 document is not labelled as a newly
+released 2026 platform. Its adoption date is in the source title; the unknown
+publication date remains unset. The full PDF and parsed evidence stay in the
+external cache, with page/section locators and hashes attached to the excerpts.
 
 ### Source Verification
 
@@ -190,8 +198,10 @@ The checkbox picker supports all 14 registered parties, with Use topic defaults,
 Select all and Clear selection. Custom choices, including an empty selection,
 are remembered separately for each topic. Use topic defaults restores automatic
 selection for the current topic without changing choices for other topics.
-Six columns fit at desktop widths of 1280 px and above. Narrower screens and larger selections
-scroll horizontally, keeping all selected parties and readable column widths.
+Six columns fit at desktop widths of 1280 px and above. At phone widths up to
+720 px, each selected party has a vertical section with the same quotations and
+collapsible source links, without sideways scrolling. Intermediate widths and
+larger desktop selections retain horizontal scrolling with readable columns.
 The table expands to its full height with the page, with no internal vertical
 scrollbar. When up to six columns fit on desktop, headings stay visible while
 the page scrolls. Choices persist when resizing and switching views.
@@ -215,6 +225,17 @@ also requires updating its manifest hash and any web derivative. Manifest paths
 are relative to this data directory, not the website root. Keep accepted
 nominations separate from party announcements, and MLA membership separate from
 candidacy. Preserve image attribution and source-specific reuse terms.
+
+Public renderers require the strict boolean `reuse.publishApproved: true` for
+portraits, logos and gallery downloads/previews. Source availability is not
+publication approval. Keep pending assets' flags and original evidence intact;
+the rendering rule does not remove existing files from the static host or Git.
+
+`node tools/update-data.mjs compact-map` rounds only the simplified display map
+to five decimals, retaining all 93 features and 92,929 positions. The command
+rejects invalid or collapsed rings and records `displayCoordinateDecimals` in
+the geography metadata. Full-resolution district files, their hashes and the
+location-matching algorithm remain unchanged.
 
 Historical party identities stay attached to their original records. The June
 2025 proposed unnamed party is not retrospectively treated as OneBC. The March

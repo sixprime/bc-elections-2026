@@ -1,6 +1,7 @@
 import { candidateRoster, candidateStatusLabel, candidateRosterNote } from './candidate-policy.js';
 import { translate, translateCount, currentLanguage, compareLabels, formatDate, formatNumber } from './i18n.js';
 import { routeHref, siteHref } from './routes.js';
+import { canPublishAsset } from './asset-policy.js';
 
 const collator = { compare: compareLabels };
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
@@ -9,7 +10,7 @@ const candidateCount = count => escapeHtml(translateCount(count, '{count} candid
 const quotationCount = count => escapeHtml(translateCount(count, '{count} quotation', '{count} quotations'));
 const normalize = value => String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('en-CA');
 const sourceLink = (url, label, { original = false, icon = false } = {}) => /^https?:\/\//.test(url || '') ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer"${original ? ' lang="en"' : ''}>${original ? escapeHtml(label) : text(label)}${icon ? ' <i data-lucide="arrow-up-right" aria-hidden="true"></i>' : ''}</a>` : '';
-const imageUrl = asset => asset?.web?.path?.startsWith('assets/') && !asset.web.path.includes('..') ? siteHref(`data/${asset.web.path}`) : '';
+const imageUrl = asset => canPublishAsset(asset) && asset?.web?.path?.startsWith('assets/') && !asset.web.path.includes('..') ? siteHref(`data/${asset.web.path}`) : '';
 
 function partyLogo(group, manifest, byId) {
   const assets = (manifest.parties.find(item => item.id === group.id)?.assetIds || []).map(id => byId.get(id)).filter(asset => imageUrl(asset));
@@ -83,6 +84,11 @@ export function candidateDirectory(election, manifest, filters, error = '') {
     <div id="candidateResults">${candidateResults(election, manifest, filters)}</div>`;
 }
 
+export function ridingMemberLabel(manifest, district) {
+  const member = manifest?.members?.find(record => record.district === district);
+  return translate('MLA at dissolution', {}, member?.id);
+}
+
 export function ridingMember(manifest, district, error = '') {
   if (error) return `<p role="alert">${text(error)}</p><button type="button" class="secondary-button" data-candidate-retry>${text('Retry')}</button>`;
   if (!manifest) return `<p class="small-note" role="status">${text('Loading MLA profile...')}</p>`;
@@ -93,7 +99,7 @@ export function ridingMember(manifest, district, error = '') {
   return `<article class="riding-member" data-member-id="${escapeHtml(member.id)}">
     ${portrait ? `<img class="riding-member-photo" src="${escapeHtml(imageUrl(portrait))}" alt="${escapeHtml(member.name)}" width="112" height="140" loading="lazy">` : `<span class="riding-member-photo">${text('Portrait unavailable')}</span>`}
     <div class="riding-member-info"><h3>${escapeHtml(member.name)}</h3><span lang="en-CA">${escapeHtml(member.affiliation)}</span><p class="small-note">${text('At dissolution · {date}', { date: asOf })}</p>
-    <div class="candidate-card-links">${sourceLink(member.profileUrl, 'MLA profile')}${portrait ? sourceLink(portrait.sourcePage, 'Photo source') : ''}</div>
+    <div class="candidate-card-links">${sourceLink(member.profileUrl, translate('MLA profile', {}, member.id))}${portrait ? sourceLink(portrait.sourcePage, 'Photo source') : ''}</div>
     ${portrait?.reuse?.licenseUrl ? `<p class="small-note" lang="en">${escapeHtml(portrait.credit)} ${sourceLink(portrait.reuse.licenseUrl, portrait.reuse.license, { original: true })}</p>` : ''}</div>
   </article>`;
 }
@@ -147,12 +153,14 @@ export function partyComparison(election, manifest, programs, comparison = { top
   });
   const controls = `<p class="comparison-default-note" id="comparisonDefaultNote">${text('By default, only parties with a recorded programme quotation on this topic are shown. You can choose any party.')}</p><details class="comparison-picker"><summary>${text('Parties')} <span>${text('{count} of {total} selected', { count: selectedIds.length, total: parties.length })} / ${text(automatic ? 'Topic defaults' : 'Custom selection')}</span></summary><fieldset aria-describedby="comparisonDefaultNote"><legend>${text('Parties in comparison')}</legend><div class="comparison-party-options">${parties.map(party => `<label><input id="comparisonParty-${escapeHtml(party.id)}" type="checkbox" data-comparison-party="${escapeHtml(party.id)}" ${selectedIds.includes(party.id) ? 'checked' : ''}><span>${escapeHtml(party.ballot)}</span></label>`).join('')}</div><div class="comparison-picker-actions"><button type="button" id="comparisonDefaults" data-comparison-action="defaults">${text('Use topic defaults')}</button><button type="button" id="comparisonAll" data-comparison-action="all">${text('Select all')}</button><button type="button" id="comparisonClear" data-comparison-action="clear">${text('Clear selection')}</button></div></fieldset></details>`;
   if (!selected.length) return `${controls}<div class="empty-state"><strong>${text(automatic ? 'No quotations recorded for this topic.' : 'No parties selected')}</strong></div>`;
+  const quotations = entry => entry.quotes.length ? entry.quotes.map(quote => programQuotation(quote, bySource.get(quote.sourceId))).join('') : `<p class="comparison-missing">${text('No quotation recorded for this topic.')}</p>`;
+  const sources = entry => entry.sourceIds.length ? `<ul class="comparison-sources">${entry.sourceIds.map(id => { const source = bySource.get(id); return `<li>${sourceLink(source.url, source.title, { original: true })}<span lang="en">${escapeHtml(source.publisher)}</span><span>${escapeHtml(programDate(source))}</span></li>`; }).join('')}</ul>` : `<p class="comparison-missing">${text('No source recorded.')}</p>`;
   const row = (id, label, content) => `<tbody><tr class="comparison-row-title"><th id="comparison-${id}" scope="rowgroup" colspan="${selected.length}"><span>${text(label)}</span></th></tr><tr data-comparison-row="${id}">${selected.map(entry => `<td headers="comparison-party-${escapeHtml(entry.party.id)} comparison-${id}">${content(entry)}</td>`).join('')}</tr></tbody>`;
   return `${controls}<div class="comparison-heading"><h2 id="comparisonHeading">${text(topic.label)}</h2><p>${text(selected.length === 1 ? '{count} party' : '{count} parties', { count: selected.length })}</p></div><div class="comparison-table-region${selected.length <= 6 ? ' comparison-table-region-fit' : ''}" role="region" aria-labelledby="comparisonHeading" tabindex="0" style="--comparison-columns:${selected.length}"><table class="comparison-table" aria-labelledby="comparisonHeading">
     <thead><tr>${selected.map(entry => `<th id="comparison-party-${escapeHtml(entry.party.id)}" scope="col" data-compare-party="${escapeHtml(entry.party.id)}">${partyLogo(entry.party, manifest, byAsset)}<span class="comparison-party-name">${escapeHtml(entry.party.ballot)}</span><span class="program-quote-count">${quotationCount(entry.quotes.length)}</span><button type="button" class="comparison-explore" data-program-explore="${escapeHtml(entry.party.id)}">${text('All excerpts')}<i data-lucide="arrow-up-right" aria-hidden="true"></i></button></th>`).join('')}</tr></thead>
-    ${row('quotes', 'In their own words', entry => entry.quotes.length ? entry.quotes.map(quote => programQuotation(quote, bySource.get(quote.sourceId))).join('') : `<p class="comparison-missing">${text('No quotation recorded for this topic.')}</p>`)}
-    ${row('sources', 'Original sources / full text', entry => entry.sourceIds.length ? `<ul class="comparison-sources">${entry.sourceIds.map(id => { const source = bySource.get(id); return `<li>${sourceLink(source.url, source.title, { original: true })}<span lang="en">${escapeHtml(source.publisher)}</span><span>${escapeHtml(programDate(source))}</span></li>`; }).join('')}</ul>` : `<p class="comparison-missing">${text('No source recorded.')}</p>`)}
-  </table></div>`;
+    ${row('quotes', 'In their own words', quotations)}
+    ${row('sources', 'Original sources / full text', sources)}
+  </table></div><div class="comparison-mobile" aria-labelledby="comparisonHeading">${selected.map(entry => `<section class="comparison-mobile-party" data-mobile-compare-party="${escapeHtml(entry.party.id)}" aria-labelledby="mobile-party-${escapeHtml(entry.party.id)}"><header>${partyLogo(entry.party, manifest, byAsset)}<div><h3 id="mobile-party-${escapeHtml(entry.party.id)}">${escapeHtml(entry.party.ballot)}</h3><span class="program-quote-count">${quotationCount(entry.quotes.length)}</span></div><button type="button" class="comparison-explore" data-program-explore="${escapeHtml(entry.party.id)}">${text('All excerpts')}<i data-lucide="arrow-up-right" aria-hidden="true"></i></button></header>${quotations(entry)}<details class="comparison-mobile-sources"><summary>${text('Original sources / full text')}</summary>${sources(entry)}</details></section>`).join('')}</div>`;
 }
 
 function programContent(program, programs, filters, partyMatches, open) {

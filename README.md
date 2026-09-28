@@ -60,10 +60,15 @@ counts or political predictions.
 [sitemap.xml](sitemap.xml) lists the 99 canonical pages; [robots.txt](robots.txt)
 points to it. [404.html](404.html) is a genuine GitHub Pages not-found document
 with `noindex`, not an SPA redirect that turns missing paths into overview pages.
-Canonical and preview URLs currently target the published GitHub project URL.
-After the custom domain is actually configured, regenerate with
-`--site-url https://bcelectionguide.ca/` and use the same argument for `--check`.
-This command does not change DNS, the Pages domain, or publish anything.
+Canonical, preview and sitemap URLs target `https://bcelectionguide.ca/`.
+The generator reads [CNAME](CNAME) as its default publishing domain, including
+the root-relative asset paths needed by the 404 page. It rejects malformed
+domains, a conflicting `--site-url`, or a `publishedSite` value in
+[page-info.js](page-info.js) that disagrees with CNAME. Update both when changing
+domains. Without CNAME, the build falls back to `publishedSite` and still permits
+an explicit `--site-url` for preview builds. Normal generation and `--check` need
+no domain argument. Generation does not change DNS, Pages settings or publish
+anything.
 
 The pre-generated documents and social previews are English. `?lang=fr` selects
 the French interactive interface; it is not a separate indexed French edition.
@@ -73,7 +78,7 @@ and are controlled by the search/social services.
 ## First vertical slice
 
 - Desktop province overview and riding explorer, responsive mobile layouts and bottom navigation, closely following the earlier visual mockups.
-- Navigation follows Province, Ridings, Parties, Candidates, Polls, About. The mobile bottom bar uses the first five destinations; About remains in the menu and footer. The countdown explicitly refers to election day, not the start of advance voting.
+- Navigation follows Province, Ridings, Parties, Candidates, Polls, About. The mobile bottom bar uses the first five destinations, with Map / Carte as the short riding label and a full accessible name; About remains in the menu and footer. The countdown explicitly refers to election day, not the start of advance voting.
 - Searchable list of all 93 electoral districts, with source-checked 2024 vote tables and 2026 candidate records on riding pages. Complete result snapshots are checked against district, party and seat totals.
 - Candidate directory grouped by all registered parties, with alphabetical names, portraits, riding links and filters. A logo strip jumps to each party; Top restores the previous position. Accepted nominations and party announcements remain distinct.
 - Dated directory of every entry in Elections BC's September 25 party register PDF. The PDF contains 14 entries, though Elections BC's summary page currently says 13. The app follows the dated register and explains the difference.
@@ -96,6 +101,9 @@ updates its details and boundary highlight without panning, zooming or animating
 the camera, regardless of its size or visibility. Users control panning and zoom
 themselves. Initial map framing and explicit reset/location actions are unchanged.
 The dated MLA portrait and affiliation stay in the riding header above the map.
+The 2026 candidate list appears immediately after the header, before the map and
+historical results. Riding maps use the selected district name as their heading;
+changing that heading does not move the camera.
 
 All map views colour ridings by their **2024 winning party**, with 24% opacity
 and a modest 34% hover highlight so the basemap remains visible. Solid orange
@@ -150,6 +158,10 @@ denied, unavailable and timed-out locations leave manual riding search available
 
 Full-resolution official polygons are downloaded only for nearby candidate
 districts. Simplified geometry is used for display, not location matching.
+The display coordinates use five decimal places: about 2.05 MB uncompressed or
+601 KB gzipped, down from 2.61 MB / 902 KB. `node tools/update-data.mjs compact-map`
+performs the repeatable precision reduction and rejects collapsed rings. All
+93 precise district files used for matching retain their original hashes.
 Precise coordinates remain in memory, never in localStorage or URLs. Tile
 providers receive the viewed area and ordinary network request metadata.
 Current location is not necessarily a home riding. The result is unofficial;
@@ -186,10 +198,16 @@ press material. See [the data workflow](data/README.md) and
 coverage gaps and publication-review flags. Nothing in the inventory changes
 the public candidate page's official-filing rules.
 
-The political-parties directory displays verified logos and website links,
-including recovered OneBC and CanWest artwork. BC Party, B.C. Vision and Party
-of Citizens have no verified logo in the directory. Unavailable or unverified
-websites are labelled rather than guessed.
+Public portraits, logos, inventory previews and original-download links require
+`asset.reuse.publishApproved === true`, enforced by [asset-policy.js](asset-policy.js).
+All 179 currently recorded assets are enabled for publication at the site
+operator's explicit request on September 28, 2026. Source credits, licence terms,
+rights-review statuses and file hashes are unchanged; this editorial approval
+does not assert a new licence or permission from a third party. The gate remains
+available for future additions. Missing artwork remains unavailable rather than
+being fabricated. This is a rendering gate, not access control: files already
+tracked under `data/` still exist at their direct URLs.
+Unavailable or unverified websites are labelled rather than guessed.
 CanWest's official website is HTTP-only and is labelled accordingly.
 
 The 125-candidate catalogue currently has 123 verified portraits. Thirty missing
@@ -333,13 +351,9 @@ separate approval.
 
 ## English / French Demo
 
-The language selector offers compact UK/France flags with EN/FR labels and full
-English/Français accessible names. The selected option has an outlined background;
-native radios support Tab and arrow keys with visible focus. Local PNGs avoid
-platform-dependent flag emoji. The standard flag images were retrieved from
-[FlagCDN UK](https://flagcdn.com/w40/gb.png) and
-[FlagCDN France](https://flagcdn.com/w40/fr.png); flags are decorative language
-cues, not a statement of users' nationality.
+The language selector uses plain EN/FR labels and full English/Français
+accessible names, without country flags. The selected option has an outlined
+background; native radios support Tab and arrow keys with visible focus.
 
 The selector is available on the main site and artwork inventory. Use `?lang=en`
 or `?lang=fr`, for example `/parties/?lang=fr`. The URL preserves the choice on reload; no cookie,
@@ -356,9 +370,15 @@ The demo covers navigation, page content, filters, candidate statuses, programme
 topics, map controls, address/GPS feedback, chart descriptions, About and the
 artwork inventory. Switching language updates the document language and a polite
 screen-reader announcement. Current routes, filters, party selections and map
-positions remain in place. The selector has a text label and native keyboard
-support; the flag is decorative, never the only identifier. Dialogs retain focus
-handling and Escape dismissal.
+positions remain in place. Dialogs retain focus handling and Escape dismissal.
+Janet Routledge's member record has feminine French role/profile labels; the
+translation context is keyed to her verified member ID, not inferred from a name
+or photograph.
+
+Muted text is controlled by `--text-muted`; small labels use `--font-label`
+(0.8125rem, normally 13px) across the main site, map and inventory. The snapshot
+is dated text without a green live indicator. Polling averages are ordered by
+descending share, and factual data notes are collapsed by default.
 
 Candidate and party names, official riding names, election figures, artwork and
 source URLs remain as recorded. Programme quotations are unchanged, retain

@@ -1,6 +1,7 @@
 import { candidateRoster, candidateStatusLabel, candidateRosterNote, atNominationDeadline } from '../candidate-policy.js';
 import { translate, translateCount, translateElements, syncLanguageControls, currentLanguage, setLanguage, formatDate, formatNumber } from '../i18n.js';
 import { routeHref } from '../routes.js';
+import { canPublishAsset } from '../asset-policy.js';
 
 const grid = document.getElementById('assetGrid');
 const partyFilter = document.getElementById('assetParty');
@@ -29,6 +30,8 @@ updateLanguage();
 
 function render() {
   document.getElementById('inventoryStatus').textContent = translate('{files} files / {parties} parties / {date}', { files: formatNumber(manifest.assets.length), parties: formatNumber(manifest.parties.length), date: formatDate(manifest.collectedAt, { dateStyle: 'medium', timeZone: 'America/Vancouver' }) });
+  const pending = manifest.assets.filter(asset => !canPublishAsset(asset)).length;
+  document.getElementById('assetApprovalStatus').textContent = pending ? translate('{count} assets awaiting publication approval', { count: formatNumber(pending) }) : translate('All images enabled');
   const byId = new Map(manifest.assets.map(asset => [asset.id, asset]));
   const parties = new Map(manifest.parties.map(party => [party.id, party.name]));
   parties.set('independent', translate('Independent'));
@@ -48,17 +51,17 @@ function render() {
       status: candidateStatusLabel(candidate, roster.phase),
       source: candidate.profileUrl || candidate.sourcePage,
       statusSource: candidate.statusSource,
-      asset: candidate.assetIds.map(id => byId.get(id)).find(asset => asset?.web)
+      asset: candidate.assetIds.map(id => byId.get(id)).find(asset => asset?.web && canPublishAsset(asset)) || candidate.assetIds.map(id => byId.get(id)).find(asset => asset?.web)
     }));
   } else if (collection === 'members') {
     entries = (manifest.members || []).map(member => ({
       name: member.name,
       partyId: manifest.parties.find(party => party.name === member.affiliation)?.id || 'independent',
       detail: `${member.district} / ${manifest.memberSnapshot.asOf}`,
-      status: 'MLA at dissolution',
+      status: translate('MLA at dissolution', {}, member.id),
       source: member.profileUrl,
       statusSource: manifest.memberSnapshot.source,
-      asset: member.assetIds.map(id => byId.get(id)).find(asset => asset?.web)
+      asset: member.assetIds.map(id => byId.get(id)).find(asset => asset?.web && canPublishAsset(asset)) || member.assetIds.map(id => byId.get(id)).find(asset => asset?.web)
     }));
   } else if (collection === 'gaps') {
     entries = manifest.gaps.map(gap => ({ name: gap.candidate || gap.label || parties.get(gap.partyId) || translate('Source unavailable'), partyId: gap.partyId, detail: gap.reason, source: gap.sourcePage, status: 'Needs follow-up' }));
@@ -73,9 +76,10 @@ function render() {
   const countLabels = collection === 'portraits' ? ['{count} candidate', '{count} candidates'] : collection === 'members' ? ['{count} MLA profile', '{count} MLA profiles'] : ['{count} item', '{count} items'];
   document.getElementById('assetCount').textContent = translateCount(visible.length, ...countLabels);
   grid.innerHTML = visible.length ? visible.map(entry => {
-    const image = entry.asset?.web;
-    const imageMarkup = image ? `<img src="${escapeHtml(localUrl(image.path))}" alt="${escapeHtml(entry.name)}" width="${image.width}" height="${image.height}" loading="lazy" decoding="async">` : `<span class="asset-placeholder">${text('No preview')}</span>`;
-    const original = entry.asset?.original;
+    const approved = canPublishAsset(entry.asset);
+    const image = approved ? entry.asset?.web : null;
+    const imageMarkup = image ? `<img src="${escapeHtml(localUrl(image.path))}" alt="${escapeHtml(entry.name)}" width="${image.width}" height="${image.height}" loading="lazy" decoding="async">` : `<span class="asset-placeholder">${text(entry.asset && !approved ? 'Publication approval pending' : 'No preview')}</span>`;
+    const original = approved ? entry.asset?.original : null;
     return `<article class="asset-item">${collection !== 'gaps' ? `<div class="asset-image ${collection === 'branding' ? 'branding' : ''}">${imageMarkup}</div>` : ''}<div class="asset-copy"><p class="asset-party">${escapeHtml(parties.get(entry.partyId))}</p><h2>${escapeHtml(entry.name)}</h2><p${['portraits', 'members', 'gaps'].includes(collection) ? ' lang="en-CA"' : ''}>${escapeHtml(entry.detail)}</p><span class="asset-status">${text(entry.status)}</span>${entry.asset?.reuse?.licenseUrl ? `<p lang="en">${escapeHtml(entry.asset.credit)} ${externalLink(entry.asset.reuse.licenseUrl, entry.asset.reuse.license)}</p>` : ''}<div class="asset-links">${externalLink(entry.source, 'Source')}${entry.statusSource && entry.statusSource !== entry.source ? externalLink(entry.statusSource, 'Status source') : ''}${original ? `<a href="${escapeHtml(localUrl(original.path))}" download>${text('Original')}</a>` : ''}</div></div></article>`;
   }).join('') : `<div class="asset-empty">${text('No matching assets')}</div>`;
 }

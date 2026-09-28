@@ -1,5 +1,5 @@
 import { mountMaps, disposeMaps, updateRidingMap, openRidingFinder, refreshMapIcons, refreshMapLanguage } from './map.js?v=riding-finder';
-import { candidateDirectory, candidateResults, partyDirectory, partyResults, partyComparison, ridingCandidates, ridingMember } from './candidates.js?v=candidate-authority';
+import { candidateDirectory, candidateResults, partyDirectory, partyResults, partyComparison, ridingCandidates, ridingMember, ridingMemberLabel } from './candidates.js?v=candidate-authority';
 import { atNominationDeadline } from './candidate-policy.js';
 import { renderPollChart, pollSeries } from './poll-chart.js';
 import { translate, setLanguage, translateElements, syncLanguageControls, formatNumber, formatPercent, formatDate } from './i18n.js';
@@ -49,7 +49,7 @@ function averages() {
   return ['ndp','con','green','one','centre'].map(id => {
     const values = recent.map(p => p.shares[id]).filter(v => Number.isFinite(v));
     return {id, count:values.length, mean: values.length >= 2 ? values.reduce((a,b)=>a+b,0)/values.length : null, min:Math.min(...values),max:Math.max(...values)};
-  });
+  }).sort((first, second) => (second.mean ?? -Infinity) - (first.mean ?? -Infinity) || first.id.localeCompare(second.id));
 }
 function currentRows(compact = false) {
   return `<div class="poll-summary">${averages().filter(x => x.mean != null).map(x => `<div><div class="poll-row"><span class="party-name">${dot(party(x.id).color)}${escapeHtml(party(x.id).ballot)}</span><div class="bar-track"><div class="bar-fill" style="--bar:${party(x.id).color};width:${Math.min(x.mean/55*100,100)}%"></div></div><span class="value">${percentage(x.mean)}</span></div>${!compact ? `<p class="range-note">${text('Observed range {min}–{max} · {count} pollsters', { min: percentage(x.min,0), max: percentage(x.max,0), count: formatNumber(x.count) })}</p>` : ''}</div>`).join('')}</div>`;
@@ -62,12 +62,13 @@ function baselineRows(limit = 9) {
   return state.election.baseline2024.popularVote.slice(0,limit).map(x => `<div class="baseline-row"><span class="label">${dot(x.color || party(x.id).color)}${escapeHtml(x.name || party(x.id).ballot)}</span><div class="bar-track"><div class="bar-fill" style="--bar:${x.color || party(x.id).color};width:${Math.max(x.share/50*100,.6)}%"></div></div><b>${percentage(x.share,x.share < 1?2:1)}</b></div>`).join('');
 }
 function mapCard(explorer = false, selectedSlug = '') {
+  const selectedName = state.election.districts.find(name => slug(name) === selectedSlug);
   return `<section class="map-section map-card ${explorer ? 'expanded-map' : ''}">
-    <div class="map-heading"><div><h2 data-i18n="British Columbia">${text('British Columbia')}</h2><p data-i18n="2024 winning party · Historical election results">${text('2024 winning party · Historical election results')}</p></div>${!explorer ? `<a class="action-link" href="${routeHref('ridings')}" data-route="ridings" data-i18n="Open explorer →">${text('Open explorer →')}</a>` : ''}</div>
+    <div class="map-heading"><div><h2 data-map-title${selectedName ? ' lang="en-CA"' : ''}>${selectedName ? escapeHtml(selectedName) : text('British Columbia')}</h2><p data-i18n="2024 winning party · Historical election results">${text('2024 winning party · Historical election results')}</p></div>${!explorer ? `<a class="action-link" href="${routeHref('ridings')}" data-route="ridings" data-i18n="Open explorer →">${text('Open explorer →')}</a>` : ''}</div>
     <div class="map-tools"><div class="map-modes" role="group" aria-label="${text('Basemap')}" data-i18n-aria-label="Basemap"><button type="button" data-map-style="street" aria-pressed="true" class="selected" data-i18n="Streets">${text('Streets')}</button><button type="button" data-map-style="satellite" aria-pressed="false" data-i18n="Satellite">${text('Satellite')}</button><button type="button" data-map-style="terrain" aria-pressed="false" data-i18n="Terrain">${text('Terrain')}</button></div>
     <div class="map-actions"><button type="button" class="map-icon-button" data-map-boundaries aria-pressed="true" aria-label="${text('Show riding boundaries')}" title="${text('Show riding boundaries')}" data-i18n-aria-label="Show riding boundaries" data-i18n-title="Show riding boundaries"><i data-lucide="layers"></i></button><button type="button" class="map-icon-button" data-map-reset aria-label="${text('Show all British Columbia')}" title="${text('Show all British Columbia')}" data-i18n-aria-label="Show all British Columbia" data-i18n-title="Show all British Columbia"><i data-lucide="maximize"></i></button><button type="button" class="map-icon-button" data-find-riding aria-label="${text('Find my riding')}" title="${text('Find my riding')}" data-i18n-aria-label="Find my riding" data-i18n-title="Find my riding"><i data-lucide="locate-fixed"></i></button></div></div>
     <div class="map-results-bar"><span data-map-count>${text('{count} ridings', { count: 93 })}</span><label class="map-results-toggle"><input type="checkbox" data-map-results-toggle checked disabled><span data-i18n="Party overlay">${text('Party overlay')}</span></label></div><div class="map-results-legend" data-map-results-legend role="list" aria-label="${text('2024 winning parties')}" data-i18n-aria-label="2024 winning parties"><span class="map-legend-loading">${text('Loading results...')}</span></div>
-    <div class="map-surface" data-riding-map data-map-results data-selected-riding="${escapeHtml(selectedSlug)}" role="region" aria-label="${text('British Columbia 2024 winning party map')}" data-i18n-aria-label="British Columbia 2024 winning party map" aria-busy="true"></div>
+    <div class="map-surface" data-riding-map data-map-results data-selected-riding="${escapeHtml(selectedSlug)}" role="region" aria-label="${selectedName ? text('Map of {riding}', { riding: selectedName }) : text('British Columbia 2024 winning party map')}" aria-busy="true"></div>
     <div class="map-source"><span data-map-caption>${text('Loading map...')}</span><div class="map-source-links"><a class="action-link" href="${escapeHtml(state.election.sources.districts)}" target="_blank" rel="noopener noreferrer" data-i18n="2024 results">${text('2024 results')}</a><a class="action-link" href="${escapeHtml(state.election.sources.boundaries)}" target="_blank" rel="noopener noreferrer" data-i18n="Boundary source">${text('Boundary source')}</a></div></div></section>`;
 }
 function closestCard() {
@@ -100,15 +101,15 @@ function districtDetail(name) {
   const ranked = record ? [...record.votes].sort((a,b)=>b.votes-a.votes) : [];
   const margin = record ? ranked[0].votes-ranked[1].votes : null;
   return `<div class="page-head riding-detail-head"><div class="riding-title"><p class="eyebrow"><a href="${routeHref('ridings')}">${text('← All ridings')}</a> / ${text('riding detail')}</p><h1 lang="en-CA">${escapeHtml(name)}</h1><p>${text('British Columbia · 2026 election · 2024 results shown for context.')}</p><span class="snapshot-pill">${text(record?'2024 verified':'Result unavailable')}</span></div>
-    <section class="riding-header-member" aria-label="${text('MLA at dissolution')}"><p class="eyebrow">${text('MLA at dissolution')}</p><div id="ridingMember" data-riding="${escapeHtml(name)}">${ridingMember(candidateManifest,name,candidateError)}</div></section></div>
-    <div class="simple-layout"><div class="poll-left"><section class="card card-pad">${panelHeader(record?'2024 final result':'2024 result unavailable','Official Elections BC source, not a 2026 projection','HISTORICAL DATA')}
+    <section class="riding-header-member" aria-labelledby="memberRoleTitle"><p class="eyebrow" id="memberRoleTitle">${escapeHtml(ridingMemberLabel(candidateManifest,name))}</p><div id="ridingMember" data-riding="${escapeHtml(name)}">${ridingMember(candidateManifest,name,candidateError)}</div></section></div>
+    <section class="riding-current-candidates">${panelHeader('2026 candidates','Elections BC determines ballot eligibility','SOURCE-BACKED')}
+    <div id="ridingCandidates" data-riding="${escapeHtml(name)}">${ridingCandidates(state.election,candidateManifest,name,candidateError)}</div>
+    ${cardBottom('Official party announcements are labelled separately.',sourceLink(state.election.sources.candidates,'Elections BC filings'))}</section>
+    <section class="riding-historical-results">${panelHeader(record?'2024 final result':'2024 result unavailable','Official Elections BC source, not a 2026 projection','HISTORICAL DATA')}
     ${record ? `<div class="stat-grid"><div class="stat-tile"><strong class="stat-number">${escapeHtml(party(ranked[0].party).ballot)}</strong><span>${text('winning affiliation')}</span></div><div class="stat-tile"><strong class="stat-number">${number.format(margin)}</strong><span>${text('vote margin')}</span></div><div class="stat-tile"><strong class="stat-number">${number.format(record.validVotes)}</strong><span>${text('valid votes')}</span></div></div>
     ${Number.isFinite(record.turnout) ? `<p class="small-note">${text('2024 turnout: {turnout} · {count} registered voters', { turnout: percentage(record.turnout,2), count: number.format(record.registeredVoters) })}</p>` : ''}
     <div class="detail-vote">${ranked.map(vote=>`<div class="detail-vote-line"><span>${dot(party(vote.party).color)}${escapeHtml(vote.name)} <span class="subtle">· ${escapeHtml(party(vote.party).ballot)}</span></span><strong>${number.format(vote.votes)} · ${percentage(vote.votes/record.validVotes*100,2)}</strong><div class="bar-track"><div class="bar-fill" style="--bar:${party(vote.party).color};width:${vote.votes/record.validVotes*100}%"></div></div></div>`).join('')}</div>` : `<p class="small-note">${text('No detailed result is included for this riding in this snapshot.')}</p>`}
-    ${cardBottom('Final 2024 count · no 2026 riding estimate.',sourceLink(record?.source || state.election.sources.districts,'Official results'))}</section></div>
-    <div class="poll-right"><section class="card card-pad">${panelHeader('2026 candidates','Elections BC determines ballot eligibility','SOURCE-BACKED')}
-    <div id="ridingCandidates" data-riding="${escapeHtml(name)}">${ridingCandidates(state.election,candidateManifest,name,candidateError)}</div>
-    ${cardBottom('Official party announcements are labelled separately.',sourceLink(state.election.sources.candidates,'Elections BC filings'))}</section></div></div>`;
+    ${cardBottom('Final 2024 count · no 2026 riding estimate.',sourceLink(record?.source || state.election.sources.districts,'Official results'))}</section>`;
 }
 function pollChart() {
   const firms = [...new Set(state.polls.releases.map(release => release.pollster))].sort();
@@ -122,7 +123,7 @@ function polls() {
     ${list.map(release => `<article class="release"><div class="release-top"><strong>${escapeHtml(release.pollster)}</strong><time datetime="${release.released}">${readableDate(release.released,{month:'short',day:'numeric',year:'numeric'})}</time></div>
       <p class="details">${text('Fieldwork')} ${readableDate(release.fieldStart)}–${readableDate(release.fieldEnd)} · n=${number.format(release.sampleTotal)} ${text('total')}${release.sampleDecided ? ` / n=${number.format(release.sampleDecided)} ${text('voting-intention sample')}` : ''} · <span lang="en">${escapeHtml(release.method)} · ${escapeHtml(release.basis)}</span></p>
       <div class="figures">${Object.entries(release.shares).map(([id,value]) => `<span>${dot(party(id).color)}${escapeHtml(party(id).ballot)} <strong>${percentage(value)}</strong></span>`).join('')}</div>
-      <p class="caption" lang="en">${escapeHtml(release.note)}</p><div class="release-sources">${sourceLink(release.source,'Original release')}${release.tables ? sourceLink(release.tables,'Data tables') : ''}</div></article>`).join('')}
+      ${release.note ? `<details class="release-notes"><summary>${text('Data notes')}</summary><p lang="en">${escapeHtml(release.note)}</p></details>` : ''}<div class="release-sources">${sourceLink(release.source,'Original release')}${release.tables ? sourceLink(release.tables,'Data tables') : ''}</div></article>`).join('')}
     </div></section><div class="poll-right"><section class="card card-pad">${panelHeader('Current average',translate('Latest release per pollster / {count} days', { count: state.polls.summaryWindowDays }),translate('{count} POLLSTERS', { count: currentPolls().length }))}<div class="poll-context"><span>${dot('#27a55d')}${text('Observed releases')}</span><span>${text('{date} snapshot', { date: readableDate(state.polls.snapshotDate) })}</span></div>${currentRows()}${cardBottom('Unweighted mean. Separately reported parties only.',`<a href="${routeHref('about')}" class="action-link">${text('Calculation details →')}</a>`)}</section>
     <section class="card card-pad">${panelHeader('Observed poll range','Minimum and maximum included values','NOT A CI')}<div class="range-list">${averages().filter(result => result.mean != null).map(result => `<div class="range-row"><span>${dot(party(result.id).color)}${escapeHtml(party(result.id).ballot)}</span><div class="range-track" style="--bar:${party(result.id).color}"><i style="left:${result.min/55*100}%;width:${(result.max-result.min)/55*100}%"></i><b style="left:${result.mean/55*100}%"></b></div><strong>${percentage(result.min,0)}–${percentage(result.max,0)}</strong></div>`).join('')}</div><p class="small-note">${text('Observed ranges show disagreement between pollsters, not sampling uncertainty.')}</p></section></div></div>`;
 }
@@ -202,7 +203,10 @@ async function loadCandidates() {
     const panel = document.getElementById('ridingCandidates');
     if (panel) panel.innerHTML = ridingCandidates(state.election,candidateManifest,panel.dataset.riding,candidateError);
     const memberPanel = document.getElementById('ridingMember');
-    if (memberPanel) memberPanel.innerHTML = ridingMember(candidateManifest,memberPanel.dataset.riding,candidateError);
+    if (memberPanel) {
+      memberPanel.innerHTML = ridingMember(candidateManifest,memberPanel.dataset.riding,candidateError);
+      document.getElementById('memberRoleTitle').textContent = ridingMemberLabel(candidateManifest,memberPanel.dataset.riding);
+    }
   }
 }
 function about() {
@@ -263,7 +267,7 @@ function render(preserveMap = false) {
       geography.className = 'detail-geography';
       geography.innerHTML = mapCard(false, view.ridingSlug);
     }
-    root.querySelector('.page-head').after(geography);
+    root.querySelector('.riding-current-candidates').after(geography);
     geography.querySelector('[data-riding-map]').dataset.selectedRiding = view.ridingSlug;
     if (retainedGeography) updateRidingMap(geography, view.ridingSlug);
   }

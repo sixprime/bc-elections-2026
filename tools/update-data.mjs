@@ -289,6 +289,38 @@ function validatePrograms(programs, election, evidence) {
   if (seen.size !== parties.size) throw new Error('Programme coverage must include every registered party, including source gaps.');
 }
 
+async function compactMap() {
+  const path = 'map/districts-map.geojson';
+  const original = await readFile(file(current, path));
+  const display = JSON.parse(original);
+  const metadata = await json(current, 'map/geography.json');
+  if (!Array.isArray(display.features) || display.features.length !== metadata.districtCount) throw new Error('Unexpected display-map feature count.');
+  let vertices = 0;
+  for (const feature of display.features) {
+    const geometry = feature.geometry;
+    if (!['Polygon', 'MultiPolygon'].includes(geometry?.type)) throw new Error('Display geometry must contain polygons.');
+    const polygons = geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.coordinates;
+    for (const polygon of polygons) for (const ring of polygon) {
+      for (let index = 0; index < ring.length; index += 1) {
+        const position = ring[index];
+        if (position.length !== 2 || !position.every(Number.isFinite)) throw new Error('Invalid display-map position.');
+        ring[index] = position.map(value => Number(value.toFixed(5)));
+        vertices += 1;
+      }
+      const unique = new Set(ring.slice(0, -1).map(position => position.join(',')));
+      const area = ring.reduce((total, position, index) => {
+        const next = ring[(index + 1) % ring.length];
+        return total + position[0] * next[1] - next[0] * position[1];
+      }, 0);
+      if (ring.length < 4 || unique.size < 3 || area === 0 || ring[0].join(',') !== ring.at(-1).join(',')) throw new Error(`Precision reduction collapses a ring: ${feature.properties?.name}`);
+    }
+  }
+  const output = Buffer.from(`${JSON.stringify(display)}\n`);
+  await save(current, path, output);
+  await saveJson(current, 'map/geography.json', { ...metadata, displayCoordinateDecimals: 5 });
+  console.log(`Display map: ${display.features.length} districts, ${vertices} vertices, ${original.length} -> ${output.length} bytes. Precise matching geometry is unchanged.`);
+}
+
 async function validate(candidateManifest) {
   const election = await json(current, 'election.json');
   const polls = await json(current, 'polls.json');
@@ -478,12 +510,13 @@ try {
   else if (command === 'source') await addSource(process.argv[3], process.argv[4], process.argv[5]);
   else if (command === 'refresh-candidates') await refreshCandidates();
   else if (command === 'prune-assets') await pruneAssets();
+  else if (command === 'compact-map') await compactMap();
   else if (command === 'cache') console.log(cachePath);
   else if (command === 'check') {
     await validate();
     console.log('Data references, source-backed quotations, required fields and file hashes are consistent.');
   } else if (command === 'help') {
-    console.log('node tools/update-data.mjs fetch <polls|election|programs|assets|map|licenses|all>\nnode tools/update-data.mjs source <id> <https-url> [group]\nnode tools/update-data.mjs refresh-candidates\nnode tools/update-data.mjs check [--sources]\nnode tools/update-data.mjs prune-assets [--apply]\nnode tools/update-data.mjs cache\n\nEdit data/ directly and review with git diff. Downloads stay in a local source cache outside the repository; BC_VOTE_SOURCE_CACHE can override its location. Changed programme data requires cached quotation evidence. Fetch updates retrieval metadata but never rewrites datasets automatically. refresh-candidates merges the cached 2026 NDP feed and the reviewed candidate-only Elections BC snapshot; other official party sources are reviewed directly. No npm packages, commit or deployment steps are run.');
+    console.log('node tools/update-data.mjs fetch <polls|election|programs|assets|map|licenses|all>\nnode tools/update-data.mjs source <id> <https-url> [group]\nnode tools/update-data.mjs refresh-candidates\nnode tools/update-data.mjs check [--sources]\nnode tools/update-data.mjs prune-assets [--apply]\nnode tools/update-data.mjs compact-map\nnode tools/update-data.mjs cache\n\nEdit data/ directly and review with git diff. Downloads stay in a local source cache outside the repository; BC_VOTE_SOURCE_CACHE can override its location. Changed programme data requires cached quotation evidence. Fetch updates retrieval metadata but never rewrites datasets automatically. refresh-candidates merges the cached 2026 NDP feed and the reviewed candidate-only EBC snapshot; other official party sources are reviewed directly. compact-map rounds only the simplified display map to five decimals and rejects collapsed rings. No npm packages, commit or deployment steps are run.');
   } else throw new Error(`Unknown command: ${command}`);
 } catch (error) {
   console.error(error.message);

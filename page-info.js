@@ -1,7 +1,7 @@
 import { translate } from './i18n.js';
 import { routePath } from './routes.js';
 
-export const publishedSite = 'https://sixprime.github.io/bc-elections-2026/';
+export const publishedSite = 'https://bcelectionguide.ca/';
 export const districtSlug = name => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
 const sections = {

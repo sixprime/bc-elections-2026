@@ -51,6 +51,7 @@ export function refreshMapIcons() {
 export function refreshMapLanguage() {
   for (const entry of maps) {
     translateElements(entry.shell);
+    updateMapContext(entry);
     const legend = entry.shell.querySelector('[data-map-results-legend]');
     if (legend) resultLegend(legend, entry.index.districts, entry.results);
     const count = entry.shell.querySelector('[data-map-count]');
@@ -81,8 +82,18 @@ export function updateRidingMap(element, slug) {
   entry.districts?.eachLayer(layer => layer.closeTooltip());
   entry.selectedSlug = slug;
   entry.surface.dataset.selectedRiding = slug;
+  updateMapContext(entry);
   resetDistrictStyles(entry);
   entry.map.invalidateSize({ pan: false, animate: false });
+}
+
+function updateMapContext(entry) {
+  const district = entry.index.districts.find(district => district.slug === entry.selectedSlug);
+  const title = entry.shell.querySelector('[data-map-title]');
+  title.textContent = district?.name || translate('British Columbia');
+  if (district) title.lang = 'en-CA';
+  else title.removeAttribute('lang');
+  entry.surface.setAttribute('aria-label', district ? translate('Map of {riding}', { riding: district.name }) : translate('British Columbia 2024 winning party map'));
 }
 
 function drawPosition(entry, center = false) {
@@ -253,6 +264,7 @@ export async function mountMaps(election) {
       const resultToggle = shell.querySelector('[data-map-results-toggle]');
       if (legend) resultLegend(legend, index.districts, results);
       maps.add(entry);
+      updateMapContext(entry);
       setBasemap(entry, selectedStyle);
       const selectedSlug = surface.dataset.selectedRiding;
       const bounds = coordinates => [[coordinates[1], coordinates[0]], [coordinates[3], coordinates[2]]];
