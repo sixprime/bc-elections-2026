@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "checkedAt": "2026-10-04T22:13:33.919Z",
+  "checkedAt": "2026-10-05T10:07:56.549Z",
   "topics": [
     {
       "id": "affordability",
@@ -81,8 +81,8 @@
       "url": "https://conservativebc.ca/our-platform/",
       "electionYear": 2026,
       "publishedOn": null,
-      "sourceSha256": "423a6814518c71c27301066b51651f529f45a138d731c8b9b684c06d0829dfa7",
-      "textSha256": "4ee3a8821fb975bb1d3f9f67584a45274bb8a64a15df5a305a50306ed1646c2a",
+      "sourceSha256": "d5443dd7340b5295f5e67201c819675ed29b36c67564c280bd3628cdc25d9e85",
+      "textSha256": "6dc3eef36090df4ba1479f507fe177aae62769942a1019c541ca79581c108a43",
       "kind": "programme-update"
     },
     {
@@ -855,6 +855,40 @@
       "publishedOn": "2026-10-02",
       "sourceSha256": "e1503aea60a078c5231fa418b8d38b75ed2d39e0a891fde1a3fdcf76aa554362",
       "textSha256": "04909767f89d047dc14910dd129d79e7df24d34f197c3da04115f1666fd150fb"
+    },
+    {
+      "id": "program-canwest-mission",
+      "title": "CANWEST PARTY",
+      "publisher": "CanWest Party",
+      "url": "http://canwestparty.ca/mission.htm",
+      "kind": "policy-page",
+      "electionYear": null,
+      "publishedOn": null,
+      "sourceSha256": "a6199d9036d4b669f15845d5ff18b7b3a9f7bf696907b95afdc67635c32471be",
+      "textSha256": "aa900c37c2487d69555d695d1fd3881ed0adc5cb2d90112eea7d30aa94ee0ad5",
+      "allowInsecureHttp": true
+    },
+    {
+      "id": "program-ndp-fair-share",
+      "title": "To build B.C. strong, Eby will ask the wealthy to pitch in a bit more",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/build-bc-strong-eby-will-ask-wealthy-pitch-bit-more",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-04",
+      "sourceSha256": "9fc3e3b12102b48d4f4c7414a1239e698433e3cd7b9d5c7561cff227b504f23c",
+      "textSha256": "65c1ec4370b90e4c8ddd512532e8f7f1fe8a2c0b3f48ee07765ede50cdfc7e74"
+    },
+    {
+      "id": "program-green-forestry",
+      "title": "BC Greens announce plan to reform forestry sector, protecting forests, jobs, and communities - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/announce-plan-to-reform-forestry-sector-protecting-forests-jobs-and-communities/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-04",
+      "sourceSha256": "f0b90ed85a114db9be89225f3f21dc554da1f0900703792cf9248b78a21b997a",
+      "textSha256": "19c1fac1caec531a2814d69b47eed30a6df31ab817e5e4d17477d6fc417d015b"
     }
   ],
   "parties": [
@@ -870,7 +904,8 @@
         "program-ndp-lng",
         "program-ndp-gas-prices",
         "program-ndp-groceries",
-        "program-ndp-wildfire-support"
+        "program-ndp-wildfire-support",
+        "program-ndp-fair-share"
       ],
       "quotes": [
         {
@@ -1073,6 +1108,14 @@
           "speaker": "David Eby",
           "text": "Our expanded campaign will highlight that we will protect a woman’s right to choose and that doctors never have to navigate a for-profit system, which bankrupts half a million Americans every year.",
           "textSha256": "57ed5cfa0aa03c5c338b801dcba053bfa6333430709f22ffcb4b1c3a52fa7f0e"
+        },
+        {
+          "id": "top-earners-tax",
+          "topic": "affordability",
+          "sourceId": "program-ndp-fair-share",
+          "speaker": "BC NDP",
+          "text": "Over 96% of residents, individuals who make $190,000 or less, will see no tax increase. The highest earners will pay slightly more through a 2% point increase on the top two tax brackets and a new bracket for income over a million dollars.",
+          "textSha256": "dfedb4a68a0ac74697c8983f1213335cca7836249d21e6efafee4b647e0ac5fc"
         }
       ]
     },
@@ -1273,6 +1316,96 @@
           "speaker": "Conservative Party of British Columbia",
           "text": "This plan will buy water bombers, clear dangerous fuels, speed up safe prescribed burns, help crews work together faster, and fund early detection technology.",
           "textSha256": "7a83d7e0167fc11b68249390e68257aa3a3a7f828ac23f47195262db97e98889"
+        },
+        {
+          "id": "platform-housing",
+          "topic": "housing",
+          "sourceId": "program-con-platform",
+          "locator": "Get BC Building",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "A plan to end the housing shortage and make life more affordable.",
+          "textSha256": "f704318aa41795540fc5ec93acae4309b8ef3adb665dde47fdc616b9fd5613d3"
+        },
+        {
+          "id": "platform-patients",
+          "topic": "health",
+          "sourceId": "program-con-platform",
+          "locator": "Putting Patients First",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "Expanding Access to Care and Ending Long Wait Times",
+          "textSha256": "6f621d08544486e8cf0930a5a25006f9566c15b9ff3c6df925b8b47f529a067e"
+        },
+        {
+          "id": "platform-reproductive",
+          "topic": "health",
+          "sourceId": "program-con-platform",
+          "locator": "Next Gen Reproductive Health",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "A plan for next generation reproductive healthcare will raise reproductive supports to the standard that women deserve.",
+          "textSha256": "c00eb335cc2949750edd4d1bcdea9c6e2d9fc69107b94e53dd95e87ad0fbc5b8"
+        },
+        {
+          "id": "platform-education",
+          "topic": "education",
+          "sourceId": "program-con-platform",
+          "locator": "Excellence in Education",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "A plan for common sense change to put learning first and restore excellence in education.",
+          "textSha256": "ae83d5183f27cc76000fc50ad1136dea64738d376d36f2a497359ed3a065ff74"
+        },
+        {
+          "id": "platform-childcare",
+          "topic": "education",
+          "sourceId": "program-con-platform",
+          "locator": "Common Sense Childcare",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "A plan to expand the supply of affordable childcare spots, work in partnership with independent childcare providers, and give parents the resources they need.",
+          "textSha256": "944e5e422c379df2f46be91971cf4a6a298a22238803e2e99105471b02bec5fb"
+        },
+        {
+          "id": "platform-recovery",
+          "topic": "addiction",
+          "sourceId": "program-con-platform",
+          "locator": "BC Recovers",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "A plan to end the overdose and addictions crisis, save lives, and help people get their lives back on track.",
+          "textSha256": "a3e6921bc5d7cda5772376905269217ca95f2906d0df3a7fd615de48df294894"
+        },
+        {
+          "id": "platform-safety",
+          "topic": "justice",
+          "sourceId": "program-con-platform",
+          "locator": "Safe and Secure",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "A plan to restore public safety and rebuilding confidence in our justice system.",
+          "textSha256": "8f129ea2d455d84bced67acc4f726c7b764eb3eb2240ea3d64d07224404169a5"
+        },
+        {
+          "id": "platform-moving",
+          "topic": "transport",
+          "sourceId": "program-con-platform",
+          "locator": "Get BC Moving",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "Conservatives will do what it takes to get BC moving again, in every part of the province.",
+          "textSha256": "3d4c28aacfee639ee261c44a8fb51283bac9500173f801b6820d610a83daf269"
+        },
+        {
+          "id": "platform-reconciliation",
+          "topic": "indigenous",
+          "sourceId": "program-con-platform",
+          "locator": "Economic Reconciliation, Healthy Communities",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "A plan for real partnerships, economic development, and respect for Indigenous governance.",
+          "textSha256": "97cbc87371a08ac98f1fcd2fc01bbb1ee569d4953ba5a80d591e29d29785f54a"
+        },
+        {
+          "id": "platform-food",
+          "topic": "economy",
+          "sourceId": "program-con-platform",
+          "locator": "Grown in BC",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "A plan to double our food production, strengthen our economic base, and establish food security for BC.",
+          "textSha256": "bbea9cf3c0565771d9c8bd792cda35b6bc866c417dccf2eca1603e98b88f9f10"
         }
       ]
     },
@@ -1294,7 +1427,8 @@
         "program-green-drugs",
         "program-green-ai",
         "program-green-coast",
-        "program-green-seniors"
+        "program-green-seniors",
+        "program-green-forestry"
       ],
       "quotes": [
         {
@@ -1605,6 +1739,22 @@
           "speaker": "BC Green Party",
           "text": "We will require all police services to collect and publicly report disaggregated race-based and other demographic data.",
           "textSha256": "8e9c9b20736fadd6c0d90fbe7aedb09743bc97cc97908f5fb7dd5f6cf2a0f309"
+        },
+        {
+          "id": "forest-planning",
+          "topic": "environment",
+          "sourceId": "program-green-forestry",
+          "speaker": "BC Green Party",
+          "text": "Reject the “Working Forest Model” and set sustainable harvest levels through regional, area-based forest planning.",
+          "textSha256": "1bee896caf60b2ef014d0f14a654fc658b03b5b32857d592dbbcdf16096ee481"
+        },
+        {
+          "id": "raw-logs",
+          "topic": "economy",
+          "sourceId": "program-green-forestry",
+          "speaker": "BC Green Party",
+          "text": "End raw-log exports and close loopholes that allow minimally processed or rough-sawn wood to leave British Columbia without meaningful processing.",
+          "textSha256": "6593361d4b84e6db5d568ce22083f5210406f5d96ea4a581e66103bafa567478"
         }
       ]
     },
@@ -2512,7 +2662,8 @@
     {
       "id": "canwest",
       "sourceIds": [
-        "program-canwest-platform"
+        "program-canwest-platform",
+        "program-canwest-mission"
       ],
       "quotes": [
         {
@@ -2522,6 +2673,46 @@
           "sourceId": "program-canwest-platform",
           "speaker": "CanWest Party",
           "textSha256": "f7df923873ff3348697def2d8d90ad98e9a83738dcf05e31ebed0cb2d32c2719"
+        },
+        {
+          "id": "no-drugs",
+          "topic": "addiction",
+          "sourceId": "program-canwest-mission",
+          "speaker": "CanWest Party",
+          "text": "No drugs, developing the city economy, promote community safety, foster harmonious neighborly relations, ensure equality among all races, and create a better environment.",
+          "textSha256": "15d748b55dc976f010d32a960479cdc265853f507a695ee3263615546188274f"
+        },
+        {
+          "id": "local-jobs",
+          "topic": "economy",
+          "sourceId": "program-canwest-mission",
+          "speaker": "CanWest Party",
+          "text": "We encourage and assist local industrial and commercial enterprises to invest and create more job opportunities for BC.",
+          "textSha256": "745ecdc46713dc18eea02294a918dc317e1e3bebc2bad6e3a103acf738daaada"
+        },
+        {
+          "id": "public-security",
+          "topic": "justice",
+          "sourceId": "program-canwest-mission",
+          "speaker": "CanWest Party",
+          "text": "Strengthen public security to ensure residents can live in a safe city.",
+          "textSha256": "daece7191155b35121ee10a27c049791690f9f6eaaf2c80f94e2eaaa67f2fab4"
+        },
+        {
+          "id": "harmony",
+          "topic": "rights",
+          "sourceId": "program-canwest-mission",
+          "speaker": "CanWest Party",
+          "text": "We advocate for harmonious coexistence among all ethnic groups, mutual respect, mutual understanding, and mutual assistance.",
+          "textSha256": "6bedd88098f944f143acef7e072d4ff7f984113db372d223ddab9cd7945c718f"
+        },
+        {
+          "id": "environment",
+          "topic": "environment",
+          "sourceId": "program-canwest-mission",
+          "speaker": "CanWest Party",
+          "text": "Strengthen environmental protection and strive to create a garden-like city.",
+          "textSha256": "a98b8331bb996d5fa6c6d127b2b2e3ff248763cfdac5025d3b9f9a9ae5f194c4"
         }
       ]
     },

@@ -150,17 +150,19 @@ interpret, assess, judge or comment on a party's programme. Do not turn missing
 review data into claims about what a party has or has not proposed. Readers must
 be able to distinguish the original words from navigation and source metadata.
 
-The schema-v2 dataset has 14 party records, 176 selected excerpts and
-73 source records. It contains no policy summaries, assessments or commentary.
-Each excerpt appears inside visible quotation marks, labelled as a verbatim
-excerpt, with its speaker or publishing party, source title, publication date
-or year when recorded, and a link to the full original. The excerpts are not
+The schema-v2 dataset has 14 party records, 194 selected excerpts and
+76 source records. It contains no policy summaries, assessments or commentary.
+Each excerpt appears inside visible quotation marks, with its speaker or
+publishing party, source title, publication date or year when recorded, and a
+link to the full original. The excerpts are not
 presented as complete platforms. Entire copyrighted documents are linked, not
 republished.
 
 The Conservative record includes 12 exact excerpts (184 words combined) from its
-official Policy Declaration, adopted March 1, 2025. The platform-page placeholder
-is retained as a source link but is not counted as policy. Coverage spans 12 topics.
+official Policy Declaration, adopted March 1, 2025. Its Our Platform page lists
+the party's 2026 plans with one-line summaries while the detailed plans are still
+marked coming soon; ten summaries are quoted, with each plan name as the locator.
+Coverage spans 12 topics.
 The former Other topics category is removed; its sole CanWest statement belongs
 to Economy & resources, with its wording and source unchanged.
 The 2025 document is not labelled as a newly
@@ -185,6 +187,14 @@ reordered text in extraction, so it is linked without excerpts. The NDP Action f
 You page and the Communist platform page were rewritten by their parties; their
 source fingerprints were refreshed and only quotations present in the current text
 were kept or replaced. Retained earlier evidence remains in the cache.
+
+The October 5 audit refreshed every programme source and confirmed that each
+recorded quotation still appears in its party's current page. It added CanWest's
+mission page, which its homepage links only through an image menu without text
+(five statements), the ten Conservative plan summaries, the NDP's October 4 tax
+release and the Greens' October 4 forestry plan. CanWest's March 29 press release
+(`event.htm`) is written only in Chinese and is not quoted. The register's BC
+Party domain had no web host and the BC United site returned no content.
 
 Four party records still have no verified programme document: BC Party, BC United,
 B.C. Vision and Party of Citizens. NDP coverage comes from its official

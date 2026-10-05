@@ -359,7 +359,7 @@ documents and the number of topics with recorded excerpts. Source kinds distingu
 election platforms, policy declarations, policy pages, campaign announcements,
 record/priorities pages, vision statements and document indexes. Counts describe
 this guide, not whether a party has a policy. The current selection contains
-176 exact excerpts from 73 source records, not 14 complete reproduced programmes.
+194 exact excerpts from 76 source records, not 14 complete reproduced programmes.
 A later October 4 audit added statements where a party's own documents covered a
 topic with no recorded statement: Green justice and public safety (2024
 platform), Communist health care, NDP transport (Prince Rupert port network) and
@@ -372,7 +372,12 @@ extracted, so it has no excerpts), Greens (8 plus their Our Plan page) and the
 CHP's 2026 Platform Priorities. The NDP Action for You page and the Communist
 platform were rewritten by their parties; their excerpts now come from the
 current versions. The Green 2024 platform, CHP policy statement revised in 2023
-and Libertarian 2026 index linking earlier articles are explicitly dated. A
+and Libertarian 2026 index linking earlier articles are explicitly dated.
+An October 5 audit refreshed every programme source, confirmed all recorded
+quotations are still on the parties' current pages, and added CanWest's mission
+page, the Conservative platform page's plan summaries, the NDP's October 4 tax
+plan and the Greens' October 4 forestry plan. CanWest's Chinese-only press
+release is not quoted. A
 current full NDP platform and programme documents for BC Party, BC United,
 B.C. Vision and Party of Citizens remain unverified in this guide.
 
