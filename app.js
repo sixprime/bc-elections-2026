@@ -1,5 +1,5 @@
 import { mountMaps, disposeMaps, updateRidingMap, openRidingFinder, refreshMapIcons, refreshMapLanguage } from './map.js?v=riding-finder';
-import { candidateDirectory, candidateResults, partyDirectory, partyResults, partyComparison, ridingCandidates, ridingMember, ridingMemberLabel } from './candidates.js?v=party-layout';
+import { candidateDirectory, candidateResults, partyDirectory, partyResults, partyComparison, ridingCandidates, ridingMember, ridingMemberLabel } from './candidates.js?v=statement-sources';
 import { atNominationDeadline } from './candidate-policy.js';
 import { renderPollChart, pollSeries } from './poll-chart.js';
 import { translate, setLanguage, translateElements, syncLanguageControls, formatNumber, formatPercent, formatDate } from './i18n.js';

@@ -279,8 +279,6 @@ const french = {
   '{count} quotations': '{count} citations',
   'All excerpts': 'Toutes les citations',
   'No quotation recorded for this topic.': 'Aucune citation enregistrée pour ce sujet.',
-  'Original sources / full text': 'Sources originales / texte intégral',
-  'No source recorded.': 'Aucune source enregistrée.',
   'Programme topics': 'Sujets des programmes',
   'No quotation recorded for this selection.': 'Aucune citation enregistrée pour cette sélection.',
   'No matching quotations': 'Aucune citation correspondante',

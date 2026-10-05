@@ -338,9 +338,8 @@ no internal vertical scrollbar. The navigation stays available while scrolling
 down the table; at wide desktop widths, headings also stay visible when the
 table fits.
 Both views display only selected verbatim statements in visible quotation marks,
-with attribution, source dates and links to the original full text. A party's
-source list for a topic shows only the documents its displayed statements come
-from; with no statement on a topic, no source is listed for it.
+with attribution, source dates and links to the original full text. Each
+statement carries its own source link, so topics have no separate source list.
 There are no paraphrased policies, editorial assessments or inferred cost and
 implementation rows.
 

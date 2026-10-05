@@ -154,7 +154,7 @@
 .party-program-details>summary>span:last-child{font-size:var(--font-label);font-weight:400;color:var(--text-muted);margin-left:12px;white-space:nowrap}
 .party-program-body{padding:8px 8px 0}
 .program-topic{display:grid;grid-template-columns:180px minmax(0,1fr);gap:20px;border-top:1px solid #dce5eb;padding:18px 0}
-.program-topic h3,.program-quotes h3,.program-sources h3{font-size:15px;line-height:1.4;margin:0;color:#24445c;letter-spacing:0}
+.program-topic h3,.program-quotes h3{font-size:15px;line-height:1.4;margin:0;color:#24445c;letter-spacing:0}
 .program-policy+.program-policy{margin-top:18px;padding-top:16px;border-top:1px solid #e4ebf0}
 .program-policy-heading{display:flex;align-items:baseline;justify-content:space-between;gap:8px 16px;flex-wrap:wrap}
 .program-policy h4{font-size:14px;line-height:1.4;margin:0;color:#193b53}
@@ -162,7 +162,7 @@
 .program-policy p{font-size:13px;line-height:1.65;margin:7px 0 8px;max-width:80ch}
 .program-citation{display:flex;flex-wrap:wrap;gap:5px 12px;font-size:var(--font-label);line-height:1.5;color:var(--text-muted)}
 .program-citation a{font-weight:650}
-.program-quotes,.program-sources{border-top:1px solid #d5e0e7;padding:18px 0 0;margin-top:4px}
+.program-quotes{border-top:1px solid #d5e0e7;padding:18px 0 0;margin-top:4px}
 .program-quote{margin:16px 0 20px;padding:0 0 0 16px;border-left:3px solid #9db6c7;max-width:90ch}
 .program-quote-label{display:block;font-size:var(--font-label);font-weight:700;color:var(--text-muted);line-height:1.5;margin-bottom:7px}
 .program-quote-count{display:block;font-size:var(--font-label);font-weight:400;color:var(--text-muted);line-height:1.5}
@@ -170,10 +170,7 @@
 .program-quote blockquote p{font-size:16px;line-height:1.6;margin:0 0 9px;color:#234359}
 .program-quote figcaption{font-size:var(--font-label);color:var(--text-muted);line-height:1.5}
 .program-quote figcaption p{margin:4px 0 7px}
-.program-sources ul{padding-left:19px;display:grid;gap:14px;margin:14px 0 0}
-.program-sources li>a{font-size:13px;font-weight:650}
-.program-sources li>span{display:block;font-size:var(--font-label);line-height:1.5;color:var(--text-muted);margin-top:3px}
-.program-sources li>p,.program-empty{font-size:var(--font-label);line-height:1.6;color:var(--text-muted);margin:5px 0 0;max-width:90ch}
+.program-empty{font-size:var(--font-label);line-height:1.6;color:var(--text-muted);margin:5px 0 0;max-width:90ch}
 .program-controls :focus-visible,.party-program-details>summary:focus-visible{outline:2px solid #176ba6;outline-offset:3px}
 .program-view-tabs{display:flex;gap:24px;border-bottom:1px solid #bccdd8;margin-bottom:22px}
 .program-source-library{margin:0 0 24px;border-block:1px solid var(--line);font-size:14px;line-height:1.6}
@@ -257,9 +254,6 @@
 .comparison-row-quotes{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:24px 32px;align-items:start}
 .comparison-row-quotes .program-quote{max-width:none;margin:0}
 .comparison-row-quotes .comparison-missing{grid-column:1/-1}
-.comparison-row-sources{margin-top:16px;font-size:14px;line-height:1.5}
-.comparison-row-sources>summary{cursor:pointer;padding:10px 0;min-height:44px;color:var(--ink);font-weight:650}
-.comparison-row-sources .comparison-sources{padding:8px 0 16px;overflow-wrap:anywhere}
 @media(max-width:720px){.comparison-navigation{position:static}.comparison-view :is(.comparison-table-region,.comparison-segmented,.comparison-columns-choice,.comparison-range-controls,.comparison-pin-navigation,.comparison-scrollbar){display:none}.comparison-view .comparison-rows{display:block}.comparison-choice{flex:1 1 140px;min-width:0}.comparison-row-party{display:block;padding:20px 0}.comparison-row-party>header{position:static;flex-direction:row;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:18px}.comparison-row-party>header>div{flex:1;min-width:150px}.comparison-row-party .candidate-party-logo{width:90px;height:44px}.comparison-row-quotes{display:block}.comparison-row-quotes .program-quote{margin:14px 0 20px}}
 .comparison-table{width:100%;min-width:calc(var(--comparison-columns)*var(--comparison-column-width));table-layout:fixed;border-collapse:separate;border-spacing:0;text-align:left;color:#29485e}
 .comparison-table thead th{position:sticky;top:0;z-index:2;background:#f4f8fa;border-top:2px solid #9eb9ca;border-bottom:1px solid #b7cbd7;padding:16px 12px;text-align:left;vertical-align:top}
@@ -290,9 +284,6 @@
 .comparison-table .program-quote{border-left-width:2px;padding-left:12px;margin:0}
 .comparison-table .program-quote+.program-quote{margin-top:20px}
 .comparison-table .program-quote blockquote p{font-size:14px;line-height:1.6}
-.comparison-sources{list-style:none;padding:0;margin:0;display:grid;gap:16px}
-.comparison-sources li>a{display:block;font-size:var(--font-label);font-weight:650;line-height:1.5}
-.comparison-sources li>span{display:block;color:var(--text-muted);font-size:var(--font-label);line-height:1.5;margin-top:4px}
 .program-topic-index{display:flex;flex-wrap:wrap;gap:6px 18px;padding:0 0 16px}
 .program-topic-index button{border:0;background:none;padding:4px 0;font-size:var(--font-label);line-height:1.5;color:#176ba6;text-decoration:underline;text-underline-offset:3px;text-align:left}
 .program-topic h3[id]{scroll-margin-top:24px}

@@ -92,8 +92,10 @@ git diff -- data
 Before running `refresh-candidates`, review the downloaded Elections BC candidate
 list and update [assets/sources/accepted-candidates.json](assets/sources/accepted-candidates.json).
 Each candidate row permits only `name`, `district` and `partyId`; a blank official
-party field means `unaffiliated`, not `independent`. Record its exact source URL,
-SHA-256 and retrieval timestamp. The registered `elections-bc-candidates` source is
+party field means `unaffiliated`, not `independent`. Official party fields use
+registered abbreviations, such as `CWP` for `canwest`, which the guide displays
+as CanWest Party. Record the list's exact source URL, SHA-256 and
+retrieval timestamp. The registered `elections-bc-candidates` source is
 the candidate-list page, which states that it shows the final candidates; the
 `elections-bc-candidates-csv` download is a cross-check. The CSV is Windows-1252,
 not UTF-8, and also contains agent columns, so read only its candidate columns.
@@ -246,7 +248,7 @@ accepts Left/Right for columns (Scroll) or groups (Pages), and Home/End for the
 beginning/end. When all selected parties are pinned, these keys navigate the
 pinned group instead. Movement never wraps and respects reduced-motion preferences.
 At phone widths up to 720 px, each selected party has a vertical section with
-the same quotations and collapsible source links, without sideways scrolling.
+the same quotations, without sideways scrolling.
 Desktop columns never wrap into multiple rows.
 The table expands to its full height with the page, with no internal vertical
 scrollbar. Navigation stays available while the page scrolls; at wide desktop
@@ -255,10 +257,10 @@ pinning and both navigation positions persist across resizing, view and language
 changes. Changing the topic resets the unpinned position while restoring that
 topic's selection. A pin is removed when its party leaves the comparison.
 
-The rows contain quotations and original sources only. Explore a party offers
-the same excerpts with search and a topic index. Empty states say that no
-quotation is recorded for that selection; they do not infer a position. No
-separate cost, implementation or timetable assessment is generated.
+The table contains quotations only, each with its own source link. Explore a
+party offers the same excerpts with search and a topic index. Empty states say
+that no quotation is recorded for that selection; they do not infer a position.
+No separate cost, implementation or timetable assessment is generated.
 
 The source-coverage panel lists every registered party, full-document links,
 source kinds, dates and recorded topic counts. It is also present in the static
