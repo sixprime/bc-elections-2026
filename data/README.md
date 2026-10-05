@@ -75,10 +75,12 @@ Portrait availability is not a condition for including a verified candidate.
 Party sources cannot establish an **accepted** nomination: that status requires
 the current Elections BC candidate list.
 
-The current catalogue has 125 candidates: NDP 42, Conservative 59, CentreBC 8,
-Green 7, OneBC 7, one independent and one unaffiliated. Eight nominations are
-accepted by Elections BC in the retrieved provisional list. One riding assignment
-remains unresolved. Missing photos are explicitly marked rather than fabricated.
+The catalogue follows the final Elections BC list retrieved on October 4, 2026:
+355 accepted candidates in 93 ridings (NDP 92, Conservative 93, Green 73,
+CentreBC 35, OneBC 33, Libertarian 4, Communist 4, CHP 3, CanWest 2, Freedom 1,
+independent 7, unaffiliated 8). Two earlier party-announced records, Kim Lockhart
+(CentreBC) and Brent Chapman (OneBC), are not on the final ballot and are kept as
+`not-on-ballot`. Missing photos are explicitly marked rather than fabricated.
 
 ```sh
 node tools/update-data.mjs fetch election
@@ -87,14 +89,18 @@ node tools/update-data.mjs check --sources
 git diff -- data
 ```
 
-Before running `refresh-candidates`, review the downloaded Elections BC PDF and
-update [assets/sources/accepted-candidates.json](assets/sources/accepted-candidates.json).
+Before running `refresh-candidates`, review the downloaded Elections BC candidate
+list and update [assets/sources/accepted-candidates.json](assets/sources/accepted-candidates.json).
 Each candidate row permits only `name`, `district` and `partyId`; a blank official
 party field means `unaffiliated`, not `independent`. Record its exact source URL,
-SHA-256 and retrieval timestamp. The official PDF URL is case-sensitive and
-currently ends in `.PDF`. `final` stays false until Elections BC publishes the
-complete final list after the nomination deadline. The page's current list is
-provisional, and absence from it before the deadline is not proof of withdrawal.
+SHA-256 and retrieval timestamp. The registered `elections-bc-candidates` source is
+the candidate-list page, which states that it shows the final candidates; the
+`elections-bc-candidates-csv` download is a cross-check. The CSV is Windows-1252,
+not UTF-8, and also contains agent columns, so read only its candidate columns.
+The older `Candidate-Website-Report.PDF` still listed only 286 of the 355 final
+rows on October 4 and is no longer used. Before reconciling, align a party-announced
+record's name with the ballot name only when the same party has that riding; keep
+its identifier so its portrait remains attached.
 
 The refresh command merges the cached `cand2026` NDP feed and the sanitized
 official records by identity and riding. It imports only approved fields,
@@ -123,9 +129,10 @@ final list after it is available; the client does not scrape Elections BC at run
 
 ### Financial-Agent Privacy
 
-Do not publish candidates' financial-agent names, addresses or telephone numbers.
-The candidate PDF carries use restrictions; the guide needs candidate identities,
-not agent contacts. Keep the original PDF in the external cache, not in `data/`.
+Do not publish candidates' financial-agent or official-agent names, addresses or
+telephone numbers. The official candidate list carries use restrictions; the guide
+needs candidate identities, not agent contacts. Keep the original page, CSV and any
+PDF in the external cache, not in `data/`.
 Only the sanitized candidate-only record and source URL/hash are published.
 
 PDF text visitors can merge adjacent columns into one string. Exclude agent
@@ -141,8 +148,8 @@ interpret, assess, judge or comment on a party's programme. Do not turn missing
 review data into claims about what a party has or has not proposed. Readers must
 be able to distinguish the original words from navigation and source metadata.
 
-The schema-v2 dataset has 14 party records, 120 selected excerpts and
-45 source records. It contains no policy summaries, assessments or commentary.
+The schema-v2 dataset has 14 party records, 176 selected excerpts and
+73 source records. It contains no policy summaries, assessments or commentary.
 Each excerpt appears inside visible quotation marks, labelled as a verbatim
 excerpt, with its speaker or publishing party, source title, publication date
 or year when recorded, and a link to the full original. The excerpts are not
@@ -168,10 +175,20 @@ record-and-priorities, vision-statement, party-website, source-index or
 programme-update. Original dates stay attached to older documents; a link from
 a 2026 index does not change an article's original publication date.
 
+The October 4 campaign audit added 28 dated official sources: nine NDP campaign
+releases, eight Conservative releases and statements plus the linked BC Energy
+Superpower Plan PDF, eight Green releases plus the Green Our Plan page, and the
+CHP's 2026 Platform Priorities. The energy plan PDF has letter-spaced and
+reordered text in extraction, so it is linked without excerpts. The NDP Action for
+You page and the Communist platform page were rewritten by their parties; their
+source fingerprints were refreshed and only quotations present in the current text
+were kept or replaced. Retained earlier evidence remains in the cache.
+
 Four party records still have no verified programme document: BC Party, BC United,
-B.C. Vision and Party of Citizens. NDP coverage currently comes from its official
-record/priorities page, not a verified complete current platform. These are gaps in
-this guide's evidence, not claims about what the parties have or have not proposed.
+B.C. Vision and Party of Citizens. NDP coverage comes from its official
+record/priorities page and dated campaign releases, not a verified complete current
+platform. These are gaps in this guide's evidence, not claims about what the parties
+have or have not proposed.
 
 ### Source Verification
 
@@ -265,8 +282,13 @@ candidacy. Preserve image attribution and source-specific reuse terms.
 
 Public renderers require the strict boolean `reuse.publishApproved: true` for
 portraits, logos and gallery downloads/previews. Source availability is not
-publication approval. Keep pending assets' flags and original evidence intact;
-the rendering rule does not remove existing files from the static host or Git.
+publication approval. Withheld images (any flag other than `true`) must not be
+stored under `data/`: keep their original and web files in the Git-ignored
+`private-images/` folder at the repository root, using the same relative paths,
+and keep their manifest records, hashes and source sidecars. `check` rejects a
+withheld image under `data/` and, when `private-images/` exists, verifies every
+private copy against its manifest hash. Publishing an image after permission
+means moving its files back under `data/` and setting the flag to `true`.
 
 `node tools/update-data.mjs compact-map` rounds only the simplified display map
 to five decimals, retaining all 93 features and 92,929 positions. The command

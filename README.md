@@ -81,8 +81,8 @@ and are controlled by the search/social services.
 - Navigation follows Province, Ridings, Parties, Candidates, Polls, About. The mobile bottom bar uses the first five destinations, with Map / Carte as the short riding label and a full accessible name; About remains in the menu and footer. The countdown explicitly refers to election day, not the start of advance voting.
 - Searchable list of all 93 electoral districts, with source-checked 2024 vote tables and 2026 candidate records on riding pages. Complete result snapshots are checked against district, party and seat totals.
 - Candidate directory grouped by all registered parties, with alphabetical names, portraits, riding links and filters. A logo strip jumps to each party; Top restores the previous position. Accepted nominations and party announcements remain distinct.
-- Dated directory of every entry in Elections BC's September 25 party register PDF. The PDF contains 14 entries, though Elections BC's summary page currently says 13. The app follows the dated register and explains the difference.
-- A selected archive of 32 original polling releases from 2017-2026, with source links, field dates, sample and method. The current average still uses the newest release per firm in the 14-day snapshot window.
+- Dated directory of every entry in Elections BC's October 3 party register PDF. The PDF contains 14 entries, though Elections BC's summary page currently says 13. The app follows the dated register and explains the difference.
+- A selected archive of 38 original polling releases from 2017-2026, with source links, field dates, sample and method. The current average still uses the newest release per firm in the 14-day snapshot window.
 - Separate, explicit areas for 2024 official results, 2026 professional polls and current candidate filings. There is **no seat forecast, riding projection, live ballot collection, or fabricated candidate data**.
 - About retains the source and methodology notes and ends with a contact link to `contact@bcelectionguide.ca`, also available in the shared footer. Email opens the user's mail client; no contact-form service is configured. Existing `#methodology` links still open About.
 - Community Ballot is removed from navigation and routing. It may return as a separately designed future feature; the previous prototype remains in Git history.
@@ -200,22 +200,41 @@ the public candidate page's official-filing rules.
 
 Public portraits, logos, inventory previews and original-download links require
 `asset.reuse.publishApproved === true`, enforced by [asset-policy.js](asset-policy.js).
-All 179 currently recorded assets are enabled for publication at the site
-operator's explicit request on September 28, 2026. Source credits, licence terms,
-rights-review statuses and file hashes are unchanged; this editorial approval
-does not assert a new licence or permission from a third party. The gate remains
+On October 4, 2026, the site operator withheld every image: all 314 recorded
+assets (portraits, logos and press materials) have `publishApproved: false`
+while written permission is requested from the parties. Re-enable a party's
+images only after its written permission has been received and kept on file;
+the two freely licensed Wikimedia Commons files (one CC BY-SA 4.0 portrait and
+one public-domain logo) need no permission and are withheld only by choice.
+Source credits, licence terms,
+rights-review statuses and file hashes are unchanged. The gate remains
 available for future additions. Missing artwork remains unavailable rather than
-being fabricated. This is a rendering gate, not access control: files already
-tracked under `data/` still exist at their direct URLs.
+being fabricated. Withheld image files are not published at all: they are kept
+outside `data/` in a local `private-images/` folder with the same relative
+paths, which Git ignores through `.git/info/exclude`. `check` rejects a withheld
+image under `data/` and verifies the private copies when that folder is present.
+To publish a party's images after its permission arrives, move those files back
+to the same paths under `data/`, set `publishApproved: true`, run `check` and
+regenerate the pages. Images committed before October 4 remain in Git history.
 Unavailable or unverified websites are labelled rather than guessed.
 CanWest's official website is HTTP-only and is labelled accordingly.
 
-The 125-candidate catalogue currently has 123 verified portraits. Thirty missing
-portraits were recovered from official party candidate cards, feeds and profiles,
-with original bytes, WebP derivatives, source credits and SHA-256 hashes retained.
-Monica Mohan and Jordan Kealy still have no verified, reusable public portrait in
-the catalogue. Kealy's identifiable campaign social page requires login; restricted
-Legislature images and unrelated search-result photos were not substituted.
+The final ballot has 355 candidates; portraits are recorded for 262 of them, but
+none is currently shown (see above). The October 4
+update added 124 portraits from official party directories and feeds (NDP 26,
+Conservative 34, Green 31, CentreBC 20, OneBC 9, Libertarian 2, CHP 2), matched
+only where the same party lists the same riding. A Green directory placeholder
+image shared by 35 candidate cards was removed rather than shown as a portrait.
+Eleven more official party photos were found later that day: 2026 NDP
+headshots of Norma Blissett and Gloria Morgan; the Libertarian 2026 page photo
+of Alex Joehl; a 2024 Communist Party photo of Kimball Cariou; and BC Greens
+2024 candidate photos, identified by the party's own captions, of Randy Thompson,
+Douglas Gook, Nicola Spurling, Nicole Charlwood, Melissa Snazell, Tim Binnema
+and Adam Hawk. Original bytes, WebP derivatives, source credits and SHA-256
+hashes are retained. The other 93 candidates, including all independent and
+unaffiliated candidates and Jordan Kealy, have no verified party-source or freely
+licensed portrait; restricted Legislature images, social-media photos and
+unrelated search-result photos were not substituted.
 Public availability alone is not unrestricted reuse permission; existing
 source-owner credits and permission-review flags remain attached to the images.
 
@@ -234,13 +253,16 @@ retains that licence. The artwork review includes a separate MLA collection.
 
 ## Candidate Sources And Deadline
 
-The current catalogue contains 125 source-backed candidates, including eight
-accepted Elections BC nominations. This is a pre-deadline snapshot, not a final
-ballot. Official party directories and dated official press releases are both
-valid evidence for a **party-announced** candidacy. A party announcement never
-becomes an accepted nomination without Elections BC confirmation.
+The catalogue now follows the final Elections BC list retrieved on October 4,
+2026: 355 candidates in 93 ridings (NDP 92, Conservative 93, Green 73,
+CentreBC 35, OneBC 33, Libertarian 4, Communist 4, CHP 3, CanWest 2, Freedom 1,
+independent 7, unaffiliated 8). Every ballot record is `accepted` from that list.
+Two earlier party-announced records that are not on the final ballot remain in the
+data as `not-on-ballot` and are excluded from candidate views. Official party
+directories and dated official press releases remain valid evidence for a
+**party-announced** candidacy only before the deadline.
 
-Nominations close **October 3, 2026 at 1 p.m. Pacific**. From that time onward,
+Nominations closed **October 3, 2026 at 1 p.m. Pacific**. From that time onward,
 candidate views and counts use only a verified final Elections BC list. People
 absent from that final list are excluded regardless of party-site announcements.
 If the final list has not been refreshed, the site displays a verification-pending
@@ -248,10 +270,14 @@ message instead of presenting provisional or party-only records as the ballot.
 Already-open candidate pages update at the deadline. The site does not fetch the
 final list automatically; the reviewed local data must still be updated and published.
 
-Financial-agent names, addresses and phone numbers are not imported. The raw
-candidate PDF is kept outside the repository; the published official-source
-record contains only candidate name, riding and party, plus source metadata.
-Validation rejects extra candidate/contact fields and public candidate-list PDFs.
+The official source is Elections BC's candidate-list page, which states that it
+shows the final candidates; its CSV download matched all 355 rows exactly. The
+earlier `Candidate-Website-Report.PDF` was still incomplete (286 rows) when checked
+and is no longer used. Financial-agent and official-agent names, addresses and phone
+numbers are not imported. The raw page and CSV stay outside the repository; the
+published official-source record contains only candidate name, riding and party,
+plus source metadata. Validation rejects extra candidate/contact fields and public
+candidate-list PDFs.
 
 ## Data Updates
 
@@ -280,43 +306,48 @@ pushes. See [data/README.md](data/README.md) for commands and verification detai
 [data/election.json](data/election.json) holds snapshot metadata, party register entries, the 93 district names and official 2024 results. [data/polls.json](data/polls.json) holds approved survey releases. Add new releases as new records and preserve corrections with a note. The deployed website reads checked-in data and performs no cross-origin scraping. The polling average is anchored to the stated snapshot date, not falsely presented as live after a missed update.
 
 Party programmes use a separate reviewed dataset. The local Parties view opens
-with an issue-focused comparison that defaults to parties with a recorded
-programme quotation on the selected topic. This rule is stated above the party
-picker; it describes the reviewed excerpts, not the full scope of each platform.
+with an issue-focused comparison that shows all 14 registered parties by default;
+a party without a recorded excerpt on the selected topic says so in its column.
 Issue tags are alphabetical. Comparison columns retain alphabetical order
-within the pinned and unpinned groups, including manual party selections.
-The picker supports any selection of the 14 registered parties, including all 14.
-Use topic defaults restores the automatic selection. The programme page uses the
-same width cap as the other pages. Desktop columns retain a 200px minimum;
-the table uses every complete column that fits, without a four-column limit.
+within the pinned and unpinned groups. **Hidden parties** removes any parties
+from the view (Show all and Hide all are available); **Pinned parties** keeps
+chosen parties first. Both choices apply to every topic and survive topic,
+view, language and resize changes. Hiding a pinned party unpins it.
+The **Columns/Rows** switch changes the layout: Columns compares parties side
+by side; Rows stacks one party per row, with the party name on the left and its
+excerpts in a multi-column grid. **Visible columns** (Auto or 1-6) sets how many
+party columns share the width, so fewer columns give wider, easier-to-read text;
+Auto fits as many 200px columns as possible. The programme page uses the
+same width cap as the other pages.
 Scroll mode provides a visible top scrollbar and previous/next group controls.
 Pages mode replaces the visible group without horizontal overflow. Either mode
-can pin any number of selected parties using checkboxes, Pin all or Unpin all.
+can pin any number of shown parties using checkboxes, Pin all or Unpin all.
 Pinned columns stay on the left while the other parties move. If the pins exceed
 the available width, separate pinned-group controls page through them without
 clearing any pins. At least one column remains for unpinned parties when any
 remain, without widening the page or shrinking the text.
 The controls show the current range and announce changes to screen readers.
 With the table focused, Left/Right move one column in Scroll mode or one group
-in Pages mode; Home/End move to the beginning/end. When all selected parties are
+in Pages mode; Home/End move to the beginning/end. When all shown parties are
 pinned, these keys navigate the pinned group instead. Navigation does not wrap,
 and smooth scrolling respects reduced-motion preferences.
-Phones retain vertically stacked party sections. Desktop columns do not wrap
+Phones always use stacked party rows, with the same pinned and hidden choices.
+Desktop columns do not wrap
 into multiple rows. The table expands to its full height with the page, with
 no internal vertical scrollbar. The navigation stays available while scrolling
 down the table; at wide desktop widths, headings also stay visible when the
 table fits.
-Both views display only selected verbatim excerpts in visible quotation marks,
-with attribution, source dates and links to the original full text.
+Both views display only selected verbatim statements in visible quotation marks,
+with attribution, source dates and links to the original full text. A party's
+source list for a topic shows only the documents its displayed statements come
+from; with no statement on a topic, no source is listed for it.
 There are no paraphrased policies, editorial assessments or inferred cost and
 implementation rows.
 
 The separate Explore a party view has topic and text filters, a compact topic
-index and the same source-attributed quotations. Custom comparison selections
-are remembered separately for each topic and retained when switching views or
-resizing. Presentation, pinned selections and navigation positions also survive
-view and language changes. Changing the topic resets the unpinned position;
-pins for parties no longer selected are removed.
+index and the same source-attributed quotations. Layout, visible columns,
+presentation, pinned and hidden parties and navigation positions survive view
+and language changes. Changing the topic resets the unpinned position only.
 Dates identify older sources without
 rewriting their wording. No quotation is an inferred position or an endorsement.
 Full platforms are linked rather than republished. Programme edits must match
@@ -329,11 +360,22 @@ documents and the number of topics with recorded excerpts. Source kinds distingu
 election platforms, policy declarations, policy pages, campaign announcements,
 record/priorities pages, vision statements and document indexes. Counts describe
 this guide, not whether a party has a policy. The current selection contains
-120 exact excerpts from 45 source records, not 14 complete reproduced programmes.
-The Green 2024 platform, CHP policy statement revised in 2023 and Libertarian
-2026 index linking earlier articles are explicitly dated. A current full NDP
-platform and programme documents for BC Party, BC United, B.C. Vision and Party
-of Citizens remain unverified in this guide.
+176 exact excerpts from 73 source records, not 14 complete reproduced programmes.
+A later October 4 audit added statements where a party's own documents covered a
+topic with no recorded statement: Green justice and public safety (2024
+platform), Communist health care, NDP transport (Prince Rupert port network) and
+NDP rights (David Eby on the right to choose). To stay within 200 words per
+document, two 2024 Green excerpts already restated by the 2026 Our Plan page
+(free transit, assistance rates) and one Communist land-use excerpt were removed.
+The October 4 update added dated campaign announcements from the NDP (9),
+Conservatives (8, plus a linked energy plan PDF whose text could not be reliably
+extracted, so it has no excerpts), Greens (8 plus their Our Plan page) and the
+CHP's 2026 Platform Priorities. The NDP Action for You page and the Communist
+platform were rewritten by their parties; their excerpts now come from the
+current versions. The Green 2024 platform, CHP policy statement revised in 2023
+and Libertarian 2026 index linking earlier articles are explicitly dated. A
+current full NDP platform and programme documents for BC Party, BC United,
+B.C. Vision and Party of Citizens remain unverified in this guide.
 
 ```sh
 node tools/update-data.mjs fetch programs
@@ -570,9 +612,9 @@ Polling rule: take the latest release per pollster from the 14 calendar days end
 
 - [Elections BC 2026 election](https://elections.bc.ca/)
 - [2024 Statement of Votes](https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf) and [GIS spatial data](https://elections.bc.ca/resources/maps/gis-spatial-data/)
-- [Registered political parties, dated September 25, 2026](https://elections.bc.ca/docs/fin/Registered-Political-Parties-Information.pdf)
-- [2026 accepted candidate nominations](https://elections.bc.ca/2026-provincial-election/candidate-list/)
-- Original releases from [Angus Reid Institute](https://angusreid.org/ballot-backlash-bc-conservatives-open-8-point-lead-after-snap-election-call-but-electorate-far-from-locked-in/), [Liaison Strategies](https://press.liaisonstrategies.ca/bc-ndp-leads-conservatives-41-to-36-as-election-begins/), [Research Co.](https://researchco.ca/2026/08/18/bcpoli-aug2026/) and [604 Polling](https://604polling.ca/). Each record links to its own primary source.
+- [Registered political parties, dated October 3, 2026](https://elections.bc.ca/docs/fin/Registered-Political-Parties-Information.pdf)
+- [2026 final candidate list](https://elections.bc.ca/2026-provincial-election/candidate-list/)
+- Original releases from [Angus Reid Institute](https://angusreid.org/ballot-backlash-bc-conservatives-open-8-point-lead-after-snap-election-call-but-electorate-far-from-locked-in/), [Ipsos](https://www.ipsos.com/en-ca/bc-conservative-support-rallies-without-kerry-lynne-findlay), [Leger](https://leger360.com/in-the-news-bc-election-polling-september-2026/), [Liaison Strategies](https://press.liaisonstrategies.ca/bc-conservatives-40-ndp-39-housing-frustration-runs-deep/), [Innovative Research Group](https://innovativeresearch.ca/bcs-wide-open-election/), [Research Co.](https://researchco.ca/2026/08/18/bcpoli-aug2026/) and [604 Polling](https://604polling.ca/). Each record links to its own primary source.
 
 The site is independent and is not affiliated with Elections BC or a political party. Always use Elections BC for voting procedures and the latest official filings. Source data and third-party releases have their own terms; the code license does not relicense them.
 

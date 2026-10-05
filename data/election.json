@@ -1,9 +1,9 @@
 {
   "title": "BC Election Guide",
-  "snapshotDate": "2026-09-25",
+  "snapshotDate": "2026-10-04",
   "electionDate": "2026-10-24",
   "districtCount": 93,
-  "partyRegisterChecked": "2026-09-25",
+  "partyRegisterChecked": "2026-10-03",
   "sources": {
     "election": "https://elections.bc.ca/",
     "parties": "https://elections.bc.ca/docs/fin/Registered-Political-Parties-Information.pdf",
@@ -45,7 +45,7 @@
       "id": "centre",
       "name": "Centre BC",
       "ballot": "CentreBC",
-      "leader": "Mike Bernier",
+      "leader": "Elenore Sturko",
       "color": "#cf4a91"
     },
     {

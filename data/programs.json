@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "checkedAt": "2026-09-28T18:07:52.609Z",
+  "checkedAt": "2026-10-04T22:13:33.919Z",
   "topics": [
     {
       "id": "affordability",
@@ -70,8 +70,8 @@
       "url": "https://www.bcndp.ca/action-for-you",
       "electionYear": null,
       "publishedOn": null,
-      "sourceSha256": "1bc8746e23c173b7c1c14dd461031755db2a51c211cbc148af7cb4f9682b28b4",
-      "textSha256": "6861efcce5b3f0ac82b1fbf08b547e5eee41f42758a9b4a5dab969691e7db0d7",
+      "sourceSha256": "8235eee17039ae473f3d4cd3a9b9af761ad6ef068294afc54b235df61166b2c1",
+      "textSha256": "650f30cef2ca669cb849e24f9eb7b5551b04caf9e8b390371f616160bda15f8c",
       "kind": "record-and-priorities"
     },
     {
@@ -222,10 +222,10 @@
       "title": "Our Platform – COMMUNIST PARTY OF BC",
       "publisher": "Communist Party of BC",
       "url": "https://cpcbc.ca/our-platform/",
-      "electionYear": null,
+      "electionYear": 2026,
       "publishedOn": null,
-      "sourceSha256": "7c32beccd2b2985a79abd3b3d602a9a6caef1b001ae2fd4e7e4b53f3ccadb53f",
-      "textSha256": "7b629af1cfae7616a908c547a0d6ddff4f142fa4e5578adf067660803b38ef68",
+      "sourceSha256": "b32b4de50341c8282909d3dceab37ed61f3d844481ea2e9a9210fece07a5438a",
+      "textSha256": "d8512ba91b24d35974d8380d125aa948eb015dbe118b496c6fa8af10298bb928",
       "kind": "platform"
     },
     {
@@ -547,99 +547,532 @@
       "publishedOn": "2024-08-17",
       "sourceSha256": "0d6b3204cd44a3877bcd60818f1be5004de27349a9443f3bee128e6ebe6832bd",
       "textSha256": "833b3e0550324b03592c2040e8e853aac5350da48525c70799ea1e80bd5b078f"
+    },
+    {
+      "id": "program-ndp-launch-2026",
+      "title": "David Eby launches election with plan to build B.C. strong amid Trump’s attacks",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/david-eby-launches-election-plan-build-bc-strong-amid-trumps-attacks",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-09-22",
+      "sourceSha256": "4e9197ff5fb8028b6329aefd1d7b24f3d1093b0aa79d5deb940191e522db361a",
+      "textSha256": "ee49a4e3650531e15c15d7512ec2e967d2e98c43d98906cfb81dde30ca1dbd62"
+    },
+    {
+      "id": "program-ndp-health-recruitment",
+      "title": "Eby to triple U.S. health worker recruitment",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/eby-triple-us-health-worker-recruitment",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-09-23",
+      "sourceSha256": "7b8b75ec270e2871ed2b259f121118aaa0099debae27fab7e80fc87c3bac8f13",
+      "textSha256": "7cae3da8157077be4c871fe6cbb8ddb362aaaea66cb2266d07de57f733581031"
+    },
+    {
+      "id": "program-ndp-buy-local",
+      "title": "Eby pledges new “Built in B.C. and Canada” buying rules",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/eby-pledges-new-built-bc-and-canada-buying-rules",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-09-24",
+      "sourceSha256": "f984537da1bb66af588324b5cf4fc99704974e0f58adebe10d7a79a2e29da7f5",
+      "textSha256": "282c0cb1e3cccaf214460aea92581b22fa4578eb81a1b4bb7129fec368612693"
+    },
+    {
+      "id": "program-ndp-empty-condos",
+      "title": "Eby to turn more empty condos into homes people can afford",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/eby-turn-more-empty-condos-homes-people-can-afford",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-09-25",
+      "sourceSha256": "6050ed4046dd3bae30db26bbd4345b79a6c385e4538b2f5fe9940fc2be65d7b3",
+      "textSha256": "52234bbaf9da07ec60f7b2f5e3761af2c361e60daecc989c406f078952fca32f"
+    },
+    {
+      "id": "program-ndp-critical-minerals",
+      "title": "Eby to double critical mineral exports, expand Port of Prince Rupert",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/eby-double-critical-mineral-exports-expand-port-prince-rupert",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-09-28",
+      "sourceSha256": "2fca4e22bfbb25fb9a96ca2eccdad43fa2b8a0fb843ca1eef1a13578fe670d5e",
+      "textSha256": "86fbe3d07675f17f99d6fb5230d5f28e318b53a3e4efb8b7cbbc78b4f8d1d171"
+    },
+    {
+      "id": "program-ndp-lng",
+      "title": "David Eby secures largest private sector investment in Canadian history",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/david-eby-secures-largest-private-sector-investment-canadian-history",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-09-29",
+      "sourceSha256": "b289dba130a5d05f875a8446986f7ed8aa075ef2f7c5117c6190fbad5d3562a9",
+      "textSha256": "02346b019c8f4ba01004ebd2be7b56ef4a9358a0e158775d5907b4122ac02ae1"
+    },
+    {
+      "id": "program-ndp-gas-prices",
+      "title": "Eby’s plan will cut gas prices by up to 30 cents a litre, crack down on gouging",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/ebys-plan-will-cut-gas-prices-30-cents-litre-crack-down-gouging",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-01",
+      "sourceSha256": "8404a2a5943de1eb7107e570b129cd49411e3683197adadb41b3f17bb9f7299f",
+      "textSha256": "e3933c74a9e13f4332aa2de0c208519e2ac28afc472baba2758ec1d9da80ede2"
+    },
+    {
+      "id": "program-ndp-groceries",
+      "title": "Eby will take on grocery giants to protect families from rising costs",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/eby-will-take-grocery-giants-protect-families-rising-costs",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-02",
+      "sourceSha256": "d94f4a8994b2f6194b5e1943284ce88602db8e8b3c209fb764479ac78bc6c795",
+      "textSha256": "a8126568c51b37b02bb6e804aefd2fdf7208e2c8e2a911a807a55992c4241c60"
+    },
+    {
+      "id": "program-ndp-wildfire-support",
+      "title": "BC NDP announces new support for wildfire-impacted families, including those uninsured",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/bc-ndp-announces-new-support-wildfire-impacted-families-including-those-uninsured",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-02",
+      "sourceSha256": "960b508fc92c1b3f5007be30c504bcb3ebaed34eab1a1294fe6732d107d96b4a",
+      "textSha256": "f22ec84f909ddd02e2599b1c199680960170ca03b932440f5adab8df3b2e82e4"
+    },
+    {
+      "id": "program-con-housing-statement",
+      "title": "STATEMENT FROM LEADER LORNE DOERKSON ON THE NDP’S HOUSING TAX PLAN | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/statement-from-interim-leader-lorne-doerkson-on-the-ndps-housing-tax-plan/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-09-25",
+      "sourceSha256": "790908fdd1c594c387878912d8fc83b2f742fd9a0a0bddf797a8b4cfcaeb5e0d",
+      "textSha256": "d34bcbb89facebc48fc883514e89361b04eb4571799ca948cc0c75c9bdbacf3f"
+    },
+    {
+      "id": "program-con-no-new-taxes",
+      "title": "Conservative Party of BC Pledges No New Taxes on British Columbians | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/conservative-party-of-bc-pledges-no-new-taxes-on-british-columbians/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-09-27",
+      "sourceSha256": "ee5ceee64519656fec809d71914c4eae20a2f386ca3b4dd9d9c0dd1be77568d4",
+      "textSha256": "a53bbebf02c2f44555eb5c4918cdc7891ad65020394e3d46e1cc7f53bdc43e4d"
+    },
+    {
+      "id": "program-con-energy",
+      "title": "Make British Columbia an Energy Superpower | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/make-british-columbia-an-energy-superpower/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-09-28",
+      "sourceSha256": "8c6edd8b9d04b267d272a5138a99f6530311d9423ff6daf940e1d82b3b3e04d1",
+      "textSha256": "cc1058d6a112886509fd96d4b1d322a915a21b9caa38a6cae4008e8035a64eb5"
+    },
+    {
+      "id": "program-con-energy-plan",
+      "title": "BC Energy Superpower Plan (September 28, 2026)",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/wp-content/uploads/2026/09/BC-ENERGY-SUPERPOWER_5_compressed.pdf",
+      "kind": "programme-update",
+      "electionYear": 2026,
+      "publishedOn": "2026-09-28",
+      "sourceSha256": "4e2712fea6da0f02cf991ffa44cf4d02354875975d1bad66378ff54775acef98",
+      "textSha256": "ce683bf5cb6d4ce3aa4de35e59d25efdbb3f5c5485ab1272245be0525f4f78eb"
+    },
+    {
+      "id": "program-con-alcohol-pst",
+      "title": "Conservatives to Remove PST from Canadian Alcohol | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/conservatives-to-remove-pst-from-canadian-alcohol/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-09-29",
+      "sourceSha256": "c5a201c283aa1c4fefe34baf17e045deb655d9003f69a4de6023f069665fc445",
+      "textSha256": "4caea3a53819a1ec319cfb1c7bdafb829039941c1963164543ace5ff3b0dca0a"
+    },
+    {
+      "id": "program-con-lng",
+      "title": "BC Conservatives Welcome LNG Canada Phase 2: We Will Treat Energy as an Urgent Mission | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/bc-conservatives-welcome-lng-canada-phase-2-we-will-treat-energy-as-an-urgent-mission/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-09-29",
+      "sourceSha256": "efd01dd9c6461ddb665b95cdff4aeba1d598a3c7043109789bb4a2da0b603038",
+      "textSha256": "c45f934673e6762e56281fc7b0c25c6ac69cfd7827afe88fc9628f012488a9a9"
+    },
+    {
+      "id": "program-con-reconciliation",
+      "title": "Conservative Party of BC Statement on National Day of Truth and Reconciliation | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/conservative-party-of-bc-statement-on-national-day-of-truth-and-reconciliation/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-09-30",
+      "sourceSha256": "207359885bc619bc4848cb518b7f6c3bbbb304193bb7a643f71b6d5d377dd63c",
+      "textSha256": "00dad89a091f3f51f808b0af6a8d7bf1b4d92ebdf3d2c0a4fb440139b404c883"
+    },
+    {
+      "id": "program-con-pipeline",
+      "title": "Conservative Party of BC Welcomes Designation of Pacific Link Pipeline | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/conservative-party-of-bc-welcomes-designation-of-pacific-link-pipeline/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-01",
+      "sourceSha256": "01cb6d96ccf1c54253805cdbcb1c81a3824f1e4aa3111a6c760ac897e2453438",
+      "textSha256": "4c41e13f589701b219fe7d14e9a4c8df9270848fc672c5cd5b1737b284d08795"
+    },
+    {
+      "id": "program-con-wildfire",
+      "title": "Fighting Wildfires. Protecting Communities. | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/fighting-wildfires-protecting-communities/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-02",
+      "sourceSha256": "00483355b158d18235eb12a860e045eddee466afed7fa1e4c70ff52091764838",
+      "textSha256": "efa52ebf56d675299f25e81fabd454b6b4e16296e824cebd346de4536bdaa0e3"
+    },
+    {
+      "id": "program-green-plan-2026",
+      "title": "Our Plan - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/our-plan/",
+      "kind": "programme-update",
+      "electionYear": 2026,
+      "publishedOn": "2026-09-26",
+      "sourceSha256": "fff196c658a9c7aa6143e48fadcb661992e50f4f14e4f4724c3c2962882191ee",
+      "textSha256": "bc8bb649bc78666754e9f252e41e5176f7db4f98a46b51ad3bb04b7718628709"
+    },
+    {
+      "id": "program-green-childcare",
+      "title": "BC Greens announce plan to lift the freeze on $10-a-day daycare, with universal free child care by 2031, alongside new candidate for Victoria-Swan Lake - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/announce-plan-to-lift-the-freeze-on-10-a-day-daycare-with-universal-free-child-care-by-2031-alongside-new-candidate-for-victoria-swan-lake/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-09-28",
+      "sourceSha256": "ec226293bba52563b29ac9f3ce749b502ef69bf6d2b524bfbef260c632778f7f",
+      "textSha256": "555ec5bd089c7bed70791b7df2b32797a5099a4ed15f6f376b057a2d8875f0b0"
+    },
+    {
+      "id": "program-green-renters",
+      "title": "BC Greens announce plan to support renters, unveil two new candidates for South Island - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/announce-plan-to-support-renters-unveil-two-new-candidates-for-south-island/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-09-29",
+      "sourceSha256": "b0eea59903f55ef00b461eeef38f33fab3cb6cd288085a0d30f0a161c847c1ee",
+      "textSha256": "52a434f8f0953f14da413ad48533afa5d8295f68e257f16f4a619c6d6ff9cc24"
+    },
+    {
+      "id": "program-green-lng-2026",
+      "title": "Statement from Emily Lowan on LNG Canada Phase 2 - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/statement-from-emily-lowan-on-lng-canada-phase-2/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-09-29",
+      "sourceSha256": "df53a446e622241e709f752fabc6047b0dae900b6ae87f45e594fd612233306a",
+      "textSha256": "78e48a17a7f6362435be795fcf18f2d37c1ee5abfabd9e7fff23685e392495b3"
+    },
+    {
+      "id": "program-green-food",
+      "title": "BC Greens launch plan to support local food production and farmers - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/launch-plan-to-support-local-food-production-and-farmers/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-02",
+      "sourceSha256": "a88f1a430e94d21573e341a5c5345c5b203539ad328d0b19c7d83adbff250d38",
+      "textSha256": "a159b4da6ff5c8f8b6affd1b35e0373ab9a79241162720a21d475f8b57aa49dc"
+    },
+    {
+      "id": "program-green-drugs",
+      "title": "BC Greens announce Toxic Drugs policy alongside former chief coroner and candidate for Saanich South, Lisa Lapointe - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/announce-toxic-drugs-policy-alongside-former-chief-coroner-and-candidate-for-saanich-south-lisa-lapointe/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-02",
+      "sourceSha256": "a98a72130e21d0025b1a240358171ad45944d7b46717c04f1f4a81e00dd6c05b",
+      "textSha256": "0a02aa1ba9d3a37d34a1ebaaa28e0aa7fa505acd23531c91cfe738c8fbdabdb7"
+    },
+    {
+      "id": "program-green-ai",
+      "title": "BC Greens announce plan to regulate AI and hold Big Tech accountable - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/announce-plan-to-regulate-ai-and-hold-big-tech-accountable/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-02",
+      "sourceSha256": "2ab1e506208ca2bd36a566b2e2af221b2211679b29eb900db78ccbc925a41ba1",
+      "textSha256": "2076c4e6f657d508512cd3962d909247eea9677404c4de7cc67cd2fddfe105f1"
+    },
+    {
+      "id": "program-green-coast",
+      "title": "Eby won't stand up for our coast. The BC Greens will. - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/eby-wont-stand-up-for-our-coast-the-bc-greens-will/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-02",
+      "sourceSha256": "eb91365a71902dcba3119c5e085e97257acd17f8195d41473f42ebc78c446076",
+      "textSha256": "d62ccb5a378eda1ee1eefd95e74975851080c07d2ad6831f34d0b896b918ba63"
+    },
+    {
+      "id": "program-green-seniors",
+      "title": "BC Greens announce plan to support seniors - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/announce-plan-to-support-seniors/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-04",
+      "sourceSha256": "e14cf4caa58209aff7dd1164f388675903fa291332b8fd35e11c65eabba3fe8b",
+      "textSha256": "491dcd8325dc03ce75ac996f38b4cd66dce03c66250d0ff9dda9f90a3cb63b3d"
+    },
+    {
+      "id": "program-heritage-priorities-2026",
+      "title": "Platform Priorities – Christian Heritage Party of BC",
+      "publisher": "Christian Heritage Party of BC",
+      "url": "https://www.chpbc.ca/platform-priorities/",
+      "kind": "platform",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-02",
+      "sourceSha256": "e1503aea60a078c5231fa418b8d38b75ed2d39e0a891fde1a3fdcf76aa554362",
+      "textSha256": "04909767f89d047dc14910dd129d79e7df24d34f197c3da04115f1666fd150fb"
     }
   ],
   "parties": [
     {
       "id": "ndp",
       "sourceIds": [
-        "program-ndp-priorities"
+        "program-ndp-priorities",
+        "program-ndp-launch-2026",
+        "program-ndp-health-recruitment",
+        "program-ndp-buy-local",
+        "program-ndp-empty-condos",
+        "program-ndp-critical-minerals",
+        "program-ndp-lng",
+        "program-ndp-gas-prices",
+        "program-ndp-groceries",
+        "program-ndp-wildfire-support"
       ],
       "quotes": [
         {
-          "id": "costs",
+          "id": "record-taxes",
           "topic": "affordability",
           "sourceId": "program-ndp-priorities",
-          "locator": "Eliminated MSP fees",
-          "text": "Eliminating unfair MSP premiums is the biggest middle-class tax cuts in BC history, saving families up to $1,800 a year.",
+          "locator": "Lowest middle-class taxes of any province",
           "speaker": "BC NDP",
-          "textSha256": "cb0859259c7c058fb62060da820347b892fc5b5f8fab2db9848638d8b948fe2d"
+          "text": "BC families earning less than $100,000 pay lower provincial taxes than in any other province in Canada.",
+          "textSha256": "f3762e9fe1644882dbcb2a1cba2cd751c3e02770e7038ea546773f301e735059"
         },
         {
-          "id": "housing",
+          "id": "record-zoning",
           "topic": "housing",
-          "text": "We’ve fixed restrictive and outdated rules that were blocking townhouses, row homes and duplexes.",
           "sourceId": "program-ndp-priorities",
+          "locator": "Building more middle-class homes",
           "speaker": "BC NDP",
-          "textSha256": "ef63f782e39851c37111349e9f611d17a7a9df5a49bf2f212f69d2ca94e9898a"
+          "text": "97% of local governments have adopted zoning changes that are paving the way for 300,000 more homes across B.C.",
+          "textSha256": "f8ca1f0d920c754c03db0efb566f44e9fccd6874fe34178fd224d4c26fcee230"
         },
         {
-          "id": "care",
+          "id": "record-family-doctors",
           "topic": "health",
           "sourceId": "program-ndp-priorities",
-          "locator": "Connecting people to care now with new clinics and networks",
-          "text": "We've opened 39 Urgent and Primary Care Clinics since 2018, and set up 77 Primary Care Networks, with more to come.",
+          "locator": "A million more people connected to a family doctor",
           "speaker": "BC NDP",
-          "textSha256": "203f91531f78dbcfad03c6f4788c149a0208b7bde12d86ef0cf4bebd661cbd47"
+          "text": "One million more people have been attached to a family doctor or nurse practitioner since 2018 – 700,000 in the last three years alone, as more than 4,000 people get matched every week.",
+          "textSha256": "0763b690b40d3979edff8c7e3a8d0744fd3b93be1a2a1dac2f3d57efc68fc609"
         },
         {
-          "id": "childcare",
+          "id": "record-schools",
           "topic": "education",
-          "text": "Cut childcare costs in half on average (saving families up to $900/month per child)",
           "sourceId": "program-ndp-priorities",
+          "locator": "250 new or upgraded schools",
           "speaker": "BC NDP",
-          "textSha256": "e32ee66049f13d00d2ecb32f6f189347b3c04de550124a7c80a563c97e0aee44"
+          "text": "Since 2017, we’ve invested in 250 major school capital projects, including new schools, additions and seismic upgrades, along with 330 new school playgrounds, benefiting more than 90,000 kids.",
+          "textSha256": "bbc2a060f2e39cc5040c79d6eef726788c4d7a208f69bec0b71bf44fa4ecb8b1"
         },
         {
-          "id": "sick-leave",
-          "topic": "economy",
-          "text": "We’ve made it so you can now take 5 paid sick days a year under minimum employment standards.",
-          "sourceId": "program-ndp-priorities",
-          "speaker": "BC NDP",
-          "textSha256": "0e65566348d11907259cb5d31a9ecb8233ed90d93c6158a2e31631c0baea7107"
-        },
-        {
-          "id": "safety",
+          "id": "record-police",
           "topic": "justice",
-          "text": "We’re keeping repeat violent offenders off the street with stricter bail rules and stronger enforcement.",
           "sourceId": "program-ndp-priorities",
+          "locator": "Hiring 250 more police officers",
           "speaker": "BC NDP",
-          "textSha256": "bb73217e1151577409c039b3b6f2d356ce77095a56a7ae348ccc599651ed3319"
+          "text": "We’ve hired over 250 more RCMP officers to keep our communities safe. And we’ve added 240 new police training seats to train more officers to fight crime (a 225% increase in seats).",
+          "textSha256": "d2aeb31e4711d6ec16ce82c84a19cda85c46782a4dc324d2bb3f3d64eda21d5d"
         },
         {
-          "id": "disaster-risk",
+          "id": "record-treatment-medication",
+          "topic": "addiction",
+          "sourceId": "program-ndp-priorities",
+          "locator": "Covering treatment medications",
+          "speaker": "BC NDP",
+          "text": "We expanded access to addiction treatment by making opioid agonist treatment medications free for all British Columbians – ensuring money isn’t a barrier to getting addiction treatment.",
+          "textSha256": "954259f6198dc59cb8786af773f9997c4a56eb9d03f9f7bade724eca585ab01c"
+        },
+        {
+          "id": "record-protected-areas",
           "topic": "environment",
-          "text": "We funded local governments and First Nations to reduce disaster risk, with $39 million for more than 50 local projects.",
           "sourceId": "program-ndp-priorities",
+          "locator": "Protecting our lands and waters",
           "speaker": "BC NDP",
-          "textSha256": "c6d8c38e13d6bddfc0f10aa1a1821fa78dd208f0d357901bba2871fd8496c7f8"
+          "text": "We’ve protected 20% of B.C.’s land and water, on our way to 30% by 2030.",
+          "textSha256": "232e8f43ff5183a8e0c1ede5c416eb85240830f541987e839e721876c46d8df8"
         },
         {
-          "id": "ferry-fares",
-          "topic": "transport",
-          "sourceId": "program-ndp-priorities",
-          "locator": "Capped ferry fare increases",
-          "text": "We invested $500 million this year to cap ferry fare increases for the next four years.",
-          "speaker": "BC NDP",
-          "textSha256": "8274856ce186d13fdac2916da223c6478970da8dc347e5786cb993455aeb154e"
-        },
-        {
-          "id": "birth-control",
-          "topic": "rights",
-          "sourceId": "program-ndp-priorities",
-          "locator": "Made prescription birth control free",
-          "text": "Prescription birth control is now free in BC, saving nearly 300,000 people about $300 a year and supporting people to make choices about their reproductive health.",
-          "speaker": "BC NDP",
-          "textSha256": "df72476df2a81fe3f56108490febace67ce4ae858106b22f6cd6d199fd4f94d0"
-        },
-        {
-          "id": "indigenous-justice",
+          "id": "record-guardians",
           "topic": "indigenous",
           "sourceId": "program-ndp-priorities",
-          "locator": "Connecting vulnerable people with the housing, treatment and support they need",
-          "text": "We're expanding Indigenous Justice Centres, hiring more first responders, expanding legal aid services and expanding community safety situation tables.",
+          "locator": "Partnering with First Nations to improve stewardship",
           "speaker": "BC NDP",
-          "textSha256": "ed09ba9d04f6605604d425f743ec56c031edb90f44b678b54bb41920d6c75c8a"
+          "text": "We’re expanding guardian programs with First Nations, increasing boots on the ground to protect and look after B.C.’s lands, waters and forests.",
+          "textSha256": "70d944cd28be53734295d724454f93ac0e8ead9e77b74524e9579215ffa53728"
+        },
+        {
+          "id": "launch-economy",
+          "topic": "economy",
+          "sourceId": "program-ndp-launch-2026",
+          "speaker": "BC NDP",
+          "text": "Build an economy free from the US, work with the Prime Minister to open new markets, build the infrastructure and homes B.C. needs, and grow industries while training British Columbians so they are first in line for skilled trades jobs with bigger paycheques.",
+          "textSha256": "9f0101e96b9236b650332bfc83a192433be19fa90a8ebc63ecdc235f01eef19e"
+        },
+        {
+          "id": "launch-tariffs",
+          "topic": "affordability",
+          "sourceId": "program-ndp-launch-2026",
+          "speaker": "BC NDP",
+          "text": "Support workers and businesses facing tariffs, keep costs down for families and strengthen the health care and public services British Columbians rely on more than ever during a trade war.",
+          "textSha256": "8053b09f4668f73940b5fb52317c11d17a518607c737a2890896f33ab215cf81"
+        },
+        {
+          "id": "us-recruitment",
+          "topic": "health",
+          "sourceId": "program-ndp-health-recruitment",
+          "speaker": "BC NDP",
+          "text": "The new campaign, which will be triple the size of B.C.’s first successful efforts, will expand into Republican-controlled “red” states where doctors and nurses are facing laws that restrict their ability to provide life-saving reproductive care.",
+          "textSha256": "9243407c9dc82ad57bc2045fbbb8a37e1dc524bc2d68fc0b37a7da5a55970910"
+        },
+        {
+          "id": "recruitment-incentives",
+          "topic": "health",
+          "sourceId": "program-ndp-health-recruitment",
+          "speaker": "BC NDP",
+          "text": "The campaign will also now target Canadian health-care professionals living and working in the U.S., with new incentives to bring them home, including loan forgiveness and support with moving expenses.",
+          "textSha256": "3adbf0205d44c878cf0a55598e5b709723589fca03b9a054fbb128239c7fc7f2"
+        },
+        {
+          "id": "built-in-bc",
+          "topic": "economy",
+          "sourceId": "program-ndp-buy-local",
+          "speaker": "BC NDP",
+          "text": "Eby’s new “Built in BC and Canadian” plan will apply to ministries, Crown agencies and health authorities, and require them to put B.C. and Canadian-made goods and materials to work on public projects, wherever it is viable.",
+          "textSha256": "ced3baf717c8fd2ab43b6b15c382c46b3dbbcd6b0546f6f761a6d04d19e9839a"
+        },
+        {
+          "id": "speculation-tax",
+          "topic": "housing",
+          "sourceId": "program-ndp-empty-condos",
+          "speaker": "BC NDP",
+          "text": "Eby says he will increase the speculation and vacancy tax by one percentage point, from 1% to 2% for domestic speculators and from 4% to 5% for foreign speculators.",
+          "textSha256": "e43f4629f61db4e4a37563359e21d884562ab6b0a196799f8a8f8ff5d1549b78"
+        },
+        {
+          "id": "unsold-condo-tax",
+          "topic": "housing",
+          "sourceId": "program-ndp-empty-condos",
+          "speaker": "BC NDP",
+          "text": "The BC NDP will also introduce a new Unsold Condo Tax on finished condos left empty for more than a year.",
+          "textSha256": "e15507564ca1e734ecde3f848dad1837aaa71e583222828a0b034de364b6bf21"
+        },
+        {
+          "id": "critical-minerals",
+          "topic": "economy",
+          "sourceId": "program-ndp-critical-minerals",
+          "speaker": "BC NDP",
+          "text": "To seize this generational opportunity and secure more economic independence from the United States, B.C. will double its production and export of critical minerals within five years.",
+          "textSha256": "42606d566f6423c483b2b79ab62e12931eb01961d7e100b7011f4844e56f6a61"
+        },
+        {
+          "id": "lng-climate-revenue",
+          "topic": "environment",
+          "sourceId": "program-ndp-lng",
+          "speaker": "BC NDP",
+          "text": "A portion of B.C.’s revenue will also be dedicated to climate action programs that help families and businesses choose less costly clean energy and create new jobs.",
+          "textSha256": "72c684191b770598287341534dd6955f411356b13f9fb10ed6254da84b701562"
+        },
+        {
+          "id": "fuel-tax",
+          "topic": "affordability",
+          "sourceId": "program-ndp-gas-prices",
+          "speaker": "BC NDP",
+          "text": "To support families while Trump’s harmful actions cost British Columbians, David Eby’s plan will include suspending the provincial motor fuel tax by 10 cents per litre on gasoline and diesel.",
+          "textSha256": "6a2155a6a9a8fb322479beca639dd315b48be01fd255d67ed88dda40ddc6f84b"
+        },
+        {
+          "id": "fuel-price-guard",
+          "topic": "affordability",
+          "sourceId": "program-ndp-gas-prices",
+          "speaker": "BC NDP",
+          "text": "The plan also includes a “price guard”, which will empower the BC Utilities Commission to enforce strict pricing rules and cap excess industry margins.",
+          "textSha256": "9d55200add9b6162f68653d43f9a78b313a2bc6f56fdf4e16e3a875aeee1cb78"
+        },
+        {
+          "id": "grocery-price-guard",
+          "topic": "affordability",
+          "sourceId": "program-ndp-groceries",
+          "speaker": "BC NDP",
+          "text": "The BC NDP will use a “price guard” to cap profit margins on essentials like milk, eggs, cheese, butter, and poultry.",
+          "textSha256": "5179309e172ad0d7c57b0ec37b007fe17f99bb7839c259892e9a0111a6d4bf16"
+        },
+        {
+          "id": "food-terminal",
+          "topic": "economy",
+          "sourceId": "program-ndp-groceries",
+          "locator": "Support smaller local grocery stores",
+          "speaker": "BC NDP",
+          "text": "Invest in local food infrastructure by partnering with Ottawa to build an independent, regional wholesale food terminal in the Lower Mainland.",
+          "textSha256": "ee1a019492222a72d68e5a68892e6e578cc5d39dce8d084e56de5915a0be20f7"
+        },
+        {
+          "id": "wildfire-donations",
+          "topic": "environment",
+          "sourceId": "program-ndp-wildfire-support",
+          "speaker": "BC NDP",
+          "text": "If re-elected, the BC NDP will match donations to the Canadian Red Cross up to $20 million for people affected by this summer’s wildfires, especially to support those who are uninsured and underinsured.",
+          "textSha256": "30bd21c6a42d8de90a4422ad2b3a8918660b5a5f92480fc9f7f9e00f5ba53d2f"
+        },
+        {
+          "id": "port-network",
+          "topic": "transport",
+          "sourceId": "program-ndp-critical-minerals",
+          "speaker": "BC NDP",
+          "text": "Eby committed to working with the Prince Rupert Port Authority, Gateway Partners and the federal government to keep expanding the port’s network that links ships, trains and trucks.",
+          "textSha256": "b1deecb127f0b9f271df840ddb906471bc314b571448781c163f911f0ace74a3"
+        },
+        {
+          "id": "right-to-choose",
+          "topic": "rights",
+          "sourceId": "program-ndp-health-recruitment",
+          "speaker": "David Eby",
+          "text": "Our expanded campaign will highlight that we will protect a woman’s right to choose and that doctors never have to navigate a for-profit system, which bankrupts half a million Americans every year.",
+          "textSha256": "57ed5cfa0aa03c5c338b801dcba053bfa6333430709f22ffcb4b1c3a52fa7f0e"
         }
       ]
     },
@@ -648,7 +1081,16 @@
       "sourceIds": [
         "program-con-platform",
         "program-con-documents",
-        "program-con-policy-2025"
+        "program-con-policy-2025",
+        "program-con-housing-statement",
+        "program-con-no-new-taxes",
+        "program-con-energy",
+        "program-con-energy-plan",
+        "program-con-alcohol-pst",
+        "program-con-lng",
+        "program-con-reconciliation",
+        "program-con-pipeline",
+        "program-con-wildfire"
       ],
       "quotes": [
         {
@@ -758,6 +1200,79 @@
           "locator": "PDF p. 19, section 15.05",
           "speaker": "Conservative Party of British Columbia",
           "textSha256": "7c416d56bfd02eab86e9f3f7246536236d4c9b1b212019aff1d646436b610d6f"
+        },
+        {
+          "id": "housing-cost-2026",
+          "topic": "housing",
+          "sourceId": "program-con-housing-statement",
+          "speaker": "Lorne Doerkson",
+          "text": "A BC Conservative government led by Lorne Doerkson will bring down the cost of building and buying a home so more homes get built and families can afford to live in them.",
+          "textSha256": "20f5d07d332ec96a6a3b6fb604a0a49cd0bc62b6740062e4d54b22d585e358e6"
+        },
+        {
+          "id": "no-new-taxes-2026",
+          "topic": "affordability",
+          "sourceId": "program-con-no-new-taxes",
+          "speaker": "Lorne Doerkson",
+          "text": "Instead of watching their hard-earned money disappear into government spending that hasn’t made their lives any better, under my government, there will be no new taxes.",
+          "textSha256": "d76ef85d21733ff4e1a26af9714a32b48f90d816216ec17285e446d94417d3a2"
+        },
+        {
+          "id": "lng-doubling-2026",
+          "topic": "economy",
+          "sourceId": "program-con-energy",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "After a lost decade under the NDP, the BC Energy Superpower Plan will get British Columbia building again, doubling the province’s LNG production by 2032 and tripling it by 2035.",
+          "textSha256": "a7fac108b1258756e6c88c0066cf6b103b879f2d73a08a25671ab018f4319440"
+        },
+        {
+          "id": "first-nations-ownership-2026",
+          "topic": "indigenous",
+          "sourceId": "program-con-energy",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "It will also put First Nations at the centre of this opportunity, with expanded ownership and true partnership.",
+          "textSha256": "e5de1701541521d8de82473ab4330e99d97b88422247a1bdf91701b09adb8bf8"
+        },
+        {
+          "id": "alcohol-pst-2026",
+          "topic": "affordability",
+          "sourceId": "program-con-alcohol-pst",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "Lorne Doerkson, Leader of the Conservative Party of BC, committed today to remove the PST at the till on Canadian beer, wine and spirits.",
+          "textSha256": "d77209836d5208f0756d150add6816ae01c94a180732fdc5702ca0d741e83b21"
+        },
+        {
+          "id": "permitting-2026",
+          "topic": "economy",
+          "sourceId": "program-con-lng",
+          "locator": "Statement issued on behalf of the Conservative Party of BC",
+          "speaker": "Claire Rattée",
+          "text": "Pass a 120 Day Permitting Act for major projects; Harmonize BC’s permitting, approvals and consultation with the federal government’s Bill C-39, so that BC-led projects are approved within one year;",
+          "textSha256": "e25e6fea1b60638f9a34feeccc5712f59fa8b1f3eb772592f9547de42c312e05"
+        },
+        {
+          "id": "economic-reconciliation-2026",
+          "topic": "indigenous",
+          "sourceId": "program-con-reconciliation",
+          "speaker": "Lorne Doerkson",
+          "text": "As Leader, I am committed to doing my part, including on economic reconciliation, and I am proud to have multiple strong Indigenous voices and leaders running as candidates.",
+          "textSha256": "195adf70d336372d7661fdde23a7393d00636a3f72da53d16b68112f8e2d9d0d"
+        },
+        {
+          "id": "energy-mission-2026",
+          "topic": "economy",
+          "sourceId": "program-con-pipeline",
+          "speaker": "Lorne Doerkson",
+          "text": "My government will treat energy as an urgent mission, and we will support projects with a strong business case for our communities alongside strong protections for our beautiful environment.",
+          "textSha256": "970dea5dd25a86b1f5779dd12ad61bd3f07197a958fa1524172303dc5d41bb35"
+        },
+        {
+          "id": "wildfire-plan-2026",
+          "topic": "environment",
+          "sourceId": "program-con-wildfire",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "This plan will buy water bombers, clear dangerous fuels, speed up safe prescribed burns, help crews work together faster, and fund early detection technology.",
+          "textSha256": "7a83d7e0167fc11b68249390e68257aa3a3a7f828ac23f47195262db97e98889"
         }
       ]
     },
@@ -770,7 +1285,16 @@
         "program-green-communities",
         "program-green-people",
         "program-green-nature",
-        "program-green-governance"
+        "program-green-governance",
+        "program-green-plan-2026",
+        "program-green-childcare",
+        "program-green-renters",
+        "program-green-lng-2026",
+        "program-green-food",
+        "program-green-drugs",
+        "program-green-ai",
+        "program-green-coast",
+        "program-green-seniors"
       ],
       "quotes": [
         {
@@ -828,15 +1352,6 @@
           "textSha256": "8a1fcbadcab058ecce3b6ea54218c6732d07bdb0cbb60acc15e5ff9b79f5e00a"
         },
         {
-          "id": "transit-2024",
-          "topic": "transport",
-          "sourceId": "program-green-2024-pdf",
-          "locator": "PDF p. 29, Transportation",
-          "text": "We will implement a free public transit system for all people in British Columbia.",
-          "speaker": "BC Green Party",
-          "textSha256": "85a48908bb1c49172bd28031d66b07f5b49728ed7da61a8efe29c77e61e95d89"
-        },
-        {
           "id": "practicums-2024",
           "topic": "education",
           "sourceId": "program-green-2024-pdf",
@@ -873,13 +1388,223 @@
           "textSha256": "9eed6230bab4b13d6c6a441d9f9bf93838374302f38dfc6a55652d380cd9465f"
         },
         {
-          "id": "assistance-2024",
-          "topic": "rights",
-          "sourceId": "program-green-2024-pdf",
-          "locator": "PDF p. 17, Poverty",
-          "text": "Raise social assistance rates to ensure that individuals can meet their basic living expenses and live above the poverty line.",
+          "id": "plan-non-market-homes",
+          "topic": "housing",
+          "sourceId": "program-green-plan-2026",
+          "locator": "A Life You Can Afford",
           "speaker": "BC Green Party",
-          "textSha256": "dfd2b6aa80319a9ff7d39575519f2767653bbc3dcc4b9988f7ec47d8d4f267f7"
+          "text": "Build and protect 26,000 permanently affordable, non-market homes a year, and make it easier and quicker to build all forms of housing.",
+          "textSha256": "ccd0a45405cb496a1b6a11b89f08ac31218c66233783e1fe96dc9955976e692a"
+        },
+        {
+          "id": "plan-free-transit",
+          "topic": "transport",
+          "sourceId": "program-green-plan-2026",
+          "locator": "A Life You Can Afford",
+          "speaker": "BC Green Party",
+          "text": "Make transit fast, frequent, and free.",
+          "textSha256": "c65d14f3bad9140928edf2360c8522cb7da131e64de02e3471ecbc710c903742"
+        },
+        {
+          "id": "plan-assistance-rates",
+          "topic": "rights",
+          "sourceId": "program-green-plan-2026",
+          "locator": "A Life You Can Afford",
+          "speaker": "BC Green Party",
+          "text": "Raise the social and disability assistance rates above the poverty line, index them to inflation, and put an end to clawbacks.",
+          "textSha256": "422038cc076974e9fb212dbe3e97f28bbdc2cbba482feeae2ded76b4b58b9df6"
+        },
+        {
+          "id": "plan-living-wage",
+          "topic": "economy",
+          "sourceId": "program-green-plan-2026",
+          "locator": "A Life You Can Afford",
+          "speaker": "BC Green Party",
+          "text": "Boost minimum wage increases to build a living wage, and give every worker the chance to join a union with sectoral bargaining.",
+          "textSha256": "9b352de4fb32f95818003972c65684fccddb4eced85742167f7a3a52ea976b1b"
+        },
+        {
+          "id": "plan-health-centres",
+          "topic": "health",
+          "sourceId": "program-green-plan-2026",
+          "locator": "Care You Can Count On",
+          "speaker": "BC Green Party",
+          "text": "Build Community Health Centres in every region, with team-based care and long-term support.",
+          "textSha256": "af4d170337f44a73d2e65be8c7f436cba7dfe2cff9bbc93e493e5967dbf60fc8"
+        },
+        {
+          "id": "plan-royalties",
+          "topic": "economy",
+          "sourceId": "program-green-plan-2026",
+          "locator": "Economic Fairness for All",
+          "speaker": "BC Green Party",
+          "text": "Create a fair royalty deal for oil and gas.",
+          "textSha256": "12e4c3f8a9fad311d73a3336616e93bc5da5124bfa40e6d9fe87fa3ae623aee2"
+        },
+        {
+          "id": "plan-fossil-fuels",
+          "topic": "environment",
+          "sourceId": "program-green-plan-2026",
+          "locator": "Fight for the Future",
+          "speaker": "BC Green Party",
+          "text": "Stop new fossil fuel development.",
+          "textSha256": "31fe33dcc811735330cb0d1996fe629d95efdb81b79a927f8b4c5171ca816405"
+        },
+        {
+          "id": "plan-old-growth",
+          "topic": "environment",
+          "sourceId": "program-green-plan-2026",
+          "locator": "Fight for the Future",
+          "speaker": "BC Green Party",
+          "text": "Fully fund old-growth deferrals, with fair compensation for First Nations and forestry communities.",
+          "textSha256": "c9c96e20d718a102b44ff22000a6da11a8656c280ef590a1996644dd86314a16"
+        },
+        {
+          "id": "plan-proportional-representation",
+          "topic": "governance",
+          "sourceId": "program-green-plan-2026",
+          "locator": "Fight for the Future",
+          "speaker": "BC Green Party",
+          "text": "Deliver proportional representation legislation within the first 100 days.",
+          "textSha256": "6480874b67fc93e90d94e0d164e79e98ffca0682cbe4a53d7d1fbec81b2af7e0"
+        },
+        {
+          "id": "childcare-freeze-2026",
+          "topic": "education",
+          "sourceId": "program-green-childcare",
+          "speaker": "BC Green Party",
+          "text": "Commit to making quality $10-a-day childcare available to families all across British Columbia by lifting the freeze on new $10-a-day enrolments introduced in Budget 2026, and use it as the foundation to later implement universal childcare coverage by 2031.",
+          "textSha256": "09ee6bf37352147090db845b44582d6314cb93afe1fadc6d29e080b3ca2d6059"
+        },
+        {
+          "id": "ece-wage-grid-2026",
+          "topic": "education",
+          "sourceId": "program-green-childcare",
+          "speaker": "BC Green Party",
+          "text": "Implement an early childhood educator wage grid, and reach $35-45 per hour by 2028 based on qualifications and years of experience.",
+          "textSha256": "e479818e59888caaaff25603c8ee207c0244fb2e1ea04c358f1c17962fd70f46"
+        },
+        {
+          "id": "vacancy-control-2026",
+          "topic": "housing",
+          "sourceId": "program-green-renters",
+          "speaker": "BC Green Party",
+          "text": "Vacancy control ties increases in rent to a unit, rather than a tenant, reducing the incentive for landlords to evict tenants without fault.",
+          "textSha256": "32bd956f3bb205e1d02b64fb6c7c31f33201d7e05db7ba64b543dacd33b5a3c3"
+        },
+        {
+          "id": "pet-bans-2026",
+          "topic": "housing",
+          "sourceId": "program-green-renters",
+          "speaker": "BC Green Party",
+          "text": "Amend the Residential Tenancy Act to prohibit blanket no pets clauses in rental contracts.",
+          "textSha256": "9f1d52b0290dde7f6293a78e1c36543737cb93321251c88d61735fc22523cd14"
+        },
+        {
+          "id": "indigenous-housing-2026",
+          "topic": "indigenous",
+          "sourceId": "program-green-renters",
+          "speaker": "BC Green Party",
+          "text": "Provide adequate and equitable funding for Indigenous-led Complex Care Housing, designed and determined by Indigenous communities.",
+          "textSha256": "5bef9b44330fc4f00e8a36dc8cb1af9b0c2b587fcf5fd63e610316a2dff3f9f3"
+        },
+        {
+          "id": "lng-renewables-2026",
+          "topic": "environment",
+          "sourceId": "program-green-lng-2026",
+          "speaker": "Emily Lowan",
+          "text": "The BC Greens will put that money to work here instead—building out renewable energy, backed by good union jobs that don’t disappear the moment a foreign shareholder changes their mind.",
+          "textSha256": "f324abb093be4882e162c7a8b9bc3bb8b88653fec029fa2cdd8ddd0799ffd110"
+        },
+        {
+          "id": "consent-2026",
+          "topic": "indigenous",
+          "sourceId": "program-green-lng-2026",
+          "speaker": "Emily Lowan",
+          "text": "Reconciliation cannot be a slogan we wear one day a year while governments push through projects over the objections of the people whose lands they cross. It has to mean respecting the right to say no.",
+          "textSha256": "7d0821be55a2e823e16279e016bef29731d9c6ed6bcc70bf472001e826a532f8"
+        },
+        {
+          "id": "farmland-2026",
+          "topic": "economy",
+          "sourceId": "program-green-food",
+          "speaker": "Emily Lowan",
+          "text": "That’s why the BC Greens will restrict foreign and corporate farmland ownership, fund an Agricultural Public Land Bank to connect farmers with affordable farmland, and give local governments the power to tax unused farmland.",
+          "textSha256": "80b2d7322478cd1a57ffb60e358e6d3147ba5aceba959190293874c252484c44"
+        },
+        {
+          "id": "safe-supply-2026",
+          "topic": "addiction",
+          "sourceId": "program-green-drugs",
+          "speaker": "BC Green Party",
+          "text": "Provide regulated, pharmaceutical alternatives to the illicit drug supply to reduce fatalities associated with substance use.",
+          "textSha256": "fc9fa19a648a67e5bc979933e3e1fc99876921f5cee6125eb29ede7acfcfd31f"
+        },
+        {
+          "id": "decriminalisation-2026",
+          "topic": "addiction",
+          "sourceId": "program-green-drugs",
+          "speaker": "BC Green Party",
+          "text": "Treat drug use as a health and social issue, not a criminal one, by decriminalising possession of drugs for personal use.",
+          "textSha256": "c7d3e00bb59eb1ea1dfc5df9b922cf921135ad44e6268d47765f773a2f3257f3"
+        },
+        {
+          "id": "ai-data-centres-2026",
+          "topic": "governance",
+          "sourceId": "program-green-ai",
+          "speaker": "BC Green Party",
+          "text": "Put a moratorium on the construction and operation of AI data centres, until a detailed public-interest audit is developed and appropriate regulatory regime implemented.",
+          "textSha256": "48d77533d795d1ae77b53769132a6cdc5627b15bf804f334c561679a6c8794d0"
+        },
+        {
+          "id": "ai-classrooms-2026",
+          "topic": "education",
+          "sourceId": "program-green-ai",
+          "speaker": "BC Green Party",
+          "text": "Develop clear, province-wide direction on the safe and ethical use of AI with students, placing a moratorium on AI use in K–12 classrooms until that plan is in place.",
+          "textSha256": "3cd116db0ab7272d3a3439328efca27bef002070aa7cb3e6ec30cb95f4206cc2"
+        },
+        {
+          "id": "coast-2026",
+          "topic": "environment",
+          "sourceId": "program-green-coast",
+          "speaker": "Emily Lowan",
+          "text": "The BC Greens are the only party willing to defend our lands, our waters, and our jobs and say no to this project.",
+          "textSha256": "2c260a1fa814e309687872d0d7e212aec56531ed00fd02c3cabf1349bd1bbeb3"
+        },
+        {
+          "id": "seniors-rent-2026",
+          "topic": "rights",
+          "sourceId": "program-green-seniors",
+          "speaker": "BC Green Party",
+          "text": "Further increase the thresholds for Shelter Aid for Elderly Renters to provide greater monthly rental assistance for low-income seniors. The thresholds will be raised to $48,000 for single individuals and $53,000 for couples, ensuring more seniors qualify for support.",
+          "textSha256": "45adad79bf8d0481c0df9a27779e86143cd1a2d3dd2b73a84714661b3365669d"
+        },
+        {
+          "id": "long-term-care-2026",
+          "topic": "health",
+          "sourceId": "program-green-seniors",
+          "speaker": "BC Green Party",
+          "text": "Develop and implement a detailed plan to increase the number of publicly-funded long-term care facilities to meet the growing demand for senior care services.",
+          "textSha256": "c3ff012cf618f1e5ea2c05117115bc76a072d29da278f78ee063fd8bb46d3b91"
+        },
+        {
+          "id": "policing-2024",
+          "topic": "justice",
+          "sourceId": "program-green-2024-pdf",
+          "locator": "PDF p. 58, Justice and Public Safety",
+          "speaker": "BC Green Party",
+          "text": "We will transform the policing and justice systems to prioritize accountability, equity and community safety.",
+          "textSha256": "37054fa034ea0aa2023c93f72d211cc729d39d6aa68092defc4c8d4e561547f7"
+        },
+        {
+          "id": "police-data-2024",
+          "topic": "justice",
+          "sourceId": "program-green-2024-pdf",
+          "locator": "PDF p. 59, Justice and Public Safety",
+          "speaker": "BC Green Party",
+          "text": "We will require all police services to collect and publicly report disaggregated race-based and other demographic data.",
+          "textSha256": "8e9c9b20736fadd6c0d90fbe7aedb09743bc97cc97908f5fb7dd5f6cf2a0f309"
         }
       ]
     },
@@ -1377,7 +2102,8 @@
       "sourceIds": [
         "program-heritage-policy-pdf",
         "program-heritage-platform",
-        "program-heritage-policies"
+        "program-heritage-policies",
+        "program-heritage-priorities-2026"
       ],
       "quotes": [
         {
@@ -1469,6 +2195,87 @@
           "text": "protect the right of parents to choose the best type of schooling for their children.",
           "speaker": "Christian Heritage Party of BC",
           "textSha256": "2235bb563c77946b4723b547b65c0bc75bdfee04703594671954693b9f522404"
+        },
+        {
+          "id": "repeal-dripa-2026",
+          "topic": "indigenous",
+          "sourceId": "program-heritage-priorities-2026",
+          "locator": "Reconciliation, DRIPA & UNDRIP",
+          "speaker": "Christian Heritage Party of BC",
+          "text": "CHP BC would repeal DRIPA, review what has already been done under it and replace it with a clearly defined reconciliation framework.",
+          "textSha256": "8b5a6179a0734dc03052d834a8d7a7da21441230c1e593ebb73e218f2f94c62a"
+        },
+        {
+          "id": "maid-oversight-2026",
+          "topic": "health",
+          "sourceId": "program-heritage-priorities-2026",
+          "locator": "Health Care",
+          "speaker": "Christian Heritage Party of BC",
+          "text": "Establish an independent MAID oversight body, separate from the Ministry and health authorities, with authority to audit cases, investigate complaints, identify safeguard failures and report directly and publicly on its findings.",
+          "textSha256": "d8271a40c127c8d349684263ea1e5498e117bcb3727210fa1fba5c429dd14bd7"
+        },
+        {
+          "id": "cost-of-living-2026",
+          "topic": "affordability",
+          "sourceId": "program-heritage-priorities-2026",
+          "locator": "Affordability",
+          "speaker": "Christian Heritage Party of BC",
+          "text": "Reduce unnecessary taxes, government fees and regulatory costs that increase the price of housing, fuel, utilities, groceries and everyday necessities.",
+          "textSha256": "799b834c27357ba06a6fac4222a0f93420a366b1fbb50b47e61c806cfb72253a"
+        },
+        {
+          "id": "sogi-2026",
+          "topic": "education",
+          "sourceId": "program-heritage-priorities-2026",
+          "locator": "Education & Parental Rights",
+          "speaker": "Christian Heritage Party of BC",
+          "text": "Stop the promotion and use of the SOGI 123 resource package and ideological teaching related to gender identity in B.C. schools.",
+          "textSha256": "6832c133e67368d10488cd94161ba17e77754c75d4d2bcb47f850ec44b39be1e"
+        },
+        {
+          "id": "detox-treatment-2026",
+          "topic": "addiction",
+          "sourceId": "program-heritage-priorities-2026",
+          "locator": "Addiction & Homelessness",
+          "speaker": "Christian Heritage Party of BC",
+          "text": "Expand detox, residential treatment, psychiatric care and long-term recovery.",
+          "textSha256": "6082e89b814b62afa045164e0029ae88d95bbf2b145562ce5c8045865ba59984"
+        },
+        {
+          "id": "repeat-offenders-2026",
+          "topic": "justice",
+          "sourceId": "program-heritage-priorities-2026",
+          "locator": "Crime & Public Safety",
+          "speaker": "Christian Heritage Party of BC",
+          "text": "Focus police, prosecutors and corrections resources on violent and repeat offenders.",
+          "textSha256": "329617b03899edfa9dcbd412b5f0ae212e968ac470b1cc1c75ac3bac7b617360"
+        },
+        {
+          "id": "public-land-housing-2026",
+          "topic": "housing",
+          "sourceId": "program-heritage-priorities-2026",
+          "locator": "Housing & Public Land",
+          "speaker": "Christian Heritage Party of BC",
+          "text": "Identify appropriate, serviced or serviceable Crown and other public lands near existing communities that can responsibly support new housing.",
+          "textSha256": "da92c68fdb6c5e8572dfe65273297a0e0d4b2d460303c148c73d043d952081c3"
+        },
+        {
+          "id": "measurable-results-2026",
+          "topic": "governance",
+          "sourceId": "program-heritage-priorities-2026",
+          "locator": "Government Spending, Debt & Accountability",
+          "speaker": "Christian Heritage Party of BC",
+          "text": "Every major program should have a purpose, a measurable outcome, a budget and a deadline.",
+          "textSha256": "bf8e72d5e789be019c98ade3a61e91577ef0218b18056b499ad60d9288f6b5d5"
+        },
+        {
+          "id": "resource-development-2026",
+          "topic": "economy",
+          "sourceId": "program-heritage-priorities-2026",
+          "locator": "Natural Resources & Development",
+          "speaker": "Christian Heritage Party of BC",
+          "text": "Support responsible forestry, mining, LNG and other resource development while maintaining clear environmental standards.",
+          "textSha256": "c40e28ac3b4f1f9ea23c12563f23f5b953cd0c7406ce045d3aec2aae1df0b846"
         }
       ]
     },
@@ -1487,44 +2294,12 @@
           "textSha256": "e443bd354c06198971ef9903bc7241dcd9be3011308d4ffd031bbd24b8acc822"
         },
         {
-          "id": "climate",
-          "topic": "environment",
-          "text": "Prioritize renewable energy and conservation. Cancel taxpayer subsidies to the LNG industry.",
-          "sourceId": "program-communist-platform",
-          "speaker": "Communist Party of BC",
-          "textSha256": "7246fee918db5b197b308af7b4e32f570465d093d12461ec01e6f54e7ba92c0e"
-        },
-        {
           "id": "transit",
           "topic": "transport",
           "text": "Free public transit for all. Create an accessible province-wide bus transit system.",
           "sourceId": "program-communist-platform",
           "speaker": "Communist Party of BC",
           "textSha256": "a71200a0c417218eecc3686e5b77a1297348af9b0a1f84844b5b80d462db8cb9"
-        },
-        {
-          "id": "labour",
-          "topic": "economy",
-          "text": "Raise BC minimum wage to $23, fully adjusted to annual inflation rates.",
-          "sourceId": "program-communist-platform",
-          "speaker": "Communist Party of BC",
-          "textSha256": "adc13dd2c2472aff72d97da83ca840519c941bc7e524f2718d2d9091b9c99fd0"
-        },
-        {
-          "id": "ownership",
-          "topic": "economy",
-          "text": "Put resources under public ownership and democratic control. End P3 public infrastructure projects.",
-          "sourceId": "program-communist-platform",
-          "speaker": "Communist Party of BC",
-          "textSha256": "b2739128eb2b262c942d5a254c330b4dbaf2aea63b2872c6d81000b1fd997613"
-        },
-        {
-          "id": "land",
-          "topic": "indigenous",
-          "text": "No resource extraction and infrastructure projects on indigenous lands without full consultation and approval.",
-          "sourceId": "program-communist-platform",
-          "speaker": "Communist Party of BC",
-          "textSha256": "40e19e2c5a795618cecc4bf83b63236446a1ccdcd16d01e339cb217205a79eac"
         },
         {
           "id": "assistance",
@@ -1551,30 +2326,6 @@
           "textSha256": "4e1b1e5e80c950d93e452f67d9ed8153b9bdbe671ab4f6e7c6162b211e3842c3"
         },
         {
-          "id": "housing",
-          "topic": "housing",
-          "text": "Legislation to limit rents to 20% of a family’s income, and establish vacancy controls which tie rents to the unit.",
-          "sourceId": "program-communist-platform",
-          "speaker": "Communist Party of BC",
-          "textSha256": "3109134ed108233b8dbf3828c50e4cca989545e484d7a420634fa487bb723a74"
-        },
-        {
-          "id": "democracy",
-          "topic": "governance",
-          "text": "Replace “first past the post” with Mixed Member proportional representation, and set MLA salaries at the average wage of a BC worker.",
-          "sourceId": "program-communist-platform",
-          "speaker": "Communist Party of BC",
-          "textSha256": "e23c96d3accfb878182c0f04bd868cb698a4fff77964afaa6ec15fe0a4a72258"
-        },
-        {
-          "id": "food",
-          "topic": "environment",
-          "text": "End removals from the Agricultural Land Reserve, encourage food production in urban areas.",
-          "sourceId": "program-communist-platform",
-          "speaker": "Communist Party of BC",
-          "textSha256": "e828856876620acea88e78a4c81202653cd7e461d2e6d24b5742d973fbb0b533"
-        },
-        {
           "id": "drug-supply",
           "topic": "addiction",
           "sourceId": "program-communist-platform",
@@ -1584,22 +2335,85 @@
           "textSha256": "8e42ed6c56185ed2823e0429c1be4346736d02a095020c0e4d81b7dea0f438b4"
         },
         {
-          "id": "childcare-wages",
-          "topic": "education",
-          "sourceId": "program-communist-platform",
-          "locator": "UNIVERSAL, AFFORDABLE, HIGH QUALITY CHILD CARE",
-          "text": "Implement an Early Childhood Educator (ECE) Wage Grid paying at least $30-$40/hr.",
-          "speaker": "Communist Party of BC",
-          "textSha256": "5037e36a0811a1d91fb66d0e9d8602fafcfd7c727db5d7dd52416f1ef8969012"
-        },
-        {
           "id": "public-housing",
           "topic": "housing",
           "sourceId": "program-communist-platform",
-          "locator": "HOUSING IS A HUMAN RIGHT, NOT A PROFIT OPPORTUNITY!",
+          "locator": "HOUSING IS A HUMAN RIGHT, NOT A PROFIT OPPORTUNITY",
           "text": "Build 100,000 units of new renovated social and low-income public housing.",
           "speaker": "Communist Party of BC",
           "textSha256": "2d8e8f344d1ffeec80e3e71572b35131d61fdef7622d9841cfa62bbf30c782e9"
+        },
+        {
+          "id": "climate",
+          "topic": "environment",
+          "sourceId": "program-communist-platform",
+          "locator": "CLIMATE JUSTICE, NOT CARBON BOMBS",
+          "speaker": "Communist Party of BC",
+          "text": "Prioritize renewable energy and conservation. Cancel taxpayer subsidies to the LNG industry, make them pay higher levies to profit from the people’s resources.",
+          "textSha256": "6cc8681fb1d4e13bde9518be744e9333cb22684c2cdffe5136d8870938caf5c5"
+        },
+        {
+          "id": "labour",
+          "topic": "economy",
+          "sourceId": "program-communist-platform",
+          "locator": "RIGHTS AND JOBS FOR WORKERS",
+          "speaker": "Communist Party of BC",
+          "text": "Raise BC minimum wage to $30, fully adjusted to annual inflation rates.",
+          "textSha256": "098e654121fadd6812409514fba8d9537541af84fea50db759819893912934b0"
+        },
+        {
+          "id": "ownership",
+          "topic": "economy",
+          "sourceId": "program-communist-platform",
+          "locator": "PUBLIC OWNERSHIP, NOT P3S",
+          "speaker": "Communist Party of BC",
+          "text": "End P3 public infrastructure projects.",
+          "textSha256": "3980244fdda9d1f067344cb155ac46ea859a15ee6cff0a9db02584fcb45d468e"
+        },
+        {
+          "id": "land",
+          "topic": "indigenous",
+          "sourceId": "program-communist-platform",
+          "locator": "JUSTICE FOR INDIGENOUS PEOPLES",
+          "speaker": "Communist Party of BC",
+          "text": "Ban resource extraction and infrastructure projects on indigenous lands without full consultation and approval.",
+          "textSha256": "72ed58e677dae0cf8bda59da69744a69b4e46fa0745f043b4f3bc58dfad11837"
+        },
+        {
+          "id": "housing",
+          "topic": "housing",
+          "sourceId": "program-communist-platform",
+          "locator": "HOUSING IS A HUMAN RIGHT, NOT A PROFIT OPPORTUNITY",
+          "speaker": "Communist Party of BC",
+          "text": "Immediately establish vacancy controls which tie rents to the unit. Legislate to limit rents to 20% of a family’s income.",
+          "textSha256": "81f3641e91ff744e56cc61757447ef3700738d4d19fa42e156a7c164f70e9bbb"
+        },
+        {
+          "id": "democracy",
+          "topic": "governance",
+          "sourceId": "program-communist-platform",
+          "locator": "ELECTORAL REFORM",
+          "speaker": "Communist Party of BC",
+          "text": "Replace “first past the post” with mixed member proportional representation, and set MLA salaries at the average wage of a BC worker.",
+          "textSha256": "bed08afc68b987472c49967b420eddd67e49020417094a767dbb84ea8291bb28"
+        },
+        {
+          "id": "childcare-wages",
+          "topic": "education",
+          "sourceId": "program-communist-platform",
+          "locator": "PUBLIC UNIVERSAL, AFFORDABLE, HIGH QUALITY CHILD CARE",
+          "speaker": "Communist Party of BC",
+          "text": "Implement an Early Childhood Educator (ECE) Wage Grid paying at least $35 – $45/hr.",
+          "textSha256": "5c69a1d694a8ebbcaad7fc41a42e60a16079ade8e231ce35987f7650682465e5"
+        },
+        {
+          "id": "hospitals",
+          "topic": "health",
+          "sourceId": "program-communist-platform",
+          "locator": "PROTECT AND EXPAND PUBLIC HEALTHCARE",
+          "speaker": "Communist Party of BC",
+          "text": "Properly fund hospitals to end emergency room closures.",
+          "textSha256": "650d5fa5a19a3c85ed3113ed3891a6902fd11bbf9751f15abd2dd135cc657c1a"
         }
       ]
     },

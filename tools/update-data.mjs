@@ -490,10 +490,20 @@ async function validate(candidateManifest) {
     }
     if (memberDistricts.size !== election.districtCount) throw new Error('Member snapshot does not account for every riding.');
   }
+  const withheldImages = new URL('private-images/', root);
+  const privateCopyAvailable = await readdir(withheldImages).then(() => true, () => false);
   for (const asset of manifest.assets) {
+    const published = asset.reuse?.publishApproved === true;
     for (const record of [asset.original, asset.web].filter(Boolean)) {
       const bytes = await optionalRead(file(current, record.path));
-      if (!bytes || hash(bytes) !== record.sha256) throw new Error(`Asset file and manifest disagree: ${record.path}`);
+      if (published) {
+        if (!bytes || hash(bytes) !== record.sha256) throw new Error(`Asset file and manifest disagree: ${record.path}`);
+        continue;
+      }
+      if (bytes) throw new Error(`Withheld image must not be published under data/: ${record.path}`);
+      if (!privateCopyAvailable) continue;
+      const kept = await optionalRead(file(withheldImages, record.path));
+      if (!kept || hash(kept) !== record.sha256) throw new Error(`Private copy of withheld image is missing or changed: ${record.path}`);
     }
   }
   const index = await json(current, 'map/district-index.json');

@@ -1,8 +1,11 @@
 import { translate, formatNumber } from './i18n.js';
 
-export function comparisonWindow(count, width, { pinned = 0, index = 0, pinnedIndex = 0, minimumWidth = 200 } = {}) {
+const columnChoices = [1, 2, 3, 4, 5, 6];
+
+export function comparisonWindow(count, width, { pinned = 0, index = 0, pinnedIndex = 0, minimumWidth = 200, columns = 0 } = {}) {
   const total = Math.max(0, Math.trunc(count));
-  const capacity = Math.min(total, Math.max(1, Math.floor(Math.max(0, width) / minimumWidth)));
+  const fitting = Math.max(1, Math.floor(Math.max(0, width) / minimumWidth));
+  const capacity = Math.min(total, Number.isInteger(columns) && columns > 0 ? Math.min(columns, fitting) : fitting);
   const pinnedCount = Math.min(total, Math.max(0, Math.trunc(pinned)));
   const movingCount = total - pinnedCount;
   const pinnedVisible = Math.min(pinnedCount, Math.max(0, capacity - Number(movingCount > 0)));
@@ -29,48 +32,62 @@ export function comparisonWindow(count, width, { pinned = 0, index = 0, pinnedIn
 }
 
 export function mountComparison(container, preference) {
-  const desktop = container.querySelector('[data-comparison-desktop]');
-  const region = desktop?.querySelector('.comparison-table-region');
+  const view = container.querySelector('[data-comparison-view]');
+  const region = view?.querySelector('.comparison-table-region');
   if (!region) return () => {};
-  const toolbar = desktop.querySelector('.comparison-navigation');
+  const toolbar = view.querySelector('.comparison-navigation');
   const table = region.querySelector('table');
   const headingRow = table.querySelector('thead tr');
-  const headers = [...headingRow.children];
   const rows = [headingRow, ...table.querySelectorAll('[data-comparison-row]')];
-  const columns = headers.map((header, index) => ({
+  const rowList = view.querySelector('[data-comparison-rows]');
+  const sections = new Map([...rowList.querySelectorAll('[data-row-compare-party]')].map(section => [section.dataset.rowCompareParty, section]));
+  const columns = [...headingRow.children].map((header, index) => ({
     id: header.dataset.compareParty,
     name: header.querySelector('.comparison-party-name').textContent,
-    cells: rows.map(row => row.children[index])
+    cells: rows.map(row => row.children[index]),
+    section: sections.get(header.dataset.compareParty)
   }));
-  const previous = desktop.querySelector('[data-comparison-move="previous"]');
-  const next = desktop.querySelector('[data-comparison-move="next"]');
-  const pinChoice = desktop.querySelector('.comparison-pin-choice');
+  const count = container.querySelector('[data-comparison-count]');
+  const empty = view.querySelector('[data-comparison-empty]');
+  const columnsChoice = toolbar.querySelector('[data-comparison-columns]');
+  const choices = [...toolbar.querySelectorAll('.comparison-choice')];
+  const pinChoice = toolbar.querySelector('.comparison-pin-choice');
+  const hideChoice = toolbar.querySelector('.comparison-hide-choice');
   const pins = [...pinChoice.querySelectorAll('[data-comparison-pin]')];
-  const pinnedNavigation = desktop.querySelector('.comparison-pin-navigation');
-  const pinnedPrevious = desktop.querySelector('[data-comparison-pin-move="previous"]');
-  const pinnedNext = desktop.querySelector('[data-comparison-pin-move="next"]');
-  const pinnedRange = desktop.querySelector('[data-comparison-pinned-range]');
-  const range = desktop.querySelector('[data-comparison-range]');
-  const announcement = desktop.querySelector('[data-comparison-announcement]');
-  const rail = desktop.querySelector('.comparison-scrollbar');
+  const hides = [...hideChoice.querySelectorAll('[data-comparison-hide]')];
+  const previous = toolbar.querySelector('[data-comparison-move="previous"]');
+  const next = toolbar.querySelector('[data-comparison-move="next"]');
+  const pinnedNavigation = toolbar.querySelector('.comparison-pin-navigation');
+  const pinnedPrevious = toolbar.querySelector('[data-comparison-pin-move="previous"]');
+  const pinnedNext = toolbar.querySelector('[data-comparison-pin-move="next"]');
+  const pinnedRange = toolbar.querySelector('[data-comparison-pinned-range]');
+  const range = toolbar.querySelector('[data-comparison-range]');
+  const announcement = view.querySelector('[data-comparison-announcement]');
+  const rail = toolbar.querySelector('.comparison-scrollbar');
   const railTrack = rail.firstElementChild;
   const abort = new AbortController();
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   let geometry;
   let ordered = columns;
+  let pinnedCount = 0;
   let lastWidth = 0;
   let animationFrame;
   let announceTimer;
   let pendingIndex = null;
   let synchronizedRailLeft = 0;
-  let pinPointerDown = false;
-  let pinFocusFrame;
+  let pointerActive = false;
+  let choiceFocusFrame;
   let disposed = false;
 
+  preference.layout = preference.layout === 'rows' ? 'rows' : 'columns';
+  preference.columns = columnChoices.includes(Number(preference.columns)) ? Number(preference.columns) : 'auto';
   preference.mode = preference.mode === 'pages' ? 'pages' : 'scroll';
   preference.index = Number.isFinite(preference.index) ? preference.index : 0;
   preference.pinnedIndex = Number.isFinite(preference.pinnedIndex) ? preference.pinnedIndex : 0;
-  preference.pinnedIds = columns.filter(column => preference.pinnedIds?.includes(column.id)).map(column => column.id);
+  preference.hiddenIds = Array.isArray(preference.hiddenIds) ? preference.hiddenIds : [];
+  preference.pinnedIds = (Array.isArray(preference.pinnedIds) ? preference.pinnedIds : []).filter(id => !preference.hiddenIds.includes(id));
+
+  const measure = width => comparisonWindow(ordered.length, width, { pinned: pinnedCount, index: preference.index, pinnedIndex: preference.pinnedIndex, columns: preference.columns === 'auto' ? 0 : preference.columns });
 
   function rangeText() {
     if (!geometry) return '';
@@ -95,11 +112,9 @@ export function mountComparison(container, preference) {
     pinnedNext.setAttribute('aria-disabled', String(geometry.pinnedStart === geometry.pinnedMaximumStart));
     pinnedNavigation.hidden = geometry.pinnedMaximumStart === 0;
     pinnedRange.textContent = pinnedRangeText();
-    pinChoice.querySelector('summary').textContent = translate('Pinned parties ({count})', { count: formatNumber(geometry.pinnedCount) });
-    for (const input of pins) input.checked = preference.pinnedIds.includes(input.dataset.comparisonPin);
     range.textContent = rangeText();
-    desktop.dataset.moreBefore = String(geometry.start > 0);
-    desktop.dataset.moreAfter = String(geometry.start < geometry.maximumStart);
+    view.dataset.moreBefore = String(geometry.start > 0);
+    view.dataset.moreAfter = String(geometry.start < geometry.maximumStart);
     if (announce) {
       clearTimeout(announceTimer);
       announceTimer = setTimeout(() => { announcement.textContent = geometry.pinnedMaximumStart ? `${pinnedRangeText()} · ${rangeText()}` : rangeText(); }, 180);
@@ -107,8 +122,38 @@ export function mountComparison(container, preference) {
   }
 
   function orderColumns() {
-    const selected = new Set(preference.pinnedIds);
-    ordered = [...columns.filter(column => selected.has(column.id)), ...columns.filter(column => !selected.has(column.id))];
+    const hidden = new Set(preference.hiddenIds);
+    const pinned = new Set(preference.pinnedIds);
+    const shown = columns.filter(column => !hidden.has(column.id));
+    const pinnedColumns = shown.filter(column => pinned.has(column.id));
+    ordered = [...pinnedColumns, ...shown.filter(column => !pinned.has(column.id))];
+    pinnedCount = pinnedColumns.length;
+  }
+
+  function applyParties() {
+    const hidden = new Set(preference.hiddenIds);
+    const pinned = new Set(preference.pinnedIds);
+    const sectionOrder = [...ordered, ...columns.filter(column => hidden.has(column.id))].map(column => column.section);
+    if (sectionOrder.some((section, index) => rowList.children[index] !== section)) rowList.append(...sectionOrder);
+    for (const column of columns) {
+      column.section.hidden = hidden.has(column.id);
+      column.section.querySelector('.comparison-pin-marker').hidden = !pinned.has(column.id);
+    }
+    for (const input of pins) {
+      input.checked = pinned.has(input.dataset.comparisonPin);
+      input.closest('label').hidden = hidden.has(input.dataset.comparisonPin);
+    }
+    for (const input of hides) input.checked = hidden.has(input.dataset.comparisonHide);
+    pinChoice.querySelector('summary').textContent = translate('Pinned parties ({count})', { count: formatNumber(pinnedCount) });
+    hideChoice.querySelector('summary').textContent = translate('Hidden parties ({count})', { count: formatNumber(columns.length - ordered.length) });
+    count.textContent = translate(ordered.length === 1 ? '{count} party' : '{count} parties', { count: formatNumber(ordered.length) });
+    empty.hidden = ordered.length > 0;
+    view.dataset.empty = String(ordered.length === 0);
+    view.dataset.layout = preference.layout;
+    view.dataset.presentation = preference.mode;
+    for (const input of toolbar.querySelectorAll('[data-comparison-layout]')) input.checked = input.value === preference.layout;
+    for (const input of toolbar.querySelectorAll('[data-comparison-mode]')) input.checked = input.value === preference.mode;
+    columnsChoice.value = String(preference.columns);
   }
 
   function setPinned(ids) {
@@ -120,18 +165,26 @@ export function mountComparison(container, preference) {
     layout(true);
   }
 
+  function setHidden(ids) {
+    preference.hiddenIds = ids;
+    preference.pinnedIds = preference.pinnedIds.filter(id => !ids.includes(id));
+    pendingIndex = null;
+    orderColumns();
+    layout(true);
+  }
+
   function layout(announce = false) {
+    cancelAnimationFrame(animationFrame);
+    applyParties();
     const width = region.clientWidth;
     if (!width) return;
-    cancelAnimationFrame(animationFrame);
     const focused = table.contains(document.activeElement) ? document.activeElement : null;
-    geometry = comparisonWindow(columns.length, width, { pinned: preference.pinnedIds.length, index: preference.index, pinnedIndex: preference.pinnedIndex });
+    geometry = measure(width);
     preference.index = geometry.start;
     preference.pinnedIndex = geometry.pinnedStart;
     const paged = preference.mode === 'pages';
-    desktop.dataset.presentation = preference.mode;
-    desktop.style.setProperty('--comparison-column-width', `${geometry.columnWidth}px`);
-    desktop.style.setProperty('--comparison-pinned-width', `${geometry.pinnedVisible * geometry.columnWidth}px`);
+    view.style.setProperty('--comparison-column-width', `${geometry.columnWidth}px`);
+    view.style.setProperty('--comparison-pinned-width', `${geometry.pinnedVisible * geometry.columnWidth}px`);
     const pinnedColumns = ordered.slice(geometry.pinnedStart, geometry.pinnedEnd);
     const movingColumns = ordered.slice(geometry.pinnedCount);
     const rendered = [...pinnedColumns, ...(paged ? movingColumns.slice(geometry.start, geometry.end) : movingColumns)];
@@ -159,8 +212,6 @@ export function mountComparison(container, preference) {
     region.scrollTo({ left: paged ? 0 : geometry.start * geometry.columnWidth, behavior: 'instant' });
     rail.scrollLeft = region.scrollLeft;
     synchronizedRailLeft = rail.scrollLeft;
-    desktop.style.setProperty('--comparison-toolbar-height', `${toolbar.getBoundingClientRect().height}px`);
-    for (const input of desktop.querySelectorAll('[data-comparison-mode]')) input.checked = input.value === preference.mode;
     updateControls(announce);
     if (focused) {
       const target = focused.isConnected ? focused : region;
@@ -196,7 +247,7 @@ export function mountComparison(container, preference) {
     cancelAnimationFrame(animationFrame);
     animationFrame = requestAnimationFrame(() => {
       preference.index = Math.min(geometry.maximumStart, Math.max(0, Math.round(region.scrollLeft / geometry.columnWidth)));
-      geometry = comparisonWindow(columns.length, region.clientWidth, { pinned: preference.pinnedIds.length, index: preference.index, pinnedIndex: preference.pinnedIndex });
+      geometry = measure(region.clientWidth);
       if (pendingIndex !== null && Math.abs(region.scrollLeft - pendingIndex * geometry.columnWidth) < 1) pendingIndex = null;
       if (Math.abs(rail.scrollLeft - region.scrollLeft) > 1) {
         rail.scrollLeft = region.scrollLeft;
@@ -206,11 +257,17 @@ export function mountComparison(container, preference) {
     });
   }
 
-  toolbar.addEventListener('click', event => {
+  view.addEventListener('click', event => {
     const pinAction = event.target.closest('[data-comparison-pin-action]');
     if (pinAction) {
-      if (pinAction.dataset.comparisonPinAction === 'all') setPinned(columns.map(column => column.id));
-      else if (pinAction.dataset.comparisonPinAction === 'clear') setPinned([]);
+      setPinned(pinAction.dataset.comparisonPinAction === 'all' ? ordered.map(column => column.id) : []);
+      return;
+    }
+    const hideAction = event.target.closest('[data-comparison-hide-action]');
+    if (hideAction) {
+      const fromEmptyState = empty.contains(hideAction);
+      setHidden(hideAction.dataset.comparisonHideAction === 'all' ? columns.map(column => column.id) : []);
+      if (fromEmptyState) hideChoice.querySelector('summary').focus();
       return;
     }
     const pinnedButton = event.target.closest('[data-comparison-pin-move]');
@@ -227,47 +284,71 @@ export function mountComparison(container, preference) {
   }, { signal: abort.signal });
 
   toolbar.addEventListener('change', event => {
-    if (event.target.matches('[data-comparison-pin]')) {
+    const target = event.target;
+    if (target.matches('[data-comparison-pin]')) {
       setPinned(pins.filter(input => input.checked).map(input => input.dataset.comparisonPin));
       return;
     }
-    if (!event.target.matches('[data-comparison-mode]')) return;
-    preference.mode = event.target.value;
+    if (target.matches('[data-comparison-hide]')) {
+      setHidden(hides.filter(input => input.checked).map(input => input.dataset.comparisonHide));
+      return;
+    }
+    if (target.matches('[data-comparison-layout]')) preference.layout = target.value === 'rows' ? 'rows' : 'columns';
+    else if (target.matches('[data-comparison-columns]')) preference.columns = columnChoices.includes(Number(target.value)) ? Number(target.value) : 'auto';
+    else if (target.matches('[data-comparison-mode]')) preference.mode = target.value === 'pages' ? 'pages' : 'scroll';
+    else return;
     pendingIndex = null;
     layout(true);
   }, { signal: abort.signal });
 
-  pinChoice.addEventListener('keydown', event => {
-    if (event.key !== 'Escape' || !pinChoice.open) return;
-    event.preventDefault();
-    event.stopPropagation();
-    pinChoice.open = false;
-    pinChoice.querySelector('summary').focus();
-  }, { signal: abort.signal });
+  function placeChoicePanel(choice) {
+    const panel = choice.querySelector('.comparison-choice-panel');
+    panel.style.removeProperty('left');
+    const bounds = panel.getBoundingClientRect();
+    const limit = document.documentElement.clientWidth - 12;
+    if (bounds.right > limit) panel.style.left = `${Math.max(limit - bounds.right, 12 - bounds.left)}px`;
+  }
 
-  function dismissPinChoiceOnFocusExit() {
-    cancelAnimationFrame(pinFocusFrame);
-    pinFocusFrame = requestAnimationFrame(() => {
-      if (!pinPointerDown && !pinChoice.contains(document.activeElement)) pinChoice.open = false;
+  function dismissChoicesOnFocusExit() {
+    cancelAnimationFrame(choiceFocusFrame);
+    choiceFocusFrame = requestAnimationFrame(() => {
+      if (pointerActive) return;
+      for (const choice of choices) if (choice.open && !choice.contains(document.activeElement)) choice.open = false;
     });
   }
 
-  function finishPinPointer() {
-    if (!pinPointerDown) return;
-    pinPointerDown = false;
-    dismissPinChoiceOnFocusExit();
+  function finishChoicePointer() {
+    if (!pointerActive) return;
+    pointerActive = false;
+    dismissChoicesOnFocusExit();
   }
 
-  pinChoice.addEventListener('focusout', event => {
-    if (!pinChoice.contains(event.relatedTarget)) dismissPinChoiceOnFocusExit();
+  for (const choice of choices) {
+    choice.querySelector('summary').addEventListener('click', event => {
+      event.preventDefault();
+      const open = !choice.open;
+      for (const other of choices) if (other !== choice) other.open = false;
+      choice.open = open;
+      if (open) placeChoicePanel(choice);
+    }, { signal: abort.signal });
+    choice.addEventListener('keydown', event => {
+      if (event.key !== 'Escape' || !choice.open) return;
+      event.preventDefault();
+      event.stopPropagation();
+      choice.open = false;
+      choice.querySelector('summary').focus();
+    }, { signal: abort.signal });
+    choice.addEventListener('focusout', event => {
+      if (!choice.contains(event.relatedTarget)) dismissChoicesOnFocusExit();
+    }, { signal: abort.signal });
+  }
+  document.addEventListener('pointerdown', () => { pointerActive = true; }, { signal: abort.signal });
+  document.addEventListener('click', event => {
+    for (const choice of choices) if (choice.open && !choice.contains(event.target)) choice.open = false;
   }, { signal: abort.signal });
-  document.addEventListener('pointerdown', event => {
-    pinPointerDown = pinChoice.contains(event.target);
-    if (pinChoice.open && !pinPointerDown) pinChoice.open = false;
-  }, { signal: abort.signal });
-  document.addEventListener('pointerup', finishPinPointer, { signal: abort.signal });
-  document.addEventListener('pointercancel', finishPinPointer, { signal: abort.signal });
-  window.addEventListener('blur', finishPinPointer, { signal: abort.signal });
+  document.addEventListener('pointerup', finishChoicePointer, { signal: abort.signal });
+  document.addEventListener('pointercancel', finishChoicePointer, { signal: abort.signal });
+  window.addEventListener('blur', finishChoicePointer, { signal: abort.signal });
 
   region.addEventListener('keydown', event => {
     if (event.target !== region || !geometry || !['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
@@ -300,7 +381,9 @@ export function mountComparison(container, preference) {
     pendingIndex = null;
     layout();
   });
+  const toolbarObserver = new ResizeObserver(() => view.style.setProperty('--comparison-toolbar-height', `${toolbar.getBoundingClientRect().height}px`));
   observer.observe(region);
+  toolbarObserver.observe(toolbar);
   orderColumns();
   layout();
 
@@ -310,8 +393,9 @@ export function mountComparison(container, preference) {
     if (geometry && region.clientWidth && preference.mode === 'scroll') preference.index = Math.min(geometry.maximumStart, Math.max(0, Math.round(region.scrollLeft / geometry.columnWidth)));
     abort.abort();
     observer.disconnect();
+    toolbarObserver.disconnect();
     cancelAnimationFrame(animationFrame);
-    cancelAnimationFrame(pinFocusFrame);
+    cancelAnimationFrame(choiceFocusFrame);
     clearTimeout(announceTimer);
   };
 }

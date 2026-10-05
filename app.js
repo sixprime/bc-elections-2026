@@ -1,18 +1,17 @@
 import { mountMaps, disposeMaps, updateRidingMap, openRidingFinder, refreshMapIcons, refreshMapLanguage } from './map.js?v=riding-finder';
-import { candidateDirectory, candidateResults, partyDirectory, partyResults, partyComparison, ridingCandidates, ridingMember, ridingMemberLabel } from './candidates.js?v=candidate-authority';
+import { candidateDirectory, candidateResults, partyDirectory, partyResults, partyComparison, ridingCandidates, ridingMember, ridingMemberLabel } from './candidates.js?v=party-layout';
 import { atNominationDeadline } from './candidate-policy.js';
 import { renderPollChart, pollSeries } from './poll-chart.js';
 import { translate, setLanguage, translateElements, syncLanguageControls, formatNumber, formatPercent, formatDate } from './i18n.js';
 import { currentRoute, routeHref, navigate, installRouter, refreshRouteLinks } from './routes.js';
 import { districtSlug, pageInfo, publishedSite, updatePageMetadata } from './page-info.js';
-import { mountComparison } from './comparison.js';
+import { mountComparison } from './comparison.js?v=party-layout';
 
 const root = document.getElementById('main');
 const state = { election: null, polls: null, query: '', filter: 'all', partyFilter: 'all' };
 const candidateFilters = { query: '', partyId: 'all', riding: 'all' };
 const programFilters = { query: '', partyId: 'ndp', topic: 'all' };
-const programComparison = { topic: 'housing', partyIds: null, mode: 'scroll', pinnedIds: [], index: 0, pinnedIndex: 0 };
-const programComparisonSelections = new Map();
+const programComparison = { topic: 'housing', layout: 'columns', columns: 'auto', mode: 'scroll', hiddenIds: [], pinnedIds: [], index: 0, pinnedIndex: 0 };
 let disposeComparison = () => {};
 let programView = 'compare';
 let partyPrograms;
@@ -82,7 +81,7 @@ function closestCard() {
 }
 function recentCard() {
   const releases = state.polls.releases.slice(0,2);
-  return `<section class="card card-pad recent-card">${panelHeader('What changed?','New releases in this source snapshot','SEP 25 SNAPSHOT')}<ul class="recent-list">${releases.map(p=>`<li><time datetime="${p.released}">${readableDate(p.released)}</time><span><b>${text('{pollster} published a B.C. poll', { pollster: p.pollster })}</b>${sourceLink(p.source,'Original release')}</span></li>`).join('')}<li><time datetime="2026-09-25">${readableDate('2026-09-25')}</time><span><b>${text('Party register checked against Elections BC')}</b>${sourceLink(state.election.sources.parties,'Party register')}</span></li></ul></section>`;
+  return `<section class="card card-pad recent-card">${panelHeader('What changed?','New releases in this source snapshot',translate('{date} SNAPSHOT', { date: readableDate(state.election.snapshotDate).toLocaleUpperCase() }))}<ul class="recent-list">${releases.map(p=>`<li><time datetime="${p.released}">${readableDate(p.released)}</time><span><b>${text('{pollster} published a B.C. poll', { pollster: p.pollster })}</b>${sourceLink(p.source,'Original release')}</span></li>`).join('')}<li><time datetime="${state.election.partyRegisterChecked}">${readableDate(state.election.partyRegisterChecked)}</time><span><b>${text('Party register checked against Elections BC')}</b>${sourceLink(state.election.sources.parties,'Party register')}</span></li></ul></section>`;
 }
 function province() {
   return `<div class="page-head"><div><p class="eyebrow">${text('2026 provincial general election')}</p><h1>${text('British Columbia, at a glance')}</h1><p>${text('{date} · Source-linked data, with each kind of evidence clearly labelled.', { date: readableDate(state.election.electionDate,{month:'long',day:'numeric',year:'numeric'}) })}</p></div><span class="snapshot-pill">${text('Snapshot · {date}', { date: readableDate(state.election.snapshotDate,{month:'short',day:'numeric',year:'numeric'}) })}</span></div><div class="province-grid"><div class="province-left">${mapCard()}${closestCard()}</div><div class="province-right"><section class="card card-pad poll-average-card">${panelHeader('Professional polling average','Current published vote intention',translate('{count} POLLSTERS', { count: currentPolls().length }))}<div class="poll-context"><span>${dot('#27a55d')}${text('Latest release per pollster')}</span><span>${text('{date} snapshot', { date: readableDate(state.polls.snapshotDate) })}</span></div>${currentRows()}${cardBottom('Simple mean · observed range is not a confidence interval.',`<a href="${routeHref('polls')}" class="action-link">${text('Polls & sources →')}</a>`)}</section><section class="card card-pad baseline-card">${panelHeader('Last election, not a forecast','Official Elections BC results · October 2024','2024 RESULTS')}<div class="stat-grid"><div class="stat-tile"><strong class="stat-number">93</strong><span>${text('electoral districts')}</span></div><div class="stat-tile"><strong class="stat-number">47</strong><span>${text('seats for majority')}</span></div><div class="stat-tile"><strong class="stat-number">${percentage(58.45,2)}</strong><span>${text('voter turnout')}</span></div></div>${seatTrack()}<h3 style="font-size:12px;margin:21px 0 12px">${text('Popular vote · each 2024 affiliation separately')}</h3><div class="baseline-list">${baselineRows()}</div>${cardBottom('2024 figures are historical context.',sourceLink(state.election.sources.districts,'Statement of Votes'))}</section>${recentCard()}</div></div>`;
@@ -154,17 +153,13 @@ async function loadPrograms() {
   }
 }
 
-function updatePartyResults(focusId = '') {
+function updatePartyResults() {
   const container = document.getElementById('partyResults');
-  const pickerOpen = container.querySelector('.comparison-picker')?.open;
   disposeComparison();
   const results = programView === 'compare' ? partyComparison(state.election, candidateManifest, partyPrograms, programComparison) : partyResults(state.election, candidateManifest, partyPrograms, programFilters);
   container.innerHTML = results;
-  const picker = container.querySelector('.comparison-picker');
-  if (picker) picker.open = Boolean(pickerOpen);
   refreshMapIcons();
   disposeComparison = mountComparison(container, programComparison);
-  if (focusId) (document.getElementById(focusId) || document.querySelector('[data-comparison-topic]:checked'))?.focus({ preventScroll: true });
 }
 
 function showProgramView(view, partyId) {
@@ -213,7 +208,7 @@ function about() {
   return `<div class="page-head"><div><p class="eyebrow">BC Election Guide</p><h1>${text('About')}</h1><p>${text('An independent, unofficial guide to British Columbia elections. Not affiliated with Elections BC or any political party.')}</p></div></div>
     <div class="simple-layout"><section class="card card-pad prose-card">
     ${panelHeader('Sources & methodology', 'Independent and unofficial', 'SOURCES')}
-    <h3>${text('Election records')}</h3><p>${text("Official 2024 provincial totals and {count} riding results come from Elections BC's final Statement of Votes. Complete riding imports are checked against the report's independent district totals, party vote totals and seat totals. The party directory follows the registered-party PDF dated September 25, 2026. Election Day comes from Elections BC. Past results are not current projections.", { count: Object.keys(state.election.featuredDistricts2024).length })}</p>
+    <h3>${text('Election records')}</h3><p>${text("Official 2024 provincial totals and {count} riding results come from Elections BC's final Statement of Votes. Complete riding imports are checked against the report's independent district totals, party vote totals and seat totals. The party directory follows the registered-party PDF dated {registerDate}. Election Day comes from Elections BC. Past results are not current projections.", { count: Object.keys(state.election.featuredDistricts2024).length, registerDate: readableDate(state.election.partyRegisterChecked, { month: 'long', day: 'numeric', year: 'numeric' }) })}</p>
     <h3>${text('Polling summary')}</h3><p>${text('{count} survey records come from the original pollsters. The current summary takes the latest release from each distinct pollster in the {days} days ending {date}. Values are arithmetic means of reported party shares. Ranges are the smallest and largest release values, not confidence intervals. At least two pollsters must report a party separately for it to appear in the summary.', { count: state.polls.releases.length, days: state.polls.summaryWindowDays, date: readableDate(state.polls.snapshotDate) })}</p>
     <p>${text('Older releases remain in the archive without counting the same firm twice in the current mean. Grouped responses are never divided among named parties. Chart lines connect observations from the same pollster, with gaps for unreported values; question bases remain listed on each release. These lines are descriptive, not a fitted polling average.')}</p>
     <p>${text('The optional dashed election-day continuation holds the recent average unchanged. This no-change scenario is not a forecast, confidence interval or seat projection.')}</p>
@@ -227,7 +222,7 @@ function about() {
     </section><aside class="card card-pad">${panelHeader('Original sources','','LINKS')}<ul class="source-list">
     <li>${sourceLink(e.election,'Elections BC')}<small>${text('Election and voter information')}</small></li>
     <li>${sourceLink(e.districts,'2024 Statement of Votes')}<small>${text('Official historical results')}</small></li>
-    <li>${sourceLink(e.parties,'Registered parties PDF')}<small>${text('September 25 register')}</small></li>
+    <li>${sourceLink(e.parties,'Registered parties PDF')}<small>${text('{date} register', { date: readableDate(state.election.partyRegisterChecked, { month: 'long', day: 'numeric' }) })}</small></li>
     <li>${sourceLink(e.candidates,'2026 candidate filings')}<small>${text('Accepted nominations')}</small></li>
     <li>${sourceLink(e.boundaries,'GIS spatial data')}<small>${text('93 electoral districts')}</small></li>
     <li>${sourceLink('https://maps.eox.at/','EOX Maps')}<small>${text('Satellite, terrain and reference labels')}</small></li>
@@ -306,7 +301,6 @@ document.addEventListener('keydown', event => {
 
 function updateLanguage() {
   const top = window.scrollY;
-  const pickerOpen = root.querySelector('.comparison-picker')?.open;
   translateElements();
   refreshRouteLinks();
   syncLanguageControls();
@@ -315,7 +309,6 @@ function updateLanguage() {
     updateCountdown();
     render(true);
     refreshMapLanguage();
-    if (pickerOpen && root.querySelector('.comparison-picker')) root.querySelector('.comparison-picker').open = true;
     window.scrollTo({ top, behavior: 'instant' });
   }
   document.getElementById('languageStatus').textContent = translate('Interface language changed to English.');
@@ -331,17 +324,6 @@ document.querySelector('.skip-link').addEventListener('click', event => {
 });
 document.addEventListener('click', e=>{
   if (e.target.closest('[data-program-retry]')) { programError = ''; render(); return; }
-  const comparisonAction = e.target.closest('[data-comparison-action]');
-  if (comparisonAction) {
-    if (comparisonAction.dataset.comparisonAction === 'defaults') programComparison.partyIds = null;
-    else if (comparisonAction.dataset.comparisonAction === 'all') programComparison.partyIds = state.election.parties.map(party => party.id);
-    else if (comparisonAction.dataset.comparisonAction === 'clear') { programComparison.partyIds = []; programComparison.pinnedIds = []; programComparison.pinnedIndex = 0; }
-    else return;
-    disposeComparison();
-    programComparison.index = 0;
-    updatePartyResults(comparisonAction.id);
-    return;
-  }
   const programTab = e.target.closest('[data-program-view]');
   if (programTab) { showProgramView(programTab.dataset.programView); return; }
   const exploreProgram = e.target.closest('[data-program-explore]');
@@ -422,23 +404,12 @@ document.addEventListener('change', event => {
   if (event.target.matches('input[data-language]')) { setLanguage(event.target.value); return; }
   if (event.target.matches('[data-comparison-topic]')) {
     if (!event.target.checked || !partyPrograms.topics.some(topic => topic.id === event.target.value)) return;
-    programComparisonSelections.set(programComparison.topic, programComparison.partyIds);
     disposeComparison();
     programComparison.index = 0;
     programComparison.topic = event.target.value;
-    programComparison.partyIds = programComparisonSelections.get(programComparison.topic) ?? null;
     updatePartyResults();
     const table = document.querySelector('.comparison-table-region');
     if (table) table.scrollTop = 0;
-    return;
-  }
-  if (event.target.matches('[data-comparison-party]')) {
-    const selected = event.target.dataset.comparisonParty;
-    if (!state.election.parties.some(party => party.id === selected)) return;
-    if (programComparison.partyIds === null) programComparison.partyIds = [...document.querySelectorAll('[data-comparison-party]:checked')].map(party => party.dataset.comparisonParty);
-    if (event.target.checked && !programComparison.partyIds.includes(selected)) programComparison.partyIds.push(selected);
-    else if (!event.target.checked) programComparison.partyIds = programComparison.partyIds.filter(id => id !== selected);
-    updatePartyResults(event.target.id);
     return;
   }
   if (event.target.id === 'programParty' || event.target.id === 'programTopic') {
