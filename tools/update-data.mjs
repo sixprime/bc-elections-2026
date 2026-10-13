@@ -74,9 +74,14 @@ async function sources() {
   const geography = await json(current, 'map/geography.json');
   const result = [...registry.sources];
   for (const candidate of assets.candidates) {
-    if (candidate.statusSourceType !== 'party-release' || result.some(source => source.url === candidate.statusSource)) continue;
-    const id = `candidate-release-${hash(Buffer.from(candidate.statusSource)).slice(0, 12)}`;
-    result.push({ id, group: 'election', url: candidate.statusSource, path: `sources/election/${id}.html.txt` });
+    if (candidate.statusSourceType === 'party-release' && !result.some(source => source.url === candidate.statusSource)) {
+      const id = `candidate-release-${hash(Buffer.from(candidate.statusSource)).slice(0, 12)}`;
+      result.push({ id, group: 'election', url: candidate.statusSource, path: `sources/election/${id}.html.txt` });
+    }
+    if (candidate.partySource && !result.some(source => source.url === candidate.partySource)) {
+      const id = `candidate-party-${hash(Buffer.from(candidate.partySource)).slice(0, 12)}`;
+      result.push({ id, group: 'election', url: candidate.partySource, path: `sources/election/${id}.html.txt` });
+    }
   }
   const programBytes = await optionalRead(file(current, 'programs.json'));
   if (programBytes) {
@@ -199,12 +204,16 @@ async function refreshCandidates() {
       candidate = { id: candidateId(record.partyId, record.name), name: record.name, district: record.district, districtSlug: record.district.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''), sourcePage: election.sources.candidates, assetIds: portraitIds(record.name, record.district) };
       manifest.candidates.push(candidate);
     }
-    Object.assign(candidate, { partyId: record.partyId, status: 'accepted', statusSource: official.url, statusSourceType: 'elections-bc', statusSourceSha256: official.sha256, checkedAt: official.fetchedAt });
+    if (candidate.ballotPartyId !== record.partyId) {
+      candidate.partyId = record.partyId;
+      for (const field of ['ballotPartyId', 'partySource', 'partySourceSha256']) delete candidate[field];
+    }
+    Object.assign(candidate, { status: 'accepted', statusSource: official.url, statusSourceType: 'elections-bc', statusSourceSha256: official.sha256, checkedAt: official.fetchedAt });
     officialCandidateIds.push(candidate.id);
   }
   if (official.final) {
     for (const candidate of manifest.candidates) {
-      if (!officialCandidateIds.includes(candidate.id)) Object.assign(candidate, { status: 'not-on-ballot', statusSource: official.url, statusSourceType: 'elections-bc', statusSourceSha256: official.sha256, checkedAt: official.fetchedAt });
+      if (!officialCandidateIds.includes(candidate.id) && candidate.status !== 'withdrawn') Object.assign(candidate, { status: 'not-on-ballot', statusSource: official.url, statusSourceType: 'elections-bc', statusSourceSha256: official.sha256, checkedAt: official.fetchedAt });
     }
   }
   manifest.collectedAt = new Date().toISOString();
@@ -415,21 +424,41 @@ async function validate(candidateManifest) {
     const source = retrievals.sources.find(source => source.id === 'elections-bc-candidates' && source.url === official.url && source.sha256 === official.sha256 && source.fetchedAt === official.fetchedAt);
     if (!source || hash(await readFile(file(sourceCache, source.path))) !== official.sha256) throw new Error('The sanitized official candidate list has no matching cached Elections BC source.');
   }
-  const candidateFields = new Set(['id', 'partyId', 'name', 'district', 'districtSlug', 'imageUrl', 'profileUrl', 'sourcePage', 'checkedAt', 'status', 'statusSource', 'assetIds', 'districtStatus', 'reportedDistrict', 'districtNote', 'dataSource', 'dataSourceSha256', 'statusSourceSha256', 'statusSourceType', 'announcedOn', 'sourceElectionDate']);
+  const candidateFields = new Set(['id', 'partyId', 'name', 'district', 'districtSlug', 'imageUrl', 'profileUrl', 'sourcePage', 'checkedAt', 'status', 'statusSource', 'assetIds', 'districtStatus', 'reportedDistrict', 'districtNote', 'dataSource', 'dataSourceSha256', 'statusSourceSha256', 'statusSourceType', 'announcedOn', 'sourceElectionDate', 'withdrawnOn', 'ballotPartyId', 'partySource', 'partySourceSha256']);
   const candidateIds = new Set();
   const candidateIdentities = new Set();
   for (const candidate of manifest.candidates) {
     if (Object.keys(candidate).some(field => !candidateFields.has(field))) throw new Error(`Candidate record contains an unapproved field: ${candidate.id}. Financial-agent and contact details must not be published.`);
-    if (!candidate.id || candidateIds.has(candidate.id) || !candidate.name || !partyIds.has(candidate.partyId) || !['accepted', 'party-announced', 'not-on-ballot'].includes(candidate.status) || !candidate.statusSource?.startsWith('https://') || !['elections-bc', 'party-directory', 'party-release'].includes(candidate.statusSourceType) || !Number.isFinite(Date.parse(candidate.checkedAt))) throw new Error(`Invalid candidate record: ${candidate.id}`);
+    if (!candidate.id || candidateIds.has(candidate.id) || !candidate.name || !partyIds.has(candidate.partyId) || !['accepted', 'party-announced', 'not-on-ballot', 'withdrawn'].includes(candidate.status) || !candidate.statusSource?.startsWith('https://') || !['elections-bc', 'party-directory', 'party-release'].includes(candidate.statusSourceType) || !Number.isFinite(Date.parse(candidate.checkedAt))) throw new Error(`Invalid candidate record: ${candidate.id}`);
     candidateIds.add(candidate.id);
     const identity = `${normalizedName(candidate.name)}|${candidate.district}`;
     if (candidateIdentities.has(identity)) throw new Error(`Duplicate candidate identity: ${candidate.name}`);
     candidateIdentities.add(identity);
     if (candidate.status === 'accepted') {
       const record = officialRecords.get(identity);
-      if (!record || record.partyId !== candidate.partyId || !snapshot.officialCandidateIds.includes(candidate.id) || candidate.statusSource !== official.url || candidate.statusSourceSha256 !== official.sha256 || candidate.statusSourceType !== 'elections-bc' || candidate.checkedAt !== official.fetchedAt) throw new Error(`Accepted nomination is not backed by the current Elections BC snapshot: ${candidate.id}`);
+      if (!record || record.partyId !== (candidate.ballotPartyId ?? candidate.partyId) || !snapshot.officialCandidateIds.includes(candidate.id) || candidate.statusSource !== official.url || candidate.statusSourceSha256 !== official.sha256 || candidate.statusSourceType !== 'elections-bc' || candidate.checkedAt !== official.fetchedAt) throw new Error(`Accepted nomination is not backed by the current Elections BC snapshot: ${candidate.id}`);
     } else if (snapshot.officialCandidateIds.includes(candidate.id)) throw new Error(`Official candidate has an inconsistent status: ${candidate.id}`);
     if (candidate.status === 'not-on-ballot' && (!official.final || officialRecords.has(identity) || candidate.statusSource !== official.url || candidate.statusSourceSha256 !== official.sha256 || candidate.statusSourceType !== 'elections-bc')) throw new Error(`Absence from a provisional list is not a final ballot decision: ${candidate.id}`);
+    if (candidate.status === 'withdrawn') {
+      if (!official.final || officialRecords.has(identity) || candidate.statusSourceType !== 'elections-bc' || !officialHost(candidate.statusSource) || candidate.statusSource === official.url || !/^[a-f0-9]{64}$/.test(candidate.statusSourceSha256 || '') || !/^\d{4}-\d{2}-\d{2}$/.test(candidate.withdrawnOn || '') || candidate.withdrawnOn < official.nominationDeadline.slice(0, 10) || candidate.withdrawnOn > candidate.checkedAt.slice(0, 10)) throw new Error(`Withdrawal requires a dated Elections BC notice: ${candidate.id}`);
+      if (JSON.stringify(candidate) !== JSON.stringify(committedCandidates.get(candidate.id)) || process.argv.includes('--sources')) {
+        candidateRetrievals ||= await json(sourceCache, 'retrievals.json');
+        const record = candidateRetrievals.sources.find(record => record.url === candidate.statusSource && record.sha256 === candidate.statusSourceSha256);
+        if (!record || hash(await readFile(file(sourceCache, record.path))) !== candidate.statusSourceSha256) throw new Error(`Withdrawal notice evidence is missing or changed: ${candidate.id}`);
+      }
+    } else if (candidate.withdrawnOn !== undefined) throw new Error(`Only withdrawn candidates have a withdrawal date: ${candidate.id}`);
+    if (candidate.ballotPartyId !== undefined) {
+      const party = manifest.parties.find(party => party.id === candidate.partyId);
+      const host = party?.website ? new URL(party.website).hostname.replace(/^www\./, '') : null;
+      let url;
+      try { url = new URL(candidate.partySource); } catch { url = null; }
+      if (candidate.status !== 'accepted' || candidate.ballotPartyId !== 'unaffiliated' || !election.parties.some(item => item.id === candidate.partyId) || !host || url?.protocol !== 'https:' || url.username || url.password || !(url.hostname === host || url.hostname.endsWith(`.${host}`)) || !/^[a-f0-9]{64}$/.test(candidate.partySourceSha256 || '')) throw new Error(`A party label that differs from the ballot requires that party's own candidate page: ${candidate.id}`);
+      if (JSON.stringify(candidate) !== JSON.stringify(committedCandidates.get(candidate.id)) || process.argv.includes('--sources')) {
+        candidateRetrievals ||= await json(sourceCache, 'retrievals.json');
+        const record = candidateRetrievals.sources.find(record => record.url === candidate.partySource && record.sha256 === candidate.partySourceSha256);
+        if (!record || hash(await readFile(file(sourceCache, record.path))) !== candidate.partySourceSha256) throw new Error(`Party page evidence is missing or changed: ${candidate.id}`);
+      }
+    } else if (candidate.partySource !== undefined || candidate.partySourceSha256 !== undefined) throw new Error(`Only relabelled candidates have a party page source: ${candidate.id}`);
     if (candidate.status === 'party-announced') {
       const party = manifest.parties.find(party => party.id === candidate.partyId);
       const host = party?.website ? new URL(party.website).hostname.replace(/^www\./, '') : null;

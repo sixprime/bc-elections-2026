@@ -14,6 +14,11 @@ export function candidateRoster(manifest, now = Date.now()) {
   return { phase: 'final-ballot', candidates };
 }
 
+export function withdrawnCandidates(manifest, now = Date.now()) {
+  if (candidateRoster(manifest, now).phase !== 'final-ballot') return [];
+  return manifest.candidates.filter(candidate => candidate.status === 'withdrawn' && candidate.statusSourceType === 'elections-bc' && /^https:\/\/(?:www\.)?elections\.bc\.ca\//.test(candidate.statusSource || '') && /^\d{4}-\d{2}-\d{2}$/.test(candidate.withdrawnOn || ''));
+}
+
 export function candidateStatusLabel(candidate, phase) {
   if (phase === 'final-ballot') return translate('On the Elections BC ballot');
   return translate(candidate.status === 'accepted' ? 'Accepted nomination' : 'Party-announced');

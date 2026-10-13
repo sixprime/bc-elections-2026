@@ -81,8 +81,8 @@ and are controlled by the search/social services.
 - Navigation follows Province, Ridings, Parties, Candidates, Polls, About. The mobile bottom bar uses the first five destinations, with Map / Carte as the short riding label and a full accessible name; About remains in the menu and footer. The countdown explicitly refers to election day, not the start of advance voting.
 - Searchable list of all 93 electoral districts, with source-checked 2024 vote tables and 2026 candidate records on riding pages. Complete result snapshots are checked against district, party and seat totals.
 - Candidate directory grouped by all registered parties, with alphabetical names, portraits, riding links and filters. A logo strip jumps to each party; Top restores the previous position. Accepted nominations and party announcements remain distinct.
-- Dated directory of every entry in Elections BC's October 3 party register PDF. The PDF contains 14 entries, though Elections BC's summary page currently says 13. The app follows the dated register and explains the difference.
-- A selected archive of 38 original polling releases from 2017-2026, with source links, field dates, sample and method. The current average still uses the newest release per firm in the 14-day snapshot window.
+- Dated directory of every entry in Elections BC's October 13 party register PDF. The PDF contains 14 entries, though Elections BC's summary page currently says 13. The app follows the dated register and explains the difference.
+- A selected archive of 40 original polling releases from 2017-2026, with source links, field dates, sample and method. The current average still uses the newest release per firm in the 14-day snapshot window.
 - Separate, explicit areas for 2024 official results, 2026 professional polls and current candidate filings. There is **no seat forecast, riding projection, live ballot collection, or fabricated candidate data**.
 - About retains the source and methodology notes and ends with a contact link to `contact@bcelectionguide.ca`, also available in the shared footer. Email opens the user's mail client; no contact-form service is configured. Existing `#methodology` links still open About.
 - Community Ballot is removed from navigation and routing. It may return as a separately designed future feature; the previous prototype remains in Git history.
@@ -200,27 +200,36 @@ the public candidate page's official-filing rules.
 
 Public portraits, logos, inventory previews and original-download links require
 `asset.reuse.publishApproved === true`, enforced by [asset-policy.js](asset-policy.js).
-On October 4, 2026, the site operator withheld every image: all 314 recorded
-assets (portraits, logos and press materials) have `publishApproved: false`
-while written permission is requested from the parties. Re-enable a party's
-images only after its written permission has been received and kept on file;
-the two freely licensed Wikimedia Commons files (one CC BY-SA 4.0 portrait and
-one public-domain logo) need no permission and are withheld only by choice.
-Source credits, licence terms,
-rights-review statuses and file hashes are unchanged. The gate remains
-available for future additions. Missing artwork remains unavailable rather than
-being fabricated. Withheld image files are not published at all: they are kept
-outside `data/` in a local `private-images/` folder with the same relative
-paths, which Git ignores through `.git/info/exclude`. `check` rejects a withheld
-image under `data/` and verifies the private copies when that folder is present.
-To publish a party's images after its permission arrives, move those files back
-to the same paths under `data/`, set `publishApproved: true`, run `check` and
-regenerate the pages. Images committed before October 4 remain in Git history.
+On October 4, 2026, the site operator withheld every image while written
+permission was requested from the parties. On October 13, 2026, the operator
+approved publication of every recorded candidate portrait and party image,
+including those of parties that had not replied, and accepted responsibility
+for that decision. OneBC, CentreBC, the Christian Heritage Party, the Freedom
+Party, the Communist Party and the BC Libertarian Party gave written permission;
+the 94 images from their websites have reuse status `permission-granted`.
+Other images keep their recorded `permission-review` or `press-material-review`
+status, and the two freely licensed Wikimedia Commons files (one CC BY-SA 4.0
+portrait and one public-domain logo) keep their licences. Source credits,
+licence terms and file hashes are unchanged.
+
+One image stays withheld: a logo from a website formerly associated with
+B.C. Vision that describes an unrelated business, so it is not linked to the
+party. OneBC's logo is the party's own version with dark lettering, because its
+white-lettered version was unreadable on white backgrounds. Withheld image files are not published at all: they are kept outside
+`data/` in a local `private-images/` folder with the same relative paths, which
+Git ignores through `.git/info/exclude`. `check` rejects a withheld image under
+`data/` and verifies the private copies when that folder is present. To publish
+a withheld image later, move it back to the same path under `data/`, set
+`publishApproved: true`, run `check` and regenerate the pages. Missing artwork
+remains unavailable rather than being fabricated.
 Unavailable or unverified websites are labelled rather than guessed.
 CanWest's official website is HTTP-only and is labelled accordingly.
 
-The final ballot has 355 candidates; portraits are recorded for 262 of them, but
-none is currently shown (see above). The October 4
+The final ballot has 355 candidates; 342 have a portrait. The October 13 update
+added 80 portraits from official party pages (Green 28, OneBC 19, NDP 16,
+CentreBC 8, Communist 3, CHP 1, Freedom 1, and four candidates whom OneBC lists
+as endorsed but who appear as unaffiliated on the ballot), matched by name and
+riding. The October 4
 update added 124 portraits from official party directories and feeds (NDP 26,
 Conservative 34, Green 31, CentreBC 20, OneBC 9, Libertarian 2, CHP 2), matched
 only where the same party lists the same riding. A Green directory placeholder
@@ -231,10 +240,11 @@ of Alex Joehl; a 2024 Communist Party photo of Kimball Cariou; and BC Greens
 2024 candidate photos, identified by the party's own captions, of Randy Thompson,
 Douglas Gook, Nicola Spurling, Nicole Charlwood, Melissa Snazell, Tim Binnema
 and Adam Hawk. Original bytes, WebP derivatives, source credits and SHA-256
-hashes are retained. The other 93 candidates, including all independent and
-unaffiliated candidates and Jordan Kealy, have no verified party-source or freely
-licensed portrait; restricted Legislature images, social-media photos and
-unrelated search-result photos were not substituted.
+hashes are retained. The other 13 candidates (seven independents, including
+Jordan Kealy, three unaffiliated candidates, CanWest's two candidates and
+Libertarian Jeff Monds) have no verified party-source or freely licensed
+portrait; restricted Legislature images, social-media photos and unrelated
+search-result photos were not substituted.
 Public availability alone is not unrestricted reuse permission; existing
 source-owner credits and permission-review flags remain attached to the images.
 
@@ -253,10 +263,24 @@ retains that licence. The artwork review includes a separate MLA collection.
 
 ## Candidate Sources And Deadline
 
-The catalogue now follows the final Elections BC list retrieved on October 4,
-2026: 355 candidates in 93 ridings (NDP 92, Conservative 93, Green 73,
-CentreBC 35, OneBC 33, Libertarian 4, Communist 4, CHP 3, CanWest 2, Freedom 1,
-independent 7, unaffiliated 8). Every ballot record is `accepted` from that list.
+The catalogue now follows the updated final Elections BC list retrieved on
+October 13, 2026: 355 candidates in 93 ridings (NDP 92, Conservative 93, Green 73,
+CentreBC 35, OneBC 34, Libertarian 4, Communist 4, CHP 3, CanWest 2, Freedom 1,
+independent 7, unaffiliated 7). Every ballot record is `accepted` from that list.
+Since October 4, Elections BC has added Jenny Yamagata (OneBC, Burnaby North)
+and Anisha Sandhu (BC Green, Langley-Willowbrook) by order of the Chief Electoral
+Officer after reviewing their nominations, and removed two candidates who withdrew:
+Timothy Webster (unaffiliated, Vancouver-Yaletown, October 8) and Greg DePaco
+(BC Green, Burnaby-New Westminster, October 9). Ballot printing had already begun,
+so both names remain on the printed ballots. They are kept as `withdrawn` records,
+excluded from candidate counts and the directory, and their riding pages show a
+dated note linked to the Elections BC notice.
+Elections BC lists four candidates without a party affiliation whom OneBC presents
+on its own candidate pages as its endorsed candidates: Helen Scott (Peace River
+South), Lee-Ann Bates (Port Coquitlam), Denis Hurtubise (Surrey South) and James
+Yaroshuk (Surrey-Guildford). At the site operator's direction they are shown as
+OneBC candidates, each with a note that the Elections BC ballot lists them without
+a party affiliation, so the guide shows 38 OneBC and three unaffiliated candidates.
 Two earlier party-announced records that are not on the final ballot remain in the
 data as `not-on-ballot` and are excluded from candidate views. Official party
 directories and dated official press releases remain valid evidence for a
@@ -271,7 +295,10 @@ Already-open candidate pages update at the deadline. The site does not fetch the
 final list automatically; the reviewed local data must still be updated and published.
 
 The official source is Elections BC's candidate-list page, which states that it
-shows the final candidates; its CSV download matched all 355 rows exactly. The
+shows the final candidates. Its CSV download matched all 355 rows on October 4;
+on October 13 the CSV had 353 rows, omitting Clint Lambert (Nechako Lakes) and
+Alan Beesley (Vancouver-Langara), who are still on the page and are not named in
+any Elections BC notice. The page is followed. The
 earlier `Candidate-Website-Report.PDF` was still incomplete (286 rows) when checked
 and is no longer used. Financial-agent and official-agent names, addresses and phone
 numbers are not imported. The raw page and CSV stay outside the repository; the
@@ -359,7 +386,7 @@ documents and the number of topics with recorded excerpts. Source kinds distingu
 election platforms, policy declarations, policy pages, campaign announcements,
 record/priorities pages, vision statements and document indexes. Counts describe
 this guide, not whether a party has a policy. The current selection contains
-194 exact excerpts from 76 source records, not 14 complete reproduced programmes.
+244 exact excerpts from 111 source records, not 14 complete reproduced programmes.
 A later October 4 audit added statements where a party's own documents covered a
 topic with no recorded statement: Green justice and public safety (2024
 platform), Communist health care, NDP transport (Prince Rupert port network) and
@@ -377,7 +404,18 @@ An October 5 audit refreshed every programme source, confirmed all recorded
 quotations are still on the parties' current pages, and added CanWest's mission
 page, the Conservative platform page's plan summaries, the NDP's October 4 tax
 plan and the Greens' October 4 forestry plan. CanWest's Chinese-only press
-release is not quoted. A
+release is not quoted.
+An October 13 audit refreshed every programme source again and added dated
+announcements published since October 5 by the NDP (10), Conservatives (12, plus
+their new Our Plan index) and Greens (8), and CentreBC's full 2026 platform as a
+web page and PDF; CentreBC now has excerpts on all 12 topics. The Conservatives
+replaced their Our Platform page with Our Plan, so the ten earlier plan-name
+summaries were removed and the current plan pages are quoted instead. The Greens
+moved three policy briefs from their release pages into PDFs, which those
+excerpts now cite. The CHP re-uploaded its policy statement at a new address;
+its page locators follow the new file. The Communist platform now reads
+"household income" where it said "a family's income", and the excerpt follows
+the current wording. A
 current full NDP platform and programme documents for BC Party, BC United,
 B.C. Vision and Party of Citizens remain unverified in this guide.
 

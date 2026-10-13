@@ -1,4 +1,4 @@
-import { candidateRoster, candidateStatusLabel, candidateRosterNote } from './candidate-policy.js';
+import { candidateRoster, candidateStatusLabel, candidateRosterNote, withdrawnCandidates } from './candidate-policy.js';
 import { translate, translateCount, currentLanguage, compareLabels, formatDate, formatNumber } from './i18n.js';
 import { routeHref, siteHref } from './routes.js';
 import { canPublishAsset } from './asset-policy.js';
@@ -30,7 +30,7 @@ function candidateGroups(election, candidates) {
 
 function candidateSources(candidate, portrait) {
   const label = candidate.statusSourceType === 'party-release' ? 'Party press release' : candidate.statusSourceType === 'elections-bc' ? 'Elections BC nomination' : 'Party announcement';
-  return `<div class="candidate-card-links">${sourceLink(candidate.profileUrl || candidate.sourcePage, 'Candidate source')}${portrait ? sourceLink(portrait.sourcePage, 'Photo source') : ''}${sourceLink(candidate.statusSource, label)}</div>${candidate.announcedOn ? `<p class="small-note">${text('Announced')} <time datetime="${escapeHtml(candidate.announcedOn)}">${formatDate(candidate.announcedOn, { dateStyle: 'medium' })}</time></p>` : ''}`;
+  return `<div class="candidate-card-links">${sourceLink(candidate.profileUrl || candidate.sourcePage, 'Candidate source')}${portrait ? sourceLink(portrait.sourcePage, 'Photo source') : ''}${sourceLink(candidate.statusSource, label)}</div>${candidate.ballotPartyId ? `<p class="small-note candidate-ballot-note">${text('Listed without a party affiliation on the Elections BC ballot.')}</p>` : ''}${candidate.announcedOn ? `<p class="small-note">${text('Announced')} <time datetime="${escapeHtml(candidate.announcedOn)}">${formatDate(candidate.announcedOn, { dateStyle: 'medium' })}</time></p>` : ''}`;
 }
 
 export function candidateResults(election, manifest, filters) {
@@ -110,7 +110,9 @@ export function ridingCandidates(election, manifest, district, error = '') {
   const roster = candidateRoster(manifest);
   if (roster.phase === 'awaiting-official-list') return `<p class="small-note" role="status">${candidateRosterNote(roster.phase)}</p>${sourceLink(election.sources.candidates, 'Current Elections BC candidate list')}`;
   const candidates = roster.candidates.filter(candidate => candidate.district === district).sort((first, second) => collator.compare(first.name, second.name));
-  if (!candidates.length) return `<p class="small-note">${text(roster.phase === 'final-ballot' ? 'No candidates for this riding are recorded in the verified final list.' : 'No candidates recorded for this riding in this snapshot. This is not confirmation that nobody is running.')}</p>`;
+  const withdrawn = withdrawnCandidates(manifest).filter(candidate => candidate.district === district).sort((first, second) => collator.compare(first.name, second.name));
+  const withdrawals = withdrawn.map(candidate => `<p class="small-note candidate-withdrawal" data-withdrawn-candidate="${escapeHtml(candidate.id)}">${text('{name} ({party}) withdrew on {date}. The name is still printed on the ballot.', { name: candidate.name, party: candidateGroups(election, [candidate]).find(group => group.id === candidate.partyId)?.ballot || candidate.partyId, date: formatDate(candidate.withdrawnOn, { dateStyle: 'medium' }) })} ${sourceLink(candidate.statusSource, 'Elections BC notice')}</p>`).join('');
+  if (!candidates.length) return `<p class="small-note">${text(roster.phase === 'final-ballot' ? 'No candidates for this riding are recorded in the verified final list.' : 'No candidates recorded for this riding in this snapshot. This is not confirmation that nobody is running.')}</p>${withdrawals}`;
   const byId = new Map(manifest.assets.map(asset => [asset.id, asset]));
   return `<div class="riding-candidate-list">${candidates.map(candidate => {
     const group = candidateGroups(election, candidates).find(party => party.id === candidate.partyId);
@@ -122,7 +124,7 @@ export function ridingCandidates(election, manifest, district, error = '') {
       <span class="candidate-status ${accepted ? 'accepted' : ''}">${candidateStatusLabel(candidate, roster.phase)}</span>
       ${candidateSources(candidate, portrait)}</div>
     </article>`;
-  }).join('')}</div>`;
+  }).join('')}</div>${withdrawals}`;
 }
 
 const programDate = source => source.publishedOn ? formatDate(source.publishedOn, { dateStyle: 'medium' }) : source.electionYear ? translate('{year} material', { year: source.electionYear }) : translate('Publication date not stated');

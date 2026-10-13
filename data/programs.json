@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "checkedAt": "2026-10-05T10:07:56.549Z",
+  "checkedAt": "2026-10-13T09:38:30.087Z",
   "topics": [
     {
       "id": "affordability",
@@ -70,20 +70,9 @@
       "url": "https://www.bcndp.ca/action-for-you",
       "electionYear": null,
       "publishedOn": null,
-      "sourceSha256": "8235eee17039ae473f3d4cd3a9b9af761ad6ef068294afc54b235df61166b2c1",
-      "textSha256": "650f30cef2ca669cb849e24f9eb7b5551b04caf9e8b390371f616160bda15f8c",
+      "sourceSha256": "aef0c55da8cfe817f9180a1d7f864cd154221237e3ef3011184cef412e360951",
+      "textSha256": "534f5c6b9a2cbd3ea515eb4aebfaaea7bb42cc1dc51b8042bbc18d37968b0bc6",
       "kind": "record-and-priorities"
-    },
-    {
-      "id": "program-con-platform",
-      "title": "Our Platform | Conservative Party of British Columbia",
-      "publisher": "Conservative Party of British Columbia",
-      "url": "https://conservativebc.ca/our-platform/",
-      "electionYear": 2026,
-      "publishedOn": null,
-      "sourceSha256": "d5443dd7340b5295f5e67201c819675ed29b36c67564c280bd3628cdc25d9e85",
-      "textSha256": "6dc3eef36090df4ba1479f507fe177aae62769942a1019c541ca79581c108a43",
-      "kind": "programme-update"
     },
     {
       "id": "program-con-documents",
@@ -92,8 +81,8 @@
       "url": "https://conservativebc.ca/official-documents/",
       "electionYear": null,
       "publishedOn": null,
-      "sourceSha256": "f608255e864c438e3d35b16e4d8f65895db7772bb13d6347f3acac7f1387d3db",
-      "textSha256": "77baaefc8df09a141f72f40b3724058bfd2b3fb77bbbc3542f51337d91455d00",
+      "sourceSha256": "05698b61282e44a17011d8d4778902d29365f79320ec9826f0b817959daea11d",
+      "textSha256": "8b98f98b450cc499ef92c253f4e3c424dddff8cfd9a648912e139f8ae62e01a0",
       "kind": "source-index"
     },
     {
@@ -103,8 +92,8 @@
       "url": "https://bcgreens.ca/emily-lowan-announces-election-plans/",
       "electionYear": 2026,
       "publishedOn": "2026-09-23",
-      "sourceSha256": "542f1358f631c5388c7345252f07051b2c88ade2a2b28f570e22947300fd4a34",
-      "textSha256": "703028e6437b836490c3ce0589d7eadd4c486196b91e41d3749cb8b7c6d47cc5",
+      "sourceSha256": "d60e22734597f27ace195fb1f401d32d16ca9b2181a7fa8ff1243c196077604a",
+      "textSha256": "acd2a5fa8ae01f983a83a96ea67ed1ece544a9dc63bd2209b912f92145a79e2f",
       "kind": "campaign-announcement"
     },
     {
@@ -114,8 +103,8 @@
       "url": "https://bcgreens.ca/2024-platform/",
       "electionYear": 2024,
       "publishedOn": null,
-      "sourceSha256": "644b8bf791259e4d2c401657787c19e41be11694370ddfd44cb5b7c5367ca42e",
-      "textSha256": "1e1d81ccc775d05e28ffa5e8441a82564ce74e64f5acc6ee6b30c76582d0872f",
+      "sourceSha256": "3ce709af2d0ace88a514ccc816da64a4ac7bc7c643f86c765b8a788cc9aea496",
+      "textSha256": "85368e572bca6271051c89a81634dde8c4f6e861c9c7e76a5a50e339bbacddec",
       "kind": "source-index"
     },
     {
@@ -136,8 +125,8 @@
       "url": "https://1bc.ca/priorities",
       "electionYear": null,
       "publishedOn": null,
-      "sourceSha256": "6fcb055f9948fa28fce811d7cd5e08c638a61192ca2174bc9fe7cc4e395d9ec0",
-      "textSha256": "fb9af7b1e7ebc381e70aa105851051f9530109bdcef0d8f3daa5f3bb196cdcca",
+      "sourceSha256": "9f5fff58086d673c759d400ce219a36baa8ba9a67124f4f69c96cfbe1094cb77",
+      "textSha256": "5a8ec4142d3caf1d8126439f4b66f8be00e89c68f3c9cbb79bf5dd35c1723916",
       "kind": "policy-page"
     },
     {
@@ -147,8 +136,8 @@
       "url": "https://www.centrebc.ca/vision/",
       "electionYear": null,
       "publishedOn": null,
-      "sourceSha256": "b7ce3dd5cbd0722002c8bc0c9bce0fc0fc6d036e413bfd51fa51bad727035bd2",
-      "textSha256": "8013caf89bf257e3d405b6f1e20a84f2297842353b50882e7cd19010c6be5650",
+      "sourceSha256": "9eacca0e15133c569b9657438dc15c2962b6f75237b62eecdfc4f616ec6035db",
+      "textSha256": "c591633c5773466c9cb7c169f485f41a2c6405f6054d7b864505d44301798dc3",
       "kind": "vision-statement"
     },
     {
@@ -158,8 +147,8 @@
       "url": "https://www.centrebc.ca/our-policy/",
       "electionYear": null,
       "publishedOn": null,
-      "sourceSha256": "1dec4e804799b76fc7e82ab749030dbc74d2a978fe4f7109c38c5347b4764923",
-      "textSha256": "e3897b19a797f5ed1258e7e027ea4ac84d38ba086c18621a3597bb93393d12ea",
+      "sourceSha256": "b0fc8192e679eefb3ab640506c231cbc37feab705fa1399e337dd2666af78731",
+      "textSha256": "8d99143478a96ad4b11e25b3f38eca8db824ba39866761e51085d6d479a45b28",
       "kind": "programme-update"
     },
     {
@@ -169,8 +158,8 @@
       "url": "https://libertarian.bc.ca/category/platform/platform2024/",
       "electionYear": 2024,
       "publishedOn": null,
-      "sourceSha256": "6176adeb584599e43c298dff7b122f57bbeaef296c9f7f5f87cc666fde687e5f",
-      "textSha256": "4928d60aa76ea71778c6702b285b7d64b2178d0eded265839fd6b6616fa778f6",
+      "sourceSha256": "110fb1bc1ad46b127333072cdd7b58a39185a70c3b841b8087f07e188fe52594",
+      "textSha256": "0f784bbf412dc4c3b194a1d3a9677b4891d3947fbb38cbef4c475b7e7226f89d",
       "kind": "source-index"
     },
     {
@@ -180,8 +169,8 @@
       "url": "https://libertarian.bc.ca/category/platform/platform2024/page/2/",
       "electionYear": 2024,
       "publishedOn": null,
-      "sourceSha256": "6c754055a50fe030e0d61556e3d1da10ef233c8b79357b7152be2eccc57e8e6a",
-      "textSha256": "cf9f28b8d0890279177bf3493964a1dd0c316618792122048974a2884464ff72",
+      "sourceSha256": "c103cde57a808b6e15768753e99ef92dc29fd3cbbe918366e4fe85847deb4155",
+      "textSha256": "c6b0c22e03c72ee4d2e451f22dcdea7b3e24c41b7c9f6a0eba7c6f294e7806ff",
       "kind": "source-index"
     },
     {
@@ -191,8 +180,8 @@
       "url": "https://libertarian.bc.ca/category/platform/platform2024/page/3/",
       "electionYear": 2024,
       "publishedOn": null,
-      "sourceSha256": "bbd9bc4c5d7be7cd7c1f1772f138fe1d1ee90218bfa3a8c6b59df8c830344470",
-      "textSha256": "baff8d0ceba82c341f281a4dd2b573dd69851e6f7f01dbb6086f71f684775b89",
+      "sourceSha256": "8f7876fed395d728041792b0eaa5747bffa60841e78b691f68ebbe4ebb583c7a",
+      "textSha256": "3a540b42782f26a74ae3e5074def0e55bcea5fdf7687139368af3c1e62932f12",
       "kind": "source-index"
     },
     {
@@ -202,8 +191,8 @@
       "url": "https://libertarian.bc.ca/category/platform/platform2024/page/4/",
       "electionYear": 2024,
       "publishedOn": null,
-      "sourceSha256": "f0e45bdd9aaa4d86a417334b1f0446a63b11ab0ab37e83b8c245ca0002bb452d",
-      "textSha256": "82f5564ee943288636f022f66fa0049b52f812f8211808eaf7ceddb15a10e0f0",
+      "sourceSha256": "6b3c2134abb209ca6973f33ad5d4ba664c05dbfa256a8eb945e5981529ec2a1a",
+      "textSha256": "f74f8a3115e51f676b34c85a777621ccb82d85e3a3f3619b8bee1a1b9751d89c",
       "kind": "source-index"
     },
     {
@@ -213,8 +202,8 @@
       "url": "https://www.chpbc.ca/",
       "electionYear": null,
       "publishedOn": null,
-      "sourceSha256": "6d963ac194fcd7760b9cc6e2eee9831a4cc1863abbc639515b2f435b32142746",
-      "textSha256": "be633186ae5e34e085d2c6232549582fd944af4829a1239e64a16a94db95d5cc",
+      "sourceSha256": "80370f2ccef25487866a62d9bb33e153de58511749da323f903ae8f1c5792aac",
+      "textSha256": "f9a6cc42c3a36e2e68928aec03ab872cdb87e546082ed2d8c4800a5b8779551d",
       "kind": "party-website"
     },
     {
@@ -224,8 +213,8 @@
       "url": "https://cpcbc.ca/our-platform/",
       "electionYear": 2026,
       "publishedOn": null,
-      "sourceSha256": "b32b4de50341c8282909d3dceab37ed61f3d844481ea2e9a9210fece07a5438a",
-      "textSha256": "d8512ba91b24d35974d8380d125aa948eb015dbe118b496c6fa8af10298bb928",
+      "sourceSha256": "581842fef88a0cd99e4b177c06133dbc5d839ce82c89080d069b7a27e05e6730",
+      "textSha256": "216c289a4c393ec22fe1fb397ee96ee82bad18e8c750158ec5afd7697f3b6659",
       "kind": "platform"
     },
     {
@@ -235,8 +224,8 @@
       "url": "https://freedompartybc.ca/",
       "electionYear": null,
       "publishedOn": null,
-      "sourceSha256": "afdf369436bacb81fb24875797dacb4e1eb6b8e3ebfae11613a8628fcdd857b4",
-      "textSha256": "efb05feb2339ce4ce5f897e45fd1d8a32d66aaf185d2f051ac4193f71b08ea9d",
+      "sourceSha256": "fa37b98dc69a5f443f996585b821887cd3ee598cba6b513dd1369c62283e85bc",
+      "textSha256": "2e8a79da1a39173fb473c46520dad53a2788827409d0ef0ba33e0505bc06b792",
       "kind": "platform"
     },
     {
@@ -258,8 +247,8 @@
       "url": "https://libertarian.bc.ca/2024/08/17/affordable-housing-2/",
       "electionYear": 2024,
       "publishedOn": "2024-08-17",
-      "sourceSha256": "ac2d74d915111df9fc9ec789204612fb6a2b1846ed0b8205adb20cc5362b0c41",
-      "textSha256": "b445e39961d6bd529b1cfd8020b531b2ae05345d5bf9f370cf7ff8c8eb9bc8c5",
+      "sourceSha256": "9b3fa75cf1d520af4894ec3da9ed1b8a54175d3b00d96ee5844f66083714e229",
+      "textSha256": "d15b6f32378eaa572f57e84eeac4dab8ab092f56bff97bb59c1e790104fa5676",
       "kind": "policy-page"
     },
     {
@@ -269,8 +258,8 @@
       "url": "https://libertarian.bc.ca/2024/08/17/healthcare-focused-on-patients/",
       "electionYear": 2024,
       "publishedOn": "2024-08-17",
-      "sourceSha256": "911cb95ce6cb650cd08c91983a26f16049b0d638d94827f46e123e53345baac2",
-      "textSha256": "f03196248291ea816957f5bc6754d6608fd8e5f91ebdb9783f0445ab7c5a2c0a",
+      "sourceSha256": "d18a130103225a4f809ea686b10a393312564560c15f52b4d4d212e7292b644c",
+      "textSha256": "7aefb27328b503830a836325a51fdccd52607d5947a1f55d3239f25e2964b3db",
       "kind": "policy-page"
     },
     {
@@ -280,8 +269,8 @@
       "url": "https://libertarian.bc.ca/2024/08/17/education-2/",
       "electionYear": 2024,
       "publishedOn": "2024-08-17",
-      "sourceSha256": "4e42dc1c05f22e79ef6b38369f1967b26ba4c3032f56135430f5fff66050e190",
-      "textSha256": "e19b6cb3a644377894bac6db795d7af41e61d7aef3893a14bf90291a46ba940f",
+      "sourceSha256": "a533678135f1b86df770b43be3e153d14cfc65b8194ae054eed7428594f38f08",
+      "textSha256": "7593e1948d0cd866175362fe015363adff5a12d54b770d23defdd8231ef24f72",
       "kind": "policy-page"
     },
     {
@@ -291,8 +280,8 @@
       "url": "https://libertarian.bc.ca/2024/08/17/transit-and-transportation/",
       "electionYear": 2024,
       "publishedOn": "2024-08-17",
-      "sourceSha256": "479ffe07fdeaa0d705508dc7770c676fe8e7d8b91f28b2bcb2e05733ffb7172f",
-      "textSha256": "6dba3f592b6085b436586f90db0f9986399f9816aadcf5e516598c53a94ec466",
+      "sourceSha256": "ca3bff735782f434a9f326876f187b14afcd44b1beaf464b3ffc370330269646",
+      "textSha256": "45218da2dc25dce21ef58da53b1332952f94b7f9cc1339d7703f7a25224540b3",
       "kind": "policy-page"
     },
     {
@@ -302,8 +291,8 @@
       "url": "https://libertarian.bc.ca/2024/09/16/pst-lets-convert-it-to-a-value-added-tax-vat/",
       "electionYear": 2024,
       "publishedOn": "2024-09-17",
-      "sourceSha256": "386f5229f34d1d36cf434165e2c4a4371283cdf500f7b0b62dc3aa70e3ab3b0f",
-      "textSha256": "b5feb2bc18b979fc08862e3bcf203ec03ef293e4614747aed83c1207ad2b2143",
+      "sourceSha256": "bba83dc752a96b8fcff7b4579f63d64999ca7214b9d781e3690601d094140de3",
+      "textSha256": "ae0ccede1948b3ea149246cb47c665fb48bd917108cf0f50acc07f1404d2e393",
       "kind": "policy-page"
     },
     {
@@ -314,19 +303,19 @@
       "kind": "source-index",
       "electionYear": null,
       "publishedOn": "2017-04-06",
-      "sourceSha256": "3b3b16cbf591d683d705594084988518b5d69bc486f094d2573d263082fadfd4",
-      "textSha256": "47f0997c5ecfdf869dc6ef3257eebb7fb6dbd9a6eec7910a077afadd13e55ddb"
+      "sourceSha256": "9469426889bdff047d18931b58e3e2624729b4c2466e9c64ce466fe0866f349f",
+      "textSha256": "674eedc0f93cc2141673b42e82f29780b1a65840ed617635aa4034ea7dd72ecb"
     },
     {
       "id": "program-heritage-policy-pdf",
       "title": "Policies of CHP-BC (revised October 21, 2023)",
       "publisher": "Christian Heritage Party of BC",
-      "url": "https://www.chpbc.ca/wp-content/uploads/2024/01/REVISE-Policies_CHP-BC_2023-10-21.pdf",
+      "url": "https://www.chpbc.ca/wp-content/uploads/2026/10/REVISED-Policies_CHP-BC_2023-10-21.pdf",
       "kind": "policy-declaration",
       "electionYear": null,
       "publishedOn": null,
-      "sourceSha256": "7cffc96114409220bc6fe939460b79c1df93ed692c784a7098674ba030a08147",
-      "textSha256": "6fba1ae39c195935b5afd40dc52a02c179b45154e27ee628dfb462986f745753"
+      "sourceSha256": "c490fb488373060f376b7f4b214199fb8960432b572bf43fbbd942ff3b726528",
+      "textSha256": "dd2140512e85f23139b1db302ccd097a6d7c9f4b318ab6ce65ccd0b5ae58eab2"
     },
     {
       "id": "program-libertarian-2026",
@@ -336,8 +325,8 @@
       "kind": "source-index",
       "electionYear": 2026,
       "publishedOn": null,
-      "sourceSha256": "fd8eb2bb74ebf01d53c545dc9003125c658bd206c92556f35d55ea08df8cefac",
-      "textSha256": "5e1c616f7c74f17567c3618440f4d65c0428e163bfd0926fa00aaedbf0eb990a"
+      "sourceSha256": "4a785bc939be67abf4f015e768954c140648fed9f31afb97a519e9b8c1926076",
+      "textSha256": "5cf23a279ae2b1d74a77c8eef1b4ad7783b7d861e7a1672a45b74334f1bc357c"
     },
     {
       "id": "program-green-communities",
@@ -347,8 +336,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": null,
-      "sourceSha256": "e20c20dc7296291f99d326b030f4a535774c1f1e3e66eb25f7828194482329fb",
-      "textSha256": "b8ea74a9759639c85ccef1e68be1dcd53dfc1a1a5683de493712a66f01e7c9da"
+      "sourceSha256": "ec6c8a8ce4760dbb7554f9c619acf5f22524ff538f4300f6c66b56b54d19f0c0",
+      "textSha256": "718525b6bf4aae79ccd06369785f408084e0b6892c6615772117b971033d1ed1"
     },
     {
       "id": "program-green-people",
@@ -358,8 +347,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": null,
-      "sourceSha256": "d9ddc92eb6ea28b84d4c4fc39afe0fec7418a61ab6b44558a867d96880fe264d",
-      "textSha256": "aa5473ce3563e7e200db6a980dfc42979e1511e50b046248856628610bdf3339"
+      "sourceSha256": "9e0e5e15a1754418b1bd297e0bb0dec191f18c694993b438d77de1df4fef45e2",
+      "textSha256": "866a0a2a50a83568b4d0c1b3ce8fef2ef9965a1c131d474e93f0c762c7df15ae"
     },
     {
       "id": "program-green-nature",
@@ -369,8 +358,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": null,
-      "sourceSha256": "7a7bfff285d86193fb1ba0067e03d0c9b308b65ff48fcdd0d34c93df98f9a368",
-      "textSha256": "cbf23c75425b6614376a5e5c3bfa9b042f60f2a0f9e5d24991b170e5078569b8"
+      "sourceSha256": "a597eb82d3dd774902b84eb8e9ffe9d85fc21fdb9dda92d224d58fe9f87ae7e4",
+      "textSha256": "62f244246b9dcf2e18a1ff12899e4730bc8671ab67bd2553fbdc8bc0401365db"
     },
     {
       "id": "program-green-governance",
@@ -380,8 +369,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": null,
-      "sourceSha256": "401b7a02b1a550f260438b2ecf2c4d6f752a71e809d19203310338ada0c7f17d",
-      "textSha256": "51c218a55644a3672fec7a932cecb0c89adc1dbfcfce8268f95e7de3ac97686d"
+      "sourceSha256": "6d4ce06bf55ef995574334f34eebc719f32510ff09d82fec334e0ee359fffcd4",
+      "textSha256": "a6aa48a5220bec969aa1d04be5e12f762cb25f8ff9cc22ba80dda4b258e2cc56"
     },
     {
       "id": "program-libertarian-wildfire",
@@ -391,8 +380,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": "2024-09-04",
-      "sourceSha256": "1e03553833b9b13b99ac00d1309132062891506cb2dd26890fb1c5e921b346c7",
-      "textSha256": "0bf0a44172e3ca6a873ad930e7df9f2244a0c7eb2301bda45f40058855072076"
+      "sourceSha256": "478f58d8ff3c17802c1de832bbf8847402a14a5cc599a2b78749cf521f95e20e",
+      "textSha256": "f8e5d66d332c5cd7d8fc3a20f94b48e80af2b1ed474dd3a184d4fb27af0fea9b"
     },
     {
       "id": "program-libertarian-forfeiture",
@@ -402,8 +391,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": "2024-09-03",
-      "sourceSha256": "fc6938c8c401ff19c34c628020719747c3a8bf92219c0cc6c58e81c7558c9f11",
-      "textSha256": "8dffbed9961196ce06fe44c49fa24b0678c1986aad8df63f5002acd3af0706fd"
+      "sourceSha256": "00b56785b51f50c8a4effde466d8becddd24e7d71d655bf228dbbabdccf9debc",
+      "textSha256": "2d0dd191dec33297fa8db81b74a5f6110d9acb0af5d60ce0f6c7cbe4264cafd6"
     },
     {
       "id": "program-libertarian-land",
@@ -413,8 +402,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": "2024-08-17",
-      "sourceSha256": "9d98d93b8d7db9645bc66638b1fa581a6eb3317634a1213064b319240e7b55d9",
-      "textSha256": "b01781c39afbfdf9b6cffb7b338fae50b0e116a3ca4ff77d6397425be57f1535"
+      "sourceSha256": "e17901b761252fc446b06be9961ea70cf823983e55b4a96903cd844aefb3deca",
+      "textSha256": "c02e526b61ba72bba723ba5ca895b4cf96d68401f5adc112e1d3d5869ab0f383"
     },
     {
       "id": "program-libertarian-vehicle-tax",
@@ -424,8 +413,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": "2024-08-17",
-      "sourceSha256": "aeed8ed5ad1a39e52406c1f2566b1459a29e836fe74ad13b54792e199a9f574d",
-      "textSha256": "d99e7bfb9f8c297b88c54f8c35bdd4d2312792d03dcadaf9906d871b3f66eb72"
+      "sourceSha256": "bd96f97aadf29c89e8119fb5dd01941e7c2c28337634d689ae1e5713461d50c8",
+      "textSha256": "f36823075abbda12dfaa9b39b658aa70802e561c5258d2fd5fe08710e7ce5f00"
     },
     {
       "id": "program-libertarian-drugs",
@@ -435,8 +424,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": "2024-08-17",
-      "sourceSha256": "6e632be7518600968405fec35b6295203fcd2ab8027f49c92afbf40f1575063f",
-      "textSha256": "fc8655498733f1d8eb34e2b1323ea024f387d13e8ff3ce0cb7febdab056a6146"
+      "sourceSha256": "c491a2fcfcd652bf73d82ed2f3ed3f1d789e0d518c85bc01c983bdf78c1502c3",
+      "textSha256": "338b53862fd6c440b86be0502d0a0a67473b10f404713a619e9bc4b738dd1e3a"
     },
     {
       "id": "program-libertarian-employer-tax",
@@ -446,8 +435,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": "2024-08-17",
-      "sourceSha256": "87234109f0bfc77741a187f35842f88d7dcbdd0c604b907dd9b34083d5fd7158",
-      "textSha256": "e7ac0368a21edf9a8dd0b73bab1bfafc9aa983496beab57bb9bd4123b201d66b"
+      "sourceSha256": "0a7b056c55c67e4f72e8d7912849f88b91262a5fadb2a5898c23248a65104d3b",
+      "textSha256": "273bb50e9e7427c5c20d3c248e7f1d5e289b6a3b4ae4c79b19f617979721a5cf"
     },
     {
       "id": "program-libertarian-milk",
@@ -457,8 +446,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": "2024-08-17",
-      "sourceSha256": "99162facb69bd9732306d06eac98f07ada07852ccbd2ae8f131e7d4557323a61",
-      "textSha256": "78fb6b95f6bec132db1655e52c52b7051a77b89622a07870967a93e64bdccf70"
+      "sourceSha256": "106bb01ea95ed98982b4f34292816913a2896afe73a24c84cef408c634b22265",
+      "textSha256": "374d77bbe09393322572d3824671db04a4f23d37eb32a7c5a22b968c51eaec86"
     },
     {
       "id": "program-libertarian-assistance",
@@ -468,8 +457,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": "2024-08-17",
-      "sourceSha256": "3b3745c1d8253ebe2a52805f92b03988dcb5d19134c2f00aadb1ba8d3bbf1f77",
-      "textSha256": "7df95f423bec0078cf0ed6cb0e4120a0a6b4e60feef6e7086d05d846c160bba9"
+      "sourceSha256": "4e7483387481e85d4f577c3b7e369f060d7ed08ccf9717049067329026422b7c",
+      "textSha256": "c9ebfec68211203a080d4c85ab2c070e1ac597e4b8c2264c52e76b53b11821e5"
     },
     {
       "id": "program-libertarian-energy",
@@ -479,8 +468,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": "2024-08-17",
-      "sourceSha256": "855453b5cc3f1d00c6edc842ecfef5751c5787daf0cf8fa3216597e81bcebd8b",
-      "textSha256": "eb590fdcc4bfcaffca1adf53dd26a0700500519cac404a309989a58d2ba8d20c"
+      "sourceSha256": "817c6b8943edc5e46c5940c78f3d923b89150ed0a762357ddafc7281dbdee50e",
+      "textSha256": "825ebdd45d4d40744d16fb86d06c674048840781708334ac644e0fa0f272ae4b"
     },
     {
       "id": "program-libertarian-accountability",
@@ -490,8 +479,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": "2024-08-17",
-      "sourceSha256": "2d2f67239b8e0a3b032aa7cdca51d0d88d883b3834a163f4a54894760d6c374b",
-      "textSha256": "b01781c39afbfdf9b6cffb7b338fae50b0e116a3ca4ff77d6397425be57f1535"
+      "sourceSha256": "d7127ad590cb120eb1ce47bff83cf6fa9a1ea5498c1211fd71e7e5f0d03973ea",
+      "textSha256": "bc9cace6b0cb79eb9b4afcef0a4cc073f996e918a428e6979a37c9f499772db5"
     },
     {
       "id": "program-libertarian-income-tax",
@@ -501,8 +490,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": "2024-08-17",
-      "sourceSha256": "fc46ca5c71ce519a6229136fa6ee4e16b4e13e6e7f16ac3fec8c4a77ed83e9bd",
-      "textSha256": "43ac1f03a2cf1f04d74f02b38db99f585d04c6b03f88d8efa77809231374970d"
+      "sourceSha256": "42ea48163ef57055139aebb7b3964d8a61ff740c9f9c402ce306ffa0e92ab228",
+      "textSha256": "3534ec2f205a1ed35cec0fde727b06e756eab8dbc375e71cfda3a0137bb1f876"
     },
     {
       "id": "program-libertarian-liquor",
@@ -512,8 +501,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": "2024-08-17",
-      "sourceSha256": "83ca29824a419658e7097dd5e78ba5323770ab4f3b5f3a9e962d67adf10132c2",
-      "textSha256": "0295af8e17cad0feb9eb48a9ce30b038531903d15f039f6f74780022dcb2df44"
+      "sourceSha256": "ae87f3ce1d7dcc5e7129c633e2018188df349b763e5af5af44ceb70c21139663",
+      "textSha256": "1bec2cf900ddcbae9a5c3e09eab22fdd16cd9f9bdc223da705b6717d26253395"
     },
     {
       "id": "program-libertarian-icbc",
@@ -523,8 +512,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": "2024-08-17",
-      "sourceSha256": "341c5955bd0822529c9b845c4e522fbc19d306b66a1393ae3c30e10bb5116709",
-      "textSha256": "2e2404eb1cb76a7e13bbc8379970ab3dd4ee18a161950174b9e2e34bc743b58e"
+      "sourceSha256": "206ca443934dc4b9a534b9b14ebc2eb10a41c2cc407819ddcff119db067b908e",
+      "textSha256": "6b26f666172c8488250393cc881d1cfce8de290929fb9c7b20a82d65e592535a"
     },
     {
       "id": "program-libertarian-speech",
@@ -534,8 +523,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": "2024-08-17",
-      "sourceSha256": "2dee2144e22e3285e6d15e2a4e2723cf23d65080ecf63850b6f39fcdc274652f",
-      "textSha256": "4084a93a7b34744939be05bf6ddf68e77b58e1bfb3bad22a134e8b4ad5849e08"
+      "sourceSha256": "4966a9a3cfda88e4eb12349a2e7551d3200b52a68531affcd6a1997fff0e4816",
+      "textSha256": "cc52bb8f3f119f18578506b34c072daa376262092e362166788bd137a06894fe"
     },
     {
       "id": "program-libertarian-pandemic",
@@ -545,8 +534,8 @@
       "kind": "policy-page",
       "electionYear": 2024,
       "publishedOn": "2024-08-17",
-      "sourceSha256": "0d6b3204cd44a3877bcd60818f1be5004de27349a9443f3bee128e6ebe6832bd",
-      "textSha256": "833b3e0550324b03592c2040e8e853aac5350da48525c70799ea1e80bd5b078f"
+      "sourceSha256": "02222f995373d19ad7ced3ba0d47566fc28b8a1c0d33444366d3dbea77639810",
+      "textSha256": "12f2196c8e7050d9221ee8aac33b813dc2a8a02eb10bea540fd6c78e861ecfcc"
     },
     {
       "id": "program-ndp-launch-2026",
@@ -556,8 +545,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-09-22",
-      "sourceSha256": "4e9197ff5fb8028b6329aefd1d7b24f3d1093b0aa79d5deb940191e522db361a",
-      "textSha256": "ee49a4e3650531e15c15d7512ec2e967d2e98c43d98906cfb81dde30ca1dbd62"
+      "sourceSha256": "6527a1721e72f931f05b45103fec6cb6c89269f4dae94f07c6578238288765fe",
+      "textSha256": "8c591b4d60343088c6a8bfc80c282bc6c379db125f4547a5cb38877a1a6379dd"
     },
     {
       "id": "program-ndp-health-recruitment",
@@ -567,8 +556,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-09-23",
-      "sourceSha256": "7b8b75ec270e2871ed2b259f121118aaa0099debae27fab7e80fc87c3bac8f13",
-      "textSha256": "7cae3da8157077be4c871fe6cbb8ddb362aaaea66cb2266d07de57f733581031"
+      "sourceSha256": "b56b2bdafc355ff44ce8517247ed1590fb82b3e313f8d7ade2b9e4de3125930d",
+      "textSha256": "ba2bdacdcd3be8d5248c65fcc87746d51b34b9a57498f84ef49d27e4120ef0d1"
     },
     {
       "id": "program-ndp-buy-local",
@@ -578,8 +567,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-09-24",
-      "sourceSha256": "f984537da1bb66af588324b5cf4fc99704974e0f58adebe10d7a79a2e29da7f5",
-      "textSha256": "282c0cb1e3cccaf214460aea92581b22fa4578eb81a1b4bb7129fec368612693"
+      "sourceSha256": "467e6b5c9d48bd070c83df30a4f1338a8a611300c626894eb84a0b4eaa7e803f",
+      "textSha256": "a981590918ad7d4dc11c569a9b52fa901e71c14c243665948326c2bb0379fc48"
     },
     {
       "id": "program-ndp-empty-condos",
@@ -589,8 +578,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-09-25",
-      "sourceSha256": "6050ed4046dd3bae30db26bbd4345b79a6c385e4538b2f5fe9940fc2be65d7b3",
-      "textSha256": "52234bbaf9da07ec60f7b2f5e3761af2c361e60daecc989c406f078952fca32f"
+      "sourceSha256": "2a197ce8d15bcf87725d9fd5d53fcadca285edebfc07c10b7b5e047a3d0f9162",
+      "textSha256": "a03cb0fc472bf8edc4d77b40d6720bad30b953f04183086b83f9be7b7cf07483"
     },
     {
       "id": "program-ndp-critical-minerals",
@@ -600,8 +589,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-09-28",
-      "sourceSha256": "2fca4e22bfbb25fb9a96ca2eccdad43fa2b8a0fb843ca1eef1a13578fe670d5e",
-      "textSha256": "86fbe3d07675f17f99d6fb5230d5f28e318b53a3e4efb8b7cbbc78b4f8d1d171"
+      "sourceSha256": "8203508e741adcf6ed17a638d40f42c6e8541c0fa4f8102b3ccba7949a86e7cc",
+      "textSha256": "0e1dd41272c6f755fe3596a0bebb2136e75c23f6b9ab05eba38a54b66b045644"
     },
     {
       "id": "program-ndp-lng",
@@ -611,8 +600,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-09-29",
-      "sourceSha256": "b289dba130a5d05f875a8446986f7ed8aa075ef2f7c5117c6190fbad5d3562a9",
-      "textSha256": "02346b019c8f4ba01004ebd2be7b56ef4a9358a0e158775d5907b4122ac02ae1"
+      "sourceSha256": "fc07565a5eefb2acc94aaee4352f41e6ebd5f83a1393736d43490952ce2aeb86",
+      "textSha256": "5b0d000cf43c934fc18e338ae9a4ea9ad54ae8c9e61b27637bd6490126a53b2b"
     },
     {
       "id": "program-ndp-gas-prices",
@@ -622,8 +611,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-10-01",
-      "sourceSha256": "8404a2a5943de1eb7107e570b129cd49411e3683197adadb41b3f17bb9f7299f",
-      "textSha256": "e3933c74a9e13f4332aa2de0c208519e2ac28afc472baba2758ec1d9da80ede2"
+      "sourceSha256": "1727590ed0465bdaa5a5f2666b0e5c8fbdedd8de245781a9263decd09ee15e4a",
+      "textSha256": "8129998dc1812880de87d40f04ef7556a981fcdfe20118b910ddf6b913134fae"
     },
     {
       "id": "program-ndp-groceries",
@@ -633,8 +622,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-10-02",
-      "sourceSha256": "d94f4a8994b2f6194b5e1943284ce88602db8e8b3c209fb764479ac78bc6c795",
-      "textSha256": "a8126568c51b37b02bb6e804aefd2fdf7208e2c8e2a911a807a55992c4241c60"
+      "sourceSha256": "a8f4c7672824c562b6ecd59271c5b55832fcaebfc5669916de99d625165309f1",
+      "textSha256": "a2596a0153f022a91232a435d6225d96974ad4f61234f65c5cf2acc32bcae381"
     },
     {
       "id": "program-ndp-wildfire-support",
@@ -644,8 +633,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-10-02",
-      "sourceSha256": "960b508fc92c1b3f5007be30c504bcb3ebaed34eab1a1294fe6732d107d96b4a",
-      "textSha256": "f22ec84f909ddd02e2599b1c199680960170ca03b932440f5adab8df3b2e82e4"
+      "sourceSha256": "9f5e2b2bf471ae9999e3d38427d2927ce4815511f4c6451a0c61c5d5750a1ffe",
+      "textSha256": "acc03b9ed144b5b89083672238a2783bec17605829aad17c98c7a6cb31f4790a"
     },
     {
       "id": "program-con-housing-statement",
@@ -655,8 +644,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-09-25",
-      "sourceSha256": "790908fdd1c594c387878912d8fc83b2f742fd9a0a0bddf797a8b4cfcaeb5e0d",
-      "textSha256": "d34bcbb89facebc48fc883514e89361b04eb4571799ca948cc0c75c9bdbacf3f"
+      "sourceSha256": "e308cd32d6cd2d9dddb2f242084efef66d14a58043b9f74594a95c13fc32116d",
+      "textSha256": "b61a10064cfc107b693185d4608a172c89b8cacc61b3ee5d1066b7b617f0972e"
     },
     {
       "id": "program-con-no-new-taxes",
@@ -666,8 +655,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-09-27",
-      "sourceSha256": "ee5ceee64519656fec809d71914c4eae20a2f386ca3b4dd9d9c0dd1be77568d4",
-      "textSha256": "a53bbebf02c2f44555eb5c4918cdc7891ad65020394e3d46e1cc7f53bdc43e4d"
+      "sourceSha256": "ad8262e619af10c3d2e04581a6f3acecb10b5cc574eb3a153b74741d385bf48b",
+      "textSha256": "c43a2aa4347432da10063781f498a5bba2bfa26709e7d1027d0774346ab502b3"
     },
     {
       "id": "program-con-energy",
@@ -677,8 +666,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-09-28",
-      "sourceSha256": "8c6edd8b9d04b267d272a5138a99f6530311d9423ff6daf940e1d82b3b3e04d1",
-      "textSha256": "cc1058d6a112886509fd96d4b1d322a915a21b9caa38a6cae4008e8035a64eb5"
+      "sourceSha256": "488b89a2473d7a104acea1530dc46093e10e04c151c96ad1d5f11bf5bc2a94b4",
+      "textSha256": "58e5f16914aa6fe93f0c947d428344963dcb715b1cb61d21db5eddfa6474ae25"
     },
     {
       "id": "program-con-energy-plan",
@@ -699,8 +688,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-09-29",
-      "sourceSha256": "c5a201c283aa1c4fefe34baf17e045deb655d9003f69a4de6023f069665fc445",
-      "textSha256": "4caea3a53819a1ec319cfb1c7bdafb829039941c1963164543ace5ff3b0dca0a"
+      "sourceSha256": "ec74085ceb186e726d9d27816de6cf1e0d0d5664cd8d58653adccd4f78c56962",
+      "textSha256": "99882ea1022c93d4e9bb2bc97edb626375df87694dd560de8f2f2f5bc976a1e7"
     },
     {
       "id": "program-con-lng",
@@ -710,8 +699,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-09-29",
-      "sourceSha256": "efd01dd9c6461ddb665b95cdff4aeba1d598a3c7043109789bb4a2da0b603038",
-      "textSha256": "c45f934673e6762e56281fc7b0c25c6ac69cfd7827afe88fc9628f012488a9a9"
+      "sourceSha256": "20a7ffc459b0f40a9a3b39c76bcc4fcc6ce8134291888276429589a55a98a56f",
+      "textSha256": "ee4f78a4fa706544afb73493a0bc5a1b95ec4f49b6defed233da0d0e3b8c2e71"
     },
     {
       "id": "program-con-reconciliation",
@@ -721,8 +710,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-09-30",
-      "sourceSha256": "207359885bc619bc4848cb518b7f6c3bbbb304193bb7a643f71b6d5d377dd63c",
-      "textSha256": "00dad89a091f3f51f808b0af6a8d7bf1b4d92ebdf3d2c0a4fb440139b404c883"
+      "sourceSha256": "c264d7962fb56c9d1c8686f2d10576567f92c3aa59c93264728f6fb6dbf96742",
+      "textSha256": "6c6a74d9362b4432e07ede1669b856f3d0cf99b1657bcde0bb483a34fa261785"
     },
     {
       "id": "program-con-pipeline",
@@ -732,8 +721,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-10-01",
-      "sourceSha256": "01cb6d96ccf1c54253805cdbcb1c81a3824f1e4aa3111a6c760ac897e2453438",
-      "textSha256": "4c41e13f589701b219fe7d14e9a4c8df9270848fc672c5cd5b1737b284d08795"
+      "sourceSha256": "ddb5c9d014408c66fbd02a6c28feddc5faa5bbe33815f52dffa4ba377aefc5b6",
+      "textSha256": "88ef72a5e6518ff8b6093973baf7b0497e4c6e5e3a7eb08d78bd52eb3e0ae057"
     },
     {
       "id": "program-con-wildfire",
@@ -743,8 +732,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-10-02",
-      "sourceSha256": "00483355b158d18235eb12a860e045eddee466afed7fa1e4c70ff52091764838",
-      "textSha256": "efa52ebf56d675299f25e81fabd454b6b4e16296e824cebd346de4536bdaa0e3"
+      "sourceSha256": "febc9e84bf979452c885655e7e40657c955b0e1a794d696416e4a01dfacef31d",
+      "textSha256": "462df391dea0ea25b9d3e5a8968f48aaf66283eb06463516e8920005a1d90b67"
     },
     {
       "id": "program-green-plan-2026",
@@ -754,8 +743,8 @@
       "kind": "programme-update",
       "electionYear": 2026,
       "publishedOn": "2026-09-26",
-      "sourceSha256": "fff196c658a9c7aa6143e48fadcb661992e50f4f14e4f4724c3c2962882191ee",
-      "textSha256": "bc8bb649bc78666754e9f252e41e5176f7db4f98a46b51ad3bb04b7718628709"
+      "sourceSha256": "b1eee3e648a81e6355867c54641bb318e9da5ff0734c69eedd702829c15eb1c3",
+      "textSha256": "56f12a2ae385f9a070c2779151efec9b2371cbf01109d2aaaaca7d5dc8d9ec50"
     },
     {
       "id": "program-green-childcare",
@@ -765,8 +754,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-09-28",
-      "sourceSha256": "ec226293bba52563b29ac9f3ce749b502ef69bf6d2b524bfbef260c632778f7f",
-      "textSha256": "555ec5bd089c7bed70791b7df2b32797a5099a4ed15f6f376b057a2d8875f0b0"
+      "sourceSha256": "157d843cf41a3d99d725736732d177e8b44cf7b1fb1078f671fd283c2f23c7d2",
+      "textSha256": "2958da6edece3c50403d3c9ff8a1e0900773690058f446aab558c9b5949e8a54"
     },
     {
       "id": "program-green-renters",
@@ -776,8 +765,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-09-29",
-      "sourceSha256": "b0eea59903f55ef00b461eeef38f33fab3cb6cd288085a0d30f0a161c847c1ee",
-      "textSha256": "52a434f8f0953f14da413ad48533afa5d8295f68e257f16f4a619c6d6ff9cc24"
+      "sourceSha256": "3a8339440c136107c3ba4298b7ecb61f6d513c3d18886f2f011201be3a31e029",
+      "textSha256": "42fe2710378b4eff095aef7bb28c85ee895e29ee095925b65e5b3590a4722cb5"
     },
     {
       "id": "program-green-lng-2026",
@@ -787,8 +776,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-09-29",
-      "sourceSha256": "df53a446e622241e709f752fabc6047b0dae900b6ae87f45e594fd612233306a",
-      "textSha256": "78e48a17a7f6362435be795fcf18f2d37c1ee5abfabd9e7fff23685e392495b3"
+      "sourceSha256": "e1b4d5efe4fa6bca14c62769210a45accb1a18416a4a4be688dfb2f70894874c",
+      "textSha256": "d7ceccc85a888bb56ea9ae8109facac6c34baf0fd4dbb04955d11213e7ab123b"
     },
     {
       "id": "program-green-food",
@@ -798,8 +787,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-10-02",
-      "sourceSha256": "a88f1a430e94d21573e341a5c5345c5b203539ad328d0b19c7d83adbff250d38",
-      "textSha256": "a159b4da6ff5c8f8b6affd1b35e0373ab9a79241162720a21d475f8b57aa49dc"
+      "sourceSha256": "993180841584fd1b1245caef61d7042bd9781a0707178a76a4faac22c27197f0",
+      "textSha256": "b33cff6063861603ed2c5ab3f0e1538a7a4a974d16226a5e9530dce6a4555fb5"
     },
     {
       "id": "program-green-drugs",
@@ -809,8 +798,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-10-02",
-      "sourceSha256": "a98a72130e21d0025b1a240358171ad45944d7b46717c04f1f4a81e00dd6c05b",
-      "textSha256": "0a02aa1ba9d3a37d34a1ebaaa28e0aa7fa505acd23531c91cfe738c8fbdabdb7"
+      "sourceSha256": "507cc6f6605ad15025c98459425391847224f22d7738c6386a7644152a92a20b",
+      "textSha256": "2cc112644e2c922fe143b746b6f61ec88c1744e630bc3ded5cfe7cfc205532f2"
     },
     {
       "id": "program-green-ai",
@@ -820,8 +809,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-10-02",
-      "sourceSha256": "2ab1e506208ca2bd36a566b2e2af221b2211679b29eb900db78ccbc925a41ba1",
-      "textSha256": "2076c4e6f657d508512cd3962d909247eea9677404c4de7cc67cd2fddfe105f1"
+      "sourceSha256": "390236fc71f5f84579d3ea1f47e1a8269600b2df66272c6d5a15ef085099a7c2",
+      "textSha256": "52c59fef7d3cf67b57bd42978b6cf19004258b216faaee8a5f44bc0f46d84580"
     },
     {
       "id": "program-green-coast",
@@ -831,8 +820,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-10-02",
-      "sourceSha256": "eb91365a71902dcba3119c5e085e97257acd17f8195d41473f42ebc78c446076",
-      "textSha256": "d62ccb5a378eda1ee1eefd95e74975851080c07d2ad6831f34d0b896b918ba63"
+      "sourceSha256": "6e59275a37676f7029db3f810340b7b2f850957b578d6d8f05540240e9194870",
+      "textSha256": "78566a7e57233cb1d02cc337816a9c8e29ddf6bc01cf2689ba4f7817e7ded22d"
     },
     {
       "id": "program-green-seniors",
@@ -842,8 +831,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-10-04",
-      "sourceSha256": "e14cf4caa58209aff7dd1164f388675903fa291332b8fd35e11c65eabba3fe8b",
-      "textSha256": "491dcd8325dc03ce75ac996f38b4cd66dce03c66250d0ff9dda9f90a3cb63b3d"
+      "sourceSha256": "fa3eee9a60f1f4cac38f4ce415341f62a6faf3bc52ee6e9b01822ba8df5f7f82",
+      "textSha256": "a79709d82cb5f4f2458d8cbaa4d6a29d89841a104abc3f54bce563ce9a08d49c"
     },
     {
       "id": "program-heritage-priorities-2026",
@@ -853,8 +842,8 @@
       "kind": "platform",
       "electionYear": 2026,
       "publishedOn": "2026-10-02",
-      "sourceSha256": "e1503aea60a078c5231fa418b8d38b75ed2d39e0a891fde1a3fdcf76aa554362",
-      "textSha256": "04909767f89d047dc14910dd129d79e7df24d34f197c3da04115f1666fd150fb"
+      "sourceSha256": "2760fb164752f4b3fa5d8553656729ef10af3199e0196f6823bf73a67b6fbd2b",
+      "textSha256": "059acb47f86165a99309406f560f19388ce53ca27939f85443ed7114a4cea3fd"
     },
     {
       "id": "program-canwest-mission",
@@ -876,8 +865,8 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-10-04",
-      "sourceSha256": "9fc3e3b12102b48d4f4c7414a1239e698433e3cd7b9d5c7561cff227b504f23c",
-      "textSha256": "65c1ec4370b90e4c8ddd512532e8f7f1fe8a2c0b3f48ee07765ede50cdfc7e74"
+      "sourceSha256": "afa3784b8fac974be8c62df710fe1391c2d841dab7a5ab7fa733f885dd101fdd",
+      "textSha256": "bef07e816ac27e464f02afe1cb67d511431e7b80ba177d439862d71b999e9939"
     },
     {
       "id": "program-green-forestry",
@@ -887,8 +876,404 @@
       "kind": "campaign-announcement",
       "electionYear": 2026,
       "publishedOn": "2026-10-04",
-      "sourceSha256": "f0b90ed85a114db9be89225f3f21dc554da1f0900703792cf9248b78a21b997a",
-      "textSha256": "19c1fac1caec531a2814d69b47eed30a6df31ab817e5e4d17477d6fc417d015b"
+      "sourceSha256": "cc7163062aa036fbe7397fbe509cfd3ff4b53fd9b6bbc1a28917d5622024dd5e",
+      "textSha256": "6c0d7c4d2398df2e3a5c189fc7bfc272a4d5cd831a3604b523240a62f000b13d"
+    },
+    {
+      "id": "program-ndp-seniors-health",
+      "title": "David Eby’s plan will strengthen health care for seniors",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/david-ebys-plan-will-strengthen-health-care-seniors",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-05",
+      "sourceSha256": "39267261f668409713f15adb785ef2081089bd23fc0ac00e58dc9b87f67555f4",
+      "textSha256": "b52f94a84a63869b1aa6642d8821ba500bb16707599ffeb21725b547f394d98b"
+    },
+    {
+      "id": "program-ndp-organized-hate",
+      "title": "BC NDP commits to Jewish community security and summit to confront organized hate",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/bc-ndp-commits-jewish-community-security-investment-and-summit-confront-organized-hate",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-05",
+      "sourceSha256": "2d896e6aec1d1c0275995892198c4a727f1f233ee6ca4195a68af53e4bd48d2f",
+      "textSha256": "283c3c6f6197a0f8ce0fe52d009013270296ce819f3deb504b42da7a913a09db"
+    },
+    {
+      "id": "program-ndp-wait-times",
+      "title": "Getting care sooner: Eby will cut wait times, add new diagnostic equipment",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/getting-care-sooner-eby-will-cut-wait-times-add-new-diagnostic-equipment",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-06",
+      "sourceSha256": "dd30fe54be682ad8fbaa1b64e8e94f5003cf230e8c48937475b75b96f909bf5b",
+      "textSha256": "4c7de0f4cd0d867aa2e3905148c893ccad000ce9ae5dc9b7a91ee8e594b0b8c3"
+    },
+    {
+      "id": "program-ndp-small-business",
+      "title": "Eby to support small businesses through the trade war",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/eby-support-small-businesses-through-trade-war",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-07",
+      "sourceSha256": "edbd98101c6fd14bd3b5df2a7bdca7a90db59e01dcd2b7fdb13663b020b91f27",
+      "textSha256": "852d6ace08e558b94e4b958c5e80aa8138fd42e75ec0e17ae43b4caa13f7fd1c"
+    },
+    {
+      "id": "program-ndp-libraries",
+      "title": "BC NDP to double funding for public libraries",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/bc-ndp-double-funding-public-libraries",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-07",
+      "sourceSha256": "9202753be95530f07562f8f3e63b3b8affc323f72034c6f030c73aff06245d61",
+      "textSha256": "6a3d8cf28a2c275a06ce7b6a3c4216b4f5e94588aac6efd1a2d1dc231384adff"
+    },
+    {
+      "id": "program-ndp-car-insurance",
+      "title": "Eby to freeze car insurance rates for another three years",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/eby-freeze-car-insurance-rates-another-three-years",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-08",
+      "sourceSha256": "3482da8939de80461b5213b3309aa5953bc8ed91da9d8292f272a5c9c905e5d5",
+      "textSha256": "71080c2782657dfa16231dca012f4629a2f5ed063b95f5c47746a1eb8aae8b51"
+    },
+    {
+      "id": "program-ndp-doctors-nurses",
+      "title": "Eby’s plan includes more doctors and nurses, fast-tracking international graduates",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/ebys-plan-includes-more-doctors-and-nurses-fast-tracking-international-graduates",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-09",
+      "sourceSha256": "9ed4ff1e530230d77a4e111ba521ca9f3c147e4031412210dc6d0968ac654540",
+      "textSha256": "8e5ee534ecb1461b362d4df8ce1ad716cadf56a7c1f879e36be2493c92ac7b58"
+    },
+    {
+      "id": "program-ndp-nature-climate",
+      "title": "Eby’s plan protects B.C.’s natural spaces, funds climate action",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/ebys-plan-protects-bcs-natural-spaces-funds-climate-action",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-10",
+      "sourceSha256": "2b80a076a001ad6f3520d597d2bb4a7956326b69d03b5d510190736b97879767",
+      "textSha256": "922737a3a33cb27fcc3d4e3a23061e22eec88009fb5d9b1a869577ad78fe0d8c"
+    },
+    {
+      "id": "program-ndp-ferries",
+      "title": "BC NDP would put locals first with new ferry reservation pilot",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/bc-ndp-would-put-locals-first-new-ferry-reservation-pilot",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-10",
+      "sourceSha256": "25ac70a1e24e0ded0d76e997bd8b0f6455510b1f2b67a8409a23d6041bd754ca",
+      "textSha256": "618a31ed74e7e9d894224f3e1cf3c6fef2b535809e35627e89d0372c34f9ec13"
+    },
+    {
+      "id": "program-ndp-public-health-care",
+      "title": "Eby will protect public health care from U.S.-style privatization",
+      "publisher": "BC NDP",
+      "url": "https://www.bcndp.ca/releases/eby-will-protect-public-health-care-us-style-privatization",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-12",
+      "sourceSha256": "b360207d0b5a7d5b29ddc5c69f3be26bac13e3cd7b68c1173e916c5f07ed5a05",
+      "textSha256": "a6b337c1e47bd95c49b97c2132e9982313d14cb6cac0b44cd8c60cd9c03b6029"
+    },
+    {
+      "id": "program-con-plan",
+      "title": "Our Plan | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/plan/",
+      "kind": "source-index",
+      "electionYear": 2026,
+      "publishedOn": null,
+      "sourceSha256": "a36e9066d5d3a3f8733c881fff1a4d2f2c10d4bc0904d4584ca1bc726d014bc1",
+      "textSha256": "fa9c1242d52d7c2d499ab51b6c118e8ce33d951d412617fba0c2fa705d91062b"
+    },
+    {
+      "id": "program-con-emergency-rooms",
+      "title": "Keep Emergency Rooms Open | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/plan/keep-emergency-rooms-open/",
+      "kind": "policy-page",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-05",
+      "sourceSha256": "f7847f70df4f10bf85481291d3c8b122f6ea6ec05c0278f587d945a5dc19435c",
+      "textSha256": "97153af90f04d6ac8d37a83607e3360a82b9ed467b0ba50a603885d4b0df3dcc"
+    },
+    {
+      "id": "program-con-metro-vancouver",
+      "title": "Conservative Platform: Delivering Essential Services and Cutting Waste at Metro Vancouver | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/conservative-platform-delivering-essential-services-and-cutting-waste-at-metro-vancouver/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-05",
+      "sourceSha256": "bebbe4c5c85734782126d3289d17c2035a8450b3f149ee82b16ff53a888ac55b",
+      "textSha256": "59883eac45f451ba0195eb8dc9041f9c739ee8fd62d67c73293ce66edea1349a"
+    },
+    {
+      "id": "program-con-safe-streets",
+      "title": "Safe Streets for BC | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/plan/safe-streets-for-bc/",
+      "kind": "policy-page",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-06",
+      "sourceSha256": "72bfd3bd16f047251545f5e477b6632b54660122a3f3ca08511ccd54a37ca7be",
+      "textSha256": "7430ed01f068590ea7ad2fa04bac8b084e4899b281c42b0207d8667d35bdd64f"
+    },
+    {
+      "id": "program-con-safe-schools",
+      "title": "Safe Schools | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/plan/safe-schools/",
+      "kind": "policy-page",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-07",
+      "sourceSha256": "ff63004a841fbb372b42e9b6df28bef79d2249be8303b09dffbf6186da8e9f2e",
+      "textSha256": "5b32488e20f38ba4efdd1f7f45f3c2e495e8fd6a65a60e1903f26266f6789e1b"
+    },
+    {
+      "id": "program-con-insurance",
+      "title": "Insurance | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/plan/insurance/",
+      "kind": "policy-page",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-07",
+      "sourceSha256": "addb91058dab13d8da0b092ae50c0b708415702257a19dbc899a9780ab02c09b",
+      "textSha256": "ad1bdb4f50026fd9d96179e1cf4c2a16d4bfe359a1b88de7cc04727702b50cd3"
+    },
+    {
+      "id": "program-con-dripa",
+      "title": "Repeal DRIPA, Promote Economic Reconciliation | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/plan/first-nations-dripa/",
+      "kind": "policy-page",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-07",
+      "sourceSha256": "74cf9d1ed61fff752207de3c29eea8b4ed541445523f221782e5a59f10a3c586",
+      "textSha256": "c80742909ddef8a428a450e76ddef54c768a2f10136ee3ff98b6dad72e1cd70b"
+    },
+    {
+      "id": "program-con-economy",
+      "title": "Supercharge British Columbia’s Economy | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/supercharge-british-columbias-economy/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-07",
+      "sourceSha256": "b29fff8b10862669b8ac9be51d10a34a4a01e90732bf25ff51490f82b43679b4",
+      "textSha256": "889927f2d7f7e6192dd2973431a8f3bc2ee685c6e28eab9ab2a5c0525cea86eb"
+    },
+    {
+      "id": "program-con-tax-cut",
+      "title": "$1000 Tax Cut | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/plan/conservatives-will-cut-your-taxes-by-1000/",
+      "kind": "policy-page",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-08",
+      "sourceSha256": "4d10e2a02d0d51df4a520afcccb968bda639d4c988dcf4ab458d4b60b6d9db6c",
+      "textSha256": "807c74fe4b5db51b251875b019fadcefb355a1fd4dda480a156596cdc3c08866"
+    },
+    {
+      "id": "program-con-long-term-care",
+      "title": "Conservatives Will Build the Long-Term-Care Beds the NDP Shelved | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/conservatives-will-build-the-long-term-care-beds-the-ndp-shelved/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-09",
+      "sourceSha256": "739894014d104da9eb6ff249673b1109ae71be62a7b9eab1d63c7013b86adae7",
+      "textSha256": "8e174593c40bc247b879cd7ddcfb789dfee005ec87df0cc5601791aa0f613665"
+    },
+    {
+      "id": "program-con-seniors-homes",
+      "title": "Conservatives Will Stop the NDP from Taxing Seniors Out of Their Homes | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/conservatives-will-stop-the-ndp-from-taxing-seniors-out-of-their-homes/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-09",
+      "sourceSha256": "7354f38743a62952dc6cd9494afa27a1a4db7d2c82b3853dbc8cfbc808246f5a",
+      "textSha256": "e45f3d83fcc29298f3a267c263f4d13e25e9d681392a7a9853a3d50463ebc77d"
+    },
+    {
+      "id": "program-con-young-people",
+      "title": "Conservatives Will Give Young British Columbians a Reason to Stay | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/conservatives-will-give-young-british-columbians-a-reason-to-stay/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-10",
+      "sourceSha256": "1a98334a0c69c08d2d7fdb0870ade2f3a3067b7dac0f92ce0b84d80f4cf7fc0d",
+      "textSha256": "840907af8f336126bce2627c81842363319f8b8d98b44956b146c98a99fc6d09"
+    },
+    {
+      "id": "program-con-ferries",
+      "title": "Conservatives Will Fix BC Ferries | Conservative Party of British Columbia",
+      "publisher": "Conservative Party of British Columbia",
+      "url": "https://conservativebc.ca/conservatives-will-fix-bc-ferries/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-11",
+      "sourceSha256": "fe242ee06952a02bfdbd9c934269361a75c333c2e5909bb4542d9fe336df2042",
+      "textSha256": "42ecc4717462c5887940ad95cd4ce805902dfb8b619c1c6fe2be0c1270cf5e64"
+    },
+    {
+      "id": "program-green-fair-share",
+      "title": "BC Greens’ Fair Share Act would unlock $22.2B for childcare, transit, and housing - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/fair-share-act-would-unlock-22-2b-for-childcare-transit-and-housing/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-05",
+      "sourceSha256": "1f32e159b8cdb367fc9eefd7cc085338dc781f8c76a83dc7d8ad6e11a9fdfb94",
+      "textSha256": "54ed5bdf66f3f17c1dc60f2e3906a7e6bfd817bce19d29e87b5982909d99d73f"
+    },
+    {
+      "id": "program-green-health-centres",
+      "title": "BC Greens pledge funding for Community Health Centres in every riding, support for healthcare workers - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/pledge-funding-for-community-health-centres-in-every-riding-support-for-healthcare-workers/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-06",
+      "sourceSha256": "2687e146d2cd87f4fc3a248956dcf8ce28b3b2547f45f910429a1977c7a0f7c5",
+      "textSha256": "190723df502dbc6f6f97adffe2d37f488a521e775001a16e6378ba85d23754d4"
+    },
+    {
+      "id": "program-green-economy",
+      "title": "BC Greens launch major platform plank, Economic Vision for B.C.’s future - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/launch-major-platform-plank-economic-vision-for-b-c-s-future/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-08",
+      "sourceSha256": "c466dae9495a99598b22c35be058db453f7c960597aa022eb36cdc780da401ce",
+      "textSha256": "55c64dbdb125c37f56909f5bd67e89088a4de684b730b521b49ecf4995d7c7e8"
+    },
+    {
+      "id": "program-green-inclusive-education",
+      "title": "BC Greens pledge to close the inclusive education funding gap so every student gets the support they need - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/pledge-to-close-the-inclusive-education-funding-gap-so-every-student-gets-the-support-they-need/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-08",
+      "sourceSha256": "61f41c8ed3f653d985af1bb0d19e08904099019e04c5359baf95c7070d738f6b",
+      "textSha256": "e627fb0a325cef1ca61d2dfbc9106e7c473ae3be802eb0233b68f774148083e9"
+    },
+    {
+      "id": "program-green-transit",
+      "title": "BC Greens commit to funding for fast, frequent transit, pledge to fight for province-wide passenger rail - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/bc-greens-commit-to-funding-for-fast-frequent-transit-pledge-to-fight-for-province-wide-passenger-rail/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-09",
+      "sourceSha256": "828107524834be136eb5127de3b6c77b254964fc2494879798e1668b1e2dcb66",
+      "textSha256": "3806c02b024c7639d5cccbb7cd090959cc6ede76da9b8513faad58cb44d3ab24"
+    },
+    {
+      "id": "program-green-support-needs",
+      "title": "BC Greens statement on changes to funding through new Children and Youth with Support Needs system - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/statement-on-changes-to-funding-through-new-children-and-youth-with-support-needs-system/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-09",
+      "sourceSha256": "4d59d04478413beb1df9abc9ca1fb8c66b6aaca09a1f75e814b8cdf26c295cbe",
+      "textSha256": "29db7adaa1acdb1890c95900ec34a999d4e44210597a82c1fcbc3eca6560a9b4"
+    },
+    {
+      "id": "program-green-tourism",
+      "title": "BC Greens release tourism plan - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/release-tourism-plan/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-09",
+      "sourceSha256": "cc2c419d7a5aa86bde564d198fcdebf5d6a02d047bfe13ee76a24aea50ac7fdd",
+      "textSha256": "2aa9f23f96359c25cac51fdcab982a504cdd8799561ddc1ad1813281e5fc417d"
+    },
+    {
+      "id": "program-green-royalties",
+      "title": "New royalty framework, accountability for fossil fuel corporations, getting B.C. back on track on climate proposed by BC Greens - BC Green Party",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/new-royalty-framework-accountability-for-fossil-fuel-corporations-getting-b-c-back-on-track-on-climate-proposed-by-bc-greens/",
+      "kind": "campaign-announcement",
+      "electionYear": 2026,
+      "publishedOn": "2026-10-10",
+      "sourceSha256": "694ad99cecd80eda98e6cd22be263462ae33673a964a0d808bcb8a0c1cd02721",
+      "textSha256": "bc14877f3241984b1b092a1f53e6d82d79f4a5f6b94aa2802b915eaf96b70d11"
+    },
+    {
+      "id": "program-green-childcare-brief",
+      "title": "BC Greens Childcare Policy Brief 2026",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/09/BC-Greens-Childcare-Policy-Brief-2026.pdf",
+      "kind": "policy-page",
+      "electionYear": 2026,
+      "publishedOn": null,
+      "sourceSha256": "93d1ef8c8a66514a1e8f05fb2f9346d246b07903f533ef9f0b3184b0f4678d01",
+      "textSha256": "283c1a64cae4ef3dc12596c5a2420d4e3bbdad5f3f2eefc92c8bac62b1aca574"
+    },
+    {
+      "id": "program-green-renters-brief",
+      "title": "BC Greens Rights for Renters Policy Brief 2026",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/09/BC-Greens-Rights-for-Renters-Policy-Brief-2026.pdf",
+      "kind": "policy-page",
+      "electionYear": 2026,
+      "publishedOn": null,
+      "sourceSha256": "8e52a4b8eccda117566e2d66bf835410eea32f9f7502077ff4865f3d6b001704",
+      "textSha256": "6016649954e8167cd72c4d9a8571c14b0027572d957baf820754083c40c57556"
+    },
+    {
+      "id": "program-green-drugs-brief",
+      "title": "BC Greens Toxic Drugs Policy Brief 2026",
+      "publisher": "BC Green Party",
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/BC-Greens-Toxic-Drugs-Policy-Brief-2026-1.pdf",
+      "kind": "policy-page",
+      "electionYear": 2026,
+      "publishedOn": null,
+      "sourceSha256": "db76c9a81d2f04f9e71d0dfc446e353e6666669d22e2f1d0c8d7b7e29a72a3cd",
+      "textSha256": "fdcd72f51018a946d9dec91c021b100f119c569ae2b0ae3de121b78153555bcd"
+    },
+    {
+      "id": "program-centre-platform",
+      "title": "2026 Platform | CentreBC — A Balanced Plan for BC",
+      "publisher": "CentreBC",
+      "url": "https://www.centrebc.ca/platform/",
+      "kind": "platform",
+      "electionYear": 2026,
+      "publishedOn": null,
+      "sourceSha256": "a9984c695b73ddc368bb19c0440df3edeff0323bb9f035b8b9a4242a1af6a8cd",
+      "textSha256": "d0e6e99e2982f38e9f2da786a0349548b41fbe9dbedcbc1b807614275f19cf2f"
+    },
+    {
+      "id": "program-centre-platform-pdf",
+      "title": "CentreBC 2026 Platform: A Balanced Plan for British Columbia",
+      "publisher": "CentreBC",
+      "url": "https://www.centrebc.ca/wp-content/uploads/2026/10/CentreBC-2026-Platform-Web.pdf",
+      "kind": "platform",
+      "electionYear": 2026,
+      "publishedOn": null,
+      "sourceSha256": "bde5bc78a3746e685835b450ca56bd2418d213e884b59ce85a1b10934ef137ab",
+      "textSha256": "925c3f0ecfc6ae2cfcf25d09c8a4296650fcd1399cf30f4fa2573adb06d673db"
     }
   ],
   "parties": [
@@ -905,7 +1290,17 @@
         "program-ndp-gas-prices",
         "program-ndp-groceries",
         "program-ndp-wildfire-support",
-        "program-ndp-fair-share"
+        "program-ndp-fair-share",
+        "program-ndp-seniors-health",
+        "program-ndp-organized-hate",
+        "program-ndp-wait-times",
+        "program-ndp-small-business",
+        "program-ndp-libraries",
+        "program-ndp-car-insurance",
+        "program-ndp-doctors-nurses",
+        "program-ndp-nature-climate",
+        "program-ndp-ferries",
+        "program-ndp-public-health-care"
       ],
       "quotes": [
         {
@@ -1116,13 +1511,125 @@
           "speaker": "BC NDP",
           "text": "Over 96% of residents, individuals who make $190,000 or less, will see no tax increase. The highest earners will pay slightly more through a 2% point increase on the top two tax brackets and a new bracket for income over a million dollars.",
           "textSha256": "dfedb4a68a0ac74697c8983f1213335cca7836249d21e6efafee4b647e0ac5fc"
+        },
+        {
+          "id": "home-care-2026",
+          "topic": "health",
+          "sourceId": "program-ndp-seniors-health",
+          "speaker": "BC NDP",
+          "text": "Adding 500 health-care workers to give more seniors faster, hands-on support, scrapping user fees, and expanding virtual Long-term Care at Home monitoring.",
+          "textSha256": "fb0fb08492351b2f966d3074ae49648311df217b2696779f88a7269cc444eea3"
+        },
+        {
+          "id": "long-term-care-2026",
+          "topic": "health",
+          "sourceId": "program-ndp-seniors-health",
+          "speaker": "BC NDP",
+          "text": "With the funding secured through the BC-Canada Prosperity agreement, the BC NDP will move ahead with seven long-term care projects that had been paused earlier this year",
+          "textSha256": "459bfb97249ccd64c74a79237ff8f65a7cb1b4faa5bd6c81cf367e61b003cd2a"
+        },
+        {
+          "id": "jewish-security-2026",
+          "topic": "rights",
+          "sourceId": "program-ndp-organized-hate",
+          "speaker": "BC NDP",
+          "text": "A BC NDP government would provide $500,000 yearly to the Western Jewish Community Security Network to strengthen security at Jewish schools, synagogues and community centres across British Columbia.",
+          "textSha256": "5ed4ce6d6a0ec695d73791259b7ae5484389e451cd8ac592b0b1d730171a9cfe"
+        },
+        {
+          "id": "extremism-summit-2026",
+          "topic": "justice",
+          "sourceId": "program-ndp-organized-hate",
+          "speaker": "BC NDP",
+          "text": "A re-elected BC NDP government would also convene a summit of police services from across British Columbia to strengthen coordination on investigations, intelligence and enforcement related to extremist activity.",
+          "textSha256": "2440a0cbab11bad9f292ca16066b1461942f05887e07993378ff980ae71226dc"
+        },
+        {
+          "id": "wait-times-2026",
+          "topic": "health",
+          "sourceId": "program-ndp-wait-times",
+          "speaker": "BC NDP",
+          "text": "Patients will get scans and surgeries sooner under David Eby’s plan to reduce wait times, which adds eight new MRI machines, 10 CT scanners, and introduces coordinated regional surgical waitlists that let patients choose the shortest wait.",
+          "textSha256": "60efd793c472337d70b0be4b666393497f4a413e61c1913a7187d0f4823ba80f"
+        },
+        {
+          "id": "tariff-relief-2026",
+          "topic": "economy",
+          "sourceId": "program-ndp-small-business",
+          "speaker": "BC NDP",
+          "text": "The Small Business Tariff & Wildfire Relief Fund provides interest-free loans of up to $1 million for up to 72 months to help small businesses recover from the recent wildfires or Donald Trump’s unfair tariffs.",
+          "textSha256": "407dc92adde7f6d78c4bca2d80cbf8fbce2645eab8ba5a2b5473572c83a26366"
+        },
+        {
+          "id": "youth-hiring-credit-2026",
+          "topic": "economy",
+          "sourceId": "program-ndp-small-business",
+          "speaker": "BC NDP",
+          "text": "During the trade war, the Youth Hiring Tax Credit offers a $5,000 refundable tax credit for small businesses that hire a young person (aged 18–30) for their first full-time, 12-month job.",
+          "textSha256": "ebb5ad088d9d61b0a34e467f39ea3d6d5ff188312c79aaca83a16111fca25f1f"
+        },
+        {
+          "id": "libraries-2026",
+          "topic": "education",
+          "sourceId": "program-ndp-libraries",
+          "speaker": "BC NDP",
+          "text": "a re-elected BC NDP government will permanently double provincial funding for B.C.’s public libraries, from $14 million to $28 million a year.",
+          "textSha256": "b5d18e6a88ace65a0def95a921df8e499348684d5cbe6a483577ae1c4cfeffab"
+        },
+        {
+          "id": "car-insurance-freeze-2026",
+          "topic": "affordability",
+          "sourceId": "program-ndp-car-insurance",
+          "speaker": "BC NDP",
+          "text": "David Eby will extend that freeze for 3 more years, totalling a full decade of frozen rates",
+          "textSha256": "ffacde85a74523d80c0c39ec2d147ddaca3aa6809b85f1f9e5a2970d4fb1010b"
+        },
+        {
+          "id": "primary-care-clinics-2026",
+          "topic": "health",
+          "sourceId": "program-ndp-doctors-nurses",
+          "speaker": "BC NDP",
+          "text": "Build 20 additional team-based primary care clinics to provide timely, in-person care and ease hospital pressure.",
+          "textSha256": "648ff8d4c7102e2c9819b101715383a79ffff138b82f6798f3154c3d02f34564"
+        },
+        {
+          "id": "clean-futures-fund-2026",
+          "topic": "environment",
+          "sourceId": "program-ndp-nature-climate",
+          "speaker": "BC NDP",
+          "text": "Dedicating a portion of provincial revenue from new oil and gas development to fund climate action programs that help families and businesses choose less costly clean energy and create new jobs, starting with an investment of $50 million.",
+          "textSha256": "62a05b523499313cfd68b8621852b8ba0cd35bc2a3bf29b1f3e709c3a3208635"
+        },
+        {
+          "id": "old-growth-2026",
+          "topic": "environment",
+          "sourceId": "program-ndp-nature-climate",
+          "speaker": "BC NDP",
+          "text": "$50 million to convert old-growth deferrals of the most irreplaceable and rarest forests into permanent protections, while supporting mills to retrofit and make more value-added products with second growth.",
+          "textSha256": "3a2b32ab5b49c439fbe2e4adc185389aea932ce72c8a2e99962ed2ffd1dbae49"
+        },
+        {
+          "id": "ferry-locals-2026",
+          "topic": "transport",
+          "sourceId": "program-ndp-ferries",
+          "speaker": "BC NDP",
+          "text": "The pilot would reserve a total of 12% of advance booking space for local residents.",
+          "textSha256": "3f11364954c75dd83f26c4f728eda29252aa8d24926b39c59efb6dd7a4f119b7"
+        },
+        {
+          "id": "user-fees-2026",
+          "topic": "health",
+          "sourceId": "program-ndp-public-health-care",
+          "speaker": "BC NDP",
+          "text": "The BC NDP will close loopholes that allow clinics to charge user fees and extra billing for publicly insured, medically necessary services.",
+          "textSha256": "cdf51832c6cd5cd2e19340cbb6f81828d51fb61aa3c33e2f7992f0a553ca90a9"
         }
       ]
     },
     {
       "id": "con",
       "sourceIds": [
-        "program-con-platform",
+        "program-con-plan",
         "program-con-documents",
         "program-con-policy-2025",
         "program-con-housing-statement",
@@ -1133,7 +1640,19 @@
         "program-con-lng",
         "program-con-reconciliation",
         "program-con-pipeline",
-        "program-con-wildfire"
+        "program-con-wildfire",
+        "program-con-emergency-rooms",
+        "program-con-metro-vancouver",
+        "program-con-safe-streets",
+        "program-con-safe-schools",
+        "program-con-insurance",
+        "program-con-dripa",
+        "program-con-economy",
+        "program-con-tax-cut",
+        "program-con-long-term-care",
+        "program-con-seniors-homes",
+        "program-con-young-people",
+        "program-con-ferries"
       ],
       "quotes": [
         {
@@ -1318,94 +1837,140 @@
           "textSha256": "7a83d7e0167fc11b68249390e68257aa3a3a7f828ac23f47195262db97e98889"
         },
         {
-          "id": "platform-housing",
-          "topic": "housing",
-          "sourceId": "program-con-platform",
-          "locator": "Get BC Building",
-          "speaker": "Conservative Party of British Columbia",
-          "text": "A plan to end the housing shortage and make life more affordable.",
-          "textSha256": "f704318aa41795540fc5ec93acae4309b8ef3adb665dde47fdc616b9fd5613d3"
-        },
-        {
-          "id": "platform-patients",
+          "id": "emergency-rooms-2026",
           "topic": "health",
-          "sourceId": "program-con-platform",
-          "locator": "Putting Patients First",
+          "sourceId": "program-con-emergency-rooms",
           "speaker": "Conservative Party of British Columbia",
-          "text": "Expanding Access to Care and Ending Long Wait Times",
-          "textSha256": "6f621d08544486e8cf0930a5a25006f9566c15b9ff3c6df925b8b47f529a067e"
+          "text": "The BC Conservatives will keep emergency rooms open, recruit and retain more doctors and nurses, and protect current health care funding, while keeping BC’s system universal and publicly funded.",
+          "textSha256": "96121207c7fe87ed81905d2bcca2fc9d45aea459167046b36c338cb89c737a62"
         },
         {
-          "id": "platform-reproductive",
+          "id": "wait-times-commission-2026",
           "topic": "health",
-          "sourceId": "program-con-platform",
-          "locator": "Next Gen Reproductive Health",
+          "sourceId": "program-con-emergency-rooms",
           "speaker": "Conservative Party of British Columbia",
-          "text": "A plan for next generation reproductive healthcare will raise reproductive supports to the standard that women deserve.",
-          "textSha256": "c00eb335cc2949750edd4d1bcdea9c6e2d9fc69107b94e53dd95e87ad0fbc5b8"
+          "text": "Within our first 100 days, we will launch an expert commission to bring proven solutions from other public systems to B.C. and cut wait times, while ensuring British Columbians never need anything more than their health card to get care.",
+          "textSha256": "d4e13ac012fe823ba07ef48684ba5f31ae4f6399ffd1e73ef59b56f3aa76ebbd"
         },
         {
-          "id": "platform-education",
-          "topic": "education",
-          "sourceId": "program-con-platform",
-          "locator": "Excellence in Education",
+          "id": "metro-vancouver-2026",
+          "topic": "governance",
+          "sourceId": "program-con-metro-vancouver",
           "speaker": "Conservative Party of British Columbia",
-          "text": "A plan for common sense change to put learning first and restore excellence in education.",
-          "textSha256": "ae83d5183f27cc76000fc50ad1136dea64738d376d36f2a497359ed3a065ff74"
+          "text": "Housing, economic development, air quality and climate policy are already the responsibility of local governments and the province. These functions will be returned to the governments accountable for them, ending costly duplication.",
+          "textSha256": "32b2e69043549f2f330fb18cff93b5e90e88f6a1da6e8b4eabc4e54a99d61aaf"
         },
         {
-          "id": "platform-childcare",
-          "topic": "education",
-          "sourceId": "program-con-platform",
-          "locator": "Common Sense Childcare",
-          "speaker": "Conservative Party of British Columbia",
-          "text": "A plan to expand the supply of affordable childcare spots, work in partnership with independent childcare providers, and give parents the resources they need.",
-          "textSha256": "944e5e422c379df2f46be91971cf4a6a298a22238803e2e99105471b02bec5fb"
-        },
-        {
-          "id": "platform-recovery",
-          "topic": "addiction",
-          "sourceId": "program-con-platform",
-          "locator": "BC Recovers",
-          "speaker": "Conservative Party of British Columbia",
-          "text": "A plan to end the overdose and addictions crisis, save lives, and help people get their lives back on track.",
-          "textSha256": "a3e6921bc5d7cda5772376905269217ca95f2906d0df3a7fd615de48df294894"
-        },
-        {
-          "id": "platform-safety",
+          "id": "rural-police-2026",
           "topic": "justice",
-          "sourceId": "program-con-platform",
-          "locator": "Safe and Secure",
+          "sourceId": "program-con-safe-streets",
           "speaker": "Conservative Party of British Columbia",
-          "text": "A plan to restore public safety and rebuilding confidence in our justice system.",
-          "textSha256": "8f129ea2d455d84bced67acc4f726c7b764eb3eb2240ea3d64d07224404169a5"
+          "text": "Add 500 RCMP officers and 150 civilian staff over five years to restore policing in rural and regional communities where crime is rampant.",
+          "textSha256": "93e700e8237732008c45e6cb4c549d170d652ff0aee92a904ecc18e71d66eab2"
         },
         {
-          "id": "platform-moving",
-          "topic": "transport",
-          "sourceId": "program-con-platform",
-          "locator": "Get BC Moving",
+          "id": "compassionate-intervention-2026",
+          "topic": "addiction",
+          "sourceId": "program-con-safe-streets",
           "speaker": "Conservative Party of British Columbia",
-          "text": "Conservatives will do what it takes to get BC moving again, in every part of the province.",
-          "textSha256": "3d4c28aacfee639ee261c44a8fb51283bac9500173f801b6820d610a83daf269"
+          "text": "Introduce compassionate intervention so that people whose severe addiction, mental illness or brain injury are taken off the street and into care.",
+          "textSha256": "f3b09878e403c4db4f4d56fbf62d038af931a0441323fe2dd25b494c24b49571"
         },
         {
-          "id": "platform-reconciliation",
+          "id": "end-safe-supply-2026",
+          "topic": "addiction",
+          "sourceId": "program-con-safe-streets",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "End the NDP’s failed “safe supply” experiment and expand access to naloxone.",
+          "textSha256": "ee03b06f388a42e5c56187ddabf3448b6cd02f28b9d1bd5942e3d3dfb23a17de"
+        },
+        {
+          "id": "repeal-sogi-2026",
+          "topic": "education",
+          "sourceId": "program-con-safe-schools",
+          "speaker": "Lorne Doerkson",
+          "text": "I firmly believe that we have to repeal SOGI. Obviously we have to provide a safe place for our kids.",
+          "textSha256": "6bb2c06697ed7232eb7ea2d58edd92636b95633b65209bdc568674a07e1a4749"
+        },
+        {
+          "id": "insurance-choice-2026",
+          "topic": "affordability",
+          "sourceId": "program-con-insurance",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "Expand consumer choice where competition can improve price and service while preserving the right to choose ICBC as a public insurance option with clear service standards and public reporting.",
+          "textSha256": "21f6ce8e8435407ae4768489e8406aec0574e3ae4b3cdbc16b97a3b3272c3d1e"
+        },
+        {
+          "id": "injury-compensation-2026",
+          "topic": "affordability",
+          "sourceId": "program-con-insurance",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "We will provide more choice for consumers, meaningful rights to full compensation for people seriously injured by reckless drivers, and protect timely and adequate treatment and rehabilitation.",
+          "textSha256": "685e720898748beeed746f7e06948931fa2dc070834f67ad903658b2a2292bee"
+        },
+        {
+          "id": "repeal-dripa-2026",
           "topic": "indigenous",
-          "sourceId": "program-con-platform",
-          "locator": "Economic Reconciliation, Healthy Communities",
-          "speaker": "Conservative Party of British Columbia",
-          "text": "A plan for real partnerships, economic development, and respect for Indigenous governance.",
-          "textSha256": "97cbc87371a08ac98f1fcd2fc01bbb1ee569d4953ba5a80d591e29d29785f54a"
+          "sourceId": "program-con-dripa",
+          "speaker": "Lorne Doerkson",
+          "text": "[DRIPA] has not created the security for British Columbians that it was meant to achieve. We are in court everywhere in this province. So the reality is it (DRIPA) has to be repealed",
+          "textSha256": "334050c63f739942eaa9fa4ee2dde2e8c265105c593187615715f21243f4a47f"
         },
         {
-          "id": "platform-food",
+          "id": "investment-pst-2026",
           "topic": "economy",
-          "sourceId": "program-con-platform",
-          "locator": "Grown in BC",
+          "sourceId": "program-con-economy",
           "speaker": "Conservative Party of British Columbia",
-          "text": "A plan to double our food production, strengthen our economic base, and establish food security for BC.",
-          "textSha256": "bbea9cf3c0565771d9c8bd792cda35b6bc866c417dccf2eca1603e98b88f9f10"
+          "text": "Scrap the PST on immediate investment machinery, equipment and business software for three years to get businesses investing in BC now.",
+          "textSha256": "c6a67ea4425931239367336f196d7f7c220d6cd43745316d6d67d21c5e171dad"
+        },
+        {
+          "id": "red-tape-law-2026",
+          "topic": "economy",
+          "sourceId": "program-con-economy",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "Introduce a “one-in, two-out” red-tape reduction law.",
+          "textSha256": "ff36c042e135f672cfd65c826381e95add68531590973884b62d0fd89c31760b"
+        },
+        {
+          "id": "tax-exemption-2026",
+          "topic": "affordability",
+          "sourceId": "program-con-tax-cut",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "A Conservative government will raise BC’s basic personal exemption from $13,216 to $32,000, making it the most generous in Canada.",
+          "textSha256": "0b92dc9a976909bcdc0ca2cd29fc3cb953b5d55d9f65a9f8b60e911a5330070d"
+        },
+        {
+          "id": "portable-care-funding-2026",
+          "topic": "health",
+          "sourceId": "program-con-long-term-care",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "Seniors waiting for a bed will also receive portable public funding, giving them and their families a real choice among qualified providers, including non-government options with strong performance safeguards.",
+          "textSha256": "948b745c7095d178a1a89636009d6aef04260bfff196633ed11c853ecaac18ef"
+        },
+        {
+          "id": "seniors-deferment-2026",
+          "topic": "affordability",
+          "sourceId": "program-con-seniors-homes",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "A Conservative Party of BC government will reverse the NDP’s changes to the Property Tax Deferment Program, so seniors are not taxed out of their homes and can remain in the communities they helped build.",
+          "textSha256": "d6a110f674c60a7cd3aff31fd2b189e79aedf32d3f63f087e04464a47741ed93"
+        },
+        {
+          "id": "first-job-credit-2026",
+          "topic": "economy",
+          "sourceId": "program-con-young-people",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "Their Youth Jobs Plan includes a First Job Tax Credit, which rewards businesses that hire young British Columbians for their first job.",
+          "textSha256": "667afac481b50ad01216709f25663bae5cd04d40360fdf52355b58387d0e3ef4"
+        },
+        {
+          "id": "ferries-charter-2026",
+          "topic": "transport",
+          "sourceId": "program-con-ferries",
+          "speaker": "Conservative Party of British Columbia",
+          "text": "A Conservative government will establish a BC Ferries Charter, setting clear standards for reliability, on-time performance, capacity, affordability and customer service.",
+          "textSha256": "5b21a19574cea246a12d94bbdd01bbf87269ea6d55a4c95e9a92e65f81d58755"
         }
       ]
     },
@@ -1428,7 +1993,18 @@
         "program-green-ai",
         "program-green-coast",
         "program-green-seniors",
-        "program-green-forestry"
+        "program-green-forestry",
+        "program-green-childcare-brief",
+        "program-green-renters-brief",
+        "program-green-drugs-brief",
+        "program-green-fair-share",
+        "program-green-health-centres",
+        "program-green-economy",
+        "program-green-inclusive-education",
+        "program-green-transit",
+        "program-green-support-needs",
+        "program-green-tourism",
+        "program-green-royalties"
       ],
       "quotes": [
         {
@@ -1606,14 +2182,15 @@
           "id": "childcare-freeze-2026",
           "topic": "education",
           "sourceId": "program-green-childcare",
-          "speaker": "BC Green Party",
-          "text": "Commit to making quality $10-a-day childcare available to families all across British Columbia by lifting the freeze on new $10-a-day enrolments introduced in Budget 2026, and use it as the foundation to later implement universal childcare coverage by 2031.",
-          "textSha256": "09ee6bf37352147090db845b44582d6314cb93afe1fadc6d29e080b3ca2d6059"
+          "speaker": "Emily Lowan",
+          "text": "BC Greens will lift the freeze immediately, and make it free by 2031.",
+          "textSha256": "126ea3d92e876567f6b510ea70848773fa97f5e64ead92618980b9d04e501397"
         },
         {
           "id": "ece-wage-grid-2026",
           "topic": "education",
-          "sourceId": "program-green-childcare",
+          "sourceId": "program-green-childcare-brief",
+          "locator": "PDF p. 2",
           "speaker": "BC Green Party",
           "text": "Implement an early childhood educator wage grid, and reach $35-45 per hour by 2028 based on qualifications and years of experience.",
           "textSha256": "e479818e59888caaaff25603c8ee207c0244fb2e1ea04c358f1c17962fd70f46"
@@ -1621,7 +2198,8 @@
         {
           "id": "vacancy-control-2026",
           "topic": "housing",
-          "sourceId": "program-green-renters",
+          "sourceId": "program-green-renters-brief",
+          "locator": "PDF p. 2",
           "speaker": "BC Green Party",
           "text": "Vacancy control ties increases in rent to a unit, rather than a tenant, reducing the incentive for landlords to evict tenants without fault.",
           "textSha256": "32bd956f3bb205e1d02b64fb6c7c31f33201d7e05db7ba64b543dacd33b5a3c3"
@@ -1629,7 +2207,8 @@
         {
           "id": "pet-bans-2026",
           "topic": "housing",
-          "sourceId": "program-green-renters",
+          "sourceId": "program-green-renters-brief",
+          "locator": "PDF p. 2",
           "speaker": "BC Green Party",
           "text": "Amend the Residential Tenancy Act to prohibit blanket no pets clauses in rental contracts.",
           "textSha256": "9f1d52b0290dde7f6293a78e1c36543737cb93321251c88d61735fc22523cd14"
@@ -1637,7 +2216,8 @@
         {
           "id": "indigenous-housing-2026",
           "topic": "indigenous",
-          "sourceId": "program-green-renters",
+          "sourceId": "program-green-renters-brief",
+          "locator": "PDF p. 2",
           "speaker": "BC Green Party",
           "text": "Provide adequate and equitable funding for Indigenous-led Complex Care Housing, designed and determined by Indigenous communities.",
           "textSha256": "5bef9b44330fc4f00e8a36dc8cb1af9b0c2b587fcf5fd63e610316a2dff3f9f3"
@@ -1669,7 +2249,8 @@
         {
           "id": "safe-supply-2026",
           "topic": "addiction",
-          "sourceId": "program-green-drugs",
+          "sourceId": "program-green-drugs-brief",
+          "locator": "PDF p. 2",
           "speaker": "BC Green Party",
           "text": "Provide regulated, pharmaceutical alternatives to the illicit drug supply to reduce fatalities associated with substance use.",
           "textSha256": "fc9fa19a648a67e5bc979933e3e1fc99876921f5cee6125eb29ede7acfcfd31f"
@@ -1677,7 +2258,8 @@
         {
           "id": "decriminalisation-2026",
           "topic": "addiction",
-          "sourceId": "program-green-drugs",
+          "sourceId": "program-green-drugs-brief",
+          "locator": "PDF p. 2",
           "speaker": "BC Green Party",
           "text": "Treat drug use as a health and social issue, not a criminal one, by decriminalising possession of drugs for personal use.",
           "textSha256": "c7d3e00bb59eb1ea1dfc5df9b922cf921135ad44e6268d47765f773a2f3257f3"
@@ -1755,6 +2337,102 @@
           "speaker": "BC Green Party",
           "text": "End raw-log exports and close loopholes that allow minimally processed or rough-sawn wood to leave British Columbia without meaningful processing.",
           "textSha256": "6593361d4b84e6db5d568ce22083f5210406f5d96ea4a581e66103bafa567478"
+        },
+        {
+          "id": "wealth-tax-once-2026",
+          "topic": "affordability",
+          "sourceId": "program-green-fair-share",
+          "speaker": "BC Green Party",
+          "text": "Introduce a one-time Fair Share tax on extreme wealth, beginning at 5% on net wealth above $50 million, 10% above $100 million, and 20% above $1 billion.",
+          "textSha256": "3f82688409a1ab66384464b57644057d12c626c6cf46382f79227dfe9f793329"
+        },
+        {
+          "id": "wealth-tax-annual-2026",
+          "topic": "affordability",
+          "sourceId": "program-green-fair-share",
+          "speaker": "BC Green Party",
+          "text": "Establish an ongoing annual tax on extreme wealth, beginning 2% on net wealth above $50 million, 3% above $100 million, and 5% above $1 billion.",
+          "textSha256": "7ededb6e4a6abe04df4f1decfc953fbd02d1b5b9801f66cd780c3b63543b2ca2"
+        },
+        {
+          "id": "nurse-ratios-2026",
+          "topic": "health",
+          "sourceId": "program-green-health-centres",
+          "speaker": "BC Green Party",
+          "text": "Increased funding for nurses in the public system to support safe nurse-to-patient ratios and end reliance on private agency nurses.",
+          "textSha256": "0d13d42502f6fb4b14fb1af8810037df4908d0f1da4a0dc1e84de9be24539dfd"
+        },
+        {
+          "id": "small-business-2026",
+          "topic": "economy",
+          "sourceId": "program-green-economy",
+          "speaker": "BC Green Party",
+          "text": "The BC Greens will make government easier for small businesses to navigate, through a single front door for approvals, simpler forms, and clearer timelines.",
+          "textSha256": "d11cf2c5ad9e0f20c668d012753e30783388f1cd76af7cc53cad683ef959d0f8"
+        },
+        {
+          "id": "inclusive-education-2026",
+          "topic": "education",
+          "sourceId": "program-green-inclusive-education",
+          "speaker": "BC Green Party",
+          "text": "Close the inclusive education funding gap with a stable, needs-based funding model for school districts.",
+          "textSha256": "41d9a4336ff6a2ea66425f49f7552dd23e2621544fe7c98b126dcb2b81195899"
+        },
+        {
+          "id": "school-food-2026",
+          "topic": "education",
+          "sourceId": "program-green-inclusive-education",
+          "speaker": "BC Green Party",
+          "text": "Deliver a universal school food program and a school supplies program, so every student gets fed and has what they need to learn.",
+          "textSha256": "faa43df322ea247c6b0d5a874afd67a66ff85f058b72a2f09522df6a6ce1ff78"
+        },
+        {
+          "id": "free-transit-phasing-2026",
+          "topic": "transport",
+          "sourceId": "program-green-transit",
+          "speaker": "BC Green Party",
+          "text": "We will approach free transit in a phased approach, starting with youth aged under 25 and for seniors 65 and over.",
+          "textSha256": "0048360a625b02fb096ebaa20110a0f4936837a04737fbba792823cdc727fd21"
+        },
+        {
+          "id": "island-rail-2026",
+          "topic": "transport",
+          "sourceId": "program-green-transit",
+          "speaker": "BC Green Party",
+          "text": "Work with First Nations and the Island Corridor Foundation to determine next steps for Vancouver Island rail.",
+          "textSha256": "80bab51c40ce8eb00f93fdfbab2af3b5d1eab867d8e26ee50f9c5a9a5e8bae67"
+        },
+        {
+          "id": "disability-strategy-2026",
+          "topic": "rights",
+          "sourceId": "program-green-support-needs",
+          "speaker": "BC Green Party",
+          "text": "Convene a working group consisting of a broad range of disability community representation to co-design a provincial disability strategy that supports ALL families within the disability community.",
+          "textSha256": "901190c62caf927eb7400d55fdd91e2386328a4c543e6e7d4e2f51f3366d6291"
+        },
+        {
+          "id": "parks-funding-2026",
+          "topic": "economy",
+          "sourceId": "program-green-tourism",
+          "speaker": "BC Green Party",
+          "text": "Increase annual funding for BC Parks and Recreation Sites and Trails BC by 50 per cent, from $76 million to $114 million, to expand year-round access, improve maintenance and visitor services, and better manage growing use.",
+          "textSha256": "f55a96eefe2bb3aa0b8a1fa8c8b0e51b01ca62bb3edc7db928a855c4f13c62c5"
+        },
+        {
+          "id": "oil-gas-royalties-2026",
+          "topic": "economy",
+          "sourceId": "program-green-royalties",
+          "speaker": "BC Green Party",
+          "text": "Reform BC’s oil and gas royalty framework to achieve its original objective of collecting 50 per cent of net profits after production costs, with clear rules for allowable costs and public reporting on the royalties collected.",
+          "textSha256": "d359845158faea0956f5e8d295618f369180e1acef67d60c55b36f8496f9a62f"
+        },
+        {
+          "id": "emissions-cap-2026",
+          "topic": "environment",
+          "sourceId": "program-green-royalties",
+          "speaker": "BC Green Party",
+          "text": "Require the oil and gas sector to reduce emissions in line with BC’s climate targets, with a binding sectoral emissions cap if existing regulations and industrial carbon pricing do not deliver the required reductions.",
+          "textSha256": "66a83a2922a02261f0c443f05b8676ec190cf5281424e6d381b2ab30957bbd30"
         }
       ]
     },
@@ -1903,7 +2581,9 @@
       "id": "centre",
       "sourceIds": [
         "program-centre-vision",
-        "program-centre-policy"
+        "program-centre-policy",
+        "program-centre-platform",
+        "program-centre-platform-pdf"
       ],
       "quotes": [
         {
@@ -2004,6 +2684,149 @@
           "text": "We believe equity is a right, not a privilege.",
           "speaker": "CentreBC",
           "textSha256": "fd274f490e19e287ec9e2b7438e8e3b78cc709ad30f232abd559f6c50ef39d71"
+        },
+        {
+          "id": "income-tax-2026",
+          "topic": "affordability",
+          "sourceId": "program-centre-platform",
+          "speaker": "CentreBC",
+          "text": "Lower the first income tax bracket rate from 5.6% to 5.06% on January 1, 2027, saving a two-income family about $540 a year.",
+          "textSha256": "e10764e423f088a31f65edb818973f8098e5251a71e27c67e022151e970f5964"
+        },
+        {
+          "id": "renters-credit-2026",
+          "topic": "affordability",
+          "sourceId": "program-centre-platform",
+          "speaker": "CentreBC",
+          "text": "Raise the renter’s tax credit from $400 to $600 a year.",
+          "textSha256": "8d26523629eec3af017bb120cad8dbccc5d8f72af6be9e0a22aeed94bc16ba38"
+        },
+        {
+          "id": "childcare-2026",
+          "topic": "education",
+          "sourceId": "program-centre-platform",
+          "speaker": "CentreBC",
+          "text": "Create 20,000 new $10-a-day childcare spaces by 2030, starting in communities with the longest waitlists.",
+          "textSha256": "3457bf2721ba541049cf6eaea6af7566a07a3280eff26ffe139b656f8fb3a7fe"
+        },
+        {
+          "id": "family-doctor-2026",
+          "topic": "health",
+          "sourceId": "program-centre-platform",
+          "speaker": "CentreBC",
+          "text": "By the end of 2031, provide a family doctor or nurse practitioner team for everyone who wants one. From 2029, no one waits more than 12 months.",
+          "textSha256": "102054e64c646ccee605e5e0b89ed445fbc835c087a135985251bacf9686dde0"
+        },
+        {
+          "id": "rcmp-2026",
+          "topic": "justice",
+          "sourceId": "program-centre-platform",
+          "speaker": "CentreBC",
+          "text": "Hire 100 additional provincial RCMP officers a year for five years and expand BC-based police training.",
+          "textSha256": "19b3a8915071daf90dddbe8d56502ee6767654b56e8653e660f93edc79fd702b"
+        },
+        {
+          "id": "climate-targets-2026",
+          "topic": "environment",
+          "sourceId": "program-centre-platform",
+          "speaker": "CentreBC",
+          "text": "Set a 2030 milestone of emissions 20% below 2007, maintain the 2040 and 2050 targets, and establish an independent Climate Accountability Office.",
+          "textSha256": "199e41ef7fadca0d0d329eb2091da50341364efed41415273ff761650c204c83"
+        },
+        {
+          "id": "budget-officer-2026",
+          "topic": "governance",
+          "sourceId": "program-centre-platform",
+          "speaker": "CentreBC",
+          "text": "Create an Independent Budget Officer reporting to the legislature and put the path to a balanced budget by 2034/35 into law.",
+          "textSha256": "6bf5c96390d0a62aed78c9195c18b01b7a15a146863487ba9d0aafb0da14c6df"
+        },
+        {
+          "id": "information-requests-2026",
+          "topic": "governance",
+          "sourceId": "program-centre-platform",
+          "speaker": "CentreBC",
+          "text": "Scrap the $10 request fee on day one, clear the overdue backlog by 2028, and answer 90% of requests on time within two years.",
+          "textSha256": "f6bc70b6acb80d4af91f788353b994ba4be8736a302e97b31c84bf86a08f2e4e"
+        },
+        {
+          "id": "trades-exports-2026",
+          "topic": "economy",
+          "sourceId": "program-centre-platform",
+          "speaker": "CentreBC",
+          "text": "Invest an additional $60 million a year in skilled trades training and double BC’s exports outside the United States by 2033.",
+          "textSha256": "acbf462eb43b1ee025a406598a74837b8a2ecbb22e6cf7ab80c33a0ef3c15421"
+        },
+        {
+          "id": "approvals-2026",
+          "topic": "housing",
+          "sourceId": "program-centre-platform-pdf",
+          "locator": "PDF p. 7, Economy & Affordability",
+          "speaker": "CentreBC",
+          "text": "By January 1, 2028, we will set a provincial standard of 6 months for rezonings and 8 weeks for building permits, with one set of rules across municipalities.",
+          "textSha256": "eab063b9001a4342ef18f4d61e8bf11fa04f5a451f7f371c1769102c0ad2fad7"
+        },
+        {
+          "id": "bc-builds-2026",
+          "topic": "housing",
+          "sourceId": "program-centre-platform-pdf",
+          "locator": "PDF p. 7, Economy & Affordability",
+          "speaker": "CentreBC",
+          "text": "We will double BC Builds to 20,000 homes that rent or sell below market by 2031.",
+          "textSha256": "fcd12e31f53e53189a966346aa8c9606d32edf4b2cba3c48a8d41355b61d2675"
+        },
+        {
+          "id": "commuter-credit-2026",
+          "topic": "transport",
+          "sourceId": "program-centre-platform-pdf",
+          "locator": "PDF p. 11, Economy & Affordability",
+          "speaker": "CentreBC",
+          "text": "We will create a BC Commuter Credit: 15% back on monthly and annual transit passes and BC Ferries multi-trip fares.",
+          "textSha256": "c3c5f319ad66bdb8cb0f1dd7a8041b606b6e3ed72ef40f50da56af41f62dcee1"
+        },
+        {
+          "id": "caregiver-benefit-2026",
+          "topic": "rights",
+          "sourceId": "program-centre-platform",
+          "speaker": "CentreBC",
+          "text": "Create a $400 monthly benefit for about 9,000 eligible family caregivers of high-need people with low or modest incomes.",
+          "textSha256": "078273a8bdd1816b8b33e43bd8a52e321b7a0f578a66cf9ef8cbeb8565e41ee9"
+        },
+        {
+          "id": "detox-beds-2026",
+          "topic": "addiction",
+          "sourceId": "program-centre-platform-pdf",
+          "locator": "PDF p. 18, Health Care",
+          "speaker": "CentreBC",
+          "text": "By 2030, we will add 150 more detox beds and 500 more treatment and recovery beds, opened as staff are hired.",
+          "textSha256": "ccb3e90c32cc653a84405927a75e26aef4a33f50c07fb90cfac32f514e2b0155"
+        },
+        {
+          "id": "treatment-waits-2026",
+          "topic": "addiction",
+          "sourceId": "program-centre-platform-pdf",
+          "locator": "PDF p. 18, Health Care",
+          "speaker": "CentreBC",
+          "text": "Urgent cases will get same-day detox by 2028. By 2030, people will get treatment within 14 days, linked to recovery housing.",
+          "textSha256": "ab381629b637b0b285b472af8faeda6fc289eec7ca4fd131d3af91cfa04c051f"
+        },
+        {
+          "id": "school-seats-2026",
+          "topic": "education",
+          "sourceId": "program-centre-platform-pdf",
+          "locator": "PDF p. 21, Education",
+          "speaker": "CentreBC",
+          "text": "We will open 25,000 new school seats by 2031, starting in the fastest-growing districts and those with the most portables, so more students learn in permanent classrooms.",
+          "textSha256": "c7d1800512ea49fb67583d5bcd63f7b912f8e1642e712068ab56813f4090ff1a"
+        },
+        {
+          "id": "repeal-dripa-2026",
+          "topic": "indigenous",
+          "sourceId": "program-centre-platform-pdf",
+          "locator": "PDF p. 36, Good Government",
+          "speaker": "CentreBC",
+          "text": "In our first session, one bill will repeal DRIPA (BC’s Declaration on the Rights of Indigenous Peoples Act) and section 8.1 of the Interpretation Act, and replace them with a new law built on negotiated treaties.",
+          "textSha256": "ecf181f884bc2ed9d3da6d304ebdc60306537f564531c8a086fd063c8aa6a71f"
         }
       ]
     },
@@ -2260,54 +3083,54 @@
           "id": "free-votes",
           "topic": "governance",
           "sourceId": "program-heritage-policy-pdf",
-          "locator": "PDF p. 4, Topic I, clause 4.0",
-          "text": "All members of the BC Legislature will be free to vote, independently of their political party on all bills introduced in the Legislature.",
+          "locator": "PDF p. 3, Topic I, clause 4.0",
           "speaker": "Christian Heritage Party of BC",
+          "text": "All members of the BC Legislature will be free to vote, independently of their political party on all bills introduced in the Legislature.",
           "textSha256": "0918afe97ace5c055168ff751e113904e1176108d71c6fccc622d3b89d87082e"
         },
         {
           "id": "tax-referendum",
           "topic": "affordability",
           "sourceId": "program-heritage-policy-pdf",
-          "locator": "PDF p. 8, Topic II, clause 10.0",
-          "text": "hold a referendum to obtain permission from the taxpayers before introducing any new taxes or appreciably increasing any existing taxes.",
+          "locator": "PDF p. 7, Topic II, clause 10.0",
           "speaker": "Christian Heritage Party of BC",
+          "text": "hold a referendum to obtain permission from the taxpayers before introducing any new taxes or appreciably increasing any existing taxes.",
           "textSha256": "b713d5c72f265cecf691dd894b44fdaf3f1e060b2f37abc50f5e98f288d4cd82"
         },
         {
           "id": "business-regulation",
           "topic": "economy",
           "sourceId": "program-heritage-policy-pdf",
-          "locator": "PDF p. 7, Topic II, clause 2.0",
-          "text": "promote job creation by removing unnecessary regulations on small and large businesses.",
+          "locator": "PDF p. 6, Topic II, clause 2.0",
           "speaker": "Christian Heritage Party of BC",
+          "text": "promote job creation by removing unnecessary regulations on small and large businesses.",
           "textSha256": "6f9145de5f52b859b667b98bc2a19f7aa03463bc047d3e02414ce60fde32cf76"
         },
         {
           "id": "clean-fuels",
           "topic": "environment",
           "sourceId": "program-heritage-policy-pdf",
-          "locator": "PDF p. 12, Topic V, interim item 3",
-          "text": "provide tax credits for research in clean burning fuels for commercial transportation",
+          "locator": "PDF p. 11, Topic V, interim item 3",
           "speaker": "Christian Heritage Party of BC",
+          "text": "provide tax credits for research in clean burning fuels for commercial transportation",
           "textSha256": "e487c983026efb6f246e4153797d7f83c0f806849d745cd5a5ad62e05ddb04ad"
         },
         {
           "id": "mass-transit",
           "topic": "transport",
           "sourceId": "program-heritage-policy-pdf",
-          "locator": "PDF p. 12, Topic V, interim item 1",
-          "text": "expand and improve mass transit facilities where economically feasible",
+          "locator": "PDF p. 11, Topic V, interim item 1",
           "speaker": "Christian Heritage Party of BC",
+          "text": "expand and improve mass transit facilities where economically feasible",
           "textSha256": "42638c9d699a3884b8e2964b81661aba4ddf554c0592095ea29987f22790ef39"
         },
         {
           "id": "community-care",
           "topic": "health",
           "sourceId": "program-heritage-policy-pdf",
-          "locator": "PDF p. 14, Topic VII, clause 6",
-          "text": "We will open more community care facilities in rural British Columbia, in order to take pressure off of our hospitals in those communities.",
+          "locator": "PDF p. 13, Topic VII, clause 6",
           "speaker": "Christian Heritage Party of BC",
+          "text": "We will open more community care facilities in rural British Columbia, in order to take pressure off of our hospitals in those communities.",
           "textSha256": "838280ff19dc1c9905a4c88ec12f7e8270958ba27f53191d95907d3cabae6d89"
         },
         {
@@ -2315,8 +3138,8 @@
           "topic": "education",
           "sourceId": "program-heritage-policy-pdf",
           "locator": "PDF p. 8, Topic III, clause 1.0",
-          "text": "Provincial funding allocated for the education of BC children in primary and secondary schools will “follow the student” and be directed to the school setting chosen by the parents.",
           "speaker": "Christian Heritage Party of BC",
+          "text": "Provincial funding allocated for the education of BC children in primary and secondary schools will “follow the student” and be directed to the school setting chosen by the parents.",
           "textSha256": "f9176e05490c4fc3768f31d548d794146225feefc71ab6d572254f1a075ea51a"
         },
         {
@@ -2324,17 +3147,17 @@
           "topic": "indigenous",
           "sourceId": "program-heritage-policy-pdf",
           "locator": "PDF p. 15, Topic VIII, clause 4.0",
-          "text": "A CHP-BC Government would encourage private ownership of all existing housing on reserve lands with full property rights recognized for current residents.",
           "speaker": "Christian Heritage Party of BC",
+          "text": "A CHP-BC Government would encourage private ownership of all existing housing on reserve lands with full property rights recognized for current residents.",
           "textSha256": "b79305ed851621dacfa9bc93737e5122319f86cb2dc1f9bfe0100ee65f0455d8"
         },
         {
           "id": "tribunal",
           "topic": "justice",
           "sourceId": "program-heritage-policy-pdf",
-          "locator": "PDF p. 20, Topic XIII",
-          "text": "A CHP-BC Government will work to dismantle the Human Rights Tribunal and repeal the enabling legislation which supports it.",
+          "locator": "PDF p. 19, Topic XIII",
           "speaker": "Christian Heritage Party of BC",
+          "text": "A CHP-BC Government will work to dismantle the Human Rights Tribunal and repeal the enabling legislation which supports it.",
           "textSha256": "4b0a7d5b15648f889abd1df406766cd169f154a3cb277651134beefa04274857"
         },
         {
@@ -2342,8 +3165,8 @@
           "topic": "rights",
           "sourceId": "program-heritage-policy-pdf",
           "locator": "PDF p. 8, Topic III, clause 1.0",
-          "text": "protect the right of parents to choose the best type of schooling for their children.",
           "speaker": "Christian Heritage Party of BC",
+          "text": "protect the right of parents to choose the best type of schooling for their children.",
           "textSha256": "2235bb563c77946b4723b547b65c0bc75bdfee04703594671954693b9f522404"
         },
         {
@@ -2535,8 +3358,8 @@
           "sourceId": "program-communist-platform",
           "locator": "HOUSING IS A HUMAN RIGHT, NOT A PROFIT OPPORTUNITY",
           "speaker": "Communist Party of BC",
-          "text": "Immediately establish vacancy controls which tie rents to the unit. Legislate to limit rents to 20% of a family’s income.",
-          "textSha256": "81f3641e91ff744e56cc61757447ef3700738d4d19fa42e156a7c164f70e9bbb"
+          "text": "Immediately establish vacancy controls which tie rents to the unit. Legislate to limit rents to 20% of household income.",
+          "textSha256": "c971e3af3e8bc6c930e46c4b33cda1ed7a78266c4f6f5ad484fd921a50d247e3"
         },
         {
           "id": "democracy",

@@ -18,7 +18,6 @@
     {"id":"legislature-members-43","group":"election","url":"https://api.lims.leg.bc.ca/graphql","path":"sources/election/legislature-members-43.json","requestBody":{"query":"query MemberRoster { allMemberParliaments(condition: {active: true, parliamentId: 43}) { nodes { id constituencyId memberByMemberId { firstName middleName lastName } partyByPartyId { abbreviation } constituencyByConstituencyId { name } parliamentByParliamentId { number endDate } } } }"}},
     {"id":"ndp-2024-profiles","group":"election","url":"https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2024&json=1","path":"sources/election/ndp-2024-profiles.html.txt"},
     {"id":"program-ndp-priorities","group":"programs","url":"https://www.bcndp.ca/action-for-you","path":"sources/programs/ndp-priorities.html.txt"},
-    {"id":"program-con-platform","group":"programs","url":"https://conservativebc.ca/our-platform/","path":"sources/programs/con-platform.html.txt"},
     {"id":"program-con-documents","group":"programs","url":"https://conservativebc.ca/official-documents/","path":"sources/programs/con-documents.html.txt"},
     {"id":"program-green-2026","group":"programs","url":"https://bcgreens.ca/emily-lowan-announces-election-plans/","path":"sources/programs/green-2026.html.txt"},
     {"id":"program-green-2024","group":"programs","url":"https://bcgreens.ca/2024-platform/","path":"sources/programs/green-2024.html.txt"},

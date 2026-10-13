@@ -1,9 +1,9 @@
 {
   "title": "BC Election Guide",
-  "snapshotDate": "2026-10-04",
+  "snapshotDate": "2026-10-13",
   "electionDate": "2026-10-24",
   "districtCount": 93,
-  "partyRegisterChecked": "2026-10-03",
+  "partyRegisterChecked": "2026-10-13",
   "sources": {
     "election": "https://elections.bc.ca/",
     "parties": "https://elections.bc.ca/docs/fin/Registered-Political-Parties-Information.pdf",
@@ -39,7 +39,7 @@
       "name": "OneBC",
       "ballot": "OneBC",
       "leader": "Dallas Brodie (interim)",
-      "color": "#8245bb"
+      "color": "#c5954a"
     },
     {
       "id": "centre",

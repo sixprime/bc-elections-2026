@@ -75,12 +75,16 @@ Portrait availability is not a condition for including a verified candidate.
 Party sources cannot establish an **accepted** nomination: that status requires
 the current Elections BC candidate list.
 
-The catalogue follows the final Elections BC list retrieved on October 4, 2026:
-355 accepted candidates in 93 ridings (NDP 92, Conservative 93, Green 73,
-CentreBC 35, OneBC 33, Libertarian 4, Communist 4, CHP 3, CanWest 2, Freedom 1,
-independent 7, unaffiliated 8). Two earlier party-announced records, Kim Lockhart
+The catalogue follows the updated final Elections BC list retrieved on October 13,
+2026: 355 accepted candidates in 93 ridings (NDP 92, Conservative 93, Green 73,
+CentreBC 35, OneBC 34, Libertarian 4, Communist 4, CHP 3, CanWest 2, Freedom 1,
+independent 7, unaffiliated 7). Two earlier party-announced records, Kim Lockhart
 (CentreBC) and Brent Chapman (OneBC), are not on the final ballot and are kept as
-`not-on-ballot`. Missing photos are explicitly marked rather than fabricated.
+`not-on-ballot`. Two candidates who withdrew after the deadline, Timothy Webster
+and Greg DePaco, are kept as `withdrawn`. Four candidates whom Elections BC lists
+as unaffiliated are shown as OneBC candidates at the site operator's direction,
+because OneBC's own candidate pages present them as its endorsed candidates.
+Missing photos are explicitly marked rather than fabricated.
 
 ```sh
 node tools/update-data.mjs fetch election
@@ -100,7 +104,10 @@ the candidate-list page, which states that it shows the final candidates; the
 `elections-bc-candidates-csv` download is a cross-check. The CSV is Windows-1252,
 not UTF-8, and also contains agent columns, so read only its candidate columns.
 The older `Candidate-Website-Report.PDF` still listed only 286 of the 355 final
-rows on October 4 and is no longer used. Before reconciling, align a party-announced
+rows on October 4 and is no longer used. On October 13 the CSV cross-check had
+353 rows: Clint Lambert (Nechako Lakes) and Alan Beesley (Vancouver-Langara)
+were still on the page but missing from the CSV, without any Elections BC notice,
+so the page was followed. Before reconciling, align a party-announced
 record's name with the ballot name only when the same party has that riding; keep
 its identifier so its portrait remains attached.
 
@@ -111,6 +118,32 @@ person. Elections BC overrides party status and affiliation. When importing a
 verified final list, the party feed is not needed, and other records become
 `not-on-ballot`. They remain historical records in the data but are excluded from
 candidate views. The command validates everything before saving the catalogue.
+
+A candidate may withdraw until 48 hours before advance voting. Elections BC then
+removes the name from its final list, but a name already printed stays on the
+ballot. Record such a candidate as `withdrawn`, not `not-on-ballot`: set
+`withdrawnOn` to the date the notice was accepted and point `statusSource` to
+the dated Elections BC notice, retrieved first with
+`source <id> <https-url> election`, with its SHA-256 in `statusSourceSha256`
+and `statusSourceType: elections-bc`. `check` requires a final list that no
+longer contains the candidate, an Elections BC notice other than the list page
+itself, and a withdrawal date between the nomination deadline and the record's
+`checkedAt` date; it verifies the cached notice whenever the record changes or
+with `--sources`. `refresh-candidates` keeps the `withdrawn` status. Withdrawn
+candidates are excluded from counts and the directory; their riding page shows
+a dated note that the name is still printed on the ballot, linked to the notice.
+
+When a party's own candidate page presents a candidate whom Elections BC lists
+as unaffiliated, the record may name that party in `partyId` while
+`ballotPartyId: unaffiliated` keeps the Elections BC listing. `partySource` must
+be the candidate's page on that party's verified website, retrieved with
+`source <id> <https-url> election` (later `fetch election` runs include it), with
+its SHA-256 in `partySourceSha256`. `check` allows this only for accepted
+candidates listed as unaffiliated and verifies the cached page whenever the
+record changes or with `--sources`. `refresh-candidates` keeps the party label
+while Elections BC still lists the candidate as unaffiliated and removes it once
+the ballot listing changes. Candidate cards and riding pages show that the
+ballot lists the candidate without a party affiliation.
 
 Other parties' records can be edited directly in
 [assets/manifest.json](assets/manifest.json) after checking their primary sources.
@@ -150,8 +183,8 @@ interpret, assess, judge or comment on a party's programme. Do not turn missing
 review data into claims about what a party has or has not proposed. Readers must
 be able to distinguish the original words from navigation and source metadata.
 
-The schema-v2 dataset has 14 party records, 194 selected excerpts and
-76 source records. It contains no policy summaries, assessments or commentary.
+The schema-v2 dataset has 14 party records, 244 selected excerpts and
+111 source records. It contains no policy summaries, assessments or commentary.
 Each excerpt appears inside visible quotation marks, with its speaker or
 publishing party, source title, publication date or year when recorded, and a
 link to the full original. The excerpts are not
@@ -159,10 +192,11 @@ presented as complete platforms. Entire copyrighted documents are linked, not
 republished.
 
 The Conservative record includes 12 exact excerpts (184 words combined) from its
-official Policy Declaration, adopted March 1, 2025. Its Our Platform page lists
-the party's 2026 plans with one-line summaries while the detailed plans are still
-marked coming soon; ten summaries are quoted, with each plan name as the locator.
-Coverage spans 12 topics.
+official Policy Declaration, adopted March 1, 2025, alongside its 2026 plan pages
+and campaign releases. Its earlier Our Platform page, which listed plan names
+with one-line summaries, returned HTTP 404 on October 13 after the party moved
+its plans to an Our Plan index; the ten summaries quoted from it were removed
+and the dead page is no longer a registered source. Coverage spans 12 topics.
 The former Other topics category is removed; its sole CanWest statement belongs
 to Economy & resources, with its wording and source unchanged.
 The 2025 document is not labelled as a newly
@@ -195,6 +229,21 @@ mission page, which its homepage links only through an image menu without text
 release and the Greens' October 4 forestry plan. CanWest's March 29 press release
 (`event.htm`) is written only in Chinese and is not quoted. The register's BC
 Party domain had no web host and the BC United site returned no content.
+
+The October 13 audit refreshed all 70 changed programme sources and confirmed
+each retained quotation in the current text. It added 36 sources: ten NDP
+releases from October 5-12, the Conservative Our Plan index with six plan pages
+and six releases, eight Green releases, three Green policy-brief PDFs, and
+CentreBC's 2026 platform page and 44-page PDF. The Greens' childcare, renters and
+toxic-drugs releases now link their briefs as PDFs instead of embedding them, so
+six excerpts moved to the PDFs with page locators, and the childcare-freeze
+excerpt was replaced by Emily Lowan's statement in the release. The CHP policy
+PDF moved to a new address; all ten excerpts are unchanged and their page
+locators follow the new file. The Communist housing excerpt follows the
+platform's revised wording. An NDP household-relief release surfaced by the
+archive was from September 29, 2024 and was not used. Statements already
+restated by a party's own plan summary, such as the Green assistance-rate and
+NDP 30-by-30 commitments, were not duplicated.
 
 Four party records still have no verified programme document: BC Party, BC United,
 B.C. Vision and Party of Citizens. NDP coverage comes from its official
@@ -299,8 +348,11 @@ stored under `data/`: keep their original and web files in the Git-ignored
 `private-images/` folder at the repository root, using the same relative paths,
 and keep their manifest records, hashes and source sidecars. `check` rejects a
 withheld image under `data/` and, when `private-images/` exists, verifies every
-private copy against its manifest hash. Publishing an image after permission
+private copy against its manifest hash. Publishing a withheld image later
 means moving its files back under `data/` and setting the flag to `true`.
+Since October 13, 2026, every recorded image is published by operator decision
+except one unverified B.C. Vision logo; written party permissions are recorded
+as reuse status `permission-granted`.
 
 `node tools/update-data.mjs compact-map` rounds only the simplified display map
 to five decimals, retaining all 93 features and 92,929 positions. The command

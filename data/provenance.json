@@ -3,91 +3,91 @@
     "angus-reid-feed": {
       "url": "https://angusreid.org/feed/",
       "finalUrl": "https://angusreid.org/feed/",
-      "retrievedAt": "2026-10-04T21:41:54.883Z",
-      "sha256": "a53ef221017c67d107c5d3b23b760bd1c2b4b71935327d549467dc0556d29c61",
+      "retrievedAt": "2026-10-13T09:18:52.598Z",
+      "sha256": "750615d9309b426868595dc911e954ddcdcd6596b363c31710b73b3e6ec8954e",
       "contentType": "application/rss+xml; charset=UTF-8"
     },
     "research-co-feed": {
       "url": "https://researchco.ca/feed/",
       "finalUrl": "https://researchco.ca/feed/",
-      "retrievedAt": "2026-10-04T21:41:54.968Z",
-      "sha256": "15f2d957e9535c4fb7516b2f12aa840b8ade8438a7ae7189efbfd7a2e9ed16ad",
+      "retrievedAt": "2026-10-13T09:18:52.673Z",
+      "sha256": "098f00f495cb22a1d897169b85b564ae55d72272cc7c7c57f6457243fc2c2dc9",
       "contentType": "application/rss+xml; charset=UTF-8"
     },
     "liaison-feed": {
       "url": "https://press.liaisonstrategies.ca/rss/",
       "finalUrl": "https://press.liaisonstrategies.ca/rss/",
-      "retrievedAt": "2026-10-04T21:41:55.258Z",
-      "sha256": "ea1fe196211babd45f40909d7a90d515e87883ccb1bd090ab14423a7e451591d",
+      "retrievedAt": "2026-10-13T09:18:52.751Z",
+      "sha256": "c7fd13d2c1f9c002777c6fc87f8d66517f50b71b53c7f7029e3ec20b81a5f56a",
       "contentType": "application/rss+xml; charset=utf-8"
     },
     "ari-2026-09-24": {
       "url": "https://angusreid.org/ballot-backlash-bc-conservatives-open-8-point-lead-after-snap-election-call-but-electorate-far-from-locked-in/",
       "finalUrl": "https://angusreid.org/ballot-backlash-bc-conservatives-open-8-point-lead-after-snap-election-call-but-electorate-far-from-locked-in/",
-      "retrievedAt": "2026-10-04T21:41:55.843Z",
-      "sha256": "16d54c65a406aece65cd2edd2d17ec3510df294c286d26031abde5ad5dd81128",
+      "retrievedAt": "2026-10-13T09:18:56.764Z",
+      "sha256": "eadec4885e44cf43850c846b0b54294c8894880f1ed929ee2d37b58c593d6cd5",
       "contentType": "text/html; charset=UTF-8"
     },
     "ari-2026-09-24-tables": {
       "url": "https://angusreid.org/wp-content/uploads/2026/09/2026.09.24_BC_Elxn_1_PR_tables.pdf",
       "finalUrl": "https://angusreid.org/wp-content/uploads/2026/09/2026.09.24_BC_Elxn_1_PR_tables.pdf",
-      "retrievedAt": "2026-10-04T21:41:55.873Z",
+      "retrievedAt": "2026-10-13T09:18:56.779Z",
       "sha256": "272e087ab81ea4c97747896976c228ded28fff7329f2fbe45426fa2a18312818",
       "contentType": "application/pdf"
     },
     "liaison-2026-09-23": {
       "url": "https://press.liaisonstrategies.ca/bc-ndp-leads-conservatives-41-to-36-as-election-begins/",
       "finalUrl": "https://press.liaisonstrategies.ca/bc-ndp-leads-conservatives-41-to-36-as-election-begins/",
-      "retrievedAt": "2026-10-04T21:41:55.881Z",
-      "sha256": "28a22066b7b6d82c60005a332e6977b42ffa3a5088f8336b873854600d28692e",
+      "retrievedAt": "2026-10-13T09:18:56.787Z",
+      "sha256": "7da85f8d21f92c88c0d32cc1b2d5be2c4b027f56d6ea46efd771180f211b3c65",
       "contentType": "text/html; charset=utf-8"
     },
     "ari-2026-09-17": {
       "url": "https://angusreid.org/election-speculation-bcndp-conservative-eby-klf/",
       "finalUrl": "https://angusreid.org/election-speculation-bcndp-conservative-eby-klf/",
-      "retrievedAt": "2026-10-04T21:41:56.885Z",
-      "sha256": "1d16410aacaf38c465997308ca35378bddcdb05f425716cb79f24ffb7949555c",
+      "retrievedAt": "2026-10-13T09:18:56.998Z",
+      "sha256": "53969c4c0de246a80931c6032633a2ea197aa11a6f697a081a11b87be1812ff2",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2026-08-18": {
       "url": "https://researchco.ca/2026/08/18/bcpoli-aug2026/",
       "finalUrl": "https://researchco.ca/2026/08/18/bcpoli-aug2026/",
-      "retrievedAt": "2026-10-04T21:41:56.907Z",
-      "sha256": "30e701a4175bd53a13968e024d347c017c092cbc3b5e7232ae8230ae8f2dd4c5",
+      "retrievedAt": "2026-10-13T09:18:57.264Z",
+      "sha256": "086a6f45a91523d089d93263db0207c6a39f192c7f48a8c1b0769bc57eff2260",
       "contentType": "text/html; charset=UTF-8"
     },
     "604-2026-08-11": {
       "url": "https://604polling.ca/",
       "finalUrl": "https://604polling.ca/",
-      "retrievedAt": "2026-10-04T21:41:57.278Z",
+      "retrievedAt": "2026-10-13T09:18:57.587Z",
       "sha256": "60b000ca58c1808de2477ae7896048e744c1f8540e1ab73605941afe1ed8e8d4",
       "contentType": "text/html"
     },
     "ari-2026-04-01-tables": {
       "url": "https://angusreid.org/wp-content/uploads/2026/03/2026.04.01_BC_tables.pdf",
       "finalUrl": "https://angusreid.org/wp-content/uploads/2026/03/2026.04.01_BC_tables.pdf",
-      "retrievedAt": "2026-10-04T21:41:58.491Z",
+      "retrievedAt": "2026-10-13T09:18:58.424Z",
       "sha256": "1f84901dbcab73a64554a8a2bd1ca5bf4a02e29514d4fc81e3396ca9dbb23774",
       "contentType": "application/pdf"
     },
     "ari-2026-05-05-tables": {
       "url": "https://angusreid.org/wp-content/uploads/2026/05/2026.05.05_BC_tables.pdf",
       "finalUrl": "https://angusreid.org/wp-content/uploads/2026/05/2026.05.05_BC_tables.pdf",
-      "retrievedAt": "2026-10-04T21:41:58.270Z",
+      "retrievedAt": "2026-10-13T09:18:58.207Z",
       "sha256": "2f0ed1453933e4a3801c026e87dc7c07e5a1bebaffb0660ebc910f375d688bd0",
       "contentType": "application/pdf"
     },
     "ari-2026-06-16-tables": {
       "url": "https://angusreid.org/wp-content/uploads/2026/06/2026.06.15_BC_release_tables.pdf",
       "finalUrl": "https://angusreid.org/wp-content/uploads/2026/06/2026.06.15_BC_release_tables.pdf",
-      "retrievedAt": "2026-10-04T21:41:57.547Z",
+      "retrievedAt": "2026-10-13T09:18:57.896Z",
       "sha256": "420c397a2a7dcbabea9bbdd810daca70ade0fb2ece79bd0e38a9fb6b401b4676",
       "contentType": "application/pdf"
     },
     "researchco-2026-06-08-tables": {
       "url": "https://researchco.ca/wp-content/uploads/2026/06/Tables_Politics__BC_08Jun2026.pdf",
       "finalUrl": "https://researchco.ca/wp-content/uploads/2026/06/Tables_Politics__BC_08Jun2026.pdf",
-      "retrievedAt": "2026-10-04T21:41:57.589Z",
+      "retrievedAt": "2026-10-13T09:18:57.927Z",
       "sha256": "af12e891b1298637c865bb23f81f2991b67b9bbdf9a7b2c4910593a69ab50d01",
       "contentType": "application/pdf"
     },
@@ -122,29 +122,29 @@
     "ari-2026-06-16": {
       "url": "https://angusreid.org/bc-politics-new-conservative-leader/",
       "finalUrl": "https://angusreid.org/bc-politics-new-conservative-leader/",
-      "retrievedAt": "2026-10-04T21:41:57.531Z",
-      "sha256": "6a3baea4305fa382119d30452d9b67f1de7083e30540d771645b14db3bf7b808",
+      "retrievedAt": "2026-10-13T09:18:57.882Z",
+      "sha256": "e392ac87f1cc2aba76ef7f8ecc6bb0f4f7036b80e70c0704b656f7c4043f6914",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2026-06-08": {
       "url": "https://researchco.ca/2026/06/08/bcpoli-june2026/",
       "finalUrl": "https://researchco.ca/2026/06/08/bcpoli-june2026/",
-      "retrievedAt": "2026-10-04T21:41:57.568Z",
-      "sha256": "cacca5e5e58d7aba23fba4f13c6729dcdf2b6259dc1263d933e43de2323dd434",
+      "retrievedAt": "2026-10-13T09:18:57.907Z",
+      "sha256": "a1473e8df6465ae75e06f6e614b2a755239957f6ad87b30377b9758cc491750f",
       "contentType": "text/html; charset=UTF-8"
     },
     "ari-2026-05-05": {
       "url": "https://angusreid.org/bc-ndp-eby-conservatives-dripa-undrip-reconciliation-property-rights-land-title/",
       "finalUrl": "https://angusreid.org/bc-ndp-eby-conservatives-dripa-undrip-reconciliation-property-rights-land-title/",
-      "retrievedAt": "2026-10-04T21:41:58.246Z",
-      "sha256": "84cd90ece3760d31b7855c3ed97423f92bf0d1dc2293a561e060effe0ec6754c",
+      "retrievedAt": "2026-10-13T09:18:58.190Z",
+      "sha256": "6d0e1d6ef908d026e1326012857137028c65d287d892047ceabb11dce9469ce9",
       "contentType": "text/html; charset=UTF-8"
     },
     "ari-2026-04-01": {
       "url": "https://angusreid.org/bc-eby-musqueam-cowichan-property-rights-conservative-leadership/",
       "finalUrl": "https://angusreid.org/bc-eby-musqueam-cowichan-property-rights-conservative-leadership/",
-      "retrievedAt": "2026-10-04T21:41:58.463Z",
-      "sha256": "9b4dab315d328898aba3a95fc5b81bfcd36c2307b93a03804fcb9b48d7f7ba55",
+      "retrievedAt": "2026-10-13T09:18:58.407Z",
+      "sha256": "819fab749d0cda6cfd0589e7dfbf5a4bf81289cf7ebf5b0d21ba9374cf57195c",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-bc-history": {
@@ -178,57 +178,57 @@
     "elections-bc-parties": {
       "url": "https://elections.bc.ca/docs/fin/Registered-Political-Parties-Information.pdf",
       "finalUrl": "https://elections.bc.ca/docs/fin/Registered-Political-Parties-Information.pdf",
-      "retrievedAt": "2026-10-04T21:31:40.674Z",
-      "sha256": "6d47260bb4e8f9bb6c2d3f78f693f597280084e98e258cc0949fed539d1fab10",
+      "retrievedAt": "2026-10-13T17:53:03.524Z",
+      "sha256": "91c2e672e4466b7fb51098aa97d56be29e60359893e34ae5e820d6b5d1a478db",
       "contentType": "application/pdf"
     },
     "elections-bc-candidates": {
       "url": "https://elections.bc.ca/2026-provincial-election/candidate-list/",
       "finalUrl": "https://elections.bc.ca/2026-provincial-election/candidate-list/",
-      "retrievedAt": "2026-10-04T21:37:46.567Z",
-      "sha256": "03f3becce78dc5b15317e70fb54d36f2a24c08817d75db8027a5e5de28bfa3d6",
+      "retrievedAt": "2026-10-13T17:53:03.718Z",
+      "sha256": "92c6fb3a8f8f11f82905f67b880027eda47e7ba6b697b7e4304e8ccd724bec37",
       "contentType": "text/html; charset=UTF-8"
     },
     "elections-bc-results-2024": {
       "url": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf",
       "finalUrl": "https://elections.bc.ca/docs/rpt/statement-of-votes-2024-provincial-election.pdf",
-      "retrievedAt": "2026-10-04T21:31:40.874Z",
+      "retrievedAt": "2026-10-13T17:53:03.802Z",
       "sha256": "a5fc8d619d7ef017d02ee0d19c94e82a39e4520d35d1ce7aa9221fa5522fe17f",
       "contentType": "application/pdf"
     },
     "ndp-candidates": {
       "url": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
       "finalUrl": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2026&json=1",
-      "retrievedAt": "2026-10-04T23:14:38.627Z",
-      "sha256": "dd33a84f2afa45ca338b5b62bac25b1f1f560503b7e85681f2b64a140f7d76d5",
+      "retrievedAt": "2026-10-13T17:53:04.095Z",
+      "sha256": "b9cbbabd8553647202fa4a7a842d54fb65007ca00a96e9735632d0c8bbd479fe",
       "contentType": "text/html; charset=UTF-8"
     },
     "conservative-candidates": {
       "url": "https://www.conservativebc.ca/our-team/",
       "finalUrl": "https://conservativebc.ca/our-team/",
-      "retrievedAt": "2026-10-04T21:31:42.153Z",
-      "sha256": "3ba1a5cafefc8dfb5907c5b3f47dccb95c2980ffebd14939e80f196bbdfbea5f",
+      "retrievedAt": "2026-10-13T17:53:04.835Z",
+      "sha256": "df4de90c4c82ed228e4ea60ad6144bc6f64e787de8c7afda3493e02a59baa433",
       "contentType": "text/html; charset=UTF-8"
     },
     "green-candidates": {
       "url": "https://bcgreens.ca/candidates-2026/",
       "finalUrl": "https://bcgreens.ca/candidates-2026/",
-      "retrievedAt": "2026-10-04T23:14:21.497Z",
-      "sha256": "3426b47df4ebab427832bba8b131eadf9b45b43cc996897d3b69de78ee989994",
+      "retrievedAt": "2026-10-13T17:53:05.035Z",
+      "sha256": "2c9a3a447d1155986bc973b5deaffff733b153ca348f8d9cfafb4ad86f2e2317",
       "contentType": "text/html; charset=UTF-8"
     },
     "centre-candidates": {
       "url": "https://www.centrebc.ca/our-team/",
       "finalUrl": "https://www.centrebc.ca/our-team/",
-      "retrievedAt": "2026-10-04T23:14:23.018Z",
-      "sha256": "080c2c1b6577d207dc8ed91e2377baacc57bbeb7aec1b0d8e3aacada7e9293e8",
+      "retrievedAt": "2026-10-13T17:53:05.252Z",
+      "sha256": "6c7e8fac48f69a68ff94ba0cc72e9ff2fc92dd4caaf06b63c6f3a6525cee4f0a",
       "contentType": "text/html; charset=UTF-8"
     },
     "onebc-candidates": {
       "url": "https://1bc.ca/candidates",
       "finalUrl": "https://1bc.ca/candidates",
-      "retrievedAt": "2026-10-04T23:14:23.398Z",
-      "sha256": "1c06ac2f43644eb83f39178f592e65dadac5128518a550e370d466b0754c93e8",
+      "retrievedAt": "2026-10-13T17:53:05.377Z",
+      "sha256": "2b1fb931df13deb02f2d4a1db1c166855db430adb3b80446278ad1782f6aa2d3",
       "contentType": "text/html"
     },
     "ndp-ndp-bowinn-ma-e52d5ffbed": {
@@ -339,7 +339,7 @@
     "legislature-members-43": {
       "url": "https://api.lims.leg.bc.ca/graphql",
       "finalUrl": "https://api.lims.leg.bc.ca/graphql",
-      "retrievedAt": "2026-10-04T21:31:43.430Z",
+      "retrievedAt": "2026-10-13T17:53:07.769Z",
       "sha256": "1c196b0585a872ad09027098c29ed3b78659d0ed26b48c38020e94fc9df41094",
       "contentType": "application/json; charset=utf-8",
       "method": "POST",
@@ -350,8 +350,8 @@
     "ndp-2024-profiles": {
       "url": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2024&json=1",
       "finalUrl": "https://www.bcndp.ca/team?action_handler=bcndp-2024/action--civic-profiles&action=action--civic-profiles--get&civic_tag=cand2024&json=1",
-      "retrievedAt": "2026-10-04T21:31:43.629Z",
-      "sha256": "dd69b512c80e2dde04f15aefc4b66880f4596b46e487385ca62ca9318987b755",
+      "retrievedAt": "2026-10-13T17:53:08.100Z",
+      "sha256": "0fcf35ccb56656ece451ddea0c79ea366e7091dde3cb2d60a4b418080c27f1da",
       "contentType": "text/html; charset=UTF-8"
     },
     "ndp-profiles-september-26": {
@@ -749,8 +749,8 @@
     "program-ndp-priorities": {
       "url": "https://www.bcndp.ca/action-for-you",
       "finalUrl": "https://www.bcndp.ca/action-for-you",
-      "retrievedAt": "2026-10-05T10:04:48.421Z",
-      "sha256": "c1b75802c8aa292286290126f3771718190668aec1dcbbc65a2218f363c83be3",
+      "retrievedAt": "2026-10-13T09:23:01.409Z",
+      "sha256": "aef0c55da8cfe817f9180a1d7f864cd154221237e3ef3011184cef412e360951",
       "contentType": "text/html; charset=utf-8"
     },
     "program-con-platform": {
@@ -763,148 +763,148 @@
     "program-con-documents": {
       "url": "https://conservativebc.ca/official-documents/",
       "finalUrl": "https://conservativebc.ca/official-documents/",
-      "retrievedAt": "2026-10-05T10:04:48.682Z",
-      "sha256": "a71923a1a65c15017c1ab004391bdd800dad46075405c14105393464b0e489d8",
+      "retrievedAt": "2026-10-13T09:23:02.204Z",
+      "sha256": "05698b61282e44a17011d8d4778902d29365f79320ec9826f0b817959daea11d",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-2026": {
       "url": "https://bcgreens.ca/emily-lowan-announces-election-plans/",
       "finalUrl": "https://bcgreens.ca/emily-lowan-announces-election-plans/",
-      "retrievedAt": "2026-10-05T10:04:48.794Z",
-      "sha256": "a997e0e6794a8cd725d9b9396fb1f6ba6161015e0ac2d5bb765fa3f0889fb3a9",
+      "retrievedAt": "2026-10-13T09:23:02.330Z",
+      "sha256": "d60e22734597f27ace195fb1f401d32d16ca9b2181a7fa8ff1243c196077604a",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-2024": {
       "url": "https://bcgreens.ca/2024-platform/",
       "finalUrl": "https://bcgreens.ca/2024-platform/",
-      "retrievedAt": "2026-10-05T10:04:48.848Z",
-      "sha256": "c8275196948cea6601c1a9a3f8cdb792880ac440b992ebeed352c80e1724a10a",
+      "retrievedAt": "2026-10-13T09:23:02.400Z",
+      "sha256": "3ce709af2d0ace88a514ccc816da64a4ac7bc7c643f86c765b8a788cc9aea496",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-2024-pdf": {
       "url": "https://bcgreens.ca/wp-content/uploads/2024/09/BCGreens-Platform-2024.pdf",
       "finalUrl": "https://bcgreens.ca/wp-content/uploads/2024/09/BCGreens-Platform-2024.pdf",
-      "retrievedAt": "2026-10-05T10:04:48.932Z",
+      "retrievedAt": "2026-10-13T09:23:02.488Z",
       "sha256": "20e4acd1d64be44f0ad86330c4ad56e132dc7014e8671934de44f1dcef83ce65",
       "contentType": "application/pdf"
     },
     "program-one-priorities": {
       "url": "https://1bc.ca/priorities",
       "finalUrl": "https://1bc.ca/priorities",
-      "retrievedAt": "2026-10-05T10:04:49.067Z",
-      "sha256": "01184369eecb10291bf7f52203acfc9fe1151c824ef49095e6e7088a0103ce6a",
+      "retrievedAt": "2026-10-13T09:23:02.602Z",
+      "sha256": "9f5fff58086d673c759d400ce219a36baa8ba9a67124f4f69c96cfbe1094cb77",
       "contentType": "text/html"
     },
     "program-centre-vision": {
       "url": "https://www.centrebc.ca/vision/",
       "finalUrl": "https://www.centrebc.ca/vision/",
-      "retrievedAt": "2026-10-05T10:04:49.583Z",
-      "sha256": "394ca2d26f7f512386ef794f2d7b83e07076ea6f2ff37cbcb9debca646e52aa7",
+      "retrievedAt": "2026-10-13T09:23:02.776Z",
+      "sha256": "9eacca0e15133c569b9657438dc15c2962b6f75237b62eecdfc4f616ec6035db",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-centre-policy": {
       "url": "https://www.centrebc.ca/our-policy/",
       "finalUrl": "https://www.centrebc.ca/our-policy/",
-      "retrievedAt": "2026-10-05T10:04:49.663Z",
-      "sha256": "cd2883e11f3f02af245d55504329906a084f50e060363cf04b009a1db493905f",
+      "retrievedAt": "2026-10-13T09:23:02.862Z",
+      "sha256": "b0fc8192e679eefb3ab640506c231cbc37feab705fa1399e337dd2666af78731",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-2024": {
       "url": "https://libertarian.bc.ca/category/platform/platform2024/",
       "finalUrl": "https://libertarian.bc.ca/category/platform/platform2024/",
-      "retrievedAt": "2026-10-05T10:04:50.017Z",
-      "sha256": "2f570573d43d35965828270371c49cdf19962c17d6f279038577b7f95e0bde07",
+      "retrievedAt": "2026-10-13T09:23:03.159Z",
+      "sha256": "110fb1bc1ad46b127333072cdd7b58a39185a70c3b841b8087f07e188fe52594",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-2024-2": {
       "url": "https://libertarian.bc.ca/category/platform/platform2024/page/2/",
       "finalUrl": "https://libertarian.bc.ca/category/platform/platform2024/page/2/",
-      "retrievedAt": "2026-10-05T10:04:50.130Z",
-      "sha256": "15433c1895649124ebbd7e00376e1338bd857439cbcb9ac944bbc09769d9d7ec",
+      "retrievedAt": "2026-10-13T09:23:03.289Z",
+      "sha256": "c103cde57a808b6e15768753e99ef92dc29fd3cbbe918366e4fe85847deb4155",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-2024-3": {
       "url": "https://libertarian.bc.ca/category/platform/platform2024/page/3/",
       "finalUrl": "https://libertarian.bc.ca/category/platform/platform2024/page/3/",
-      "retrievedAt": "2026-10-05T10:04:50.243Z",
-      "sha256": "e8433af283c733f9de0eb7c3b3e0a80ae8bde8ac7342d4013a129bd87177ab12",
+      "retrievedAt": "2026-10-13T09:23:03.417Z",
+      "sha256": "8f7876fed395d728041792b0eaa5747bffa60841e78b691f68ebbe4ebb583c7a",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-2024-4": {
       "url": "https://libertarian.bc.ca/category/platform/platform2024/page/4/",
       "finalUrl": "https://libertarian.bc.ca/category/platform/platform2024/page/4/",
-      "retrievedAt": "2026-10-05T10:04:50.367Z",
-      "sha256": "be1b8c0080adffd96000f414d2b057160dfa73ed1661e6be67ef4487ea858b69",
+      "retrievedAt": "2026-10-13T09:23:03.543Z",
+      "sha256": "6b3c2134abb209ca6973f33ad5d4ba664c05dbfa256a8eb945e5981529ec2a1a",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-heritage-platform": {
       "url": "https://www.chpbc.ca/",
       "finalUrl": "https://www.chpbc.ca/",
-      "retrievedAt": "2026-10-05T10:04:50.660Z",
-      "sha256": "7eec27af552d445b737da96095045a1742b7dc7b7e098d46462a50ced435dd90",
+      "retrievedAt": "2026-10-13T09:23:03.823Z",
+      "sha256": "80370f2ccef25487866a62d9bb33e153de58511749da323f903ae8f1c5792aac",
       "contentType": "text/html"
     },
     "program-communist-platform": {
       "url": "https://cpcbc.ca/our-platform/",
       "finalUrl": "https://cpcbc.ca/our-platform/",
-      "retrievedAt": "2026-10-05T10:04:51.491Z",
-      "sha256": "b32b4de50341c8282909d3dceab37ed61f3d844481ea2e9a9210fece07a5438a",
+      "retrievedAt": "2026-10-13T09:23:04.900Z",
+      "sha256": "581842fef88a0cd99e4b177c06133dbc5d839ce82c89080d069b7a27e05e6730",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-freedom-platform": {
       "url": "https://freedompartybc.ca/",
       "finalUrl": "https://freedompartybc.ca/",
-      "retrievedAt": "2026-10-05T10:04:53.359Z",
-      "sha256": "131f3fa1ad46ea7ee0ede57ba475bd8848277add103b82be16e77d21994e458d",
+      "retrievedAt": "2026-10-13T09:23:06.782Z",
+      "sha256": "fa37b98dc69a5f443f996585b821887cd3ee598cba6b513dd1369c62283e85bc",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-canwest-platform": {
       "url": "http://canwestparty.ca/",
       "finalUrl": "http://canwestparty.ca/",
-      "retrievedAt": "2026-10-05T10:04:53.440Z",
+      "retrievedAt": "2026-10-13T09:23:06.879Z",
       "sha256": "58d05d2396193e7b19037e1778074b523d663368aff633db106b4c36723d8079",
       "contentType": "text/html"
     },
     "program-libertarian-housing": {
       "url": "https://libertarian.bc.ca/2024/08/17/affordable-housing-2/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/affordable-housing-2/",
-      "retrievedAt": "2026-10-05T10:04:53.679Z",
-      "sha256": "056604c2cafe9a1da10997ad055dc4334d207fceb8b458574b7c2527731ad9f7",
+      "retrievedAt": "2026-10-13T09:23:07.132Z",
+      "sha256": "9b3fa75cf1d520af4894ec3da9ed1b8a54175d3b00d96ee5844f66083714e229",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-health": {
       "url": "https://libertarian.bc.ca/2024/08/17/healthcare-focused-on-patients/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/healthcare-focused-on-patients/",
-      "retrievedAt": "2026-10-05T10:04:53.792Z",
-      "sha256": "5e0ce4eff15d3b34a78bdf597a76545046b668f19dae8982d841d9e9a38bb998",
+      "retrievedAt": "2026-10-13T09:23:07.263Z",
+      "sha256": "d18a130103225a4f809ea686b10a393312564560c15f52b4d4d212e7292b644c",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-education": {
       "url": "https://libertarian.bc.ca/2024/08/17/education-2/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/education-2/",
-      "retrievedAt": "2026-10-05T10:04:53.904Z",
-      "sha256": "00c220e238f8883b69d64ccf2a628da990eb58105d5c1959fe30ee4522963a99",
+      "retrievedAt": "2026-10-13T09:23:07.378Z",
+      "sha256": "a533678135f1b86df770b43be3e153d14cfc65b8194ae054eed7428594f38f08",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-transport": {
       "url": "https://libertarian.bc.ca/2024/08/17/transit-and-transportation/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/transit-and-transportation/",
-      "retrievedAt": "2026-10-05T10:04:54.018Z",
-      "sha256": "727fa5ccd05516bf511038d9a7862f6ad47c05020e0f9a3fceff8a787121bef5",
+      "retrievedAt": "2026-10-13T09:23:07.493Z",
+      "sha256": "ca3bff735782f434a9f326876f187b14afcd44b1beaf464b3ffc370330269646",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-tax": {
       "url": "https://libertarian.bc.ca/2024/09/16/pst-lets-convert-it-to-a-value-added-tax-vat/",
       "finalUrl": "https://libertarian.bc.ca/2024/09/16/pst-lets-convert-it-to-a-value-added-tax-vat/",
-      "retrievedAt": "2026-10-05T10:04:54.130Z",
-      "sha256": "892c70e3359a6cfbdbbbfd564a3b8bdb37615f37902d0b3893e02178cc144dbf",
+      "retrievedAt": "2026-10-13T09:23:07.614Z",
+      "sha256": "bba83dc752a96b8fcff7b4579f63d64999ca7214b9d781e3690601d094140de3",
       "contentType": "text/html; charset=UTF-8"
     },
     "ndp-candidate-releases": {
       "url": "https://www.bcndp.ca/releases",
       "finalUrl": "https://www.bcndp.ca/releases",
-      "retrievedAt": "2026-10-04T21:31:41.783Z",
-      "sha256": "0c468c9b998a43d5a143557c8a0d31448f9aa7c93f287d277520a41b44e63b9f",
+      "retrievedAt": "2026-10-13T17:53:04.151Z",
+      "sha256": "a188944168ca531e51952234fda6e5639e188d9e9b954c55537cae42703db134",
       "contentType": "text/html; charset=utf-8"
     },
     "con-kevin-acton-portrait-35db0de3ea": {
@@ -1120,162 +1120,162 @@
     "program-con-policy-2025": {
       "url": "https://conservativebc.ca/wp-content/uploads/2025/07/CPBC_March_2025_Policy_Declaration.pdf",
       "finalUrl": "https://conservativebc.ca/wp-content/uploads/2025/07/CPBC_March_2025_Policy_Declaration.pdf",
-      "retrievedAt": "2026-10-05T10:04:53.514Z",
+      "retrievedAt": "2026-10-13T09:23:06.954Z",
       "sha256": "56845d3a503f9f6109135e04e65db41a95920eb0b5b9b20026876ab38e2cbadb",
       "contentType": "application/pdf"
     },
     "program-heritage-policies": {
       "url": "https://www.chpbc.ca/policies/",
       "finalUrl": "https://www.chpbc.ca/policies/",
-      "retrievedAt": "2026-10-05T10:04:54.419Z",
-      "sha256": "924c91843794bf0b23597f397d86efe3bbc395568047124d55def87d1fec7f5c",
+      "retrievedAt": "2026-10-13T09:23:07.893Z",
+      "sha256": "9469426889bdff047d18931b58e3e2624729b4c2466e9c64ce466fe0866f349f",
       "contentType": "text/html"
     },
     "program-heritage-policy-pdf": {
-      "url": "https://www.chpbc.ca/wp-content/uploads/2024/01/REVISE-Policies_CHP-BC_2023-10-21.pdf",
-      "finalUrl": "https://www.chpbc.ca/wp-content/uploads/2024/01/REVISE-Policies_CHP-BC_2023-10-21.pdf",
-      "retrievedAt": "2026-10-05T10:04:54.658Z",
-      "sha256": "7cffc96114409220bc6fe939460b79c1df93ed692c784a7098674ba030a08147",
+      "url": "https://www.chpbc.ca/wp-content/uploads/2026/10/REVISED-Policies_CHP-BC_2023-10-21.pdf",
+      "finalUrl": "https://www.chpbc.ca/wp-content/uploads/2026/10/REVISED-Policies_CHP-BC_2023-10-21.pdf",
+      "retrievedAt": "2026-10-13T09:30:19.307Z",
+      "sha256": "c490fb488373060f376b7f4b214199fb8960432b572bf43fbbd942ff3b726528",
       "contentType": "application/pdf"
     },
     "program-libertarian-2026": {
       "url": "https://libertarian.bc.ca/2026-platform/",
       "finalUrl": "https://libertarian.bc.ca/2026-platform/",
-      "retrievedAt": "2026-10-05T10:04:54.823Z",
-      "sha256": "f3f05e931dad14a17a0fbffa28e8dc722f4266ddddabe0389178bba555de56e6",
+      "retrievedAt": "2026-10-13T09:23:09.079Z",
+      "sha256": "4a785bc939be67abf4f015e768954c140648fed9f31afb97a519e9b8c1926076",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-communities": {
       "url": "https://bcgreens.ca/2024-platform/resilient-communities/",
       "finalUrl": "https://bcgreens.ca/2024-platform/resilient-communities/",
-      "retrievedAt": "2026-10-05T10:04:54.935Z",
-      "sha256": "3446ac4eeaf086bedb9b35bb1682d173f5b7f739963815abf5c062ca334bb475",
+      "retrievedAt": "2026-10-13T09:23:09.203Z",
+      "sha256": "ec6c8a8ce4760dbb7554f9c619acf5f22524ff538f4300f6c66b56b54d19f0c0",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-people": {
       "url": "https://bcgreens.ca/2024-platform/thriving-people/",
       "finalUrl": "https://bcgreens.ca/2024-platform/thriving-people/",
-      "retrievedAt": "2026-10-05T10:04:54.991Z",
-      "sha256": "76a11fdd55cd3d74a1dc2848d28ef868d670ed36884544c06062aeb8f1687054",
+      "retrievedAt": "2026-10-13T09:23:09.273Z",
+      "sha256": "9e0e5e15a1754418b1bd297e0bb0dec191f18c694993b438d77de1df4fef45e2",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-nature": {
       "url": "https://bcgreens.ca/2024-platform/flourishing-natural-world/",
       "finalUrl": "https://bcgreens.ca/2024-platform/flourishing-natural-world/",
-      "retrievedAt": "2026-10-05T10:04:55.048Z",
-      "sha256": "bbe2f9ccf1a9c2aa6fb61ff5fc3d12a0d53605df8901c51d8fffc94caf66d420",
+      "retrievedAt": "2026-10-13T09:23:09.342Z",
+      "sha256": "a597eb82d3dd774902b84eb8e9ffe9d85fc21fdb9dda92d224d58fe9f87ae7e4",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-governance": {
       "url": "https://bcgreens.ca/2024-platform/society-governance/",
       "finalUrl": "https://bcgreens.ca/2024-platform/society-governance/",
-      "retrievedAt": "2026-10-05T10:04:55.104Z",
-      "sha256": "9e0d07560e71181344c694b0c2818467b4531ce52be89c555492e7aed8528cb4",
+      "retrievedAt": "2026-10-13T09:23:09.411Z",
+      "sha256": "6d4ce06bf55ef995574334f34eebc719f32510ff09d82fec334e0ee359fffcd4",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-wildfire": {
       "url": "https://libertarian.bc.ca/2024/09/04/end-the-wildfire-crisis-and-fix-forestry-management/",
       "finalUrl": "https://libertarian.bc.ca/2024/09/04/end-the-wildfire-crisis-and-fix-forestry-management/",
-      "retrievedAt": "2026-10-05T10:04:55.269Z",
-      "sha256": "3615f2229b58cdf1d3959dab98e61854f24bbd910abedcedf8eb768d486d3cae",
+      "retrievedAt": "2026-10-13T09:23:09.573Z",
+      "sha256": "478f58d8ff3c17802c1de832bbf8847402a14a5cc599a2b78749cf521f95e20e",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-forfeiture": {
       "url": "https://libertarian.bc.ca/2024/09/03/stop-abuse-of-civil-asset-forfeiture/",
       "finalUrl": "https://libertarian.bc.ca/2024/09/03/stop-abuse-of-civil-asset-forfeiture/",
-      "retrievedAt": "2026-10-05T10:04:55.381Z",
-      "sha256": "f4f57e24e3ca1cca8fd96254bedf932cf7bbb3e897055aa37d4c782bccc3dad8",
+      "retrievedAt": "2026-10-13T09:23:09.688Z",
+      "sha256": "00b56785b51f50c8a4effde466d8becddd24e7d71d655bf228dbbabdccf9debc",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-land": {
       "url": "https://libertarian.bc.ca/2024/08/17/crown-land-action-is-needed/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/crown-land-action-is-needed/",
-      "retrievedAt": "2026-10-05T10:04:55.497Z",
-      "sha256": "77e557a691e193052ca1ccd4245b864bc0f283817c2e195e9697bc5d7c839c8f",
+      "retrievedAt": "2026-10-13T09:23:09.801Z",
+      "sha256": "e17901b761252fc446b06be9961ea70cf823983e55b4a96903cd844aefb3deca",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-vehicle-tax": {
       "url": "https://libertarian.bc.ca/2024/08/17/pst-on-private-vehicle-sales-2/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/pst-on-private-vehicle-sales-2/",
-      "retrievedAt": "2026-10-05T10:04:55.610Z",
-      "sha256": "6900f514fb08c9f4b6c7f727288166ece09aa08770204003b84f774ed0514dc6",
+      "retrievedAt": "2026-10-13T09:23:09.919Z",
+      "sha256": "bd96f97aadf29c89e8119fb5dd01941e7c2c28337634d689ae1e5713461d50c8",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-drugs": {
       "url": "https://libertarian.bc.ca/2024/08/17/addressing-the-illicit-drug-overdose-crisis/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/addressing-the-illicit-drug-overdose-crisis/",
-      "retrievedAt": "2026-10-05T10:04:55.730Z",
-      "sha256": "c7ebe8381441da0163d785adfac150be40e4eb583c6a3234915dc4f33102bd64",
+      "retrievedAt": "2026-10-13T09:23:10.053Z",
+      "sha256": "c491a2fcfcd652bf73d82ed2f3ed3f1d789e0d518c85bc01c983bdf78c1502c3",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-employer-tax": {
       "url": "https://libertarian.bc.ca/2024/08/17/employer-health-tax-eht-elimination-2/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/employer-health-tax-eht-elimination-2/",
-      "retrievedAt": "2026-10-05T10:04:55.844Z",
-      "sha256": "ca2b3ef9f169d212809fdb31620c490a4106e6379f6ecb3c3b415fff7804fb9c",
+      "retrievedAt": "2026-10-13T09:23:10.171Z",
+      "sha256": "0a7b056c55c67e4f72e8d7912849f88b91262a5fadb2a5898c23248a65104d3b",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-milk": {
       "url": "https://libertarian.bc.ca/2024/08/17/legalize-unpasteurized-milk-2/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/legalize-unpasteurized-milk-2/",
-      "retrievedAt": "2026-10-05T10:04:55.959Z",
-      "sha256": "0cf4d711ae9735d4539ab1459182be42e475ca546795e2c5a734759531d338be",
+      "retrievedAt": "2026-10-13T09:23:10.300Z",
+      "sha256": "106bb01ea95ed98982b4f34292816913a2896afe73a24c84cef408c634b22265",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-assistance": {
       "url": "https://libertarian.bc.ca/2024/08/17/reforming-social-assistance-2/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/reforming-social-assistance-2/",
-      "retrievedAt": "2026-10-05T10:04:56.073Z",
-      "sha256": "27e7ba1c5a5d02121f270d81657764d9c64cae0e28df8c3940a807addd1fe2af",
+      "retrievedAt": "2026-10-13T09:23:10.433Z",
+      "sha256": "4e7483387481e85d4f577c3b7e369f060d7ed08ccf9717049067329026422b7c",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-energy": {
       "url": "https://libertarian.bc.ca/2024/08/17/liberate-energy-2/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/liberate-energy-2/",
-      "retrievedAt": "2026-10-05T10:04:56.183Z",
-      "sha256": "e0d3052ea0291777cda9380a9ed78a9c6de87a8c38857f9e3f1d270653433e4f",
+      "retrievedAt": "2026-10-13T09:23:10.550Z",
+      "sha256": "817c6b8943edc5e46c5940c78f3d923b89150ed0a762357ddafc7281dbdee50e",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-accountability": {
       "url": "https://libertarian.bc.ca/2024/08/17/government-accountability-2/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/government-accountability-2/",
-      "retrievedAt": "2026-10-05T10:04:56.297Z",
-      "sha256": "029ec2ceecd1b7ff466692a2272c1c2655471ec5bd57feb43dd36488ea59b576",
+      "retrievedAt": "2026-10-13T09:23:10.680Z",
+      "sha256": "d7127ad590cb120eb1ce47bff83cf6fa9a1ea5498c1211fd71e7e5f0d03973ea",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-income-tax": {
       "url": "https://libertarian.bc.ca/2024/08/17/tax-policy-2/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/tax-policy-2/",
-      "retrievedAt": "2026-10-05T10:04:56.410Z",
-      "sha256": "191b0d4d3a2ce04c3716b53abfe685b03fcf9c5a15421dba0260f1c11bb89a56",
+      "retrievedAt": "2026-10-13T09:23:10.795Z",
+      "sha256": "42ea48163ef57055139aebb7b3964d8a61ff740c9f9c402ce306ffa0e92ab228",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-liquor": {
       "url": "https://libertarian.bc.ca/2024/08/17/liberate-liquor-2/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/liberate-liquor-2/",
-      "retrievedAt": "2026-10-05T10:04:56.522Z",
-      "sha256": "02ec4887dfd42974f21d76cc4142b00b9b422f5169132ddcf1ea8c1e36288e90",
+      "retrievedAt": "2026-10-13T09:23:10.908Z",
+      "sha256": "ae87f3ce1d7dcc5e7129c633e2018188df349b763e5af5af44ceb70c21139663",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-icbc": {
       "url": "https://libertarian.bc.ca/2024/08/17/ending-icbc/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/ending-icbc/",
-      "retrievedAt": "2026-10-05T10:04:56.634Z",
-      "sha256": "4e36ccb8bd635621f846b0b9c62c8606e4a2b3a17dfcd5443409c8a3311c67c6",
+      "retrievedAt": "2026-10-13T09:23:11.042Z",
+      "sha256": "206ca443934dc4b9a534b9b14ebc2eb10a41c2cc407819ddcff119db067b908e",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-speech": {
       "url": "https://libertarian.bc.ca/2024/08/17/free-speech-in-the-age-of-cancel-culture/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/free-speech-in-the-age-of-cancel-culture/",
-      "retrievedAt": "2026-10-05T10:04:56.746Z",
-      "sha256": "274a6fd4f88bbc7aaab7abef989609104f0e072d574be63be0da7db0bf90ca3a",
+      "retrievedAt": "2026-10-13T09:23:11.166Z",
+      "sha256": "4966a9a3cfda88e4eb12349a2e7551d3200b52a68531affcd6a1997fff0e4816",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-libertarian-pandemic": {
       "url": "https://libertarian.bc.ca/2024/08/17/covid-19-a-return-to-normal-2/",
       "finalUrl": "https://libertarian.bc.ca/2024/08/17/covid-19-a-return-to-normal-2/",
-      "retrievedAt": "2026-10-05T10:04:56.859Z",
-      "sha256": "f71a51e5ba5ace2426d70861d03b3959ff571aa56d53fb283e22e76c81d7ac5e",
+      "retrievedAt": "2026-10-13T09:23:11.283Z",
+      "sha256": "02222f995373d19ad7ced3ba0d47566fc28b8a1c0d33444366d3dbea77639810",
       "contentType": "text/html; charset=UTF-8"
     },
     "programme-party-register-audit": {
@@ -1288,554 +1288,554 @@
     "elections-bc-candidates-csv": {
       "url": "https://elections.bc.ca/2026election/2026-provincial-general-election-candidates.csv",
       "finalUrl": "https://elections.bc.ca/2026election/2026-provincial-general-election-candidates.csv",
-      "retrievedAt": "2026-10-04T21:37:46.932Z",
-      "sha256": "ce0ebf6229d637aaa4473f2187f47d7bdcbc49da752569cae4d455bc9e8a932d",
+      "retrievedAt": "2026-10-13T17:53:03.728Z",
+      "sha256": "afbe95c15fc564c3bf6ec663c0f121bd39db191f9421b82639a0bec3036f1c9b",
       "contentType": "text/csv"
     },
     "researchco-2025-10-06": {
       "url": "https://researchco.ca/2025/10/06/bcpoli-oct2025/",
       "finalUrl": "https://researchco.ca/2025/10/06/bcpoli-oct2025/",
-      "retrievedAt": "2026-10-04T21:41:58.512Z",
-      "sha256": "09379ede18da31ff809ea37d7a000eceac2ca61ba11ea5ad134bfa3cb9f4db23",
+      "retrievedAt": "2026-10-13T09:18:58.434Z",
+      "sha256": "a5d85ef62f9d681d1975e2234a9ed64742206903ccc51a5d3600629dde6870d8",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2025-10-06-tables": {
       "url": "https://researchco.ca/wp-content/uploads/2025/10/Tables_Politics_BC_06Oct2025.pdf",
       "finalUrl": "https://researchco.ca/wp-content/uploads/2025/10/Tables_Politics_BC_06Oct2025.pdf",
-      "retrievedAt": "2026-10-04T21:41:58.558Z",
+      "retrievedAt": "2026-10-13T09:18:58.445Z",
       "sha256": "5cd318880aec466acfa42f062c361a771dcb424bb9f69cc570a921e05ff55ab7",
       "contentType": "application/pdf"
     },
     "researchco-2025-06-16": {
       "url": "https://researchco.ca/2025/06/16/bcpoli-4/",
       "finalUrl": "https://researchco.ca/2025/06/16/bcpoli-4/",
-      "retrievedAt": "2026-10-04T21:41:59.371Z",
-      "sha256": "66784c1cc795472a557edf0eac9133246dc79ce9482141b39b9a5e4062e2ea74",
+      "retrievedAt": "2026-10-13T09:18:58.456Z",
+      "sha256": "2b8d465c72e8c44af74bbf4c641250af4765f019f2948b6c245779db5c368c9e",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2025-06-16-tables": {
       "url": "https://researchco.ca/wp-content/uploads/2025/06/Tables_Politics_BC_16Jun2025.pdf",
       "finalUrl": "https://researchco.ca/wp-content/uploads/2025/06/Tables_Politics_BC_16Jun2025.pdf",
-      "retrievedAt": "2026-10-04T21:41:59.387Z",
+      "retrievedAt": "2026-10-13T09:18:58.472Z",
       "sha256": "70bb921903d91f52ffb9692693087722c65d202af226f4da14e0b88aef48c40d",
       "contentType": "application/pdf"
     },
     "researchco-2025-03-11": {
       "url": "https://researchco.ca/2025/03/11/bcpoli-3/",
       "finalUrl": "https://researchco.ca/2025/03/11/bcpoli-3/",
-      "retrievedAt": "2026-10-04T21:42:00.082Z",
-      "sha256": "60991b5a8e88c41f938ae164f1a0cd577254c2be85008b9ad358dd0f3a694d0c",
+      "retrievedAt": "2026-10-13T09:18:58.483Z",
+      "sha256": "6a4282c337a2e54301059b4e2af2a768a3874885ab0cd9a4c96bee8d7f99b686",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2025-03-11-tables": {
       "url": "https://researchco.ca/wp-content/uploads/2025/03/Tables_Politics_BC_11Mar2025.pdf",
       "finalUrl": "https://researchco.ca/wp-content/uploads/2025/03/Tables_Politics_BC_11Mar2025.pdf",
-      "retrievedAt": "2026-10-04T21:42:00.104Z",
+      "retrievedAt": "2026-10-13T09:18:58.499Z",
       "sha256": "019b0482db454caa85b291662731cacaa04ab27235708d90602dd6c2580a6fbf",
       "contentType": "application/pdf"
     },
     "researchco-2024-10-18": {
       "url": "https://researchco.ca/2024/10/18/final-bcpoli-2024/",
       "finalUrl": "https://researchco.ca/2024/10/18/final-bcpoli-2024/",
-      "retrievedAt": "2026-10-04T21:42:00.130Z",
-      "sha256": "a797a6e33f7a3e130a1e0fccf087e7f248b85182569c7e25f774b113a32e0e19",
+      "retrievedAt": "2026-10-13T09:18:58.510Z",
+      "sha256": "087531a49532cab56543cef96fee487a745a6c744ccedce7c5eb7a4f82384be9",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2024-10-18-tables": {
       "url": "https://researchco.ca/wp-content/uploads/2024/10/Tables_Politics_BC_18Oct2024.pdf",
       "finalUrl": "https://researchco.ca/wp-content/uploads/2024/10/Tables_Politics_BC_18Oct2024.pdf",
-      "retrievedAt": "2026-10-04T21:42:00.230Z",
+      "retrievedAt": "2026-10-13T09:18:58.527Z",
       "sha256": "8e31d36fe83874033ae590989cce430de958ca7b1f4aae409c2f8db5ddd38d23",
       "contentType": "application/pdf"
     },
     "researchco-2024-10-15": {
       "url": "https://researchco.ca/2024/10/15/bcpoli-two-october2024/",
       "finalUrl": "https://researchco.ca/2024/10/15/bcpoli-two-october2024/",
-      "retrievedAt": "2026-10-04T21:42:00.944Z",
-      "sha256": "15aade34c6c3c63f8d6539f7433ab6feed94d6abdca95e38c1647d9c191471f4",
+      "retrievedAt": "2026-10-13T09:18:58.545Z",
+      "sha256": "b0adf501dea47d9974831776bff099f24d4a5754d9337c1cf16974f629b55356",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2024-10-15-tables": {
       "url": "https://researchco.ca/wp-content/uploads/2024/10/Tables_Politics_BC_15Oct2024.pdf",
       "finalUrl": "https://researchco.ca/wp-content/uploads/2024/10/Tables_Politics_BC_15Oct2024.pdf",
-      "retrievedAt": "2026-10-04T21:42:01.133Z",
+      "retrievedAt": "2026-10-13T09:18:58.620Z",
       "sha256": "20d3856346b76684a3cfd0ebbd21083b5b43ff290d2704efe99f0086753dceda",
       "contentType": "application/pdf"
     },
     "researchco-2024-10-04": {
       "url": "https://researchco.ca/2024/10/04/bcpoli-october2024/",
       "finalUrl": "https://researchco.ca/2024/10/04/bcpoli-october2024/",
-      "retrievedAt": "2026-10-04T21:42:01.154Z",
-      "sha256": "2d61964992b6f063c7e4456bf49fb8a8722d821d02188f314904bf1fab60728a",
+      "retrievedAt": "2026-10-13T09:18:58.632Z",
+      "sha256": "1c9dba3913da197272fef876ee010b6de9b635d7d0610e09296189f82e462c51",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2024-10-04-tables": {
       "url": "https://researchco.ca/wp-content/uploads/2024/10/Tables_Politics_BC_04Oct2024.pdf",
       "finalUrl": "https://researchco.ca/wp-content/uploads/2024/10/Tables_Politics_BC_04Oct2024.pdf",
-      "retrievedAt": "2026-10-04T21:42:01.223Z",
+      "retrievedAt": "2026-10-13T09:18:58.698Z",
       "sha256": "d0ded9aec8cc28064543a259e35150a7e466eda276efb3c82175770be4cea368",
       "contentType": "application/pdf"
     },
     "researchco-2024-09-17": {
       "url": "https://researchco.ca/2024/09/17/bcpoli-september2024/",
       "finalUrl": "https://researchco.ca/2024/09/17/bcpoli-september2024/",
-      "retrievedAt": "2026-10-04T21:42:01.247Z",
-      "sha256": "6f2a4b17824ed960e12a175843403bda8078e13fe76d6c2c51523ad4c5781e23",
+      "retrievedAt": "2026-10-13T09:18:58.709Z",
+      "sha256": "20f32cb516dfe377cf4b2ce3524efb7fc104811e1dfe39eef97b42cdf3ea3d32",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2024-09-17-tables": {
       "url": "https://researchco.ca/wp-content/uploads/2024/09/Tables_Politics_BC_17Sep2024.pdf",
       "finalUrl": "https://researchco.ca/wp-content/uploads/2024/09/Tables_Politics_BC_17Sep2024.pdf",
-      "retrievedAt": "2026-10-04T21:42:01.291Z",
+      "retrievedAt": "2026-10-13T09:18:58.757Z",
       "sha256": "08bed7e7ab58909fac7c617ead88c121260ce90636c37deab96214948d99d038",
       "contentType": "application/pdf"
     },
     "researchco-2024-07-30": {
       "url": "https://researchco.ca/2024/07/30/bcpoli-july2024/",
       "finalUrl": "https://researchco.ca/2024/07/30/bcpoli-july2024/",
-      "retrievedAt": "2026-10-04T21:42:02.163Z",
-      "sha256": "ed6114b2025e79b0e8ee3949f5e24a1f42815421b40775576d878db16eec8635",
+      "retrievedAt": "2026-10-13T09:18:58.768Z",
+      "sha256": "9df9bfff99e0505c2b064c75e44f1c92627d7d69426293d3ec1de52012032cca",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2024-06-25": {
       "url": "https://researchco.ca/2024/06/25/bcpoli-june2024/",
       "finalUrl": "https://researchco.ca/2024/06/25/bcpoli-june2024/",
-      "retrievedAt": "2026-10-04T21:42:02.925Z",
-      "sha256": "7142384dd4a13019ae196f82418495e38b257aeee27ea982b384ab9de0bfa64a",
+      "retrievedAt": "2026-10-13T09:18:58.779Z",
+      "sha256": "fe5d4d05efa82a6086232238889bfb638ab3c2f297a386a47c43224c883a5704",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2024-05-21": {
       "url": "https://researchco.ca/2024/05/21/bcpoli-may2024/",
       "finalUrl": "https://researchco.ca/2024/05/21/bcpoli-may2024/",
-      "retrievedAt": "2026-10-04T21:42:03.698Z",
-      "sha256": "c1ee5df322c9228983ca5609f5820e816c938eb80c9d0b0dece7661e69600567",
+      "retrievedAt": "2026-10-13T09:18:58.789Z",
+      "sha256": "bf7b1d7dfe9bc570571d404af2d5efae579fea9afdee2f1338a9db8db043ff39",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2024-04-23": {
       "url": "https://researchco.ca/2024/04/23/bcpoli-apr2024/",
       "finalUrl": "https://researchco.ca/2024/04/23/bcpoli-apr2024/",
-      "retrievedAt": "2026-10-04T21:42:04.398Z",
-      "sha256": "96fa399e7c19624d460e6af8fe386394688325ed3d50723f79c324a3847f3574",
+      "retrievedAt": "2026-10-13T09:18:58.800Z",
+      "sha256": "9f51f8e9c4b7460e63ec54341e29a1a1760a59ae16070ab1a80917cdf275ff42",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2024-04-23-tables": {
       "url": "https://researchco.ca/wp-content/uploads/2024/04/Tables_Politics_BC_23Apr2024.pdf",
       "finalUrl": "https://researchco.ca/wp-content/uploads/2024/04/Tables_Politics_BC_23Apr2024.pdf",
-      "retrievedAt": "2026-10-04T21:42:04.451Z",
+      "retrievedAt": "2026-10-13T09:18:58.847Z",
       "sha256": "e2e6d140d181d762139351aa2fda4bd63614ef09521527212099156dfd7b6d05",
       "contentType": "application/pdf"
     },
     "researchco-2024-01-31": {
       "url": "https://researchco.ca/2024/01/31/bcpoli-jan2024/",
       "finalUrl": "https://researchco.ca/2024/01/31/bcpoli-jan2024/",
-      "retrievedAt": "2026-10-04T21:42:05.469Z",
-      "sha256": "a27a63db25ef5e265a85adb6a8c8c8a14d57ed0b7cd0361fc8069fe252ca32e8",
+      "retrievedAt": "2026-10-13T09:18:58.858Z",
+      "sha256": "16e44428dcd926dcdb48cc61c1968f7b7726ece1705235281a28a411a883ebac",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2023-09-26": {
       "url": "https://researchco.ca/2023/09/26/bcpoli-sept2023/",
       "finalUrl": "https://researchco.ca/2023/09/26/bcpoli-sept2023/",
-      "retrievedAt": "2026-10-04T21:42:06.209Z",
-      "sha256": "febf71c28dd9dfa38a9cc2f6172ca7749ee79fd5334e640d26f83b3f8f29bcaf",
+      "retrievedAt": "2026-10-13T09:18:58.867Z",
+      "sha256": "0c60811e08fab873d8251c610d94dc5e6bd1de270619f2768d18af110ea42163",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2023-05-09": {
       "url": "https://researchco.ca/2023/05/09/bcpoli-2023-2/",
       "finalUrl": "https://researchco.ca/2023/05/09/bcpoli-2023-2/",
-      "retrievedAt": "2026-10-04T21:42:06.227Z",
-      "sha256": "edb6bec2bc801015235e1399ed623d7583621ec8ee995512dde99c92d8e686f3",
+      "retrievedAt": "2026-10-13T09:18:58.879Z",
+      "sha256": "7243ce36b6fb6268b5461a69b1c7dec6a1ff1b84971ddd8cfc16bd6d6d53414e",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2023-02-10": {
       "url": "https://researchco.ca/2023/02/10/bcpoli-2023/",
       "finalUrl": "https://researchco.ca/2023/02/10/bcpoli-2023/",
-      "retrievedAt": "2026-10-04T21:42:06.241Z",
-      "sha256": "17f65d8cebbd7e26f4d862ad3da24bc632e3bfdd58aea324c5cc5dcfd44d27e7",
+      "retrievedAt": "2026-10-13T09:18:58.892Z",
+      "sha256": "a2a3a5f292e6a25418c44140a3b1cc6bb9b8b513327a16034b2e40af5d707ba2",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2022-10-18": {
       "url": "https://researchco.ca/2022/10/18/bcpoli-oct2022/",
       "finalUrl": "https://researchco.ca/2022/10/18/bcpoli-oct2022/",
-      "retrievedAt": "2026-10-04T21:42:07.229Z",
-      "sha256": "902ae598c862e2b9e39e64f7052bc335abea24f9fbc5e59a59a00bd985e1b544",
+      "retrievedAt": "2026-10-13T09:18:58.903Z",
+      "sha256": "fe0b8c3c711489fd0443049fa528dbb1e58f638ecbad87dc9a478a6599987499",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2022-10-18-tables": {
       "url": "https://researchco.ca/wp-content/uploads/2022/10/Tables_Politics_BC_18Oct2022.pdf",
       "finalUrl": "https://researchco.ca/wp-content/uploads/2022/10/Tables_Politics_BC_18Oct2022.pdf",
-      "retrievedAt": "2026-10-04T21:42:07.297Z",
+      "retrievedAt": "2026-10-13T09:18:58.952Z",
       "sha256": "e4fcffb59d3b0685d61621de3302b2b5ecfa08da6f53d8c254a1157870dfe7c3",
       "contentType": "application/pdf"
     },
     "researchco-2022-02-18": {
       "url": "https://researchco.ca/2022/02/18/bcpoli-feb2022/",
       "finalUrl": "https://researchco.ca/2022/02/18/bcpoli-feb2022/",
-      "retrievedAt": "2026-10-04T21:42:08.072Z",
-      "sha256": "814bf0f12aeeb0e1c176e7e5bb1553db0d0877b826970093a2cec172a2692138",
+      "retrievedAt": "2026-10-13T09:18:58.964Z",
+      "sha256": "32d2f4b9b28db20f1ba905d5f0e9721cd12a8722a671f08659e4672d101470d4",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2022-02-18-tables": {
       "url": "https://researchco.ca/wp-content/uploads/2022/02/Tables_Politics_BC_18Feb2022.pdf",
       "finalUrl": "https://researchco.ca/wp-content/uploads/2022/02/Tables_Politics_BC_18Feb2022.pdf",
-      "retrievedAt": "2026-10-04T21:42:08.313Z",
+      "retrievedAt": "2026-10-13T09:18:59.108Z",
       "sha256": "2e597d032568a55a64b156f293cca245a7bbc38ace9565ef0ee07061211cdf4d",
       "contentType": "application/pdf"
     },
     "researchco-2020-10-23": {
       "url": "https://researchco.ca/2020/10/23/bcelxn2020-final/",
       "finalUrl": "https://researchco.ca/2020/10/23/bcelxn2020-final/",
-      "retrievedAt": "2026-10-04T21:42:09.034Z",
-      "sha256": "f74afc34fa2643b902fa4ce3dcf98b9cf4f307c17df02dc024db46376d6fbb96",
+      "retrievedAt": "2026-10-13T09:18:59.120Z",
+      "sha256": "a7c3abc66514081ea8d96a7fe3854853c45f0f0dd6a0bcf4607506069d86a380",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2020-10-08": {
       "url": "https://researchco.ca/2020/10/08/bcelxn2020-october/",
       "finalUrl": "https://researchco.ca/2020/10/08/bcelxn2020-october/",
-      "retrievedAt": "2026-10-04T21:42:09.821Z",
-      "sha256": "e26aeb0d640aa4bbc837e0e762e4f7cd70275ec0d8832d0eb3c23f931b519f9b",
+      "retrievedAt": "2026-10-13T09:18:59.130Z",
+      "sha256": "631e679e1f276b909f5f21c86181d2f4e5d62e26c799606d6e12347ebbb2377b",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2020-09-24": {
       "url": "https://researchco.ca/2020/09/24/bcpoli-2/",
       "finalUrl": "https://researchco.ca/2020/09/24/bcpoli-2/",
-      "retrievedAt": "2026-10-04T21:42:10.523Z",
-      "sha256": "1207423b1e73f55bc7ccd7f23ba37cca1281b459b4861d533b92f2bf32ca1917",
+      "retrievedAt": "2026-10-13T09:18:59.143Z",
+      "sha256": "9072c7e64cc1d39da21daa301bf3eba1b40061ddc02059298b88627a90f34ce4",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2020-05-28": {
       "url": "https://researchco.ca/2020/05/28/bcpoli/",
       "finalUrl": "https://researchco.ca/2020/05/28/bcpoli/",
-      "retrievedAt": "2026-10-04T21:42:11.253Z",
-      "sha256": "ddaab7af7e059c7706d99038061b47bbf6c8c7ed982b980d3f6f590459a7b37f",
+      "retrievedAt": "2026-10-13T09:18:59.155Z",
+      "sha256": "91ee1fb85ed46f6df45d5a6b8b1d44b5d2bc06decb5037fd966b73273403dfcc",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2020-05-28-tables": {
       "url": "https://researchco.ca/wp-content/uploads/2020/05/Tables_PoliticsBC_28May2020.pdf",
       "finalUrl": "https://researchco.ca/wp-content/uploads/2020/05/Tables_PoliticsBC_28May2020.pdf",
-      "retrievedAt": "2026-10-04T21:42:11.299Z",
+      "retrievedAt": "2026-10-13T09:18:59.196Z",
       "sha256": "6d0a864109f31e70a75b49c9e45c8d61507a6830878fb6899a850a1bda0d0241",
       "contentType": "application/pdf"
     },
     "researchco-2019-05-29": {
       "url": "https://researchco.ca/2019/05/29/with-the-furies-breathing-down-your-neck/",
       "finalUrl": "https://researchco.ca/2019/05/29/with-the-furies-breathing-down-your-neck/",
-      "retrievedAt": "2026-10-04T21:42:11.312Z",
-      "sha256": "e6c6a0b2d48d405592acb5b973d4a0c1b84abe50495b4a81c8c5e7dfe05824f2",
+      "retrievedAt": "2026-10-13T09:18:59.207Z",
+      "sha256": "727e2b993275c6664d990ab6a3bd3c3cc9ef52dd31431d4ed0833d2f75733ebd",
       "contentType": "text/html; charset=UTF-8"
     },
     "researchco-2019-05-29-tables": {
       "url": "https://researchco.ca/wp-content/uploads/2019/05/Tables_PoliticsBC_29May2019.pdf",
       "finalUrl": "https://researchco.ca/wp-content/uploads/2019/05/Tables_PoliticsBC_29May2019.pdf",
-      "retrievedAt": "2026-10-04T21:42:11.368Z",
+      "retrievedAt": "2026-10-13T09:18:59.245Z",
       "sha256": "bc1a326d77a0e8508761ee265979dd57e6dd48df1c67b0a7a2c5bc35493f00a1",
       "contentType": "application/pdf"
     },
     "ari-2017-05-04": {
       "url": "https://angusreid.org/bc-election-campaign-analysis/",
       "finalUrl": "https://angusreid.org/bc-election-campaign-analysis/",
-      "retrievedAt": "2026-10-04T21:42:12.388Z",
-      "sha256": "40592ac557063b456ca0f1d8b2dfba73343df43aa2b687a70278bcd238281e79",
+      "retrievedAt": "2026-10-13T09:18:59.435Z",
+      "sha256": "fa3b24163a58d486b0537eb27856aff3629ee1f6f4a754d932a434b207089033",
       "contentType": "text/html; charset=UTF-8"
     },
     "ari-2017-05-04-tables": {
       "url": "https://angusreid.org/wp-content/uploads/2017/05/2017.05.04-BC-Election-Final-Version.pdf",
       "finalUrl": "https://angusreid.org/wp-content/uploads/2017/05/2017.05.04-BC-Election-Final-Version.pdf",
-      "retrievedAt": "2026-10-04T21:42:12.536Z",
+      "retrievedAt": "2026-10-13T09:18:59.461Z",
       "sha256": "368f9425b09362c97cbfa664b6c8cc94a6b2089913dd252ad5ff39774e80a571",
       "contentType": "application/pdf"
     },
     "ipsos-2026-10-01": {
       "url": "https://www.ipsos.com/en-ca/bc-conservative-support-rallies-without-kerry-lynne-findlay",
       "finalUrl": "https://www.ipsos.com/en-ca/bc-conservative-support-rallies-without-kerry-lynne-findlay",
-      "retrievedAt": "2026-10-04T21:43:15.970Z",
-      "sha256": "b8acf0bd4a25cf66fcfc0b9b5b9f0aee9f8448e38e6d29926d7aa32aaf089e95",
+      "retrievedAt": "2026-10-13T09:18:53.995Z",
+      "sha256": "9384c0b09e11aa84220374c1b6ce0b2dc829c6b2a4b26b4948f06880caed1d5f",
       "contentType": "text/html; charset=UTF-8"
     },
     "ipsos-2026-10-01-tables": {
       "url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2026-10/BC%20Poll%201%20Tables.pdf",
       "finalUrl": "https://www.ipsos.com/sites/default/files/ct/news/documents/2026-10/BC%20Poll%201%20Tables.pdf",
-      "retrievedAt": "2026-10-04T21:43:46.663Z",
+      "retrievedAt": "2026-10-13T09:18:54.019Z",
       "sha256": "3c980a9c2768810febec0652f051abb433f0012b0692ba3fd975e393f78ff4a2",
       "contentType": "application/pdf"
     },
     "innovative-2026-09-28": {
       "url": "https://innovativeresearch.ca/bcs-wide-open-election/",
       "finalUrl": "https://innovativeresearch.ca/bcs-wide-open-election/",
-      "retrievedAt": "2026-10-04T21:51:20.545Z",
-      "sha256": "9d3ea583633725e1b58003436ca5ccff9641a3048e0e195690af7dd28b595f13",
+      "retrievedAt": "2026-10-13T09:18:55.868Z",
+      "sha256": "97931ec26ef3fc70a6b29d5acf1d28b8465ba0a47b8906e0927cf8bbc19a8419",
       "contentType": "text/html; charset=UTF-8"
     },
     "leger-2026-09-29": {
       "url": "https://leger360.com/in-the-news-bc-election-polling-september-2026/",
       "finalUrl": "https://leger360.com/in-the-news-bc-election-polling-september-2026/",
-      "retrievedAt": "2026-10-04T21:45:21.403Z",
-      "sha256": "ba9cf7d22a776200157996c10567b93ba3d34430948c80acb6fa71e75b03671a",
+      "retrievedAt": "2026-10-13T09:18:54.372Z",
+      "sha256": "8670d82a712350420c7d5af66b30979d7c035023e8d70086f3febaa715abbf99",
       "contentType": "text/html; charset=UTF-8"
     },
     "leger-2026-09-29-tables": {
       "url": "https://documents.leger360.com/hubfs/%C3%89tudes%20M%C3%A9diatiques/%C3%89tudes%20M%C3%A9diatiques%20-%202026/9.%20%C3%89tudes%20m%C3%A9diatiques%20septembre%202026/BC%20Politics/Media%20Release%20-%20BC%20Election%20Polling%20September%2029%2c%202026.pdf",
       "finalUrl": "https://documents.leger360.com/hubfs/%C3%89tudes%20M%C3%A9diatiques/%C3%89tudes%20M%C3%A9diatiques%20-%202026/9.%20%C3%89tudes%20m%C3%A9diatiques%20septembre%202026/BC%20Politics/Media%20Release%20-%20BC%20Election%20Polling%20September%2029%2c%202026.pdf",
-      "retrievedAt": "2026-10-04T21:45:27.970Z",
+      "retrievedAt": "2026-10-13T09:18:54.473Z",
       "sha256": "755db81e80c2fdc0ec3435acb568159210d61a0fb4a7fd1756ba7579f412eb13",
       "contentType": "application/pdf"
     },
     "liaison-2026-09-29": {
       "url": "https://press.liaisonstrategies.ca/bc-conservatives-40-ndp-39-housing-frustration-runs-deep/",
       "finalUrl": "https://press.liaisonstrategies.ca/bc-conservatives-40-ndp-39-housing-frustration-runs-deep/",
-      "retrievedAt": "2026-10-04T21:45:49.267Z",
-      "sha256": "349d2612af7667b93191d28af5d31fed0d6e036b129b8ca61fa1492dfd4555ed",
+      "retrievedAt": "2026-10-13T09:18:54.026Z",
+      "sha256": "23e3f8f899a6d8afaa2b32c48a0f5d23e245e9ca9a306d2726fe68646e0c79bc",
       "contentType": "text/html; charset=utf-8"
     },
     "liaison-2026-09-29-tables": {
       "url": "https://press.liaisonstrategies.ca/content/files/2026/09/2026.09.29-BC-Tables.pdf",
       "finalUrl": "https://storage.ghost.io/c/5a/2c/5a2c6702-fc8c-4232-bdc0-33fad8d71a80/content/files/2026/09/2026.09.29-BC-Tables.pdf",
-      "retrievedAt": "2026-10-04T21:46:11.702Z",
+      "retrievedAt": "2026-10-13T09:18:54.126Z",
       "sha256": "56997b4c6d948727085205eaf1bc540b1326b4b3701f386035b5bca2b7947ab2",
       "contentType": "application/pdf"
     },
     "ipsos-2026-09-15": {
       "url": "https://www.ipsos.com/en-ca/bc-conservative-support-scatters-under-kerry-lynne-findlay",
       "finalUrl": "https://www.ipsos.com/en-ca/bc-conservative-support-scatters-under-kerry-lynne-findlay",
-      "retrievedAt": "2026-10-04T21:46:54.969Z",
-      "sha256": "e3683a1639bc03e33aba27623612c449333fde385bb1deeb1a0a640c40d4ace3",
+      "retrievedAt": "2026-10-13T09:18:57.157Z",
+      "sha256": "2ebd6031991c1ebdb1fae727d9b1fe14d6a3aac1540f8cf06b13f1583ee915b6",
       "contentType": "text/html; charset=UTF-8"
     },
     "ipsos-2026-09-15-tables": {
       "url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2026-09/Tables%20for%20Release%20Sept%2015_0.pdf",
       "finalUrl": "https://www.ipsos.com/sites/default/files/ct/news/documents/2026-09/Tables%20for%20Release%20Sept%2015_0.pdf",
-      "retrievedAt": "2026-10-04T21:47:02.489Z",
+      "retrievedAt": "2026-10-13T09:18:57.183Z",
       "sha256": "db2212ff83f0ff9f51c331c7fab561ae43949ca32af5f1b85c8e815a42e65f9c",
       "contentType": "application/pdf"
     },
     "leger-2026-06-05": {
       "url": "https://leger360.com/in-the-news-bc-conservatives-take-narrow-lead/",
       "finalUrl": "https://leger360.com/in-the-news-bc-conservatives-take-narrow-lead/",
-      "retrievedAt": "2026-10-04T21:47:17.485Z",
-      "sha256": "ed341be957867dc3b4def2656e4f7cad013f0c40cc2e581158bf234d3029d428",
+      "retrievedAt": "2026-10-13T09:18:57.951Z",
+      "sha256": "122dda87c8f6edddc9e0b24190573ac41b980e36232725fa03d339ee7634ab8c",
       "contentType": "text/html; charset=UTF-8"
     },
     "leger-2026-06-05-tables": {
       "url": "https://documents.leger360.com/hubfs/%C3%89tudes%20M%C3%A9diatiques/%C3%89tudes%20M%C3%A9diatiques%20-%202026/%C3%89tudes%20Juin%202026/Leger%20Poll%20-%20BC%20Pulse%20Check%20June%202026.pdf",
       "finalUrl": "https://documents.leger360.com/hubfs/%C3%89tudes%20M%C3%A9diatiques/%C3%89tudes%20M%C3%A9diatiques%20-%202026/%C3%89tudes%20Juin%202026/Leger%20Poll%20-%20BC%20Pulse%20Check%20June%202026.pdf",
-      "retrievedAt": "2026-10-04T21:47:24.003Z",
+      "retrievedAt": "2026-10-13T09:18:58.000Z",
       "sha256": "db2866ab6ade75327c5ec5b47a78ad2d385d1fe7487c169a2591334a404a9701",
       "contentType": "application/pdf"
     },
     "innovative-2026-09-28-tables": {
       "url": "https://innovativeresearch.ca/wp-content/uploads/2026/09/CTM2609-W4-BC-Election-Short-Deck-RELEASE.pdf",
       "finalUrl": "https://innovativeresearch.ca/wp-content/uploads/2026/09/CTM2609-W4-BC-Election-Short-Deck-RELEASE.pdf",
-      "retrievedAt": "2026-10-04T21:51:21.245Z",
+      "retrievedAt": "2026-10-13T09:18:56.098Z",
       "sha256": "0c8e47363a3e81efbbc42eb01811760de40d0b07cf15ade83a62691f67dd3a60",
       "contentType": "application/pdf"
     },
     "program-ndp-launch-2026": {
       "url": "https://www.bcndp.ca/releases/david-eby-launches-election-plan-build-bc-strong-amid-trumps-attacks",
       "finalUrl": "https://www.bcndp.ca/releases/david-eby-launches-election-plan-build-bc-strong-amid-trumps-attacks",
-      "retrievedAt": "2026-10-05T10:04:57.983Z",
-      "sha256": "4e9197ff5fb8028b6329aefd1d7b24f3d1093b0aa79d5deb940191e522db361a",
+      "retrievedAt": "2026-10-13T09:23:12.069Z",
+      "sha256": "6527a1721e72f931f05b45103fec6cb6c89269f4dae94f07c6578238288765fe",
       "contentType": "text/html; charset=utf-8"
     },
     "program-ndp-health-recruitment": {
       "url": "https://www.bcndp.ca/releases/eby-triple-us-health-worker-recruitment",
       "finalUrl": "https://www.bcndp.ca/releases/eby-triple-us-health-worker-recruitment",
-      "retrievedAt": "2026-10-05T10:04:58.016Z",
-      "sha256": "7b8b75ec270e2871ed2b259f121118aaa0099debae27fab7e80fc87c3bac8f13",
+      "retrievedAt": "2026-10-13T09:23:12.949Z",
+      "sha256": "b56b2bdafc355ff44ce8517247ed1590fb82b3e313f8d7ade2b9e4de3125930d",
       "contentType": "text/html; charset=utf-8"
     },
     "program-ndp-buy-local": {
       "url": "https://www.bcndp.ca/releases/eby-pledges-new-built-bc-and-canada-buying-rules",
       "finalUrl": "https://www.bcndp.ca/releases/eby-pledges-new-built-bc-and-canada-buying-rules",
-      "retrievedAt": "2026-10-05T10:04:58.065Z",
-      "sha256": "f984537da1bb66af588324b5cf4fc99704974e0f58adebe10d7a79a2e29da7f5",
+      "retrievedAt": "2026-10-13T09:23:13.817Z",
+      "sha256": "467e6b5c9d48bd070c83df30a4f1338a8a611300c626894eb84a0b4eaa7e803f",
       "contentType": "text/html; charset=utf-8"
     },
     "program-ndp-empty-condos": {
       "url": "https://www.bcndp.ca/releases/eby-turn-more-empty-condos-homes-people-can-afford",
       "finalUrl": "https://www.bcndp.ca/releases/eby-turn-more-empty-condos-homes-people-can-afford",
-      "retrievedAt": "2026-10-05T10:04:58.115Z",
-      "sha256": "6050ed4046dd3bae30db26bbd4345b79a6c385e4538b2f5fe9940fc2be65d7b3",
+      "retrievedAt": "2026-10-13T09:23:14.757Z",
+      "sha256": "2a197ce8d15bcf87725d9fd5d53fcadca285edebfc07c10b7b5e047a3d0f9162",
       "contentType": "text/html; charset=utf-8"
     },
     "program-ndp-critical-minerals": {
       "url": "https://www.bcndp.ca/releases/eby-double-critical-mineral-exports-expand-port-prince-rupert",
       "finalUrl": "https://www.bcndp.ca/releases/eby-double-critical-mineral-exports-expand-port-prince-rupert",
-      "retrievedAt": "2026-10-05T10:04:58.957Z",
-      "sha256": "2fca4e22bfbb25fb9a96ca2eccdad43fa2b8a0fb843ca1eef1a13578fe670d5e",
+      "retrievedAt": "2026-10-13T09:23:15.676Z",
+      "sha256": "8203508e741adcf6ed17a638d40f42c6e8541c0fa4f8102b3ccba7949a86e7cc",
       "contentType": "text/html; charset=utf-8"
     },
     "program-ndp-lng": {
       "url": "https://www.bcndp.ca/releases/david-eby-secures-largest-private-sector-investment-canadian-history",
       "finalUrl": "https://www.bcndp.ca/releases/david-eby-secures-largest-private-sector-investment-canadian-history",
-      "retrievedAt": "2026-10-05T10:04:59.010Z",
-      "sha256": "b289dba130a5d05f875a8446986f7ed8aa075ef2f7c5117c6190fbad5d3562a9",
+      "retrievedAt": "2026-10-13T09:23:16.604Z",
+      "sha256": "fc07565a5eefb2acc94aaee4352f41e6ebd5f83a1393736d43490952ce2aeb86",
       "contentType": "text/html; charset=utf-8"
     },
     "program-ndp-gas-prices": {
       "url": "https://www.bcndp.ca/releases/ebys-plan-will-cut-gas-prices-30-cents-litre-crack-down-gouging",
       "finalUrl": "https://www.bcndp.ca/releases/ebys-plan-will-cut-gas-prices-30-cents-litre-crack-down-gouging",
-      "retrievedAt": "2026-10-05T10:04:59.060Z",
-      "sha256": "8404a2a5943de1eb7107e570b129cd49411e3683197adadb41b3f17bb9f7299f",
+      "retrievedAt": "2026-10-13T09:23:17.505Z",
+      "sha256": "1727590ed0465bdaa5a5f2666b0e5c8fbdedd8de245781a9263decd09ee15e4a",
       "contentType": "text/html; charset=utf-8"
     },
     "program-ndp-groceries": {
       "url": "https://www.bcndp.ca/releases/eby-will-take-grocery-giants-protect-families-rising-costs",
       "finalUrl": "https://www.bcndp.ca/releases/eby-will-take-grocery-giants-protect-families-rising-costs",
-      "retrievedAt": "2026-10-05T10:04:59.116Z",
-      "sha256": "46d4a825ccc9a957483b662256fbfef6d15eebd31ad28c862b8801a6bb73d908",
+      "retrievedAt": "2026-10-13T09:23:18.451Z",
+      "sha256": "a8f4c7672824c562b6ecd59271c5b55832fcaebfc5669916de99d625165309f1",
       "contentType": "text/html; charset=utf-8"
     },
     "program-ndp-wildfire-support": {
       "url": "https://www.bcndp.ca/releases/bc-ndp-announces-new-support-wildfire-impacted-families-including-those-uninsured",
       "finalUrl": "https://www.bcndp.ca/releases/bc-ndp-announces-new-support-wildfire-impacted-families-including-those-uninsured",
-      "retrievedAt": "2026-10-05T10:04:59.169Z",
-      "sha256": "960b508fc92c1b3f5007be30c504bcb3ebaed34eab1a1294fe6732d107d96b4a",
+      "retrievedAt": "2026-10-13T09:23:19.338Z",
+      "sha256": "9f5e2b2bf471ae9999e3d38427d2927ce4815511f4c6451a0c61c5d5750a1ffe",
       "contentType": "text/html; charset=utf-8"
     },
     "program-con-housing-statement": {
       "url": "https://conservativebc.ca/statement-from-interim-leader-lorne-doerkson-on-the-ndps-housing-tax-plan/",
       "finalUrl": "https://conservativebc.ca/statement-from-interim-leader-lorne-doerkson-on-the-ndps-housing-tax-plan/",
-      "retrievedAt": "2026-10-05T10:04:59.360Z",
-      "sha256": "22de6f71efc53dfff887e356b6f1e37473ef6cad8a8c88b1e30eb874f7ec8252",
+      "retrievedAt": "2026-10-13T09:23:20.536Z",
+      "sha256": "e308cd32d6cd2d9dddb2f242084efef66d14a58043b9f74594a95c13fc32116d",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-con-no-new-taxes": {
       "url": "https://conservativebc.ca/conservative-party-of-bc-pledges-no-new-taxes-on-british-columbians/",
       "finalUrl": "https://conservativebc.ca/conservative-party-of-bc-pledges-no-new-taxes-on-british-columbians/",
-      "retrievedAt": "2026-10-05T10:04:59.524Z",
-      "sha256": "32a26594e4042fc74f74febcf2f10d7a097f7f5342703a392a3244760afcf197",
+      "retrievedAt": "2026-10-13T09:23:21.249Z",
+      "sha256": "ad8262e619af10c3d2e04581a6f3acecb10b5cc574eb3a153b74741d385bf48b",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-con-energy": {
       "url": "https://conservativebc.ca/make-british-columbia-an-energy-superpower/",
       "finalUrl": "https://conservativebc.ca/make-british-columbia-an-energy-superpower/",
-      "retrievedAt": "2026-10-05T10:04:59.704Z",
-      "sha256": "cc51a45f561462d4e0bc4a11b52fd7e37f0c9b72784febd7c8f1d021017ad428",
+      "retrievedAt": "2026-10-13T09:23:21.949Z",
+      "sha256": "488b89a2473d7a104acea1530dc46093e10e04c151c96ad1d5f11bf5bc2a94b4",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-con-alcohol-pst": {
       "url": "https://conservativebc.ca/conservatives-to-remove-pst-from-canadian-alcohol/",
       "finalUrl": "https://conservativebc.ca/conservatives-to-remove-pst-from-canadian-alcohol/",
-      "retrievedAt": "2026-10-05T10:04:59.884Z",
-      "sha256": "2d5b3e7faaada111a6e26bf7c55a94e79cf2986664d5165372f0803d29ef0b5e",
+      "retrievedAt": "2026-10-13T09:23:22.159Z",
+      "sha256": "ec74085ceb186e726d9d27816de6cf1e0d0d5664cd8d58653adccd4f78c56962",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-con-lng": {
       "url": "https://conservativebc.ca/bc-conservatives-welcome-lng-canada-phase-2-we-will-treat-energy-as-an-urgent-mission/",
       "finalUrl": "https://conservativebc.ca/bc-conservatives-welcome-lng-canada-phase-2-we-will-treat-energy-as-an-urgent-mission/",
-      "retrievedAt": "2026-10-05T10:05:02.166Z",
-      "sha256": "2227710f123f4b25256d558d48bf18f4a28125d76d64956f25f41823717e0359",
+      "retrievedAt": "2026-10-13T09:23:22.301Z",
+      "sha256": "20a7ffc459b0f40a9a3b39c76bcc4fcc6ce8134291888276429589a55a98a56f",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-con-reconciliation": {
       "url": "https://conservativebc.ca/conservative-party-of-bc-statement-on-national-day-of-truth-and-reconciliation/",
       "finalUrl": "https://conservativebc.ca/conservative-party-of-bc-statement-on-national-day-of-truth-and-reconciliation/",
-      "retrievedAt": "2026-10-05T10:05:02.354Z",
-      "sha256": "721c57ecb17557305fa6f3dab29512537d6d5a6cd99ca08b855174d8b8b78b4f",
+      "retrievedAt": "2026-10-13T09:23:22.487Z",
+      "sha256": "c264d7962fb56c9d1c8686f2d10576567f92c3aa59c93264728f6fb6dbf96742",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-con-pipeline": {
       "url": "https://conservativebc.ca/conservative-party-of-bc-welcomes-designation-of-pacific-link-pipeline/",
       "finalUrl": "https://conservativebc.ca/conservative-party-of-bc-welcomes-designation-of-pacific-link-pipeline/",
-      "retrievedAt": "2026-10-05T10:05:02.559Z",
-      "sha256": "ec78ff649687f63afd3b2ba6fb59debdd3481ad3ba57c764bcb922204f22da6f",
+      "retrievedAt": "2026-10-13T09:23:22.657Z",
+      "sha256": "ddb5c9d014408c66fbd02a6c28feddc5faa5bbe33815f52dffa4ba377aefc5b6",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-con-wildfire": {
       "url": "https://conservativebc.ca/fighting-wildfires-protecting-communities/",
       "finalUrl": "https://conservativebc.ca/fighting-wildfires-protecting-communities/",
-      "retrievedAt": "2026-10-05T10:05:02.743Z",
-      "sha256": "8b56ba47c99734fca5c08f164a42af0b6b5c43223931c1beebeee6cb6a713f3e",
+      "retrievedAt": "2026-10-13T09:23:22.715Z",
+      "sha256": "febc9e84bf979452c885655e7e40657c955b0e1a794d696416e4a01dfacef31d",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-plan-2026": {
       "url": "https://bcgreens.ca/our-plan/",
       "finalUrl": "https://bcgreens.ca/our-plan/",
-      "retrievedAt": "2026-10-05T10:05:02.852Z",
-      "sha256": "7088f57b556ecc96747d73cbcc5e35e687ea751636720076a971b06b75248e49",
+      "retrievedAt": "2026-10-13T09:23:22.842Z",
+      "sha256": "b1eee3e648a81e6355867c54641bb318e9da5ff0734c69eedd702829c15eb1c3",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-childcare": {
       "url": "https://bcgreens.ca/announce-plan-to-lift-the-freeze-on-10-a-day-daycare-with-universal-free-child-care-by-2031-alongside-new-candidate-for-victoria-swan-lake/",
       "finalUrl": "https://bcgreens.ca/announce-plan-to-lift-the-freeze-on-10-a-day-daycare-with-universal-free-child-care-by-2031-alongside-new-candidate-for-victoria-swan-lake/",
-      "retrievedAt": "2026-10-05T10:05:02.907Z",
-      "sha256": "6ee0a06c4ae83021bb9b3cd3ced339a175f7a43aa5883f792eb0b8f71516101c",
+      "retrievedAt": "2026-10-13T09:23:22.911Z",
+      "sha256": "157d843cf41a3d99d725736732d177e8b44cf7b1fb1078f671fd283c2f23c7d2",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-renters": {
       "url": "https://bcgreens.ca/announce-plan-to-support-renters-unveil-two-new-candidates-for-south-island/",
       "finalUrl": "https://bcgreens.ca/announce-plan-to-support-renters-unveil-two-new-candidates-for-south-island/",
-      "retrievedAt": "2026-10-05T10:05:02.961Z",
-      "sha256": "a7ef23185697594235d7076d6a18cd46862d09760a34e02dbace0358680dff11",
+      "retrievedAt": "2026-10-13T09:23:22.982Z",
+      "sha256": "3a8339440c136107c3ba4298b7ecb61f6d513c3d18886f2f011201be3a31e029",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-lng-2026": {
       "url": "https://bcgreens.ca/statement-from-emily-lowan-on-lng-canada-phase-2/",
       "finalUrl": "https://bcgreens.ca/statement-from-emily-lowan-on-lng-canada-phase-2/",
-      "retrievedAt": "2026-10-05T10:05:03.014Z",
-      "sha256": "0f58fb962ccec2577423e32706caab0a2598171a01fa011d77559a4b3ee5ead9",
+      "retrievedAt": "2026-10-13T09:23:23.052Z",
+      "sha256": "e1b4d5efe4fa6bca14c62769210a45accb1a18416a4a4be688dfb2f70894874c",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-food": {
       "url": "https://bcgreens.ca/launch-plan-to-support-local-food-production-and-farmers/",
       "finalUrl": "https://bcgreens.ca/launch-plan-to-support-local-food-production-and-farmers/",
-      "retrievedAt": "2026-10-05T10:05:03.069Z",
-      "sha256": "19319cede52e6ace4218482d1980f7a821b4cb47e3fd3ebb3e028ed66b84eef9",
+      "retrievedAt": "2026-10-13T09:23:23.121Z",
+      "sha256": "993180841584fd1b1245caef61d7042bd9781a0707178a76a4faac22c27197f0",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-drugs": {
       "url": "https://bcgreens.ca/announce-toxic-drugs-policy-alongside-former-chief-coroner-and-candidate-for-saanich-south-lisa-lapointe/",
       "finalUrl": "https://bcgreens.ca/announce-toxic-drugs-policy-alongside-former-chief-coroner-and-candidate-for-saanich-south-lisa-lapointe/",
-      "retrievedAt": "2026-10-05T10:05:03.123Z",
-      "sha256": "96bb58209366f286a4b8780827a3d05d34dbd138f42f3a47571e7ef0527f4205",
+      "retrievedAt": "2026-10-13T09:23:23.190Z",
+      "sha256": "507cc6f6605ad15025c98459425391847224f22d7738c6386a7644152a92a20b",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-ai": {
       "url": "https://bcgreens.ca/announce-plan-to-regulate-ai-and-hold-big-tech-accountable/",
       "finalUrl": "https://bcgreens.ca/announce-plan-to-regulate-ai-and-hold-big-tech-accountable/",
-      "retrievedAt": "2026-10-05T10:05:03.188Z",
-      "sha256": "97f653c4eaafeb3fb8bfe748db73fe071b238e369eb7ea1de1599932ab0a3bb2",
+      "retrievedAt": "2026-10-13T09:23:23.261Z",
+      "sha256": "390236fc71f5f84579d3ea1f47e1a8269600b2df66272c6d5a15ef085099a7c2",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-coast": {
       "url": "https://bcgreens.ca/eby-wont-stand-up-for-our-coast-the-bc-greens-will/",
       "finalUrl": "https://bcgreens.ca/eby-wont-stand-up-for-our-coast-the-bc-greens-will/",
-      "retrievedAt": "2026-10-05T10:05:03.242Z",
-      "sha256": "e7c0e222edc04c616362a5ba7bc5cab01bb81eb828ad1ba7c6f1f5c03012c2c4",
+      "retrievedAt": "2026-10-13T09:23:23.330Z",
+      "sha256": "6e59275a37676f7029db3f810340b7b2f850957b578d6d8f05540240e9194870",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-green-seniors": {
       "url": "https://bcgreens.ca/announce-plan-to-support-seniors/",
       "finalUrl": "https://bcgreens.ca/announce-plan-to-support-seniors/",
-      "retrievedAt": "2026-10-05T10:05:03.297Z",
-      "sha256": "37f2fa35304f3384128d6a0e205d24143b5e5cbedbeaf11fc026166877643714",
+      "retrievedAt": "2026-10-13T09:23:23.403Z",
+      "sha256": "fa3eee9a60f1f4cac38f4ce415341f62a6faf3bc52ee6e9b01822ba8df5f7f82",
       "contentType": "text/html; charset=UTF-8"
     },
     "program-heritage-priorities-2026": {
       "url": "https://www.chpbc.ca/platform-priorities/",
       "finalUrl": "https://www.chpbc.ca/platform-priorities/",
-      "retrievedAt": "2026-10-05T10:05:03.583Z",
-      "sha256": "e1503aea60a078c5231fa418b8d38b75ed2d39e0a891fde1a3fdcf76aa554362",
+      "retrievedAt": "2026-10-13T09:23:23.690Z",
+      "sha256": "2760fb164752f4b3fa5d8553656729ef10af3199e0196f6823bf73a67b6fbd2b",
       "contentType": "text/html"
     },
     "program-con-energy-plan": {
       "url": "https://conservativebc.ca/wp-content/uploads/2026/09/BC-ENERGY-SUPERPOWER_5_compressed.pdf",
       "finalUrl": "https://conservativebc.ca/wp-content/uploads/2026/09/BC-ENERGY-SUPERPOWER_5_compressed.pdf",
-      "retrievedAt": "2026-10-05T10:04:59.725Z",
+      "retrievedAt": "2026-10-13T09:23:21.972Z",
       "sha256": "4e2712fea6da0f02cf991ffa44cf4d02354875975d1bad66378ff54775acef98",
       "contentType": "application/pdf"
     },
     "libertarian-candidates": {
       "url": "https://libertarian.bc.ca/2026-candidates/",
       "finalUrl": "https://libertarian.bc.ca/2026-candidates/",
-      "retrievedAt": "2026-10-04T23:14:24.035Z",
-      "sha256": "507365162e9cdc0d645424531c9c8ab2a798803cf77e48364123a88221ef0db3",
+      "retrievedAt": "2026-10-13T17:53:05.794Z",
+      "sha256": "908d7b39559c21bf200ff0fddf2647c80bacab40f3d29d944388ea605a02f82d",
       "contentType": "text/html; charset=UTF-8"
     },
     "heritage-candidates": {
       "url": "https://www.chpbc.ca/candidates-2026/",
       "finalUrl": "https://www.chpbc.ca/candidates-2026/",
-      "retrievedAt": "2026-10-04T23:14:24.574Z",
-      "sha256": "9cb60ac78b753688c6edb737d573f6a54d4ec5377581f195dcedadfd2ef9aae6",
+      "retrievedAt": "2026-10-13T17:53:07.115Z",
+      "sha256": "04cafada87417deee1786b2fbaa6fbec57ee82ece9e8ce58c842f306d38628d9",
       "contentType": "text/html"
     },
     "ndp-pam-alexis-portrait-7b2d8b666b": {
@@ -2786,23 +2786,975 @@
     "program-canwest-mission": {
       "url": "http://canwestparty.ca/mission.htm",
       "finalUrl": "http://canwestparty.ca/mission.htm",
-      "retrievedAt": "2026-10-05T10:05:03.633Z",
+      "retrievedAt": "2026-10-13T09:23:23.735Z",
       "sha256": "a6199d9036d4b669f15845d5ff18b7b3a9f7bf696907b95afdc67635c32471be",
       "contentType": "text/html"
     },
     "program-ndp-fair-share": {
       "url": "https://www.bcndp.ca/releases/build-bc-strong-eby-will-ask-wealthy-pitch-bit-more",
       "finalUrl": "https://www.bcndp.ca/releases/build-bc-strong-eby-will-ask-wealthy-pitch-bit-more",
-      "retrievedAt": "2026-10-05T10:05:03.747Z",
-      "sha256": "9fc3e3b12102b48d4f4c7414a1239e698433e3cd7b9d5c7561cff227b504f23c",
+      "retrievedAt": "2026-10-13T09:23:24.698Z",
+      "sha256": "afa3784b8fac974be8c62df710fe1391c2d841dab7a5ab7fa733f885dd101fdd",
       "contentType": "text/html; charset=utf-8"
     },
     "program-green-forestry": {
       "url": "https://bcgreens.ca/announce-plan-to-reform-forestry-sector-protecting-forests-jobs-and-communities/",
       "finalUrl": "https://bcgreens.ca/announce-plan-to-reform-forestry-sector-protecting-forests-jobs-and-communities/",
-      "retrievedAt": "2026-10-05T10:05:03.803Z",
-      "sha256": "f0b90ed85a114db9be89225f3f21dc554da1f0900703792cf9248b78a21b997a",
+      "retrievedAt": "2026-10-13T09:23:24.767Z",
+      "sha256": "cc7163062aa036fbe7397fbe509cfd3ff4b53fd9b6bbc1a28917d5622024dd5e",
       "contentType": "text/html; charset=UTF-8"
+    },
+    "ebc-candidates-update-webster": {
+      "url": "https://elections.bc.ca/news/2026-provincial-general-election-candidates-update/",
+      "finalUrl": "https://elections.bc.ca/news/2026-provincial-general-election-candidates-update/",
+      "retrievedAt": "2026-10-13T09:03:36.699Z",
+      "sha256": "4944426d321508e2c133c57424168a401be19fb70ba030adb79e0b99bcd6ca0d",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "ebc-candidates-update-sandhu": {
+      "url": "https://elections.bc.ca/news/2026-provincial-general-election-candidates-update-2/",
+      "finalUrl": "https://elections.bc.ca/news/2026-provincial-general-election-candidates-update-2/",
+      "retrievedAt": "2026-10-13T09:03:37.072Z",
+      "sha256": "1800a461aa52ce8366f913baa5b84de715884a2b2ecde14b819aeacbad62a970",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "ebc-candidates-update-depaco": {
+      "url": "https://elections.bc.ca/news/2026-provincial-general-election-candidates-update-3/",
+      "finalUrl": "https://elections.bc.ca/news/2026-provincial-general-election-candidates-update-3/",
+      "retrievedAt": "2026-10-13T09:03:37.454Z",
+      "sha256": "faef8a6a1b18a5dab78414421c27f944bfe079772f192064d292355614451f91",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "ndp-leah-ballantyne-portrait-9c9ffaf8ad": {
+      "url": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/leahballantyne_webimages_headshot-1000x1000px.png?itok=me-OUNKJ",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/leahballantyne_webimages_headshot-1000x1000px.png?itok=me-OUNKJ",
+      "retrievedAt": "2026-10-13T09:08:05.183Z",
+      "sha256": "9c9ffaf8ad4b042e24e297c790e7840ffe20b5b540956a33356b2aabd3c37b0f",
+      "contentType": "image/png"
+    },
+    "ndp-jules-cote-portrait-ddd7497348": {
+      "url": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/julescote_websiteimages_headshot-1000x1000px.png?itok=AEfooDji",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/julescote_websiteimages_headshot-1000x1000px.png?itok=AEfooDji",
+      "retrievedAt": "2026-10-13T09:08:05.334Z",
+      "sha256": "ddd74973483ae50f64026e7e8a66a1cd7a51b60e38f308eab3c130f1462d54f0",
+      "contentType": "image/png"
+    },
+    "ndp-frankie-abel-portrait-1164682406": {
+      "url": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/frankieabel_webimages_headshot-1000x1000px.jpg?itok=PFl64Chy",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/frankieabel_webimages_headshot-1000x1000px.jpg?itok=PFl64Chy",
+      "retrievedAt": "2026-10-13T09:08:05.344Z",
+      "sha256": "116468240640ae64697b8e2939c4db7a0b03617402b0050f8dc63bd4944d9ab3",
+      "contentType": "image/jpeg"
+    },
+    "ndp-adila-shaukat-portrait-703aab9a3a": {
+      "url": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/adilashaukat_webimages_headshot-1000x1000px.png?itok=D6XZ70XO",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/adilashaukat_webimages_headshot-1000x1000px.png?itok=D6XZ70XO",
+      "retrievedAt": "2026-10-13T09:08:05.387Z",
+      "sha256": "703aab9a3a3f962ad87aa39a7ecaf505fc327c83939761e82b1b563869243f8b",
+      "contentType": "image/png"
+    },
+    "ndp-jason-leboe-portrait-c3256eed7c": {
+      "url": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/jasonleboe_websiteimages_headshot-1000x1000px.png?itok=9JdYWwFI",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/jasonleboe_websiteimages_headshot-1000x1000px.png?itok=9JdYWwFI",
+      "retrievedAt": "2026-10-13T09:08:05.439Z",
+      "sha256": "c3256eed7c27694617cc30a244839d9459cbe8d38b537a4ef08cdbf513e888d2",
+      "contentType": "image/png"
+    },
+    "ndp-mike-wisla-portrait-c8a223ef42": {
+      "url": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/mikewisla_webimages_headshot-1000x1000px_0.png?itok=Y13Z9gwA",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/mikewisla_webimages_headshot-1000x1000px_0.png?itok=Y13Z9gwA",
+      "retrievedAt": "2026-10-13T09:08:05.491Z",
+      "sha256": "c8a223ef42c33ef7c3e983bb6af339e1107dc2d9bc2d6e239d3ac1d751eb23b2",
+      "contentType": "image/png"
+    },
+    "ndp-kory-clark-portrait-c88ea3dfb2": {
+      "url": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/koryclark_webimages_headshot-1000x1000px_0.png?itok=-p0yyYqp",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/koryclark_webimages_headshot-1000x1000px_0.png?itok=-p0yyYqp",
+      "retrievedAt": "2026-10-13T09:08:05.543Z",
+      "sha256": "c88ea3dfb2af1e383b1a5aaafc5e8cc15f51c0d1c41601fea459616c635deb33",
+      "contentType": "image/png"
+    },
+    "ndp-miriam-rycroft-portrait-e783c1838c": {
+      "url": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/miriamrycroft_klm_websiteimages_headshot-1000x1000px.png?itok=E6VqsSGn",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/miriamrycroft_klm_websiteimages_headshot-1000x1000px.png?itok=E6VqsSGn",
+      "retrievedAt": "2026-10-13T09:08:05.551Z",
+      "sha256": "e783c1838c4d799f875c0c6e77c0beedd71a3e8eee8b51b42a9742db863276e3",
+      "contentType": "image/png"
+    },
+    "ndp-erin-osborne-portrait-87b5a52466": {
+      "url": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/erinosborne_klm_websiteimages_headshot-1000x1000px_0.png?itok=wAzLLxPx",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/erinosborne_klm_websiteimages_headshot-1000x1000px_0.png?itok=wAzLLxPx",
+      "retrievedAt": "2026-10-13T09:08:05.595Z",
+      "sha256": "87b5a5246609573e19d2ff35fa4e6be5c312b05221fd9a8dbf7ae03010568ced",
+      "contentType": "image/png"
+    },
+    "ndp-marsha-rose-dufresne-portrait-4a75a1ecb1": {
+      "url": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/marshadufresne_wvs_websiteimages_headshot-1000x1000px.png?itok=ZQJgOEX2",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/marshadufresne_wvs_websiteimages_headshot-1000x1000px.png?itok=ZQJgOEX2",
+      "retrievedAt": "2026-10-13T09:08:05.652Z",
+      "sha256": "4a75a1ecb1bce93c6f5d0d6ad78572ccaf584b1d1ad46e523ef51cc998dfb31f",
+      "contentType": "image/png"
+    },
+    "ndp-ian-mcmahon-portrait-217d0f70a9": {
+      "url": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/ianmcmahon_pcn_websiteimages_headshot-1000x1000px.png?itok=gjN-f9GW",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/ianmcmahon_pcn_websiteimages_headshot-1000x1000px.png?itok=gjN-f9GW",
+      "retrievedAt": "2026-10-13T09:08:05.753Z",
+      "sha256": "217d0f70a9ccf708f9455ca8faf7c2a95ddf7d563083a4d8d8beb284d408ff7d",
+      "contentType": "image/png"
+    },
+    "ndp-denice-bardua-portrait-7ff658a80c": {
+      "url": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/denicebardua_pro_websiteimages_headshot-1000x1000px.png?itok=cPw9Sq15",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/denicebardua_pro_websiteimages_headshot-1000x1000px.png?itok=cPw9Sq15",
+      "retrievedAt": "2026-10-13T09:08:05.801Z",
+      "sha256": "7ff658a80c612ad3f2a4d5fb84383f543c84952f67ccd5e51e990114c84a56f1",
+      "contentType": "image/png"
+    },
+    "ndp-carol-bourque-portrait-e203dc1821": {
+      "url": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/carolbourque_webimages_headshot-1000x1000px.png?itok=rpt564CC",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/carolbourque_webimages_headshot-1000x1000px.png?itok=rpt564CC",
+      "retrievedAt": "2026-10-13T09:08:05.853Z",
+      "sha256": "e203dc18213236e34b84ae3392f1c5bdd059f98d4b26639d7344c13d6a7e0a99",
+      "contentType": "image/png"
+    },
+    "ndp-dhar-grewal-portrait-0d736c3547": {
+      "url": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/dhargrewal_clr_website_images_headshot-1000x1000px.png?itok=375hUYI8",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/dhargrewal_clr_website_images_headshot-1000x1000px.png?itok=375hUYI8",
+      "retrievedAt": "2026-10-13T09:08:05.905Z",
+      "sha256": "0d736c3547bc4ae1219ec03e3695918ba8b860dc3828c84e5a8835e434e0b794",
+      "contentType": "image/png"
+    },
+    "ndp-bruce-kong-portrait-ddf37498b1": {
+      "url": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/brucekong_website_images_headshot-1000x1000px.png?itok=dBh9LMcD",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/brucekong_website_images_headshot-1000x1000px.png?itok=dBh9LMcD",
+      "retrievedAt": "2026-10-13T09:08:05.958Z",
+      "sha256": "ddf37498b14918d5cb3df93b838a22a0fc9eda63ae68f756267eaa3a84aa7323",
+      "contentType": "image/png"
+    },
+    "ndp-michelle-livaja-portrait-69f9eed516": {
+      "url": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/michellelivaja_wvs_websiteimages_headshot-1000x1000px_0.png?itok=64Dnzatc",
+      "finalUrl": "https://www.bcndp.ca/sites/default/files/styles/large/public/headshots/michellelivaja_wvs_websiteimages_headshot-1000x1000px_0.png?itok=64Dnzatc",
+      "retrievedAt": "2026-10-13T09:08:06.011Z",
+      "sha256": "69f9eed516b2b3621f9656a87198e4f78ce9587629b3fdb2031a533b74f7d0ba",
+      "contentType": "image/png"
+    },
+    "green-maddy-kennedy-parrott-portrait-2a83cea146": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Maddy-Kennedy-Parrott-BCGreens-Candidate2026.jpg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Maddy-Kennedy-Parrott-BCGreens-Candidate2026.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.087Z",
+      "sha256": "2a83cea146a627e256a194d8f6bdcdf938218927ba74092c8991157be087a2dc",
+      "contentType": "image/jpeg"
+    },
+    "green-bryan-fockler-portrait-3d0cc04e31": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Screenshot-2026-10-06-203719.png",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Screenshot-2026-10-06-203719.png",
+      "retrievedAt": "2026-10-13T09:08:06.120Z",
+      "sha256": "3d0cc04e31f5bdee29deacc78c56efc7566077c02e1cbbe394bc4a9581432fc2",
+      "contentType": "image/png"
+    },
+    "green-rana-nelson-portrait-69f23686f8": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Rana-Nelson-BCGreens-Candidate2026.jpg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Rana-Nelson-BCGreens-Candidate2026.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.135Z",
+      "sha256": "69f23686f859cbe78d8aa7a863f45eaa1f6bd04d98b1bc7aea497d0dd0f36f63",
+      "contentType": "image/jpeg"
+    },
+    "green-valerie-morrison-portrait-3b26730be7": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Valerie-Morrison-BCGreens-Candidate2026.jpg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Valerie-Morrison-BCGreens-Candidate2026.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.146Z",
+      "sha256": "3b26730be7f58d7b0f482f8d1de7edb6a19b509605cc3ea72d13a7e9fe5ee790",
+      "contentType": "image/jpeg"
+    },
+    "green-jay-van-oostdam-portrait-6b9a0cc766": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/JayVanOostdam-BCGreens-Candidate2026.jpg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/JayVanOostdam-BCGreens-Candidate2026.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.158Z",
+      "sha256": "6b9a0cc766e867fbbec2d68c742691e765d3531b1b75113676bb016813e05d72",
+      "contentType": "image/jpeg"
+    },
+    "green-skadi-green-portrait-c2084afa6f": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Skadi-Green-BCGreens-Candidate2026.jpg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Skadi-Green-BCGreens-Candidate2026.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.165Z",
+      "sha256": "c2084afa6fb086c3e1b4398c64a6ec22250d7a0fdbd650f1a8d378b21427da63",
+      "contentType": "image/jpeg"
+    },
+    "green-annelise-beach-portrait-32c6e5c6a0": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Annelise-Beach-BCGreens-Candidate2026.jpeg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Annelise-Beach-BCGreens-Candidate2026.jpeg",
+      "retrievedAt": "2026-10-13T09:08:06.173Z",
+      "sha256": "32c6e5c6a0eae69ce68ff8bc5e0c4e7b77941590250b2a6c950e0d319305ed35",
+      "contentType": "image/jpeg"
+    },
+    "green-saoirse-mackinnon-portrait-4d02ae539d": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Saoirse-MacKinnon-BCGreens-Candidate2026.jpg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Saoirse-MacKinnon-BCGreens-Candidate2026.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.180Z",
+      "sha256": "4d02ae539d71c2536ba4b6782875cd79e8e37b74607ae3cc7871c71c84e57235",
+      "contentType": "image/jpeg"
+    },
+    "green-keenan-dennehy-portrait-f782d5dde3": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Keenan-Dennehy-BCGreens-Candidate2026.jpeg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Keenan-Dennehy-BCGreens-Candidate2026.jpeg",
+      "retrievedAt": "2026-10-13T09:08:06.189Z",
+      "sha256": "f782d5dde33eaf429eab37ff9dab608271107c52d29290de8c61502242fea076",
+      "contentType": "image/jpeg"
+    },
+    "green-charlene-smylie-portrait-c4ae7acacd": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Charlene-Smylie-BCGreens-Candidate2026.jpg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Charlene-Smylie-BCGreens-Candidate2026.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.197Z",
+      "sha256": "c4ae7acacd8121b26bad1ee0e45f082e6f80738957ccabbac3eefa9838281afa",
+      "contentType": "image/jpeg"
+    },
+    "green-sam-meyer-portrait-f4bb225be3": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Sam-Meyer-BCGreens-Candidate2026.jpeg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Sam-Meyer-BCGreens-Candidate2026.jpeg",
+      "retrievedAt": "2026-10-13T09:08:06.204Z",
+      "sha256": "f4bb225be39bd70b425b5e89473586bba02315a655b540bf83398fb261cec01d",
+      "contentType": "image/jpeg"
+    },
+    "green-sharleen-weatherley-portrait-10a4e03d17": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Sharleen-Weatherley-BCGreens-Candidate2026.jpg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Sharleen-Weatherley-BCGreens-Candidate2026.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.218Z",
+      "sha256": "10a4e03d17256b90f4741d6a6a4b713d6eeaeae06865d4573c6f8525b4af4c98",
+      "contentType": "image/jpeg"
+    },
+    "green-joshua-a-singer-johnson-portrait-793f3f6c18": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Joshua-A-Singer-Johnson-BCGreens-Candidate2026.jpg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Joshua-A-Singer-Johnson-BCGreens-Candidate2026.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.229Z",
+      "sha256": "793f3f6c1857c4165e10bbf4aa1fd07f241cb80444b1b758f4bf0c39e739ca3e",
+      "contentType": "image/jpeg"
+    },
+    "green-ben-holt-portrait-c85791bdae": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Ben-Holt-BCGreens-Candidate2026.png",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Ben-Holt-BCGreens-Candidate2026.png",
+      "retrievedAt": "2026-10-13T09:08:06.245Z",
+      "sha256": "c85791bdaefc74176bfd7e8cd7d5cf0d60248a5219b055c7e620a5c4112f9a2e",
+      "contentType": "image/png"
+    },
+    "green-stephanie-hendy-portrait-9e920d5287": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Stephanie-Hendy-BCGreens-Candidate2026.jpg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Stephanie-Hendy-BCGreens-Candidate2026.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.257Z",
+      "sha256": "9e920d5287412014639e31b35610936782b55c7d6d6a8360fa0b6d5768198544",
+      "contentType": "image/jpeg"
+    },
+    "green-wei-chou-portrait-506f958ddc": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Wei-Chou-BCGreens-Candidate2026.jpeg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Wei-Chou-BCGreens-Candidate2026.jpeg",
+      "retrievedAt": "2026-10-13T09:08:06.265Z",
+      "sha256": "506f958ddcaa6b91004bcb02c180036f2a17a847acea8cdb7065c85b029cc1f7",
+      "contentType": "image/jpeg"
+    },
+    "green-griffin-leonard-lea-portrait-3743d30524": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Griffin-Lea-BCGreens-Candidate2026.jpg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Griffin-Lea-BCGreens-Candidate2026.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.273Z",
+      "sha256": "3743d30524aa0233dd4f3f50576cc08c8a5c78e637761b24814f1683aef29d71",
+      "contentType": "image/jpeg"
+    },
+    "green-jodie-capling-portrait-ea34cc56f4": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Jodie-Capling-BCGreens-Candidate2026.jpeg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Jodie-Capling-BCGreens-Candidate2026.jpeg",
+      "retrievedAt": "2026-10-13T09:08:06.282Z",
+      "sha256": "ea34cc56f45cd81c25c55f95387b2d6bbd55a2299c332792acce0e590c6769e7",
+      "contentType": "image/jpeg"
+    },
+    "green-calvin-dang-portrait-65c6bc552a": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/6db973901788cbf98e503011084077b6.jpg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/6db973901788cbf98e503011084077b6.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.289Z",
+      "sha256": "65c6bc552a4a14134d44b351a40457e19c014ce20eaecf0d630aa932d2ea99d4",
+      "contentType": "image/jpeg"
+    },
+    "green-luc-burns-portrait-c11443076b": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/0b2b7ffc-9e67-4f58-a6b9-9fa60b966350.jpg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/0b2b7ffc-9e67-4f58-a6b9-9fa60b966350.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.298Z",
+      "sha256": "c11443076b8b589a3657ae7e39a24b0cc5dc4413bd3d8f4b0a5bf32497ce57d0",
+      "contentType": "image/jpeg"
+    },
+    "green-yudhbir-gill-portrait-c52018eb73": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/IMG_2553-scaled.jpeg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/IMG_2553-scaled.jpeg",
+      "retrievedAt": "2026-10-13T09:08:06.316Z",
+      "sha256": "c52018eb73dcb606c5352e5665b72d14fe7caf7dc7f93bb964951fdc084a91d7",
+      "contentType": "image/jpeg"
+    },
+    "green-bill-mcconnell-portrait-3426db8031": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Bill-McConnell-Candidate2026-BCGreens.jpeg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Bill-McConnell-Candidate2026-BCGreens.jpeg",
+      "retrievedAt": "2026-10-13T09:08:06.323Z",
+      "sha256": "3426db8031972670cb88eb4cc2f64ade2edf886fdf8a420441a2dd646ea6adcc",
+      "contentType": "image/jpeg"
+    },
+    "green-jodi-murphy-portrait-d691715f6b": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Jodi18x1200x1x1crop.jpeg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Jodi18x1200x1x1crop.jpeg",
+      "retrievedAt": "2026-10-13T09:08:06.339Z",
+      "sha256": "d691715f6b87898111232f70908a9599276cc59c82afdb66c5c6d24d791776a2",
+      "contentType": "image/jpeg"
+    },
+    "green-sarah-macleod-portrait-d50628606c": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Sarah-MacLeod-BCGreens-Candidate2026.jpg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Sarah-MacLeod-BCGreens-Candidate2026.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.346Z",
+      "sha256": "d50628606c20da1df4c465fbbf4f3fec6225a7933e395cb7af11c6d3afdd9a90",
+      "contentType": "image/jpeg"
+    },
+    "green-priyan-samarakoone-portrait-4c48f63145": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Priyan-Samarakoone-BCGreens-Candidate2026.jpg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Priyan-Samarakoone-BCGreens-Candidate2026.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.354Z",
+      "sha256": "4c48f63145cdc8312bd52e645899c7d49e4d4eaedfa5a27c7cd0e4808a6a13d3",
+      "contentType": "image/jpeg"
+    },
+    "green-blair-visscher-portrait-c8d56666bc": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Blair-Visscher-BCGreens-Candidate2026.jpg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Blair-Visscher-BCGreens-Candidate2026.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.364Z",
+      "sha256": "c8d56666bcecb2045ff9aa8c5b4384eb043ef90e9e888f7ca3d5acc55e7c7837",
+      "contentType": "image/jpeg"
+    },
+    "green-adam-frank-portrait-d8a58a43c7": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Adam-Frank-BCGreens-Candidate2026.jpg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Adam-Frank-BCGreens-Candidate2026.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.373Z",
+      "sha256": "d8a58a43c7f638a80804da2f12ec50f0136dab55768bcb8080268f26bca1c791",
+      "contentType": "image/jpeg"
+    },
+    "green-anisha-sandhu-portrait-be3f700e3a": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/Anisha-Sandhu-BCGreens-Candidate2026.jpeg",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/Anisha-Sandhu-BCGreens-Candidate2026.jpeg",
+      "retrievedAt": "2026-10-13T09:08:06.381Z",
+      "sha256": "be3f700e3a029f263aaa03b416df54dae5926b6a4fa1b5870a134f703fa977f2",
+      "contentType": "image/jpeg"
+    },
+    "centre-gurpreet-chahal-portrait-3734329586": {
+      "url": "https://www.centrebc.ca/wp-content/uploads/2026/10/Gurpreet-Chahal-headshot.jpg",
+      "finalUrl": "https://www.centrebc.ca/wp-content/uploads/2026/10/Gurpreet-Chahal-headshot.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.448Z",
+      "sha256": "37343295866421d4452897ae1f0392bc1723054346ffa4d5cbe75226007bc090",
+      "contentType": "image/webp"
+    },
+    "centre-kaden-mann-portrait-d7f8faf861": {
+      "url": "https://www.centrebc.ca/wp-content/uploads/2026/10/Kaden-Mann-headshot.jpg",
+      "finalUrl": "https://www.centrebc.ca/wp-content/uploads/2026/10/Kaden-Mann-headshot.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.471Z",
+      "sha256": "d7f8faf861d7f9670f76bf9c0702c067abc6e9e54c96ad4f0534d8251d0f18ee",
+      "contentType": "image/webp"
+    },
+    "centre-paul-heywood-portrait-2f0de8f081": {
+      "url": "https://www.centrebc.ca/wp-content/uploads/2026/10/Paul-Heywood-headshot.jpg",
+      "finalUrl": "https://www.centrebc.ca/wp-content/uploads/2026/10/Paul-Heywood-headshot.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.488Z",
+      "sha256": "2f0de8f08117d8235249149ef0ada92637657aaddd2c584fd65fbf6e4bbe0ff6",
+      "contentType": "image/webp"
+    },
+    "centre-kyle-stevenson-portrait-c3958f9262": {
+      "url": "https://www.centrebc.ca/wp-content/uploads/2026/10/Kyle-Stevenson-headshot.jpg",
+      "finalUrl": "https://www.centrebc.ca/wp-content/uploads/2026/10/Kyle-Stevenson-headshot.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.498Z",
+      "sha256": "c3958f92627d0d6cce9a5f60dd9d25fdce9cef23a346dda5cc8ea7775ae273a3",
+      "contentType": "image/webp"
+    },
+    "centre-sargy-chima-portrait-9daa83942c": {
+      "url": "https://www.centrebc.ca/wp-content/uploads/2026/10/sargy-original-scaled-e1791524390888-1024x1024.jpg",
+      "finalUrl": "https://www.centrebc.ca/wp-content/uploads/2026/10/sargy-original-scaled-e1791524390888-1024x1024.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.510Z",
+      "sha256": "9daa83942c6844a4ef6f825488904217ccf80d606db9e9212661b104ccd45171",
+      "contentType": "image/jpeg"
+    },
+    "centre-manav-manro-portrait-28bdbf74e8": {
+      "url": "https://www.centrebc.ca/wp-content/uploads/2026/10/Manav-Manro-headshot.jpg",
+      "finalUrl": "https://www.centrebc.ca/wp-content/uploads/2026/10/Manav-Manro-headshot.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.526Z",
+      "sha256": "28bdbf74e8f892ee312135738ded666b75aac58914229fe2526271aff42939a4",
+      "contentType": "image/webp"
+    },
+    "centre-judy-higginbotham-portrait-79191752d8": {
+      "url": "https://www.centrebc.ca/wp-content/uploads/2026/10/judy-original-scaled-e1791524504116-1024x1024.jpg",
+      "finalUrl": "https://www.centrebc.ca/wp-content/uploads/2026/10/judy-original-scaled-e1791524504116-1024x1024.jpg",
+      "retrievedAt": "2026-10-13T09:08:06.540Z",
+      "sha256": "79191752d85be4250744162fe25c81b6dc6bd0fad2752b785806e9a8a976c87f",
+      "contentType": "image/jpeg"
+    },
+    "centre-alan-beesley-portrait-5063a933a0": {
+      "url": "https://www.centrebc.ca/wp-content/uploads/2026/10/alan-beesley-square-1024x1024.png",
+      "finalUrl": "https://www.centrebc.ca/wp-content/uploads/2026/10/alan-beesley-square-1024x1024.png",
+      "retrievedAt": "2026-10-13T09:08:06.589Z",
+      "sha256": "5063a933a08ad3432688bbb331325685551d0321ea07410245dfa3bedf9ef2dd",
+      "contentType": "image/png"
+    },
+    "one-virender-dass-portrait-2e4a24672e": {
+      "url": "https://framerusercontent.com/images/FuOa89tD1jPaWmFUXgU9ViCzUoo.png?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/FuOa89tD1jPaWmFUXgU9ViCzUoo.png?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.674Z",
+      "sha256": "2e4a24672e916150db194a60ed653bd4a37199cf3c53abdba995c60094d5d446",
+      "contentType": "image/png"
+    },
+    "one-keith-pomeroy-portrait-26b03a7a2d": {
+      "url": "https://framerusercontent.com/images/buMCDlYn336Oir8XZEq8WL7IQ.jpeg?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/buMCDlYn336Oir8XZEq8WL7IQ.jpeg?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.698Z",
+      "sha256": "26b03a7a2d8722f8ea050f940bd74b98f2e05312a28a8f8349c19be00178ccb9",
+      "contentType": "image/jpeg"
+    },
+    "one-de-ding-portrait-7df9de15f4": {
+      "url": "https://framerusercontent.com/images/v6Sp5azV7FzcIDGlp7Yz01rt8.jpeg?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/v6Sp5azV7FzcIDGlp7Yz01rt8.jpeg?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.708Z",
+      "sha256": "7df9de15f44531323d24c933fd67e2106b8c10db7fff4909d10c5eb34e319794",
+      "contentType": "image/jpeg"
+    },
+    "one-shane-friesen-portrait-bceef1e8bf": {
+      "url": "https://framerusercontent.com/images/vn2GE1vv2VXFdyDTduE0oSaLOSA.jpeg?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/vn2GE1vv2VXFdyDTduE0oSaLOSA.jpeg?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.718Z",
+      "sha256": "bceef1e8bfc142a6c2b32aaed514ceba378c1f75d44c466e52f5f3143121aec7",
+      "contentType": "image/jpeg"
+    },
+    "one-rocky-mcafee-portrait-4b5b8993a7": {
+      "url": "https://framerusercontent.com/images/aivawYfWu63uBE5VQCFvdVC4ys.png?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/aivawYfWu63uBE5VQCFvdVC4ys.png?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.730Z",
+      "sha256": "4b5b8993a71ecfe67f84ca53fad867a171814d4893af51df564f305f0235e464",
+      "contentType": "image/png"
+    },
+    "one-deborah-friesen-portrait-c8142c5084": {
+      "url": "https://framerusercontent.com/images/AQW5fOQAlgXITBUP5GOC64ulUCw.jpeg?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/AQW5fOQAlgXITBUP5GOC64ulUCw.jpeg?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.754Z",
+      "sha256": "c8142c50843d4471519dbb97b5c5ef14ae3060c3b38a65e05c42048155bc9e1d",
+      "contentType": "image/jpeg"
+    },
+    "one-bill-desrosiers-portrait-f6be33885d": {
+      "url": "https://framerusercontent.com/images/u0KariqvPvXh26vTAjlD7oKImRw.png?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/u0KariqvPvXh26vTAjlD7oKImRw.png?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.766Z",
+      "sha256": "f6be33885d362b11ba01aeed2e0e3f2ee9c0a82e94640166ac5ad3bc84378a18",
+      "contentType": "image/png"
+    },
+    "one-abraham-nordine-portrait-0187fe121d": {
+      "url": "https://framerusercontent.com/images/pKaJeG92vHijH179wm7gtyxEjc.jpeg?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/pKaJeG92vHijH179wm7gtyxEjc.jpeg?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.775Z",
+      "sha256": "0187fe121d7e158ef8447da4333c63e01a52d9ff425a16698a77e25969aaff59",
+      "contentType": "image/jpeg"
+    },
+    "one-stephen-hill-portrait-d4c37aae6c": {
+      "url": "https://framerusercontent.com/images/D5PIROSgw58OBbFrgV2Gy3JbSI.png?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/D5PIROSgw58OBbFrgV2Gy3JbSI.png?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.785Z",
+      "sha256": "d4c37aae6c9749890211e9210bf4a9018c21b5407020fd7746ccb5874d2ee5ec",
+      "contentType": "image/png"
+    },
+    "one-shelly-jan-portrait-cae5154cad": {
+      "url": "https://framerusercontent.com/images/tUwZJY7vB5QPTXahS67gdHvCeuY.jpeg?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/tUwZJY7vB5QPTXahS67gdHvCeuY.jpeg?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.794Z",
+      "sha256": "cae5154cad6b7aec4ea0608f6acc74d6533d6c4802961e84ff409f3894f3cb04",
+      "contentType": "image/jpeg"
+    },
+    "one-frederick-thiele-portrait-ae6b1b20a8": {
+      "url": "https://framerusercontent.com/images/4vxWpzRTEfjPVelYWar68E06Yc.png?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/4vxWpzRTEfjPVelYWar68E06Yc.png?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.804Z",
+      "sha256": "ae6b1b20a83568cdd65389632b17daf4d1e2eadd829a2c5095d754f0857a0a2f",
+      "contentType": "image/png"
+    },
+    "one-barbara-presch-portrait-9526d42f34": {
+      "url": "https://framerusercontent.com/images/EAGzQVAndu9NAD1QyJIIpw9Etc.png?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/EAGzQVAndu9NAD1QyJIIpw9Etc.png?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.815Z",
+      "sha256": "9526d42f349eb720ccf6523b97f4f9efce68734660d465b4fafd3d54df9ee608",
+      "contentType": "image/png"
+    },
+    "one-larry-eugene-taylor-portrait-756eed0abd": {
+      "url": "https://framerusercontent.com/images/1RT4SIRts3uCZw6YG6sX2MRwAmU.jpeg?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/1RT4SIRts3uCZw6YG6sX2MRwAmU.jpeg?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.825Z",
+      "sha256": "756eed0abd7d3d12120dade1ec7102563e9962e796d5e7e8f1df57dbade78dfd",
+      "contentType": "image/jpeg"
+    },
+    "one-oliver-wildfong-portrait-ef38a4d644": {
+      "url": "https://framerusercontent.com/images/Crrq63P9ouS6aqIVX1K0sKVN04.png?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/Crrq63P9ouS6aqIVX1K0sKVN04.png?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.835Z",
+      "sha256": "ef38a4d6448c2c0ba479c4665daa880ece58d5a4a6d510665b40c9020e191b8a",
+      "contentType": "image/png"
+    },
+    "one-travis-marchenski-portrait-c5e1d85ba9": {
+      "url": "https://framerusercontent.com/images/B1KbmiRWHHTveJ6ltcqYvI8jrlU.jpeg?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/B1KbmiRWHHTveJ6ltcqYvI8jrlU.jpeg?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.844Z",
+      "sha256": "c5e1d85ba98c5b36f3f89c7227902422d503e14a50c0b18fc48ef6d22ca73e0a",
+      "contentType": "image/jpeg"
+    },
+    "one-todd-holowchak-portrait-f495069377": {
+      "url": "https://framerusercontent.com/images/n4vwhVDnvQhdglioGa9TCbYWtf8.png?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/n4vwhVDnvQhdglioGa9TCbYWtf8.png?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.858Z",
+      "sha256": "f4950693772bb71079ebe7e2c03f6ab11a47a78e232557a893e2069c4b5ee0e2",
+      "contentType": "image/png"
+    },
+    "one-amanda-james-portrait-7eea774b0f": {
+      "url": "https://framerusercontent.com/images/zzGKTWM94yqwlCvZ5QqnoqxYptY.png?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/zzGKTWM94yqwlCvZ5QqnoqxYptY.png?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.868Z",
+      "sha256": "7eea774b0fe9a66fc229029d52253b3701a474dfd60f404b16b5ab5ec3929caa",
+      "contentType": "image/png"
+    },
+    "one-naomi-chocyk-portrait-d019fa3654": {
+      "url": "https://framerusercontent.com/images/FMsxhuewpHsVvkVhU02NEbI0MM.jpeg?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/FMsxhuewpHsVvkVhU02NEbI0MM.jpeg?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.877Z",
+      "sha256": "d019fa36547754e58371158b1a970c1ab4bca2d892cfe8f6494e2cf749a06458",
+      "contentType": "image/jpeg"
+    },
+    "one-jenny-yamagata-portrait-486d972c15": {
+      "url": "https://framerusercontent.com/images/Ua0fmjK3uWTriWHelMedlXZIEE.png?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/Ua0fmjK3uWTriWHelMedlXZIEE.png?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:08:06.889Z",
+      "sha256": "486d972c159d089e54807bb7a57f5205ef9103cce72e5f83b9fc69031a7f37f3",
+      "contentType": "image/png"
+    },
+    "freedom-errol-povah-portrait-57fe551ce2": {
+      "url": "https://freedompartybc.ca/wp-content/uploads/2026/10/Errol-Portrait-Temp.png",
+      "finalUrl": "https://freedompartybc.ca/wp-content/uploads/2026/10/Errol-Portrait-Temp.png",
+      "retrievedAt": "2026-10-13T09:08:07.328Z",
+      "sha256": "57fe551ce2a3d1517d46b764fc9e821f7c2a2bccc73fe57efc31af1c44220c01",
+      "contentType": "image/png"
+    },
+    "heritage-jeff-brown-portrait-949335769e": {
+      "url": "https://www.chpbc.ca/wp-content/uploads/2026/10/jeffery-brown.jpg",
+      "finalUrl": "https://www.chpbc.ca/wp-content/uploads/2026/10/jeffery-brown.jpg",
+      "retrievedAt": "2026-10-13T09:08:07.730Z",
+      "sha256": "949335769e1e05f3487f5d50469f3f053440b2326c2a365d1462d77a670cd614",
+      "contentType": "image/jpeg"
+    },
+    "communist-robert-crooks-portrait-dc52b58fd6": {
+      "url": "https://cpcbc.ca/wp-content/uploads/2026/10/2.png",
+      "finalUrl": "https://cpcbc.ca/wp-content/uploads/2026/10/2.png",
+      "retrievedAt": "2026-10-13T09:08:08.249Z",
+      "sha256": "dc52b58fd6af1dec641ca79cf64fa8469915706dffd39971d99af12e00882d68",
+      "contentType": "image/png"
+    },
+    "communist-james-chumsa-portrait-6ca0c1315e": {
+      "url": "https://cpcbc.ca/wp-content/uploads/2026/10/3.png",
+      "finalUrl": "https://cpcbc.ca/wp-content/uploads/2026/10/3.png",
+      "retrievedAt": "2026-10-13T09:08:08.720Z",
+      "sha256": "6ca0c1315ea0bc852bb5288871ab53171841e4cf1ceb156adcd1c9f6b05b851a",
+      "contentType": "image/png"
+    },
+    "communist-pepper-saltman-portrait-61a7ca555a": {
+      "url": "https://cpcbc.ca/wp-content/uploads/2026/10/4.png",
+      "finalUrl": "https://cpcbc.ca/wp-content/uploads/2026/10/4.png",
+      "retrievedAt": "2026-10-13T09:08:08.893Z",
+      "sha256": "61a7ca555a637256af5b276ff84304d2160aba867c6b2ad81c5a58a646d8fd6a",
+      "contentType": "image/png"
+    },
+    "liaison-2026-10-09": {
+      "url": "https://press.liaisonstrategies.ca/bc-conservatives-lead-ndp-43-to-37-as-eby-approval-falls/",
+      "finalUrl": "https://press.liaisonstrategies.ca/bc-conservatives-lead-ndp-43-to-37-as-eby-approval-falls/",
+      "retrievedAt": "2026-10-13T09:18:52.758Z",
+      "sha256": "07e593f600e6bd8999304fcc92ef73743fa767c85db3b2e8247587deec5ab7d0",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "liaison-2026-10-09-tables": {
+      "url": "https://press.liaisonstrategies.ca/content/files/2026/10/2026.10.09-British-Columbia-Tables.pdf",
+      "finalUrl": "https://storage.ghost.io/c/5a/2c/5a2c6702-fc8c-4232-bdc0-33fad8d71a80/content/files/2026/10/2026.10.09-British-Columbia-Tables.pdf",
+      "retrievedAt": "2026-10-13T09:18:52.851Z",
+      "sha256": "231b0e5c5cb837b2d09b81dba7dba45e0da88a212f708f3ec7170de584cba9dc",
+      "contentType": "application/pdf"
+    },
+    "ari-2026-10-05": {
+      "url": "https://angusreid.org/bc-election-as-voters-begin-to-lock-in-conservatives-hold-five-point-lead-over-gaining-ndp/",
+      "finalUrl": "https://angusreid.org/bc-election-as-voters-begin-to-lock-in-conservatives-hold-five-point-lead-over-gaining-ndp/",
+      "retrievedAt": "2026-10-13T09:18:53.389Z",
+      "sha256": "be33bf070186b3b6b716d332085d6478ae4da7bb09eab595162ff6bf82d7b9ce",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "ari-2026-10-05-tables": {
+      "url": "https://angusreid.org/wp-content/uploads/2026/10/2026.10.05_BC_Elxn_2_tables.pdf",
+      "finalUrl": "https://angusreid.org/wp-content/uploads/2026/10/2026.10.05_BC_Elxn_2_tables.pdf",
+      "retrievedAt": "2026-10-13T09:18:53.405Z",
+      "sha256": "0d4e796d18ed251b730950a93e719c956039e6df32460b985124f3edb60bd23c",
+      "contentType": "application/pdf"
+    },
+    "ari-2026-10-05-report": {
+      "url": "https://angusreid.org/wp-content/uploads/2026/10/2026.10.05_BC_Elxn_2.pdf",
+      "finalUrl": "https://angusreid.org/wp-content/uploads/2026/10/2026.10.05_BC_Elxn_2.pdf",
+      "retrievedAt": "2026-10-13T09:19:07.511Z",
+      "sha256": "9f92ba035a14f931b8af8be3876a0871d6cfadd62b775855674dec435b662b41",
+      "contentType": "application/pdf"
+    },
+    "program-ndp-household-relief": {
+      "url": "https://www.bcndp.ca/releases/david-eby-deliver-1000-year-household-relief-starting-immediately",
+      "finalUrl": "https://www.bcndp.ca/releases/david-eby-deliver-1000-year-household-relief-starting-immediately",
+      "retrievedAt": "2026-10-13T09:23:25.675Z",
+      "sha256": "5555d0493ae043c04b5d4034367ecf00a1d6e7f7b4757826a59c3b5ee04edb1f",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "program-ndp-seniors-health": {
+      "url": "https://www.bcndp.ca/releases/david-ebys-plan-will-strengthen-health-care-seniors",
+      "finalUrl": "https://www.bcndp.ca/releases/bc-ndp-seniors-healthcare-plan-free-vaccines-home-care-long-term-care-david-eby",
+      "retrievedAt": "2026-10-13T09:23:25.851Z",
+      "sha256": "39267261f668409713f15adb785ef2081089bd23fc0ac00e58dc9b87f67555f4",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "program-ndp-wait-times": {
+      "url": "https://www.bcndp.ca/releases/getting-care-sooner-eby-will-cut-wait-times-add-new-diagnostic-equipment",
+      "finalUrl": "https://www.bcndp.ca/releases/getting-care-sooner-eby-will-cut-wait-times-add-new-diagnostic-equipment",
+      "retrievedAt": "2026-10-13T09:23:26.702Z",
+      "sha256": "dd30fe54be682ad8fbaa1b64e8e94f5003cf230e8c48937475b75b96f909bf5b",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "program-ndp-small-business": {
+      "url": "https://www.bcndp.ca/releases/eby-support-small-businesses-through-trade-war",
+      "finalUrl": "https://www.bcndp.ca/releases/eby-support-small-businesses-through-trade-war",
+      "retrievedAt": "2026-10-13T09:23:27.615Z",
+      "sha256": "edbd98101c6fd14bd3b5df2a7bdca7a90db59e01dcd2b7fdb13663b020b91f27",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "program-ndp-libraries": {
+      "url": "https://www.bcndp.ca/releases/bc-ndp-double-funding-public-libraries",
+      "finalUrl": "https://www.bcndp.ca/releases/bc-ndp-double-funding-public-libraries",
+      "retrievedAt": "2026-10-13T09:23:28.533Z",
+      "sha256": "9202753be95530f07562f8f3e63b3b8affc323f72034c6f030c73aff06245d61",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "program-ndp-car-insurance": {
+      "url": "https://www.bcndp.ca/releases/eby-freeze-car-insurance-rates-another-three-years",
+      "finalUrl": "https://www.bcndp.ca/releases/eby-freeze-car-insurance-rates-another-three-years",
+      "retrievedAt": "2026-10-13T09:23:28.586Z",
+      "sha256": "3482da8939de80461b5213b3309aa5953bc8ed91da9d8292f272a5c9c905e5d5",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "program-ndp-doctors-nurses": {
+      "url": "https://www.bcndp.ca/releases/ebys-plan-includes-more-doctors-and-nurses-fast-tracking-international-graduates",
+      "finalUrl": "https://www.bcndp.ca/releases/ebys-plan-includes-more-doctors-and-nurses-fast-tracking-international-graduates",
+      "retrievedAt": "2026-10-13T09:23:29.480Z",
+      "sha256": "9ed4ff1e530230d77a4e111ba521ca9f3c147e4031412210dc6d0968ac654540",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "program-ndp-nature-climate": {
+      "url": "https://www.bcndp.ca/releases/ebys-plan-protects-bcs-natural-spaces-funds-climate-action",
+      "finalUrl": "https://www.bcndp.ca/releases/ebys-plan-protects-bcs-natural-spaces-funds-climate-action",
+      "retrievedAt": "2026-10-13T09:23:30.334Z",
+      "sha256": "2b80a076a001ad6f3520d597d2bb4a7956326b69d03b5d510190736b97879767",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "program-ndp-ferries": {
+      "url": "https://www.bcndp.ca/releases/bc-ndp-would-put-locals-first-new-ferry-reservation-pilot",
+      "finalUrl": "https://www.bcndp.ca/releases/bc-ndp-would-put-locals-first-new-ferry-reservation-pilot",
+      "retrievedAt": "2026-10-13T09:23:30.387Z",
+      "sha256": "25ac70a1e24e0ded0d76e997bd8b0f6455510b1f2b67a8409a23d6041bd754ca",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "program-ndp-public-health-care": {
+      "url": "https://www.bcndp.ca/releases/eby-will-protect-public-health-care-us-style-privatization",
+      "finalUrl": "https://www.bcndp.ca/releases/eby-will-protect-public-health-care-us-style-privatization",
+      "retrievedAt": "2026-10-13T09:23:30.438Z",
+      "sha256": "b360207d0b5a7d5b29ddc5c69f3be26bac13e3cd7b68c1173e916c5f07ed5a05",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "program-ndp-organized-hate": {
+      "url": "https://www.bcndp.ca/releases/bc-ndp-commits-jewish-community-security-investment-and-summit-confront-organized-hate",
+      "finalUrl": "https://www.bcndp.ca/releases/bc-ndp-commits-jewish-community-security-investment-and-summit-confront-organized-hate",
+      "retrievedAt": "2026-10-13T09:23:31.227Z",
+      "sha256": "2d896e6aec1d1c0275995892198c4a727f1f233ee6ca4195a68af53e4bd48d2f",
+      "contentType": "text/html; charset=utf-8"
+    },
+    "program-con-plan": {
+      "url": "https://conservativebc.ca/plan/",
+      "finalUrl": "https://conservativebc.ca/plan/",
+      "retrievedAt": "2026-10-13T09:23:31.306Z",
+      "sha256": "a36e9066d5d3a3f8733c881fff1a4d2f2c10d4bc0904d4584ca1bc726d014bc1",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-con-tax-cut": {
+      "url": "https://conservativebc.ca/plan/conservatives-will-cut-your-taxes-by-1000/",
+      "finalUrl": "https://conservativebc.ca/plan/conservatives-will-cut-your-taxes-by-1000/",
+      "retrievedAt": "2026-10-13T09:23:31.420Z",
+      "sha256": "4d10e2a02d0d51df4a520afcccb968bda639d4c988dcf4ab458d4b60b6d9db6c",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-con-safe-schools": {
+      "url": "https://conservativebc.ca/plan/safe-schools/",
+      "finalUrl": "https://conservativebc.ca/plan/safe-schools/",
+      "retrievedAt": "2026-10-13T09:23:31.611Z",
+      "sha256": "ff63004a841fbb372b42e9b6df28bef79d2249be8303b09dffbf6186da8e9f2e",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-con-insurance": {
+      "url": "https://conservativebc.ca/plan/insurance/",
+      "finalUrl": "https://conservativebc.ca/plan/insurance/",
+      "retrievedAt": "2026-10-13T09:23:31.803Z",
+      "sha256": "addb91058dab13d8da0b092ae50c0b708415702257a19dbc899a9780ab02c09b",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-con-dripa": {
+      "url": "https://conservativebc.ca/plan/first-nations-dripa/",
+      "finalUrl": "https://conservativebc.ca/plan/first-nations-dripa/",
+      "retrievedAt": "2026-10-13T09:23:31.993Z",
+      "sha256": "74cf9d1ed61fff752207de3c29eea8b4ed541445523f221782e5a59f10a3c586",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-con-safe-streets": {
+      "url": "https://conservativebc.ca/plan/safe-streets-for-bc/",
+      "finalUrl": "https://conservativebc.ca/plan/safe-streets-for-bc/",
+      "retrievedAt": "2026-10-13T09:23:32.213Z",
+      "sha256": "72bfd3bd16f047251545f5e477b6632b54660122a3f3ca08511ccd54a37ca7be",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-con-emergency-rooms": {
+      "url": "https://conservativebc.ca/plan/keep-emergency-rooms-open/",
+      "finalUrl": "https://conservativebc.ca/plan/keep-emergency-rooms-open/",
+      "retrievedAt": "2026-10-13T09:23:32.342Z",
+      "sha256": "f7847f70df4f10bf85481291d3c8b122f6ea6ec05c0278f587d945a5dc19435c",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-con-economy": {
+      "url": "https://conservativebc.ca/supercharge-british-columbias-economy/",
+      "finalUrl": "https://conservativebc.ca/supercharge-british-columbias-economy/",
+      "retrievedAt": "2026-10-13T09:23:32.525Z",
+      "sha256": "b29fff8b10862669b8ac9be51d10a34a4a01e90732bf25ff51490f82b43679b4",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-con-long-term-care": {
+      "url": "https://conservativebc.ca/conservatives-will-build-the-long-term-care-beds-the-ndp-shelved/",
+      "finalUrl": "https://conservativebc.ca/conservatives-will-build-the-long-term-care-beds-the-ndp-shelved/",
+      "retrievedAt": "2026-10-13T09:23:32.724Z",
+      "sha256": "739894014d104da9eb6ff249673b1109ae71be62a7b9eab1d63c7013b86adae7",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-con-seniors-homes": {
+      "url": "https://conservativebc.ca/conservatives-will-stop-the-ndp-from-taxing-seniors-out-of-their-homes/",
+      "finalUrl": "https://conservativebc.ca/conservatives-will-stop-the-ndp-from-taxing-seniors-out-of-their-homes/",
+      "retrievedAt": "2026-10-13T09:23:32.827Z",
+      "sha256": "7354f38743a62952dc6cd9494afa27a1a4db7d2c82b3853dbc8cfbc808246f5a",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-con-young-people": {
+      "url": "https://conservativebc.ca/conservatives-will-give-young-british-columbians-a-reason-to-stay/",
+      "finalUrl": "https://conservativebc.ca/conservatives-will-give-young-british-columbians-a-reason-to-stay/",
+      "retrievedAt": "2026-10-13T09:23:33.000Z",
+      "sha256": "1a98334a0c69c08d2d7fdb0870ade2f3a3067b7dac0f92ce0b84d80f4cf7fc0d",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-con-ferries": {
+      "url": "https://conservativebc.ca/conservatives-will-fix-bc-ferries/",
+      "finalUrl": "https://conservativebc.ca/conservatives-will-fix-bc-ferries/",
+      "retrievedAt": "2026-10-13T09:23:33.177Z",
+      "sha256": "fe242ee06952a02bfdbd9c934269361a75c333c2e5909bb4542d9fe336df2042",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-con-metro-vancouver": {
+      "url": "https://conservativebc.ca/conservative-platform-delivering-essential-services-and-cutting-waste-at-metro-vancouver/",
+      "finalUrl": "https://conservativebc.ca/conservative-platform-delivering-essential-services-and-cutting-waste-at-metro-vancouver/",
+      "retrievedAt": "2026-10-13T09:23:33.916Z",
+      "sha256": "bebbe4c5c85734782126d3289d17c2035a8450b3f149ee82b16ff53a888ac55b",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-con-public-health-care": {
+      "url": "https://conservativebc.ca/conservative-party-of-bc-responds-to-the-ndps-tired-health-care-fearmongering/",
+      "finalUrl": "https://conservativebc.ca/conservative-party-of-bc-responds-to-the-ndps-tired-health-care-fearmongering/",
+      "retrievedAt": "2026-10-13T09:23:34.661Z",
+      "sha256": "249adf4e368590f4c05e65ba93cbcc08d98679ee796b8dad09d92b68249e097c",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-green-economy": {
+      "url": "https://bcgreens.ca/launch-major-platform-plank-economic-vision-for-b-c-s-future/",
+      "finalUrl": "https://bcgreens.ca/launch-major-platform-plank-economic-vision-for-b-c-s-future/",
+      "retrievedAt": "2026-10-13T09:23:34.788Z",
+      "sha256": "c466dae9495a99598b22c35be058db453f7c960597aa022eb36cdc780da401ce",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-green-health-centres": {
+      "url": "https://bcgreens.ca/pledge-funding-for-community-health-centres-in-every-riding-support-for-healthcare-workers/",
+      "finalUrl": "https://bcgreens.ca/pledge-funding-for-community-health-centres-in-every-riding-support-for-healthcare-workers/",
+      "retrievedAt": "2026-10-13T09:23:34.856Z",
+      "sha256": "2687e146d2cd87f4fc3a248956dcf8ce28b3b2547f45f910429a1977c7a0f7c5",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-green-inclusive-education": {
+      "url": "https://bcgreens.ca/pledge-to-close-the-inclusive-education-funding-gap-so-every-student-gets-the-support-they-need/",
+      "finalUrl": "https://bcgreens.ca/pledge-to-close-the-inclusive-education-funding-gap-so-every-student-gets-the-support-they-need/",
+      "retrievedAt": "2026-10-13T09:23:34.923Z",
+      "sha256": "61f41c8ed3f653d985af1bb0d19e08904099019e04c5359baf95c7070d738f6b",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-green-transit": {
+      "url": "https://bcgreens.ca/bc-greens-commit-to-funding-for-fast-frequent-transit-pledge-to-fight-for-province-wide-passenger-rail/",
+      "finalUrl": "https://bcgreens.ca/bc-greens-commit-to-funding-for-fast-frequent-transit-pledge-to-fight-for-province-wide-passenger-rail/",
+      "retrievedAt": "2026-10-13T09:23:34.991Z",
+      "sha256": "828107524834be136eb5127de3b6c77b254964fc2494879798e1668b1e2dcb66",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-green-royalties": {
+      "url": "https://bcgreens.ca/new-royalty-framework-accountability-for-fossil-fuel-corporations-getting-b-c-back-on-track-on-climate-proposed-by-bc-greens/",
+      "finalUrl": "https://bcgreens.ca/new-royalty-framework-accountability-for-fossil-fuel-corporations-getting-b-c-back-on-track-on-climate-proposed-by-bc-greens/",
+      "retrievedAt": "2026-10-13T09:23:35.059Z",
+      "sha256": "694ad99cecd80eda98e6cd22be263462ae33673a964a0d808bcb8a0c1cd02721",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-green-fair-share": {
+      "url": "https://bcgreens.ca/fair-share-act-would-unlock-22-2b-for-childcare-transit-and-housing/",
+      "finalUrl": "https://bcgreens.ca/fair-share-act-would-unlock-22-2b-for-childcare-transit-and-housing/",
+      "retrievedAt": "2026-10-13T09:23:35.126Z",
+      "sha256": "1f32e159b8cdb367fc9eefd7cc085338dc781f8c76a83dc7d8ad6e11a9fdfb94",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-green-rent-statement": {
+      "url": "https://bcgreens.ca/statement-from-emily-lowan-on-b-c-reclaiming-title-as-most-expensive-province-for-rent-prices/",
+      "finalUrl": "https://bcgreens.ca/statement-from-emily-lowan-on-b-c-reclaiming-title-as-most-expensive-province-for-rent-prices/",
+      "retrievedAt": "2026-10-13T09:23:35.192Z",
+      "sha256": "8fa2807231c460cbada1e430cf7ccec19734066d1dfcec13a52422ae5d918f2b",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-green-support-needs": {
+      "url": "https://bcgreens.ca/statement-on-changes-to-funding-through-new-children-and-youth-with-support-needs-system/",
+      "finalUrl": "https://bcgreens.ca/statement-on-changes-to-funding-through-new-children-and-youth-with-support-needs-system/",
+      "retrievedAt": "2026-10-13T09:23:35.259Z",
+      "sha256": "4d59d04478413beb1df9abc9ca1fb8c66b6aaca09a1f75e814b8cdf26c295cbe",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-green-poverty": {
+      "url": "https://bcgreens.ca/announce-plan-to-end-legislated-poverty-and-address-low-assistance-rates/",
+      "finalUrl": "https://bcgreens.ca/announce-plan-to-end-legislated-poverty-and-address-low-assistance-rates/",
+      "retrievedAt": "2026-10-13T09:23:35.326Z",
+      "sha256": "0d58456512dcf559df0e39f126da615cf7481dfc864c9832dac7cb9745fb1029",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-green-tourism": {
+      "url": "https://bcgreens.ca/release-tourism-plan/",
+      "finalUrl": "https://bcgreens.ca/release-tourism-plan/",
+      "retrievedAt": "2026-10-13T09:23:35.395Z",
+      "sha256": "cc2c419d7a5aa86bde564d198fcdebf5d6a02d047bfe13ee76a24aea50ac7fdd",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-centre-platform": {
+      "url": "https://www.centrebc.ca/platform/",
+      "finalUrl": "https://www.centrebc.ca/platform/",
+      "retrievedAt": "2026-10-13T09:23:35.561Z",
+      "sha256": "a9984c695b73ddc368bb19c0440df3edeff0323bb9f035b8b9a4242a1af6a8cd",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-centre-platform-pdf": {
+      "url": "https://www.centrebc.ca/wp-content/uploads/2026/10/CentreBC-2026-Platform-Web.pdf",
+      "finalUrl": "https://www.centrebc.ca/wp-content/uploads/2026/10/CentreBC-2026-Platform-Web.pdf",
+      "retrievedAt": "2026-10-13T09:23:35.638Z",
+      "sha256": "bde5bc78a3746e685835b450ca56bd2418d213e884b59ce85a1b10934ef137ab",
+      "contentType": "application/pdf"
+    },
+    "program-one-bill": {
+      "url": "https://1bc.ca/bill",
+      "finalUrl": "https://1bc.ca/bill",
+      "retrievedAt": "2026-10-13T09:23:35.742Z",
+      "sha256": "a87997b763310706bbc5a51a731a7b2716bd27c9a972cc9f072a87b2d651375a",
+      "contentType": "text/html"
+    },
+    "program-communist-election-2026": {
+      "url": "https://cpcbc.ca/provincial-election-2026/",
+      "finalUrl": "https://cpcbc.ca/provincial-election-2026/",
+      "retrievedAt": "2026-10-13T09:23:36.836Z",
+      "sha256": "e1721ceb9bb78256ec66873a5852f13bc78d412d378f2608428f38abd58c4f85",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-freedom-candidate": {
+      "url": "https://freedompartybc.ca/errol-povah/",
+      "finalUrl": "https://freedompartybc.ca/errol-povah/",
+      "retrievedAt": "2026-10-13T09:23:37.513Z",
+      "sha256": "3a65e4a6ba9a428249518a363f5e5ee3a211b91b917634613a92b766d5c60259",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    "program-green-childcare-brief": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/09/BC-Greens-Childcare-Policy-Brief-2026.pdf",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/09/BC-Greens-Childcare-Policy-Brief-2026.pdf",
+      "retrievedAt": "2026-10-13T09:30:19.520Z",
+      "sha256": "93d1ef8c8a66514a1e8f05fb2f9346d246b07903f533ef9f0b3184b0f4678d01",
+      "contentType": "application/pdf"
+    },
+    "program-green-renters-brief": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/09/BC-Greens-Rights-for-Renters-Policy-Brief-2026.pdf",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/09/BC-Greens-Rights-for-Renters-Policy-Brief-2026.pdf",
+      "retrievedAt": "2026-10-13T09:30:19.710Z",
+      "sha256": "8e52a4b8eccda117566e2d66bf835410eea32f9f7502077ff4865f3d6b001704",
+      "contentType": "application/pdf"
+    },
+    "program-green-drugs-brief": {
+      "url": "https://bcgreens.ca/wp-content/uploads/2026/10/BC-Greens-Toxic-Drugs-Policy-Brief-2026-1.pdf",
+      "finalUrl": "https://bcgreens.ca/wp-content/uploads/2026/10/BC-Greens-Toxic-Drugs-Policy-Brief-2026-1.pdf",
+      "retrievedAt": "2026-10-13T09:30:19.887Z",
+      "sha256": "db76c9a81d2f04f9e71d0dfc446e353e6666669d22e2f1d0c8d7b7e29a72a3cd",
+      "contentType": "application/pdf"
+    },
+    "unaffiliated-helen-scott-portrait-79436a15f8": {
+      "url": "https://framerusercontent.com/images/Qk8iirVDENRiZgPWpFilqlm7eI.png?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/Qk8iirVDENRiZgPWpFilqlm7eI.png?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:50:14.488Z",
+      "sha256": "79436a15f8b50c3123b436e412bd53ce4c86b489dadf6c81fb4ca01376208c5a",
+      "contentType": "image/png"
+    },
+    "unaffiliated-lee-ann-bates-portrait-9c8d609651": {
+      "url": "https://framerusercontent.com/images/UPQXB22VDZtc5qk4ut1xziOeSc.png?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/UPQXB22VDZtc5qk4ut1xziOeSc.png?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:50:14.528Z",
+      "sha256": "9c8d609651917b2fb3cc8e8de3787c6c710a3caef51973701a9febe78f28d08f",
+      "contentType": "image/png"
+    },
+    "unaffiliated-denis-r-hurtubise-portrait-6b35419546": {
+      "url": "https://framerusercontent.com/images/g27wbH6zteEeugulksEunWnrA.png?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/g27wbH6zteEeugulksEunWnrA.png?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:50:14.554Z",
+      "sha256": "6b3541954647d65b711761eec61e63b8f625a17996c392e0a6dc50fb7032a56c",
+      "contentType": "image/png"
+    },
+    "unaffiliated-james-yaroshuk-portrait-1543dd9bb2": {
+      "url": "https://framerusercontent.com/images/KGwTBs02v8m4M8rTFBnbv8xhwpk.png?width=1080&height=1080",
+      "finalUrl": "https://framerusercontent.com/images/KGwTBs02v8m4M8rTFBnbv8xhwpk.png?width=1080&height=1080",
+      "retrievedAt": "2026-10-13T09:50:14.582Z",
+      "sha256": "1543dd9bb25d58aeb636b9d9eabd4236d210523f06f21b688104cdf9577d5317",
+      "contentType": "image/png"
+    },
+    "candidate-party-2adaa57d8e7d": {
+      "url": "https://1bc.ca/candidates/helen-scott",
+      "finalUrl": "https://1bc.ca/candidates/helen-scott",
+      "retrievedAt": "2026-10-13T17:53:08.129Z",
+      "sha256": "c591db2b0244ac46a88c4870073c48cd3acec1eea47b1026e060d7dfea96a202",
+      "contentType": "text/html"
+    },
+    "candidate-party-c3b3dd3239d4": {
+      "url": "https://1bc.ca/candidates/lee-ann-bates",
+      "finalUrl": "https://1bc.ca/candidates/lee-ann-bates",
+      "retrievedAt": "2026-10-13T17:53:08.147Z",
+      "sha256": "01d895b5de423748ac8a4d773de9ab93678855688a257db999f7a9ac7b0ab8d0",
+      "contentType": "text/html"
+    },
+    "candidate-party-b4ab87eabe72": {
+      "url": "https://1bc.ca/candidates/denis-hurtubise",
+      "finalUrl": "https://1bc.ca/candidates/denis-hurtubise",
+      "retrievedAt": "2026-10-13T17:53:08.166Z",
+      "sha256": "b027f433b66a282505d41c7918eb4a49b043bf307fef61a67dadf6dc3689ff5f",
+      "contentType": "text/html"
+    },
+    "candidate-party-6564af8cc03d": {
+      "url": "https://1bc.ca/candidates/james-yaroshuk",
+      "finalUrl": "https://1bc.ca/candidates/james-yaroshuk",
+      "retrievedAt": "2026-10-13T17:53:08.186Z",
+      "sha256": "e32fdec6c68061a45fa264b9ce0a7fc9d4e0a89f98ae24ead54dac8ffd406f5d",
+      "contentType": "text/html"
+    },
+    "one-official-logo": {
+      "url": "https://framerusercontent.com/images/W8mmE4uu5zGwN0XiclpGgfHLy9c.png",
+      "finalUrl": "https://framerusercontent.com/images/W8mmE4uu5zGwN0XiclpGgfHLy9c.png",
+      "retrievedAt": "2026-10-13T17:51:47.156Z",
+      "sha256": "9c05f0e7fdfad896cef6135f4a74b389852241778e42798fbefc7ef2ab9735e5",
+      "contentType": "image/png"
     }
   },
   "reviewedAt": "2026-09-27T11:07:38.5195350Z"
